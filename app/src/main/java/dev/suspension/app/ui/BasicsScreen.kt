@@ -54,6 +54,7 @@ fun BasicsScreen(
             BasicsCard(stringResource(R.string.basics_clicks_title)) {
                 Text(stringResource(R.string.basics_clicks_body_1), style = type.body, color = colors.ink)
                 Text(stringResource(R.string.basics_clicks_body_2), style = type.body, color = colors.ink)
+                Text(stringResource(R.string.basics_clicks_body_3), style = type.body, color = colors.ink)
             }
         }
         item {

@@ -72,6 +72,13 @@ fun DiagnoseScreen(listState: LazyListState) {
             )
         }
 
+        Text(
+            text = stringResource(R.string.component_direction_legend),
+            style = type.rowHint,
+            color = colors.dim,
+            modifier = Modifier.padding(horizontal = 16.dp),
+        )
+
         // stringResource must be called unconditionally over the fixed, statically-ordered
         // entry list — safe here since every recomposition iterates the same 19 entries.
         val resolved = DiagnoseData.entries.map { entry ->

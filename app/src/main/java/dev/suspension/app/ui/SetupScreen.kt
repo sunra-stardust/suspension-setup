@@ -106,6 +106,13 @@ fun SetupScreen(
                             null -> null
                         },
                     )
+                    if (group.component != null) {
+                        Text(
+                            text = stringResource(R.string.component_direction_legend),
+                            style = type.rowHint,
+                            color = colors.dim,
+                        )
+                    }
                     GroupCard {
                         group.rows.forEachIndexed { index, row ->
                             if (index > 0) RowDivider()

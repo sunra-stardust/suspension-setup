@@ -163,6 +163,10 @@
     <string name="basics_clicks_title">Klicks zählen</string>
     <string name="basics_clicks_body_1">Im Uhrzeigersinn bis zum sanften Anschlag = zu, nie mit Gewalt. Dann gegen den Uhrzeigersinn herausdrehen und zählen. Alle Werte hier sind „von zu“.</string>
     <string name="basics_clicks_body_2">Im Uhrzeigersinn = mehr Dämpfung = langsamer. Gegen den Uhrzeigersinn = weniger = schneller.</string>
+    <string name="basics_clicks_body_3">In der App: „+“ dreht auf (weniger Dämpfung, mehr Klicks von zu), „−“ dreht zu (mehr Dämpfung, weniger Klicks). Gilt gleichermaßen für Druckstufe (LSC/HSC) und Zugstufe (LSR/HSR/Zugstufe).</string>
+
+    <!-- Reused on Setup (next to the LSC/HSC/LSR/HSR steppers) and Diagnose (actions say "zudrehen"/"aufdrehen"). -->
+    <string name="component_direction_legend">„+“ aufdrehen = weniger Dämpfung · „−“ zudrehen = mehr Dämpfung</string>
 
     <string name="basics_order_title">Reihenfolge</string>
     <string name="basics_order_step_1">Alles auf Mitte — das ist der Nullpunkt</string>
