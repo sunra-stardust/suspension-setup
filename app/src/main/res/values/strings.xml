@@ -1,0 +1,233 @@
+<resources>
+    <string name="app_name">Fahrwerk</string>
+
+    <!-- Header (spec §5), verified against the reference artifact. -->
+    <string name="app_header_title">Fahrwerk — Level RR</string>
+    <string name="app_header_weight">95–100 kg</string>
+
+    <string name="tab_setup">Setup</string>
+    <string name="tab_diagnose">Diagnose</string>
+    <string name="tab_basics">Basics</string>
+
+    <string name="scenario_basis">Basis</string>
+    <string name="scenario_downhill">Downhill</string>
+    <string name="scenario_bikepark">Bikepark</string>
+    <string name="scenario_tour">Tour</string>
+    <string name="scenario_uphill">Uphill</string>
+    <string name="scenario_kalt">Kalt &lt;5°</string>
+    <string name="scenario_warm">Warm &gt;25°</string>
+
+    <string name="group_fork">Gabel — Fox 38 Factory GRIP X2, 180 mm</string>
+    <string name="group_shock">Dämpfer — Fox DHX2 Coil, 205×65 mm</string>
+    <string name="group_tires">Reifen</string>
+    <string name="group_frame">Rahmen &amp; Stütze</string>
+
+    <string name="label_f_psi">Luftdruck</string>
+    <string name="label_f_sp">Volumenspacer</string>
+    <string name="label_sag">Sag</string>
+    <string name="label_lsc">LSC</string>
+    <string name="label_hsc">HSC</string>
+    <string name="label_lsr">LSR</string>
+    <string name="label_hsr">HSR</string>
+    <string name="label_s_rate">Federrate</string>
+    <string name="label_s_pre">Vorspannung</string>
+    <string name="label_s_cs">Climb Switch</string>
+    <string name="label_t_f">Vorne</string>
+    <string name="label_t_r">Hinten</string>
+    <string name="label_chip">Flip-Chip</string>
+    <string name="label_post">Sattelstütze</string>
+
+    <string name="unit_psi">psi</string>
+    <string name="unit_stk">Stk</string>
+    <string name="unit_mm">mm</string>
+    <string name="unit_von_zu">von zu</string>
+    <string name="unit_lbs">lbs</string>
+    <string name="unit_klicks">Klicks</string>
+    <string name="unit_bar">bar</string>
+
+    <string name="hint_f_psi">Fox-Tabelle 105–115 · Bikepark höher, weil nur 1 Spacer</string>
+    <string name="hint_f_sp">bleibt bei 1 — Endprogression kommt über den Luftdruck</string>
+    <string name="hint_f_lsc">Bremsnicken, Support in Anliegern</string>
+    <string name="hint_f_hsc">Kanten und Wurzeln · nicht gegen Durchschläge zudrehen</string>
+    <string name="hint_f_lsr">Ruhe nach Kompressionen</string>
+    <string name="hint_f_hsr">Verhalten nach harten Schlägen</string>
+    <string name="hint_s_rate">verbaut: 500 · gerechnet für 95–100 kg: 550 — erst Sag messen</string>
+    <string name="hint_s_pre">Start 8 · über 15 = falsche Feder</string>
+    <string name="hint_s_lsc">Wippen, Einsacken unter Motorlast</string>
+    <string name="hint_s_hsc">harte Kanten am Heck</string>
+    <string name="hint_s_lsr">Schleudersitz</string>
+    <string name="hint_s_hsr">nach großen Landungen</string>
+    <string name="hint_s_cs">Hebel am Ausgleichsbehälter · bergauf Firm</string>
+    <string name="hint_t_r">27,5\" hat weniger Volumen — weniger Reserve</string>
+    <string name="hint_chip">Low: −5 mm Tretlager, −0,35°</string>
+    <string name="hint_post">max. 300 · alle 10 h prüfen</string>
+
+    <!-- %% escapes the literal percent sign in a format string. -->
+    <string name="sag_percent_hint">%1$s %% Sag</string>
+
+    <string name="setup_footer_note">Nur Federrate, Reifen und Stütze entsprechen dem Auslieferungszustand. Alle Klickzahlen sind gerechnete Startwerte — die echte Werkseinstellung steht in der Fox-App.</string>
+
+    <string name="diagnose_search_placeholder">Symptom suchen — z. B. nervös, taucht, springt</string>
+
+    <string name="diag_symptom_1">Taucht beim Bremsen stark ein</string>
+    <string name="diag_action_1">Gabel LSC zudrehen</string>
+    <string name="diag_explanation_1">Mehr Widerstand gegen langsames Einfedern, die Geometrie bleibt stabil.</string>
+
+    <string name="diag_symptom_2">Schwammig in Anliegern, kein Support</string>
+    <string name="diag_action_2">LSC zudrehen (vorne und hinten)</string>
+    <string name="diag_explanation_2">Der Low-Speed-Kreis trägt Pump- und Kurvenbewegung.</string>
+
+    <string name="diag_symptom_3">Kribbeln in den Händen, kein Grip auf Kleinkram</string>
+    <string name="diag_action_3">Gabel LSC aufdrehen</string>
+    <string name="diag_explanation_3">Feinfühligeres Ansprechen im ersten Drittel.</string>
+
+    <string name="diag_symptom_4">Nervös bei schnellen kleinen Schlägen</string>
+    <string name="diag_action_4">Gabel HSC aufdrehen</string>
+    <string name="diag_explanation_4">High Speed heißt Geschwindigkeit der Federbewegung, nicht deine Fahrgeschwindigkeit.</string>
+
+    <string name="diag_symptom_5">Harte Kanten hämmern durch</string>
+    <string name="diag_action_5">HSC aufdrehen</string>
+    <string name="diag_explanation_5">Öl fließt schneller, der Schlag wird geschluckt statt weitergeleitet.</string>
+
+    <string name="diag_symptom_6">Springt über Wurzelfelder, findet keine Ruhe</string>
+    <string name="diag_action_6">Dämpfer HSC aufdrehen</string>
+    <string name="diag_explanation_6">Der Hinterbau kommt bei Schlagfolgen nicht hinterher.</string>
+
+    <string name="diag_symptom_7">Wippt beim Pedalieren, sackt unter Motorlast</string>
+    <string name="diag_action_7">Dämpfer LSC zudrehen</string>
+    <string name="diag_explanation_7">100 Nm Motordrehmoment wirken wie Dauerpedalieren.</string>
+
+    <string name="diag_symptom_8">Schleudersitz, das Rad schiebt hoch</string>
+    <string name="diag_action_8">Dämpfer LSR zudrehen</string>
+    <string name="diag_explanation_8">Die Feder gibt ihre Energie zu schnell zurück.</string>
+
+    <string name="diag_symptom_9">Nach großen Landungen springt es nach</string>
+    <string name="diag_action_9">HSR zudrehen</string>
+    <string name="diag_explanation_9">Schnelles Ausfedern nach hartem Einschlag bremsen.</string>
+
+    <string name="diag_symptom_10">Fühlt sich tot an, bleibt bei Schlagfolgen tief</string>
+    <string name="diag_action_10">LSR und HSR aufdrehen</string>
+    <string name="diag_explanation_10">Der Federweg steht am nächsten Hindernis nicht zur Verfügung.</string>
+
+    <string name="diag_symptom_11">Gabel schlägt durch</string>
+    <string name="diag_action_11">Luftdruck rauf, Spacer bleibt bei 1</string>
+    <string name="diag_explanation_11">Endprogression über den Druck. HSC zudrehen wäre der Fehler.</string>
+
+    <string name="diag_symptom_12">Dämpfer schlägt durch</string>
+    <string name="diag_action_12">Härtere Feder oder mehr Vorspannung</string>
+    <string name="diag_explanation_12">Der DHX2 hat keinen einstellbaren Bottom-Out — nur einen MCU-Bumper. Progression kommt aus dem Rahmen.</string>
+
+    <string name="diag_symptom_13">Sag über 21 mm trotz Vorspannung</string>
+    <string name="diag_action_13">Feder auf 550 lbs</string>
+    <string name="diag_explanation_13">Vorspannung ersetzt keine Federrate, sie kostet nur Negativfederweg.</string>
+
+    <string name="diag_symptom_14">Vorderrad steigt am Steilstück</string>
+    <string name="diag_action_14">Flip-Chip auf High</string>
+    <string name="diag_explanation_14">Steilerer Sitzwinkel, mehr Gewicht über der Front.</string>
+
+    <string name="diag_symptom_15">Setzt mit den Pedalen auf</string>
+    <string name="diag_action_15">Flip-Chip auf High</string>
+    <string name="diag_explanation_15">5 mm mehr Tretlagerhöhe.</string>
+
+    <string name="diag_symptom_16">Kein Grip auf nassen Wurzeln</string>
+    <string name="diag_action_16">Reifendruck 0,1 bar runter</string>
+    <string name="diag_explanation_16">Größere Aufstandsfläche, die Karkasse legt sich besser um Kanten.</string>
+
+    <string name="diag_symptom_17">Dumpfes Klacken bei harten Kanten</string>
+    <string name="diag_action_17">Insert hinten statt mehr Druck</string>
+    <string name="diag_explanation_17">Felgenkontakt. Mehr Druck kostet Grip.</string>
+
+    <string name="diag_symptom_18">Fahrwerk im Winter stumpf und träge</string>
+    <string name="diag_action_18">LSC und HSC 1–2 Klicks auf</string>
+    <string name="diag_explanation_18">Kaltes Öl ist zäher und dämpft stärker.</string>
+
+    <string name="diag_symptom_19">Gabel steht im Winter tiefer</string>
+    <string name="diag_action_19">4–5 psi nachpumpen</string>
+    <string name="diag_explanation_19">Die Luftfeder verliert ca. 0,2–0,3 % Druck pro °C.</string>
+
+    <string name="reset_button">Alle Werte auf Startwerte zurücksetzen</string>
+    <string name="basics_persistence_note">Änderungen werden nur auf diesem Gerät gespeichert.</string>
+
+    <!-- Basics-screen cards (§10), copied verbatim from the reference artifact. -->
+
+    <string name="basics_clicks_title">Klicks zählen</string>
+    <string name="basics_clicks_body_1">Im Uhrzeigersinn bis zum sanften Anschlag = zu, nie mit Gewalt. Dann gegen den Uhrzeigersinn herausdrehen und zählen. Alle Werte hier sind „von zu“.</string>
+    <string name="basics_clicks_body_2">Im Uhrzeigersinn = mehr Dämpfung = langsamer. Gegen den Uhrzeigersinn = weniger = schneller.</string>
+
+    <string name="basics_order_title">Reihenfolge</string>
+    <string name="basics_order_step_1">Alles auf Mitte — das ist der Nullpunkt</string>
+    <string name="basics_order_step_2">Federrate hinten, Luftdruck vorne</string>
+    <string name="basics_order_step_3">Sag messen, korrigieren, nochmal messen</string>
+    <string name="basics_order_step_4">Zugstufe</string>
+    <string name="basics_order_step_5">LSC</string>
+    <string name="basics_order_step_6">HSC</string>
+    <string name="basics_order_footer">Federrate später ändern heißt alles neu abstimmen. Eine Änderung pro Ausfahrt.</string>
+
+    <string name="basics_sag_title">Sag messen</string>
+    <string name="basics_sag_fork">Gabel: Gummiring an die Dichtung, nach dem Absteigen Abstand messen.</string>
+    <string name="basics_sag_shock">Dämpfer (Coil): Einbaulänge Auge zu Auge unbelastet und belastet, Differenz = Sag.</string>
+    <string name="basics_sag_footer">Immer stehend in Angriffsposition, mit Rucksack. Mehrmals einfedern, dann ruhig stehen. Zwei- bis dreimal messen.</string>
+
+    <string name="basics_targets_title">Zielwerte</string>
+    <string name="basics_targets_row_1_label">Gabel Bikepark</string>
+    <string name="basics_targets_row_1_value">27 mm · 15 %</string>
+    <string name="basics_targets_row_2_label">Gabel Standard</string>
+    <string name="basics_targets_row_2_value">32 mm · 18 %</string>
+    <string name="basics_targets_row_3_label">Gabel komfortabel</string>
+    <string name="basics_targets_row_3_value">36 mm · 20 %</string>
+    <string name="basics_targets_row_4_label">Dämpfer Klettern</string>
+    <string name="basics_targets_row_4_value">16 mm · 25 %</string>
+    <string name="basics_targets_row_5_label">Dämpfer Abfahrt</string>
+    <string name="basics_targets_row_5_value">19,5 mm · 30 %</string>
+    <string name="basics_targets_row_6_label">Feder zu weich ab</string>
+    <string name="basics_targets_row_6_value">21 mm · 32 %</string>
+    <string name="basics_targets_footer">Die Gabel läuft bewusst mit weniger Sag als der Dämpfer. Das ist normal.</string>
+
+    <string name="basics_temp_title">Temperatur</string>
+    <string name="basics_temp_bullet_1">Kaltes Öl dämpft stärker — Winter/Sommer trennen 1–3 Klicks</string>
+    <string name="basics_temp_bullet_2">Luftfeder verliert ca. 0,2–0,3 % Druck pro °C: 20 → 0 °C sind ca. 4–5 psi</string>
+    <string name="basics_temp_bullet_3">Stahlfeder hinten bleibt konstant</string>
+    <string name="basics_temp_bullet_4">1,8 bar bei 20 °C sind bei 0 °C noch ca. 1,67 bar</string>
+    <string name="basics_temp_footer">Reifen- und Gabeldruck bei Fahrtemperatur prüfen, nicht in der warmen Werkstatt. Nie am kalten Rad beurteilen.</string>
+
+    <string name="basics_compression_title">Was die Druckstufe nicht kann</string>
+    <string name="basics_compression_body">Durchschläge verhindern. Vorne: Luftdruck und Volumenspacer. Hinten: nur die Federrate — der DHX2 hat keinen einstellbaren Bottom-Out. HSC zudrehen ergibt eine Gabel, die an Kanten hart wird und trotzdem durchschlägt.</string>
+
+    <string name="basics_factory_title">Serie ab Werk</string>
+    <string name="basics_factory_row_1_label">Federrate hinten</string>
+    <string name="basics_factory_row_1_value">500 lbs</string>
+    <string name="basics_factory_row_2_label">Dämpfer</string>
+    <string name="basics_factory_row_2_value">DHX2 · 205×65</string>
+    <string name="basics_factory_row_3_label">Gabel</string>
+    <string name="basics_factory_row_3_value">38 Factory GRIP X2 · 180 mm</string>
+    <string name="basics_factory_row_4_label">Volumenspacer</string>
+    <string name="basics_factory_row_4_value">1 verbaut (3 beigelegt)</string>
+    <string name="basics_factory_row_5_label">Sattelstütze</string>
+    <string name="basics_factory_row_5_value">ONOFF Pija · 210 mm</string>
+    <string name="basics_factory_row_6_label">Laufräder</string>
+    <string name="basics_factory_row_6_value">Mullet 29 / 27,5</string>
+    <string name="basics_factory_footer">Die Werksklicks für Druck- und Zugstufe stehen nicht im Datenblatt. Hol sie über die Fox-App mit der ID am Gabelholm und am Dämpfer — und trag sie hier ein, bevor du etwas verstellst.</string>
+
+    <string name="basics_ranges_title">Einstellbereiche</string>
+    <string name="basics_ranges_row_1_label">Gabel LSC</string>
+    <string name="basics_ranges_row_1_value">18</string>
+    <string name="basics_ranges_row_2_label">Gabel HSC</string>
+    <string name="basics_ranges_row_2_value">8</string>
+    <string name="basics_ranges_row_3_label">Gabel LSR</string>
+    <string name="basics_ranges_row_3_value">16</string>
+    <string name="basics_ranges_row_4_label">Gabel HSR</string>
+    <string name="basics_ranges_row_4_value">8</string>
+    <string name="basics_ranges_row_5_label">Dämpfer LSC</string>
+    <string name="basics_ranges_row_5_value">16</string>
+    <string name="basics_ranges_row_6_label">Dämpfer HSC</string>
+    <string name="basics_ranges_row_6_value">8</string>
+    <string name="basics_ranges_row_7_label">Dämpfer LSR</string>
+    <string name="basics_ranges_row_7_value">16</string>
+    <string name="basics_ranges_row_8_label">Dämpfer HSR</string>
+    <string name="basics_ranges_row_8_value">8</string>
+    <string name="basics_ranges_row_9_label">Dämpfer Vorspannung</string>
+    <string name="basics_ranges_row_9_value">8–26</string>
+    <string name="basics_ranges_row_10_label">Sattelstütze</string>
+    <string name="basics_ranges_row_10_value">max. 300 psi</string>
+    <string name="basics_ranges_footer">Der DHX2 hat keinen einstellbaren Bottom-Out — Durchschlagschutz kommt vom MCU-Bumper und der Federrate. Klickzahlen am Rad gegenprüfen.</string>
+</resources>

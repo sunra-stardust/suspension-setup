@@ -1,0 +1,4 @@
+<resources>
+    <!-- Framework theme only (no Material XML dependency); Compose draws the UI via MaterialTheme. -->
+    <style name="Theme.SuspensionSetup" parent="android:Theme.Material.Light.NoActionBar" />
+</resources>

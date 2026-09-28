@@ -1,0 +1,32 @@
+[versions]
+# Aligned to the assistant-android toolchain (proven working): API 36, JBR 21.
+# Kotlin must match the KGP that AGP 9.2.0 bundles for built-in Kotlin (KGP 2.2.10),
+# so the compose-compiler plugin and the JVM core all line up on the same version.
+agp = "9.2.0"
+kotlin = "2.2.10"
+junit = "5.10.2"
+activityCompose = "1.13.0"
+composeBom = "2026.06.00"
+datastore = "1.1.1"
+navigationCompose = "2.9.0"
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+
+[libraries]
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }
+junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher", version = "1.10.2" }
+
+androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore" }
+androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
+
+# Compose: versions come from the BOM, so individual artifacts omit a version.
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
+androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
+androidx-compose-ui = { module = "androidx.compose.ui:ui" }
+androidx-compose-ui-graphics = { module = "androidx.compose.ui:ui-graphics" }
+androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+androidx-compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+androidx-compose-material3 = { module = "androidx.compose.material3:material3" }
+androidx-compose-foundation = { module = "androidx.compose.foundation:foundation" }
