@@ -22,6 +22,9 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import dev.suspension.app.R
+import dev.suspension.app.data.ForkModel
+import dev.suspension.app.data.ReboundMode
+import dev.suspension.app.data.ShockModel
 import dev.suspension.app.data.ValueRepository
 import dev.suspension.app.ui.components.GroupCard
 import dev.suspension.app.ui.components.RowDivider
@@ -33,6 +36,8 @@ import kotlinx.coroutines.launch
 fun BasicsScreen(
     repository: ValueRepository,
     listState: LazyListState,
+    fork: ForkModel,
+    shock: ShockModel,
     onResetDone: () -> Unit,
 ) {
     val colors = AppTheme.colors
@@ -125,22 +130,39 @@ fun BasicsScreen(
         }
         item {
             BasicsCard(stringResource(R.string.basics_ranges_title)) {
+                val gabel = stringResource(R.string.prefix_gabel)
+                val daempfer = stringResource(R.string.prefix_daempfer)
+                val lsc = stringResource(R.string.label_lsc)
+                val hsc = stringResource(R.string.label_hsc)
+                val lsr = stringResource(R.string.label_lsr)
+                val hsr = stringResource(R.string.label_hsr)
+                val rebound = stringResource(R.string.label_rebound)
+                val none = stringResource(R.string.picker_none)
+
+                val rows = buildList {
+                    add("$gabel $lsc" to fork.lscMax.toString())
+                    add("$gabel $hsc" to (fork.hscMax?.toString() ?: none))
+                    if (fork.reboundMode == ReboundMode.SPLIT) {
+                        add("$gabel $lsr" to fork.reboundMax.toString())
+                        add("$gabel $hsr" to (fork.hsrMax?.toString() ?: none))
+                    } else {
+                        add("$gabel $rebound" to fork.reboundMax.toString())
+                    }
+                    add("$daempfer $lsc" to shock.lscMax.toString())
+                    add("$daempfer $hsc" to (shock.hscMax?.toString() ?: none))
+                    if (shock.reboundMode == ReboundMode.SPLIT) {
+                        add("$daempfer $lsr" to shock.reboundMax.toString())
+                        add("$daempfer $hsr" to (shock.hsrMax?.toString() ?: none))
+                    } else {
+                        add("$daempfer $rebound" to shock.reboundMax.toString())
+                    }
+                    add(stringResource(R.string.basics_ranges_row_9_label) to stringResource(R.string.basics_ranges_row_9_value))
+                    add(stringResource(R.string.basics_ranges_row_10_label) to stringResource(R.string.basics_ranges_row_10_value))
+                }
                 GroupCard {
-                    val rows = listOf(
-                        R.string.basics_ranges_row_1_label to R.string.basics_ranges_row_1_value,
-                        R.string.basics_ranges_row_2_label to R.string.basics_ranges_row_2_value,
-                        R.string.basics_ranges_row_3_label to R.string.basics_ranges_row_3_value,
-                        R.string.basics_ranges_row_4_label to R.string.basics_ranges_row_4_value,
-                        R.string.basics_ranges_row_5_label to R.string.basics_ranges_row_5_value,
-                        R.string.basics_ranges_row_6_label to R.string.basics_ranges_row_6_value,
-                        R.string.basics_ranges_row_7_label to R.string.basics_ranges_row_7_value,
-                        R.string.basics_ranges_row_8_label to R.string.basics_ranges_row_8_value,
-                        R.string.basics_ranges_row_9_label to R.string.basics_ranges_row_9_value,
-                        R.string.basics_ranges_row_10_label to R.string.basics_ranges_row_10_value,
-                    )
-                    rows.forEachIndexed { index, (labelRes, valueRes) ->
+                    rows.forEachIndexed { index, (label, value) ->
                         if (index > 0) RowDivider()
-                        TwoColumnRow(stringResource(labelRes), stringResource(valueRes))
+                        TwoColumnRow(label, value)
                     }
                 }
                 Text(stringResource(R.string.basics_ranges_footer), style = type.rowHint, color = colors.dim)

@@ -3,7 +3,10 @@
 
     <!-- Header (spec §5), verified against the reference artifact. -->
     <string name="app_header_title">Fahrwerk — Level RR</string>
-    <string name="app_header_weight">95–100 kg</string>
+    <!-- Rider weight is now an editable global setting shown in the header (feature-request follow-up). -->
+    <string name="weight_display">%1$d kg</string>
+    <string name="weight_increase">Fahrergewicht erhöhen</string>
+    <string name="weight_decrease">Fahrergewicht verringern</string>
 
     <string name="tab_setup">Setup</string>
     <string name="tab_diagnose">Diagnose</string>
@@ -17,10 +20,17 @@
     <string name="scenario_kalt">Kalt &lt;5°</string>
     <string name="scenario_warm">Warm &gt;25°</string>
 
-    <string name="group_fork">Gabel — Fox 38 Factory GRIP X2, 180 mm</string>
-    <string name="group_shock">Dämpfer — Fox DHX2 Coil, 205×65 mm</string>
+    <!-- %1$s = model display name (proper noun, not translated), %2$d = travel/stroke in mm. -->
+    <string name="group_fork_template">Gabel — %1$s, %2$d mm</string>
+    <string name="group_shock_template">Dämpfer — %1$s, %2$d×%3$d mm</string>
     <string name="group_tires">Reifen</string>
     <string name="group_frame">Rahmen &amp; Stütze</string>
+    <string name="label_rebound">Zugstufe</string>
+    <string name="prefix_gabel">Gabel</string>
+    <string name="prefix_daempfer">Dämpfer</string>
+    <string name="hint_f_reb_single">Ruhe nach Kompressionen und nach harten Schlägen</string>
+    <string name="hint_s_reb_single">Schleudersitz und Verhalten nach großen Landungen</string>
+    <string name="change_component_hint">Modell ändern</string>
 
     <string name="label_f_psi">Luftdruck</string>
     <string name="label_f_sp">Volumenspacer</string>
@@ -230,4 +240,30 @@
     <string name="basics_ranges_row_10_label">Sattelstütze</string>
     <string name="basics_ranges_row_10_value">max. 300 psi</string>
     <string name="basics_ranges_footer">Der DHX2 hat keinen einstellbaren Bottom-Out — Durchschlagschutz kommt vom MCU-Bumper und der Federrate. Klickzahlen am Rad gegenprüfen.</string>
+
+    <!-- Component picker (feature-request follow-up: swappable fork/shock model). -->
+    <string name="picker_title_fork">Gabel wählen</string>
+    <string name="picker_title_shock">Dämpfer wählen</string>
+    <string name="picker_close">Schließen</string>
+    <string name="picker_travel">%1$d mm Federweg</string>
+    <string name="picker_stroke">%1$d×%2$d mm</string>
+    <string name="picker_clicks_summary">LSC %1$d · HSC %2$s · Zugstufe %3$s</string>
+    <string name="picker_none">–</string>
+    <string name="picker_split_rebound">LSR %1$d / HSR %2$d</string>
+    <string name="picker_custom_title">Eigenes Modell</string>
+    <string name="picker_custom_name_label">Bezeichnung</string>
+    <string name="picker_custom_name_placeholder">z. B. Öhlins RXF38</string>
+    <string name="picker_custom_travel_fork">Federweg</string>
+    <string name="picker_custom_stroke_shock">Hub</string>
+    <string name="picker_custom_eye_to_eye_shock">Einbaulänge</string>
+    <string name="picker_custom_lsc_max">LSC-Klicks (max.)</string>
+    <string name="picker_custom_hsc_max">HSC-Klicks (max.)</string>
+    <string name="picker_custom_hsc_available">HSC vorhanden</string>
+    <string name="picker_custom_rebound_split">Getrennte LSR/HSR</string>
+    <string name="picker_custom_rebound_max">Zugstufe-Klicks (max., LSR wenn getrennt)</string>
+    <string name="picker_custom_hsr_max">HSR-Klicks (max.)</string>
+    <string name="picker_custom_psi_baseline">Luftdruck-Basis (beim aktuellen Gewicht)</string>
+    <string name="picker_custom_rate_baseline">Federrate-Basis</string>
+    <string name="picker_custom_apply">Übernehmen</string>
+    <string name="picker_custom_no_weight_scaling">Eigene Modelle skalieren nicht automatisch mit dem Gewicht — Basiswert manuell nachjustieren.</string>
 </resources>

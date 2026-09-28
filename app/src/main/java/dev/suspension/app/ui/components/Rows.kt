@@ -103,11 +103,11 @@ fun StepperRow(
 }
 
 @Composable
-private fun StepButton(
+fun StepButton(
     symbol: String,
     contentDescription: String,
     onClick: () -> Unit,
-    colors: AppColors,
+    colors: AppColors = AppTheme.colors,
 ) {
     Box(
         contentAlignment = Alignment.Center,

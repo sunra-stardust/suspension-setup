@@ -56,4 +56,16 @@ class ValueRepository(context: Context) {
     suspend fun resetAll() {
         store.edit { it.clear() }
     }
+
+    /**
+     * Drops stored overrides for a component's rows (e.g. all "f_*" keys) — used when switching
+     * fork/shock model, since an edit calibrated to the old part's click range is meaningless
+     * (and may exceed the new part's max) on the new one.
+     */
+    suspend fun clearKeysWithPrefix(paramPrefix: String) {
+        store.edit { prefs ->
+            val toRemove = prefs.asMap().keys.filter { it.name.substringBefore(':').startsWith(paramPrefix) }
+            toRemove.forEach { prefs.remove(it) }
+        }
+    }
 }
