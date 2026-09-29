@@ -92,6 +92,13 @@ class ScenarioDataTest {
     }
 
     @Test
+    fun `the bike's standard shock has all four damping adjusters`() {
+        val stock = ComponentCatalog.shockById(bike.stockShockId)!!
+        val ids = ScenarioData.buildShockGroup(stock, 98.0, base, bike).rows.map { it.id }
+        listOf("s_lsc", "s_hsc", "s_lsr", "s_hsr").forEach { assertTrue(it in ids, "missing $it") }
+    }
+
+    @Test
     fun `dhx2 performance elite shows only the adjusters it has`() {
         val ids = ScenarioData.buildShockGroup(dhx2Pe, 98.0, base, bike).rows.map { it.id }
         assertTrue("s_lsc" in ids)
