@@ -52,10 +52,10 @@ object BikeProfiles {
         id = "mondraker_level_rr",
         nameResId = R.string.bike_level_rr_name,
         stockForkId = "fox38_gripx2",
-        // Mondraker lists a DHX2 Performance Elite (LSC/LSR only) for the production bike, but the
-        // owner's unit has HSC and HSR too — so the full-adjuster DHX2 is the default. The
-        // Performance Elite stays selectable in the picker.
-        stockShockId = "fox_dhx2_coil",
+        // The owner's own unit (HSC + LSC + one rebound adjuster, verified on the bike). Mondraker's
+        // spec sheet lists a Performance Elite with LSC/LSR only; that and the Factory (all four
+        // adjusters) stay selectable in the picker.
+        stockShockId = "fox_dhx2_hsc_lsr",
         stockSpringLbs = 500.0,
         // Owner's calculation for this frame: 550 lbs at 95–100 kg rider weight.
         springRule = SpringRule(referenceWeightKg = 97.5, referenceRateLbs = 550.0, slopeLbsPerKg = 5.0, stepLbs = 25.0),

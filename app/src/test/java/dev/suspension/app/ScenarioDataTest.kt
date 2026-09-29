@@ -6,6 +6,7 @@ import dev.suspension.app.data.REFERENCE_TEMP_C
 import dev.suspension.app.data.RowSpec
 import dev.suspension.app.data.Scenario
 import dev.suspension.app.data.ScenarioData
+import dev.suspension.app.data.TextSpec
 import dev.suspension.app.data.WeightBrackets
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse
@@ -91,20 +92,39 @@ class ScenarioDataTest {
         assertEquals(listOf(19.5, 18.0, 17.0, 21.0, 18.0), shockSag)
     }
 
+    private fun shockRowIds(shockId: String) =
+        ScenarioData.buildShockGroup(ComponentCatalog.shockById(shockId)!!, 98.0, base, bike).rows.map { it.id }
+
     @Test
-    fun `the bike's standard shock has all four damping adjusters`() {
-        val stock = ComponentCatalog.shockById(bike.stockShockId)!!
-        val ids = ScenarioData.buildShockGroup(stock, 98.0, base, bike).rows.map { it.id }
+    fun `the bike's standard shock has HSC, LSC and a single rebound adjuster`() {
+        val ids = shockRowIds(bike.stockShockId)
+        listOf("s_lsc", "s_hsc", "s_lsr", "s_cs").forEach { assertTrue(it in ids, "missing $it") }
+        assertFalse("s_hsr" in ids, "the owner's shock has no HSR knob")
+        assertFalse("s_reb" in ids, "rebound is one LSR row, not a second generic one")
+    }
+
+    @Test
+    fun `the single rebound row keeps the owner's clicks and covers landings in its hint`() {
+        val rows = ScenarioData.buildShockGroup(ComponentCatalog.shockById(bike.stockShockId)!!, 98.0, base, bike).rows
+        assertEquals(listOf(7.0, 7.0, 6.0, 8.0, 7.0), stepper(rows, "s_lsr").defaults)
+        assertEquals(TextSpec.Res(R.string.hint_s_reb_single), stepper(rows, "s_lsr").hint)
+        assertEquals(listOf(8.0, 6.0, 6.0, 10.0, 4.0), stepper(rows, "s_lsc").defaults)
+        assertEquals(listOf(5.0, 5.0, 4.0, 6.0, 5.0), stepper(rows, "s_hsc").defaults)
+    }
+
+    @Test
+    fun `dhx2 factory has all four adjusters`() {
+        val ids = shockRowIds("fox_dhx2_coil")
         listOf("s_lsc", "s_hsc", "s_lsr", "s_hsr").forEach { assertTrue(it in ids, "missing $it") }
     }
 
     @Test
-    fun `dhx2 performance elite shows only the adjusters it has`() {
-        val ids = ScenarioData.buildShockGroup(dhx2Pe, 98.0, base, bike).rows.map { it.id }
+    fun `dhx2 performance elite shows only the adjusters Fox documents for it`() {
+        val ids = shockRowIds("fox_dhx2_pe")
         assertTrue("s_lsc" in ids)
         assertTrue("s_lsr" in ids)
-        assertFalse("s_hsc" in ids, "Performance Elite has no HSC adjuster")
-        assertFalse("s_hsr" in ids, "Performance Elite has no HSR adjuster")
+        assertFalse("s_hsc" in ids, "Fox: HSC is Factory Series only")
+        assertFalse("s_hsr" in ids, "Fox: HSR is Factory Series only")
     }
 
     @Test

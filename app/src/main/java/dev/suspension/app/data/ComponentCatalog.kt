@@ -118,10 +118,28 @@ object ComponentCatalog {
 
     val shocks: List<ShockModel> = listOf(
         ShockModel(
+            id = "fox_dhx2_hsc_lsr",
+            displayName = "Fox DHX2 (HSC · LSC · LSR)",
+            strokeMm = 65,
+            eyeToEyeMm = 205,
+            // The owner's unit, checked on the bike: HSC + LSC and a single rebound adjuster (LSR),
+            // no HSR. Deliberately not labelled with a series — Fox documents HSC as Factory-only and
+            // Mondraker lists a Performance Elite (LSC/LSR only), so the series name would be a guess.
+            lscMax = 16,
+            hscMax = 8,
+            reboundMode = ReboundMode.SPLIT,
+            reboundMax = 16,
+            hsrMax = null,
+            hasClimbLever = true,
+            preloadHintResId = dev.suspension.app.R.string.hint_s_pre_fox,
+            preloadRangeResId = dev.suspension.app.R.string.range_preload_fox,
+        ),
+        ShockModel(
             id = "fox_dhx2_coil",
             displayName = "Fox DHX2 Factory",
             strokeMm = 65,
             eyeToEyeMm = 205,
+            // Fox manual: the Factory Series has all four adjusters (HSC, LSC, HSR, LSR).
             lscMax = 16,
             hscMax = 8,
             reboundMode = ReboundMode.SPLIT,
@@ -136,7 +154,8 @@ object ComponentCatalog {
             displayName = "Fox DHX2 Performance Elite",
             strokeMm = 65,
             eyeToEyeMm = 205,
-            // Fox 2021–2025 manual and Mondraker's spec: LSC and LSR (plus preload) only.
+            // Fox manual (2025): the Performance Elite "will only utilize" LSC and LSR; HSC/HSR are
+            // footnoted "Factory Series only". Mondraker's Level RR spec lists the same.
             lscMax = 16,
             hscMax = null,
             reboundMode = ReboundMode.SPLIT,

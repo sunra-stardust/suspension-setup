@@ -292,7 +292,9 @@ object ScenarioData {
                     RowSpec.Stepper(
                         id = "s_lsr", labelResId = R.string.label_lsr, unitResId = null,
                         stripe = Stripe.REB, step = 1.0, max = shock.reboundMax.toDouble(),
-                        defaults = clicks(SHOCK_LSR, shock.reboundMax, tempC), hint = TextSpec.Res(R.string.hint_s_lsr),
+                        defaults = clicks(SHOCK_LSR, shock.reboundMax, tempC),
+                        // With no HSR knob this one adjuster covers landings too.
+                        hint = TextSpec.Res(if (shock.hsrMax == null) R.string.hint_s_reb_single else R.string.hint_s_lsr),
                     ),
                 )
                 shock.hsrMax?.let { hsrMax ->
