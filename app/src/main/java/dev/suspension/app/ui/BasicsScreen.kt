@@ -129,6 +129,7 @@ fun BasicsScreen(
         }
         item {
             BasicsCard(stringResource(R.string.basics_temp_title)) {
+                Text(stringResource(R.string.basics_temp_setup), style = type.body, color = colors.ink)
                 val bullets = listOf(
                     R.string.basics_temp_bullet_1, R.string.basics_temp_bullet_2,
                     R.string.basics_temp_bullet_3, R.string.basics_temp_bullet_4,

@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -25,6 +26,7 @@ import androidx.compose.ui.res.stringResource
 import dev.suspension.app.data.BikeProfiles
 import dev.suspension.app.data.CUSTOM_ID
 import dev.suspension.app.data.ComponentCatalog
+import dev.suspension.app.data.DEFAULT_TEMP_C
 import dev.suspension.app.data.DEFAULT_WEIGHT_KG
 import dev.suspension.app.data.Scenario
 import dev.suspension.app.data.SettingsRepository
@@ -66,13 +68,17 @@ private fun AppRoot() {
 
     var selectedTab by rememberSaveable { mutableIntStateOf(AppTab.SETUP.ordinal) }
     var selectedScenarioIndex by rememberSaveable { mutableIntStateOf(Scenario.BASIS.index) }
-    val selectedScenario = Scenario.ordered[selectedScenarioIndex]
+    val selectedScenario = Scenario.ordered.getOrElse(selectedScenarioIndex) { Scenario.BASIS }
     val tab = AppTab.entries[selectedTab]
+
+    // Kalt/Warm are no longer scenarios (temperature is a setting) — drop their stored overrides.
+    LaunchedEffect(Unit) { repository.dropScenarioIndicesFrom(Scenario.count) }
 
     val stockFork = ComponentCatalog.forkById(bike.stockForkId) ?: ComponentCatalog.forks.first()
     val stockShock = ComponentCatalog.shockById(bike.stockShockId) ?: ComponentCatalog.shocks.first()
 
     val weightKg by settings.weightKg.collectAsState(initial = DEFAULT_WEIGHT_KG)
+    val tempC by settings.tempC.collectAsState(initial = DEFAULT_TEMP_C)
     val forkId by settings.forkId.collectAsState(initial = bike.stockForkId)
     val shockId by settings.shockId.collectAsState(initial = bike.stockShockId)
     val customForkRaw by settings.customFork.collectAsState(initial = stockFork.copy(id = CUSTOM_ID, displayName = ""))
@@ -103,6 +109,8 @@ private fun AppRoot() {
                         shock = shock,
                         weightKg = weightKg,
                         onWeightChange = { scope.launch { settings.setWeightKg(it) } },
+                        tempC = tempC,
+                        onTempChange = { scope.launch { settings.setTempC(it) } },
                         onOpenForkPicker = { overlay = PickerOverlay.FORK },
                         onOpenShockPicker = { overlay = PickerOverlay.SHOCK },
                     )

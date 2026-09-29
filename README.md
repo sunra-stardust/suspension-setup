@@ -9,8 +9,9 @@ Persistenz. Keine Accounts, kein Netzwerk, keine Berechtigungen.
 
 ## Screens
 
-- **Setup** — sieben Szenarien (Basis, Downhill, Bikepark, Tour, Uphill, Kalt, Warm).
-  Fahrergewicht (mit Ausrüstung) im Header; Gabel- und Dämpfer-Modell über die
+- **Setup** — fünf Gelände-Szenarien (Basis, Downhill, Bikepark, Tour, Uphill). Karte
+  „Bedingungen": Fahrergewicht (mit Ausrüstung) und Fahrtemperatur (Basis 20 °C) gelten für alle
+  Szenarien; der Header zeigt sie als Erinnerung. Gabel- und Dämpfer-Modell über die
   Gruppenüberschrift wählbar. Dämpfungskreise (LSC/HSC/LSR/HSR bzw. einzelne Zugstufe) nutzen
   ↺/↻-Drehrichtungs-Buttons, alle Mengenwerte `+`/`−` (siehe „Drehrichtung").
 - **Diagnose** — Symptom-Suche mit Handlungsempfehlung und Drehrichtungs-Chip.
@@ -29,7 +30,8 @@ Persistenz. Keine Accounts, kein Netzwerk, keine Berechtigungen.
 | Szenario-Abweichungen (Bikepark +12 psi …) | Eigene Abstimmung des Besitzers (Spec §6), als Offsets auf den Herstellerwert |
 | Federrate | Verbaute Feder (ab Werk 500 lbs, Gr. L/XL). Empfehlung im Hinweis per Faustregel, kalibriert auf diesen Rahmen (97,5 kg → 550 lbs, ±5 lbs/kg) — für Federraten gibt es keine Herstellertabelle, sie hängt vom Übersetzungsverhältnis des Rahmens ab |
 | Dämpfer-Klickwerte, Sag-Ziele | Eigene Startwerte des Besitzers (Fox' DHX2-Tabellen hängen vom Rahmen ab) |
-| Temperatur | Gasgesetz auf den **absoluten** Druck: 110 psi bei 20 °C → ca. 101,5 psi bei 0 °C |
+| Temperatur, Luft (Gabel, Reifen) | Gasgesetz auf den **absoluten** Druck bei konstantem Volumen. Angezeigt wird der **Fülldruck bei 20 °C**, mit dem am Rad bei Fahrtemperatur der Zielwert (Fox-Tabelle / deine Reifenwerte) erreicht wird — z. B. Gabel 110 psi Ziel bei 0 °C → 119 psi bei 20 °C füllen. Wer draußen pumpt, nimmt den Zielwert (steht im Hinweis). Fox' Tabellen gelten für 21–24 °C |
+| Temperatur, Öl (alle Klickkreise) | Kaltes Öl dämpft stärker → Klicks weiter auf, warm → weiter zu. Kalibriert an den früheren eigenen Kalt-/Warm-Setups (≈ −15 K: LSC +2, übrige +1; +10 K: LSC −1), linear, max. ±3 Klicks, skaliert auf kurze Dials (RockShox: 5 Klicks). Deckt sich mit veröffentlichten Empfehlungen: unter ca. 5 °C Druckstufe 1–3 Klicks öffnen, Zugstufe 1–2 schneller |
 
 Alles sind Startwerte. Werksempfehlung der eigenen Einheit: 4-stellige ID auf ridefox.com.
 
@@ -41,7 +43,7 @@ Alles sind Startwerte. Werksempfehlung der eigenen Einheit: 4-stellige ID auf ri
 - [Blister: Mondraker Level](https://blisterreview.com/gear-reviews/mondraker-level) — Flip-Chip: −5 mm Tretlager, −0,35°
 - [OnOff Pija Anleitung](https://www.onoffcomponents.com/uploads/maintances/pija-seatpost-20211130093117-es.pdf) — 280–300 psi, nie über 300, alle 10 h prüfen
 - [SRAM Charger 3 Setup](https://www.sram.com/en/rockshox/learn/charger-3-setup), [Super Deluxe Coil Ultimate](https://www.sram.com/en/rockshox/models/rs-sdlc-ult-b1), [Vivid Coil Ultimate](https://www.sram.com/en/rockshox/models/rs-vivc-ult-c1) — RockShox-Klicks und Hebel
-- [Pinkbike: Temperatur und Fahrwerk](https://www.pinkbike.com/news/nerding-out-how-temperature-affects-your-suspension.html)
+- [Pinkbike: Temperatur und Fahrwerk](https://www.pinkbike.com/news/nerding-out-how-temperature-affects-your-suspension.html), [NSMB: Cold Weather Suspension](https://nsmb.com/articles/cold-weather-mountain-bike-suspension/), [Singletracks: Cold-Weather Tuning](https://www.singletracks.com/mtb-gear/tuning-your-mountain-bike-fork-and-shock-for-cold-weather-riding/) — Öl-Viskosität, Klick-Richtung, Druck bei Fahrtemperatur prüfen
 
 RockShox-**Gabeln** sind bewusst nicht im Katalog: RockShox veröffentlicht keine allgemeine
 Drucktabelle, und die Werte auf dem Casting unterscheiden sich je Modelljahr/Federweg. Solche
@@ -83,7 +85,7 @@ andere. `↻` (zudrehen) senkt die Zahl, `↺` (aufdrehen) erhöht sie.
 ## Release & Installation (Sideload)
 
 ```
-git tag v0.4.0 && git push origin v0.4.0
+git tag v0.5.0 && git push origin v0.5.0
 ```
 
 `.github/workflows/release.yml` baut eine signierte APK und hängt sie an ein GitHub-Release.
@@ -93,8 +95,13 @@ bestehende App. Kein In-App-Updater (keine `INTERNET`-Permission).
 ## Persistenz
 
 Jeder editierte Wert wird unter `"<paramId>:<szenarioIndex>"` gespeichert. Nicht editierte Werte
-folgen den Standardwerten — ändert sich die Herstellertabelle, das Gewicht oder das Modell, ziehen
-unveränderte Werte automatisch nach. Ein Modellwechsel löscht die Overrides dieser Komponente.
+folgen den Standardwerten — ändert sich die Herstellertabelle, das Gewicht, die Temperatur oder
+das Modell, ziehen unveränderte Werte automatisch nach; **selbst verstellte Werte bleiben fest**.
+Ein Modellwechsel löscht die Overrides dieser Komponente.
+
+Migration: Die früheren Szenarien „Kalt"/„Warm" (Index 5/6) gibt es nicht mehr — Temperatur ist
+eine globale Einstellung. Ihre gespeicherten Overrides werden beim Start entfernt
+(`ValueRepository.dropScenarioIndicesFrom`); die Indizes 0–4 bleiben unverändert.
 
 ## Lizenzen
 

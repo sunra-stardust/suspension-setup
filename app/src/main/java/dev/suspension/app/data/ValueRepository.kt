@@ -53,6 +53,20 @@ class ValueRepository(context: Context) {
         store.edit { it[prefKey] = value }
     }
 
+    /**
+     * Drops stored overrides of scenarios that no longer exist (the former "Kalt"/"Warm" are now
+     * the temperature setting). Their keys would otherwise sit in the store forever.
+     */
+    suspend fun dropScenarioIndicesFrom(firstRemoved: Int) {
+        store.edit { prefs ->
+            val obsolete = prefs.asMap().keys.filter {
+                val index = it.name.substringAfterLast(':', "").toIntOrNull()
+                index != null && index >= firstRemoved
+            }
+            obsolete.forEach { prefs.remove(it) }
+        }
+    }
+
     suspend fun resetAll() {
         store.edit { it.clear() }
     }
