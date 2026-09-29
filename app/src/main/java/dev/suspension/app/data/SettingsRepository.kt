@@ -10,14 +10,19 @@ import androidx.datastore.preferences.core.emptyPreferences
 import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
+import dev.suspension.app.R
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.map
 import java.io.IOException
+import kotlin.math.roundToInt
 
 private val Context.settingsDataStore: DataStore<Preferences> by preferencesDataStore(name = "app_settings")
 
-const val DEFAULT_WEIGHT_KG = 97.5
+/** Rider weight including riding gear — Fox's charts assume "fully kitted" weight. */
+const val DEFAULT_WEIGHT_KG = 98.0
+const val MIN_WEIGHT_KG = 30.0
+const val MAX_WEIGHT_KG = 180.0
 
 private object Keys {
     val weightKg = doublePreferencesKey("rider_weight_kg")
@@ -42,24 +47,25 @@ private object Keys {
     val customShockReboundMax = intPreferencesKey("custom_shock_rebound_max")
     val customShockHsrMax = intPreferencesKey("custom_shock_hsr_max") // -1 = none
     val customShockRate = doublePreferencesKey("custom_shock_rate_lbs")
+    val customShockLever = booleanPreferencesKey("custom_shock_climb_lever")
 }
 
-/** Global settings: rider weight and the selected fork/shock (catalog or custom) — spec-extension. */
-class SettingsRepository(context: Context) {
+/** Global settings: rider weight and the selected fork/shock (catalog or custom). */
+class SettingsRepository(context: Context, private val bike: BikeProfile) {
     private val store = context.applicationContext.settingsDataStore
 
     private val safeData: Flow<Preferences> = store.data.catch { e ->
         if (e is IOException) emit(emptyPreferences()) else throw e
     }
 
-    val weightKg: Flow<Double> = safeData.map { it[Keys.weightKg] ?: DEFAULT_WEIGHT_KG }
+    val weightKg: Flow<Double> = safeData.map { it[Keys.weightKg]?.roundToInt()?.toDouble() ?: DEFAULT_WEIGHT_KG }
 
     suspend fun setWeightKg(value: Double) {
-        store.edit { it[Keys.weightKg] = value.coerceIn(30.0, 180.0) }
+        store.edit { it[Keys.weightKg] = value.roundToInt().toDouble().coerceIn(MIN_WEIGHT_KG, MAX_WEIGHT_KG) }
     }
 
-    val forkId: Flow<String> = safeData.map { it[Keys.forkId] ?: ComponentCatalog.defaultFork.id }
-    val shockId: Flow<String> = safeData.map { it[Keys.shockId] ?: ComponentCatalog.defaultShock.id }
+    val forkId: Flow<String> = safeData.map { it[Keys.forkId] ?: bike.stockForkId }
+    val shockId: Flow<String> = safeData.map { it[Keys.shockId] ?: bike.stockShockId }
 
     suspend fun selectFork(id: String) {
         store.edit { it[Keys.forkId] = id }
@@ -72,18 +78,22 @@ class SettingsRepository(context: Context) {
     val customFork: Flow<ForkModel> = safeData.map { prefs ->
         ForkModel(
             id = CUSTOM_ID,
-            displayName = prefs[Keys.customForkName]?.takeIf { it.isNotBlank() } ?: "Eigene Gabel",
+            displayName = prefs[Keys.customForkName]?.takeIf { it.isNotBlank() } ?: "",
             travelMm = prefs[Keys.customForkTravel] ?: 170,
             lscMax = prefs[Keys.customForkLscMax] ?: 16,
             hscMax = (prefs[Keys.customForkHscMax] ?: 8).takeIf { it >= 0 },
             reboundMode = if (prefs[Keys.customForkSplit] ?: true) ReboundMode.SPLIT else ReboundMode.SINGLE,
             reboundMax = prefs[Keys.customForkReboundMax] ?: 16,
             hsrMax = (prefs[Keys.customForkHsrMax] ?: 8).takeIf { it >= 0 },
-            pressureTable = listOf(WeightPoint(0.0, prefs[Keys.customForkPsi] ?: 100.0)),
+            pressureChart = null,
+            baselinePsi = prefs[Keys.customForkPsi] ?: 100.0,
+            maxPressurePsi = null,
+            spacersStock = null,
+            spacersMax = null,
         )
     }
 
-    suspend fun setCustomFork(model: ForkModel, psi: Double) {
+    suspend fun setCustomFork(model: ForkModel) {
         store.edit { prefs ->
             prefs[Keys.customForkName] = model.displayName
             prefs[Keys.customForkTravel] = model.travelMm
@@ -92,14 +102,14 @@ class SettingsRepository(context: Context) {
             prefs[Keys.customForkSplit] = model.reboundMode == ReboundMode.SPLIT
             prefs[Keys.customForkReboundMax] = model.reboundMax
             prefs[Keys.customForkHsrMax] = model.hsrMax ?: -1
-            prefs[Keys.customForkPsi] = psi
+            prefs[Keys.customForkPsi] = model.baselinePsi
         }
     }
 
     val customShock: Flow<ShockModel> = safeData.map { prefs ->
         ShockModel(
             id = CUSTOM_ID,
-            displayName = prefs[Keys.customShockName]?.takeIf { it.isNotBlank() } ?: "Eigener Dämpfer",
+            displayName = prefs[Keys.customShockName]?.takeIf { it.isNotBlank() } ?: "",
             strokeMm = prefs[Keys.customShockStroke] ?: 65,
             eyeToEyeMm = prefs[Keys.customShockEyeToEye] ?: 205,
             lscMax = prefs[Keys.customShockLscMax] ?: 16,
@@ -107,10 +117,10 @@ class SettingsRepository(context: Context) {
             reboundMode = if (prefs[Keys.customShockSplit] ?: true) ReboundMode.SPLIT else ReboundMode.SINGLE,
             reboundMax = prefs[Keys.customShockReboundMax] ?: 16,
             hsrMax = (prefs[Keys.customShockHsrMax] ?: 8).takeIf { it >= 0 },
-            referenceWeightKg = DEFAULT_WEIGHT_KG,
-            referenceRateLbs = prefs[Keys.customShockRate] ?: 500.0,
-            rateSlopeLbsPerKg = 0.0,
-            rateStepLbs = 25.0,
+            hasClimbLever = prefs[Keys.customShockLever] ?: true,
+            customSpringLbs = prefs[Keys.customShockRate] ?: bike.stockSpringLbs,
+            preloadHintResId = R.string.hint_s_pre_generic,
+            preloadRangeResId = R.string.range_preload_generic,
         )
     }
 
@@ -124,7 +134,8 @@ class SettingsRepository(context: Context) {
             prefs[Keys.customShockSplit] = model.reboundMode == ReboundMode.SPLIT
             prefs[Keys.customShockReboundMax] = model.reboundMax
             prefs[Keys.customShockHsrMax] = model.hsrMax ?: -1
-            prefs[Keys.customShockRate] = model.referenceRateLbs
+            prefs[Keys.customShockRate] = model.customSpringLbs ?: bike.stockSpringLbs
+            prefs[Keys.customShockLever] = model.hasClimbLever
         }
     }
 }

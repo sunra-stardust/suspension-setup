@@ -13,6 +13,7 @@ class DampingStringLintTest {
     private val dampingRowResourceNames = listOf(
         "label_lsc", "label_hsc", "label_lsr", "label_hsr", "label_rebound",
         "hint_f_lsc", "hint_f_hsc", "hint_f_lsr", "hint_f_hsr", "hint_f_reb_single",
+        "hint_f_lsr_chart", "hint_f_hsr_chart",
         "hint_s_lsc", "hint_s_hsc", "hint_s_lsr", "hint_s_hsr", "hint_s_reb_single",
     )
 

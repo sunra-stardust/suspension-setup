@@ -5,14 +5,12 @@ import kotlin.math.roundToInt
 /** Whether a damper has one rebound circuit or a split low/high-speed pair. */
 enum class ReboundMode { SPLIT, SINGLE }
 
-/** One point of a weight → pressure/rate curve, used to interpolate a starting value. */
-data class WeightPoint(val kg: Double, val value: Double)
-
 /**
- * A fork model's tuning envelope: click ranges (from the model's manual/reviews), and a
- * weight → air-pressure starting-point curve (from the manufacturer's printed sag chart,
- * where published — see README for sources). Values are starting points, not gospel; Fox
- * itself states ±10 psi off its own chart is normal.
+ * A fork model's tuning envelope. Every number here comes from the manufacturer's own manual
+ * (sources in README → "Komponenten-Recherche"); anything we couldn't verify is null and the
+ * UI falls back to plain starting values instead of inventing data.
+ *
+ * Adding a model = adding one entry to [ComponentCatalog.forks]. No other code changes needed.
  */
 data class ForkModel(
     val id: String,
@@ -21,20 +19,29 @@ data class ForkModel(
     val lscMax: Int,
     val hscMax: Int?,
     val reboundMode: ReboundMode,
+    /** LSR max when [ReboundMode.SPLIT], the single rebound max otherwise. */
     val reboundMax: Int,
     val hsrMax: Int?,
-    /** kg → psi, ascending by kg. Empty for a custom model with no known curve. */
-    val pressureTable: List<WeightPoint>,
+    /** Manufacturer air-pressure chart by rider weight; null = no verified chart (custom). */
+    val pressureChart: WeightChart?,
+    /** Pressure used when there's no chart (custom models). */
+    val baselinePsi: Double = 100.0,
+    val maxPressurePsi: Double?,
+    /** Manufacturer rebound starting clicks by rider weight; null = no verified chart. */
+    val lsrChart: WeightChart? = null,
+    val hsrChart: WeightChart? = null,
+    val spacersStock: Int?,
+    val spacersMax: Int?,
+    /** Short name of the chart's publisher for hints ("Fox"). */
+    val chartSource: String? = null,
 ) {
     val isCustom: Boolean get() = id == CUSTOM_ID
 }
 
 /**
- * A coil shock's tuning envelope. Spring-rate-by-weight has no universal manufacturer table
- * (RockShox: leverage ratio and frame design change what a given rate produces), so
- * [referenceWeightKg]/[referenceRateLbs]/[rateSlopeLbsPerKg] encode a rule-of-thumb calibrated
- * to this bike's own known-good point (500 lbs installed, 550 lbs recommended at 95–100 kg,
- * spec §6/§10) rather than a fabricated per-model table.
+ * A coil shock's tuning envelope. There's deliberately no spring-rate-by-weight table here:
+ * the right rate depends on the frame's leverage ratio (RockShox says so explicitly), so the
+ * recommendation lives in [BikeProfile.springRule], calibrated per frame.
  */
 data class ShockModel(
     val id: String,
@@ -46,20 +53,29 @@ data class ShockModel(
     val reboundMode: ReboundMode,
     val reboundMax: Int,
     val hsrMax: Int?,
-    val referenceWeightKg: Double,
-    val referenceRateLbs: Double,
-    val rateSlopeLbsPerKg: Double,
-    val rateStepLbs: Double,
-)
+    val hasClimbLever: Boolean,
+    /** Installed spring for custom shocks; catalog shocks use the bike's stock spring. */
+    val customSpringLbs: Double? = null,
+    /** Preload guidance shown as the preload row's hint. */
+    val preloadHintResId: Int,
+    /** Preload range shown on Basics → Einstellbereiche. */
+    val preloadRangeResId: Int,
+) {
+    val isCustom: Boolean get() = id == CUSTOM_ID
+}
 
 const val CUSTOM_ID = "custom"
 
 /**
- * Researched 2026-era enduro/DH fork and coil-shock catalog. Sources (click counts, travel,
- * pressure charts): see README "Komponenten-Recherche". Not exhaustive — anything else is
- * covered by the custom-model entry.
+ * Verified fork and coil-shock catalog (manufacturer manuals, 2025/2026 model years — see
+ * README). Deliberately small: a wrong number here is worse than a missing model, and the
+ * custom-model entry covers everything else.
  */
 object ComponentCatalog {
+
+    /** Fox 36/38 GRIP X2 rebound starting clicks from closed, per rider-weight row (manual 2025). */
+    private val FOX_GRIPX2_HSR = WeightChart(listOf(9.0, 8.0, 7.0, 7.0, 7.0, 7.0, 6.0, 5.0, 4.0, 3.0, 3.0, 2.0, 1.0))
+    private val FOX_GRIPX2_LSR = WeightChart(listOf(8.0, 7.0, 7.0, 6.0, 6.0, 5.0, 4.0, 4.0, 3.0, 2.0, 1.0, 0.0, 0.0))
 
     val forks: List<ForkModel> = listOf(
         ForkModel(
@@ -71,15 +87,15 @@ object ComponentCatalog {
             reboundMode = ReboundMode.SPLIT,
             reboundMax = 16,
             hsrMax = 8,
-            pressureTable = listOf(
-                WeightPoint(59.0, 72.0),
-                WeightPoint(70.8, 84.0),
-                WeightPoint(79.4, 93.0),
-                WeightPoint(88.5, 102.0),
-                WeightPoint(97.5, 110.0),
-                WeightPoint(106.6, 114.0),
-                WeightPoint(111.1, 123.0),
-            ),
+            // FLOAT column (not E-Bike+) of the 2025 Fox 36/38 manual.
+            pressureChart = WeightChart(listOf(72.0, 76.0, 80.0, 84.0, 89.0, 93.0, 97.0, 102.0, 106.0, 110.0, 114.0, 119.0, 123.0)),
+            maxPressurePsi = 140.0,
+            lsrChart = FOX_GRIPX2_LSR,
+            hsrChart = FOX_GRIPX2_HSR,
+            // Factory spacer count for 180 mm travel; more spacers = more bottom-out resistance.
+            spacersStock = 1,
+            spacersMax = 4,
+            chartSource = "Fox",
         ),
         ForkModel(
             id = "fox36_gripx2",
@@ -90,57 +106,35 @@ object ComponentCatalog {
             reboundMode = ReboundMode.SPLIT,
             reboundMax = 16,
             hsrMax = 8,
-            pressureTable = listOf(
-                WeightPoint(59.0, 66.0),
-                WeightPoint(61.7, 70.0),
-                WeightPoint(70.3, 78.0),
-                WeightPoint(79.4, 86.0),
-                WeightPoint(88.5, 94.0),
-                WeightPoint(97.5, 105.0),
-                WeightPoint(106.6, 109.0),
-                WeightPoint(111.1, 117.0),
-            ),
-        ),
-        ForkModel(
-            id = "rockshox_zeb_ultimate",
-            displayName = "RockShox ZEB Ultimate (Charger 3)",
-            travelMm = 170,
-            lscMax = 15,
-            hscMax = 5,
-            reboundMode = ReboundMode.SINGLE,
-            reboundMax = 18,
-            hsrMax = null,
-            pressureTable = listOf(
-                WeightPoint(54.4, 87.0),
-                WeightPoint(68.0, 124.0),
-                WeightPoint(77.1, 140.0),
-                WeightPoint(86.2, 154.0),
-                WeightPoint(95.3, 166.0),
-            ),
-        ),
-        ForkModel(
-            id = "rockshox_lyrik_ultimate",
-            displayName = "RockShox Lyrik Ultimate (Charger 3.1)",
-            travelMm = 160,
-            lscMax = 15,
-            hscMax = 5,
-            reboundMode = ReboundMode.SINGLE,
-            reboundMax = 20,
-            hsrMax = null,
-            pressureTable = listOf(
-                WeightPoint(54.4, 85.0),
-                WeightPoint(68.0, 122.0),
-                WeightPoint(77.1, 137.0),
-                WeightPoint(86.2, 149.0),
-                WeightPoint(104.3, 158.0),
-            ),
+            pressureChart = WeightChart(listOf(66.0, 70.0, 74.0, 78.0, 82.0, 86.0, 89.0, 94.0, 99.0, 105.0, 109.0, 113.0, 117.0)),
+            maxPressurePsi = 120.0,
+            lsrChart = FOX_GRIPX2_LSR,
+            hsrChart = FOX_GRIPX2_HSR,
+            spacersStock = 1,
+            spacersMax = 6,
+            chartSource = "Fox",
         ),
     )
 
     val shocks: List<ShockModel> = listOf(
         ShockModel(
+            id = "fox_dhx2_pe",
+            displayName = "Fox DHX2 Performance Elite",
+            strokeMm = 65,
+            eyeToEyeMm = 205,
+            // Fox 2021–2025 manual: Performance Elite uses LSC and LSR only.
+            lscMax = 16,
+            hscMax = null,
+            reboundMode = ReboundMode.SPLIT,
+            reboundMax = 16,
+            hsrMax = null,
+            hasClimbLever = true,
+            preloadHintResId = dev.suspension.app.R.string.hint_s_pre_fox,
+            preloadRangeResId = dev.suspension.app.R.string.range_preload_fox,
+        ),
+        ShockModel(
             id = "fox_dhx2_coil",
-            displayName = "Fox DHX2 Coil",
+            displayName = "Fox DHX2 Factory",
             strokeMm = 65,
             eyeToEyeMm = 205,
             lscMax = 16,
@@ -148,14 +142,13 @@ object ComponentCatalog {
             reboundMode = ReboundMode.SPLIT,
             reboundMax = 16,
             hsrMax = 8,
-            referenceWeightKg = 97.5,
-            referenceRateLbs = 550.0,
-            rateSlopeLbsPerKg = 5.0,
-            rateStepLbs = 25.0,
+            hasClimbLever = true,
+            preloadHintResId = dev.suspension.app.R.string.hint_s_pre_fox,
+            preloadRangeResId = dev.suspension.app.R.string.range_preload_fox,
         ),
         ShockModel(
             id = "rockshox_superdeluxe_coil",
-            displayName = "RockShox Super Deluxe Ultimate Coil",
+            displayName = "RockShox Super Deluxe Coil Ultimate",
             strokeMm = 65,
             eyeToEyeMm = 205,
             lscMax = 5,
@@ -163,14 +156,13 @@ object ComponentCatalog {
             reboundMode = ReboundMode.SINGLE,
             reboundMax = 20,
             hsrMax = null,
-            referenceWeightKg = 97.5,
-            referenceRateLbs = 550.0,
-            rateSlopeLbsPerKg = 5.0,
-            rateStepLbs = 25.0,
+            hasClimbLever = true,
+            preloadHintResId = dev.suspension.app.R.string.hint_s_pre_generic,
+            preloadRangeResId = dev.suspension.app.R.string.range_preload_generic,
         ),
         ShockModel(
             id = "rockshox_vivid_coil",
-            displayName = "RockShox Vivid Coil",
+            displayName = "RockShox Vivid Coil Ultimate",
             strokeMm = 65,
             eyeToEyeMm = 205,
             lscMax = 5,
@@ -178,46 +170,14 @@ object ComponentCatalog {
             reboundMode = ReboundMode.SINGLE,
             reboundMax = 20,
             hsrMax = null,
-            referenceWeightKg = 97.5,
-            referenceRateLbs = 550.0,
-            rateSlopeLbsPerKg = 5.0,
-            rateStepLbs = 25.0,
+            hasClimbLever = true,
+            preloadHintResId = dev.suspension.app.R.string.hint_s_pre_generic,
+            preloadRangeResId = dev.suspension.app.R.string.range_preload_generic,
         ),
     )
 
-    val defaultFork: ForkModel = forks.first()
-    val defaultShock: ShockModel = shocks.first()
-
     fun forkById(id: String): ForkModel? = forks.find { it.id == id }
     fun shockById(id: String): ShockModel? = shocks.find { it.id == id }
-}
-
-/** Linear interpolation over an ascending weight→value table; clamps by extrapolating the nearest segment's slope. */
-fun interpolateWeightTable(table: List<WeightPoint>, weightKg: Double): Double {
-    if (table.isEmpty()) return 0.0
-    if (table.size == 1) return table[0].value
-    if (weightKg <= table.first().kg) {
-        val (a, b) = table[0] to table[1]
-        return extrapolate(a, b, weightKg)
-    }
-    if (weightKg >= table.last().kg) {
-        val (a, b) = table[table.size - 2] to table[table.size - 1]
-        return extrapolate(a, b, weightKg)
-    }
-    for (i in 0 until table.size - 1) {
-        val a = table[i]
-        val b = table[i + 1]
-        if (weightKg in a.kg..b.kg) {
-            val t = (weightKg - a.kg) / (b.kg - a.kg)
-            return a.value + t * (b.value - a.value)
-        }
-    }
-    return table.last().value
-}
-
-private fun extrapolate(a: WeightPoint, b: WeightPoint, weightKg: Double): Double {
-    val slope = (b.value - a.value) / (b.kg - a.kg)
-    return a.value + slope * (weightKg - a.kg)
 }
 
 /** Preserves a click value's relative position in the old range when switching to a model with a different max. */
