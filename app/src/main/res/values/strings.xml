@@ -50,10 +50,29 @@
     <string name="unit_psi">psi</string>
     <string name="unit_stk">Stk</string>
     <string name="unit_mm">mm</string>
-    <string name="unit_von_zu">von zu</string>
     <string name="unit_lbs">lbs</string>
     <string name="unit_klicks">Klicks</string>
     <string name="unit_bar">bar</string>
+    <!-- Damping-row unit line (Change 01 §5) — replaces the static "von zu" with the actual state. -->
+    <string name="damping_state_zu">zu</string>
+    <string name="damping_state_offen">offen</string>
+
+    <!-- Rotation control captions (Change 01 §5) -->
+    <string name="rotation_caption_softer">weicher</string>
+    <string name="rotation_caption_firmer">fester</string>
+    <string name="rotation_caption_faster">schneller</string>
+    <string name="rotation_caption_slower">langsamer</string>
+    <string name="rotation_clockwise_word">im Uhrzeigersinn</string>
+    <string name="rotation_counter_clockwise_word">gegen den Uhrzeigersinn</string>
+    <string name="rotation_limit_reached">Anschlag erreicht</string>
+    <!-- %1$s = "Gabel"/"Dämpfer" + param label, e.g. "Gabel LSC". %2$s = caption (weicher/fester/...). -->
+    <string name="rotation_cw_description">%1$s zudrehen, im Uhrzeigersinn, %2$s</string>
+    <string name="rotation_ccw_description">%1$s aufdrehen, gegen den Uhrzeigersinn, %2$s</string>
+    <string name="rotation_value_description_open">%1$s, %2$s Klicks offen</string>
+    <string name="rotation_value_description_closed">%1$s, zu</string>
+    <!-- Diagnose direction chip text (Change 01 §6) -->
+    <string name="diag_direction_clockwise">im Uhrzeigersinn · Zahl sinkt</string>
+    <string name="diag_direction_counter_clockwise">gegen den Uhrzeigersinn · Zahl steigt</string>
 
     <string name="hint_f_psi">Fox-Tabelle 105–115 · Bikepark höher, weil nur 1 Spacer</string>
     <string name="hint_f_sp">bleibt bei 1 — Endprogression kommt über den Luftdruck</string>
@@ -148,7 +167,7 @@
     <string name="diag_explanation_17">Felgenkontakt. Mehr Druck kostet Grip.</string>
 
     <string name="diag_symptom_18">Fahrwerk im Winter stumpf und träge</string>
-    <string name="diag_action_18">LSC und HSC 1–2 Klicks auf</string>
+    <string name="diag_action_18">LSC und HSC 1–2 Klicks aufdrehen</string>
     <string name="diag_explanation_18">Kaltes Öl ist zäher und dämpft stärker.</string>
 
     <string name="diag_symptom_19">Gabel steht im Winter tiefer</string>
@@ -158,15 +177,20 @@
     <string name="reset_button">Alle Werte auf Startwerte zurücksetzen</string>
     <string name="basics_persistence_note">Änderungen werden nur auf diesem Gerät gespeichert.</string>
 
-    <!-- Basics-screen cards (§10), copied verbatim from the reference artifact. -->
+    <!-- Basics-screen cards (§10), copied verbatim from the reference artifact, except the first
+         card, replaced verbatim per Change 01 §7. -->
 
-    <string name="basics_clicks_title">Klicks zählen</string>
-    <string name="basics_clicks_body_1">Im Uhrzeigersinn bis zum sanften Anschlag = zu, nie mit Gewalt. Dann gegen den Uhrzeigersinn herausdrehen und zählen. Alle Werte hier sind „von zu“.</string>
-    <string name="basics_clicks_body_2">Im Uhrzeigersinn = mehr Dämpfung = langsamer. Gegen den Uhrzeigersinn = weniger = schneller.</string>
-    <string name="basics_clicks_body_3">In der App: „+“ dreht auf (weniger Dämpfung, mehr Klicks von zu), „−“ dreht zu (mehr Dämpfung, weniger Klicks). Gilt gleichermaßen für Druckstufe (LSC/HSC) und Zugstufe (LSR/HSR/Zugstufe).</string>
-
-    <!-- Reused on Setup (next to the LSC/HSC/LSR/HSR steppers) and Diagnose (actions say "zudrehen"/"aufdrehen"). -->
-    <string name="component_direction_legend">„+“ aufdrehen = weniger Dämpfung · „−“ zudrehen = mehr Dämpfung</string>
+    <string name="basics_clicks_title">Drehrichtung und Zählweise</string>
+    <string name="basics_clicks_row_cw_primary">Uhrzeigersinn = zudrehen</string>
+    <string name="basics_clicks_row_cw_secondary_1">Zahl sinkt</string>
+    <string name="basics_clicks_row_cw_secondary_2">Druckstufe fester · Zugstufe langsamer</string>
+    <string name="basics_clicks_row_ccw_primary">Gegen den Uhrzeigersinn = aufdrehen</string>
+    <string name="basics_clicks_row_ccw_secondary_1">Zahl steigt</string>
+    <string name="basics_clicks_row_ccw_secondary_2">Druckstufe weicher · Zugstufe schneller</string>
+    <string name="basics_clicks_body_1">Die Zahl zeigt, wie viele Klicks der Einsteller vom geschlossenen Anschlag aus offen ist. 0 heißt ganz zu.</string>
+    <string name="basics_clicks_body_2">Zum Nachzählen: im Uhrzeigersinn bis zum sanften Anschlag drehen, nie mit Gewalt, dann gegen den Uhrzeigersinn herausdrehen und die Klicks zählen.</string>
+    <string name="basics_clicks_body_3">Pfeile zeigen die Drehrichtung am Rad. Plus und Minus ändern nur die Zahl.</string>
+    <string name="basics_clicks_body_4">Vorspannring am Dämpfer: im Uhrzeigersinn = mehr Klicks = mehr Vorspannung = weniger Sag.</string>
 
     <string name="basics_order_title">Reihenfolge</string>
     <string name="basics_order_step_1">Alles auf Mitte — das ist der Nullpunkt</string>

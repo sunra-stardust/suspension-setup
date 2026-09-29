@@ -27,11 +27,15 @@ import dev.suspension.app.data.ComponentKind
 import dev.suspension.app.data.ForkModel
 import dev.suspension.app.data.Group
 import dev.suspension.app.data.GroupHeading
+import dev.suspension.app.data.RotationDirection
+import dev.suspension.app.data.RotationLogic
 import dev.suspension.app.data.RowSpec
 import dev.suspension.app.data.Scenario
 import dev.suspension.app.data.ScenarioData
 import dev.suspension.app.data.ShockModel
+import dev.suspension.app.data.Stripe
 import dev.suspension.app.data.ValueRepository
+import dev.suspension.app.ui.components.DampingRow
 import dev.suspension.app.ui.components.GroupCard
 import dev.suspension.app.ui.components.RowDivider
 import dev.suspension.app.ui.components.ScenarioTabs
@@ -106,17 +110,10 @@ fun SetupScreen(
                             null -> null
                         },
                     )
-                    if (group.component != null) {
-                        Text(
-                            text = stringResource(R.string.component_direction_legend),
-                            style = type.rowHint,
-                            color = colors.dim,
-                        )
-                    }
                     GroupCard {
                         group.rows.forEachIndexed { index, row ->
                             if (index > 0) RowDivider()
-                            ParamRow(repository, row, selectedScenario)
+                            ParamRow(repository, row, selectedScenario, group.component)
                         }
                     }
                 }
@@ -174,8 +171,11 @@ private fun GroupHeadingText(group: Group, onClick: (() -> Unit)?) {
 @Composable
 private fun scenarioLabel(scenario: Scenario): String = stringResource(scenario.labelResId)
 
+/** Rotation control (Change 01): every damping circuit — LSC/HSC/LSR/HSR or a single rebound. */
+private fun isDampingRow(row: RowSpec): Boolean = row.stripe == Stripe.COMP || row.stripe == Stripe.REB
+
 @Composable
-private fun ParamRow(repository: ValueRepository, row: RowSpec, scenario: Scenario) {
+private fun ParamRow(repository: ValueRepository, row: RowSpec, scenario: Scenario, component: ComponentKind?) {
     val scope = rememberCoroutineScope()
     val colors = AppTheme.colors
     val label = stringResource(row.labelResId)
@@ -187,6 +187,38 @@ private fun ParamRow(repository: ValueRepository, row: RowSpec, scenario: Scenar
             val default = row.defaults[scenario.index]
             val flow = remember(row, scenario) { repository.stepperValue(row, scenario) }
             val value by flow.collectAsState(initial = default)
+
+            if (isDampingRow(row)) {
+                val componentPrefix = when (component) {
+                    ComponentKind.FORK -> stringResource(R.string.prefix_gabel)
+                    ComponentKind.SHOCK -> stringResource(R.string.prefix_daempfer)
+                    null -> ""
+                }
+                val max = row.max ?: 0.0
+                DampingRow(
+                    stripe = stripeColor,
+                    label = label,
+                    hint = hint,
+                    valueText = formatStepValue(value, row.step),
+                    isOpen = value > 0.0,
+                    isRebound = row.stripe == Stripe.REB,
+                    atZero = value <= 0.0,
+                    atMax = value >= max,
+                    a11yBase = "$componentPrefix $label".trim(),
+                    onClockwise = {
+                        scope.launch {
+                            repository.setStepperValue(row, scenario, RotationLogic.nextValue(RotationDirection.CLOCKWISE, value, max))
+                        }
+                    },
+                    onCounterClockwise = {
+                        scope.launch {
+                            repository.setStepperValue(row, scenario, RotationLogic.nextValue(RotationDirection.COUNTER_CLOCKWISE, value, max))
+                        }
+                    },
+                )
+                return
+            }
+
             val unit = row.unitResId?.let { stringResource(it) }
             val displayHint = if (row.derivedPercentDivisor != null) {
                 stringResource(R.string.sag_percent_hint, formatPercent(value, row.derivedPercentDivisor))

@@ -4,9 +4,11 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
@@ -22,11 +24,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.LiveRegionMode
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.liveRegion
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
+import dev.suspension.app.R
+import dev.suspension.app.data.RotationDirection
 import dev.suspension.app.ui.theme.AppColors
 import dev.suspension.app.ui.theme.AppTheme
 
@@ -101,6 +106,110 @@ fun StepperRow(
         }
     }
 }
+
+/**
+ * Rotation-control row for the 8 damping circuits (LSC/HSC/LSR/HSR or single rebound —
+ * Change 01). Never mixes `+`/`−` with the dial's own clockwise/counter-clockwise convention;
+ * see [RotationButton]. `valueText` is the numeral only — the unit line is "zu" / "offen".
+ */
+@Composable
+fun DampingRow(
+    stripe: Color,
+    label: String,
+    hint: String?,
+    valueText: String,
+    isOpen: Boolean,
+    isRebound: Boolean,
+    atZero: Boolean,
+    atMax: Boolean,
+    a11yBase: String,
+    onClockwise: () -> Unit,
+    onCounterClockwise: () -> Unit,
+) {
+    val colors = AppTheme.colors
+    val type = AppTheme.type
+    val ccwCaption = stringResource(if (isRebound) R.string.rotation_caption_faster else R.string.rotation_caption_softer)
+    val cwCaption = stringResource(if (isRebound) R.string.rotation_caption_slower else R.string.rotation_caption_firmer)
+    val unitText = stringResource(if (isOpen) R.string.damping_state_offen else R.string.damping_state_zu)
+    val valueDescription = if (isOpen) {
+        stringResource(R.string.rotation_value_description_open, a11yBase, valueText)
+    } else {
+        stringResource(R.string.rotation_value_description_closed, a11yBase)
+    }
+    val limitReached = stringResource(R.string.rotation_limit_reached)
+    val cwDescription = stringResource(R.string.rotation_cw_description, a11yBase, cwCaption)
+    val ccwDescription = stringResource(R.string.rotation_ccw_description, a11yBase, ccwCaption)
+
+    val labelColumn: @Composable () -> Unit = {
+        Column {
+            Text(text = label, style = type.rowLabel, color = colors.ink)
+            if (hint != null) {
+                Text(text = hint, style = type.rowHint, color = colors.dim)
+            }
+        }
+    }
+    val controlsRow: @Composable () -> Unit = {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            RotationButton(
+                direction = RotationDirection.COUNTER_CLOCKWISE,
+                caption = ccwCaption,
+                enabled = !atMax,
+                contentDescription = ccwDescription,
+                disabledStateDescription = limitReached,
+                onClick = onCounterClockwise,
+            )
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                modifier = Modifier
+                    .widthIn(min = 56.dp)
+                    .padding(horizontal = 4.dp)
+                    .semantics(mergeDescendants = true) {
+                        liveRegion = LiveRegionMode.Polite
+                        contentDescription = valueDescription
+                    },
+            ) {
+                Text(text = valueText, style = type.valueNumeral, color = colors.ink)
+                Text(text = unitText, style = type.valueUnit, color = colors.dim)
+            }
+            RotationButton(
+                direction = RotationDirection.CLOCKWISE,
+                caption = cwCaption,
+                enabled = !atZero,
+                contentDescription = cwDescription,
+                disabledStateDescription = limitReached,
+                onClick = onClockwise,
+            )
+        }
+    }
+
+    // Change 01 §5: at narrow widths / large font scale, the label+hint and the three-part
+    // control cluster don't both fit on one line — stack instead of clipping either one.
+    BoxWithConstraints(modifier = Modifier.fillMaxWidth()) {
+        val stacked = maxWidth < STACK_BELOW_WIDTH
+        if (stacked) {
+            Row(modifier = Modifier.fillMaxWidth()) {
+                Box(Modifier.width(4.dp).fillMaxHeight().background(stripe))
+                Column(modifier = Modifier.weight(1f).padding(horizontal = 12.dp, vertical = 10.dp)) {
+                    labelColumn()
+                    Box(modifier = Modifier.padding(top = 8.dp).fillMaxWidth()) { controlsRow() }
+                }
+            }
+        } else {
+            Row(modifier = Modifier.fillMaxWidth()) {
+                Box(Modifier.width(4.dp).fillMaxHeight().background(stripe))
+                Column(
+                    modifier = Modifier
+                        .weight(1f)
+                        .padding(horizontal = 12.dp, vertical = 10.dp)
+                        .align(Alignment.CenterVertically),
+                ) { labelColumn() }
+                Box(modifier = Modifier.padding(end = 12.dp).align(Alignment.CenterVertically)) { controlsRow() }
+            }
+        }
+    }
+}
+
+private val STACK_BELOW_WIDTH = 300.dp
 
 @Composable
 fun StepButton(
