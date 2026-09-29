@@ -123,7 +123,7 @@ object ScenarioData {
             )
             add(
                 RowSpec.Stepper(
-                    id = "f_lsc", labelResId = R.string.label_lsc, unitResId = R.string.unit_von_zu,
+                    id = "f_lsc", labelResId = R.string.label_lsc, unitResId = null,
                     stripe = Stripe.COMP, step = 1.0, max = fork.lscMax.toDouble(), defaults = lscDefaults,
                     hintResId = R.string.hint_f_lsc,
                 ),
@@ -131,7 +131,7 @@ object ScenarioData {
             fork.hscMax?.let { hscMax ->
                 add(
                     RowSpec.Stepper(
-                        id = "f_hsc", labelResId = R.string.label_hsc, unitResId = R.string.unit_von_zu,
+                        id = "f_hsc", labelResId = R.string.label_hsc, unitResId = null,
                         stripe = Stripe.COMP, step = 1.0, max = hscMax.toDouble(),
                         defaults = remapAll(FORK_HSC_REFERENCE, hscMax), hintResId = R.string.hint_f_hsc,
                     ),
@@ -140,7 +140,7 @@ object ScenarioData {
             if (fork.reboundMode == ReboundMode.SPLIT) {
                 add(
                     RowSpec.Stepper(
-                        id = "f_lsr", labelResId = R.string.label_lsr, unitResId = R.string.unit_von_zu,
+                        id = "f_lsr", labelResId = R.string.label_lsr, unitResId = null,
                         stripe = Stripe.REB, step = 1.0, max = fork.reboundMax.toDouble(), defaults = reboundDefaults,
                         hintResId = R.string.hint_f_lsr,
                     ),
@@ -148,7 +148,7 @@ object ScenarioData {
                 fork.hsrMax?.let { hsrMax ->
                     add(
                         RowSpec.Stepper(
-                            id = "f_hsr", labelResId = R.string.label_hsr, unitResId = R.string.unit_von_zu,
+                            id = "f_hsr", labelResId = R.string.label_hsr, unitResId = null,
                             stripe = Stripe.REB, step = 1.0, max = hsrMax.toDouble(),
                             defaults = remapAll(FORK_HSR_REFERENCE, hsrMax), hintResId = R.string.hint_f_hsr,
                         ),
@@ -157,7 +157,7 @@ object ScenarioData {
             } else {
                 add(
                     RowSpec.Stepper(
-                        id = "f_reb", labelResId = R.string.label_rebound, unitResId = R.string.unit_von_zu,
+                        id = "f_reb", labelResId = R.string.label_rebound, unitResId = null,
                         stripe = Stripe.REB, step = 1.0, max = fork.reboundMax.toDouble(), defaults = reboundDefaults,
                         hintResId = R.string.hint_f_reb_single,
                     ),
@@ -203,7 +203,7 @@ object ScenarioData {
             )
             add(
                 RowSpec.Stepper(
-                    id = "s_lsc", labelResId = R.string.label_lsc, unitResId = R.string.unit_von_zu,
+                    id = "s_lsc", labelResId = R.string.label_lsc, unitResId = null,
                     stripe = Stripe.COMP, step = 1.0, max = shock.lscMax.toDouble(), defaults = lscDefaults,
                     hintResId = R.string.hint_s_lsc,
                 ),
@@ -211,7 +211,7 @@ object ScenarioData {
             shock.hscMax?.let { hscMax ->
                 add(
                     RowSpec.Stepper(
-                        id = "s_hsc", labelResId = R.string.label_hsc, unitResId = R.string.unit_von_zu,
+                        id = "s_hsc", labelResId = R.string.label_hsc, unitResId = null,
                         stripe = Stripe.COMP, step = 1.0, max = hscMax.toDouble(),
                         defaults = remapAll(SHOCK_HSC_REFERENCE, hscMax), hintResId = R.string.hint_s_hsc,
                     ),
@@ -220,7 +220,7 @@ object ScenarioData {
             if (shock.reboundMode == ReboundMode.SPLIT) {
                 add(
                     RowSpec.Stepper(
-                        id = "s_lsr", labelResId = R.string.label_lsr, unitResId = R.string.unit_von_zu,
+                        id = "s_lsr", labelResId = R.string.label_lsr, unitResId = null,
                         stripe = Stripe.REB, step = 1.0, max = shock.reboundMax.toDouble(), defaults = reboundDefaults,
                         hintResId = R.string.hint_s_lsr,
                     ),
@@ -228,7 +228,7 @@ object ScenarioData {
                 shock.hsrMax?.let { hsrMax ->
                     add(
                         RowSpec.Stepper(
-                            id = "s_hsr", labelResId = R.string.label_hsr, unitResId = R.string.unit_von_zu,
+                            id = "s_hsr", labelResId = R.string.label_hsr, unitResId = null,
                             stripe = Stripe.REB, step = 1.0, max = hsrMax.toDouble(),
                             defaults = remapAll(SHOCK_HSR_REFERENCE, hsrMax), hintResId = R.string.hint_s_hsr,
                         ),
@@ -237,7 +237,7 @@ object ScenarioData {
             } else {
                 add(
                     RowSpec.Stepper(
-                        id = "s_reb", labelResId = R.string.label_rebound, unitResId = R.string.unit_von_zu,
+                        id = "s_reb", labelResId = R.string.label_rebound, unitResId = null,
                         stripe = Stripe.REB, step = 1.0, max = shock.reboundMax.toDouble(), defaults = reboundDefaults,
                         hintResId = R.string.hint_s_reb_single,
                     ),

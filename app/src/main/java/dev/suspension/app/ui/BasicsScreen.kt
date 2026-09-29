@@ -21,12 +21,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.size
 import dev.suspension.app.R
 import dev.suspension.app.data.ForkModel
 import dev.suspension.app.data.ReboundMode
+import dev.suspension.app.data.RotationDirection
 import dev.suspension.app.data.ShockModel
 import dev.suspension.app.data.ValueRepository
 import dev.suspension.app.ui.components.GroupCard
+import dev.suspension.app.ui.components.RotationIcon
 import dev.suspension.app.ui.components.RowDivider
 import dev.suspension.app.ui.components.TwoColumnRow
 import dev.suspension.app.ui.theme.AppTheme
@@ -52,9 +56,25 @@ fun BasicsScreen(
     ) {
         item {
             BasicsCard(stringResource(R.string.basics_clicks_title)) {
+                GroupCard {
+                    DirectionTableRow(
+                        direction = RotationDirection.CLOCKWISE,
+                        primary = stringResource(R.string.basics_clicks_row_cw_primary),
+                        secondary1 = stringResource(R.string.basics_clicks_row_cw_secondary_1),
+                        secondary2 = stringResource(R.string.basics_clicks_row_cw_secondary_2),
+                    )
+                    RowDivider()
+                    DirectionTableRow(
+                        direction = RotationDirection.COUNTER_CLOCKWISE,
+                        primary = stringResource(R.string.basics_clicks_row_ccw_primary),
+                        secondary1 = stringResource(R.string.basics_clicks_row_ccw_secondary_1),
+                        secondary2 = stringResource(R.string.basics_clicks_row_ccw_secondary_2),
+                    )
+                }
                 Text(stringResource(R.string.basics_clicks_body_1), style = type.body, color = colors.ink)
                 Text(stringResource(R.string.basics_clicks_body_2), style = type.body, color = colors.ink)
                 Text(stringResource(R.string.basics_clicks_body_3), style = type.body, color = colors.ink)
+                Text(stringResource(R.string.basics_clicks_body_4), style = type.body, color = colors.ink)
             }
         }
         item {
@@ -204,5 +224,20 @@ private fun BasicsCard(title: String, content: @Composable ColumnScope.() -> Uni
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
         Text(text = title, style = type.groupHeading, color = colors.ink)
         Column(verticalArrangement = Arrangement.spacedBy(4.dp), content = content)
+    }
+}
+
+/** Icon-in-first-column table row for the Basics "Drehrichtung und Zählweise" card (Change 01 §7). */
+@Composable
+private fun DirectionTableRow(direction: RotationDirection, primary: String, secondary1: String, secondary2: String) {
+    val colors = AppTheme.colors
+    val type = AppTheme.type
+    Row(modifier = Modifier.padding(horizontal = 12.dp, vertical = 10.dp)) {
+        RotationIcon(direction = direction, tint = colors.ink, modifier = Modifier.size(20.dp))
+        Column(modifier = Modifier.padding(start = 12.dp)) {
+            Text(text = primary, style = type.rowLabel, color = colors.ink)
+            Text(text = secondary1, style = type.rowHint, color = colors.dim)
+            Text(text = secondary2, style = type.rowHint, color = colors.dim)
+        }
     }
 }

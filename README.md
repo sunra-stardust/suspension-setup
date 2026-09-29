@@ -11,10 +11,26 @@ Persistenz. Web-Referenz: siehe Implementierungs-Spec (nicht Teil dieses Repos).
 - **Setup** — sieben Szenarien (Basis, Downhill, Bikepark, Tour, Uphill, Kalt, Warm), editierbare
   Stepper-Werte für Gabel, Dämpfer, Reifen, Rahmen. Fahrergewicht im Header editierbar; Gabel- und
   Dämpfer-Modell über die Gruppenüberschrift wählbar (siehe „Fahrergewicht & Komponenten" unten).
-- **Diagnose** — Symptom-Suche mit aufklappbaren Handlungsempfehlungen.
-- **Basics** — statische Referenzkarten (Klicks zählen, Reihenfolge, Sag messen, Zielwerte,
-  Temperatur, Serie ab Werk) + dynamische Einstellbereiche-Karte (folgt der Gabel-/Dämpferwahl) +
-  Reset auf Startwerte.
+  Die 8 Druck-/Zugstufen-Kreise (LSC/HSC/LSR/HSR bzw. einzelne Zugstufe) nutzen ↺/↻-Drehrichtungs-
+  Buttons statt `+`/`−` (siehe „Drehrichtung" unten) — alle anderen Zeilen bleiben `+`/`−`.
+- **Diagnose** — Symptom-Suche mit aufklappbaren Handlungsempfehlungen; Einträge, die eine
+  Drehrichtung an Gabel/Dämpfer betreffen, zeigen einen Drehrichtungs-Chip.
+- **Basics** — statische Referenzkarten (Drehrichtung und Zählweise, Reihenfolge, Sag messen,
+  Zielwerte, Temperatur, Serie ab Werk) + dynamische Einstellbereiche-Karte (folgt der
+  Gabel-/Dämpferwahl) + Reset auf Startwerte.
+
+## Drehrichtung (Change 01 — safety fix)
+
+Der Klick-Zähler zählt vom geschlossenen Anschlag aus offen: `+` auf dem Bildschirm hieß bisher
+"mehr Klicks", aber am Gabel-Dial bedeutet `+` clockwise **mehr** Dämpfung — genau umgekehrt. Beide
+Bedeutungen mit demselben Symbol zu zeigen, führt bei Kälte/Handschuhen zu Fehlgriffen.
+
+Seitdem gilt eine strikte Trennung: **Rotation** (↺/↻) für die 8 Dämpfungs-Kreise (Gabel/Dämpfer
+LSC/HSC/LSR/HSR bzw. einzelne Zugstufe), **Quantity** (`+`/`−`) für alles andere (Luftdruck,
+Volumenspacer, Sag, Federrate, Vorspannung, Reifendruck, Sattelstütze, Fahrergewicht). Die beiden
+Symbolklassen werden nirgends gemischt. `↻` (im Uhrzeigersinn/zudrehen) verringert die Zahl,
+`↺` (gegen den Uhrzeigersinn/aufdrehen) erhöht sie — das ist beabsichtigt, siehe Basics →
+„Drehrichtung und Zählweise".
 
 ## Fahrergewicht & Komponenten
 

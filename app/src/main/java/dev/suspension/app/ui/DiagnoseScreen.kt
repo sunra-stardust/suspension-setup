@@ -33,6 +33,8 @@ import androidx.compose.ui.unit.dp
 import dev.suspension.app.R
 import dev.suspension.app.data.DiagnoseData
 import dev.suspension.app.data.DiagnoseEntry
+import dev.suspension.app.data.RotationDirection
+import dev.suspension.app.ui.components.RotationLabel
 import dev.suspension.app.ui.theme.AppTheme
 
 @Composable
@@ -71,13 +73,6 @@ fun DiagnoseScreen(listState: LazyListState) {
                 modifier = Modifier.fillMaxWidth(),
             )
         }
-
-        Text(
-            text = stringResource(R.string.component_direction_legend),
-            style = type.rowHint,
-            color = colors.dim,
-            modifier = Modifier.padding(horizontal = 16.dp),
-        )
 
         // stringResource must be called unconditionally over the fixed, statically-ordered
         // entry list — safe here since every recomposition iterates the same 19 entries.
@@ -134,12 +129,26 @@ private fun DiagnoseCard(
             .background(colors.surface)
             .clickable(onClickLabel = symptom, onClick = onToggle),
     ) {
-        Box(Modifier.width(4.dp).height(if (expanded) 96.dp else 52.dp).background(entry.stripe.color(colors)))
+        Box(Modifier.width(4.dp).height(if (expanded) 120.dp else 52.dp).background(entry.stripe.color(colors)))
         Column(modifier = Modifier.weight(1f).padding(horizontal = 12.dp, vertical = 10.dp)) {
             Text(text = symptom, style = type.rowLabel, color = colors.ink)
             if (expanded) {
                 Text(text = action, style = type.rowLabel, color = colors.ink, modifier = Modifier.padding(top = 6.dp))
                 Text(text = explanation, style = type.body, color = colors.dim, modifier = Modifier.padding(top = 2.dp))
+                entry.direction?.let { direction ->
+                    val chipText = stringResource(
+                        if (direction == RotationDirection.CLOCKWISE) R.string.diag_direction_clockwise else R.string.diag_direction_counter_clockwise,
+                    )
+                    RotationLabel(
+                        direction = direction,
+                        text = chipText,
+                        modifier = Modifier.padding(top = 6.dp),
+                        iconSize = 16.dp,
+                        iconTint = colors.dim,
+                        textStyle = type.rowHint,
+                        textColor = colors.dim,
+                    )
+                }
             }
         }
     }
