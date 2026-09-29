@@ -37,6 +37,7 @@ import dev.suspension.app.ui.components.RowDivider
 import dev.suspension.app.ui.components.TwoColumnRow
 import dev.suspension.app.ui.format.formatStepValue
 import dev.suspension.app.ui.theme.AppTheme
+import dev.suspension.app.update.UpdateViewModel
 import kotlinx.coroutines.launch
 
 /** Target-sag rows: label, share of travel in %, fork (true) or shock (false). */
@@ -56,6 +57,7 @@ fun BasicsScreen(
     bike: BikeProfile,
     fork: ForkModel,
     shock: ShockModel,
+    updates: UpdateViewModel?,
     onResetDone: () -> Unit,
 ) {
     val colors = AppTheme.colors
@@ -197,6 +199,11 @@ fun BasicsScreen(
                     }
                 }
                 Text(stringResource(R.string.basics_ranges_footer), style = type.rowHint, color = colors.dim)
+            }
+        }
+        item {
+            BasicsCard(stringResource(R.string.basics_app_title)) {
+                AppUpdateSection(updates)
             }
         }
         item {

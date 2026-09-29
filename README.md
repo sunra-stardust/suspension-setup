@@ -1,11 +1,13 @@
 # Fahrwerk
 
-Offline-Referenz-App für die Fahrwerkseinstellungen am Mountainbike. Aktuell konfiguriert für
-ein Mondraker **Level RR** (Fox 38 GRIP X2 · Fox DHX2 · OnOff Pija), aufgebaut so, dass weitere
-Bikes und Komponenten reine Datenpflege sind.
+App für ambitionierte Mountainbiker: Fahrwerkseinstellungen verstehen, einstellen und speichern.
+Aktuell konfiguriert für ein Mondraker **Level RR** (Fox 38 GRIP X2 · Fox DHX2 · OnOff Pija),
+aufgebaut so, dass weitere Bikes und Komponenten reine Datenpflege sind. Vision und Phasen:
+[`docs/ROADMAP.md`](docs/ROADMAP.md). Anweisungen für Coding-Agents: [`CLAUDE.md`](CLAUDE.md).
 
 Native Android-App: Kotlin + Jetpack Compose (Material 3), `DataStore<Preferences>` für lokale
-Persistenz. Keine Accounts, kein Netzwerk, keine Berechtigungen.
+Persistenz. Keine Accounts, kein Tracking. Die GitHub-Variante nutzt Internet nur für die
+Update-Prüfung; die Play-Variante hat keine Berechtigungen.
 
 ## Screens
 
@@ -16,8 +18,8 @@ Persistenz. Keine Accounts, kein Netzwerk, keine Berechtigungen.
   ↺/↻-Drehrichtungs-Buttons, alle Mengenwerte `+`/`−` (siehe „Drehrichtung").
 - **Diagnose** — Symptom-Suche mit Handlungsempfehlung und Drehrichtungs-Chip.
 - **Basics** — Referenzkarten (Drehrichtung, Reihenfolge, Sag messen, Zielwerte, Temperatur,
-  Druckstufe, Serie ab Werk, Einstellbereiche) + Reset auf Startwerte. Zielwerte und
-  Einstellbereiche folgen dem gewählten Gabel-/Dämpfermodell.
+  Druckstufe, Serie ab Werk, Einstellbereiche), Karte „App" (Version, „Nach Updates suchen") +
+  Reset auf Startwerte. Zielwerte und Einstellbereiche folgen dem gewählten Gabel-/Dämpfermodell.
 
 ## Woher die Zahlen kommen
 
@@ -59,6 +61,8 @@ andere. `↻` (zudrehen) senkt die Zahl, `↺` (aufdrehen) erhöht sie.
 
 ## Erweitern
 
+Regeln für Agents und Menschen: [`CLAUDE.md`](CLAUDE.md) und die Skills unter `.claude/skills/`.
+
 - **Neues Gabel-/Dämpfermodell:** ein Eintrag in `data/ComponentCatalog.kt`. Nur verifizierte
   Herstellerdaten eintragen; was fehlt, bleibt `null` — die App zeigt dann neutrale Hinweise statt
   erfundener Werte. `ScenarioDataTest` sichert die Werte ab.
@@ -80,18 +84,38 @@ andere. `↻` (zudrehen) senkt die Zahl, `↺` (aufdrehen) erhöht sie.
 ## Bauen & Testen
 
 ```powershell
-.\scripts\verify.ps1   # Unit-Tests + Debug-APK (nutzt Android Studios JBR)
+.\scripts\verify.ps1   # = gradlew verify: Unit- + UI-Tests (Robolectric), beide Varianten, Debug-APKs
 ```
 
-## Release & Installation (Sideload)
+Varianten: `github` (Sideload, eigener Updater) und `play` (Google Play, ohne Updater — Play
+verbietet Selbst-Updates).
 
-```
-git tag v0.5.0 && git push origin v0.5.0
-```
+## Release, Updates, Rollback
 
-`.github/workflows/release.yml` baut eine signierte APK und hängt sie an ein GitHub-Release.
-Alle Versionen sind mit demselben Schlüssel signiert, Updates installieren sich also über die
-bestehende App. Kein In-App-Updater (keine `INTERNET`-Permission).
+**Jeder Push auf `main` oder `claude/*` ist ein Release** (`.github/workflows/ship.yml`):
+Tests → signierte APK → Emulator-Test (Update von der letzten Version + Neuinstallation, je 500
+Zufalls-Taps) → GitHub-Release mit APK und `latest.json`. Cloud-Agents pushen ihren
+`claude/…`-Branch; der Workflow schiebt ihn nach bestandenen Tests auf `main` und löscht ihn.
+Version = `versionBase` (`version.properties`) + Commit-Anzahl, z. B. `0.6.27`. Reine
+Doku-/Agent-Änderungen landen auf `main`, erzeugen aber kein Release.
+
+Die App prüft höchstens alle 12 h (oder per „Nach Updates suchen") und bietet neue Versionen
+oben an; der Download wird per SHA-256 geprüft, installiert wird über den Android-Installer.
+Alle Versionen sind mit demselben Schlüssel signiert.
+
+**Rollback:** GitHub-App → Actions → *Rollback* → *Run workflow* (Feld leer = vorige Version).
+Android installiert keine älteren Versionen über neuere, deshalb veröffentlicht der Workflow den
+alten App-Code als **neue** Version. Stürzt die App zweimal in 10 Minuten ab, startet sie im
+Notfall-Modus mit Update-Prüfung. Details: `.claude/skills/ship/SKILL.md`.
+
+## Cloud-Agent (einmalig einrichten)
+
+1. Claude GitHub App auf diesem Repo installieren: <https://github.com/apps/claude>
+2. claude.ai/code → Umgebung bearbeiten → Netzwerk *Custom*: `dl.google.com` hinzufügen und
+   „Default-Liste einschließen" anhaken. Setup-Skript:
+   `curl -fsSL https://raw.githubusercontent.com/sunra-stardust/suspension-setup/main/scripts/cloud-setup.sh | FORCE_ANDROID_SDK=1 bash`
+3. Neue Session im Repo starten und die Änderung beschreiben — sie landet nach grünen Tests
+   automatisch als Update auf dem Handy.
 
 ## Persistenz
 

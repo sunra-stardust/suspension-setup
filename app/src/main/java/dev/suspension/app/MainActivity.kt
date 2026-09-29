@@ -23,6 +23,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.lifecycle.viewmodel.compose.viewModel
 import dev.suspension.app.data.BikeProfiles
 import dev.suspension.app.data.CUSTOM_ID
 import dev.suspension.app.data.ComponentCatalog
@@ -35,21 +36,48 @@ import dev.suspension.app.ui.BasicsScreen
 import dev.suspension.app.ui.DiagnoseScreen
 import dev.suspension.app.ui.ForkPickerOverlay
 import dev.suspension.app.ui.SetupScreen
+import dev.suspension.app.safety.CrashGuard
+import dev.suspension.app.safety.CrashLoopPolicy
+import dev.suspension.app.ui.SafeModeScreen
 import dev.suspension.app.ui.ShockPickerOverlay
+import dev.suspension.app.ui.UpdateBanner
 import dev.suspension.app.ui.components.AppTab
 import dev.suspension.app.ui.components.BottomNavBar
 import dev.suspension.app.ui.theme.AppTheme
 import dev.suspension.app.ui.theme.SuspensionSetupTheme
+import dev.suspension.app.update.Distribution
+import dev.suspension.app.update.UpdateViewModel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        val crashGuard = CrashGuard.from(this)
+        val updater = Distribution.updater(applicationContext)
+        val storeUrl = Distribution.storeUrl(applicationContext)
+        val updatePrefs = getSharedPreferences("updates", MODE_PRIVATE)
         setContent {
             SuspensionSetupTheme {
                 Surface(color = AppTheme.colors.bg, modifier = Modifier.fillMaxSize()) {
-                    AppRoot()
+                    val updates = updater?.let { viewModel { UpdateViewModel(it, updatePrefs) } }
+                    var safeMode by rememberSaveable { mutableStateOf(crashGuard.shouldEnterSafeMode()) }
+                    Box(modifier = Modifier.fillMaxSize().safeDrawingPadding()) {
+                        if (safeMode) {
+                            SafeModeScreen(updates = updates, storeUrl = storeUrl, onContinue = {
+                                crashGuard.clear()
+                                safeMode = false
+                            })
+                        } else {
+                            LaunchedEffect(Unit) {
+                                delay(CrashLoopPolicy.HEALTHY_AFTER_MS)
+                                crashGuard.clear()
+                            }
+                            LaunchedEffect(updates) { updates?.autoCheck() }
+                            AppRoot(updates)
+                        }
+                    }
                 }
             }
         }
@@ -59,7 +87,7 @@ class MainActivity : ComponentActivity() {
 private enum class PickerOverlay { NONE, FORK, SHOCK }
 
 @Composable
-private fun AppRoot() {
+private fun AppRoot(updates: UpdateViewModel?) {
     val context = LocalContext.current
     val bike = BikeProfiles.current
     val repository = remember { ValueRepository(context) }
@@ -94,7 +122,8 @@ private fun AppRoot() {
 
     var overlay by remember { mutableStateOf(PickerOverlay.NONE) }
 
-    Column(modifier = Modifier.fillMaxSize().safeDrawingPadding()) {
+    Column(modifier = Modifier.fillMaxSize()) {
+        if (updates != null) UpdateBanner(updates)
         Box(modifier = Modifier.weight(1f)) {
             when (tab) {
                 AppTab.SETUP -> {
@@ -127,6 +156,7 @@ private fun AppRoot() {
                         bike = bike,
                         fork = fork,
                         shock = shock,
+                        updates = updates,
                         onResetDone = { selectedTab = AppTab.SETUP.ordinal },
                     )
                 }

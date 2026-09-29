@@ -1,0 +1,214 @@
+name: Pipeline
+
+# Reusable: tests → signed APK → emulator test → GitHub Release (+ latest.json for the in-app
+# updater). Called by ship.yml (every push) and rollback.yml. Nothing is published unless every
+# earlier job is green. Repo secrets: RELEASE_KEYSTORE_BASE64, RELEASE_KEYSTORE_PASSWORD,
+# RELEASE_KEY_ALIAS, RELEASE_KEY_PASSWORD.
+on:
+  workflow_call:
+    inputs:
+      ref:
+        description: Commit to test and ship
+        type: string
+        required: true
+      fast_forward_main:
+        description: Move main to this commit before publishing (pushes to claude/* branches)
+        type: boolean
+        default: false
+      source_branch:
+        description: claude/* branch to delete once it is on main
+        type: string
+        default: ''
+
+jobs:
+  verify:
+    name: Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ inputs.ref }}
+          fetch-depth: 0
+      - name: Branch must sit on top of main
+        if: inputs.fast_forward_main
+        run: |
+          git fetch -q origin main
+          if ! git merge-base --is-ancestor origin/main HEAD; then
+            echo "::error::Branch is not based on the current main. Fix: git fetch origin main && git rebase origin/main && git push --force-with-lease — it then ships on its own."
+            exit 1
+          fi
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: gradle/actions/setup-gradle@v4
+      - run: chmod +x gradlew && ./gradlew verify --stacktrace
+      - name: Upload test reports
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-reports
+          path: app/build/reports/tests/
+
+  build:
+    name: Signed APK
+    needs: verify
+    runs-on: ubuntu-latest
+    outputs:
+      name: ${{ steps.ver.outputs.name }}
+      tag: ${{ steps.ver.outputs.tag }}
+      apk: ${{ steps.ver.outputs.apk }}
+      app_changed: ${{ steps.ver.outputs.app_changed }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ inputs.ref }}
+          fetch-depth: 0   # all history + tags: version code = commit count, notes = log since last tag
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Version
+        id: ver
+        run: |
+          base="$(grep '^versionBase=' version.properties | cut -d= -f2 | tr -d '[:space:]')"
+          code="$(git rev-list --count HEAD)"
+          name="$base.$code"
+          prev="$(git describe --tags --abbrev=0 --match 'v*' --exclude "v$name" HEAD 2>/dev/null || true)"
+          # Docs/agent-only changes land on main but don't produce a new app release.
+          changed=true
+          if [ -n "$prev" ] && git diff --quiet "$prev" HEAD -- app gradle build.gradle.kts settings.gradle.kts gradle.properties version.properties; then
+            changed=false
+          fi
+          {
+            echo "name=$name"; echo "code=$code"; echo "tag=v$name"; echo "prev=$prev"
+            echo "apk=suspension-setup-$name.apk"; echo "app_changed=$changed"
+          } >> "$GITHUB_OUTPUT"
+          echo "::notice::Version $name (code $code), previous $prev, app changed: $changed"
+
+      - name: Decode keystore
+        if: steps.ver.outputs.app_changed == 'true'
+        env:
+          RELEASE_KEYSTORE_BASE64: ${{ secrets.RELEASE_KEYSTORE_BASE64 }}
+        run: |
+          # A debug-signed APK can't update the installed app, so never publish one.
+          if [ -z "$RELEASE_KEYSTORE_BASE64" ]; then echo "::error::RELEASE_KEYSTORE_BASE64 secret missing"; exit 1; fi
+          echo "$RELEASE_KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/release.jks"
+          echo "KEYSTORE_FILE=$RUNNER_TEMP/release.jks" >> "$GITHUB_ENV"
+
+      - name: Build signed APK
+        if: steps.ver.outputs.app_changed == 'true'
+        env:
+          KEYSTORE_PASSWORD: ${{ secrets.RELEASE_KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.RELEASE_KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.RELEASE_KEY_PASSWORD }}
+        run: |
+          chmod +x gradlew
+          ./gradlew :app:assembleGithubRelease \
+            -PversionName=${{ steps.ver.outputs.name }} \
+            -PversionCode=${{ steps.ver.outputs.code }} \
+            --stacktrace
+
+      - name: Release notes + latest.json
+        if: steps.ver.outputs.app_changed == 'true'
+        env:
+          NAME: ${{ steps.ver.outputs.name }}
+          CODE: ${{ steps.ver.outputs.code }}
+          TAG: ${{ steps.ver.outputs.tag }}
+          APK: ${{ steps.ver.outputs.apk }}
+          PREV: ${{ steps.ver.outputs.prev }}
+        run: |
+          mkdir -p dist
+          cp app/build/outputs/apk/github/release/*.apk "dist/$APK"
+          git log --no-merges --format='- %s' ${PREV:+$PREV..}HEAD | head -n 30 > dist/notes.md
+          [ -s dist/notes.md ] || echo "- Wartung" > dist/notes.md
+          sha="$(sha256sum "dist/$APK" | cut -d' ' -f1)"
+          jq -n --argjson code "$CODE" --arg name "$NAME" --arg tag "$TAG" --arg apk "$APK" --arg sha "$sha" \
+            --rawfile notes dist/notes.md \
+            '{versionCode: $code, versionName: $name, tag: $tag, apkAssetName: $apk, sha256: $sha, notes: $notes}' \
+            > dist/latest.json
+          cat dist/latest.json
+
+      - uses: actions/upload-artifact@v4
+        if: steps.ver.outputs.app_changed == 'true'
+        with:
+          name: release
+          path: dist/
+
+  device-test:
+    name: Emulator (upgrade + fresh install)
+    needs: build
+    if: needs.build.outputs.app_changed == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ inputs.ref }}
+      - uses: actions/download-artifact@v4
+        with:
+          name: release
+          path: dist
+      - name: Previous release APK
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p prev
+          gh release download --repo "$GITHUB_REPOSITORY" --pattern '*.apk' --dir prev || echo "No previous release"
+          echo "PREV_APK=$(ls prev/*.apk 2>/dev/null | head -n1)" >> "$GITHUB_ENV"
+          echo "NEW_APK=dist/${{ needs.build.outputs.apk }}" >> "$GITHUB_ENV"
+      - name: Enable KVM
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+      - uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          arch: x86_64
+          target: google_apis
+          disable-animations: true
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -no-snapshot
+          script: bash scripts/device-smoke.sh "$NEW_APK" "$PREV_APK"
+
+  publish:
+    name: Publish
+    needs: [build, device-test]
+    # device-test is skipped for docs-only changes; main must still move forward then.
+    if: ${{ !cancelled() && needs.build.result == 'success' && (needs.device-test.result == 'success' || needs.device-test.result == 'skipped') }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ inputs.ref }}
+          fetch-depth: 0
+
+      - name: Move main to this commit
+        if: inputs.fast_forward_main
+        run: git push origin "HEAD:refs/heads/main"   # fast-forward only; rejected if main moved meanwhile
+
+      - uses: actions/download-artifact@v4
+        if: needs.build.outputs.app_changed == 'true'
+        with:
+          name: release
+          path: dist
+
+      - name: GitHub Release
+        if: needs.build.outputs.app_changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ needs.build.outputs.tag }}
+          APK: ${{ needs.build.outputs.apk }}
+        run: |
+          if gh release view "$TAG" >/dev/null 2>&1; then echo "::notice::$TAG is already published"; exit 0; fi
+          git tag "$TAG" HEAD
+          git push origin "$TAG"
+          gh release create "$TAG" "dist/$APK" dist/latest.json --title "$TAG" --notes-file dist/notes.md --latest
+
+      - name: Delete shipped branch
+        if: startsWith(inputs.source_branch, 'claude/')
+        run: git push origin --delete "${{ inputs.source_branch }}" || true

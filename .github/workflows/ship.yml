@@ -1,0 +1,26 @@
+name: Ship
+
+# Every push to main or to a claude/* branch ships: tests → signed APK → emulator test →
+# GitHub Release, which the app's OTA updater picks up. claude/* pushes (cloud sessions can only
+# push their own branch) are fast-forwarded onto main first, then the branch is deleted — main
+# stays the only long-lived branch. Details: .claude/skills/ship/SKILL.md
+on:
+  push:
+    branches: [ main, 'claude/**' ]
+  workflow_dispatch:
+
+concurrency:
+  group: ship-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  ship:
+    uses: ./.github/workflows/pipeline.yml
+    secrets: inherit
+    with:
+      ref: ${{ github.sha }}
+      fast_forward_main: ${{ startsWith(github.ref, 'refs/heads/claude/') }}
+      source_branch: ${{ github.ref_name }}

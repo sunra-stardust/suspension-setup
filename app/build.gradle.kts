@@ -4,8 +4,8 @@ plugins {
     alias(libs.plugins.compose.compiler)
 }
 
-// Version, overridable from CI via -P flags (see .github/workflows/release.yml).
-val appVersionName = (project.findProperty("versionName") as String?) ?: "0.1.0"
+// Version, set by CI via -P flags (see .github/workflows/pipeline.yml): code = commit count on main.
+val appVersionName = (project.findProperty("versionName") as String?) ?: "0.0.0-dev"
 val appVersionCode = (project.findProperty("versionCode") as String?)?.toInt() ?: 1
 
 // CI decodes the keystore and sets KEYSTORE_FILE; locally it's absent → release falls back to debug signing.
@@ -21,6 +21,20 @@ android {
         targetSdk = 36
         versionCode = appVersionCode
         versionName = appVersionName
+    }
+
+    flavorDimensions += "distribution"
+    productFlavors {
+        // Sideloaded from GitHub Releases and updates itself (OTA). Google Play forbids this.
+        create("github") {
+            dimension = "distribution"
+            buildConfigField("String", "UPDATE_REPO", "\"sunra-stardust/suspension-setup\"")
+        }
+        // Google Play build: no self-updater and no install permission — Play delivers updates.
+        create("play") {
+            dimension = "distribution"
+            buildConfigField("String", "UPDATE_REPO", "\"\"")
+        }
     }
 
     signingConfigs {
@@ -49,9 +63,11 @@ android {
 
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 
     testOptions {
+        unitTests.isIncludeAndroidResources = true
         unitTests.all { it.useJUnitPlatform() }
     }
 }
@@ -66,9 +82,18 @@ dependencies {
     implementation(libs.androidx.compose.foundation)
     implementation(libs.androidx.datastore.preferences)
     implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
     debugImplementation(libs.androidx.compose.ui.tooling)
+    debugImplementation(libs.androidx.compose.ui.test.manifest)
 
     testImplementation(kotlin("test"))
     testImplementation(libs.junit.jupiter)
+    testImplementation(libs.junit4)
+    testImplementation(libs.robolectric)
+    testImplementation(libs.org.json)
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(platform(libs.androidx.compose.bom))
+    testImplementation(libs.androidx.compose.ui.test.junit4)
     testRuntimeOnly(libs.junit.platform.launcher)
+    testRuntimeOnly(libs.junit.vintage.engine)
 }

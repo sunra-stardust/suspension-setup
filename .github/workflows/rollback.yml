@@ -1,0 +1,69 @@
+name: Rollback
+
+# Android never installs an older version over a newer one, so a rollback republishes the APP CODE
+# of an earlier release as a NEW version (higher version code); the OTA updater then offers it like
+# any update. Start from the GitHub app: Actions → Rollback → Run workflow. Leave "version" empty
+# to go back to the release before the current one.
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Zurück auf Version (z. B. 0.6.21). Leer = die Version vor der aktuellen.'
+        required: false
+        default: ''
+
+concurrency:
+  group: ship-refs/heads/main
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  restore:
+    name: Restore app code
+    runs-on: ubuntu-latest
+    outputs:
+      sha: ${{ steps.commit.outputs.sha }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Pick the release to go back to
+        id: target
+        env:
+          GH_TOKEN: ${{ github.token }}
+          WANTED: ${{ inputs.version }}
+        run: |
+          if [ -n "$WANTED" ]; then
+            tag="v${WANTED#v}"
+          else
+            tag="$(gh release list --repo "$GITHUB_REPOSITORY" --exclude-drafts --limit 2 --json tagName --jq '.[1].tagName')"
+          fi
+          git rev-parse -q --verify "refs/tags/$tag" >/dev/null || { echo "::error::Release $tag not found"; exit 1; }
+          # Releases before the OTA updater can't update themselves — going back to one would strand the phone.
+          git cat-file -e "$tag:app/src/github/java/dev/suspension/app/update/GitHubUpdater.kt" 2>/dev/null \
+            || { echo "::error::$tag predates the in-app updater; pick a newer version"; exit 1; }
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+
+      - name: Commit the old app code on main
+        id: commit
+        env:
+          TAG: ${{ steps.target.outputs.tag }}
+        run: |
+          # App code only: pipeline, agent setup and version.properties stay current.
+          git restore --source="$TAG" --staged --worktree -- app gradle build.gradle.kts settings.gradle.kts gradle.properties gradlew gradlew.bat
+          if git diff --cached --quiet; then echo "::error::main already has the app code of $TAG"; exit 1; fi
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -q -m "Rollback: App-Code von $TAG wiederhergestellt"
+          git push origin HEAD:main
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+  ship:
+    needs: restore
+    uses: ./.github/workflows/pipeline.yml
+    secrets: inherit
+    with:
+      ref: ${{ needs.restore.outputs.sha }}

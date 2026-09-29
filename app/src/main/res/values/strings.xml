@@ -194,6 +194,29 @@
     <string name="diag_action_19">Druck bei Fahrtemperatur neu einstellen</string>
     <string name="diag_explanation_19">Der Luftdruck folgt der absoluten Temperatur: bei ca. 110 psi kosten 20 → 0 °C rund 8 psi.</string>
 
+    <!-- App card on Basics + update banner (GitHub build). %1$s = version name. -->
+    <string name="basics_app_title">App</string>
+    <string name="app_version">Version %1$s</string>
+    <string name="update_via_store">Updates kommen über den Play Store.</string>
+    <string name="update_checking">Suche nach Updates …</string>
+    <string name="update_up_to_date">Du hast die neueste Version.</string>
+    <string name="update_available">Update %1$s verfügbar</string>
+    <!-- %2$d = download progress in percent. -->
+    <string name="update_downloading">Update %1$s wird geladen … %2$d %%</string>
+    <string name="update_ready">Update %1$s ist geladen</string>
+    <string name="update_needs_permission">Einmalig erlauben: „Aus dieser Quelle installieren“ für Fahrwerk. Danach hier nochmal auf „Installieren“ tippen.</string>
+    <string name="update_failed_offline">Keine Verbindung zu GitHub. Später nochmal versuchen.</string>
+    <string name="update_failed_checksum">Download beschädigt – nicht installiert. Bitte nochmal versuchen.</string>
+    <string name="update_install">Installieren</string>
+    <string name="update_check">Nach Updates suchen</string>
+    <string name="update_later">Später</string>
+
+    <!-- Safe mode after repeated crashes. -->
+    <string name="safe_mode_title">Die App ist zuletzt mehrfach abgestürzt</string>
+    <string name="safe_mode_body">Wahrscheinlich ist das letzte Update fehlerhaft. Deine Einstellungen bleiben gespeichert. Mit dem neuesten Update ist der Fehler meist schon behoben.</string>
+    <string name="safe_mode_store">Im Play Store öffnen</string>
+    <string name="safe_mode_continue">Trotzdem starten</string>
+
     <string name="reset_button">Alle Werte auf Startwerte zurücksetzen</string>
     <string name="basics_persistence_note">Änderungen werden nur auf diesem Gerät gespeichert.</string>
 

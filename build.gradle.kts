@@ -7,6 +7,11 @@ plugins {
 
 tasks.register("verify") {
     group = "verification"
-    description = "Full check: app unit tests + debug build."
-    dependsOn(":app:testDebugUnitTest", ":app:assembleDebug")
+    description = "Full check: unit + UI tests (both flavors) and debug builds. Must pass before every push."
+    dependsOn(
+        ":app:testGithubDebugUnitTest",
+        ":app:testPlayDebugUnitTest",
+        ":app:assembleGithubDebug",
+        ":app:assemblePlayDebug",
+    )
 }

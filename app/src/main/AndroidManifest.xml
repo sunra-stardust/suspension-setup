@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Fully offline. No INTERNET permission, no other permissions — see spec §11. -->
+    <!-- No permissions here. The GitHub build adds INTERNET + REQUEST_INSTALL_PACKAGES for its
+         self-updater only (src/github/AndroidManifest.xml); the Play build stays permission-free. -->
 
     <application
+        android:name=".SuspensionApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
