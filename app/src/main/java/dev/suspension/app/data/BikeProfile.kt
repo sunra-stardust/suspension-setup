@@ -45,14 +45,17 @@ data class BikeProfile(
 object BikeProfiles {
 
     /**
-     * Mondraker Level RR (2025/26: mullet, Fox 38 GRIP X2 180 mm, DHX2 Performance Elite 205×65,
+     * Mondraker Level RR (2025/26: mullet, Fox 38 GRIP X2 180 mm, Fox DHX2 205×65,
      * OnOff Pija). Stock spring 500 lbs is Mondraker's spec for sizes L/XL.
      */
     val levelRr = BikeProfile(
         id = "mondraker_level_rr",
         nameResId = R.string.bike_level_rr_name,
         stockForkId = "fox38_gripx2",
-        stockShockId = "fox_dhx2_pe",
+        // Mondraker lists a DHX2 Performance Elite (LSC/LSR only) for the production bike, but the
+        // owner's unit has HSC and HSR too — so the full-adjuster DHX2 is the default. The
+        // Performance Elite stays selectable in the picker.
+        stockShockId = "fox_dhx2_coil",
         stockSpringLbs = 500.0,
         // Owner's calculation for this frame: 550 lbs at 95–100 kg rider weight.
         springRule = SpringRule(referenceWeightKg = 97.5, referenceRateLbs = 550.0, slopeLbsPerKg = 5.0, stepLbs = 25.0),

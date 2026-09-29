@@ -39,7 +39,7 @@ Alles sind Startwerte. Werksempfehlung der eigenen Einheit: 4-stellige ID auf ri
 - [Fox 36/38 Handbuch 2025](https://tech.ridefox.com/bike/owners-manuals/2979/fork--2025-36mm-or-38mm) — Drucktabellen, Zugstufentabelle, Spacer, Maximaldruck, Klick-Anzahlen, Sag 15–20 %
 - [Fox Coil-Dämpfer 2025 (DHX2)](https://tech.ridefox.com/bike/owners-manuals/2981/shock--2025-all-coil-shocks-(dhx2-and-dhx-models)) — Factory vs. Performance Elite, Vorspannung (8 Klicks ab spielfrei, max. 2 Umdrehungen), Sag ~30 %
 - [Fox DHX2 2026](https://tech.ridefox.com/bike/owners-manuals/3090/shock--2026-dhx2)
-- [Mondraker Level RR](https://mondraker.com/us/en/level-rr1750250055) — DHX2 Performance Elite 205×65, Federraten je Größe, OnOff Pija
+- [Mondraker Level RR](https://mondraker.com/us/en/level-rr1750250055) — 205×65, Federraten je Größe, OnOff Pija. Mondraker nennt ab Werk den DHX2 Performance Elite (nur LSC/LSR); das eigene Rad hat auch HSC/HSR, deshalb ist der DHX2 mit allen vier Einstellern der Standard (Performance Elite bleibt im Picker wählbar)
 - [Blister: Mondraker Level](https://blisterreview.com/gear-reviews/mondraker-level) — Flip-Chip: −5 mm Tretlager, −0,35°
 - [OnOff Pija Anleitung](https://www.onoffcomponents.com/uploads/maintances/pija-seatpost-20211130093117-es.pdf) — 280–300 psi, nie über 300, alle 10 h prüfen
 - [SRAM Charger 3 Setup](https://www.sram.com/en/rockshox/learn/charger-3-setup), [Super Deluxe Coil Ultimate](https://www.sram.com/en/rockshox/models/rs-sdlc-ult-b1), [Vivid Coil Ultimate](https://www.sram.com/en/rockshox/models/rs-vivc-ult-c1) — RockShox-Klicks und Hebel

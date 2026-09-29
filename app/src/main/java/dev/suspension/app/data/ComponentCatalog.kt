@@ -118,21 +118,6 @@ object ComponentCatalog {
 
     val shocks: List<ShockModel> = listOf(
         ShockModel(
-            id = "fox_dhx2_pe",
-            displayName = "Fox DHX2 Performance Elite",
-            strokeMm = 65,
-            eyeToEyeMm = 205,
-            // Fox 2021–2025 manual: Performance Elite uses LSC and LSR only.
-            lscMax = 16,
-            hscMax = null,
-            reboundMode = ReboundMode.SPLIT,
-            reboundMax = 16,
-            hsrMax = null,
-            hasClimbLever = true,
-            preloadHintResId = dev.suspension.app.R.string.hint_s_pre_fox,
-            preloadRangeResId = dev.suspension.app.R.string.range_preload_fox,
-        ),
-        ShockModel(
             id = "fox_dhx2_coil",
             displayName = "Fox DHX2 Factory",
             strokeMm = 65,
@@ -143,6 +128,21 @@ object ComponentCatalog {
             reboundMax = 16,
             hsrMax = 8,
             hasClimbLever = true,
+            preloadHintResId = dev.suspension.app.R.string.hint_s_pre_fox,
+            preloadRangeResId = dev.suspension.app.R.string.range_preload_fox,
+        ),
+        ShockModel(
+            id = "fox_dhx2_pe",
+            displayName = "Fox DHX2 Performance Elite",
+            strokeMm = 65,
+            eyeToEyeMm = 205,
+            // Fox 2021–2025 manual and Mondraker's spec: LSC and LSR (plus preload) only.
+            lscMax = 16,
+            hscMax = null,
+            reboundMode = ReboundMode.SPLIT,
+            reboundMax = 16,
+            hsrMax = null,
+            hasClimbLever = false,
             preloadHintResId = dev.suspension.app.R.string.hint_s_pre_fox,
             preloadRangeResId = dev.suspension.app.R.string.range_preload_fox,
         ),
