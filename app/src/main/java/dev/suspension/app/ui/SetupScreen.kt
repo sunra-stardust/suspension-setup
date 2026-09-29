@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.items
@@ -28,8 +27,6 @@ import dev.suspension.app.data.BikeProfile
 import dev.suspension.app.data.ComponentKind
 import dev.suspension.app.data.ForkModel
 import dev.suspension.app.data.Group
-import dev.suspension.app.data.MAX_WEIGHT_KG
-import dev.suspension.app.data.MIN_WEIGHT_KG
 import dev.suspension.app.data.RotationDirection
 import dev.suspension.app.data.RotationLogic
 import dev.suspension.app.data.RowSpec
@@ -37,12 +34,12 @@ import dev.suspension.app.data.Scenario
 import dev.suspension.app.data.ScenarioData
 import dev.suspension.app.data.ShockModel
 import dev.suspension.app.data.Stripe
+import dev.suspension.app.data.TEMP_STEP_C
 import dev.suspension.app.data.ValueRepository
 import dev.suspension.app.ui.components.DampingRow
 import dev.suspension.app.ui.components.GroupCard
 import dev.suspension.app.ui.components.RowDivider
 import dev.suspension.app.ui.components.ScenarioTabs
-import dev.suspension.app.ui.components.StepButton
 import dev.suspension.app.ui.components.StepperRow
 import dev.suspension.app.ui.components.ToggleRow
 import dev.suspension.app.ui.format.formatPercent
@@ -62,17 +59,19 @@ fun SetupScreen(
     shock: ShockModel,
     weightKg: Double,
     onWeightChange: (Double) -> Unit,
+    tempC: Int,
+    onTempChange: (Int) -> Unit,
     onOpenForkPicker: () -> Unit,
     onOpenShockPicker: () -> Unit,
 ) {
     val colors = AppTheme.colors
     val type = AppTheme.type
 
-    val groups = remember(fork, shock, weightKg, bike) {
+    val groups = remember(fork, shock, weightKg, tempC, bike) {
         listOfNotNull(
-            ScenarioData.buildForkGroup(fork, weightKg),
-            ScenarioData.buildShockGroup(shock, weightKg, bike),
-            ScenarioData.buildTiresGroup(bike),
+            ScenarioData.buildForkGroup(fork, weightKg, tempC),
+            ScenarioData.buildShockGroup(shock, weightKg, tempC, bike),
+            ScenarioData.buildTiresGroup(bike, tempC),
             ScenarioData.buildFrameGroup(bike),
         )
     }
@@ -93,7 +92,12 @@ fun SetupScreen(
                     color = colors.ink,
                     modifier = Modifier.weight(1f),
                 )
-                WeightStepper(weightKg = weightKg, onChange = onWeightChange)
+                // Read-only reminder of the conditions everything below is calculated for.
+                Text(
+                    text = stringResource(R.string.header_conditions, weightKg.roundToInt(), tempC),
+                    style = type.body,
+                    color = colors.dim,
+                )
             }
             ScenarioTabs(
                 scenarios = Scenario.ordered,
@@ -110,6 +114,9 @@ fun SetupScreen(
             verticalArrangement = Arrangement.spacedBy(16.dp),
             contentPadding = PaddingValues(vertical = 16.dp),
         ) {
+            item {
+                ConditionsCard(weightKg, onWeightChange, tempC, onTempChange)
+            }
             items(groups) { group ->
                 Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                     GroupHeadingText(
@@ -139,29 +146,42 @@ fun SetupScreen(
     }
 }
 
-/** Rider weight is a plain quantity, so it uses `+`/`−` (Change 01 §2). */
+/**
+ * Rider weight and riding temperature: plain quantities (`+`/`−`, Change 01 §2) that apply to
+ * every scenario. Both are global — the weather doesn't change with the terrain category.
+ */
 @Composable
-private fun WeightStepper(weightKg: Double, onChange: (Double) -> Unit) {
+private fun ConditionsCard(
+    weightKg: Double,
+    onWeightChange: (Double) -> Unit,
+    tempC: Int,
+    onTempChange: (Int) -> Unit,
+) {
     val colors = AppTheme.colors
     val type = AppTheme.type
-    Row(verticalAlignment = Alignment.CenterVertically) {
-        StepButton(
-            symbol = "−",
-            contentDescription = stringResource(R.string.weight_decrease),
-            onClick = { onChange((weightKg - 1).coerceAtLeast(MIN_WEIGHT_KG)) },
-        )
-        Column(
-            horizontalAlignment = Alignment.CenterHorizontally,
-            modifier = Modifier.widthIn(min = 64.dp).padding(horizontal = 4.dp),
-        ) {
-            Text(text = stringResource(R.string.weight_display, weightKg.roundToInt()), style = type.rowLabel, color = colors.ink)
-            Text(text = stringResource(R.string.weight_caption), style = type.valueUnit, color = colors.dim)
+    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        Text(text = stringResource(R.string.group_conditions), style = type.groupHeading, color = colors.ink)
+        GroupCard {
+            StepperRow(
+                stripe = colors.neutral,
+                label = stringResource(R.string.label_rider_weight),
+                unit = stringResource(R.string.unit_kg),
+                hint = stringResource(R.string.hint_rider_weight),
+                valueText = weightKg.roundToInt().toString(),
+                onDecrement = { onWeightChange(weightKg - 1) },
+                onIncrement = { onWeightChange(weightKg + 1) },
+            )
+            RowDivider()
+            StepperRow(
+                stripe = colors.neutral,
+                label = stringResource(R.string.label_temperature),
+                unit = stringResource(R.string.unit_celsius),
+                hint = stringResource(R.string.hint_temperature),
+                valueText = tempC.toString(),
+                onDecrement = { onTempChange(tempC - TEMP_STEP_C) },
+                onIncrement = { onTempChange(tempC + TEMP_STEP_C) },
+            )
         }
-        StepButton(
-            symbol = "+",
-            contentDescription = stringResource(R.string.weight_increase),
-            onClick = { onChange((weightKg + 1).coerceAtMost(MAX_WEIGHT_KG)) },
-        )
     }
 }
 

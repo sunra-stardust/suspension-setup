@@ -59,7 +59,7 @@ object BikeProfiles {
         rearTyreHintResId = R.string.hint_t_r,
         flipChip = FlipChip(
             options = listOf("High", "Low"),
-            defaults = listOf("High", "Low", "Low", "High", "High", "High", "High"),
+            defaults = listOf("High", "Low", "Low", "High", "High"),
             hintResId = R.string.hint_chip,
         ),
         dropper = Dropper(defaultPsi = 290.0, maxPsi = 300.0, stepPsi = 5.0, hintResId = R.string.hint_post, rangeResId = R.string.range_post_onoff),

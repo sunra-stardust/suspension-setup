@@ -26,6 +26,7 @@ const val MAX_WEIGHT_KG = 180.0
 
 private object Keys {
     val weightKg = doublePreferencesKey("rider_weight_kg")
+    val tempC = intPreferencesKey("ride_temp_c")
     val forkId = stringPreferencesKey("selected_fork_id")
     val shockId = stringPreferencesKey("selected_shock_id")
 
@@ -62,6 +63,13 @@ class SettingsRepository(context: Context, private val bike: BikeProfile) {
 
     suspend fun setWeightKg(value: Double) {
         store.edit { it[Keys.weightKg] = value.roundToInt().toDouble().coerceIn(MIN_WEIGHT_KG, MAX_WEIGHT_KG) }
+    }
+
+    /** Riding temperature in °C; everything temperature-dependent is calculated for it. */
+    val tempC: Flow<Int> = safeData.map { it[Keys.tempC] ?: DEFAULT_TEMP_C }
+
+    suspend fun setTempC(value: Int) {
+        store.edit { it[Keys.tempC] = value.coerceIn(MIN_TEMP_C, MAX_TEMP_C) }
     }
 
     val forkId: Flow<String> = safeData.map { it[Keys.forkId] ?: bike.stockForkId }

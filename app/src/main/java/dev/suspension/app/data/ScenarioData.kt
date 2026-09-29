@@ -2,22 +2,26 @@ package dev.suspension.app.data
 
 import androidx.compose.ui.graphics.Color
 import dev.suspension.app.R
+import dev.suspension.app.ui.format.formatStepValue
 import dev.suspension.app.ui.theme.AppColors
 import kotlin.math.roundToInt
 
-/** The seven tuning scenarios, spec §6 — order and index are load-bearing (persistence keys). */
+/**
+ * The tuning scenarios (terrain/use). Order and index are load-bearing: they are part of the
+ * persistence keys. Temperature is deliberately not a scenario — it's a global setting that
+ * applies to every scenario.
+ */
 enum class Scenario(val index: Int, val labelResId: Int) {
     BASIS(0, R.string.scenario_basis),
     DOWNHILL(1, R.string.scenario_downhill),
     BIKEPARK(2, R.string.scenario_bikepark),
     TOUR(3, R.string.scenario_tour),
     UPHILL(4, R.string.scenario_uphill),
-    KALT(5, R.string.scenario_kalt),
-    WARM(6, R.string.scenario_warm),
     ;
 
     companion object {
         val ordered = entries.sortedBy { it.index }
+        val count = entries.size
     }
 }
 
@@ -67,53 +71,73 @@ enum class ComponentKind { FORK, SHOCK }
 data class Group(val heading: TextSpec, val rows: List<RowSpec>, val component: ComponentKind? = null)
 
 /**
- * Per-scenario offsets from the Basis value — the owner's scenario tuning (spec §6), kept as
+ * Per-scenario offsets from the Basis value — the owner's terrain tuning (spec §6), kept as
  * offsets so they apply on top of whatever base the manufacturer chart gives for the rider's
- * weight and model.
+ * weight and model. One entry per [Scenario].
  */
-private val PSI_DELTAS = listOf(0.0, 4.0, 12.0, -5.0, 0.0, 5.0, -3.0)
-private val REBOUND_DELTAS = listOf(0.0, 0.0, -1.0, 1.0, 0.0, 1.0, 0.0)
+private val PSI_DELTAS = listOf(0.0, 4.0, 12.0, -5.0, 0.0)
+private val REBOUND_DELTAS = listOf(0.0, 0.0, -1.0, 1.0, 0.0)
 
 /** Owner's sag targets from spec §6, as fractions of travel so they carry over to other models. */
-private val FORK_SAG_FRACTION = listOf(32.0, 30.0, 27.0, 34.0, 32.0, 32.0, 32.0).map { it / 180.0 }
-private val SHOCK_SAG_FRACTION = listOf(19.5, 18.0, 17.0, 21.0, 18.0, 19.5, 19.5).map { it / 65.0 }
+private val FORK_SAG_FRACTION = listOf(32.0, 30.0, 27.0, 34.0, 32.0).map { it / 180.0 }
+private val SHOCK_SAG_FRACTION = listOf(19.5, 18.0, 17.0, 21.0, 18.0).map { it / 65.0 }
 
-/** Owner's click values (spec §6) relative to the Fox 38 / DHX2 ranges they were written for. */
-private val FORK_LSC_REFERENCE = listOf(10.0, 8.0, 8.0, 12.0, 10.0, 12.0, 9.0) to 18
-private val FORK_HSC_REFERENCE = listOf(5.0, 6.0, 4.0, 6.0, 5.0, 6.0, 5.0) to 8
-private val FORK_LSR_REFERENCE = listOf(6.0, 6.0, 5.0, 7.0, 6.0, 7.0, 6.0) to 16
-private val FORK_HSR_REFERENCE = listOf(4.0, 4.0, 3.0, 5.0, 4.0, 5.0, 4.0) to 8
-private val SHOCK_LSC_REFERENCE = listOf(8.0, 6.0, 6.0, 10.0, 4.0, 10.0, 8.0) to 16
-private val SHOCK_HSC_REFERENCE = listOf(5.0, 5.0, 4.0, 6.0, 5.0, 6.0, 5.0) to 8
-private val SHOCK_LSR_REFERENCE = listOf(7.0, 7.0, 6.0, 8.0, 7.0, 8.0, 7.0) to 16
-private val SHOCK_HSR_REFERENCE = listOf(4.0, 4.0, 3.0, 5.0, 4.0, 5.0, 4.0) to 8
+private val TIRE_FRONT_BAR = listOf(1.6, 1.6, 1.75, 1.5, 1.6)
+private val TIRE_REAR_BAR = listOf(1.8, 1.85, 2.0, 1.7, 1.8)
 
-private fun remapAll(reference: Pair<List<Double>, Int>, newMax: Int): List<Double> =
-    reference.first.map { remapClick(it, reference.second, newMax) }
+/** Owner's click values (spec §6) at the Fox ranges they were written for (Fox 38 / DHX2). */
+private class ClickReference(val values: List<Double>, val refMax: Int, val lowSpeedCompression: Boolean = false)
 
-private fun withDeltas(base: Double, deltas: List<Double>, max: Double?): List<Double> =
-    deltas.map { (base + it).coerceIn(0.0, max ?: Double.MAX_VALUE) }
+private val FORK_LSC = ClickReference(listOf(10.0, 8.0, 8.0, 12.0, 10.0), 18, lowSpeedCompression = true)
+private val FORK_HSC = ClickReference(listOf(5.0, 6.0, 4.0, 6.0, 5.0), 8)
+private val FORK_LSR = ClickReference(listOf(6.0, 6.0, 5.0, 7.0, 6.0), 16)
+private val FORK_HSR = ClickReference(listOf(4.0, 4.0, 3.0, 5.0, 4.0), 8)
+private val SHOCK_LSC = ClickReference(listOf(8.0, 6.0, 6.0, 10.0, 4.0), 16, lowSpeedCompression = true)
+private val SHOCK_HSC = ClickReference(listOf(5.0, 5.0, 4.0, 6.0, 5.0), 8)
+private val SHOCK_LSR = ClickReference(listOf(7.0, 7.0, 6.0, 8.0, 7.0), 16)
+private val SHOCK_HSR = ClickReference(listOf(4.0, 4.0, 3.0, 5.0, 4.0), 8)
+
+/** The owner's clicks, scaled to this model's range and shifted for the riding temperature. */
+private fun clicks(reference: ClickReference, newMax: Int, tempC: Int): List<Double> {
+    val shift = TemperatureModel.clickShift(tempC, reference.lowSpeedCompression, newMax.toDouble() / reference.refMax)
+    return reference.values.map { (remapClick(it, reference.refMax, newMax) + shift).coerceIn(0.0, newMax.toDouble()) }
+}
+
+/** Manufacturer rebound chart + the owner's per-scenario offsets, shifted for temperature. */
+private fun chartRebound(chartValue: Double, max: Int, refMax: Int, tempC: Int): List<Double> {
+    val shift = TemperatureModel.clickShift(tempC, lowSpeedCompression = false, rangeScale = max.toDouble() / refMax)
+    return REBOUND_DELTAS.map { (chartValue + it + shift).coerceIn(0.0, max.toDouble()) }
+}
 
 private fun sagDefaults(fractions: List<Double>, travelMm: Int, step: Double): List<Double> =
     fractions.map { roundToStep(it * travelMm, step) }
 
 /**
- * Builds the Setup rows from the selected fork/shock, the rider weight and the bike profile.
- * Scenario offsets are the owner's; bases come from the manufacturer's chart where one exists.
- * Values are starting points, not manufacturer guarantees.
+ * Builds the Setup rows from the selected fork/shock, the rider weight, the riding temperature
+ * and the bike profile. Bases come from the manufacturer's chart where one exists; scenario
+ * offsets are the owner's. Values are starting points, not manufacturer guarantees.
  */
 object ScenarioData {
 
-    fun buildForkGroup(fork: ForkModel, weightKg: Double): Group {
+    fun buildForkGroup(fork: ForkModel, weightKg: Double, tempC: Int): Group {
         val bracket = WeightBrackets.indexFor(weightKg)
         val (kgLow, kgHigh) = WeightBrackets.kgRange(bracket)
         val source = fork.chartSource.orEmpty()
+        val atBaseline = tempC == REFERENCE_TEMP_C
 
         val basePsi = fork.pressureChart?.valueFor(weightKg) ?: fork.baselinePsi
-        val psiHint = if (fork.pressureChart != null) {
-            TextSpec.Format(R.string.hint_f_psi_chart, listOf(source, kgLow, kgHigh, basePsi.roundToInt(), (fork.maxPressurePsi ?: 0.0).roundToInt()))
-        } else {
-            TextSpec.Res(R.string.hint_f_psi_decal)
+        val maxPsi = fork.maxPressurePsi
+        val psiDefaults = PSI_DELTAS.map { delta ->
+            val fill = TemperatureModel.fillPressure(basePsi + delta, tempC, TemperatureModel.ATMOSPHERE_PSI)
+            roundToStep(fill, 1.0).coerceIn(0.0, maxPsi ?: Double.MAX_VALUE)
+        }
+        val psiHint = when {
+            fork.pressureChart != null && atBaseline ->
+                TextSpec.Format(R.string.hint_f_psi_chart, listOf(source, kgLow, kgHigh, basePsi.roundToInt(), (maxPsi ?: 0.0).roundToInt()))
+            fork.pressureChart != null ->
+                TextSpec.Format(R.string.hint_f_psi_chart_temp, listOf(source, kgLow, kgHigh, basePsi.roundToInt(), (maxPsi ?: 0.0).roundToInt(), tempC))
+            atBaseline -> TextSpec.Res(R.string.hint_f_psi_decal)
+            else -> TextSpec.Format(R.string.hint_f_psi_decal_temp, listOf(tempC))
         }
 
         val spacerHint = if (fork.spacersStock != null && fork.spacersMax != null) {
@@ -126,15 +150,14 @@ object ScenarioData {
             add(
                 RowSpec.Stepper(
                     id = "f_psi", labelResId = R.string.label_f_psi, unitResId = R.string.unit_psi,
-                    stripe = Stripe.SPRING, step = 1.0, max = fork.maxPressurePsi,
-                    defaults = withDeltas(basePsi, PSI_DELTAS, fork.maxPressurePsi), hint = psiHint,
+                    stripe = Stripe.SPRING, step = 1.0, max = maxPsi, defaults = psiDefaults, hint = psiHint,
                 ),
             )
             add(
                 RowSpec.Stepper(
                     id = "f_sp", labelResId = R.string.label_f_sp, unitResId = R.string.unit_stk,
                     stripe = Stripe.SPRING, step = 1.0, max = fork.spacersMax?.toDouble(),
-                    defaults = List(7) { (fork.spacersStock ?: 1).toDouble() }, hint = spacerHint,
+                    defaults = List(Scenario.count) { (fork.spacersStock ?: 1).toDouble() }, hint = spacerHint,
                 ),
             )
             add(
@@ -149,7 +172,7 @@ object ScenarioData {
                 RowSpec.Stepper(
                     id = "f_lsc", labelResId = R.string.label_lsc, unitResId = null,
                     stripe = Stripe.COMP, step = 1.0, max = fork.lscMax.toDouble(),
-                    defaults = remapAll(FORK_LSC_REFERENCE, fork.lscMax), hint = TextSpec.Res(R.string.hint_f_lsc),
+                    defaults = clicks(FORK_LSC, fork.lscMax, tempC), hint = TextSpec.Res(R.string.hint_f_lsc),
                 ),
             )
             fork.hscMax?.let { hscMax ->
@@ -157,7 +180,7 @@ object ScenarioData {
                     RowSpec.Stepper(
                         id = "f_hsc", labelResId = R.string.label_hsc, unitResId = null,
                         stripe = Stripe.COMP, step = 1.0, max = hscMax.toDouble(),
-                        defaults = remapAll(FORK_HSC_REFERENCE, hscMax), hint = TextSpec.Res(R.string.hint_f_hsc),
+                        defaults = clicks(FORK_HSC, hscMax, tempC), hint = TextSpec.Res(R.string.hint_f_hsc),
                     ),
                 )
             }
@@ -168,9 +191,9 @@ object ScenarioData {
                         id = "f_lsr", labelResId = R.string.label_lsr, unitResId = null,
                         stripe = Stripe.REB, step = 1.0, max = fork.reboundMax.toDouble(),
                         defaults = if (lsrChart != null) {
-                            withDeltas(lsrChart.valueFor(weightKg), REBOUND_DELTAS, fork.reboundMax.toDouble())
+                            chartRebound(lsrChart.valueFor(weightKg), fork.reboundMax, FORK_LSR.refMax, tempC)
                         } else {
-                            remapAll(FORK_LSR_REFERENCE, fork.reboundMax)
+                            clicks(FORK_LSR, fork.reboundMax, tempC)
                         },
                         hint = if (lsrChart != null) {
                             TextSpec.Format(R.string.hint_f_lsr_chart, listOf(source, kgLow, kgHigh, lsrChart.valueFor(weightKg).roundToInt()))
@@ -186,9 +209,9 @@ object ScenarioData {
                             id = "f_hsr", labelResId = R.string.label_hsr, unitResId = null,
                             stripe = Stripe.REB, step = 1.0, max = hsrMax.toDouble(),
                             defaults = if (hsrChart != null) {
-                                withDeltas(hsrChart.valueFor(weightKg), REBOUND_DELTAS, hsrMax.toDouble())
+                                chartRebound(hsrChart.valueFor(weightKg), hsrMax, FORK_HSR.refMax, tempC)
                             } else {
-                                remapAll(FORK_HSR_REFERENCE, hsrMax)
+                                clicks(FORK_HSR, hsrMax, tempC)
                             },
                             hint = if (hsrChart != null) {
                                 TextSpec.Format(R.string.hint_f_hsr_chart, listOf(source, kgLow, kgHigh, hsrChart.valueFor(weightKg).roundToInt()))
@@ -203,7 +226,7 @@ object ScenarioData {
                     RowSpec.Stepper(
                         id = "f_reb", labelResId = R.string.label_rebound, unitResId = null,
                         stripe = Stripe.REB, step = 1.0, max = fork.reboundMax.toDouble(),
-                        defaults = remapAll(FORK_LSR_REFERENCE, fork.reboundMax), hint = TextSpec.Res(R.string.hint_f_reb_single),
+                        defaults = clicks(FORK_LSR, fork.reboundMax, tempC), hint = TextSpec.Res(R.string.hint_f_reb_single),
                     ),
                 )
             }
@@ -216,7 +239,7 @@ object ScenarioData {
         )
     }
 
-    fun buildShockGroup(shock: ShockModel, weightKg: Double, bike: BikeProfile): Group {
+    fun buildShockGroup(shock: ShockModel, weightKg: Double, tempC: Int, bike: BikeProfile): Group {
         val installedLbs = shock.customSpringLbs ?: bike.stockSpringLbs
         val recommendedLbs = bike.springRule.recommendedLbs(weightKg)
         val rateHint = if (shock.isCustom) {
@@ -230,14 +253,14 @@ object ScenarioData {
                 RowSpec.Stepper(
                     id = "s_rate", labelResId = R.string.label_s_rate, unitResId = R.string.unit_lbs,
                     stripe = Stripe.SPRING, step = bike.springRule.stepLbs, max = null,
-                    defaults = List(7) { installedLbs }, hint = rateHint,
+                    defaults = List(Scenario.count) { installedLbs }, hint = rateHint,
                 ),
             )
             add(
                 RowSpec.Stepper(
                     id = "s_pre", labelResId = R.string.label_s_pre, unitResId = R.string.unit_klicks,
                     stripe = Stripe.SPRING, step = 1.0, max = 26.0,
-                    defaults = listOf(8.0, 10.0, 10.0, 6.0, 8.0, 8.0, 8.0), hint = TextSpec.Res(shock.preloadHintResId),
+                    defaults = listOf(8.0, 10.0, 10.0, 6.0, 8.0), hint = TextSpec.Res(shock.preloadHintResId),
                 ),
             )
             add(
@@ -252,7 +275,7 @@ object ScenarioData {
                 RowSpec.Stepper(
                     id = "s_lsc", labelResId = R.string.label_lsc, unitResId = null,
                     stripe = Stripe.COMP, step = 1.0, max = shock.lscMax.toDouble(),
-                    defaults = remapAll(SHOCK_LSC_REFERENCE, shock.lscMax), hint = TextSpec.Res(R.string.hint_s_lsc),
+                    defaults = clicks(SHOCK_LSC, shock.lscMax, tempC), hint = TextSpec.Res(R.string.hint_s_lsc),
                 ),
             )
             shock.hscMax?.let { hscMax ->
@@ -260,7 +283,7 @@ object ScenarioData {
                     RowSpec.Stepper(
                         id = "s_hsc", labelResId = R.string.label_hsc, unitResId = null,
                         stripe = Stripe.COMP, step = 1.0, max = hscMax.toDouble(),
-                        defaults = remapAll(SHOCK_HSC_REFERENCE, hscMax), hint = TextSpec.Res(R.string.hint_s_hsc),
+                        defaults = clicks(SHOCK_HSC, hscMax, tempC), hint = TextSpec.Res(R.string.hint_s_hsc),
                     ),
                 )
             }
@@ -269,7 +292,7 @@ object ScenarioData {
                     RowSpec.Stepper(
                         id = "s_lsr", labelResId = R.string.label_lsr, unitResId = null,
                         stripe = Stripe.REB, step = 1.0, max = shock.reboundMax.toDouble(),
-                        defaults = remapAll(SHOCK_LSR_REFERENCE, shock.reboundMax), hint = TextSpec.Res(R.string.hint_s_lsr),
+                        defaults = clicks(SHOCK_LSR, shock.reboundMax, tempC), hint = TextSpec.Res(R.string.hint_s_lsr),
                     ),
                 )
                 shock.hsrMax?.let { hsrMax ->
@@ -277,7 +300,7 @@ object ScenarioData {
                         RowSpec.Stepper(
                             id = "s_hsr", labelResId = R.string.label_hsr, unitResId = null,
                             stripe = Stripe.REB, step = 1.0, max = hsrMax.toDouble(),
-                            defaults = remapAll(SHOCK_HSR_REFERENCE, hsrMax), hint = TextSpec.Res(R.string.hint_s_hsr),
+                            defaults = clicks(SHOCK_HSR, hsrMax, tempC), hint = TextSpec.Res(R.string.hint_s_hsr),
                         ),
                     )
                 }
@@ -286,7 +309,7 @@ object ScenarioData {
                     RowSpec.Stepper(
                         id = "s_reb", labelResId = R.string.label_rebound, unitResId = null,
                         stripe = Stripe.REB, step = 1.0, max = shock.reboundMax.toDouble(),
-                        defaults = remapAll(SHOCK_LSR_REFERENCE, shock.reboundMax), hint = TextSpec.Res(R.string.hint_s_reb_single),
+                        defaults = clicks(SHOCK_LSR, shock.reboundMax, tempC), hint = TextSpec.Res(R.string.hint_s_reb_single),
                     ),
                 )
             }
@@ -295,7 +318,7 @@ object ScenarioData {
                     RowSpec.Toggle(
                         id = "s_cs", labelResId = R.string.label_s_cs, stripe = Stripe.SPRING,
                         options = listOf("Offen", "Firm"),
-                        defaults = listOf("Offen", "Offen", "Offen", "Offen", "Firm", "Offen", "Offen"),
+                        defaults = listOf("Offen", "Offen", "Offen", "Offen", "Firm"),
                         hint = TextSpec.Res(R.string.hint_s_cs),
                     ),
                 )
@@ -309,21 +332,39 @@ object ScenarioData {
         )
     }
 
-    fun buildTiresGroup(bike: BikeProfile): Group = Group(
-        heading = TextSpec.Res(R.string.group_tires),
-        rows = listOf(
-            RowSpec.Stepper(
-                id = "t_f", labelResId = R.string.label_t_f, unitResId = R.string.unit_bar,
-                stripe = Stripe.NEUTRAL, step = 0.05, max = null,
-                defaults = listOf(1.6, 1.6, 1.75, 1.5, 1.6, 1.6, 1.6), hint = null,
+    fun buildTiresGroup(bike: BikeProfile, tempC: Int): Group {
+        fun fill(targets: List<Double>) =
+            targets.map { roundToStep(TemperatureModel.fillPressure(it, tempC, TemperatureModel.ATMOSPHERE_BAR), 0.05) }
+
+        val atBaseline = tempC == REFERENCE_TEMP_C
+        val frontHint = if (atBaseline) {
+            null
+        } else {
+            TextSpec.Format(R.string.hint_t_temp, listOf(tempC, formatStepValue(TIRE_FRONT_BAR.first(), 0.05)))
+        }
+        val rearHint = when {
+            atBaseline -> bike.rearTyreHintResId?.let { TextSpec.Res(it) }
+            bike.rearTyreHintResId != null ->
+                TextSpec.Format(R.string.hint_t_r_temp, listOf(tempC, formatStepValue(TIRE_REAR_BAR.first(), 0.05)))
+            else -> TextSpec.Format(R.string.hint_t_temp, listOf(tempC, formatStepValue(TIRE_REAR_BAR.first(), 0.05)))
+        }
+
+        return Group(
+            heading = TextSpec.Res(R.string.group_tires),
+            rows = listOf(
+                RowSpec.Stepper(
+                    id = "t_f", labelResId = R.string.label_t_f, unitResId = R.string.unit_bar,
+                    stripe = Stripe.NEUTRAL, step = 0.05, max = null,
+                    defaults = fill(TIRE_FRONT_BAR), hint = frontHint,
+                ),
+                RowSpec.Stepper(
+                    id = "t_r", labelResId = R.string.label_t_r, unitResId = R.string.unit_bar,
+                    stripe = Stripe.NEUTRAL, step = 0.05, max = null,
+                    defaults = fill(TIRE_REAR_BAR), hint = rearHint,
+                ),
             ),
-            RowSpec.Stepper(
-                id = "t_r", labelResId = R.string.label_t_r, unitResId = R.string.unit_bar,
-                stripe = Stripe.NEUTRAL, step = 0.05, max = null,
-                defaults = listOf(1.8, 1.85, 2.0, 1.7, 1.8, 1.8, 1.8), hint = bike.rearTyreHintResId?.let { TextSpec.Res(it) },
-            ),
-        ),
-    )
+        )
+    }
 
     /** Null when the bike has neither a flip chip nor an air-sprung dropper to track. */
     fun buildFrameGroup(bike: BikeProfile): Group? {
@@ -341,7 +382,7 @@ object ScenarioData {
                     RowSpec.Stepper(
                         id = "post", labelResId = R.string.label_post, unitResId = R.string.unit_psi,
                         stripe = Stripe.SPRING, step = post.stepPsi, max = post.maxPsi,
-                        defaults = List(7) { post.defaultPsi }, hint = TextSpec.Res(post.hintResId),
+                        defaults = List(Scenario.count) { post.defaultPsi }, hint = TextSpec.Res(post.hintResId),
                     ),
                 )
             }
