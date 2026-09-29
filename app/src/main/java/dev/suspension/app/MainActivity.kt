@@ -21,13 +21,13 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import dev.suspension.app.data.ComponentCatalog
+import androidx.compose.ui.res.stringResource
+import dev.suspension.app.data.BikeProfiles
 import dev.suspension.app.data.CUSTOM_ID
+import dev.suspension.app.data.ComponentCatalog
 import dev.suspension.app.data.DEFAULT_WEIGHT_KG
-import dev.suspension.app.data.ForkModel
 import dev.suspension.app.data.Scenario
 import dev.suspension.app.data.SettingsRepository
-import dev.suspension.app.data.ShockModel
 import dev.suspension.app.data.ValueRepository
 import dev.suspension.app.ui.BasicsScreen
 import dev.suspension.app.ui.DiagnoseScreen
@@ -59,8 +59,9 @@ private enum class PickerOverlay { NONE, FORK, SHOCK }
 @Composable
 private fun AppRoot() {
     val context = LocalContext.current
+    val bike = BikeProfiles.current
     val repository = remember { ValueRepository(context) }
-    val settings = remember { SettingsRepository(context) }
+    val settings = remember { SettingsRepository(context, bike) }
     val scope = rememberCoroutineScope()
 
     var selectedTab by rememberSaveable { mutableIntStateOf(AppTab.SETUP.ordinal) }
@@ -68,14 +69,22 @@ private fun AppRoot() {
     val selectedScenario = Scenario.ordered[selectedScenarioIndex]
     val tab = AppTab.entries[selectedTab]
 
-    val weightKg by settings.weightKg.collectAsState(initial = DEFAULT_WEIGHT_KG)
-    val forkId by settings.forkId.collectAsState(initial = ComponentCatalog.defaultFork.id)
-    val shockId by settings.shockId.collectAsState(initial = ComponentCatalog.defaultShock.id)
-    val customFork by settings.customFork.collectAsState(initial = ComponentCatalog.defaultFork.copy(id = CUSTOM_ID))
-    val customShock by settings.customShock.collectAsState(initial = ComponentCatalog.defaultShock.copy(id = CUSTOM_ID))
+    val stockFork = ComponentCatalog.forkById(bike.stockForkId) ?: ComponentCatalog.forks.first()
+    val stockShock = ComponentCatalog.shockById(bike.stockShockId) ?: ComponentCatalog.shocks.first()
 
-    val fork = if (forkId == CUSTOM_ID) customFork else (ComponentCatalog.forkById(forkId) ?: ComponentCatalog.defaultFork)
-    val shock = if (shockId == CUSTOM_ID) customShock else (ComponentCatalog.shockById(shockId) ?: ComponentCatalog.defaultShock)
+    val weightKg by settings.weightKg.collectAsState(initial = DEFAULT_WEIGHT_KG)
+    val forkId by settings.forkId.collectAsState(initial = bike.stockForkId)
+    val shockId by settings.shockId.collectAsState(initial = bike.stockShockId)
+    val customForkRaw by settings.customFork.collectAsState(initial = stockFork.copy(id = CUSTOM_ID, displayName = ""))
+    val customShockRaw by settings.customShock.collectAsState(initial = stockShock.copy(id = CUSTOM_ID, displayName = ""))
+
+    // Custom models without a name get a localized default instead of a blank heading.
+    val customFork = customForkRaw.copy(displayName = customForkRaw.displayName.ifBlank { stringResource(R.string.custom_fork_default_name) })
+    val customShock = customShockRaw.copy(displayName = customShockRaw.displayName.ifBlank { stringResource(R.string.custom_shock_default_name) })
+
+    // A stored id that's no longer in the catalog (e.g. a removed model) falls back to the bike's stock part.
+    val fork = if (forkId == CUSTOM_ID) customFork else (ComponentCatalog.forkById(forkId) ?: stockFork)
+    val shock = if (shockId == CUSTOM_ID) customShock else (ComponentCatalog.shockById(shockId) ?: stockShock)
 
     var overlay by remember { mutableStateOf(PickerOverlay.NONE) }
 
@@ -89,6 +98,7 @@ private fun AppRoot() {
                         selectedScenario = selectedScenario,
                         onScenarioSelected = { selectedScenarioIndex = it.index },
                         listState = listState,
+                        bike = bike,
                         fork = fork,
                         shock = shock,
                         weightKg = weightKg,
@@ -106,6 +116,7 @@ private fun AppRoot() {
                     BasicsScreen(
                         repository = repository,
                         listState = listState,
+                        bike = bike,
                         fork = fork,
                         shock = shock,
                         onResetDone = { selectedTab = AppTab.SETUP.ordinal },
@@ -113,37 +124,35 @@ private fun AppRoot() {
                 }
             }
 
-            if (overlay == PickerOverlay.FORK) {
-                ForkPickerOverlay(
+            when (overlay) {
+                PickerOverlay.FORK -> ForkPickerOverlay(
                     currentForkId = forkId,
-                    initialCustomFork = customFork,
-                    initialCustomPsi = customFork.pressureTable.firstOrNull()?.value ?: 100.0,
+                    initialCustomFork = customForkRaw,
                     onSelectCatalog = { selected ->
                         scope.launch {
                             settings.selectFork(selected.id)
                             repository.clearKeysWithPrefix("f_")
                         }
                     },
-                    onSaveCustom = { model: ForkModel, psi: Double ->
+                    onSaveCustom = { model ->
                         scope.launch {
-                            settings.setCustomFork(model, psi)
+                            settings.setCustomFork(model)
                             settings.selectFork(CUSTOM_ID)
                             repository.clearKeysWithPrefix("f_")
                         }
                     },
                     onDismiss = { overlay = PickerOverlay.NONE },
                 )
-            } else if (overlay == PickerOverlay.SHOCK) {
-                ShockPickerOverlay(
+                PickerOverlay.SHOCK -> ShockPickerOverlay(
                     currentShockId = shockId,
-                    initialCustomShock = customShock,
+                    initialCustomShock = customShockRaw,
                     onSelectCatalog = { selected ->
                         scope.launch {
                             settings.selectShock(selected.id)
                             repository.clearKeysWithPrefix("s_")
                         }
                     },
-                    onSaveCustom = { model: ShockModel ->
+                    onSaveCustom = { model ->
                         scope.launch {
                             settings.setCustomShock(model)
                             settings.selectShock(CUSTOM_ID)
@@ -152,6 +161,7 @@ private fun AppRoot() {
                     },
                     onDismiss = { overlay = PickerOverlay.NONE },
                 )
+                PickerOverlay.NONE -> Unit
             }
         }
         BottomNavBar(selected = tab, onSelect = { selectedTab = it.ordinal })

@@ -7,9 +7,10 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -99,7 +100,8 @@ fun RotationLabel(
     if (vertical) {
         Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = modifier) {
             RotationIcon(direction, iconTint, Modifier.size(iconSize))
-            Text(text = text, style = textStyle, color = textColor)
+            // One line, never wrapped mid-word: the button grows to fit instead.
+            Text(text = text, style = textStyle, color = textColor, maxLines = 1, softWrap = false)
         }
     } else {
         Row(
@@ -130,8 +132,10 @@ fun RotationButton(
     Box(
         contentAlignment = Alignment.Center,
         modifier = Modifier
-            .width(ROTATION_BUTTON_WIDTH)
-            .height(ROTATION_BUTTON_HEIGHT)
+            // Minimum, not fixed: at large font scale the caption widens the button instead of
+            // being clipped (Change 01 §5: captions are never truncated).
+            .widthIn(min = ROTATION_BUTTON_WIDTH)
+            .heightIn(min = ROTATION_BUTTON_HEIGHT)
             .alpha(if (enabled) 1f else 0.38f)
             .clip(RoundedCornerShape(8.dp))
             .background(colors.hit)
@@ -147,6 +151,7 @@ fun RotationButton(
         RotationLabel(
             direction = direction,
             text = caption,
+            modifier = Modifier.padding(horizontal = 6.dp, vertical = 4.dp),
             vertical = true,
             iconSize = 24.dp,
             iconTint = colors.ink,

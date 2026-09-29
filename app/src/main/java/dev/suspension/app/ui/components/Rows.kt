@@ -7,7 +7,9 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
+import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -24,6 +26,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.LiveRegionMode
 import androidx.compose.ui.semantics.contentDescription
@@ -37,6 +40,7 @@ import dev.suspension.app.ui.theme.AppTheme
 
 private val CardShape = RoundedCornerShape(10.dp)
 private const val MIN_TOUCH_TARGET_DP = 44
+private val STACK_BELOW_WIDTH = 300.dp
 
 /** Rows grouped in a card: surface fill, 1dp line border, 10dp radius, no shadow (spec §4). */
 @Composable
@@ -57,6 +61,31 @@ fun RowDivider() {
     HorizontalDivider(color = AppTheme.colors.line, thickness = 1.dp)
 }
 
+/**
+ * Row with the 4dp semantic stripe (spec §4). IntrinsicSize.Min lets the stripe fill exactly
+ * the row's height however far the text wraps — a fixed stripe height left gaps, and
+ * fillMaxHeight without it collapsed the stripe to nothing.
+ */
+@Composable
+private fun StripedRow(stripe: Color, content: @Composable RowScope.() -> Unit) {
+    Row(modifier = Modifier.fillMaxWidth().height(IntrinsicSize.Min)) {
+        Box(Modifier.width(4.dp).fillMaxHeight().background(stripe))
+        content()
+    }
+}
+
+@Composable
+private fun LabelAndHint(label: String, hint: String?) {
+    val colors = AppTheme.colors
+    val type = AppTheme.type
+    Column {
+        Text(text = label, style = type.rowLabel, color = colors.ink)
+        if (hint != null) {
+            Text(text = hint, style = type.rowHint, color = colors.dim)
+        }
+    }
+}
+
 @Composable
 fun StepperRow(
     stripe: Color,
@@ -69,32 +98,23 @@ fun StepperRow(
 ) {
     val colors = AppTheme.colors
     val type = AppTheme.type
-    Row(modifier = Modifier.fillMaxWidth()) {
+    StripedRow(stripe) {
         Box(
-            Modifier
-                .width(4.dp)
-                .height(if (hint != null) 64.dp else 52.dp)
-                .background(stripe),
-        )
-        Column(
             modifier = Modifier
                 .weight(1f)
+                .align(Alignment.CenterVertically)
                 .padding(horizontal = 12.dp, vertical = 10.dp),
-        ) {
-            Text(text = label, style = type.rowLabel, color = colors.ink)
-            if (hint != null) {
-                Text(text = hint, style = type.rowHint, color = colors.dim)
-            }
-        }
+        ) { LabelAndHint(label, hint) }
         Row(
             verticalAlignment = Alignment.CenterVertically,
-            modifier = Modifier.padding(end = 12.dp),
+            modifier = Modifier.padding(end = 12.dp).align(Alignment.CenterVertically),
         ) {
             StepButton(symbol = "−", contentDescription = "$label verringern", onClick = onDecrement, colors = colors)
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier
-                    .width(56.dp)
+                    .widthIn(min = 56.dp)
+                    .padding(horizontal = 4.dp)
                     .semantics { liveRegion = LiveRegionMode.Polite },
             ) {
                 Text(text = valueText, style = type.valueNumeral, color = colors.ink)
@@ -108,7 +128,7 @@ fun StepperRow(
 }
 
 /**
- * Rotation-control row for the 8 damping circuits (LSC/HSC/LSR/HSR or single rebound —
+ * Rotation-control row for the damping circuits (LSC/HSC/LSR/HSR or single rebound —
  * Change 01). Never mixes `+`/`−` with the dial's own clockwise/counter-clockwise convention;
  * see [RotationButton]. `valueText` is the numeral only — the unit line is "zu" / "offen".
  */
@@ -140,14 +160,6 @@ fun DampingRow(
     val cwDescription = stringResource(R.string.rotation_cw_description, a11yBase, cwCaption)
     val ccwDescription = stringResource(R.string.rotation_ccw_description, a11yBase, ccwCaption)
 
-    val labelColumn: @Composable () -> Unit = {
-        Column {
-            Text(text = label, style = type.rowLabel, color = colors.ink)
-            if (hint != null) {
-                Text(text = hint, style = type.rowHint, color = colors.dim)
-            }
-        }
-    }
     val controlsRow: @Composable () -> Unit = {
         Row(verticalAlignment = Alignment.CenterVertically) {
             RotationButton(
@@ -184,32 +196,29 @@ fun DampingRow(
 
     // Change 01 §5: at narrow widths / large font scale, the label+hint and the three-part
     // control cluster don't both fit on one line — stack instead of clipping either one.
+    // Dividing by fontScale measures the width in "text units": 448dp at 200% behaves like 224dp.
+    val fontScale = LocalDensity.current.fontScale
     BoxWithConstraints(modifier = Modifier.fillMaxWidth()) {
-        val stacked = maxWidth < STACK_BELOW_WIDTH
-        if (stacked) {
-            Row(modifier = Modifier.fillMaxWidth()) {
-                Box(Modifier.width(4.dp).fillMaxHeight().background(stripe))
+        if (maxWidth / fontScale < STACK_BELOW_WIDTH) {
+            StripedRow(stripe) {
                 Column(modifier = Modifier.weight(1f).padding(horizontal = 12.dp, vertical = 10.dp)) {
-                    labelColumn()
-                    Box(modifier = Modifier.padding(top = 8.dp).fillMaxWidth()) { controlsRow() }
+                    LabelAndHint(label, hint)
+                    Box(modifier = Modifier.padding(top = 8.dp)) { controlsRow() }
                 }
             }
         } else {
-            Row(modifier = Modifier.fillMaxWidth()) {
-                Box(Modifier.width(4.dp).fillMaxHeight().background(stripe))
-                Column(
+            StripedRow(stripe) {
+                Box(
                     modifier = Modifier
                         .weight(1f)
-                        .padding(horizontal = 12.dp, vertical = 10.dp)
-                        .align(Alignment.CenterVertically),
-                ) { labelColumn() }
+                        .align(Alignment.CenterVertically)
+                        .padding(horizontal = 12.dp, vertical = 10.dp),
+                ) { LabelAndHint(label, hint) }
                 Box(modifier = Modifier.padding(end = 12.dp).align(Alignment.CenterVertically)) { controlsRow() }
             }
         }
     }
 }
-
-private val STACK_BELOW_WIDTH = 300.dp
 
 @Composable
 fun StepButton(
@@ -240,10 +249,10 @@ fun TwoColumnRow(label: String, value: String) {
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 12.dp, vertical = 10.dp),
-        horizontalArrangement = androidx.compose.foundation.layout.Arrangement.SpaceBetween,
+        horizontalArrangement = androidx.compose.foundation.layout.Arrangement.spacedBy(12.dp),
     ) {
-        Text(text = label, style = type.body, color = colors.ink)
-        Text(text = value, style = type.tableValue, color = colors.ink)
+        Text(text = label, style = type.body, color = colors.ink, modifier = Modifier.weight(1f))
+        Text(text = value, style = type.tableValue, color = colors.ink, textAlign = androidx.compose.ui.text.style.TextAlign.End)
     }
 }
 
@@ -257,26 +266,17 @@ fun ToggleRow(
 ) {
     val colors = AppTheme.colors
     val type = AppTheme.type
-    Row(modifier = Modifier.fillMaxWidth()) {
+    StripedRow(stripe) {
         Box(
-            Modifier
-                .width(4.dp)
-                .height(if (hint != null) 64.dp else 52.dp)
-                .background(stripe),
-        )
-        Column(
             modifier = Modifier
                 .weight(1f)
+                .align(Alignment.CenterVertically)
                 .padding(horizontal = 12.dp, vertical = 10.dp),
-        ) {
-            Text(text = label, style = type.rowLabel, color = colors.ink)
-            if (hint != null) {
-                Text(text = hint, style = type.rowHint, color = colors.dim)
-            }
-        }
+        ) { LabelAndHint(label, hint) }
         Box(
             contentAlignment = Alignment.Center,
             modifier = Modifier
+                .align(Alignment.CenterVertically)
                 .padding(end = 12.dp)
                 .heightIn(min = MIN_TOUCH_TARGET_DP.dp)
                 .widthIn(min = 72.dp)

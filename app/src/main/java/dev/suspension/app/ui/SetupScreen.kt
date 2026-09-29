@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.items
@@ -23,10 +24,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import dev.suspension.app.R
+import dev.suspension.app.data.BikeProfile
 import dev.suspension.app.data.ComponentKind
 import dev.suspension.app.data.ForkModel
 import dev.suspension.app.data.Group
-import dev.suspension.app.data.GroupHeading
+import dev.suspension.app.data.MAX_WEIGHT_KG
+import dev.suspension.app.data.MIN_WEIGHT_KG
 import dev.suspension.app.data.RotationDirection
 import dev.suspension.app.data.RotationLogic
 import dev.suspension.app.data.RowSpec
@@ -46,6 +49,7 @@ import dev.suspension.app.ui.format.formatPercent
 import dev.suspension.app.ui.format.formatStepValue
 import dev.suspension.app.ui.theme.AppTheme
 import kotlinx.coroutines.launch
+import kotlin.math.roundToInt
 
 @Composable
 fun SetupScreen(
@@ -53,6 +57,7 @@ fun SetupScreen(
     selectedScenario: Scenario,
     onScenarioSelected: (Scenario) -> Unit,
     listState: LazyListState,
+    bike: BikeProfile,
     fork: ForkModel,
     shock: ShockModel,
     weightKg: Double,
@@ -63,12 +68,12 @@ fun SetupScreen(
     val colors = AppTheme.colors
     val type = AppTheme.type
 
-    val groups = remember(fork, shock, weightKg) {
-        listOf(
+    val groups = remember(fork, shock, weightKg, bike) {
+        listOfNotNull(
             ScenarioData.buildForkGroup(fork, weightKg),
-            ScenarioData.buildShockGroup(shock, weightKg),
-            ScenarioData.tiresGroup,
-            ScenarioData.frameGroup,
+            ScenarioData.buildShockGroup(shock, weightKg, bike),
+            ScenarioData.buildTiresGroup(bike),
+            ScenarioData.buildFrameGroup(bike),
         )
     }
 
@@ -79,16 +84,21 @@ fun SetupScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = 16.dp, vertical = 8.dp),
-                horizontalArrangement = Arrangement.SpaceBetween,
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
                 verticalAlignment = Alignment.CenterVertically,
             ) {
-                Text(text = stringResource(R.string.app_header_title), style = type.screenTitle, color = colors.ink)
+                Text(
+                    text = stringResource(R.string.app_header_title, stringResource(bike.nameResId)),
+                    style = type.screenTitle,
+                    color = colors.ink,
+                    modifier = Modifier.weight(1f),
+                )
                 WeightStepper(weightKg = weightKg, onChange = onWeightChange)
             }
             ScenarioTabs(
                 scenarios = Scenario.ordered,
                 selected = selectedScenario,
-                labelFor = { scenarioLabel(it) },
+                labelFor = { stringResource(it.labelResId) },
                 onSelect = onScenarioSelected,
             )
             RowDivider()
@@ -129,21 +139,29 @@ fun SetupScreen(
     }
 }
 
+/** Rider weight is a plain quantity, so it uses `+`/`−` (Change 01 §2). */
 @Composable
 private fun WeightStepper(weightKg: Double, onChange: (Double) -> Unit) {
     val colors = AppTheme.colors
     val type = AppTheme.type
-    val decreaseLabel = stringResource(R.string.weight_decrease)
-    val increaseLabel = stringResource(R.string.weight_increase)
     Row(verticalAlignment = Alignment.CenterVertically) {
-        StepButton(symbol = "−", contentDescription = decreaseLabel, onClick = { onChange((weightKg - 1).coerceAtLeast(30.0)) })
-        Text(
-            text = stringResource(R.string.weight_display, weightKg.toInt()),
-            style = type.body,
-            color = colors.dim,
-            modifier = Modifier.padding(horizontal = 6.dp),
+        StepButton(
+            symbol = "−",
+            contentDescription = stringResource(R.string.weight_decrease),
+            onClick = { onChange((weightKg - 1).coerceAtLeast(MIN_WEIGHT_KG)) },
         )
-        StepButton(symbol = "+", contentDescription = increaseLabel, onClick = { onChange((weightKg + 1).coerceAtMost(180.0)) })
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = Modifier.widthIn(min = 64.dp).padding(horizontal = 4.dp),
+        ) {
+            Text(text = stringResource(R.string.weight_display, weightKg.roundToInt()), style = type.rowLabel, color = colors.ink)
+            Text(text = stringResource(R.string.weight_caption), style = type.valueUnit, color = colors.dim)
+        }
+        StepButton(
+            symbol = "+",
+            contentDescription = stringResource(R.string.weight_increase),
+            onClick = { onChange((weightKg + 1).coerceAtMost(MAX_WEIGHT_KG)) },
+        )
     }
 }
 
@@ -151,25 +169,16 @@ private fun WeightStepper(weightKg: Double, onChange: (Double) -> Unit) {
 private fun GroupHeadingText(group: Group, onClick: (() -> Unit)?) {
     val colors = AppTheme.colors
     val type = AppTheme.type
-    val text = when (val h = group.heading) {
-        is GroupHeading.Static -> stringResource(h.resId)
-        is GroupHeading.Dynamic -> stringResource(h.templateResId, *h.args.toTypedArray())
-    }
-    Column {
-        Text(
-            text = text,
-            style = type.groupHeading,
-            color = colors.ink,
-            modifier = if (onClick != null) Modifier.clickable(onClickLabel = stringResource(R.string.change_component_hint), onClick = onClick) else Modifier,
-        )
+    val changeHint = stringResource(R.string.change_component_hint)
+    Column(
+        modifier = if (onClick != null) Modifier.clickable(onClickLabel = changeHint, onClick = onClick) else Modifier,
+    ) {
+        Text(text = group.heading.resolve(), style = type.groupHeading, color = colors.ink)
         if (onClick != null) {
-            Text(text = stringResource(R.string.change_component_hint), style = type.rowHint, color = colors.dim)
+            Text(text = changeHint, style = type.rowHint, color = colors.dim)
         }
     }
 }
-
-@Composable
-private fun scenarioLabel(scenario: Scenario): String = stringResource(scenario.labelResId)
 
 /** Rotation control (Change 01): every damping circuit — LSC/HSC/LSR/HSR or a single rebound. */
 private fun isDampingRow(row: RowSpec): Boolean = row.stripe == Stripe.COMP || row.stripe == Stripe.REB
@@ -179,7 +188,7 @@ private fun ParamRow(repository: ValueRepository, row: RowSpec, scenario: Scenar
     val scope = rememberCoroutineScope()
     val colors = AppTheme.colors
     val label = stringResource(row.labelResId)
-    val hint = row.hintResId?.let { stringResource(it) }
+    val hint = row.hint?.resolve()
     val stripeColor = row.stripe.color(colors)
 
     when (row) {

@@ -7,9 +7,11 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -21,25 +23,37 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.size
 import dev.suspension.app.R
+import dev.suspension.app.data.BikeProfile
 import dev.suspension.app.data.ForkModel
 import dev.suspension.app.data.ReboundMode
 import dev.suspension.app.data.RotationDirection
 import dev.suspension.app.data.ShockModel
 import dev.suspension.app.data.ValueRepository
+import dev.suspension.app.data.roundToStep
 import dev.suspension.app.ui.components.GroupCard
 import dev.suspension.app.ui.components.RotationIcon
 import dev.suspension.app.ui.components.RowDivider
 import dev.suspension.app.ui.components.TwoColumnRow
+import dev.suspension.app.ui.format.formatStepValue
 import dev.suspension.app.ui.theme.AppTheme
 import kotlinx.coroutines.launch
+
+/** Target-sag rows: label, share of travel in %, fork (true) or shock (false). */
+private val SAG_TARGETS = listOf(
+    Triple(R.string.basics_targets_row_1_label, 15, true),
+    Triple(R.string.basics_targets_row_2_label, 18, true),
+    Triple(R.string.basics_targets_row_3_label, 20, true),
+    Triple(R.string.basics_targets_row_4_label, 25, false),
+    Triple(R.string.basics_targets_row_5_label, 30, false),
+    Triple(R.string.basics_targets_row_6_label, 32, false),
+)
 
 @Composable
 fun BasicsScreen(
     repository: ValueRepository,
     listState: LazyListState,
+    bike: BikeProfile,
     fork: ForkModel,
     shock: ShockModel,
     onResetDone: () -> Unit,
@@ -99,17 +113,15 @@ fun BasicsScreen(
         item {
             BasicsCard(stringResource(R.string.basics_targets_title)) {
                 GroupCard {
-                    val rows = listOf(
-                        R.string.basics_targets_row_1_label to R.string.basics_targets_row_1_value,
-                        R.string.basics_targets_row_2_label to R.string.basics_targets_row_2_value,
-                        R.string.basics_targets_row_3_label to R.string.basics_targets_row_3_value,
-                        R.string.basics_targets_row_4_label to R.string.basics_targets_row_4_value,
-                        R.string.basics_targets_row_5_label to R.string.basics_targets_row_5_value,
-                        R.string.basics_targets_row_6_label to R.string.basics_targets_row_6_value,
-                    )
-                    rows.forEachIndexed { index, (labelRes, valueRes) ->
+                    SAG_TARGETS.forEachIndexed { index, (labelRes, percent, isFork) ->
                         if (index > 0) RowDivider()
-                        TwoColumnRow(stringResource(labelRes), stringResource(valueRes))
+                        val travel = if (isFork) fork.travelMm else shock.strokeMm
+                        val step = if (isFork) 1.0 else 0.5
+                        val mm = roundToStep(percent / 100.0 * travel, step)
+                        TwoColumnRow(
+                            stringResource(labelRes),
+                            stringResource(R.string.basics_targets_value, formatStepValue(mm, step), percent),
+                        )
                     }
                 }
                 Text(stringResource(R.string.basics_targets_footer), style = type.rowHint, color = colors.dim)
@@ -130,23 +142,17 @@ fun BasicsScreen(
                 Text(stringResource(R.string.basics_compression_body), style = type.body, color = colors.ink)
             }
         }
-        item {
-            BasicsCard(stringResource(R.string.basics_factory_title)) {
-                GroupCard {
-                    val rows = listOf(
-                        R.string.basics_factory_row_1_label to R.string.basics_factory_row_1_value,
-                        R.string.basics_factory_row_2_label to R.string.basics_factory_row_2_value,
-                        R.string.basics_factory_row_3_label to R.string.basics_factory_row_3_value,
-                        R.string.basics_factory_row_4_label to R.string.basics_factory_row_4_value,
-                        R.string.basics_factory_row_5_label to R.string.basics_factory_row_5_value,
-                        R.string.basics_factory_row_6_label to R.string.basics_factory_row_6_value,
-                    )
-                    rows.forEachIndexed { index, (labelRes, valueRes) ->
-                        if (index > 0) RowDivider()
-                        TwoColumnRow(stringResource(labelRes), stringResource(valueRes))
+        if (bike.factorySpec.isNotEmpty()) {
+            item {
+                BasicsCard(stringResource(R.string.basics_factory_title)) {
+                    GroupCard {
+                        bike.factorySpec.forEachIndexed { index, (labelRes, valueRes) ->
+                            if (index > 0) RowDivider()
+                            TwoColumnRow(stringResource(labelRes), stringResource(valueRes))
+                        }
                     }
+                    Text(stringResource(R.string.basics_factory_footer), style = type.rowHint, color = colors.dim)
                 }
-                Text(stringResource(R.string.basics_factory_footer), style = type.rowHint, color = colors.dim)
             }
         }
         item {
@@ -158,27 +164,30 @@ fun BasicsScreen(
                 val lsr = stringResource(R.string.label_lsr)
                 val hsr = stringResource(R.string.label_hsr)
                 val rebound = stringResource(R.string.label_rebound)
-                val none = stringResource(R.string.picker_none)
+                val preloadLabel = stringResource(R.string.basics_ranges_preload_label)
+                val preloadRange = stringResource(shock.preloadRangeResId)
+                val postLabel = stringResource(R.string.basics_ranges_post_label)
+                val postRange = bike.dropper?.let { stringResource(it.rangeResId) }
 
                 val rows = buildList {
                     add("$gabel $lsc" to fork.lscMax.toString())
-                    add("$gabel $hsc" to (fork.hscMax?.toString() ?: none))
+                    fork.hscMax?.let { add("$gabel $hsc" to it.toString()) }
                     if (fork.reboundMode == ReboundMode.SPLIT) {
                         add("$gabel $lsr" to fork.reboundMax.toString())
-                        add("$gabel $hsr" to (fork.hsrMax?.toString() ?: none))
+                        fork.hsrMax?.let { add("$gabel $hsr" to it.toString()) }
                     } else {
                         add("$gabel $rebound" to fork.reboundMax.toString())
                     }
                     add("$daempfer $lsc" to shock.lscMax.toString())
-                    add("$daempfer $hsc" to (shock.hscMax?.toString() ?: none))
+                    shock.hscMax?.let { add("$daempfer $hsc" to it.toString()) }
                     if (shock.reboundMode == ReboundMode.SPLIT) {
                         add("$daempfer $lsr" to shock.reboundMax.toString())
-                        add("$daempfer $hsr" to (shock.hsrMax?.toString() ?: none))
+                        shock.hsrMax?.let { add("$daempfer $hsr" to it.toString()) }
                     } else {
                         add("$daempfer $rebound" to shock.reboundMax.toString())
                     }
-                    add(stringResource(R.string.basics_ranges_row_9_label) to stringResource(R.string.basics_ranges_row_9_value))
-                    add(stringResource(R.string.basics_ranges_row_10_label) to stringResource(R.string.basics_ranges_row_10_value))
+                    add(preloadLabel to preloadRange)
+                    postRange?.let { add(postLabel to it) }
                 }
                 GroupCard {
                     rows.forEachIndexed { index, (label, value) ->

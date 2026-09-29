@@ -5,7 +5,9 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -127,9 +129,10 @@ private fun DiagnoseCard(
             .fillMaxWidth()
             .clip(RoundedCornerShape(10.dp))
             .background(colors.surface)
-            .clickable(onClickLabel = symptom, onClick = onToggle),
+            .clickable(onClickLabel = symptom, onClick = onToggle)
+            .height(IntrinsicSize.Min),
     ) {
-        Box(Modifier.width(4.dp).height(if (expanded) 120.dp else 52.dp).background(entry.stripe.color(colors)))
+        Box(Modifier.width(4.dp).fillMaxHeight().background(entry.stripe.color(colors)))
         Column(modifier = Modifier.weight(1f).padding(horizontal = 12.dp, vertical = 10.dp)) {
             Text(text = symptom, style = type.rowLabel, color = colors.ink)
             if (expanded) {
