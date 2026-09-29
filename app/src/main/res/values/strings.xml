@@ -1,326 +1,347 @@
 <resources>
-    <string name="app_name">Fahrwerk</string>
+    <!-- Default language: English. German lives in values-de/strings.xml; every translatable key
+         must exist in both (TranslationCompletenessTest). translatable="false" = same text in every
+         language, defined here only. -->
+    <string name="app_name" translatable="false">Fahrwerk</string>
 
     <!-- Header (spec §5). %1$s = bike name from the bike profile. -->
-    <string name="app_header_title">Fahrwerk — %1$s</string>
-    <string name="bike_level_rr_name">Level RR</string>
+    <string name="app_header_title" translatable="false">Fahrwerk — %1$s</string>
+    <string name="bike_level_rr_name" translatable="false">Level RR</string>
     <!-- Read-only summary in the header: %1$d = rider weight, %2$d = riding temperature. -->
-    <string name="header_conditions">%1$d kg · %2$d °C</string>
+    <string name="header_conditions" translatable="false">%1$d kg · %2$d °C</string>
 
     <!-- Conditions card: global settings that apply to every scenario. -->
-    <string name="group_conditions">Bedingungen</string>
-    <string name="label_rider_weight">Fahrergewicht</string>
-    <string name="label_temperature">Temperatur</string>
-    <string name="unit_kg">kg</string>
-    <string name="unit_celsius">°C</string>
+    <string name="group_conditions">Conditions</string>
+    <string name="label_rider_weight">Rider weight</string>
+    <string name="label_temperature">Temperature</string>
+    <string name="unit_kg" translatable="false">kg</string>
+    <string name="unit_celsius" translatable="false">°C</string>
     <!-- Fox's charts use rider weight in full riding gear. -->
-    <string name="hint_rider_weight">mit Ausrüstung (Helm, Rucksack …)</string>
-    <string name="hint_temperature">Fahrtemperatur · Basis 20 °C · Druck, Reifen und Klicks rechnen mit</string>
+    <string name="hint_rider_weight">with gear (helmet, pack …)</string>
+    <string name="hint_temperature">Riding temperature · base 20 °C · pressure, tires and clicks follow it</string>
 
     <string name="tab_setup">Setup</string>
     <string name="tab_diagnose">Diagnose</string>
     <string name="tab_basics">Basics</string>
 
-    <string name="scenario_basis">Basis</string>
+    <string name="scenario_basis">Base</string>
     <string name="scenario_downhill">Downhill</string>
-    <string name="scenario_bikepark">Bikepark</string>
-    <string name="scenario_tour">Tour</string>
+    <string name="scenario_bikepark">Bike park</string>
+    <string name="scenario_tour">Trail</string>
     <string name="scenario_uphill">Uphill</string>
 
     <!-- %1$s = model display name (proper noun, not translated), %2$d = travel/stroke in mm. -->
-    <string name="group_fork_template">Gabel — %1$s, %2$d mm</string>
-    <string name="group_shock_template">Dämpfer — %1$s, %2$d×%3$d mm</string>
-    <string name="group_tires">Reifen</string>
-    <string name="group_frame">Rahmen &amp; Stütze</string>
-    <string name="change_component_hint">Modell ändern</string>
-    <string name="custom_fork_default_name">Eigene Gabel</string>
-    <string name="custom_shock_default_name">Eigener Dämpfer</string>
-    <string name="prefix_gabel">Gabel</string>
-    <string name="prefix_daempfer">Dämpfer</string>
+    <string name="group_fork_template">Fork — %1$s, %2$d mm</string>
+    <string name="group_shock_template">Shock — %1$s, %2$d×%3$d mm</string>
+    <string name="group_tires">Tires</string>
+    <string name="group_frame">Frame &amp; dropper</string>
+    <string name="change_component_hint">Change model</string>
+    <string name="custom_fork_default_name">Custom fork</string>
+    <string name="custom_shock_default_name">Custom shock</string>
+    <string name="prefix_gabel">Fork</string>
+    <string name="prefix_daempfer">Shock</string>
 
-    <string name="label_f_psi">Luftdruck</string>
-    <string name="label_f_sp">Volumenspacer</string>
+    <string name="label_f_psi">Air pressure</string>
+    <string name="label_f_sp">Volume spacers</string>
     <string name="label_sag">Sag</string>
-    <string name="label_lsc">LSC</string>
-    <string name="label_hsc">HSC</string>
-    <string name="label_lsr">LSR</string>
-    <string name="label_hsr">HSR</string>
-    <string name="label_rebound">Zugstufe</string>
-    <string name="label_s_rate">Federrate</string>
-    <string name="label_s_pre">Vorspannung</string>
-    <string name="label_s_cs">Climb Switch</string>
-    <string name="label_t_f">Vorne</string>
-    <string name="label_t_r">Hinten</string>
-    <string name="label_chip">Flip-Chip</string>
-    <string name="label_post">Sattelstütze</string>
+    <string name="label_lsc" translatable="false">LSC</string>
+    <string name="label_hsc" translatable="false">HSC</string>
+    <string name="label_lsr" translatable="false">LSR</string>
+    <string name="label_hsr" translatable="false">HSR</string>
+    <string name="label_rebound">Rebound</string>
+    <string name="label_s_rate">Spring rate</string>
+    <string name="label_s_pre">Preload</string>
+    <string name="label_s_cs">Climb switch</string>
+    <string name="label_t_f">Front</string>
+    <string name="label_t_r">Rear</string>
+    <string name="label_chip">Flip chip</string>
+    <string name="label_post">Dropper post</string>
+    <!-- Climb switch positions. The stored value stays "Offen"/"Firm"; only the label is translated. -->
+    <string name="option_climb_open">Open</string>
+    <string name="option_climb_firm">Firm</string>
 
-    <string name="unit_psi">psi</string>
-    <string name="unit_stk">Stk</string>
-    <string name="unit_mm">mm</string>
-    <string name="unit_lbs">lbs</string>
-    <string name="unit_klicks">Klicks</string>
-    <string name="unit_bar">bar</string>
+    <string name="unit_psi" translatable="false">psi</string>
+    <string name="unit_stk">pcs</string>
+    <string name="unit_mm" translatable="false">mm</string>
+    <string name="unit_lbs" translatable="false">lbs</string>
+    <string name="unit_klicks">clicks</string>
+    <string name="unit_bar" translatable="false">bar</string>
     <!-- Damping-row unit line (Change 01 §5). -->
-    <string name="damping_state_zu">zu</string>
-    <string name="damping_state_offen">offen</string>
+    <string name="damping_state_zu">closed</string>
+    <string name="damping_state_offen">open</string>
+
+    <!-- Accessibility for +/− quantity rows and toggles. %1$s = row label. -->
+    <string name="stepper_decrease">Decrease %1$s</string>
+    <string name="stepper_increase">Increase %1$s</string>
+    <string name="toggle_change">Change %1$s</string>
 
     <!-- Rotation control captions and accessibility (Change 01 §5, §9). -->
-    <string name="rotation_caption_softer">weicher</string>
-    <string name="rotation_caption_firmer">fester</string>
-    <string name="rotation_caption_faster">schneller</string>
-    <string name="rotation_caption_slower">langsamer</string>
-    <string name="rotation_limit_reached">Anschlag erreicht</string>
-    <!-- %1$s = "Gabel"/"Dämpfer" + param label, e.g. "Gabel LSC". %2$s = caption. -->
-    <string name="rotation_cw_description">%1$s zudrehen, im Uhrzeigersinn, %2$s</string>
-    <string name="rotation_ccw_description">%1$s aufdrehen, gegen den Uhrzeigersinn, %2$s</string>
-    <string name="rotation_value_description_open">%1$s, %2$s Klicks offen</string>
-    <string name="rotation_value_description_closed">%1$s, zu</string>
-    <string name="diag_direction_clockwise">im Uhrzeigersinn · Zahl sinkt</string>
-    <string name="diag_direction_counter_clockwise">gegen den Uhrzeigersinn · Zahl steigt</string>
+    <string name="rotation_caption_softer">softer</string>
+    <string name="rotation_caption_firmer">firmer</string>
+    <string name="rotation_caption_faster">faster</string>
+    <string name="rotation_caption_slower">slower</string>
+    <string name="rotation_limit_reached">Limit reached</string>
+    <!-- %1$s = "Fork"/"Shock" + param label, e.g. "Fork LSC". %2$s = caption. -->
+    <string name="rotation_cw_description">Close %1$s, clockwise, %2$s</string>
+    <string name="rotation_ccw_description">Open %1$s, counter-clockwise, %2$s</string>
+    <string name="rotation_value_description_open">%1$s, %2$s clicks open</string>
+    <string name="rotation_value_description_closed">%1$s, closed</string>
+    <string name="diag_direction_clockwise">clockwise · number goes down</string>
+    <string name="diag_direction_counter_clockwise">counter-clockwise · number goes up</string>
 
     <!-- Row hints. Chart-based hints: %1$s = chart publisher ("Fox"), %2$d–%3$d = weight row in kg. -->
-    <string name="hint_f_psi_chart">%1$s-Tabelle %2$d–%3$d kg: %4$d psi · max. %5$d</string>
+    <string name="hint_f_psi_chart">%1$s chart %2$d–%3$d kg: %4$d psi · max %5$d</string>
     <!-- Riding temperature ≠ 20 °C: %4$d = target at that temperature, %6$d = the temperature.
          The row value is the fill pressure at 20 °C that reaches the target when riding there. -->
-    <string name="hint_f_psi_chart_temp">%1$s %2$d–%3$d kg: Ziel %4$d psi bei %6$d °C — bei 20 °C füllen · max. %5$d</string>
-    <string name="hint_f_psi_decal">Startdruck vom Aufkleber am Casting übernehmen</string>
-    <string name="hint_f_psi_decal_temp">Aufkleber-Druck ist das Ziel bei %1$d °C — bei 20 °C füllen</string>
-    <string name="hint_t_temp">Ziel bei %1$d °C: %2$s bar — bei 20 °C füllen</string>
-    <string name="hint_t_r_temp">27,5\" hat weniger Volumen · Ziel bei %1$d °C: %2$s bar — bei 20 °C füllen</string>
-    <string name="hint_f_sp_known">Werk: %1$d · max. %2$d · mehr Spacer = mehr Durchschlagschutz</string>
-    <string name="hint_f_sp_generic">mehr Spacer = mehr Durchschlagschutz</string>
-    <string name="hint_f_lsc">Bremsnicken, Support in Anliegern</string>
-    <string name="hint_f_hsc">Landungen und Kanten · gegen Durchschläge besser Spacer</string>
-    <string name="hint_f_lsr">Ruhe nach Kompressionen</string>
-    <string name="hint_f_hsr">Verhalten nach harten Schlägen</string>
-    <string name="hint_f_lsr_chart">Ruhe nach Kompressionen · %1$s %2$d–%3$d kg: %4$d</string>
-    <string name="hint_f_hsr_chart">nach harten Schlägen · %1$s %2$d–%3$d kg: %4$d</string>
-    <string name="hint_f_reb_single">Ruhe nach Kompressionen und nach harten Schlägen</string>
+    <string name="hint_f_psi_chart_temp">%1$s %2$d–%3$d kg: target %4$d psi at %6$d °C — fill at 20 °C · max %5$d</string>
+    <string name="hint_f_psi_decal">Take the starting pressure from the sticker on the lower leg</string>
+    <string name="hint_f_psi_decal_temp">Sticker pressure is the target at %1$d °C — fill at 20 °C</string>
+    <!-- %2$s = target tire pressure, already formatted with the language's decimal separator. -->
+    <string name="hint_t_temp">Target at %1$d °C: %2$s bar — fill at 20 °C</string>
+    <string name="hint_t_r_temp">27.5\" has less volume · target at %1$d °C: %2$s bar — fill at 20 °C</string>
+    <string name="hint_f_sp_known">Stock: %1$d · max %2$d · more spacers = more bottom-out resistance</string>
+    <string name="hint_f_sp_generic">more spacers = more bottom-out resistance</string>
+    <string name="hint_f_lsc">Brake dive, support in berms</string>
+    <string name="hint_f_hsc">Landings and edges · for bottoming out, spacers work better</string>
+    <string name="hint_f_lsr">Calm after compressions</string>
+    <string name="hint_f_hsr">Behavior after hard hits</string>
+    <string name="hint_f_lsr_chart">Calm after compressions · %1$s %2$d–%3$d kg: %4$d</string>
+    <string name="hint_f_hsr_chart">after hard hits · %1$s %2$d–%3$d kg: %4$d</string>
+    <string name="hint_f_reb_single">Calm after compressions and after hard hits</string>
     <!-- %1$d = stock spring, %2$d = rider weight, %3$d = rule-of-thumb rate. -->
-    <string name="hint_s_rate">Werk: %1$d · Faustregel für %2$d kg: ca. %3$d · erst Sag messen</string>
-    <string name="hint_s_rate_custom">Faustregel für %1$d kg: ca. %2$d · erst Sag messen</string>
-    <string name="hint_s_pre_fox">Fox: ab spielfrei 8 Klicks · max. 2 Umdrehungen</string>
-    <string name="hint_s_pre_generic">nur zur Sag-Feinjustage · Sag nicht erreichbar → andere Feder</string>
-    <string name="hint_s_lsc">Wippen, Einsacken unter Motorlast</string>
-    <string name="hint_s_hsc">harte Kanten am Heck</string>
-    <string name="hint_s_lsr">Schleudersitz</string>
-    <string name="hint_s_hsr">nach großen Landungen</string>
-    <string name="hint_s_reb_single">Schleudersitz und Verhalten nach großen Landungen</string>
-    <string name="hint_s_cs">bergauf Firm, bergab Offen</string>
-    <string name="hint_t_r">27,5\" hat weniger Volumen — weniger Reserve</string>
-    <string name="hint_chip">Low: −5 mm Tretlager, −0,35°</string>
-    <string name="hint_post">OnOff: 280–300 psi, nie über 300 · alle 10 h prüfen</string>
+    <string name="hint_s_rate">Stock: %1$d · rule of thumb for %2$d kg: approx. %3$d · measure sag first</string>
+    <string name="hint_s_rate_custom">Rule of thumb for %1$d kg: approx. %2$d · measure sag first</string>
+    <string name="hint_s_pre_fox">Fox: 8 clicks from no play · max 2 turns</string>
+    <string name="hint_s_pre_generic">only to fine-tune sag · sag out of reach → different spring</string>
+    <string name="hint_s_lsc">Bobbing, sagging under motor load</string>
+    <string name="hint_s_hsc">hard edges at the rear</string>
+    <string name="hint_s_lsr">Bucking, rear kicks up</string>
+    <string name="hint_s_hsr">after big landings</string>
+    <string name="hint_s_reb_single">Bucking and behavior after big landings</string>
+    <string name="hint_s_cs">Firm uphill, Open downhill</string>
+    <string name="hint_t_r">27.5\" has less volume — less reserve</string>
+    <string name="hint_chip">Low: −5 mm bottom bracket, −0.35°</string>
+    <string name="hint_post">OnOff: 280–300 psi, never above 300 · check every 10 h</string>
 
     <!-- %% escapes the literal percent sign in a format string. -->
-    <string name="sag_percent_hint">%1$s %% Sag</string>
+    <string name="sag_percent_hint">%1$s %% sag</string>
 
-    <string name="setup_footer_note">Wo eine Herstellertabelle existiert, kommen Luftdruck und Gabel-Zugstufe daraus — passend zu deinem Gewicht. Temperatur und Gewicht ändern nur Werte, die du nicht selbst verstellt hast: eigene Änderungen bleiben fest. Alle übrigen Klickwerte sind Startwerte; die Werksempfehlung für deine Einheit liefert der Hersteller (Fox: 4-stellige ID auf ridefox.com).</string>
+    <string name="setup_footer_note">Where a manufacturer chart exists, air pressure and fork rebound come from it — matched to your weight. Temperature and weight only change values you haven\'t adjusted yourself: your own changes stay put. All other click values are starting points; the factory recommendation for your unit comes from the manufacturer (Fox: 4-digit ID on ridefox.com).</string>
 
-    <string name="diagnose_search_placeholder">Symptom suchen — z. B. nervös, taucht, springt</string>
+    <string name="diagnose_search_placeholder">Search symptom — e.g. nervous, dives, bucks</string>
 
-    <string name="diag_symptom_1">Taucht beim Bremsen stark ein</string>
-    <string name="diag_action_1">Gabel LSC zudrehen</string>
-    <string name="diag_explanation_1">Mehr Widerstand gegen langsames Einfedern, die Geometrie bleibt stabil.</string>
+    <!-- Diagnose actions: "Close …" = clockwise, "Open …" = counter-clockwise
+         (DiagnoseDirectionConsistencyTest). -->
+    <string name="diag_symptom_1">Dives hard under braking</string>
+    <string name="diag_action_1">Close fork LSC</string>
+    <string name="diag_explanation_1">More resistance to slow compression keeps the geometry stable.</string>
 
-    <string name="diag_symptom_2">Schwammig in Anliegern, kein Support</string>
-    <string name="diag_action_2">LSC zudrehen (vorne und hinten)</string>
-    <string name="diag_explanation_2">Der Low-Speed-Kreis trägt Pump- und Kurvenbewegung.</string>
+    <string name="diag_symptom_2">Vague in berms, no support</string>
+    <string name="diag_action_2">Close LSC (front and rear)</string>
+    <string name="diag_explanation_2">The low-speed circuit carries pumping and cornering loads.</string>
 
-    <string name="diag_symptom_3">Kribbeln in den Händen, kein Grip auf Kleinkram</string>
-    <string name="diag_action_3">Gabel LSC aufdrehen</string>
-    <string name="diag_explanation_3">Feinfühligeres Ansprechen im ersten Drittel.</string>
+    <string name="diag_symptom_3">Buzzing hands, no grip on small stuff</string>
+    <string name="diag_action_3">Open fork LSC</string>
+    <string name="diag_explanation_3">More sensitive response in the first third of travel.</string>
 
-    <string name="diag_symptom_4">Nervös bei schnellen kleinen Schlägen</string>
-    <string name="diag_action_4">Gabel HSC aufdrehen</string>
-    <string name="diag_explanation_4">High Speed heißt Geschwindigkeit der Federbewegung, nicht deine Fahrgeschwindigkeit.</string>
+    <string name="diag_symptom_4">Nervous over fast small hits</string>
+    <string name="diag_action_4">Open fork HSC</string>
+    <string name="diag_explanation_4">High speed means how fast the suspension moves, not how fast you ride.</string>
 
-    <string name="diag_symptom_5">Harte Kanten hämmern durch</string>
-    <string name="diag_action_5">HSC aufdrehen</string>
-    <string name="diag_explanation_5">Öl fließt schneller, der Schlag wird geschluckt statt weitergeleitet.</string>
+    <string name="diag_symptom_5">Hard edges hammer through</string>
+    <string name="diag_action_5">Open HSC</string>
+    <string name="diag_explanation_5">Oil flows faster, the hit is absorbed instead of passed on.</string>
 
-    <string name="diag_symptom_6">Springt über Wurzelfelder, findet keine Ruhe</string>
-    <string name="diag_action_6">Dämpfer HSC aufdrehen</string>
-    <string name="diag_explanation_6">Der Hinterbau kommt bei Schlagfolgen nicht hinterher.</string>
+    <string name="diag_symptom_6">Skips over root sections, never settles</string>
+    <string name="diag_action_6">Open shock HSC</string>
+    <string name="diag_explanation_6">The rear can\'t keep up with repeated hits.</string>
 
-    <string name="diag_symptom_7">Wippt beim Pedalieren, sackt unter Motorlast</string>
-    <string name="diag_action_7">Dämpfer LSC zudrehen</string>
-    <string name="diag_explanation_7">Das Motordrehmoment wirkt wie Dauerpedalieren.</string>
+    <string name="diag_symptom_7">Bobs when pedaling, sags under motor load</string>
+    <string name="diag_action_7">Close shock LSC</string>
+    <string name="diag_explanation_7">Motor torque acts like constant pedaling.</string>
 
-    <string name="diag_symptom_8">Schleudersitz, das Rad schiebt hoch</string>
-    <string name="diag_action_8">Dämpfer LSR zudrehen</string>
-    <string name="diag_explanation_8">Die Feder gibt ihre Energie zu schnell zurück.</string>
+    <string name="diag_symptom_8">Bucks, the rear kicks up</string>
+    <string name="diag_action_8">Close shock LSR</string>
+    <string name="diag_explanation_8">The spring gives its energy back too fast.</string>
 
-    <string name="diag_symptom_9">Nach großen Landungen springt es nach</string>
-    <string name="diag_action_9">HSR zudrehen</string>
-    <string name="diag_explanation_9">Schnelles Ausfedern nach hartem Einschlag bremsen.</string>
+    <string name="diag_symptom_9">Bounces after big landings</string>
+    <string name="diag_action_9">Close HSR</string>
+    <string name="diag_explanation_9">Slows fast extension after a hard hit.</string>
 
-    <string name="diag_symptom_10">Fühlt sich tot an, bleibt bei Schlagfolgen tief</string>
-    <string name="diag_action_10">LSR und HSR aufdrehen</string>
-    <string name="diag_explanation_10">Der Federweg steht am nächsten Hindernis nicht zur Verfügung.</string>
+    <string name="diag_symptom_10">Feels dead, stays low through repeated hits</string>
+    <string name="diag_action_10">Open LSR and HSR</string>
+    <string name="diag_explanation_10">The travel isn\'t there for the next obstacle.</string>
 
-    <string name="diag_symptom_11">Gabel schlägt durch</string>
-    <string name="diag_action_11">Sag prüfen, dann einen Volumenspacer mehr</string>
-    <string name="diag_explanation_11">Fox: Stimmt der Sag, regeln Volumenspacer den Durchschlagschutz. Luftdruck nur so weit anheben, dass der Sag im Zielbereich bleibt.</string>
+    <string name="diag_symptom_11">Fork bottoms out</string>
+    <string name="diag_action_11">Check sag, then add one volume spacer</string>
+    <string name="diag_explanation_11">Fox: once sag is right, volume spacers set bottom-out resistance. Only add air pressure as far as sag stays in the target range.</string>
 
-    <string name="diag_symptom_12">Dämpfer schlägt durch</string>
-    <string name="diag_action_12">Härtere Feder</string>
-    <string name="diag_explanation_12">Vorspannung ist nur zur Sag-Feinjustage da (Fox: max. 2 Umdrehungen) und ersetzt keine Federrate.</string>
+    <string name="diag_symptom_12">Shock bottoms out</string>
+    <string name="diag_action_12">Stiffer spring</string>
+    <string name="diag_explanation_12">Preload is only for fine-tuning sag (Fox: max 2 turns) and doesn\'t replace spring rate.</string>
 
-    <string name="diag_symptom_13">Sag über 32 % trotz Vorspannung</string>
-    <string name="diag_action_13">Nächsthärtere Feder</string>
-    <string name="diag_explanation_13">Fox: Lässt sich der Sag mit der Vorspannung nicht erreichen, braucht es eine andere Feder.</string>
+    <string name="diag_symptom_13">Sag over 32 % despite preload</string>
+    <string name="diag_action_13">Next stiffer spring</string>
+    <string name="diag_explanation_13">Fox: if preload can\'t reach the sag, you need a different spring.</string>
 
-    <string name="diag_symptom_14">Vorderrad steigt am Steilstück</string>
-    <string name="diag_action_14">Flip-Chip auf High</string>
-    <string name="diag_explanation_14">Steilerer Sitzwinkel, mehr Gewicht über der Front.</string>
+    <string name="diag_symptom_14">Front wheel lifts on steep climbs</string>
+    <string name="diag_action_14">Flip chip to High</string>
+    <string name="diag_explanation_14">Steeper seat angle, more weight over the front.</string>
 
-    <string name="diag_symptom_15">Setzt mit den Pedalen auf</string>
-    <string name="diag_action_15">Flip-Chip auf High</string>
-    <string name="diag_explanation_15">5 mm mehr Tretlagerhöhe.</string>
+    <string name="diag_symptom_15">Pedals strike the ground</string>
+    <string name="diag_action_15">Flip chip to High</string>
+    <string name="diag_explanation_15">5 mm more bottom bracket height.</string>
 
-    <string name="diag_symptom_16">Kein Grip auf nassen Wurzeln</string>
-    <string name="diag_action_16">Reifendruck 0,1 bar runter</string>
-    <string name="diag_explanation_16">Größere Aufstandsfläche, die Karkasse legt sich besser um Kanten.</string>
+    <string name="diag_symptom_16">No grip on wet roots</string>
+    <string name="diag_action_16">Tire pressure 0.1 bar lower</string>
+    <string name="diag_explanation_16">Bigger contact patch, the casing wraps around edges better.</string>
 
-    <string name="diag_symptom_17">Dumpfes Klacken bei harten Kanten</string>
-    <string name="diag_action_17">Insert hinten statt mehr Druck</string>
-    <string name="diag_explanation_17">Felgenkontakt. Mehr Druck kostet Grip.</string>
+    <string name="diag_symptom_17">Dull clunk on hard edges</string>
+    <string name="diag_action_17">Rear insert instead of more pressure</string>
+    <string name="diag_explanation_17">Rim contact. More pressure costs grip.</string>
 
-    <string name="diag_symptom_18">Fahrwerk im Winter stumpf und träge</string>
-    <string name="diag_action_18">LSC und HSC 1–2 Klicks aufdrehen</string>
-    <string name="diag_explanation_18">Kaltes Öl ist zäher und dämpft stärker.</string>
+    <string name="diag_symptom_18">Suspension dull and sluggish in winter</string>
+    <string name="diag_action_18">Open LSC and HSC 1–2 clicks</string>
+    <string name="diag_explanation_18">Cold oil is thicker and damps more.</string>
 
-    <string name="diag_symptom_19">Gabel steht im Winter tiefer</string>
-    <string name="diag_action_19">Druck bei Fahrtemperatur neu einstellen</string>
-    <string name="diag_explanation_19">Der Luftdruck folgt der absoluten Temperatur: bei ca. 110 psi kosten 20 → 0 °C rund 8 psi.</string>
+    <string name="diag_symptom_19">Fork sits lower in winter</string>
+    <string name="diag_action_19">Set pressure again at riding temperature</string>
+    <string name="diag_explanation_19">Air pressure follows absolute temperature: at about 110 psi, 20 → 0 °C costs roughly 8 psi.</string>
 
     <!-- App card on Basics + update banner (GitHub build). %1$s = version name. -->
     <string name="basics_app_title">App</string>
     <string name="app_version">Version %1$s</string>
-    <string name="update_via_store">Updates kommen über den Play Store.</string>
-    <string name="update_checking">Suche nach Updates …</string>
-    <string name="update_up_to_date">Du hast die neueste Version.</string>
-    <string name="update_available">Update %1$s verfügbar</string>
+    <string name="update_via_store">Updates come through the Play Store.</string>
+    <string name="update_checking">Checking for updates …</string>
+    <string name="update_up_to_date">You have the latest version.</string>
+    <string name="update_available">Update %1$s available</string>
     <!-- %2$d = download progress in percent. -->
-    <string name="update_downloading">Update %1$s wird geladen … %2$d %%</string>
-    <string name="update_ready">Update %1$s ist geladen</string>
-    <string name="update_needs_permission">Einmalig erlauben: „Aus dieser Quelle installieren“ für Fahrwerk. Danach hier nochmal auf „Installieren“ tippen.</string>
-    <string name="update_failed_offline">Keine Verbindung zu GitHub. Später nochmal versuchen.</string>
-    <string name="update_failed_checksum">Download beschädigt – nicht installiert. Bitte nochmal versuchen.</string>
-    <string name="update_install">Installieren</string>
-    <string name="update_check">Nach Updates suchen</string>
-    <string name="update_later">Später</string>
+    <string name="update_downloading">Downloading update %1$s … %2$d %%</string>
+    <string name="update_ready">Update %1$s is ready</string>
+    <string name="update_needs_permission">Allow once: \"Install from this source\" for Fahrwerk. Then tap \"Install\" here again.</string>
+    <string name="update_failed_offline">No connection to GitHub. Try again later.</string>
+    <string name="update_failed_checksum">Download damaged – not installed. Please try again.</string>
+    <string name="update_install">Install</string>
+    <string name="update_check">Check for updates</string>
+    <string name="update_later">Later</string>
 
     <!-- Safe mode after repeated crashes. -->
-    <string name="safe_mode_title">Die App ist zuletzt mehrfach abgestürzt</string>
-    <string name="safe_mode_body">Wahrscheinlich ist das letzte Update fehlerhaft. Deine Einstellungen bleiben gespeichert. Mit dem neuesten Update ist der Fehler meist schon behoben.</string>
-    <string name="safe_mode_store">Im Play Store öffnen</string>
-    <string name="safe_mode_continue">Trotzdem starten</string>
+    <string name="safe_mode_title">The app crashed several times recently</string>
+    <string name="safe_mode_body">The last update is probably faulty. Your settings are still saved. The newest update usually fixes it already.</string>
+    <string name="safe_mode_store">Open in Play Store</string>
+    <string name="safe_mode_continue">Start anyway</string>
 
-    <string name="reset_button">Alle Werte auf Startwerte zurücksetzen</string>
-    <string name="basics_persistence_note">Änderungen werden nur auf diesem Gerät gespeichert.</string>
+    <string name="reset_button">Reset all values to starting values</string>
+    <string name="basics_persistence_note">Changes are saved on this device only.</string>
+
+    <!-- Language choice on Basics. Language names are written in their own language. -->
+    <string name="basics_language_title">Language</string>
+    <string name="language_system">Device language</string>
+    <string name="language_english" translatable="false">English</string>
+    <string name="language_german" translatable="false">Deutsch</string>
+    <string name="language_selected">selected</string>
 
     <!-- Basics cards (§10). First card per Change 01 §7. -->
-    <string name="basics_clicks_title">Drehrichtung und Zählweise</string>
-    <string name="basics_clicks_row_cw_primary">Uhrzeigersinn = zudrehen</string>
-    <string name="basics_clicks_row_cw_secondary_1">Zahl sinkt</string>
-    <string name="basics_clicks_row_cw_secondary_2">Druckstufe fester · Zugstufe langsamer</string>
-    <string name="basics_clicks_row_ccw_primary">Gegen den Uhrzeigersinn = aufdrehen</string>
-    <string name="basics_clicks_row_ccw_secondary_1">Zahl steigt</string>
-    <string name="basics_clicks_row_ccw_secondary_2">Druckstufe weicher · Zugstufe schneller</string>
-    <string name="basics_clicks_body_1">Die Zahl zeigt, wie viele Klicks der Einsteller vom geschlossenen Anschlag aus offen ist. 0 heißt ganz zu.</string>
-    <string name="basics_clicks_body_2">Zum Nachzählen: im Uhrzeigersinn bis zum sanften Anschlag drehen, nie mit Gewalt, dann gegen den Uhrzeigersinn herausdrehen und die Klicks zählen.</string>
-    <string name="basics_clicks_body_3">Pfeile zeigen die Drehrichtung am Rad. Plus und Minus ändern nur die Zahl.</string>
-    <string name="basics_clicks_body_4">Vorspannring am Dämpfer: im Uhrzeigersinn = mehr Klicks = mehr Vorspannung = weniger Sag.</string>
+    <string name="basics_clicks_title">Turn direction and counting</string>
+    <string name="basics_clicks_row_cw_primary">Clockwise = close</string>
+    <string name="basics_clicks_row_cw_secondary_1">Number goes down</string>
+    <string name="basics_clicks_row_cw_secondary_2">Compression firmer · rebound slower</string>
+    <string name="basics_clicks_row_ccw_primary">Counter-clockwise = open</string>
+    <string name="basics_clicks_row_ccw_secondary_1">Number goes up</string>
+    <string name="basics_clicks_row_ccw_secondary_2">Compression softer · rebound faster</string>
+    <string name="basics_clicks_body_1">The number shows how many clicks the adjuster is open from its closed stop. 0 means fully closed.</string>
+    <string name="basics_clicks_body_2">To count: turn clockwise to the soft stop, never force it, then turn counter-clockwise and count the clicks.</string>
+    <string name="basics_clicks_body_3">Arrows show the turn direction at the dial. Plus and minus only change the number.</string>
+    <string name="basics_clicks_body_4">Shock preload ring: clockwise = more clicks = more preload = less sag.</string>
 
-    <string name="basics_order_title">Reihenfolge</string>
-    <string name="basics_order_step_1">Alles auf Mitte — das ist der Nullpunkt</string>
-    <string name="basics_order_step_2">Federrate hinten, Luftdruck vorne</string>
-    <string name="basics_order_step_3">Sag messen, korrigieren, nochmal messen</string>
-    <string name="basics_order_step_4">Zugstufe</string>
-    <string name="basics_order_step_5">LSC</string>
-    <string name="basics_order_step_6">HSC</string>
-    <string name="basics_order_footer">Federrate später ändern heißt alles neu abstimmen. Eine Änderung pro Ausfahrt.</string>
+    <string name="basics_order_title">Order</string>
+    <string name="basics_order_step_1">Everything to the middle — that\'s your zero point</string>
+    <string name="basics_order_step_2">Rear spring rate, front air pressure</string>
+    <string name="basics_order_step_3">Measure sag, correct it, measure again</string>
+    <string name="basics_order_step_4">Rebound</string>
+    <string name="basics_order_step_5" translatable="false">LSC</string>
+    <string name="basics_order_step_6" translatable="false">HSC</string>
+    <string name="basics_order_footer">Changing the spring rate later means re-tuning everything. One change per ride.</string>
 
-    <string name="basics_sag_title">Sag messen</string>
-    <string name="basics_sag_fork">Gabel: Gummiring an die Dichtung, nach dem Absteigen Abstand messen.</string>
-    <string name="basics_sag_shock">Dämpfer (Coil): Einbaulänge Auge zu Auge unbelastet und belastet, Differenz = Sag.</string>
-    <string name="basics_sag_footer">Immer stehend in Angriffsposition, mit Rucksack. Mehrmals einfedern, dann ruhig stehen. Zwei- bis dreimal messen.</string>
+    <string name="basics_sag_title">Measuring sag</string>
+    <string name="basics_sag_fork">Fork: push the O-ring against the seal, get off, measure the distance.</string>
+    <string name="basics_sag_shock">Shock (coil): eye-to-eye length unloaded and loaded, the difference is sag.</string>
+    <string name="basics_sag_footer">Always standing in the attack position, with your pack. Bounce a few times, then stand still. Measure two or three times.</string>
 
     <!-- Target sag: mm are computed from the selected fork travel / shock stroke. -->
-    <string name="basics_targets_title">Zielwerte</string>
-    <string name="basics_targets_row_1_label">Gabel Bikepark</string>
-    <string name="basics_targets_row_2_label">Gabel Standard</string>
-    <string name="basics_targets_row_3_label">Gabel komfortabel</string>
-    <string name="basics_targets_row_4_label">Dämpfer Klettern</string>
-    <string name="basics_targets_row_5_label">Dämpfer Abfahrt</string>
-    <string name="basics_targets_row_6_label">Feder zu weich ab</string>
-    <string name="basics_targets_value">%1$s mm · %2$d %%</string>
-    <string name="basics_targets_footer">Fox empfiehlt 15–20 % Sag an der Gabel und rund 30 % am Coil-Dämpfer — die Gabel läuft bewusst mit weniger Sag. Das ist normal.</string>
+    <string name="basics_targets_title">Targets</string>
+    <string name="basics_targets_row_1_label">Fork bike park</string>
+    <string name="basics_targets_row_2_label">Fork standard</string>
+    <string name="basics_targets_row_3_label">Fork comfortable</string>
+    <string name="basics_targets_row_4_label">Shock climbing</string>
+    <string name="basics_targets_row_5_label">Shock descending</string>
+    <string name="basics_targets_row_6_label">Spring too soft from</string>
+    <string name="basics_targets_value" translatable="false">%1$s mm · %2$d %%</string>
+    <string name="basics_targets_footer">Fox recommends 15–20 % sag on the fork and about 30 % on a coil shock — the fork deliberately runs less sag. That\'s normal.</string>
 
-    <string name="basics_temp_title">Temperatur</string>
-    <string name="basics_temp_setup">In Setup stellst du die Fahrtemperatur ein (Basis 20 °C). Luftdruck und Reifen zeigen dann den Fülldruck bei 20 °C, mit dem du bei dieser Temperatur auf den Zielwert kommst — wer draußen pumpt, nimmt den Zielwert aus dem Hinweis. Die Klicks folgen dem Öl: kalt = weiter aufgedreht, warm = weiter zugedreht.</string>
-    <string name="basics_temp_bullet_1">Kaltes Öl dämpft stärker — Winter/Sommer trennen 1–3 Klicks</string>
-    <string name="basics_temp_bullet_2">Luftfeder: pro 10 °C kälter rund 4 % weniger Druck — bei 110 psi sind 20 → 0 °C ca. 8 psi</string>
-    <string name="basics_temp_bullet_3">Stahlfeder hinten bleibt konstant</string>
-    <string name="basics_temp_bullet_4">1,8 bar bei 20 °C sind bei 0 °C noch ca. 1,6 bar</string>
-    <string name="basics_temp_footer">Reifen- und Gabeldruck bei Fahrtemperatur prüfen, nicht in der warmen Werkstatt. Nie am kalten Rad beurteilen.</string>
+    <string name="basics_temp_title">Temperature</string>
+    <string name="basics_temp_setup">In Setup you set the riding temperature (base 20 °C). Air pressure and tires then show the fill pressure at 20 °C that reaches the target at that temperature — if you pump up outside, take the target from the hint. Clicks follow the oil: cold = opened further, warm = closed further.</string>
+    <string name="basics_temp_bullet_1">Cold oil damps more — winter and summer are 1–3 clicks apart</string>
+    <string name="basics_temp_bullet_2">Air spring: about 4 % less pressure per 10 °C colder — at 110 psi, 20 → 0 °C is about 8 psi</string>
+    <string name="basics_temp_bullet_3">A rear coil spring stays constant</string>
+    <string name="basics_temp_bullet_4">1.8 bar at 20 °C is only about 1.6 bar at 0 °C</string>
+    <string name="basics_temp_footer">Check tire and fork pressure at riding temperature, not in the warm workshop. Never judge on a cold bike.</string>
 
-    <string name="basics_compression_title">Was die Druckstufe nicht kann</string>
-    <string name="basics_compression_body">Durchschläge verhindern. Dafür sind vorne Volumenspacer zuständig (bei korrektem Sag), hinten beim Coil-Dämpfer die Federrate — Vorspannung ist nur Sag-Feinjustage. HSC zudrehen macht das Fahrwerk an Kanten härter, ersetzt aber keine Progression.</string>
+    <string name="basics_compression_title">What compression damping can\'t do</string>
+    <string name="basics_compression_body">Prevent bottoming out. That\'s the job of volume spacers up front (with correct sag) and, on a coil shock, the spring rate — preload only fine-tunes sag. Closing HSC makes the suspension harsher on edges but doesn\'t replace progression.</string>
 
     <!-- Bike-specific factory spec (Mondraker Level RR, see BikeProfiles.levelRr). -->
-    <string name="basics_factory_title">Serie ab Werk</string>
-    <string name="basics_factory_row_1_label">Federrate hinten</string>
-    <string name="basics_factory_row_1_value">500 lbs (Gr. L/XL)</string>
-    <string name="basics_factory_row_2_label">Dämpfer</string>
-    <string name="basics_factory_row_2_value">DHX2 · 205×65</string>
-    <string name="basics_factory_row_3_label">Gabel</string>
-    <string name="basics_factory_row_3_value">38 Factory GRIP X2 · 180 mm</string>
-    <string name="basics_factory_row_4_label">Volumenspacer</string>
-    <string name="basics_factory_row_4_value">1 verbaut (3 beigelegt)</string>
-    <string name="basics_factory_row_5_label">Sattelstütze</string>
-    <string name="basics_factory_row_5_value">ONOFF Pija · 210 mm</string>
-    <string name="basics_factory_row_6_label">Laufräder</string>
-    <string name="basics_factory_row_6_value">Mullet 29 / 27,5</string>
-    <string name="basics_factory_footer">Die Werksklicks deiner Einheit stehen nicht im Datenblatt. Die 4-stellige ID am Gabelholm bzw. Dämpfer auf ridefox.com eingeben — und hier eintragen, bevor du etwas verstellst.</string>
+    <string name="basics_factory_title">Stock spec</string>
+    <string name="basics_factory_row_1_label">Rear spring rate</string>
+    <string name="basics_factory_row_1_value">500 lbs (size L/XL)</string>
+    <string name="basics_factory_row_2_label">Shock</string>
+    <string name="basics_factory_row_2_value" translatable="false">DHX2 · 205×65</string>
+    <string name="basics_factory_row_3_label">Fork</string>
+    <string name="basics_factory_row_3_value" translatable="false">38 Factory GRIP X2 · 180 mm</string>
+    <string name="basics_factory_row_4_label">Volume spacers</string>
+    <string name="basics_factory_row_4_value">1 installed (3 included)</string>
+    <string name="basics_factory_row_5_label">Dropper post</string>
+    <string name="basics_factory_row_5_value" translatable="false">ONOFF Pija · 210 mm</string>
+    <string name="basics_factory_row_6_label">Wheels</string>
+    <string name="basics_factory_row_6_value">Mullet 29 / 27.5</string>
+    <string name="basics_factory_footer">The factory clicks for your unit aren\'t in the spec sheet. Enter the 4-digit ID on the fork leg or shock at ridefox.com — and note them here before you change anything.</string>
 
-    <string name="basics_ranges_title">Einstellbereiche</string>
-    <string name="basics_ranges_preload_label">Dämpfer Vorspannung</string>
-    <string name="basics_ranges_post_label">Sattelstütze</string>
-    <string name="range_preload_fox">ab spielfrei, max. 2 Umdrehungen</string>
-    <string name="range_preload_generic">laut Hersteller</string>
-    <string name="range_post_onoff">280–300 psi</string>
-    <string name="basics_ranges_footer">Klick-Anzahlen laut Herstellerhandbuch — am eigenen Rad gegenprüfen.</string>
+    <string name="basics_ranges_title">Adjustment ranges</string>
+    <string name="basics_ranges_preload_label">Shock preload</string>
+    <string name="basics_ranges_post_label">Dropper post</string>
+    <string name="range_preload_fox">from no play, max 2 turns</string>
+    <string name="range_preload_generic">per manufacturer</string>
+    <string name="range_post_onoff" translatable="false">280–300 psi</string>
+    <string name="basics_ranges_footer">Click counts from the manufacturer\'s manual — check them on your own bike.</string>
 
     <!-- Component picker. -->
-    <string name="picker_title_fork">Gabel wählen</string>
-    <string name="picker_title_shock">Dämpfer wählen</string>
-    <string name="picker_close">Schließen</string>
-    <string name="picker_travel">%1$d mm Federweg</string>
-    <string name="picker_stroke">%1$d×%2$d mm</string>
-    <string name="picker_clicks_summary">LSC %1$d · HSC %2$s · Zugstufe %3$s</string>
-    <string name="picker_none">–</string>
-    <string name="picker_split_rebound">LSR %1$d / HSR %2$d</string>
-    <string name="picker_has_chart">Druck und Zugstufe aus der Herstellertabelle</string>
-    <string name="picker_has_lever">mit Kletterhebel</string>
-    <string name="picker_custom_title">Eigenes Modell</string>
-    <string name="picker_custom_name_label">Bezeichnung</string>
-    <string name="picker_custom_name_placeholder">z. B. Öhlins RXF38</string>
-    <string name="picker_custom_travel_fork">Federweg</string>
-    <string name="picker_custom_stroke_shock">Hub</string>
-    <string name="picker_custom_eye_to_eye_shock">Einbaulänge</string>
-    <string name="picker_custom_lsc_max">LSC-Klicks (max.)</string>
-    <string name="picker_custom_hsc_max">HSC-Klicks (max.)</string>
-    <string name="picker_custom_hsc_available">HSC vorhanden</string>
-    <string name="picker_custom_rebound_split">Getrennte LSR/HSR</string>
-    <string name="picker_custom_rebound_max">Zugstufe-Klicks (max., LSR wenn getrennt)</string>
-    <string name="picker_custom_hsr_max">HSR-Klicks (max.)</string>
-    <string name="picker_custom_lever">Kletterhebel vorhanden</string>
-    <string name="picker_custom_psi_baseline">Startdruck (vom Aufkleber)</string>
-    <string name="picker_custom_rate_baseline">Verbaute Feder</string>
-    <string name="picker_custom_apply">Übernehmen</string>
-    <string name="picker_custom_no_weight_scaling">Für eigene Modelle gibt es keine Herstellertabelle in der App — Startdruck vom Aufkleber am Casting übernehmen.</string>
-    <string name="picker_yes">Ja</string>
-    <string name="picker_no">Nein</string>
+    <string name="picker_title_fork">Choose fork</string>
+    <string name="picker_title_shock">Choose shock</string>
+    <string name="picker_close">Close</string>
+    <string name="picker_travel">%1$d mm travel</string>
+    <string name="picker_stroke" translatable="false">%1$d×%2$d mm</string>
+    <string name="picker_clicks_summary">LSC %1$d · HSC %2$s · rebound %3$s</string>
+    <string name="picker_none" translatable="false">–</string>
+    <string name="picker_split_rebound" translatable="false">LSR %1$d / HSR %2$d</string>
+    <string name="picker_has_chart">Pressure and rebound from the manufacturer chart</string>
+    <string name="picker_has_lever">with climb lever</string>
+    <string name="picker_custom_title">Custom model</string>
+    <string name="picker_custom_name_label">Name</string>
+    <string name="picker_custom_name_placeholder">e.g. Öhlins RXF38</string>
+    <string name="picker_custom_travel_fork">Travel</string>
+    <string name="picker_custom_stroke_shock">Stroke</string>
+    <string name="picker_custom_eye_to_eye_shock">Eye-to-eye length</string>
+    <string name="picker_custom_lsc_max">LSC clicks (max)</string>
+    <string name="picker_custom_hsc_max">HSC clicks (max)</string>
+    <string name="picker_custom_hsc_available">Has HSC</string>
+    <string name="picker_custom_rebound_split">Separate LSR/HSR</string>
+    <string name="picker_custom_rebound_max">Rebound clicks (max, LSR if separate)</string>
+    <string name="picker_custom_hsr_max">HSR clicks (max)</string>
+    <string name="picker_custom_lever">Has climb lever</string>
+    <string name="picker_custom_psi_baseline">Starting pressure (from sticker)</string>
+    <string name="picker_custom_rate_baseline">Installed spring</string>
+    <string name="picker_custom_apply">Apply</string>
+    <string name="picker_custom_no_weight_scaling">Custom models have no manufacturer chart in the app — take the starting pressure from the sticker on the lower leg.</string>
+    <string name="picker_yes">Yes</string>
+    <string name="picker_no">No</string>
 </resources>

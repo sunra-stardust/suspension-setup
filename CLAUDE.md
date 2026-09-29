@@ -21,7 +21,7 @@ So:
 ## Rules
 
 1. **Manufacturer data** (pressures, clicks, charts, adjusters, model years) only from verified primary sources — skill **`catalog-data`**. A wrong number is worse than a missing one.
-2. **UI text** lives in `res/values/strings.xml`; damping controls use rotation vocabulary, never +/− — skill **`ui-text`**.
+2. **UI text** lives in `res/values/strings.xml` (English, default) and `res/values-de/strings.xml` (German) — every string in both; damping controls use rotation vocabulary, never +/− — skill **`ui-text`**.
 3. **Stored data is rollback-safe:** only add keys/fields; never rename or delete stored keys without a migration and a test (an older release must still read what a newer one wrote).
 4. **Logic change ⇒ unit test. New screen or flow ⇒ extend `AppSmokeTest`.** Reproduce a bug as a failing test first.
 5. **Two flavors:** `github` (sideload, self-updater, INTERNET + REQUEST_INSTALL_PACKAGES) and `play` (no self-update code or permissions — Google Play policy). Flavor-specific code goes in `src/github` / `src/play` behind `update/Distribution`.

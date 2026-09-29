@@ -1,6 +1,7 @@
 package dev.suspension.app
 
 import android.content.Context
+import android.content.res.Configuration
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.hasScrollAction
 import androidx.compose.ui.test.hasText
@@ -13,14 +14,18 @@ import androidx.compose.ui.test.onFirst
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.test.core.app.ActivityScenario
 import androidx.test.core.app.ApplicationProvider
+import dev.suspension.app.data.AppLanguage
+import dev.suspension.app.data.LanguageStore
 import dev.suspension.app.safety.CrashGuard
 import dev.suspension.app.update.UpdatePolicy
+import org.junit.Assert.assertEquals
 import org.junit.BeforeClass
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
+import java.util.Locale
 
 /**
  * Starts the real app (JVM, Robolectric) and walks every screen. Runs on every push, so a
@@ -59,6 +64,53 @@ class AppSmokeTest {
         @BeforeClass
         fun noNetwork() {
             UpdatePolicy.autoCheckEnabled = false
+        }
+    }
+}
+
+/** English by default; the language choice on Basics switches the whole UI and is remembered. */
+@RunWith(RobolectricTestRunner::class)
+@Config(sdk = [35])
+class LanguageTest {
+
+    @get:Rule
+    val compose = createEmptyComposeRule()
+
+    private val context: Context get() = ApplicationProvider.getApplicationContext()
+
+    private fun german(id: Int): String {
+        val config = Configuration(context.resources.configuration).apply { setLocale(Locale.GERMAN) }
+        return context.createConfigurationContext(config).getString(id)
+    }
+
+    private fun english(id: Int): String {
+        val config = Configuration(context.resources.configuration).apply { setLocale(Locale.ENGLISH) }
+        return context.createConfigurationContext(config).getString(id)
+    }
+
+    @Test
+    fun `stored German choice starts in German`() {
+        UpdatePolicy.autoCheckEnabled = false
+        LanguageStore.set(context, AppLanguage.GERMAN)
+        ActivityScenario.launch(MainActivity::class.java).use {
+            compose.onNodeWithText(german(R.string.group_conditions)).assertIsDisplayed()
+        }
+    }
+
+    @Test
+    fun `choosing Deutsch on Basics switches the UI to German`() {
+        UpdatePolicy.autoCheckEnabled = false
+        ActivityScenario.launch(MainActivity::class.java).use {
+            compose.onNodeWithText(english(R.string.group_conditions)).assertIsDisplayed()
+
+            compose.onNodeWithText(english(R.string.tab_basics)).performClick()
+            compose.onNode(hasScrollAction()).performScrollToNode(hasText(english(R.string.language_german)))
+            compose.onNodeWithText(english(R.string.language_german)).performClick()
+            compose.waitForIdle()
+
+            assertEquals(AppLanguage.GERMAN, LanguageStore.get(context))
+            compose.onNode(hasScrollAction()).performScrollToNode(hasText(german(R.string.basics_language_title)))
+            compose.onNodeWithText(german(R.string.basics_language_title)).assertIsDisplayed()
         }
     }
 }

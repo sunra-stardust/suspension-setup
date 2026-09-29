@@ -109,7 +109,7 @@ fun StepperRow(
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier.padding(end = 12.dp).align(Alignment.CenterVertically),
         ) {
-            StepButton(symbol = "−", contentDescription = "$label verringern", onClick = onDecrement, colors = colors)
+            StepButton(symbol = "−", contentDescription = stringResource(R.string.stepper_decrease, label), onClick = onDecrement, colors = colors)
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier
@@ -122,7 +122,7 @@ fun StepperRow(
                     Text(text = unit, style = type.valueUnit, color = colors.dim)
                 }
             }
-            StepButton(symbol = "+", contentDescription = "$label erhöhen", onClick = onIncrement, colors = colors)
+            StepButton(symbol = "+", contentDescription = stringResource(R.string.stepper_increase, label), onClick = onIncrement, colors = colors)
         }
     }
 }
@@ -266,6 +266,7 @@ fun ToggleRow(
 ) {
     val colors = AppTheme.colors
     val type = AppTheme.type
+    val changeLabel = stringResource(R.string.toggle_change, label)
     StripedRow(stripe) {
         Box(
             modifier = Modifier
@@ -282,7 +283,7 @@ fun ToggleRow(
                 .widthIn(min = 72.dp)
                 .clip(RoundedCornerShape(8.dp))
                 .background(colors.hit)
-                .clickable(onClickLabel = "$label wechseln", onClick = onToggle)
+                .clickable(onClickLabel = changeLabel, onClick = onToggle)
                 .semantics { contentDescription = "$label: $valueText" }
                 .padding(horizontal = 12.dp),
         ) {

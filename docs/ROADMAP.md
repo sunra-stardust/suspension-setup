@@ -20,8 +20,8 @@ plus the rider's own, e.g. "Nasse Wurzeln") the app holds a full set of values.
 | # | Content | Status |
 |---|---|---|
 | 1 | **Infrastructure:** agent setup (`CLAUDE.md`, skills), push = release pipeline, OTA updater, rollback workflow, crash-loop safe mode, Robolectric UI + emulator upgrade tests, `github`/`play` flavors | ✅ shipped |
-| 2 | **Languages:** English default (`values/`), German (`values-de/`), in-app language choice, test: every key in both languages | ▶ next |
-| 3 | **Data model:** catalog as data files (model year, source, retrieval date per value); bikes + Vorlagen (create/edit/copy); manufacturer recommendation preselected + deviation display; JSON storage (backup-ready, additive/rollback-safe) with migration of today's values | |
+| 2 | **Languages:** English default (`values/`), German (`values-de/`), in-app language choice, test: every key in both languages | ✅ shipped |
+| 3 | **Data model:** catalog as data files (model year, source, retrieval date per value); bikes + Vorlagen (create/edit/copy); manufacturer recommendation preselected + deviation display; JSON storage (backup-ready, additive/rollback-safe) with migration of today's values | ▶ next |
 | 4 | **Research routine:** weekly cloud routine — finds new models/model years, reads manufacturer documents, second independent verification pass, conflicts → `data-conflict` issue instead of shipping | |
 | later | Backup/restore · AI assistant · Google Play release (store listing, privacy policy, Play App Signing, AAB of the `play` flavor) | |
 
@@ -33,4 +33,5 @@ plus the rider's own, e.g. "Nasse Wurzeln") the app holds a full set of values.
 - **Rollback = republish old app code as a new version** (Android refuses downgrades). Requires stored data to change additively only.
 - **Safe mode** after 2 crashes within 10 min: update check without the normal UI.
 - **Tests gate every release:** unit + Robolectric UI tests (both flavors), emulator upgrade test from the previous release, fresh-install test.
+- **Languages:** English default, German translation; device language unless the rider picks one on Basics (stored in SharedPreferences, read synchronously at activity start). Release notes stay German commit subjects.
 - **Manufacturer data only from primary sources for the right model year**; conflicts go to the owner, never guessed.

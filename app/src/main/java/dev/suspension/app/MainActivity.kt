@@ -1,5 +1,6 @@
 package dev.suspension.app
 
+import android.content.Context
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -24,11 +25,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.viewmodel.compose.viewModel
+import dev.suspension.app.data.AppLanguage
 import dev.suspension.app.data.BikeProfiles
 import dev.suspension.app.data.CUSTOM_ID
 import dev.suspension.app.data.ComponentCatalog
 import dev.suspension.app.data.DEFAULT_TEMP_C
 import dev.suspension.app.data.DEFAULT_WEIGHT_KG
+import dev.suspension.app.data.LanguageStore
 import dev.suspension.app.data.Scenario
 import dev.suspension.app.data.SettingsRepository
 import dev.suspension.app.data.ValueRepository
@@ -51,6 +54,11 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
+    // The in-app language choice overrides the device language for everything this activity shows.
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(LanguageStore.wrap(newBase))
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -75,7 +83,10 @@ class MainActivity : ComponentActivity() {
                                 crashGuard.clear()
                             }
                             LaunchedEffect(updates) { updates?.autoCheck() }
-                            AppRoot(updates)
+                            AppRoot(updates, onLanguageChange = { language ->
+                                LanguageStore.set(this@MainActivity, language)
+                                recreate()
+                            })
                         }
                     }
                 }
@@ -87,7 +98,7 @@ class MainActivity : ComponentActivity() {
 private enum class PickerOverlay { NONE, FORK, SHOCK }
 
 @Composable
-private fun AppRoot(updates: UpdateViewModel?) {
+private fun AppRoot(updates: UpdateViewModel?, onLanguageChange: (AppLanguage) -> Unit) {
     val context = LocalContext.current
     val bike = BikeProfiles.current
     val repository = remember { ValueRepository(context) }
@@ -157,6 +168,8 @@ private fun AppRoot(updates: UpdateViewModel?) {
                         fork = fork,
                         shock = shock,
                         updates = updates,
+                        language = remember { LanguageStore.get(context) },
+                        onLanguageChange = onLanguageChange,
                         onResetDone = { selectedTab = AppTab.SETUP.ordinal },
                     )
                 }

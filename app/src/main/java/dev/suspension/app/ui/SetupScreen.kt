@@ -42,6 +42,7 @@ import dev.suspension.app.ui.components.RowDivider
 import dev.suspension.app.ui.components.ScenarioTabs
 import dev.suspension.app.ui.components.StepperRow
 import dev.suspension.app.ui.components.ToggleRow
+import dev.suspension.app.ui.format.currentLocale
 import dev.suspension.app.ui.format.formatPercent
 import dev.suspension.app.ui.format.formatStepValue
 import dev.suspension.app.ui.theme.AppTheme
@@ -210,6 +211,7 @@ private fun ParamRow(repository: ValueRepository, row: RowSpec, scenario: Scenar
     val label = stringResource(row.labelResId)
     val hint = row.hint?.resolve()
     val stripeColor = row.stripe.color(colors)
+    val locale = currentLocale()
 
     when (row) {
         is RowSpec.Stepper -> {
@@ -228,7 +230,7 @@ private fun ParamRow(repository: ValueRepository, row: RowSpec, scenario: Scenar
                     stripe = stripeColor,
                     label = label,
                     hint = hint,
-                    valueText = formatStepValue(value, row.step),
+                    valueText = formatStepValue(value, row.step, locale),
                     isOpen = value > 0.0,
                     isRebound = row.stripe == Stripe.REB,
                     atZero = value <= 0.0,
@@ -250,7 +252,7 @@ private fun ParamRow(repository: ValueRepository, row: RowSpec, scenario: Scenar
 
             val unit = row.unitResId?.let { stringResource(it) }
             val displayHint = if (row.derivedPercentDivisor != null) {
-                stringResource(R.string.sag_percent_hint, formatPercent(value, row.derivedPercentDivisor))
+                stringResource(R.string.sag_percent_hint, formatPercent(value, row.derivedPercentDivisor, locale))
             } else {
                 hint
             }
@@ -259,7 +261,7 @@ private fun ParamRow(repository: ValueRepository, row: RowSpec, scenario: Scenar
                 label = label,
                 unit = unit,
                 hint = displayHint,
-                valueText = formatStepValue(value, row.step),
+                valueText = formatStepValue(value, row.step, locale),
                 onDecrement = { scope.launch { repository.setStepperValue(row, scenario, value - row.step) } },
                 onIncrement = { scope.launch { repository.setStepperValue(row, scenario, value + row.step) } },
             )
@@ -272,7 +274,7 @@ private fun ParamRow(repository: ValueRepository, row: RowSpec, scenario: Scenar
                 stripe = stripeColor,
                 label = label,
                 hint = hint,
-                valueText = value,
+                valueText = row.optionLabels[value]?.let { stringResource(it) } ?: value,
                 onToggle = {
                     val currentIndex = row.options.indexOf(value).coerceAtLeast(0)
                     val next = row.options[(currentIndex + 1) % row.options.size]

@@ -10,7 +10,9 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
@@ -22,8 +24,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.unit.dp
 import dev.suspension.app.R
+import dev.suspension.app.data.AppLanguage
 import dev.suspension.app.data.BikeProfile
 import dev.suspension.app.data.ForkModel
 import dev.suspension.app.data.ReboundMode
@@ -35,6 +41,7 @@ import dev.suspension.app.ui.components.GroupCard
 import dev.suspension.app.ui.components.RotationIcon
 import dev.suspension.app.ui.components.RowDivider
 import dev.suspension.app.ui.components.TwoColumnRow
+import dev.suspension.app.ui.format.currentLocale
 import dev.suspension.app.ui.format.formatStepValue
 import dev.suspension.app.ui.theme.AppTheme
 import dev.suspension.app.update.UpdateViewModel
@@ -58,6 +65,8 @@ fun BasicsScreen(
     fork: ForkModel,
     shock: ShockModel,
     updates: UpdateViewModel?,
+    language: AppLanguage,
+    onLanguageChange: (AppLanguage) -> Unit,
     onResetDone: () -> Unit,
 ) {
     val colors = AppTheme.colors
@@ -122,7 +131,7 @@ fun BasicsScreen(
                         val mm = roundToStep(percent / 100.0 * travel, step)
                         TwoColumnRow(
                             stringResource(labelRes),
-                            stringResource(R.string.basics_targets_value, formatStepValue(mm, step), percent),
+                            stringResource(R.string.basics_targets_value, formatStepValue(mm, step, currentLocale()), percent),
                         )
                     }
                 }
@@ -202,6 +211,20 @@ fun BasicsScreen(
             }
         }
         item {
+            BasicsCard(stringResource(R.string.basics_language_title)) {
+                GroupCard {
+                    AppLanguage.entries.forEachIndexed { index, option ->
+                        if (index > 0) RowDivider()
+                        LanguageRow(
+                            label = stringResource(option.labelResId),
+                            selected = option == language,
+                            onClick = { if (option != language) onLanguageChange(option) },
+                        )
+                    }
+                }
+            }
+        }
+        item {
             BasicsCard(stringResource(R.string.basics_app_title)) {
                 AppUpdateSection(updates)
             }
@@ -241,6 +264,33 @@ private fun BasicsCard(title: String, content: @Composable ColumnScope.() -> Uni
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
         Text(text = title, style = type.groupHeading, color = colors.ink)
         Column(verticalArrangement = Arrangement.spacedBy(4.dp), content = content)
+    }
+}
+
+private val AppLanguage.labelResId: Int
+    get() = when (this) {
+        AppLanguage.SYSTEM -> R.string.language_system
+        AppLanguage.ENGLISH -> R.string.language_english
+        AppLanguage.GERMAN -> R.string.language_german
+    }
+
+/** One selectable language; the chosen one carries a check mark. */
+@Composable
+private fun LanguageRow(label: String, selected: Boolean, onClick: () -> Unit) {
+    val colors = AppTheme.colors
+    val type = AppTheme.type
+    val selectedText = stringResource(R.string.language_selected)
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier
+            .fillMaxWidth()
+            .heightIn(min = 44.dp)
+            .selectable(selected = selected, role = Role.RadioButton, onClick = onClick)
+            .semantics { if (selected) stateDescription = selectedText }
+            .padding(horizontal = 12.dp, vertical = 10.dp),
+    ) {
+        Text(text = label, style = type.rowLabel, color = colors.ink, modifier = Modifier.weight(1f))
+        if (selected) Text(text = "✓", style = type.rowLabel, color = colors.ink)
     }
 }
 

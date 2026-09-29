@@ -2,7 +2,6 @@ package dev.suspension.app.data
 
 import androidx.compose.ui.graphics.Color
 import dev.suspension.app.R
-import dev.suspension.app.ui.format.formatStepValue
 import dev.suspension.app.ui.theme.AppColors
 import kotlin.math.roundToInt
 
@@ -63,6 +62,8 @@ sealed class RowSpec {
         val options: List<String>,
         val defaults: List<String>,
         override val hint: TextSpec?,
+        /** Display label per stored option; options without one (e.g. "High"/"Low") show as stored. */
+        val optionLabels: Map<String, Int> = emptyMap(),
     ) : RowSpec()
 }
 
@@ -320,6 +321,8 @@ object ScenarioData {
                     RowSpec.Toggle(
                         id = "s_cs", labelResId = R.string.label_s_cs, stripe = Stripe.SPRING,
                         options = listOf("Offen", "Firm"),
+                        // Stored values stay German (rollback-safe); only the label is translated.
+                        optionLabels = mapOf("Offen" to R.string.option_climb_open, "Firm" to R.string.option_climb_firm),
                         defaults = listOf("Offen", "Offen", "Offen", "Offen", "Firm"),
                         hint = TextSpec.Res(R.string.hint_s_cs),
                     ),
@@ -342,13 +345,13 @@ object ScenarioData {
         val frontHint = if (atBaseline) {
             null
         } else {
-            TextSpec.Format(R.string.hint_t_temp, listOf(tempC, formatStepValue(TIRE_FRONT_BAR.first(), 0.05)))
+            TextSpec.Format(R.string.hint_t_temp, listOf(tempC, TextSpec.Decimal(TIRE_FRONT_BAR.first(), 0.05)))
         }
         val rearHint = when {
             atBaseline -> bike.rearTyreHintResId?.let { TextSpec.Res(it) }
             bike.rearTyreHintResId != null ->
-                TextSpec.Format(R.string.hint_t_r_temp, listOf(tempC, formatStepValue(TIRE_REAR_BAR.first(), 0.05)))
-            else -> TextSpec.Format(R.string.hint_t_temp, listOf(tempC, formatStepValue(TIRE_REAR_BAR.first(), 0.05)))
+                TextSpec.Format(R.string.hint_t_r_temp, listOf(tempC, TextSpec.Decimal(TIRE_REAR_BAR.first(), 0.05)))
+            else -> TextSpec.Format(R.string.hint_t_temp, listOf(tempC, TextSpec.Decimal(TIRE_REAR_BAR.first(), 0.05)))
         }
 
         return Group(
