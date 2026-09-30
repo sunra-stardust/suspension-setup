@@ -1,0 +1,38 @@
+# Risk class R3 (docs/HARNESS.md §3): changes here need the owner's merge.
+# Agents: commit with [owner-review] as the last body line, push the claude/* branch, open a PR
+# labelled needs-owner. Read by .claude/hooks/guard.py (asks before editing) and, from step 4,
+# by CI. Glob syntax: ** = any directories, * = anything except "/".
+
+# Stored data (rule 3: rollback-safe)
+app/src/main/java/dev/suspension/app/data/Garage.kt
+app/src/main/java/dev/suspension/app/data/GarageRepository.kt
+app/src/main/java/dev/suspension/app/data/LegacyStorage.kt
+app/src/main/java/dev/suspension/app/data/LegacyStores.kt
+app/src/main/java/dev/suspension/app/data/AppLanguage.kt
+
+# Update path, crash safety, flavors, permissions (rules 5 and 6)
+app/src/main/java/dev/suspension/app/update/**
+app/src/main/java/dev/suspension/app/safety/**
+app/src/github/**
+app/src/play/**
+**/AndroidManifest.xml
+
+# Build and release
+build.gradle.kts
+settings.gradle.kts
+app/build.gradle.kts
+gradle/**
+gradle.properties
+gradlew
+gradlew.bat
+version.properties
+.github/**
+scripts/device-smoke.sh
+scripts/cloud-setup.sh
+
+# The harness itself
+CLAUDE.md
+docs/HARNESS.md
+.claude/settings.json
+.claude/settings.local.json
+.claude/hooks/**

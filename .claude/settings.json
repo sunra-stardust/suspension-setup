@@ -10,6 +10,28 @@
           }
         ]
       }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/guard.py\" bash",
+            "timeout": 30
+          }
+        ]
+      },
+      {
+        "matcher": "Edit|Write|MultiEdit|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/guard.py\" paths",
+            "timeout": 30
+          }
+        ]
+      }
     ]
   },
   "permissions": {
@@ -27,7 +49,18 @@
       "Bash(gh run:*)",
       "Bash(gh release view:*)",
       "Bash(gh release list:*)",
-      "Bash(gh issue:*)"
+      "Bash(gh issue:*)",
+      "Bash(python3 scripts/research.py:*)",
+      "Bash(python3 scripts/test_harness.py:*)"
+    ],
+    "deny": [
+      "Bash(git push origin main:*)",
+      "Bash(git push --force origin:*)",
+      "Bash(git push -f:*)",
+      "Bash(git tag -d:*)",
+      "Bash(gh release delete:*)",
+      "Bash(gh secret:*)",
+      "Bash(gh repo delete:*)"
     ]
   }
 }

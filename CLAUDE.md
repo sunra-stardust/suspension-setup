@@ -13,7 +13,7 @@ phone offers the update. `claude/*` branches are fast-forwarded onto `main` and 
 So:
 
 - `./gradlew verify` must be green **before** you push (unit + Robolectric UI tests, both flavors, debug builds).
-- Cloud sessions push their `claude/<topic>` branch (the only branch they may push); locally, push `main` or a `claude/` branch.
+- Push only your `claude/<topic>` branch — in the cloud and locally; `ship.yml` moves `main`. Agents never push `main` or tags.
 - After pushing, check the run (`gh run list --workflow ship.yml --limit 3`) and report the outcome with the version number.
 - Commit subjects become the release notes shown in the app: write them as short German change notes ("Dämpfer: HSC-Regler ergänzt").
 - Pipeline details, failed runs, rollback: skill **`ship`**.
@@ -30,12 +30,17 @@ So:
 6. No new permissions, network use, analytics or accounts unless the owner asks.
 7. Never force-push `main`, delete tags/releases, or touch the signing secrets.
 
+Rules 6–7, "verify before push" and the protected paths are enforced by the PreToolUse hook
+`.claude/hooks/guard.py` (tests: `python3 scripts/test_harness.py`). A denied command comes with
+the reason — follow it, don't work around it. Protected paths: `.claude/hooks/protected-paths.txt`.
+
 ## Commands
 
 | | |
 |---|---|
 | Verify (Linux/cloud) | `./gradlew verify` |
 | Verify (Windows) | `.\scripts\verify.ps1` (sets Android Studio's JBR 21; the Bash tool is broken on this machine — use PowerShell) |
+| Harness hook tests | `python3 scripts/test_harness.py` |
 | Single test class | `./gradlew :app:testGithubDebugUnitTest --tests '*ScenarioDataTest'` |
 | Ship status | `gh run list --workflow ship.yml --limit 3` |
 | Roll back | `gh workflow run rollback.yml -f version=<x.y.z>` (details: skill `ship`) |
