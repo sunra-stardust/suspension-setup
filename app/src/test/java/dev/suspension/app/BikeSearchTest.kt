@@ -2,11 +2,13 @@ package dev.suspension.app
 
 import dev.suspension.app.data.BikeModel
 import dev.suspension.app.data.StockPart
+import dev.suspension.app.data.ComponentCatalog
+import dev.suspension.app.ui.groupByMaker
 import dev.suspension.app.ui.searchBikes
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
-/** Phase 5.2: the bike picker's search and order. */
+/** Phase 5.2/5.3: search and order in the bike and component pickers. */
 class BikeSearchTest {
 
     private fun bike(maker: String, model: String, trim: String, year: Int) = BikeModel(
@@ -35,5 +37,17 @@ class BikeSearchTest {
             listOf("Cube Stereo ONE77 2026", "Mondraker Dune R 2026", "Mondraker Level RR 2026", "Mondraker Level RR 2025"),
             searchBikes(bikes, "").map { it.displayName },
         )
+    }
+
+    @Test
+    fun `component search groups by maker and matches maker or model`() {
+        val all = groupByMaker(ComponentCatalog.shocks, "", { it.maker }, { it.displayName })
+        assertEquals(listOf("Fox", "RockShox"), all.map { it.first })
+        assertEquals(ComponentCatalog.shocks.size, all.sumOf { it.second.size })
+
+        val rockShox = groupByMaker(ComponentCatalog.shocks, "rockshox", { it.maker }, { it.displayName })
+        assertEquals(listOf("RockShox"), rockShox.map { it.first })
+        assertEquals(listOf("Fox DHX2 Factory"), groupByMaker(ComponentCatalog.shocks, "dhx2 factory", { it.maker }, { it.displayName }).flatMap { g -> g.second.map { it.displayName } })
+        assertEquals(emptyList<Any>(), groupByMaker(ComponentCatalog.shocks, "Öhlins", { it.maker }, { it.displayName }))
     }
 }

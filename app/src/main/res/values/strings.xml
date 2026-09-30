@@ -384,6 +384,9 @@
         <item quantity="one">Model year %1$s</item>
         <item quantity="other">Model years %1$s</item>
     </plurals>
+    <string name="picker_search_label">Search maker or model</string>
+    <string name="picker_search_placeholder">e.g. Fox or DHX2</string>
+    <string name="picker_search_no_match">Not in the catalog. Enter it as your own model below.</string>
     <string name="picker_custom_title">Custom model</string>
     <string name="picker_custom_name_label">Name</string>
     <string name="picker_custom_name_placeholder">e.g. Öhlins RXF38</string>

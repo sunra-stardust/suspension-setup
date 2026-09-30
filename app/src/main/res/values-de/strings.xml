@@ -320,6 +320,9 @@
         <item quantity="one">Modelljahr %1$s</item>
         <item quantity="other">Modelljahre %1$s</item>
     </plurals>
+    <string name="picker_search_label">Hersteller oder Modell suchen</string>
+    <string name="picker_search_placeholder">z. B. Fox oder DHX2</string>
+    <string name="picker_search_no_match">Nicht im Katalog. Unten als eigenes Modell eingeben.</string>
     <string name="picker_custom_title">Eigenes Modell</string>
     <string name="picker_custom_name_label">Bezeichnung</string>
     <string name="picker_custom_name_placeholder">z. B. Öhlins RXF38</string>

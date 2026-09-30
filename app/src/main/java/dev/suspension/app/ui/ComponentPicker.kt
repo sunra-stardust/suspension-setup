@@ -19,6 +19,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -76,6 +77,47 @@ internal fun PickerScaffold(
             contentPadding = PaddingValues(bottom = 32.dp),
         ) {
             item { content() }
+        }
+    }
+}
+
+/** Catalog items whose maker or name contains [query] (case-insensitive), grouped by maker in alphabetical order. */
+internal fun <T> groupByMaker(items: List<T>, query: String, maker: (T) -> String?, name: (T) -> String): List<Pair<String, List<T>>> {
+    val q = query.trim().lowercase()
+    return items
+        .filter { q.isEmpty() || "${maker(it).orEmpty()} ${name(it)}".lowercase().contains(q) }
+        .groupBy { maker(it).orEmpty() }
+        .toList()
+        .sortedBy { it.first.lowercase() }
+}
+
+/** Search field + catalog rows grouped under maker headings; "nothing found" points to the own-model form below. */
+@Composable
+internal fun <T> ByMakerList(items: List<T>, maker: (T) -> String?, name: (T) -> String, row: @Composable (T) -> Unit) {
+    val colors = AppTheme.colors
+    val type = AppTheme.type
+    var query by rememberSaveable { mutableStateOf("") }
+    val groups = groupByMaker(items, query, maker, name)
+    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        GroupCard {
+            CustomTextField(
+                label = stringResource(R.string.picker_search_label),
+                value = query,
+                placeholder = stringResource(R.string.picker_search_placeholder),
+                onValueChange = { query = it },
+            )
+        }
+        if (groups.isEmpty()) {
+            Text(text = stringResource(R.string.picker_search_no_match), style = type.rowHint, color = colors.dim)
+        }
+        groups.forEach { (makerName, group) ->
+            if (makerName.isNotEmpty()) Text(text = makerName, style = type.groupHeading, color = colors.ink, modifier = Modifier.padding(top = 8.dp))
+            GroupCard {
+                group.forEachIndexed { index, item ->
+                    if (index > 0) RowDivider()
+                    row(item)
+                }
+            }
         }
     }
 }
@@ -187,21 +229,18 @@ fun ForkPickerOverlay(
     val type = AppTheme.type
 
     PickerScaffold(title = stringResource(R.string.picker_title_fork), onDismiss = onDismiss) {
-        GroupCard {
-            ComponentCatalog.forks.forEachIndexed { index, fork ->
-                if (index > 0) RowDivider()
-                val details = buildList {
-                    add(clickSummary(fork.lscMax, fork.hscMax, fork.reboundMode, fork.reboundMax, fork.hsrMax))
-                    if (fork.pressureChart != null) add(stringResource(R.string.picker_has_chart))
-                    modelYearsText(fork.modelYears)?.let(::add)
-                }
-                CatalogRow(
-                    name = "${fork.displayName} — ${stringResource(R.string.picker_travel, fork.travelMm)}",
-                    details = details,
-                    selected = fork.id == currentForkId,
-                    onClick = { onSelectCatalog(fork); onDismiss() },
-                )
+        ByMakerList(ComponentCatalog.forks, maker = { it.chartSource }, name = { it.displayName }) { fork ->
+            val details = buildList {
+                add(clickSummary(fork.lscMax, fork.hscMax, fork.reboundMode, fork.reboundMax, fork.hsrMax))
+                if (fork.pressureChart != null) add(stringResource(R.string.picker_has_chart))
+                modelYearsText(fork.modelYears)?.let(::add)
             }
+            CatalogRow(
+                name = "${fork.displayName} — ${stringResource(R.string.picker_travel, fork.travelMm)}",
+                details = details,
+                selected = fork.id == currentForkId,
+                onClick = { onSelectCatalog(fork); onDismiss() },
+            )
         }
 
         Column(verticalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(top = 20.dp)) {
@@ -283,21 +322,18 @@ fun ShockPickerOverlay(
     val type = AppTheme.type
 
     PickerScaffold(title = stringResource(R.string.picker_title_shock), onDismiss = onDismiss) {
-        GroupCard {
-            ComponentCatalog.shocks.forEachIndexed { index, shock ->
-                if (index > 0) RowDivider()
-                val details = buildList {
-                    add(clickSummary(shock.lscMax, shock.hscMax, shock.reboundMode, shock.reboundMax, shock.hsrMax))
-                    if (shock.hasClimbLever) add(stringResource(R.string.picker_has_lever))
-                    modelYearsText(shock.modelYears)?.let(::add)
-                }
-                CatalogRow(
-                    name = "${shock.displayName} — ${stringResource(R.string.picker_stroke, shock.eyeToEyeMm, shock.strokeMm)}",
-                    details = details,
-                    selected = shock.id == currentShockId,
-                    onClick = { onSelectCatalog(shock); onDismiss() },
-                )
+        ByMakerList(ComponentCatalog.shocks, maker = { it.maker }, name = { it.displayName }) { shock ->
+            val details = buildList {
+                add(clickSummary(shock.lscMax, shock.hscMax, shock.reboundMode, shock.reboundMax, shock.hsrMax))
+                if (shock.hasClimbLever) add(stringResource(R.string.picker_has_lever))
+                modelYearsText(shock.modelYears)?.let(::add)
             }
+            CatalogRow(
+                name = "${shock.displayName} — ${stringResource(R.string.picker_stroke, shock.eyeToEyeMm, shock.strokeMm)}",
+                details = details,
+                selected = shock.id == currentShockId,
+                onClick = { onSelectCatalog(shock); onDismiss() },
+            )
         }
 
         Column(verticalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(top = 20.dp)) {
