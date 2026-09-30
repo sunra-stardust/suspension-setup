@@ -75,7 +75,7 @@ class GarageRepository private constructor(context: Context) {
     /** Replaces the mirrored bike's parts and built-in Vorlage values with what the old storage holds. */
     private fun importLegacy(target: JSONObject, old: LegacyStores.Snapshot) {
         val bikeId = mirroredBikeId(target)
-        val profile = BikeProfiles.byId(GarageDoc.bikeJson(target, bikeId).getString("profile"))
+        val profile = BikeParts.profile(GarageJson.parse(target).bikes.first { it.id == bikeId })
         val imported = LegacyStorage.import(old.settings, old.values, profile, bikeId)
         GarageDoc.setWeight(target, imported.weightKg)
         GarageDoc.setTemp(target, imported.tempC)
@@ -113,26 +113,25 @@ class GarageRepository private constructor(context: Context) {
         val snapshot = synchronized(this) { JSONObject(doc.toString()) }
         try {
             writeFile(snapshot)
-            val fingerprint = mirror(snapshot)
-            synchronized(this) { recordFingerprint(doc, fingerprint) }
-            recordFingerprint(snapshot, fingerprint)
+            mirror(snapshot)
+            // Fingerprint and mirrored bike id belong to the live document too.
+            synchronized(this) { doc.put("legacy", JSONObject(snapshot.getJSONObject("legacy").toString())) }
             writeFile(snapshot)
         } catch (e: Exception) {
             Log.e(TAG, "Saving failed", e)
         }
     }
 
-    /** Writes the first bike in the old format; returns the old storage's fingerprint afterwards. */
-    private suspend fun mirror(target: JSONObject): String {
+    /** Writes the mirrored bike in the old format and records the old storage's fingerprint in [target]. */
+    private suspend fun mirror(target: JSONObject) {
         val garage = GarageJson.parse(target)
         val bike = garage.bikes.first { it.id == mirroredBikeId(target) }
-        val profile = BikeProfiles.byId(bike.profileId)
+        val profile = BikeParts.profile(bike)
         val written = legacy.write(
             LegacyStorage.mirrorSettings(bike, garage.weightKg, garage.tempC, profile),
             LegacyStorage.mirrorValues(bike, garage.weightKg, garage.tempC, profile),
         )
         recordFingerprint(target, written.fingerprint)
-        return written.fingerprint
     }
 
     private fun recordFingerprint(target: JSONObject, fingerprint: String) {
@@ -140,13 +139,16 @@ class GarageRepository private constructor(context: Context) {
         legacyJson.put("fingerprint", fingerprint)
     }
 
-    /** The bike the old storage mirrors: the one migrated from it (first bike). */
-    private fun mirroredBikeId(target: JSONObject): String =
-        target.optJSONObject("legacy")?.optString("bikeId")?.takeIf { it.isNotEmpty() }
-            ?: target.getJSONArray("bikes").getJSONObject(0).getString("id").also { id ->
-                val legacyJson = target.optJSONObject("legacy") ?: JSONObject().also { target.put("legacy", it) }
-                legacyJson.put("bikeId", id)
-            }
+    /** The bike the old storage mirrors: the one migrated from it, or the first bike once that one is deleted. */
+    private fun mirroredBikeId(target: JSONObject): String {
+        val bikes = target.getJSONArray("bikes")
+        val ids = (0 until bikes.length()).map { bikes.getJSONObject(it).getString("id") }
+        val legacyJson = target.optJSONObject("legacy") ?: JSONObject().also { target.put("legacy", it) }
+        val recorded = legacyJson.optString("bikeId")
+        if (recorded in ids) return recorded
+        legacyJson.put("bikeId", ids.first())
+        return ids.first()
+    }
 
     private fun readFile(): JSONObject? = try {
         // Parsed once here so a structurally broken file is treated like an unreadable one, not a crash loop.
@@ -180,6 +182,19 @@ class GarageRepository private constructor(context: Context) {
     fun resetValues(bikeId: String) = update { GarageDoc.clearEdits(it, bikeId) }
     fun selectFork(bikeId: String, forkId: String, custom: ForkModel? = null) = update { GarageDoc.selectFork(it, bikeId, forkId, custom) }
     fun selectShock(bikeId: String, shockId: String, custom: ShockModel? = null) = update { GarageDoc.selectShock(it, bikeId, shockId, custom) }
+
+    fun selectBike(bikeId: String) = update { GarageDoc.selectBike(it, bikeId) }
+    fun renameBike(bikeId: String, name: String) = update { GarageDoc.renameBike(it, bikeId, name.trim()) }
+    fun copyBike(bikeId: String, name: String) = update { GarageDoc.copyBike(it, bikeId, newId("b"), name.trim()) }
+    fun deleteBike(bikeId: String) = update { GarageDoc.deleteBike(it, bikeId) }
+
+    /** New bike on the current bike's parts; its installed spring is what the template shows in Basis. */
+    fun addBike(name: String, template: Bike, templateSpringLbs: Double) =
+        update { GarageDoc.addBike(it, newId("b"), name.trim(), template, templateSpringLbs) }
+
+    fun addVorlage(name: String, copyFromId: String) = update { GarageDoc.addVorlage(it, newId("v"), name.trim(), copyFromId) }
+    fun renameVorlage(vorlageId: String, name: String) = update { GarageDoc.renameVorlage(it, vorlageId, name.trim()) }
+    fun deleteVorlage(vorlageId: String) = update { GarageDoc.deleteVorlage(it, vorlageId) }
 
     companion object {
         const val FILE_NAME = "garage.json"

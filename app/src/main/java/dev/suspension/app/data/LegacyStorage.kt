@@ -62,6 +62,7 @@ object LegacyStorage {
             shockId = shockId,
             customFork = customFork.takeIf { hasCustomFork || forkId == CUSTOM_ID },
             customShock = customShock.takeIf { hasCustomShock || shockId == CUSTOM_ID },
+            springLbs = null,
             edits = emptyMap(),
         )
         val rows = rows(bike, profile, weight, temp)
@@ -189,6 +190,20 @@ object LegacyStorage {
 
 /** Resolves a bike's fork and shock: catalog entry, the rider's own model, or the profile's stock part. */
 object BikeParts {
+    /** The spring rate the bike shows in Basis — what a new bike created from it starts with. */
+    fun installedSpringLbs(bike: Bike, weightKg: Double, tempC: Int): Double {
+        val profile = profile(bike)
+        val row = ScenarioData.buildShockGroup(shock(bike, profile), weightKg, tempC, profile).rows
+            .filterIsInstance<RowSpec.Stepper>().first { it.id == "s_rate" }
+        return RowValues.stepper(row, bike.editsFor(Scenario.BASIS.tag)[row.id])
+    }
+
+    /** The bike's frame profile, with the bike's own installed spring where it has one. */
+    fun profile(bike: Bike): BikeProfile {
+        val base = BikeProfiles.byId(bike.profileId)
+        return bike.springLbs?.let { base.copy(stockSpringLbs = it) } ?: base
+    }
+
     fun stockFork(profile: BikeProfile): ForkModel = ComponentCatalog.forkById(profile.stockForkId) ?: ComponentCatalog.forks.first()
     fun stockShock(profile: BikeProfile): ShockModel = ComponentCatalog.shockById(profile.stockShockId) ?: ComponentCatalog.shocks.first()
 

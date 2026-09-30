@@ -40,7 +40,7 @@ import dev.suspension.app.ui.components.StepperRow
 import dev.suspension.app.ui.theme.AppTheme
 
 @Composable
-private fun PickerScaffold(
+internal fun PickerScaffold(
     title: String,
     onDismiss: () -> Unit,
     content: @Composable () -> Unit,
@@ -79,7 +79,7 @@ private fun PickerScaffold(
 }
 
 @Composable
-private fun CatalogRow(name: String, details: List<String>, selected: Boolean, onClick: () -> Unit) {
+internal fun CatalogRow(name: String, details: List<String>, selected: Boolean, onClick: () -> Unit) {
     val colors = AppTheme.colors
     val type = AppTheme.type
     Column(
@@ -95,7 +95,7 @@ private fun CatalogRow(name: String, details: List<String>, selected: Boolean, o
 }
 
 @Composable
-private fun CustomTextField(label: String, value: String, placeholder: String, onValueChange: (String) -> Unit) {
+internal fun CustomTextField(label: String, value: String, placeholder: String, onValueChange: (String) -> Unit) {
     val colors = AppTheme.colors
     val type = AppTheme.type
     Column(modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 10.dp)) {
@@ -141,7 +141,7 @@ private fun BoolToggleRow(label: String, value: Boolean, onToggle: () -> Unit) {
 }
 
 @Composable
-private fun ApplyButton(onClick: () -> Unit) {
+internal fun ApplyButton(label: String = stringResource(R.string.picker_custom_apply), onClick: () -> Unit) {
     val colors = AppTheme.colors
     Box(
         contentAlignment = Alignment.Center,
@@ -153,7 +153,7 @@ private fun ApplyButton(onClick: () -> Unit) {
             .clickable(onClick = onClick)
             .padding(vertical = 14.dp),
     ) {
-        Text(text = stringResource(R.string.picker_custom_apply), style = AppTheme.type.rowLabel, color = colors.ink)
+        Text(text = label, style = AppTheme.type.rowLabel, color = colors.ink)
     }
 }
 

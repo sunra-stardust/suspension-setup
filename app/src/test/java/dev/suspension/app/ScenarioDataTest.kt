@@ -131,7 +131,7 @@ class ScenarioDataTest {
     fun `spring rate row shows the installed spring, not the recommendation`() {
         val rate = stepper(ScenarioData.buildShockGroup(dhx2Pe, 120.0, base, bike).rows, "s_rate")
         assertEquals(500.0, rate.defaults[0], "stock spring stays the value until the rider changes it")
-        assertEquals(550.0, bike.springRule.recommendedLbs(98.0))
+        assertEquals(550.0, bike.springRule!!.recommendedLbs(98.0))
     }
 
     @Test

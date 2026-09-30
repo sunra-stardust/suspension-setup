@@ -93,6 +93,9 @@ private val REBOUND_DELTAS = listOf(0.0, 0.0, -1.0, 1.0, 0.0)
 private val FORK_SAG_FRACTION = listOf(32.0, 30.0, 27.0, 34.0, 32.0).map { it / 180.0 }
 private val SHOCK_SAG_FRACTION = listOf(19.5, 18.0, 17.0, 21.0, 18.0).map { it / 65.0 }
 
+/** Coil springs are sold in 25 lbs steps (Fox, RockShox). */
+private const val SPRING_STEP_LBS = 25.0
+
 private val TIRE_FRONT_BAR = listOf(1.6, 1.6, 1.75, 1.5, 1.6)
 private val TIRE_REAR_BAR = listOf(1.8, 1.85, 2.0, 1.7, 1.8)
 
@@ -252,18 +255,18 @@ object ScenarioData {
 
     fun buildShockGroup(shock: ShockModel, weightKg: Double, tempC: Int, bike: BikeProfile): Group {
         val installedLbs = shock.customSpringLbs ?: bike.stockSpringLbs
-        val recommendedLbs = bike.springRule.recommendedLbs(weightKg)
-        val rateHint = if (shock.isCustom) {
-            TextSpec.Format(R.string.hint_s_rate_custom, listOf(weightKg.roundToInt(), recommendedLbs.roundToInt()))
-        } else {
-            TextSpec.Format(R.string.hint_s_rate, listOf(bike.stockSpringLbs.roundToInt(), weightKg.roundToInt(), recommendedLbs.roundToInt()))
+        val recommendedLbs = bike.springRule?.recommendedLbs(weightKg)
+        val rateHint = when {
+            recommendedLbs == null -> TextSpec.Res(R.string.hint_s_rate_generic)
+            shock.isCustom -> TextSpec.Format(R.string.hint_s_rate_custom, listOf(weightKg.roundToInt(), recommendedLbs.roundToInt()))
+            else -> TextSpec.Format(R.string.hint_s_rate, listOf(bike.stockSpringLbs.roundToInt(), weightKg.roundToInt(), recommendedLbs.roundToInt()))
         }
 
         val rows = buildList<RowSpec> {
             add(
                 RowSpec.Stepper(
                     id = "s_rate", labelResId = R.string.label_s_rate, unitResId = R.string.unit_lbs,
-                    stripe = Stripe.SPRING, step = bike.springRule.stepLbs, max = null,
+                    stripe = Stripe.SPRING, step = bike.springRule?.stepLbs ?: SPRING_STEP_LBS, max = null,
                     defaults = List(Scenario.count) { installedLbs }, hint = rateHint,
                 ),
             )

@@ -264,6 +264,25 @@
     <string name="range_preload_generic">laut Hersteller</string>
     <string name="basics_ranges_footer">Klick-Anzahlen laut Herstellerhandbuch — am eigenen Rad gegenprüfen.</string>
 
+    <string name="bike_generic_name">Bike</string>
+    <string name="hint_s_rate_generic">Verbaute Feder · erst Sag messen</string>
+    <string name="bikes_title">Bikes</string>
+    <string name="bike_switch_hint">Bike wechseln</string>
+    <string name="bike_new">Neues Bike</string>
+    <string name="bike_new_hint">Startet mit Gabel, Dämpfer und Feder dieses Bikes — in Setup änderbar. Rahmen-Optionen (Flip-Chip, Stütze) bleiben aus.</string>
+    <string name="bike_copy_name">%1$s (Kopie)</string>
+    <string name="bike_delete_confirm">%1$s mit allen Werten löschen?</string>
+    <string name="bike_parts">%1$s · %2$s</string>
+    <string name="vorlage_new">Neue Vorlage</string>
+    <string name="vorlage_new_hint">Startet auf jedem Bike als Kopie von %1$s.</string>
+    <string name="vorlage_delete_confirm">Vorlage %1$s mit ihren Werten auf allen Bikes löschen?</string>
+    <string name="action_rename">Umbenennen</string>
+    <string name="action_copy">Kopieren</string>
+    <string name="action_delete">Löschen</string>
+    <string name="action_save">Speichern</string>
+    <string name="action_cancel">Abbrechen</string>
+    <string name="name_label">Name</string>
+
     <string name="picker_title_fork">Gabel wählen</string>
     <string name="picker_title_shock">Dämpfer wählen</string>
     <string name="picker_close">Schließen</string>

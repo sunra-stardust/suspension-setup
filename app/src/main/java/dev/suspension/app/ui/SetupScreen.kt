@@ -8,13 +8,19 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -34,8 +40,10 @@ import dev.suspension.app.data.ShockModel
 import dev.suspension.app.data.Stripe
 import dev.suspension.app.data.TEMP_STEP_C
 import dev.suspension.app.data.Vorlage
+import dev.suspension.app.ui.components.ConfirmDialog
 import dev.suspension.app.ui.components.DampingRow
 import dev.suspension.app.ui.components.GroupCard
+import dev.suspension.app.ui.components.NameDialog
 import dev.suspension.app.ui.components.RowDivider
 import dev.suspension.app.ui.components.ScenarioTabs
 import dev.suspension.app.ui.components.StepperRow
@@ -64,9 +72,16 @@ fun SetupScreen(
     onTempChange: (Int) -> Unit,
     onOpenForkPicker: () -> Unit,
     onOpenShockPicker: () -> Unit,
+    bikeName: String,
+    onOpenBikes: () -> Unit,
+    onAddVorlage: (name: String) -> Unit,
+    onRenameVorlage: (Vorlage, name: String) -> Unit,
+    onDeleteVorlage: (Vorlage) -> Unit,
 ) {
     val colors = AppTheme.colors
     val type = AppTheme.type
+    var vorlageDialog by rememberSaveable { mutableStateOf(VorlageDialog.NONE) }
+    val switchBike = stringResource(R.string.bike_switch_hint)
 
     val groups = remember(fork, shock, weightKg, tempC, bike) {
         listOfNotNull(
@@ -87,11 +102,16 @@ fun SetupScreen(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 verticalAlignment = Alignment.CenterVertically,
             ) {
+                // Tapping the title opens the bike list (switch, add, copy …).
                 Text(
-                    text = stringResource(R.string.app_header_title, stringResource(bike.nameResId)),
+                    text = stringResource(R.string.app_header_title, bikeName) + " ▾",
                     style = type.screenTitle,
                     color = colors.ink,
-                    modifier = Modifier.weight(1f),
+                    modifier = Modifier
+                        .weight(1f)
+                        .heightIn(min = 44.dp)
+                        .clickable(onClickLabel = switchBike, onClick = onOpenBikes)
+                        .wrapContentHeight(Alignment.CenterVertically),
                 )
                 // Read-only reminder of the conditions everything below is calculated for.
                 Text(
@@ -105,7 +125,19 @@ fun SetupScreen(
                 selected = selectedVorlage,
                 labelFor = { it.label() },
                 onSelect = onVorlageSelected,
+                addLabel = stringResource(R.string.vorlage_new),
+                onAdd = { vorlageDialog = VorlageDialog.NEW },
             )
+            // Own Vorlagen can be renamed and deleted; built-ins only adapted through their values.
+            if (selectedVorlage.builtIn == null) {
+                Row(
+                    horizontalArrangement = Arrangement.spacedBy(16.dp),
+                    modifier = Modifier.padding(horizontal = 16.dp).padding(bottom = 4.dp),
+                ) {
+                    TextAction(stringResource(R.string.action_rename)) { vorlageDialog = VorlageDialog.RENAME }
+                    TextAction(stringResource(R.string.action_delete)) { vorlageDialog = VorlageDialog.DELETE }
+                }
+            }
             RowDivider()
         }
 
@@ -145,6 +177,65 @@ fun SetupScreen(
             }
         }
     }
+
+    VorlageDialogs(
+        dialog = vorlageDialog,
+        selected = selectedVorlage,
+        onAdd = onAddVorlage,
+        onRename = onRenameVorlage,
+        onDelete = onDeleteVorlage,
+        onClose = { vorlageDialog = VorlageDialog.NONE },
+    )
+}
+
+private enum class VorlageDialog { NONE, NEW, RENAME, DELETE }
+
+@Composable
+private fun VorlageDialogs(
+    dialog: VorlageDialog,
+    selected: Vorlage,
+    onAdd: (String) -> Unit,
+    onRename: (Vorlage, String) -> Unit,
+    onDelete: (Vorlage) -> Unit,
+    onClose: () -> Unit,
+) {
+    val selectedName = selected.label()
+    when (dialog) {
+        VorlageDialog.NEW -> NameDialog(
+            title = stringResource(R.string.vorlage_new),
+            hint = stringResource(R.string.vorlage_new_hint, selectedName),
+            initial = "",
+            onConfirm = { onAdd(it); onClose() },
+            onDismiss = onClose,
+        )
+        VorlageDialog.RENAME -> NameDialog(
+            title = stringResource(R.string.action_rename),
+            hint = null,
+            initial = selectedName,
+            onConfirm = { onRename(selected, it); onClose() },
+            onDismiss = onClose,
+        )
+        VorlageDialog.DELETE -> ConfirmDialog(
+            text = stringResource(R.string.vorlage_delete_confirm, selectedName),
+            confirmLabel = stringResource(R.string.action_delete),
+            onConfirm = { onDelete(selected); onClose() },
+            onDismiss = onClose,
+        )
+        VorlageDialog.NONE -> Unit
+    }
+}
+
+@Composable
+private fun TextAction(label: String, onClick: () -> Unit) {
+    Text(
+        text = label,
+        style = AppTheme.type.rowHint,
+        color = AppTheme.colors.ink,
+        modifier = Modifier
+            .heightIn(min = 44.dp)
+            .clickable(onClickLabel = label, onClick = onClick)
+            .wrapContentHeight(Alignment.CenterVertically),
+    )
 }
 
 /**

@@ -12,6 +12,10 @@ import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollToNode
 import androidx.compose.ui.test.onFirst
 import androidx.compose.ui.test.onAllNodesWithText
+import androidx.compose.ui.test.assertCountEquals
+import androidx.compose.ui.test.onLast
+import androidx.compose.ui.test.onNodeWithContentDescription
+import androidx.compose.ui.test.performTextInput
 import androidx.test.core.app.ActivityScenario
 import androidx.test.core.app.ApplicationProvider
 import dev.suspension.app.data.AppLanguage
@@ -42,8 +46,36 @@ class AppSmokeTest {
 
     @Test
     fun `starts on the setup screen with the shock group`() {
-        compose.onNodeWithText(str(R.string.app_header_title, str(R.string.bike_level_rr_name))).assertIsDisplayed()
+        compose.onNodeWithText(str(R.string.app_header_title, str(R.string.bike_level_rr_name)), substring = true).assertIsDisplayed()
         compose.onNodeWithText(str(R.string.scenario_downhill)).assertIsDisplayed()
+    }
+
+    @Test
+    fun `a new preset appears as a tab and can be deleted again`() {
+        compose.onNodeWithContentDescription(str(R.string.vorlage_new)).performClick()
+        compose.onNodeWithContentDescription(str(R.string.name_label)).performTextInput("Nasse Wurzeln")
+        compose.onNodeWithText(str(R.string.action_save)).performClick()
+        compose.onNodeWithText("Nasse Wurzeln").assertIsDisplayed()
+
+        compose.onNodeWithText(str(R.string.action_delete)).performClick()
+        compose.onAllNodesWithText(str(R.string.action_delete)).onLast().performClick()
+        compose.onAllNodesWithText("Nasse Wurzeln").assertCountEquals(0)
+    }
+
+    @Test
+    fun `a copied bike can be switched to`() {
+        val original = str(R.string.bike_level_rr_name)
+        compose.onNodeWithText(str(R.string.app_header_title, original), substring = true).performClick()
+        compose.onNodeWithText(str(R.string.action_copy)).performClick()
+        compose.onNodeWithText(str(R.string.action_save)).performClick()
+        compose.onNodeWithText(str(R.string.picker_close)).performClick()
+
+        val copyName = str(R.string.bike_copy_name, original)
+        compose.onNodeWithText(str(R.string.app_header_title, copyName), substring = true).assertIsDisplayed()
+
+        compose.onNodeWithText(str(R.string.app_header_title, copyName), substring = true).performClick()
+        compose.onNodeWithText(original).performClick()
+        compose.onNodeWithText(str(R.string.app_header_title, original), substring = true).assertIsDisplayed()
     }
 
     @Test

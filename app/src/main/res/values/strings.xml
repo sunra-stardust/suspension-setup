@@ -314,6 +314,29 @@
     <string name="range_post_onoff" translatable="false">280–300 psi</string>
     <string name="basics_ranges_footer">Click counts from the manufacturer\'s manual — check them on your own bike.</string>
 
+    <!-- Bikes and Vorlagen (phase 3.3). A "Vorlage" is called "preset" in English. -->
+    <string name="bike_generic_name">Bike</string>
+    <string name="hint_s_rate_generic">Installed spring · measure sag first</string>
+    <string name="bikes_title">Bikes</string>
+    <string name="bike_switch_hint">Change bike</string>
+    <string name="bike_new">New bike</string>
+    <string name="bike_new_hint">Starts on this bike\'s fork, shock and spring — change them in Setup. Frame options (flip chip, dropper) stay off.</string>
+    <!-- %1$s = name of the bike being copied. -->
+    <string name="bike_copy_name">%1$s (copy)</string>
+    <string name="bike_delete_confirm">Delete %1$s with all its values?</string>
+    <!-- %1$s = fork name, %2$s = shock name. -->
+    <string name="bike_parts">%1$s · %2$s</string>
+    <string name="vorlage_new">New preset</string>
+    <!-- %1$s = name of the preset the new one copies. -->
+    <string name="vorlage_new_hint">Starts as a copy of %1$s on every bike.</string>
+    <string name="vorlage_delete_confirm">Delete preset %1$s and its values on every bike?</string>
+    <string name="action_rename">Rename</string>
+    <string name="action_copy">Copy</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_save">Save</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="name_label">Name</string>
+
     <!-- Component picker. -->
     <string name="picker_title_fork">Choose fork</string>
     <string name="picker_title_shock">Choose shock</string>

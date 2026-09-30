@@ -1,5 +1,6 @@
 package dev.suspension.app.data
 
+import org.json.JSONArray
 import org.json.JSONObject
 import kotlin.math.abs
 import kotlin.math.round
@@ -29,6 +30,8 @@ data class Bike(
     /** The rider's own fork/shock (used when [forkId]/[shockId] is [CUSTOM_ID]); null = never set. */
     val customFork: ForkModel?,
     val customShock: ShockModel?,
+    /** Installed spring when the frame profile doesn't define one (bikes created in the app). */
+    val springLbs: Double?,
     /** Vorlage id → row id → edit. Absent = the row shows its starting value. */
     val edits: Map<String, Map<String, Edit>>,
 ) {
@@ -122,6 +125,7 @@ object GarageJson {
             shockId = o.getString("shockId"),
             customFork = o.optJSONObject("customFork")?.let(::parseCustomFork),
             customShock = o.optJSONObject("customShock")?.let(::parseCustomShock),
+            springLbs = if (o.has("springLbs") && !o.isNull("springLbs")) o.getDouble("springLbs") else null,
             edits = edits,
         )
     }
@@ -184,10 +188,10 @@ object GarageJson {
     fun newDocument(bikeId: String, profile: BikeProfile): JSONObject = JSONObject()
         .put("schemaVersion", SCHEMA_VERSION)
         .put("rider", JSONObject().put("weightKg", DEFAULT_WEIGHT_KG).put("tempC", DEFAULT_TEMP_C))
-        .put("vorlagen", org.json.JSONArray().apply {
+        .put("vorlagen", JSONArray().apply {
             BUILT_IN_VORLAGEN.forEach { put(JSONObject().put("id", it.id).put("builtIn", it.builtIn!!.tag)) }
         })
-        .put("bikes", org.json.JSONArray().put(
+        .put("bikes", JSONArray().put(
             JSONObject()
                 .put("id", bikeId)
                 .put("profile", profile.id)
@@ -262,6 +266,93 @@ object GarageDoc {
         bike.put("shockId", shockId)
         if (custom != null) bike.put("customShock", GarageJson.customShockJson(custom))
         clearEdits(doc, bikeId, "s_")
+    }
+
+    // --- Bikes ---------------------------------------------------------------------------------
+
+    private fun bikes(doc: JSONObject): JSONArray = doc.getJSONArray("bikes")
+
+    fun selectBike(doc: JSONObject, bikeId: String) {
+        bikeJson(doc, bikeId) // must exist
+        selection(doc).put("bikeId", bikeId)
+    }
+
+    /**
+     * A new bike of an unknown frame: generic profile (no flip chip, dropper or spring rule),
+     * starting on [template]'s fork, shock and installed spring, no edits.
+     */
+    fun addBike(doc: JSONObject, newId: String, name: String, template: Bike, templateSpringLbs: Double) {
+        val bike = JSONObject()
+            .put("id", newId)
+            .put("name", name)
+            .put("profile", BikeProfiles.GENERIC_ID)
+            .put("forkId", template.forkId)
+            .put("shockId", template.shockId)
+            .put("springLbs", templateSpringLbs)
+            .put("values", JSONObject())
+        template.customFork?.let { bike.put("customFork", GarageJson.customForkJson(it)) }
+        template.customShock?.let { bike.put("customShock", GarageJson.customShockJson(it)) }
+        bikes(doc).put(bike)
+        selectBike(doc, newId)
+    }
+
+    /** An exact copy (parts, frame profile, all Vorlage values) under a new name. */
+    fun copyBike(doc: JSONObject, sourceId: String, newId: String, name: String) {
+        val copy = JSONObject(bikeJson(doc, sourceId).toString()).put("id", newId).put("name", name)
+        bikes(doc).put(copy)
+        selectBike(doc, newId)
+    }
+
+    fun renameBike(doc: JSONObject, bikeId: String, name: String) {
+        bikeJson(doc, bikeId).put("name", name)
+    }
+
+    /** Removes a bike; the last one can't be deleted. Selection moves to the first remaining bike. */
+    fun deleteBike(doc: JSONObject, bikeId: String) {
+        val list = bikes(doc)
+        require(list.length() > 1) { "Can't delete the only bike" }
+        val index = (0 until list.length()).first { list.getJSONObject(it).getString("id") == bikeId }
+        list.remove(index)
+        if (selection(doc).optString("bikeId") == bikeId) selection(doc).put("bikeId", list.getJSONObject(0).getString("id"))
+    }
+
+    // --- Vorlagen ------------------------------------------------------------------------------
+
+    private fun vorlagen(doc: JSONObject): JSONArray =
+        doc.optJSONArray("vorlagen") ?: JSONArray().also { doc.put("vorlagen", it) }
+
+    private fun vorlageJson(doc: JSONObject, vorlageId: String): JSONObject {
+        val list = vorlagen(doc)
+        return (0 until list.length()).map { list.getJSONObject(it) }.first { it.getString("id") == vorlageId }
+    }
+
+    /** A new Vorlage for every bike, starting as a copy of [copyFromId]'s values on each bike. */
+    fun addVorlage(doc: JSONObject, newId: String, name: String, copyFromId: String) {
+        vorlagen(doc).put(JSONObject().put("id", newId).put("name", name))
+        val list = bikes(doc)
+        for (i in 0 until list.length()) {
+            val values = list.getJSONObject(i).optJSONObject("values") ?: continue
+            values.optJSONObject(copyFromId)?.let { values.put(newId, JSONObject(it.toString())) }
+        }
+        selectVorlage(doc, newId)
+    }
+
+    /** Only the rider's own Vorlagen can be renamed; built-ins are translated names. */
+    fun renameVorlage(doc: JSONObject, vorlageId: String, name: String) {
+        val v = vorlageJson(doc, vorlageId)
+        require(!v.has("builtIn")) { "Built-in Vorlagen keep their name" }
+        v.put("name", name)
+    }
+
+    /** Deletes one of the rider's own Vorlagen and its values on every bike. */
+    fun deleteVorlage(doc: JSONObject, vorlageId: String) {
+        val list = vorlagen(doc)
+        val index = (0 until list.length()).first { list.getJSONObject(it).getString("id") == vorlageId }
+        require(!list.getJSONObject(index).has("builtIn")) { "Built-in Vorlagen can't be deleted" }
+        list.remove(index)
+        val bikeList = bikes(doc)
+        for (i in 0 until bikeList.length()) bikeList.getJSONObject(i).optJSONObject("values")?.remove(vorlageId)
+        if (selection(doc).optString("vorlageId") == vorlageId) selectVorlage(doc, Scenario.BASIS.tag)
     }
 }
 

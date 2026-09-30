@@ -43,7 +43,7 @@ Cloud sessions install the Android SDK via the SessionStart hook (`scripts/cloud
 ## Code map (`app/src/main/java/dev/suspension/app/`)
 
 - `data/` — catalog (`ComponentCatalog`, data in `src/main/resources/catalog/catalog.json`), bike profile, scenario rows and defaults, temperature model, storage (`GarageRepository` → `files/garage.json`; `LegacyStorage`/`LegacyStores` import from and mirror to the pre-phase-3 DataStores).
-- `ui/` — Compose screens (Setup, Diagnose, Basics, pickers), `UpdateUi` (banner, app card, safe mode), `components/`, `theme/`.
+- `ui/` — Compose screens (Setup with Vorlage tabs, Diagnose, Basics, component pickers, `BikesOverlay`), dialogs in `components/Dialogs.kt`, `UpdateUi` (banner, app card, safe mode), `components/`, `theme/`.
 - `update/` — OTA logic shared by both flavors (`Release`, `UpdateViewModel`); `src/github/…/update/GitHubUpdater` does the network + install.
 - `safety/CrashGuard` — crash-loop detection → safe-mode screen with update check.
 - Tests: `app/src/test/…` (JUnit 5 + Robolectric/JUnit 4 via the vintage engine). Device test: `scripts/device-smoke.sh`.

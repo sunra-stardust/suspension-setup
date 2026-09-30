@@ -38,6 +38,9 @@ fun ScenarioTabs(
     selected: Vorlage,
     labelFor: @Composable (Vorlage) -> String,
     onSelect: (Vorlage) -> Unit,
+    /** Trailing "+" chip; [addLabel] is its accessibility label. */
+    addLabel: String,
+    onAdd: () -> Unit,
 ) {
     val colors = AppTheme.colors
     val type = AppTheme.type
@@ -63,6 +66,20 @@ fun ScenarioTabs(
                     style = type.navLabel,
                     color = if (isSelected) colors.surface else colors.ink,
                 )
+            }
+        }
+        item(key = "add") {
+            Box(
+                contentAlignment = Alignment.Center,
+                modifier = Modifier
+                    .heightIn(min = 44.dp)
+                    .clip(RoundedCornerShape(8.dp))
+                    .background(colors.hit)
+                    .clickable(onClickLabel = addLabel, onClick = onAdd)
+                    .semantics { contentDescription = addLabel }
+                    .padding(horizontal = 16.dp, vertical = 8.dp),
+            ) {
+                Text(text = "+", style = type.navLabel, color = colors.ink)
             }
         }
     }

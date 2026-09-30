@@ -31,6 +31,8 @@ import dev.suspension.app.data.GarageRepository
 import dev.suspension.app.data.CUSTOM_ID
 import dev.suspension.app.data.LanguageStore
 import dev.suspension.app.ui.BasicsScreen
+import dev.suspension.app.ui.BikesOverlay
+import dev.suspension.app.ui.displayName
 import dev.suspension.app.ui.DiagnoseScreen
 import dev.suspension.app.ui.ForkPickerOverlay
 import dev.suspension.app.ui.SetupScreen
@@ -89,7 +91,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-private enum class PickerOverlay { NONE, FORK, SHOCK }
+private enum class PickerOverlay { NONE, FORK, SHOCK, BIKES }
 
 @Composable
 private fun AppRoot(updates: UpdateViewModel?, onLanguageChange: (AppLanguage) -> Unit) {
@@ -97,7 +99,7 @@ private fun AppRoot(updates: UpdateViewModel?, onLanguageChange: (AppLanguage) -
     val garageRepo = remember { GarageRepository.get(context) }
     val garage by garageRepo.state.collectAsState()
     val bike = garage.selectedBike
-    val profile = BikeProfiles.byId(bike.profileId)
+    val profile = BikeParts.profile(bike)
     val vorlage = garage.selectedVorlage
 
     var selectedTab by rememberSaveable { mutableIntStateOf(AppTab.SETUP.ordinal) }
@@ -135,6 +137,11 @@ private fun AppRoot(updates: UpdateViewModel?, onLanguageChange: (AppLanguage) -
                         onTempChange = garageRepo::setTemp,
                         onOpenForkPicker = { overlay = PickerOverlay.FORK },
                         onOpenShockPicker = { overlay = PickerOverlay.SHOCK },
+                        bikeName = bike.displayName(),
+                        onOpenBikes = { overlay = PickerOverlay.BIKES },
+                        onAddVorlage = { name -> garageRepo.addVorlage(name, copyFromId = vorlage.id) },
+                        onRenameVorlage = { v, name -> garageRepo.renameVorlage(v.id, name) },
+                        onDeleteVorlage = { v -> garageRepo.deleteVorlage(v.id) },
                     )
                 }
                 AppTab.DIAGNOSE -> {
@@ -172,6 +179,17 @@ private fun AppRoot(updates: UpdateViewModel?, onLanguageChange: (AppLanguage) -
                     initialCustomShock = customShockRaw,
                     onSelectCatalog = { selected -> garageRepo.selectShock(bike.id, selected.id) },
                     onSaveCustom = { model -> garageRepo.selectShock(bike.id, CUSTOM_ID, model) },
+                    onDismiss = { overlay = PickerOverlay.NONE },
+                )
+                PickerOverlay.BIKES -> BikesOverlay(
+                    garage = garage,
+                    onSelect = { garageRepo.selectBike(it.id) },
+                    onAdd = { name ->
+                        garageRepo.addBike(name, bike, BikeParts.installedSpringLbs(bike, garage.weightKg, garage.tempC))
+                    },
+                    onCopy = { source, name -> garageRepo.copyBike(source.id, name) },
+                    onRename = { target, name -> garageRepo.renameBike(target.id, name) },
+                    onDelete = { target -> garageRepo.deleteBike(target.id) },
                     onDismiss = { overlay = PickerOverlay.NONE },
                 )
                 PickerOverlay.NONE -> Unit

@@ -34,7 +34,8 @@ data class BikeProfile(
     val stockForkId: String,
     val stockShockId: String,
     val stockSpringLbs: Double,
-    val springRule: SpringRule,
+    /** Null for frames without a calibrated rule (the rate depends on the leverage ratio). */
+    val springRule: SpringRule?,
     val rearTyreHintResId: Int?,
     val flipChip: FlipChip?,
     val dropper: Dropper?,
@@ -76,9 +77,28 @@ object BikeProfiles {
         ),
     )
 
+    const val GENERIC_ID = "generic"
+
+    /**
+     * Bikes the rider adds in the app: no frame data we could verify, so no flip chip, dropper,
+     * spring-rate rule or factory spec. The installed spring is stored per bike ([Bike.springLbs]).
+     */
+    val generic = BikeProfile(
+        id = GENERIC_ID,
+        nameResId = R.string.bike_generic_name,
+        stockForkId = levelRr.stockForkId,
+        stockShockId = levelRr.stockShockId,
+        stockSpringLbs = levelRr.stockSpringLbs,
+        springRule = null,
+        rearTyreHintResId = null,
+        flipChip = null,
+        dropper = null,
+        factorySpec = emptyList(),
+    )
+
     val current: BikeProfile = levelRr
 
-    val all: List<BikeProfile> = listOf(levelRr)
+    val all: List<BikeProfile> = listOf(levelRr, generic)
 
     /** Unknown ids (e.g. a profile a newer release added) fall back to [current]. */
     fun byId(id: String): BikeProfile = all.firstOrNull { it.id == id } ?: current
