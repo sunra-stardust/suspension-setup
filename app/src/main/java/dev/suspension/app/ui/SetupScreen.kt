@@ -14,10 +14,7 @@ import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -25,17 +22,18 @@ import androidx.compose.ui.unit.dp
 import dev.suspension.app.R
 import dev.suspension.app.data.BikeProfile
 import dev.suspension.app.data.ComponentKind
+import dev.suspension.app.data.Edit
 import dev.suspension.app.data.ForkModel
 import dev.suspension.app.data.Group
 import dev.suspension.app.data.RotationDirection
 import dev.suspension.app.data.RotationLogic
 import dev.suspension.app.data.RowSpec
-import dev.suspension.app.data.Scenario
+import dev.suspension.app.data.RowValues
 import dev.suspension.app.data.ScenarioData
 import dev.suspension.app.data.ShockModel
 import dev.suspension.app.data.Stripe
 import dev.suspension.app.data.TEMP_STEP_C
-import dev.suspension.app.data.ValueRepository
+import dev.suspension.app.data.Vorlage
 import dev.suspension.app.ui.components.DampingRow
 import dev.suspension.app.ui.components.GroupCard
 import dev.suspension.app.ui.components.RowDivider
@@ -46,14 +44,16 @@ import dev.suspension.app.ui.format.currentLocale
 import dev.suspension.app.ui.format.formatPercent
 import dev.suspension.app.ui.format.formatStepValue
 import dev.suspension.app.ui.theme.AppTheme
-import kotlinx.coroutines.launch
 import kotlin.math.roundToInt
 
 @Composable
 fun SetupScreen(
-    repository: ValueRepository,
-    selectedScenario: Scenario,
-    onScenarioSelected: (Scenario) -> Unit,
+    vorlagen: List<Vorlage>,
+    selectedVorlage: Vorlage,
+    onVorlageSelected: (Vorlage) -> Unit,
+    /** The rider's edits for this bike in [selectedVorlage], by row id. */
+    edits: Map<String, Edit>,
+    onEdit: (rowId: String, edit: Edit?) -> Unit,
     listState: LazyListState,
     bike: BikeProfile,
     fork: ForkModel,
@@ -101,10 +101,10 @@ fun SetupScreen(
                 )
             }
             ScenarioTabs(
-                scenarios = Scenario.ordered,
-                selected = selectedScenario,
-                labelFor = { stringResource(it.labelResId) },
-                onSelect = onScenarioSelected,
+                vorlagen = vorlagen,
+                selected = selectedVorlage,
+                labelFor = { it.label() },
+                onSelect = onVorlageSelected,
             )
             RowDivider()
         }
@@ -131,7 +131,7 @@ fun SetupScreen(
                     GroupCard {
                         group.rows.forEachIndexed { index, row ->
                             if (index > 0) RowDivider()
-                            ParamRow(repository, row, selectedScenario, group.component)
+                            ParamRow(row, edits[row.id], { onEdit(row.id, it) }, group.component)
                         }
                     }
                 }
@@ -205,8 +205,7 @@ private fun GroupHeadingText(group: Group, onClick: (() -> Unit)?) {
 private fun isDampingRow(row: RowSpec): Boolean = row.stripe == Stripe.COMP || row.stripe == Stripe.REB
 
 @Composable
-private fun ParamRow(repository: ValueRepository, row: RowSpec, scenario: Scenario, component: ComponentKind?) {
-    val scope = rememberCoroutineScope()
+private fun ParamRow(row: RowSpec, edit: Edit?, onEdit: (Edit?) -> Unit, component: ComponentKind?) {
     val colors = AppTheme.colors
     val label = stringResource(row.labelResId)
     val hint = row.hint?.resolve()
@@ -215,9 +214,8 @@ private fun ParamRow(repository: ValueRepository, row: RowSpec, scenario: Scenar
 
     when (row) {
         is RowSpec.Stepper -> {
-            val default = row.defaults[scenario.index]
-            val flow = remember(row, scenario) { repository.stepperValue(row, scenario) }
-            val value by flow.collectAsState(initial = default)
+            val value = RowValues.stepper(row, edit)
+            val setValue = { newValue: Double -> onEdit(RowValues.editFor(row, newValue)) }
 
             if (isDampingRow(row)) {
                 val componentPrefix = when (component) {
@@ -236,16 +234,8 @@ private fun ParamRow(repository: ValueRepository, row: RowSpec, scenario: Scenar
                     atZero = value <= 0.0,
                     atMax = value >= max,
                     a11yBase = "$componentPrefix $label".trim(),
-                    onClockwise = {
-                        scope.launch {
-                            repository.setStepperValue(row, scenario, RotationLogic.nextValue(RotationDirection.CLOCKWISE, value, max))
-                        }
-                    },
-                    onCounterClockwise = {
-                        scope.launch {
-                            repository.setStepperValue(row, scenario, RotationLogic.nextValue(RotationDirection.COUNTER_CLOCKWISE, value, max))
-                        }
-                    },
+                    onClockwise = { setValue(RotationLogic.nextValue(RotationDirection.CLOCKWISE, value, max)) },
+                    onCounterClockwise = { setValue(RotationLogic.nextValue(RotationDirection.COUNTER_CLOCKWISE, value, max)) },
                 )
                 return
             }
@@ -262,14 +252,12 @@ private fun ParamRow(repository: ValueRepository, row: RowSpec, scenario: Scenar
                 unit = unit,
                 hint = displayHint,
                 valueText = formatStepValue(value, row.step, locale),
-                onDecrement = { scope.launch { repository.setStepperValue(row, scenario, value - row.step) } },
-                onIncrement = { scope.launch { repository.setStepperValue(row, scenario, value + row.step) } },
+                onDecrement = { setValue(value - row.step) },
+                onIncrement = { setValue(value + row.step) },
             )
         }
         is RowSpec.Toggle -> {
-            val default = row.defaults[scenario.index]
-            val flow = remember(row, scenario) { repository.toggleValue(row, scenario) }
-            val value by flow.collectAsState(initial = default)
+            val value = RowValues.toggle(row, edit)
             ToggleRow(
                 stripe = stripeColor,
                 label = label,
@@ -277,10 +265,13 @@ private fun ParamRow(repository: ValueRepository, row: RowSpec, scenario: Scenar
                 valueText = row.optionLabels[value]?.let { stringResource(it) } ?: value,
                 onToggle = {
                     val currentIndex = row.options.indexOf(value).coerceAtLeast(0)
-                    val next = row.options[(currentIndex + 1) % row.options.size]
-                    scope.launch { repository.setToggleValue(row, scenario, next) }
+                    onEdit(RowValues.editFor(row, row.options[(currentIndex + 1) % row.options.size]))
                 },
             )
         }
     }
 }
+
+/** Built-in Vorlagen are translated; the rider's own carry the name they gave them. */
+@Composable
+fun Vorlage.label(): String = builtIn?.let { stringResource(it.labelResId) } ?: name.orEmpty()

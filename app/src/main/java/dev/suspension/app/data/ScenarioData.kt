@@ -49,11 +49,19 @@ sealed class RowSpec {
         override val stripe: Stripe,
         val step: Double,
         val max: Double?,
+        /**
+         * What each built-in scenario showed before phase 3 (manufacturer value + the owner's
+         * former scenario offsets). Only the migration reads the offsets; since phase 3 every
+         * Vorlage starts at [start] and the rider's changes are relative [Edit]s.
+         */
         val defaults: List<Double>,
         override val hint: TextSpec?,
         /** e.g. fork sag: value / travelMm — shown instead of the static hint. */
         val derivedPercentDivisor: Double? = null,
-    ) : RowSpec()
+    ) : RowSpec() {
+        /** Starting value in every Vorlage: the manufacturer's figure where one exists (Basis column). */
+        val start: Double get() = defaults[Scenario.BASIS.index]
+    }
 
     data class Toggle(
         override val id: String,
@@ -64,7 +72,9 @@ sealed class RowSpec {
         override val hint: TextSpec?,
         /** Display label per stored option; options without one (e.g. "High"/"Low") show as stored. */
         val optionLabels: Map<String, Int> = emptyMap(),
-    ) : RowSpec()
+    ) : RowSpec() {
+        val start: String get() = defaults[Scenario.BASIS.index]
+    }
 }
 
 enum class ComponentKind { FORK, SHOCK }

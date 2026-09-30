@@ -22,7 +22,7 @@ So:
 
 1. **Manufacturer data** (pressures, clicks, charts, adjusters, model years) only from verified primary sources — skill **`catalog-data`**. A wrong number is worse than a missing one.
 2. **UI text** lives in `res/values/strings.xml` (English, default) and `res/values-de/strings.xml` (German) — every string in both; damping controls use rotation vocabulary, never +/− — skill **`ui-text`**.
-3. **Stored data is rollback-safe:** only add keys/fields; never rename or delete stored keys without a migration and a test (an older release must still read what a newer one wrote).
+3. **Stored data is rollback-safe:** only add keys/fields; never rename or delete stored keys without a migration and a test (an older release must still read what a newer one wrote). `garage.json` changes go through `GarageDoc` (edits the JSON in place, so unknown fields survive); keep the legacy mirror working (`LegacyStorageTest`, `GarageRepositoryTest`).
 4. **Logic change ⇒ unit test. New screen or flow ⇒ extend `AppSmokeTest`.** Reproduce a bug as a failing test first.
 5. **Two flavors:** `github` (sideload, self-updater, INTERNET + REQUEST_INSTALL_PACKAGES) and `play` (no self-update code or permissions — Google Play policy). Flavor-specific code goes in `src/github` / `src/play` behind `update/Distribution`.
 6. No new permissions, network use, analytics or accounts unless the owner asks.
@@ -42,7 +42,7 @@ Cloud sessions install the Android SDK via the SessionStart hook (`scripts/cloud
 
 ## Code map (`app/src/main/java/dev/suspension/app/`)
 
-- `data/` — catalog (`ComponentCatalog`, data in `src/main/resources/catalog/catalog.json`), bike profile, scenario rows and defaults, temperature model, DataStore repositories.
+- `data/` — catalog (`ComponentCatalog`, data in `src/main/resources/catalog/catalog.json`), bike profile, scenario rows and defaults, temperature model, storage (`GarageRepository` → `files/garage.json`; `LegacyStorage`/`LegacyStores` import from and mirror to the pre-phase-3 DataStores).
 - `ui/` — Compose screens (Setup, Diagnose, Basics, pickers), `UpdateUi` (banner, app card, safe mode), `components/`, `theme/`.
 - `update/` — OTA logic shared by both flavors (`Release`, `UpdateViewModel`); `src/github/…/update/GitHubUpdater` does the network + install.
 - `safety/CrashGuard` — crash-loop detection → safe-mode screen with update check.

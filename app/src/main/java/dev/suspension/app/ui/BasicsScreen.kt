@@ -19,7 +19,6 @@ import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -35,7 +34,6 @@ import dev.suspension.app.data.ForkModel
 import dev.suspension.app.data.ReboundMode
 import dev.suspension.app.data.RotationDirection
 import dev.suspension.app.data.ShockModel
-import dev.suspension.app.data.ValueRepository
 import dev.suspension.app.data.roundToStep
 import dev.suspension.app.ui.components.GroupCard
 import dev.suspension.app.ui.components.RotationIcon
@@ -45,7 +43,6 @@ import dev.suspension.app.ui.format.currentLocale
 import dev.suspension.app.ui.format.formatStepValue
 import dev.suspension.app.ui.theme.AppTheme
 import dev.suspension.app.update.UpdateViewModel
-import kotlinx.coroutines.launch
 
 /** Target-sag rows: label, share of travel in %, fork (true) or shock (false). */
 private val SAG_TARGETS = listOf(
@@ -59,7 +56,6 @@ private val SAG_TARGETS = listOf(
 
 @Composable
 fun BasicsScreen(
-    repository: ValueRepository,
     listState: LazyListState,
     bike: BikeProfile,
     fork: ForkModel,
@@ -67,11 +63,10 @@ fun BasicsScreen(
     updates: UpdateViewModel?,
     language: AppLanguage,
     onLanguageChange: (AppLanguage) -> Unit,
-    onResetDone: () -> Unit,
+    onReset: () -> Unit,
 ) {
     val colors = AppTheme.colors
     val type = AppTheme.type
-    val scope = rememberCoroutineScope()
 
     LazyColumn(
         state = listState,
@@ -236,12 +231,8 @@ fun BasicsScreen(
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(10.dp))
                     .background(colors.hit)
-                    .clickable(onClickLabel = stringResource(R.string.reset_button)) {
-                        scope.launch {
-                            repository.resetAll()
-                            onResetDone()
-                        }
-                    }
+                    .clickable(onClickLabel = stringResource(R.string.reset_button), onClick = onReset)
+
                     .padding(vertical = 14.dp),
             ) {
                 Text(text = stringResource(R.string.reset_button), style = type.rowLabel, color = colors.ink)

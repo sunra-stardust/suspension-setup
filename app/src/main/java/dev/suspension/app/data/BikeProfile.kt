@@ -77,4 +77,9 @@ object BikeProfiles {
     )
 
     val current: BikeProfile = levelRr
+
+    val all: List<BikeProfile> = listOf(levelRr)
+
+    /** Unknown ids (e.g. a profile a newer release added) fall back to [current]. */
+    fun byId(id: String): BikeProfile = all.firstOrNull { it.id == id } ?: current
 }

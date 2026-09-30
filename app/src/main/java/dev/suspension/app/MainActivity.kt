@@ -18,7 +18,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
@@ -26,15 +25,11 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.viewmodel.compose.viewModel
 import dev.suspension.app.data.AppLanguage
+import dev.suspension.app.data.BikeParts
 import dev.suspension.app.data.BikeProfiles
+import dev.suspension.app.data.GarageRepository
 import dev.suspension.app.data.CUSTOM_ID
-import dev.suspension.app.data.ComponentCatalog
-import dev.suspension.app.data.DEFAULT_TEMP_C
-import dev.suspension.app.data.DEFAULT_WEIGHT_KG
 import dev.suspension.app.data.LanguageStore
-import dev.suspension.app.data.Scenario
-import dev.suspension.app.data.SettingsRepository
-import dev.suspension.app.data.ValueRepository
 import dev.suspension.app.ui.BasicsScreen
 import dev.suspension.app.ui.DiagnoseScreen
 import dev.suspension.app.ui.ForkPickerOverlay
@@ -51,7 +46,6 @@ import dev.suspension.app.ui.theme.SuspensionSetupTheme
 import dev.suspension.app.update.Distribution
 import dev.suspension.app.update.UpdateViewModel
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
     // The in-app language choice overrides the device language for everything this activity shows.
@@ -100,36 +94,22 @@ private enum class PickerOverlay { NONE, FORK, SHOCK }
 @Composable
 private fun AppRoot(updates: UpdateViewModel?, onLanguageChange: (AppLanguage) -> Unit) {
     val context = LocalContext.current
-    val bike = BikeProfiles.current
-    val repository = remember { ValueRepository(context) }
-    val settings = remember { SettingsRepository(context, bike) }
-    val scope = rememberCoroutineScope()
+    val garageRepo = remember { GarageRepository.get(context) }
+    val garage by garageRepo.state.collectAsState()
+    val bike = garage.selectedBike
+    val profile = BikeProfiles.byId(bike.profileId)
+    val vorlage = garage.selectedVorlage
 
     var selectedTab by rememberSaveable { mutableIntStateOf(AppTab.SETUP.ordinal) }
-    var selectedScenarioIndex by rememberSaveable { mutableIntStateOf(Scenario.BASIS.index) }
-    val selectedScenario = Scenario.ordered.getOrElse(selectedScenarioIndex) { Scenario.BASIS }
     val tab = AppTab.entries[selectedTab]
 
-    // Kalt/Warm are no longer scenarios (temperature is a setting) — drop their stored overrides.
-    LaunchedEffect(Unit) { repository.dropScenarioIndicesFrom(Scenario.count) }
-
-    val stockFork = ComponentCatalog.forkById(bike.stockForkId) ?: ComponentCatalog.forks.first()
-    val stockShock = ComponentCatalog.shockById(bike.stockShockId) ?: ComponentCatalog.shocks.first()
-
-    val weightKg by settings.weightKg.collectAsState(initial = DEFAULT_WEIGHT_KG)
-    val tempC by settings.tempC.collectAsState(initial = DEFAULT_TEMP_C)
-    val forkId by settings.forkId.collectAsState(initial = bike.stockForkId)
-    val shockId by settings.shockId.collectAsState(initial = bike.stockShockId)
-    val customForkRaw by settings.customFork.collectAsState(initial = stockFork.copy(id = CUSTOM_ID, displayName = ""))
-    val customShockRaw by settings.customShock.collectAsState(initial = stockShock.copy(id = CUSTOM_ID, displayName = ""))
-
     // Custom models without a name get a localized default instead of a blank heading.
-    val customFork = customForkRaw.copy(displayName = customForkRaw.displayName.ifBlank { stringResource(R.string.custom_fork_default_name) })
-    val customShock = customShockRaw.copy(displayName = customShockRaw.displayName.ifBlank { stringResource(R.string.custom_shock_default_name) })
-
-    // A stored id that's no longer in the catalog (e.g. a removed model) falls back to the bike's stock part.
-    val fork = if (forkId == CUSTOM_ID) customFork else (ComponentCatalog.forkById(forkId) ?: stockFork)
-    val shock = if (shockId == CUSTOM_ID) customShock else (ComponentCatalog.shockById(shockId) ?: stockShock)
+    val customForkRaw = BikeParts.customFork(bike, profile)
+    val customShockRaw = BikeParts.customShock(bike, profile)
+    val customForkName = stringResource(R.string.custom_fork_default_name)
+    val customShockName = stringResource(R.string.custom_shock_default_name)
+    val fork = BikeParts.fork(bike, profile).let { if (it.isCustom) it.copy(displayName = it.displayName.ifBlank { customForkName }) else it }
+    val shock = BikeParts.shock(bike, profile).let { if (it.isCustom) it.copy(displayName = it.displayName.ifBlank { customShockName }) else it }
 
     var overlay by remember { mutableStateOf(PickerOverlay.NONE) }
 
@@ -140,17 +120,19 @@ private fun AppRoot(updates: UpdateViewModel?, onLanguageChange: (AppLanguage) -
                 AppTab.SETUP -> {
                     val listState = rememberSaveable(saver = LazyListState.Saver) { LazyListState() }
                     SetupScreen(
-                        repository = repository,
-                        selectedScenario = selectedScenario,
-                        onScenarioSelected = { selectedScenarioIndex = it.index },
+                        vorlagen = garage.vorlagen,
+                        selectedVorlage = vorlage,
+                        onVorlageSelected = { garageRepo.selectVorlage(it.id) },
+                        edits = bike.editsFor(vorlage.id),
+                        onEdit = { rowId, edit -> garageRepo.setEdit(bike.id, vorlage.id, rowId, edit) },
                         listState = listState,
-                        bike = bike,
+                        bike = profile,
                         fork = fork,
                         shock = shock,
-                        weightKg = weightKg,
-                        onWeightChange = { scope.launch { settings.setWeightKg(it) } },
-                        tempC = tempC,
-                        onTempChange = { scope.launch { settings.setTempC(it) } },
+                        weightKg = garage.weightKg,
+                        onWeightChange = garageRepo::setWeight,
+                        tempC = garage.tempC,
+                        onTempChange = garageRepo::setTemp,
                         onOpenForkPicker = { overlay = PickerOverlay.FORK },
                         onOpenShockPicker = { overlay = PickerOverlay.SHOCK },
                     )
@@ -162,54 +144,34 @@ private fun AppRoot(updates: UpdateViewModel?, onLanguageChange: (AppLanguage) -
                 AppTab.BASICS -> {
                     val listState = rememberSaveable(saver = LazyListState.Saver) { LazyListState() }
                     BasicsScreen(
-                        repository = repository,
                         listState = listState,
-                        bike = bike,
+                        bike = profile,
                         fork = fork,
                         shock = shock,
                         updates = updates,
                         language = remember { LanguageStore.get(context) },
                         onLanguageChange = onLanguageChange,
-                        onResetDone = { selectedTab = AppTab.SETUP.ordinal },
+                        onReset = {
+                            garageRepo.resetValues(bike.id)
+                            selectedTab = AppTab.SETUP.ordinal
+                        },
                     )
                 }
             }
 
             when (overlay) {
                 PickerOverlay.FORK -> ForkPickerOverlay(
-                    currentForkId = forkId,
+                    currentForkId = bike.forkId,
                     initialCustomFork = customForkRaw,
-                    onSelectCatalog = { selected ->
-                        scope.launch {
-                            settings.selectFork(selected.id)
-                            repository.clearKeysWithPrefix("f_")
-                        }
-                    },
-                    onSaveCustom = { model ->
-                        scope.launch {
-                            settings.setCustomFork(model)
-                            settings.selectFork(CUSTOM_ID)
-                            repository.clearKeysWithPrefix("f_")
-                        }
-                    },
+                    onSelectCatalog = { selected -> garageRepo.selectFork(bike.id, selected.id) },
+                    onSaveCustom = { model -> garageRepo.selectFork(bike.id, CUSTOM_ID, model) },
                     onDismiss = { overlay = PickerOverlay.NONE },
                 )
                 PickerOverlay.SHOCK -> ShockPickerOverlay(
-                    currentShockId = shockId,
+                    currentShockId = bike.shockId,
                     initialCustomShock = customShockRaw,
-                    onSelectCatalog = { selected ->
-                        scope.launch {
-                            settings.selectShock(selected.id)
-                            repository.clearKeysWithPrefix("s_")
-                        }
-                    },
-                    onSaveCustom = { model ->
-                        scope.launch {
-                            settings.setCustomShock(model)
-                            settings.selectShock(CUSTOM_ID)
-                            repository.clearKeysWithPrefix("s_")
-                        }
-                    },
+                    onSelectCatalog = { selected -> garageRepo.selectShock(bike.id, selected.id) },
+                    onSaveCustom = { model -> garageRepo.selectShock(bike.id, CUSTOM_ID, model) },
                     onDismiss = { overlay = PickerOverlay.NONE },
                 )
                 PickerOverlay.NONE -> Unit
