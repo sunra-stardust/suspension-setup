@@ -283,6 +283,20 @@
     <string name="action_cancel">Abbrechen</string>
     <string name="name_label">Name</string>
 
+    <string name="reference_maker">%1$s-Empfehlung</string>
+    <string name="reference_start">Startwert</string>
+    <plurals name="deviation_clicks_closer">
+        <item quantity="one">%1$d Klick weiter zu als %2$s</item>
+        <item quantity="other">%1$d Klicks weiter zu als %2$s</item>
+    </plurals>
+    <plurals name="deviation_clicks_opener">
+        <item quantity="one">%1$d Klick weiter offen als %2$s</item>
+        <item quantity="other">%1$d Klicks weiter offen als %2$s</item>
+    </plurals>
+    <string name="deviation_amount">%1$s %2$s gegenüber %3$s</string>
+    <string name="deviation_option_start">Startwert: %1$s</string>
+    <string name="deviation_option_maker">%2$s-Empfehlung: %1$s</string>
+
     <string name="picker_title_fork">Gabel wählen</string>
     <string name="picker_title_shock">Dämpfer wählen</string>
     <string name="picker_close">Schließen</string>

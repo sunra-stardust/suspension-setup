@@ -3,6 +3,9 @@ package dev.suspension.app
 import android.content.Context
 import android.content.res.Configuration
 import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.semantics.SemanticsProperties
+import androidx.compose.ui.test.SemanticsMatcher
+import androidx.compose.ui.test.hasContentDescription
 import androidx.compose.ui.test.hasScrollAction
 import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.junit4.v2.createAndroidComposeRule
@@ -44,10 +47,26 @@ class AppSmokeTest {
 
     private fun str(id: Int, vararg args: Any) = compose.activity.getString(id, *args)
 
+    /** The Setup list (the Vorlage tabs scroll horizontally). */
+    private val verticalList = hasScrollAction() and SemanticsMatcher.keyIsDefined(SemanticsProperties.VerticalScrollAxisRange)
+
     @Test
     fun `starts on the setup screen with the shock group`() {
         compose.onNodeWithText(str(R.string.app_header_title, str(R.string.bike_level_rr_name)), substring = true).assertIsDisplayed()
         compose.onNodeWithText(str(R.string.scenario_downhill)).assertIsDisplayed()
+    }
+
+    @Test
+    fun `closing a damping circuit shows the deviation from Fox`() {
+        val forkLsc = "${str(R.string.prefix_gabel)} ${str(R.string.label_lsc)}"
+        val closeLabel = str(R.string.rotation_cw_description, forkLsc, str(R.string.rotation_caption_firmer))
+        compose.onNode(verticalList).performScrollToNode(hasContentDescription(closeLabel))
+        compose.onNodeWithContentDescription(closeLabel).performClick()
+
+        val reference = str(R.string.reference_maker, "Fox")
+        val expected = compose.activity.resources.getQuantityString(R.plurals.deviation_clicks_closer, 1, 1, reference)
+        compose.onNode(verticalList).performScrollToNode(hasText(expected, substring = true))
+        compose.onNodeWithText(expected, substring = true).assertIsDisplayed()
     }
 
     @Test

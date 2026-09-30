@@ -63,7 +63,8 @@
       "reboundMode": { "value": "split", "source": "fox-fork-3638-2025" },
       "reboundMax": { "value": 16, "source": "fox-fork-3638-2025", "note": "LSR" },
       "hsrMax": { "value": 8, "source": "fox-fork-3638-2025" },
-      "pressureChart": {
+      "lscStart": { "value": 10, "source": "fox-fork-3638-2025", "note": "GRIP X2 initial setup: 'back them out (counterclockwise) 5 clicks for High-speed and 10 clicks for Low-speed compression'" },
+      "hscStart": { "value": 5, "source": "fox-fork-3638-2025", "note": "GRIP X2 initial setup, see lscStart" },      "pressureChart": {
         "value": [72, 76, 80, 84, 89, 93, 97, 102, 106, 110, 114, 119, 123],
         "source": "fox-fork-3638-2025",
         "note": "FLOAT column (not E-Bike+), psi"
@@ -93,7 +94,8 @@
       "reboundMode": { "value": "split", "source": "fox-fork-3638-2025" },
       "reboundMax": { "value": 16, "source": "fox-fork-3638-2025", "note": "LSR" },
       "hsrMax": { "value": 8, "source": "fox-fork-3638-2025" },
-      "pressureChart": {
+      "lscStart": { "value": 10, "source": "fox-fork-3638-2025", "note": "GRIP X2 initial setup: 'back them out (counterclockwise) 5 clicks for High-speed and 10 clicks for Low-speed compression'" },
+      "hscStart": { "value": 5, "source": "fox-fork-3638-2025", "note": "GRIP X2 initial setup, see lscStart" },      "pressureChart": {
         "value": [66, 70, 74, 78, 82, 86, 89, 94, 99, 105, 109, 113, 117],
         "source": "fox-fork-3638-2025",
         "note": "FLOAT column, psi"

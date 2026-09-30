@@ -42,6 +42,13 @@ sealed class RowSpec {
     abstract val stripe: Stripe
     abstract val hint: TextSpec?
 
+    /**
+     * Whose figure [start] is ("Fox", "Mondraker") — the deviation then reads "… than the Fox
+     * recommendation". Null = a starting value of the app (owner decision: deviation is shown
+     * relative to the starting value and labelled as such).
+     */
+    abstract val referenceMaker: String?
+
     data class Stepper(
         override val id: String,
         override val labelResId: Int,
@@ -58,6 +65,7 @@ sealed class RowSpec {
         override val hint: TextSpec?,
         /** e.g. fork sag: value / travelMm — shown instead of the static hint. */
         val derivedPercentDivisor: Double? = null,
+        override val referenceMaker: String? = null,
     ) : RowSpec() {
         /** Starting value in every Vorlage: the manufacturer's figure where one exists (Basis column). */
         val start: Double get() = defaults[Scenario.BASIS.index]
@@ -72,6 +80,7 @@ sealed class RowSpec {
         override val hint: TextSpec?,
         /** Display label per stored option; options without one (e.g. "High"/"Low") show as stored. */
         val optionLabels: Map<String, Int> = emptyMap(),
+        override val referenceMaker: String? = null,
     ) : RowSpec() {
         val start: String get() = defaults[Scenario.BASIS.index]
     }
@@ -165,6 +174,7 @@ object ScenarioData {
                 RowSpec.Stepper(
                     id = "f_psi", labelResId = R.string.label_f_psi, unitResId = R.string.unit_psi,
                     stripe = Stripe.SPRING, step = 1.0, max = maxPsi, defaults = psiDefaults, hint = psiHint,
+                    referenceMaker = fork.chartSource.takeIf { fork.pressureChart != null },
                 ),
             )
             add(
@@ -172,6 +182,7 @@ object ScenarioData {
                     id = "f_sp", labelResId = R.string.label_f_sp, unitResId = R.string.unit_stk,
                     stripe = Stripe.SPRING, step = 1.0, max = fork.spacersMax?.toDouble(),
                     defaults = List(Scenario.count) { (fork.spacersStock ?: 1).toDouble() }, hint = spacerHint,
+                    referenceMaker = fork.chartSource.takeIf { fork.spacersStock != null },
                 ),
             )
             add(
@@ -187,6 +198,7 @@ object ScenarioData {
                     id = "f_lsc", labelResId = R.string.label_lsc, unitResId = null,
                     stripe = Stripe.COMP, step = 1.0, max = fork.lscMax.toDouble(),
                     defaults = clicks(FORK_LSC, fork.lscMax, tempC), hint = TextSpec.Res(R.string.hint_f_lsc),
+                    referenceMaker = fork.chartSource.takeIf { fork.lscStart != null },
                 ),
             )
             fork.hscMax?.let { hscMax ->
@@ -195,6 +207,7 @@ object ScenarioData {
                         id = "f_hsc", labelResId = R.string.label_hsc, unitResId = null,
                         stripe = Stripe.COMP, step = 1.0, max = hscMax.toDouble(),
                         defaults = clicks(FORK_HSC, hscMax, tempC), hint = TextSpec.Res(R.string.hint_f_hsc),
+                        referenceMaker = fork.chartSource.takeIf { fork.hscStart != null },
                     ),
                 )
             }
@@ -214,6 +227,7 @@ object ScenarioData {
                         } else {
                             TextSpec.Res(R.string.hint_f_lsr)
                         },
+                        referenceMaker = fork.chartSource.takeIf { lsrChart != null },
                     ),
                 )
                 fork.hsrMax?.let { hsrMax ->
@@ -232,6 +246,7 @@ object ScenarioData {
                             } else {
                                 TextSpec.Res(R.string.hint_f_hsr)
                             },
+                            referenceMaker = fork.chartSource.takeIf { hsrChart != null },
                         ),
                     )
                 }
@@ -268,6 +283,8 @@ object ScenarioData {
                     id = "s_rate", labelResId = R.string.label_s_rate, unitResId = R.string.unit_lbs,
                     stripe = Stripe.SPRING, step = bike.springRule?.stepLbs ?: SPRING_STEP_LBS, max = null,
                     defaults = List(Scenario.count) { installedLbs }, hint = rateHint,
+                    // Catalog shocks run the frame maker's stock spring; the rider's own shock and app-created bikes don't.
+                    referenceMaker = bike.makerName.takeIf { !shock.isCustom },
                 ),
             )
             add(
@@ -275,6 +292,8 @@ object ScenarioData {
                     id = "s_pre", labelResId = R.string.label_s_pre, unitResId = R.string.unit_klicks,
                     stripe = Stripe.SPRING, step = 1.0, max = 26.0,
                     defaults = listOf(8.0, 10.0, 10.0, 6.0, 8.0), hint = TextSpec.Res(shock.preloadHintResId),
+                    // Fox coil manual: 8 clicks from no play — the Basis value. Other shocks: app start value.
+                    referenceMaker = shock.maker.takeIf { shock.preloadHintResId == R.string.hint_s_pre_fox },
                 ),
             )
             add(

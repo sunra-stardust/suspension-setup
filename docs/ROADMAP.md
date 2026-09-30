@@ -21,8 +21,8 @@ plus the rider's own, e.g. "Nasse Wurzeln") the app holds a full set of values.
 |---|---|---|
 | 1 | **Infrastructure:** agent setup (`CLAUDE.md`, skills), push = release pipeline, OTA updater, rollback workflow, crash-loop safe mode, Robolectric UI + emulator upgrade tests, `github`/`play` flavors | ✅ shipped |
 | 2 | **Languages:** English default (`values/`), German (`values-de/`), in-app language choice, test: every key in both languages | ✅ shipped |
-| 3 | **Data model:** catalog as data files (model year, source, retrieval date per value); bikes + Vorlagen (create/edit/copy); manufacturer recommendation preselected + deviation display; JSON storage (backup-ready, additive/rollback-safe) with migration of today's values. Shipped in four steps: 3.1 catalog as data file ✅ · 3.2 JSON storage + migration ✅ · 3.3 bikes + Vorlagen UI ✅ · 3.4 deviation display | ▶ in progress |
-| 4 | **Research routine:** weekly cloud routine — finds new models/model years, reads manufacturer documents, second independent verification pass, conflicts → `data-conflict` issue instead of shipping | |
+| 3 | **Data model:** catalog as data files (model year, source, retrieval date per value); bikes + Vorlagen (create/edit/copy); manufacturer recommendation preselected + deviation display; JSON storage (backup-ready, additive/rollback-safe) with migration of today's values. Shipped in four steps: 3.1 catalog as data file ✅ · 3.2 JSON storage + migration ✅ · 3.3 bikes + Vorlagen UI ✅ · 3.4 deviation display ✅ | ✅ shipped |
+| 4 | **Research routine:** weekly cloud routine — finds new models/model years, reads manufacturer documents, second independent verification pass, conflicts → `data-conflict` issue instead of shipping | ▶ next |
 | later | Backup/restore · AI assistant · Google Play release (store listing, privacy policy, Play App Signing, AAB of the `play` flavor) | |
 
 ## Decisions

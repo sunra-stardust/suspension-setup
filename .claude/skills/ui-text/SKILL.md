@@ -23,7 +23,8 @@ A click counter counts **from closed**. On the dial, clockwise (zudrehen / close
 - Quantities (pressure, spacers, sag, preload, spring rate, tire pressure) use `+` / `−`.
 - Banned in damping-row strings and the whole Diagnose list, in every language: "plus", "minus", "erhöhen", "verringern", "increase", "decrease" — `DampingStringLintTest` enforces it.
 - A Diagnose action saying "zudrehen" / "Close" must have `RotationDirection.CLOCKWISE`, "aufdrehen" / "Open" `COUNTER_CLOCKWISE` — `DiagnoseDirectionConsistencyTest` enforces it per language. A new language needs its verbs added there.
-- Showing a deviation from the manufacturer on a damping row: say "2 Klicks weiter zu als Fox-Empfehlung" / "2 clicks more closed than Fox recommends", never "−2".
+- Showing a deviation on a damping row: "2 Klicks weiter zu als Fox-Empfehlung" / "2 clicks more closed than the Fox recommendation", never "−2" (`deviation_clicks_*` plurals, covered by `DampingStringLintTest`). Quantity rows may use a sign ("+6 psi gegenüber Fox-Empfehlung").
+- Name a manufacturer only when the starting value is that manufacturer's figure (`RowSpec.referenceMaker`, pinned by `DeviationTest`); otherwise the reference is "Startwert" / "the starting value".
 
 ## Style
 

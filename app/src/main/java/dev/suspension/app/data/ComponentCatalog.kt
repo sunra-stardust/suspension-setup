@@ -34,6 +34,9 @@ data class ForkModel(
     val spacersMax: Int?,
     /** Short name of the chart's publisher for hints ("Fox"). */
     val chartSource: String? = null,
+    /** Manufacturer's recommended starting clicks from closed; null = none published. */
+    val lscStart: Int? = null,
+    val hscStart: Int? = null,
     /** Model years the source documents cover; empty for custom models or when no document names one. */
     val modelYears: List<Int> = emptyList(),
     /** Source per catalog field (e.g. "pressureChart"); empty for custom models. */

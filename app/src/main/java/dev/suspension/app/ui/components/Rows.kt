@@ -74,14 +74,21 @@ private fun StripedRow(stripe: Color, content: @Composable RowScope.() -> Unit) 
     }
 }
 
+/**
+ * Label, hint, and — when the rider moved off the starting value — the deviation line
+ * ("2 Klicks weiter zu als Fox-Empfehlung"), in ink so it stands out from the grey hint.
+ */
 @Composable
-private fun LabelAndHint(label: String, hint: String?) {
+private fun LabelAndHint(label: String, hint: String?, deviation: String? = null) {
     val colors = AppTheme.colors
     val type = AppTheme.type
     Column {
         Text(text = label, style = type.rowLabel, color = colors.ink)
         if (hint != null) {
             Text(text = hint, style = type.rowHint, color = colors.dim)
+        }
+        if (deviation != null) {
+            Text(text = "≠ $deviation", style = type.rowHint, color = colors.ink)
         }
     }
 }
@@ -95,6 +102,7 @@ fun StepperRow(
     valueText: String,
     onDecrement: () -> Unit,
     onIncrement: () -> Unit,
+    deviation: String? = null,
 ) {
     val colors = AppTheme.colors
     val type = AppTheme.type
@@ -104,7 +112,7 @@ fun StepperRow(
                 .weight(1f)
                 .align(Alignment.CenterVertically)
                 .padding(horizontal = 12.dp, vertical = 10.dp),
-        ) { LabelAndHint(label, hint) }
+        ) { LabelAndHint(label, hint, deviation) }
         Row(
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier.padding(end = 12.dp).align(Alignment.CenterVertically),
@@ -145,6 +153,7 @@ fun DampingRow(
     a11yBase: String,
     onClockwise: () -> Unit,
     onCounterClockwise: () -> Unit,
+    deviation: String? = null,
 ) {
     val colors = AppTheme.colors
     val type = AppTheme.type
@@ -202,7 +211,7 @@ fun DampingRow(
         if (maxWidth / fontScale < STACK_BELOW_WIDTH) {
             StripedRow(stripe) {
                 Column(modifier = Modifier.weight(1f).padding(horizontal = 12.dp, vertical = 10.dp)) {
-                    LabelAndHint(label, hint)
+                    LabelAndHint(label, hint, deviation)
                     Box(modifier = Modifier.padding(top = 8.dp)) { controlsRow() }
                 }
             }
@@ -213,7 +222,7 @@ fun DampingRow(
                         .weight(1f)
                         .align(Alignment.CenterVertically)
                         .padding(horizontal = 12.dp, vertical = 10.dp),
-                ) { LabelAndHint(label, hint) }
+                ) { LabelAndHint(label, hint, deviation) }
                 Box(modifier = Modifier.padding(end = 12.dp).align(Alignment.CenterVertically)) { controlsRow() }
             }
         }
@@ -263,6 +272,7 @@ fun ToggleRow(
     hint: String?,
     valueText: String,
     onToggle: () -> Unit,
+    deviation: String? = null,
 ) {
     val colors = AppTheme.colors
     val type = AppTheme.type
@@ -273,7 +283,7 @@ fun ToggleRow(
                 .weight(1f)
                 .align(Alignment.CenterVertically)
                 .padding(horizontal = 12.dp, vertical = 10.dp),
-        ) { LabelAndHint(label, hint) }
+        ) { LabelAndHint(label, hint, deviation) }
         Box(
             contentAlignment = Alignment.Center,
             modifier = Modifier

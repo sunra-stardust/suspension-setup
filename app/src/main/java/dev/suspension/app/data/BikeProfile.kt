@@ -31,6 +31,8 @@ data class Dropper(val defaultPsi: Double, val maxPsi: Double, val stepPsi: Doub
 data class BikeProfile(
     val id: String,
     val nameResId: Int,
+    /** Frame maker, for "than the Mondraker spec" on the installed spring; null = unknown frame. */
+    val makerName: String?,
     val stockForkId: String,
     val stockShockId: String,
     val stockSpringLbs: Double,
@@ -52,6 +54,7 @@ object BikeProfiles {
     val levelRr = BikeProfile(
         id = "mondraker_level_rr",
         nameResId = R.string.bike_level_rr_name,
+        makerName = "Mondraker",
         stockForkId = "fox38_gripx2",
         // The owner's own unit (HSC + LSC + one rebound adjuster, verified on the bike). Mondraker's
         // spec sheet lists a Performance Elite with LSC/LSR only; that and the Factory (all four
@@ -86,6 +89,7 @@ object BikeProfiles {
     val generic = BikeProfile(
         id = GENERIC_ID,
         nameResId = R.string.bike_generic_name,
+        makerName = null,
         stockForkId = levelRr.stockForkId,
         stockShockId = levelRr.stockShockId,
         stockSpringLbs = levelRr.stockSpringLbs,

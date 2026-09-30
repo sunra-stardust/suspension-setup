@@ -16,6 +16,9 @@ class DampingStringLintTest {
         "hint_f_lsc", "hint_f_hsc", "hint_f_lsr", "hint_f_hsr", "hint_f_reb_single",
         "hint_f_lsr_chart", "hint_f_hsr_chart",
         "hint_s_lsc", "hint_s_hsc", "hint_s_lsr", "hint_s_hsr", "hint_s_reb_single",
+        "deviation_clicks_closer#one", "deviation_clicks_closer#other",
+        "deviation_clicks_opener#one", "deviation_clicks_opener#other",
+        "reference_maker", "reference_start",
     )
 
     private val bannedWords = listOf("plus", "minus", "erhöhen", "verringern", "increase", "decrease")

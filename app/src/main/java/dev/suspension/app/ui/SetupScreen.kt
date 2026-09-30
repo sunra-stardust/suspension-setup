@@ -28,6 +28,7 @@ import androidx.compose.ui.unit.dp
 import dev.suspension.app.R
 import dev.suspension.app.data.BikeProfile
 import dev.suspension.app.data.ComponentKind
+import dev.suspension.app.data.Deviation
 import dev.suspension.app.data.Edit
 import dev.suspension.app.data.ForkModel
 import dev.suspension.app.data.Group
@@ -307,6 +308,7 @@ private fun ParamRow(row: RowSpec, edit: Edit?, onEdit: (Edit?) -> Unit, compone
         is RowSpec.Stepper -> {
             val value = RowValues.stepper(row, edit)
             val setValue = { newValue: Double -> onEdit(RowValues.editFor(row, newValue)) }
+            val deviation = Deviation.of(row, value)?.text()
 
             if (isDampingRow(row)) {
                 val componentPrefix = when (component) {
@@ -327,6 +329,7 @@ private fun ParamRow(row: RowSpec, edit: Edit?, onEdit: (Edit?) -> Unit, compone
                     a11yBase = "$componentPrefix $label".trim(),
                     onClockwise = { setValue(RotationLogic.nextValue(RotationDirection.CLOCKWISE, value, max)) },
                     onCounterClockwise = { setValue(RotationLogic.nextValue(RotationDirection.COUNTER_CLOCKWISE, value, max)) },
+                    deviation = deviation,
                 )
                 return
             }
@@ -345,10 +348,12 @@ private fun ParamRow(row: RowSpec, edit: Edit?, onEdit: (Edit?) -> Unit, compone
                 valueText = formatStepValue(value, row.step, locale),
                 onDecrement = { setValue(value - row.step) },
                 onIncrement = { setValue(value + row.step) },
+                deviation = deviation,
             )
         }
         is RowSpec.Toggle -> {
             val value = RowValues.toggle(row, edit)
+            val deviation = Deviation.of(row, value)?.text { option -> row.optionLabels[option]?.let { stringResource(it) } ?: option }
             ToggleRow(
                 stripe = stripeColor,
                 label = label,
@@ -358,6 +363,7 @@ private fun ParamRow(row: RowSpec, edit: Edit?, onEdit: (Edit?) -> Unit, compone
                     val currentIndex = row.options.indexOf(value).coerceAtLeast(0)
                     onEdit(RowValues.editFor(row, row.options[(currentIndex + 1) % row.options.size]))
                 },
+                deviation = deviation,
             )
         }
     }

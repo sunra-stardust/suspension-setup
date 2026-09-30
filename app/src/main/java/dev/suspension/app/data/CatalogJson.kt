@@ -121,6 +121,8 @@ object CatalogJson {
             spacersStock = if (e.json.has("spacersStock")) e.intOrNull("spacersStock") else null,
             spacersMax = if (e.json.has("spacersMax")) e.intOrNull("spacersMax") else null,
             chartSource = e.maker,
+            lscStart = if (e.json.has("lscStart")) e.intOrNull("lscStart") else null,
+            hscStart = if (e.json.has("hscStart")) e.intOrNull("hscStart") else null,
             modelYears = e.modelYears,
             provenance = e.provenance.toMap(),
         )

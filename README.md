@@ -27,7 +27,8 @@ Update-Prüfung; die Play-Variante hat keine Berechtigungen.
 |---|---|
 | Gabel-Luftdruck (Basis) | Fox-Drucktabelle (FLOAT-Spalte) für die Gewichtszeile des Fahrers, genau wie auf dem Casting-Aufkleber |
 | Gabel-Zugstufe LSR/HSR (Basis) | Fox-Zugstufentabelle 36/38 GRIP X2 nach Fahrergewicht |
-| Gabel LSC 10 / HSC 5 (Basis) | Fox-Startempfehlung „Klicks ab zu" |
+| Gabel LSC 10 / HSC 5 (Basis) | Fox-Startempfehlung „Klicks ab zu" (Handbuch 2025, GRIP X2: „back them out … 5 clicks for High-speed and 10 clicks for Low-speed compression") |
+| Abweichungsanzeige | „Fox-Empfehlung" / „Mondraker-Empfehlung" nur, wo der Startwert eine Herstellerangabe ist (Drucktabelle, Zugstufentabelle, LSC/HSC-Start, Spacer ab Werk, Serienfeder, Fox-Vorspannung); sonst „Startwert" |
 | Spacer, Maximaldruck | Fox-Handbuch (38/180 mm: 1 ab Werk, max. 4, max. 140 psi) |
 | Szenario-Abweichungen (Bikepark +12 psi …) | Eigene Abstimmung des Besitzers (Spec §6), als Offsets auf den Herstellerwert |
 | Federrate | Verbaute Feder (ab Werk 500 lbs, Gr. L/XL). Empfehlung im Hinweis per Faustregel, kalibriert auf diesen Rahmen (97,5 kg → 550 lbs, ±5 lbs/kg) — für Federraten gibt es keine Herstellertabelle, sie hängt vom Übersetzungsverhältnis des Rahmens ab |

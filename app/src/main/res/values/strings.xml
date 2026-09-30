@@ -337,6 +337,24 @@
     <string name="action_cancel">Cancel</string>
     <string name="name_label">Name</string>
 
+    <!-- Deviation from the starting value (phase 3.4). %2$s / %3$s = reference_maker or reference_start.
+         Damping rows use dial vocabulary (closed/open), never +/− (Change 01). -->
+    <string name="reference_maker">the %1$s recommendation</string>
+    <string name="reference_start">the starting value</string>
+    <plurals name="deviation_clicks_closer">
+        <item quantity="one">%1$d click more closed than %2$s</item>
+        <item quantity="other">%1$d clicks more closed than %2$s</item>
+    </plurals>
+    <plurals name="deviation_clicks_opener">
+        <item quantity="one">%1$d click more open than %2$s</item>
+        <item quantity="other">%1$d clicks more open than %2$s</item>
+    </plurals>
+    <!-- Quantity rows: %1$s = signed difference ("+6", "−0.1"), %2$s = unit, %3$s = reference. -->
+    <string name="deviation_amount">%1$s %2$s vs. %3$s</string>
+    <!-- Toggles: %1$s = the reference option, %2$s = maker. -->
+    <string name="deviation_option_start">Starting value: %1$s</string>
+    <string name="deviation_option_maker">%2$s recommendation: %1$s</string>
+
     <!-- Component picker. -->
     <string name="picker_title_fork">Choose fork</string>
     <string name="picker_title_shock">Choose shock</string>

@@ -27,14 +27,14 @@ class CatalogDataTest {
             lscMax = 18, hscMax = 8, reboundMode = ReboundMode.SPLIT, reboundMax = 16, hsrMax = 8,
             pressureChart = WeightChart(listOf(72.0, 76.0, 80.0, 84.0, 89.0, 93.0, 97.0, 102.0, 106.0, 110.0, 114.0, 119.0, 123.0)),
             maxPressurePsi = 140.0, lsrChart = gripX2Lsr, hsrChart = gripX2Hsr,
-            spacersStock = 1, spacersMax = 4, chartSource = "Fox",
+            spacersStock = 1, spacersMax = 4, chartSource = "Fox", lscStart = 10, hscStart = 5,
         ),
         ForkModel(
             id = "fox36_gripx2", displayName = "Fox 36 Factory GRIP X2", travelMm = 160,
             lscMax = 18, hscMax = 8, reboundMode = ReboundMode.SPLIT, reboundMax = 16, hsrMax = 8,
             pressureChart = WeightChart(listOf(66.0, 70.0, 74.0, 78.0, 82.0, 86.0, 89.0, 94.0, 99.0, 105.0, 109.0, 113.0, 117.0)),
             maxPressurePsi = 120.0, lsrChart = gripX2Lsr, hsrChart = gripX2Hsr,
-            spacersStock = 1, spacersMax = 6, chartSource = "Fox",
+            spacersStock = 1, spacersMax = 6, chartSource = "Fox", lscStart = 10, hscStart = 5,
         ),
     )
 
