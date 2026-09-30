@@ -115,6 +115,30 @@
       "spacersMax": { "value": 6, "source": "fox-fork-3638-2025" }
     }
   ],
+  "bikes": [
+    {
+      "id": "mondraker_level_rr_2026",
+      "maker": "Mondraker",
+      "model": "Level",
+      "trim": "RR",
+      "modelYears": [2026],
+      "profile": "mondraker_level_rr",
+      "stockFork": {
+        "value": { "catalogId": "fox38_gripx2", "name": "Fox 38 Factory GRIP X2", "travelMm": 180 },
+        "source": "mondraker-level-rr"
+      },
+      "stockShock": {
+        "value": { "catalogId": "fox_dhx2_hsc_lsr", "name": "Fox DHX2", "eyeToEyeMm": 205, "strokeMm": 65 },
+        "source": "owner",
+        "note": "Size 205x65 per Mondraker. Mondraker lists a Performance Elite (LSC/LSR); the owner's Level RR has HSC + LSC + one rebound knob (checked on the bike, see skill catalog-data 'Conflicts')"
+      },
+      "springLbsBySize": {
+        "value": { "L": 500, "XL": 500 },
+        "source": "mondraker-level-rr",
+        "note": "stock coil spring for sizes L/XL; other sizes not recorded yet"
+      }
+    }
+  ],
   "shocks": [
     {
       "id": "fox_dhx2_hsc_lsr",

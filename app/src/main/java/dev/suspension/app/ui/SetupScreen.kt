@@ -153,14 +153,25 @@ fun SetupScreen(
             }
             items(groups) { group ->
                 Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    GroupHeadingText(
-                        group = group,
-                        onClick = when (group.component) {
-                            ComponentKind.FORK -> onOpenForkPicker
-                            ComponentKind.SHOCK -> onOpenShockPicker
-                            null -> null
-                        },
-                    )
+                    val openPicker = when (group.component) {
+                        ComponentKind.FORK -> onOpenForkPicker
+                        ComponentKind.SHOCK -> onOpenShockPicker
+                        null -> null
+                    }
+                    GroupHeadingText(group = group, onClick = openPicker)
+                    val needsCheck = when (group.component) {
+                        ComponentKind.FORK -> fork.needsCheck
+                        ComponentKind.SHOCK -> shock.needsCheck
+                        null -> false
+                    }
+                    if (needsCheck && openPicker != null) {
+                        Text(
+                            text = stringResource(R.string.setup_needs_check),
+                            style = type.rowHint,
+                            color = colors.ink,
+                            modifier = Modifier.clickable(onClick = openPicker),
+                        )
+                    }
                     GroupCard {
                         group.rows.forEachIndexed { index, row ->
                             if (index > 0) RowDivider()

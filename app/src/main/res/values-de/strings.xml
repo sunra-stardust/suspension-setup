@@ -273,6 +273,18 @@
     <string name="bike_copy_name">%1$s (Kopie)</string>
     <string name="bike_delete_confirm">%1$s mit allen Werten löschen?</string>
     <string name="bike_parts">%1$s · %2$s</string>
+    <string name="bike_catalog_title">Bike auswählen</string>
+    <string name="bike_catalog_search_label">Hersteller oder Modell suchen</string>
+    <string name="bike_catalog_search_placeholder">z. B. Mondraker Level</string>
+    <string name="bike_catalog_no_match">Noch nicht im Katalog. Unten „Mein Bike ist nicht dabei“ wählen.</string>
+    <string name="bike_catalog_back">Zurück</string>
+    <string name="bike_catalog_size_hint">Rahmengröße — davon hängt die Feder ab Werk ab.</string>
+    <string name="bike_catalog_size_other">Andere Größe / weiß nicht</string>
+    <string name="bike_catalog_not_found">Mein Bike ist nicht dabei</string>
+    <plurals name="bike_catalog_models">
+        <item quantity="one">%d Modell</item>
+        <item quantity="other">%d Modelle</item>
+    </plurals>
     <string name="vorlage_new">Neue Vorlage</string>
     <string name="vorlage_new_hint">Startet auf jedem Bike als Kopie von %1$s.</string>
     <string name="vorlage_delete_confirm">Vorlage %1$s mit ihren Werten auf allen Bikes löschen?</string>
@@ -308,6 +320,11 @@
         <item quantity="one">Modelljahr %1$s</item>
         <item quantity="other">Modelljahre %1$s</item>
     </plurals>
+    <string name="picker_search_label">Hersteller oder Modell suchen</string>
+    <string name="picker_search_placeholder">z. B. Fox oder DHX2</string>
+    <string name="picker_search_no_match">Nicht im Katalog. Unten als eigenes Modell eingeben.</string>
+    <string name="setup_needs_check">Aus den Daten des Bike-Herstellers übernommen — die Klick-Anzahlen sind Platzhalter. Tippen und am Bike prüfen.</string>
+    <string name="picker_custom_needs_check">Vorbefüllt aus den Daten des Bike-Herstellers: Name und Maße stammen vom Hersteller, die Klick-Anzahlen sind Platzhalter. Am Bike zählen, dann übernehmen.</string>
     <string name="picker_custom_title">Eigenes Modell</string>
     <string name="picker_custom_name_label">Bezeichnung</string>
     <string name="picker_custom_name_placeholder">z. B. Öhlins RXF38</string>

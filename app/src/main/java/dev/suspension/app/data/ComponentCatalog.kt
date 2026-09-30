@@ -41,6 +41,8 @@ data class ForkModel(
     val modelYears: List<Int> = emptyList(),
     /** Source per catalog field (e.g. "pressureChart"); empty for custom models. */
     val provenance: Map<String, Provenance> = emptyMap(),
+    /** Custom part prefilled from a catalog bike's stock part: the click ranges are placeholders the rider should check. */
+    val needsCheck: Boolean = false,
 ) {
     val isCustom: Boolean get() = id == CUSTOM_ID
 }
@@ -72,6 +74,8 @@ data class ShockModel(
     val modelYears: List<Int> = emptyList(),
     /** Source per catalog field (e.g. "hscMax"); empty for custom models. */
     val provenance: Map<String, Provenance> = emptyMap(),
+    /** Custom part prefilled from a catalog bike's stock part: the click ranges are placeholders the rider should check. */
+    val needsCheck: Boolean = false,
 ) {
     val isCustom: Boolean get() = id == CUSTOM_ID
 }
@@ -90,9 +94,14 @@ object ComponentCatalog {
     val sources: Map<String, CatalogSource> get() = catalog.sources
     val forks: List<ForkModel> get() = catalog.forks
     val shocks: List<ShockModel> get() = catalog.shocks
+    val bikes: List<BikeModel> get() = catalog.bikes
 
     fun forkById(id: String): ForkModel? = forks.find { it.id == id }
     fun shockById(id: String): ShockModel? = shocks.find { it.id == id }
+    fun bikeById(id: String): BikeModel? = bikes.find { it.id == id }
+
+    /** Bike makers in the catalog, alphabetically. */
+    val bikeMakers: List<String> get() = bikes.map { it.maker }.distinct().sortedBy { it.lowercase() }
 }
 
 /** Preserves a click value's relative position in the old range when switching to a model with a different max. */

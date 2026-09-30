@@ -69,7 +69,15 @@ value and **not** the URL. It finds the maker's document itself and answers valu
 Only for forks and shocks whose fields needed by `catalog.json` (see `CatalogJson.kt`,
 `CatalogDataTest`) are all `verified`: add or update the catalog entry per skill `catalog-data`
 (sources, model years, notes; `CatalogDataTest` pins the new values; README source table),
-set `catalogId`. Bike models stay in `research/` — the app has no bike catalog yet.
+set `catalogId`.
+
+Bike models go into `catalog.json` → `bikes` when `stockForkBySpec`/`stockShockBySpec` for that
+trim are `verified`: one entry per maker + model + trim + model year (`id` like
+`mondraker_level_rr_2026`, fields `maker`, `model`, `trim`, `modelYears`, `stockFork`,
+`stockShock` as `{ "catalogId": <component id or null>, "name", "travelMm" | "eyeToEyeMm",
+"strokeMm" }`, optional `springLbsBySize` `{ "<size>": lbs }` only from a verified per-size table).
+`catalogId` only when that exact component (and adjuster set) is in the catalog; otherwise `null`
+and the app prefills an own part from `name` and the dimensions. Pin new bikes in `CatalogDataTest`.
 Anything touching `app/` must pass `./gradlew verify`.
 
 ## 5. Hand over for review

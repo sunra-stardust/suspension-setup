@@ -1,5 +1,6 @@
 package dev.suspension.app
 
+import dev.suspension.app.data.BikeProfiles
 import dev.suspension.app.data.CatalogJson
 import dev.suspension.app.data.ComponentCatalog
 import dev.suspension.app.data.ForkModel
@@ -7,6 +8,7 @@ import dev.suspension.app.data.ReboundMode
 import dev.suspension.app.data.ShockModel
 import dev.suspension.app.data.WeightChart
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertNotNull
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
@@ -111,5 +113,42 @@ class CatalogDataTest {
                "pressureChart":{"value":[1,2,3],"source":"s"}}],"shocks":[]}
         """.trimIndent()
         assertThrows<IllegalArgumentException> { CatalogJson.parse(json) }
+    }
+
+    @Test
+    fun `the Level RR 2026 is in the bike catalog on its stock parts`() {
+        val bike = ComponentCatalog.bikeById("mondraker_level_rr_2026")
+        assertNotNull(bike)
+        bike!!
+        assertEquals("Mondraker Level RR 2026", bike.displayName)
+        assertEquals(BikeProfiles.levelRr.id, bike.profileId)
+        assertEquals(BikeProfiles.levelRr.stockForkId, bike.stockFork.catalogId)
+        assertEquals(BikeProfiles.levelRr.stockShockId, bike.stockShock.catalogId)
+        assertEquals(mapOf("L" to 500.0, "XL" to 500.0), bike.springLbsBySize)
+        assertEquals(listOf("Mondraker"), ComponentCatalog.bikeMakers)
+    }
+
+    @Test
+    fun `every bike field names a source`() {
+        val missing = ComponentCatalog.bikes.flatMap { b -> (listOf("stockFork", "stockShock") - b.provenance.keys).map { "${b.id}.$it" } }
+        assertTrue(missing.isEmpty(), "Fields without source: $missing")
+    }
+
+    @Test
+    fun `a bike pointing at an unknown fork is rejected`() {
+        val json = """
+            {"schemaVersion":1,"sources":{"s":{"title":"t","url":"u","modelYears":[2026],"retrieved":"2026-01-01"}},
+             "forks":[],"shocks":[],
+             "bikes":[{"id":"b","maker":"M","model":"X","modelYears":[2026],
+               "stockFork":{"value":{"catalogId":"nope","name":"F"},"source":"s"},
+               "stockShock":{"value":{"catalogId":null,"name":"S"},"source":"s"}}]}
+        """.trimIndent()
+        assertThrows<IllegalArgumentException> { CatalogJson.parse(json) }
+    }
+
+    @Test
+    fun `a catalog without bikes still parses`() {
+        val json = """{"schemaVersion":1,"sources":{},"forks":[],"shocks":[]}"""
+        assertTrue(CatalogJson.parse(json).bikes.isEmpty())
     }
 }

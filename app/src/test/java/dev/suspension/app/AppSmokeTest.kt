@@ -98,6 +98,32 @@ class AppSmokeTest {
     }
 
     @Test
+    fun `a new bike is picked from the catalog on its stock parts`() {
+        compose.onNodeWithText(str(R.string.app_header_title, str(R.string.bike_level_rr_name)), substring = true).performClick()
+        compose.onNodeWithText(str(R.string.bike_new)).performClick()
+        compose.onNodeWithText(str(R.string.bike_catalog_title)).assertIsDisplayed()
+        compose.onNodeWithText("Mondraker").performClick()
+        compose.onNodeWithText("Mondraker Level RR 2026").performClick()
+        compose.onNodeWithText("L").performClick()
+
+        compose.onNodeWithText(str(R.string.app_header_title, "Mondraker Level RR 2026"), substring = true).assertIsDisplayed()
+    }
+
+    @Test
+    fun `a bike that isn't listed can still be added by name`() {
+        compose.onNodeWithText(str(R.string.app_header_title, str(R.string.bike_level_rr_name)), substring = true).performClick()
+        compose.onNodeWithText(str(R.string.bike_new)).performClick()
+        compose.onNodeWithContentDescription(str(R.string.bike_catalog_search_label)).performTextInput("Canyon Strive")
+        compose.onNodeWithText(str(R.string.bike_catalog_no_match)).assertIsDisplayed()
+        compose.onNodeWithText(str(R.string.bike_catalog_not_found)).performClick()
+        compose.onNodeWithContentDescription(str(R.string.name_label)).performTextInput("Strive")
+        compose.onNodeWithText(str(R.string.action_save)).performClick()
+        compose.onNodeWithText(str(R.string.picker_close)).performClick()
+
+        compose.onNodeWithText(str(R.string.app_header_title, "Strive"), substring = true).assertIsDisplayed()
+    }
+
+    @Test
     fun `every tab renders`() {
         compose.onNodeWithText(str(R.string.tab_diagnose)).performClick()
         compose.onAllNodesWithText(str(R.string.diag_symptom_1)).onFirst().assertIsDisplayed()

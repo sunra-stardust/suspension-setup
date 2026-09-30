@@ -22,6 +22,7 @@ data class Catalog(
     val sources: Map<String, CatalogSource>,
     val forks: List<ForkModel>,
     val shocks: List<ShockModel>,
+    val bikes: List<BikeModel> = emptyList(),
 )
 
 /**
@@ -63,7 +64,16 @@ object CatalogJson {
         val ids = (forks.map { it.id } + shocks.map { it.id })
         require(ids.size == ids.toSet().size) { "Duplicate catalog ids: ${ids.groupBy { it }.filter { it.value.size > 1 }.keys}" }
         require(CUSTOM_ID !in ids) { "\"$CUSTOM_ID\" is reserved for the rider's own model" }
-        return Catalog(sources, forks, shocks)
+
+        val bikes = root.optJSONArray("bikes")?.objects().orEmpty().map { parseBike(Entry(it, sources)) }
+        val bikeIds = bikes.map { it.id }
+        require(bikeIds.size == bikeIds.toSet().size) { "Duplicate bike ids: ${bikeIds.groupBy { it }.filter { it.value.size > 1 }.keys}" }
+        for (b in bikes) {
+            b.stockFork.catalogId?.let { id -> require(forks.any { it.id == id }) { "${b.id}.stockFork: unknown fork \"$id\"" } }
+            b.stockShock.catalogId?.let { id -> require(shocks.any { it.id == id }) { "${b.id}.stockShock: unknown shock \"$id\"" } }
+            b.profileId?.let { id -> require(BikeProfiles.all.any { it.id == id }) { "${b.id}.profile: unknown bike profile \"$id\"" } }
+        }
+        return Catalog(sources, forks, shocks, bikes)
     }
 
     /** One catalog entry; each field is `{ "value": …, "source": "<id>", "note": "…" }`. */
@@ -84,6 +94,7 @@ object CatalogJson {
         fun bool(name: String): Boolean = field(name).getBoolean("value")
         fun string(name: String): String = field(name).getString("value")
         fun intOrNull(name: String): Int? = field(name).let { if (it.isNull("value")) null else it.getInt("value") }
+        fun obj(name: String): JSONObject = field(name).getJSONObject("value")
 
         fun chartOrNull(name: String): WeightChart? {
             if (!json.has(name)) return null
@@ -153,7 +164,38 @@ object CatalogJson {
         )
     }
 
-    private fun JSONObject.optStringOrNull(name: String): String? = if (isNull(name)) null else getString(name)
+    /**
+     * A bike as sold. `stockFork`/`stockShock` are `{ "catalogId": "<fork/shock id>" | null, "name": …,
+     * "travelMm"/"eyeToEyeMm"/"strokeMm": … }`; `springLbsBySize` is `{ "<size>": lbs }` and optional.
+     */
+    private fun parseBike(e: Entry): BikeModel {
+        fun part(name: String): StockPart {
+            val o = e.obj(name)
+            return StockPart(
+                catalogId = o.optStringOrNull("catalogId"),
+                name = o.getString("name"),
+                travelMm = o.optIntOrNull("travelMm"),
+                eyeToEyeMm = o.optIntOrNull("eyeToEyeMm"),
+                strokeMm = o.optIntOrNull("strokeMm"),
+            )
+        }
+        val springs = if (e.json.has("springLbsBySize")) e.obj("springLbsBySize") else JSONObject()
+        return BikeModel(
+            id = e.id,
+            maker = e.maker,
+            model = e.json.getString("model"),
+            trim = e.json.optString("trim", ""),
+            modelYears = e.modelYears,
+            profileId = e.json.optStringOrNull("profile"),
+            stockFork = part("stockFork"),
+            stockShock = part("stockShock"),
+            springLbsBySize = springs.keys().asSequence().associateWith { springs.getDouble(it) },
+            provenance = e.provenance.toMap(),
+        )
+    }
+
+    private fun JSONObject.optStringOrNull(name: String): String? = if (!has(name) || isNull(name)) null else getString(name)
+    private fun JSONObject.optIntOrNull(name: String): Int? = if (!has(name) || isNull(name)) null else getInt(name)
     private fun JSONArray.ints(): List<Int> = (0 until length()).map { getInt(it) }
     private fun JSONArray.objects(): List<JSONObject> = (0 until length()).map { getJSONObject(it) }
 }
