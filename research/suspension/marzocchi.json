@@ -1,0 +1,779 @@
+{
+  "maker": "marzocchi",
+  "products": [
+    {
+      "id": "marzocchi-bomber-z1-2026",
+      "name": "Marzocchi Bomber Z1",
+      "type": "fork",
+      "modelYears": [
+        2026
+      ],
+      "catalogId": null,
+      "fields": {
+        "travelMm": {
+          "value": [
+            100,
+            150,
+            160
+          ],
+          "status": "single",
+          "url": "https://bike.marzocchi.com/products/bomber-z1",
+          "retrieved": "2026-09-30",
+          "quote": "TRAVEL: 100mm, 150mm, 160mm",
+          "where": "product page, Specs tab (feature list also says 'Travel options from 150-160mm, with a 100mm DJ version'; owner's guide spacer table additionally lists 140 and 170 mm)",
+          "note": "second pass: [150, 160] - spec tab \"TRAVEL: 100mm, 150mm, 160mm\" (100 = DJ version); owner guide tables list 140-170"
+        },
+        "wheelSize": {
+          "value": [
+            "27.5",
+            "29"
+          ],
+          "status": "single",
+          "url": "https://bike.marzocchi.com/products/bomber-z1",
+          "retrieved": "2026-09-30",
+          "quote": "WHEEL: 27.5\", 29\"",
+          "where": "product page, Specs tab"
+        },
+        "stanchionMm": {
+          "value": 36,
+          "status": "single",
+          "url": "https://bike.marzocchi.com/products/bomber-z1",
+          "retrieved": "2026-09-30",
+          "quote": "STANCHIONS: 36mm Black Anodizing",
+          "where": "product page, Specs tab"
+        },
+        "damper": {
+          "value": "RAIL",
+          "status": "verified",
+          "url": "https://bike.marzocchi.com/products/bomber-z1",
+          "retrieved": "2026-09-30",
+          "quote": "DAMPING: RAIL",
+          "where": "product page, Specs tab",
+          "verifiedBy": {
+            "url": "https://bike.marzocchi.com/products/bomber-z1",
+            "retrieved": "2026-09-30",
+            "quote": "DAMPING: RAIL | Updated and intuitive Rail Damper, now with pressure balancing",
+            "where": "product page Specs tab / Features"
+          }
+        },
+        "springType": {
+          "value": "air",
+          "status": "single",
+          "url": "https://bike.marzocchi.com/products/bomber-z1",
+          "retrieved": "2026-09-30",
+          "quote": "SPRING: Air Spring",
+          "where": "product page, Specs tab"
+        },
+        "rakeMm": {
+          "value": 44,
+          "status": "single",
+          "url": "https://bike.marzocchi.com/products/bomber-z1",
+          "retrieved": "2026-09-30",
+          "quote": "RAKE: 44mm",
+          "where": "product page, Specs tab"
+        },
+        "axle": {
+          "value": "15QRx110",
+          "status": "single",
+          "url": "https://bike.marzocchi.com/products/bomber-z1",
+          "retrieved": "2026-09-30",
+          "quote": "AXLE: 15QRx110",
+          "where": "product page, Specs tab"
+        },
+        "compressionAdjuster": {
+          "value": "2-position sweep lever (OPEN to FIRM, positions between usable), not clicked",
+          "status": "single",
+          "url": "https://cdn.shopify.com/s/files/1/0618/4989/5143/files/605-00-311_REV_B_-_Marzocchi_BOMBER_Z1_Owners_Guide.pdf?v=1712168145",
+          "retrieved": "2026-09-30",
+          "quote": "The 2-Position Sweep Adjust lever is useful to make on-the-fly adjustments to control fork performance. Use the positions between OPEN and FIRM modes to fine-tune your compression damping.",
+          "where": "605-00-311 REV B BOMBER Z1 Owner's Guide (©2024), English section, p.11 'RAIL COMPRESSION ADJUST'"
+        },
+        "lscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No click count stated. Compression is a sweep lever: owner's guide p.11 'The 2-Position Sweep Adjust lever ... Use the positions between OPEN and FIRM modes'; product page 'A single sweep compression adjuster lets you lock out for climbing and open it up'. See compressionAdjuster."
+        },
+        "hscMax": {
+          "value": null,
+          "status": "verified",
+          "url": "https://bike.marzocchi.com/products/bomber-z1",
+          "retrieved": "2026-09-30",
+          "quote": "A single sweep compression adjuster lets you lock out for climbing and open it up for full gas sending.",
+          "where": "product page, section 'A Rail Good Time' (only one compression adjuster)",
+          "verifiedBy": {
+            "url": "https://bike.marzocchi.com/products/bomber-z1",
+            "retrieved": "2026-09-30",
+            "quote": "A single sweep compression adjuster lets you lock out for climbing and open it up for full gas sending.",
+            "where": "product page 'A Rail Good Time' section"
+          }
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://cdn.shopify.com/s/files/1/0618/4989/5143/files/605-00-311_REV_B_-_Marzocchi_BOMBER_Z1_Owners_Guide.pdf?v=1712168145",
+          "retrieved": "2026-09-30",
+          "quote": "RAIL REBOUND Turn your rebound knob to the closed position, clockwise until it stops. Then turn it counter-clockwise to the number of clicks shown in the table on the previous page.",
+          "where": "605-00-311 REV B BOMBER Z1 Owner's Guide (©2024), English section, p.11 'REBOUND ADJUSTMENT' (product page: 'Simple rebound adjustment for the set-and-forget rider')",
+          "verifiedBy": {
+            "url": "https://cdn.shopify.com/s/files/1/0618/4989/5143/files/605-00-311_REV_B_-_Marzocchi_BOMBER_Z1_Owners_Guide.pdf?v=1712168145",
+            "retrieved": "2026-09-30",
+            "quote": "Turn your rebound knob to the closed position, clockwise until it stops. Then turn it counter-clockwise to the number of clicks shown in the table on the previous page.",
+            "where": "605-00-311 REV B p.11 'RAIL REBOUND'"
+          }
+        },
+        "reboundMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Total rebound clicks not stated. Owner's guide p.10 table gives starting clicks 1-13 from closed; p.11 diagram numbers 1-9 only. Neither is a stated total. Checked product page, Z1 owner's guide 605-00-311 REV B, manuals page."
+        },
+        "hsrMax": {
+          "value": null,
+          "status": "verified",
+          "url": "https://bike.marzocchi.com/products/bomber-z1",
+          "retrieved": "2026-09-30",
+          "quote": "Simple rebound adjustment for the set-and-forget rider",
+          "where": "product page, Features (owner's guide p.11 describes only one rebound knob 'RAIL REBOUND')",
+          "verifiedBy": {
+            "url": "https://bike.marzocchi.com/products/bomber-z1",
+            "retrieved": "2026-09-30",
+            "quote": "Simple rebound adjustment for the set-and-forget rider",
+            "where": "product page Features"
+          }
+        },
+        "lscStart": {
+          "value": null,
+          "status": "missing",
+          "note": "No compression starting setting given (guide only says set sag with lever in OPEN)."
+        },
+        "hscStart": {
+          "value": null,
+          "status": "missing",
+          "note": "No HSC adjuster."
+        },
+        "maxPressurePsi": {
+          "value": 120,
+          "status": "verified",
+          "url": "https://cdn.shopify.com/s/files/1/0618/4989/5143/files/605-00-311_REV_B_-_Marzocchi_BOMBER_Z1_Owners_Guide.pdf?v=1712168145",
+          "retrieved": "2026-09-30",
+          "quote": "Do not exceed maximum air pressure: BOMBER Z1 maximum air pressure is 120 psi. Minimum air pressure is: 40 psi.",
+          "where": "605-00-311 REV B BOMBER Z1 Owner's Guide (©2024), English section, p.7 warning box (repeated p.10)",
+          "verifiedBy": {
+            "url": "https://cdn.shopify.com/s/files/1/0618/4989/5143/files/605-00-311_REV_B_-_Marzocchi_BOMBER_Z1_Owners_Guide.pdf?v=1712168145",
+            "retrieved": "2026-09-30",
+            "quote": "Do not exceed maximum air pressure: BOMBER Z1 maximum air pressure is 120 psi. Minimum air pressure is: 40 psi.",
+            "where": "605-00-311 REV B p.7 and p.10"
+          }
+        },
+        "minPressurePsi": {
+          "value": 40,
+          "status": "single",
+          "url": "https://cdn.shopify.com/s/files/1/0618/4989/5143/files/605-00-311_REV_B_-_Marzocchi_BOMBER_Z1_Owners_Guide.pdf?v=1712168145",
+          "retrieved": "2026-09-30",
+          "quote": "Minimum air pressure is: 40 psi.",
+          "where": "605-00-311 REV B BOMBER Z1 Owner's Guide (©2024), English section, p.7 warning box"
+        },
+        "pressureTable": {
+          "value": {
+            "unit": "psi",
+            "rows": [
+              {
+                "rider": "120-130 lbs",
+                "value": 55
+              },
+              {
+                "rider": "130-140 lbs",
+                "value": 59
+              },
+              {
+                "rider": "140-150 lbs",
+                "value": 63
+              },
+              {
+                "rider": "150-160 lbs",
+                "value": 67
+              },
+              {
+                "rider": "160-170 lbs",
+                "value": 72
+              },
+              {
+                "rider": "170-180 lbs",
+                "value": 76
+              },
+              {
+                "rider": "180-190 lbs",
+                "value": 80
+              },
+              {
+                "rider": "190-200 lbs",
+                "value": 85
+              },
+              {
+                "rider": "200-210 lbs",
+                "value": 89
+              },
+              {
+                "rider": "210-220 lbs",
+                "value": 93
+              },
+              {
+                "rider": "220-230 lbs",
+                "value": 97
+              },
+              {
+                "rider": "230-240 lbs",
+                "value": 102
+              },
+              {
+                "rider": "240-250 lbs",
+                "value": 106
+              }
+            ]
+          },
+          "status": "verified",
+          "url": "https://cdn.shopify.com/s/files/1/0618/4989/5143/files/605-00-311_REV_B_-_Marzocchi_BOMBER_Z1_Owners_Guide.pdf?v=1712168145",
+          "retrieved": "2026-09-30",
+          "quote": "Suggested Starting Points for Setting Sag | Rider Weight (lbs) | Rider Weight (kgs) | BOMBER Z1 Pressure | BOMBER Z1 Rebound Setting | 120-130 | 54-59 | 55 psi (3.8 bar) | 13 ... 240-250 | 109-113 | 106 psi (7.3 bar) | 1",
+          "where": "605-00-311 REV B BOMBER Z1 Owner's Guide (©2024), English section, p.10 table 'Suggested Starting Points for Setting Sag' (13 rows, lbs column; kg column also printed)",
+          "verifiedBy": {
+            "url": "https://cdn.shopify.com/s/files/1/0618/4989/5143/files/605-00-311_REV_B_-_Marzocchi_BOMBER_Z1_Owners_Guide.pdf?v=1712168145",
+            "retrieved": "2026-09-30",
+            "quote": "Suggested Starting Points for Setting Sag | Rider Weight (lbs) | Rider Weight (kgs) | BOMBER Z1 Pressure | BOMBER Z1 Rebound Setting | 120-130 54-59 55 psi (3.8 bar) 13 | 130-140 59-64 59 psi (4.1 bar) 12 | 140-150 64-68 63 psi (4.3 bar) 11 | 150-160 68-73 67 psi (4.6 bar) 10 | 160-170 73-77 72 psi (5.0 bar) 9 | 170-180 77-82 76 psi (5.2 bar) 8 | 180-190 82-86 80 psi (5.5 bar) 7 | 190-200 86-91 85 psi (5.9 bar) 6 | 200-210 91-95 89 psi (6.1 bar) 5 | 210-220 95-100 93 psi (6.4 bar) 4 | 220-230 100-104 97 psi (6.7 bar) 3 | 230-240 104-109 102 psi (7.0 bar) 2 | 240-250 109-113 106 psi (7.3 bar) 1",
+            "where": "605-00-311 REV B p.10"
+          }
+        },
+        "reboundStartByRider": {
+          "value": {
+            "unit": "clicks from closed",
+            "rows": [
+              {
+                "rider": "120-130 lbs",
+                "value": 13
+              },
+              {
+                "rider": "130-140 lbs",
+                "value": 12
+              },
+              {
+                "rider": "140-150 lbs",
+                "value": 11
+              },
+              {
+                "rider": "150-160 lbs",
+                "value": 10
+              },
+              {
+                "rider": "160-170 lbs",
+                "value": 9
+              },
+              {
+                "rider": "170-180 lbs",
+                "value": 8
+              },
+              {
+                "rider": "180-190 lbs",
+                "value": 7
+              },
+              {
+                "rider": "190-200 lbs",
+                "value": 6
+              },
+              {
+                "rider": "200-210 lbs",
+                "value": 5
+              },
+              {
+                "rider": "210-220 lbs",
+                "value": 4
+              },
+              {
+                "rider": "220-230 lbs",
+                "value": 3
+              },
+              {
+                "rider": "230-240 lbs",
+                "value": 2
+              },
+              {
+                "rider": "240-250 lbs",
+                "value": 1
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://cdn.shopify.com/s/files/1/0618/4989/5143/files/605-00-311_REV_B_-_Marzocchi_BOMBER_Z1_Owners_Guide.pdf?v=1712168145",
+          "retrieved": "2026-09-30",
+          "quote": "BOMBER Z1 Rebound Setting ... 120-130 ... 13 ... 240-250 ... 1",
+          "where": "605-00-311 REV B BOMBER Z1 Owner's Guide (©2024), English section, p.10 same table, 'BOMBER Z1 Rebound Setting' column"
+        },
+        "spacersStock": {
+          "value": {
+            "170": 1,
+            "160": 2,
+            "150": 3,
+            "140": 4
+          },
+          "status": "verified",
+          "url": "https://cdn.shopify.com/s/files/1/0618/4989/5143/files/605-00-311_REV_B_-_Marzocchi_BOMBER_Z1_Owners_Guide.pdf?v=1712168145",
+          "retrieved": "2026-09-30",
+          "quote": "BOMBER Z1 Volume Spacer Configurations | Travel | Volume Spacers Factory Installed | *Max Volume Spacers | 170 mm 1 6 | 160 mm 2 7 | 150 mm 3 7 | 140 mm 4 8",
+          "where": "605-00-311 REV B BOMBER Z1 Owner's Guide (©2024), English section, p.12 table (keys = travel in mm)",
+          "verifiedBy": {
+            "url": "https://cdn.shopify.com/s/files/1/0618/4989/5143/files/605-00-311_REV_B_-_Marzocchi_BOMBER_Z1_Owners_Guide.pdf?v=1712168145",
+            "retrieved": "2026-09-30",
+            "quote": "BOMBER Z1 Volume Spacer Configurations | Travel / Volume Spacers Factory Installed / *Max Volume Spacers | 170 mm 1 6 | 160 mm 2 7 | 150 mm 3 7 | 140 mm 4 8",
+            "where": "605-00-311 REV B p.12"
+          }
+        },
+        "spacersMax": {
+          "value": {
+            "170": 6,
+            "160": 7,
+            "150": 7,
+            "140": 8
+          },
+          "status": "verified",
+          "url": "https://cdn.shopify.com/s/files/1/0618/4989/5143/files/605-00-311_REV_B_-_Marzocchi_BOMBER_Z1_Owners_Guide.pdf?v=1712168145",
+          "retrieved": "2026-09-30",
+          "quote": "BOMBER Z1 Volume Spacer Configurations | Travel | Volume Spacers Factory Installed | *Max Volume Spacers | 170 mm 1 6 | 160 mm 2 7 | 150 mm 3 7 | 140 mm 4 8",
+          "where": "605-00-311 REV B BOMBER Z1 Owner's Guide (©2024), English section, p.12 table (keys = travel in mm)",
+          "verifiedBy": {
+            "url": "https://cdn.shopify.com/s/files/1/0618/4989/5143/files/605-00-311_REV_B_-_Marzocchi_BOMBER_Z1_Owners_Guide.pdf?v=1712168145",
+            "retrieved": "2026-09-30",
+            "quote": "170 mm 1 6 | 160 mm 2 7 | 150 mm 3 7 | 140 mm 4 8",
+            "where": "605-00-311 REV B p.12"
+          }
+        },
+        "sagPercent": {
+          "value": {
+            "min": 15,
+            "max": 20
+          },
+          "status": "verified",
+          "url": "https://cdn.shopify.com/s/files/1/0618/4989/5143/files/605-00-311_REV_B_-_Marzocchi_BOMBER_Z1_Owners_Guide.pdf?v=1712168145",
+          "retrieved": "2026-09-30",
+          "quote": "Sag range should be set to 15–20% of total fork travel.",
+          "where": "605-00-311 REV B BOMBER Z1 Owner's Guide (©2024), English section, p.10 'SAG SETTING'",
+          "verifiedBy": {
+            "url": "https://cdn.shopify.com/s/files/1/0618/4989/5143/files/605-00-311_REV_B_-_Marzocchi_BOMBER_Z1_Owners_Guide.pdf?v=1712168145",
+            "retrieved": "2026-09-30",
+            "quote": "Sag range should be set to 15–20% of total fork travel.",
+            "where": "605-00-311 REV B p.10 'SAG SETTING'"
+          }
+        },
+        "manualUrl": {
+          "value": "https://cdn.shopify.com/s/files/1/0618/4989/5143/files/605-00-311_REV_B_-_Marzocchi_BOMBER_Z1_Owners_Guide.pdf?v=1712168145",
+          "status": "single",
+          "url": "https://bike.marzocchi.com/products/bomber-z1",
+          "retrieved": "2026-09-30",
+          "quote": "Tuning & Product Manuals ... Marzocchi Fork Owners Guide",
+          "where": "product page manual link (PDF on Marzocchi's Shopify CDN); doc number 605-00-311 REV B, ©MARZOCCHI 2024"
+        }
+      }
+    },
+    {
+      "id": "marzocchi-bomber-cr-2026",
+      "name": "Marzocchi Bomber CR",
+      "type": "shock",
+      "modelYears": [
+        2026
+      ],
+      "catalogId": null,
+      "fields": {
+        "sizesAvailable": {
+          "value": [
+            "7.5x2.0\"",
+            "7.875x2.0\"",
+            "7.875x2.25\"",
+            "8.5x2.5\"",
+            "8.75x2.75\"",
+            "210x50mm",
+            "210x55mm",
+            "230x60mm",
+            "230x65mm",
+            "250x75mm",
+            "185x52.5mm (Trunnion)",
+            "185x55mm (Trunnion)",
+            "205x60mm (Trunnion)",
+            "205x65mm (Trunnion)",
+            "225x75mm (Trunnion)"
+          ],
+          "status": "verified",
+          "url": "https://bike.marzocchi.com/products/bomber-cr-rear-shock",
+          "retrieved": "2026-09-30",
+          "quote": "Imperial: 7.5x2.0”, 7.875x2.0”, 7.875x2.25”, 8.5x2.5”, 8.75x2.75” Metric: 210x50mm, 210x55mm, 230x60mm, 230x65mm, 250x75mm Trunnion: 185x52.5mm, 185x55mm, 205x60mm, 205, 65mm, 225x75mm",
+          "where": "product page, Specs tab (printed '205, 65mm' read as 205x65 — the variant selector lists 'Metric Trunnion / 205mm / 65mm'; the selector additionally lists 'Imperial / 9.5\" / 3.0\"', not in Specs list)",
+          "verifiedBy": {
+            "url": "https://bike.marzocchi.com/products/bomber-cr-rear-shock",
+            "retrieved": "2026-09-30",
+            "quote": "Imperial: 7.5x2.0”, 7.875x2.0”, 7.875x2.25”, 8.5x2.5”, 8.75x2.75” Metric: 210x50mm, 210x55mm, 230x60mm, 230x65mm, 250x75mm Trunnion: 185x52.5mm, 185x55mm, 205x60mm, 205, 65mm, 225x75mm",
+            "where": "product page Specs tab + variant list"
+          }
+        },
+        "mount": {
+          "value": [
+            "standard eyelet",
+            "trunnion"
+          ],
+          "status": "single",
+          "url": "https://bike.marzocchi.com/products/bomber-cr-rear-shock",
+          "retrieved": "2026-09-30",
+          "quote": "Metric / 250mm / 75mm ... Metric Trunnion / 185mm / 55mm ... Imperial / 7.5\" / 2.0\"",
+          "where": "product page, variant selector 'Standard: Metric, Metric Trunnion, Imperial'"
+        },
+        "springType": {
+          "value": "coil",
+          "status": "single",
+          "url": "https://bike.marzocchi.com/products/bomber-cr-rear-shock",
+          "retrieved": "2026-09-30",
+          "quote": "Coil is back, and not just for gravity riders. ... the Bomber CR is your low-maintenance, high-performing coil solution.",
+          "where": "product page description"
+        },
+        "adjusters": {
+          "value": [
+            "spring preload",
+            "low-speed compression",
+            "rebound"
+          ],
+          "status": "single",
+          "url": "https://bike.marzocchi.com/products/bomber-cr-rear-shock",
+          "retrieved": "2026-09-30",
+          "quote": "3 simple adjustments; coil spring preload, low speed compression and rebound damping",
+          "where": "product page, Features"
+        },
+        "lscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No click count stated. Checked product page, Bomber CR Tuning Guide 605-00-205 REV A (p.4 only: 'Turning the LSC knob clockwise increases low-speed compression damping'), Rear Shock Owner's Guide 605-00-201 REV A. Also rendered tuning-guide pages 4-5 as images: no click numbers."
+        },
+        "hscMax": {
+          "value": null,
+          "status": "verified",
+          "url": "https://bike.marzocchi.com/products/bomber-cr-rear-shock",
+          "retrieved": "2026-09-30",
+          "quote": "3 simple adjustments; coil spring preload, low speed compression and rebound damping",
+          "where": "product page, Features (no HSC listed)",
+          "verifiedBy": {
+            "url": "https://bike.marzocchi.com/products/bomber-cr-rear-shock",
+            "retrieved": "2026-09-30",
+            "quote": "3 simple adjustments; coil spring preload, low speed compression and rebound damping",
+            "where": "product page Features"
+          }
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "single",
+          "url": "https://bike.marzocchi.com/products/bomber-cr-rear-shock",
+          "retrieved": "2026-09-30",
+          "quote": "3 simple adjustments; coil spring preload, low speed compression and rebound damping",
+          "where": "product page, Features"
+        },
+        "reboundMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No click count stated. Tuning guide p.5 only: 'Turning your rebound knob clockwise slows down rebound. Turning your rebound knob counter-clockwise speeds up rebound.' No starting-click table either."
+        },
+        "hsrMax": {
+          "value": null,
+          "status": "verified",
+          "url": "https://bike.marzocchi.com/products/bomber-cr-rear-shock",
+          "retrieved": "2026-09-30",
+          "quote": "3 simple adjustments; coil spring preload, low speed compression and rebound damping",
+          "where": "product page, Features (no HSR listed)",
+          "verifiedBy": {
+            "url": "https://bike.marzocchi.com/products/bomber-cr-rear-shock",
+            "retrieved": "2026-09-30",
+            "quote": "3 simple adjustments; coil spring preload, low speed compression and rebound damping",
+            "where": "product page Features"
+          }
+        },
+        "hasClimbLever": {
+          "value": false,
+          "status": "verified",
+          "url": "https://bike.marzocchi.com/products/bomber-cr-rear-shock",
+          "retrieved": "2026-09-30",
+          "quote": "3 simple adjustments; coil spring preload, low speed compression and rebound damping",
+          "where": "product page, Features (no lever/lockout listed; LSC is a knob per tuning guide p.4)",
+          "verifiedBy": {
+            "url": "https://bike.marzocchi.com/products/bomber-cr-rear-shock",
+            "retrieved": "2026-09-30",
+            "quote": "3 simple adjustments; coil spring preload, low speed compression and rebound damping",
+            "where": "product page Features"
+          }
+        },
+        "preloadGuide": {
+          "value": "Preload: tighten until spring no longer moves, then one more full turn; to reduce sag turn clockwise no more than two full turns, otherwise change spring rate.",
+          "status": "verified",
+          "url": "https://cdn.shopify.com/s/files/1/1640/5435/files/605-00-205_Marzocchi-BomberCR-Tuning-Guide-white-RevA_00f1410e-bd39-47fa-954d-01d6823cfe55.pdf?1415",
+          "retrieved": "2026-09-30",
+          "quote": "To decrease sag, turn the preload adjuster clockwise no more than two full turns. If you cannot achieve 30% sag by turning the preload adjuster, you will need to obtain a higher rate spring.",
+          "where": "Bomber CR Tuning Guide 605-00-205 REV A (©2018), p.2 'MEASURE AND ADJUST SAG' step 3; installation: Rear Shock Owner's Guide 605-00-201 REV A p.4 'Tighten the preload adjuster just until the spring no longer moves, then turn the preload adjuster one additional full turn.' (https://cdn.shopify.com/s/files/1/0252/8700/0144/files/605-00-201_RevA_2019_Marzocchi_Rear_Shock_User_Manual.pdf?v=1659473086)",
+          "verifiedBy": {
+            "url": "https://cdn.shopify.com/s/files/1/1640/5435/files/605-00-205_Marzocchi-BomberCR-Tuning-Guide-white-RevA_00f1410e-bd39-47fa-954d-01d6823cfe55.pdf?1415",
+            "retrieved": "2026-09-30",
+            "quote": "To increase sag, turn the preload adjuster counter-clockwise. If you cannot achieve 30% sag by turning the preload adjuster, you will need to obtain a lower rate spring. To decrease sag, turn the preload adjuster clockwise no more than two full turns. If you cannot achieve 30% sag by turning the preload adjuster, you will need to obtain a higher rate spring.",
+            "where": "605-00-205 REV A p.2 'MEASURE AND ADJUST SAG'"
+          }
+        },
+        "sagPercent": {
+          "value": 30,
+          "status": "verified",
+          "url": "https://cdn.shopify.com/s/files/1/1640/5435/files/605-00-205_Marzocchi-BomberCR-Tuning-Guide-white-RevA_00f1410e-bd39-47fa-954d-01d6823cfe55.pdf?1415",
+          "retrieved": "2026-09-30",
+          "quote": "Sag should be set to 30% of total shock travel.",
+          "where": "Bomber CR Tuning Guide p.2 'SAG SETTING'",
+          "verifiedBy": {
+            "url": "https://cdn.shopify.com/s/files/1/1640/5435/files/605-00-205_Marzocchi-BomberCR-Tuning-Guide-white-RevA_00f1410e-bd39-47fa-954d-01d6823cfe55.pdf?1415",
+            "retrieved": "2026-09-30",
+            "quote": "Sag should be set to 30% of total shock travel.",
+            "where": "605-00-205 REV A p.2"
+          }
+        },
+        "sagTableMm": {
+          "value": {
+            "50": 15,
+            "55": 17,
+            "65": 19,
+            "70": 21,
+            "75": 22
+          },
+          "status": "single",
+          "url": "https://cdn.shopify.com/s/files/1/1640/5435/files/605-00-205_Marzocchi-BomberCR-Tuning-Guide-white-RevA_00f1410e-bd39-47fa-954d-01d6823cfe55.pdf?1415",
+          "retrieved": "2026-09-30",
+          "quote": "Suggested Sag Measurements Travel 30% sag 50 mm/ 2.0in 15 mm/ 0.6in 55 mm/ 2.25in 17 mm/ 0.68in 65 mm/ 2.50in 19 mm/ 0.75in 70 mm/ 2.75in 21 mm/ 0.82in 75 mm/ 3.00in 22 mm/ 0.90in",
+          "where": "Bomber CR Tuning Guide p.3 (keys = stroke mm)"
+        },
+        "manualUrl": {
+          "value": "https://cdn.shopify.com/s/files/1/1640/5435/files/605-00-205_Marzocchi-BomberCR-Tuning-Guide-white-RevA_00f1410e-bd39-47fa-954d-01d6823cfe55.pdf?1415",
+          "status": "single",
+          "url": "https://bike.marzocchi.com/products/bomber-cr-rear-shock",
+          "retrieved": "2026-09-30",
+          "quote": "Tuning & Product Manuals ... Bomber CR Tuning Guide ... Marzocchi Shock Owners Guide",
+          "where": "product page manual links; general owner's guide: https://cdn.shopify.com/s/files/1/0252/8700/0144/files/605-00-201_RevA_2019_Marzocchi_Rear_Shock_User_Manual.pdf?v=1659473086 (linked from bike.marzocchi.com/pages/product-service-manuals)"
+        }
+      }
+    },
+    {
+      "id": "marzocchi-bomber-air-2026",
+      "name": "Marzocchi Bomber Air",
+      "type": "shock",
+      "modelYears": [
+        2026
+      ],
+      "catalogId": null,
+      "fields": {
+        "sizesAvailable": {
+          "value": [
+            "190x45",
+            "210x50",
+            "210x52.5",
+            "210x55",
+            "230x57.5",
+            "230x60",
+            "230x65",
+            "250x75",
+            "185x52.5 (Trunnion)",
+            "185x55 (Trunnion)",
+            "205x60 (Trunnion)",
+            "205x62.5 (Trunnion)",
+            "225x75 (Trunnion)"
+          ],
+          "status": "verified",
+          "url": "https://bike.marzocchi.com/products/bomber-air",
+          "retrieved": "2026-09-30",
+          "quote": "Metric sizes: 190x45, 210x50, 210x52.5, 210x55, 230x57.5, 230x60, 230x65, 250x75 Trunnion sizes: 185x52.5, 185x55, 205x60, 205x62.5, 225x75",
+          "where": "product page, Specs tab",
+          "verifiedBy": {
+            "url": "https://bike.marzocchi.com/products/bomber-air",
+            "retrieved": "2026-09-30",
+            "quote": "Metric sizes: 190x45, 210x50, 210x52.5, 210x55, 230x57.5, 230x60, 230x65, 250x75 Trunnion sizes: 185x52.5, 185x55, 205x60, 205x62.5, 225x75",
+            "where": "product page Specs tab"
+          }
+        },
+        "mount": {
+          "value": [
+            "standard eyelet",
+            "trunnion"
+          ],
+          "status": "single",
+          "url": "https://bike.marzocchi.com/products/bomber-air",
+          "retrieved": "2026-09-30",
+          "quote": "Trunnion and standard eyelet options",
+          "where": "product page, Specs tab"
+        },
+        "springType": {
+          "value": "air",
+          "status": "single",
+          "url": "https://cdn.shopify.com/s/files/1/1640/5435/files/605-00-269_REV_A_2022_Marzocchi_Bomber_Air_Shock_Owner_s_Guide_Rev_A_FINAL.pdf?v=1654555665",
+          "retrieved": "2026-09-30",
+          "quote": "BOMBER AIR shocks have a maximum air pressure of 350 psi.",
+          "where": "Bomber Air Owner's Guide 605-00-269 REV A (©Fox Factory 2021), p.4"
+        },
+        "maxPressurePsi": {
+          "value": 350,
+          "status": "verified",
+          "url": "https://cdn.shopify.com/s/files/1/1640/5435/files/605-00-269_REV_A_2022_Marzocchi_Bomber_Air_Shock_Owner_s_Guide_Rev_A_FINAL.pdf?v=1654555665",
+          "retrieved": "2026-09-30",
+          "quote": "Do not exceed maximum air pressure: BOMBER AIR maximum air pressure is 350 psi.",
+          "where": "Bomber Air Owner's Guide p.5, and p.4 step 3",
+          "verifiedBy": {
+            "url": "https://cdn.shopify.com/s/files/1/1640/5435/files/605-00-269_REV_A_2022_Marzocchi_Bomber_Air_Shock_Owner_s_Guide_Rev_A_FINAL.pdf?v=1654555665",
+            "retrieved": "2026-09-30",
+            "quote": "Do not exceed maximum air pressure: BOMBER AIR shocks have a maximum air pressure of 350 psi.",
+            "where": "605-00-269 REV A p.4 (also p.5 'BOMBER AIR maximum air pressure is 350 psi.')"
+          }
+        },
+        "compressionAdjuster": {
+          "value": "2-position, non-indexed sweep (LSC knob)",
+          "status": "single",
+          "url": "https://bike.marzocchi.com/products/bomber-air",
+          "retrieved": "2026-09-30",
+          "quote": "2-position, non-indexed compression sweep adjust means you can set it and forget it",
+          "where": "product page, Features; owner's guide p.6: 'The Low-Speed Compression knob allows for changes in low-speed compression damping.'"
+        },
+        "lscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No clicks: product page says compression sweep is 'non-indexed'; no count stated anywhere (product page, owner's guide 605-00-269 p.6)."
+        },
+        "hscMax": {
+          "value": null,
+          "status": "single",
+          "url": "https://bike.marzocchi.com/products/bomber-air",
+          "retrieved": "2026-09-30",
+          "quote": "Adjustable compression and rebound",
+          "where": "product page, Specs; owner's guide p.6 labels only 'LOW-SPEED COMPRESSION ADJUSTER' and 'REBOUND ADJUSTER' (moderate confidence that no HSC exists)"
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://cdn.shopify.com/s/files/1/1640/5435/files/605-00-269_REV_A_2022_Marzocchi_Bomber_Air_Shock_Owner_s_Guide_Rev_A_FINAL.pdf?v=1654555665",
+          "retrieved": "2026-09-30",
+          "quote": "Turn your rebound knob to the closed position, clockwise until it stops. Then turn it counter-clockwise to the number of clicks shown in the table below.",
+          "where": "owner's guide p.6 'REBOUND ADJUSTMENT'",
+          "verifiedBy": {
+            "url": "https://cdn.shopify.com/s/files/1/1640/5435/files/605-00-269_REV_A_2022_Marzocchi_Bomber_Air_Shock_Owner_s_Guide_Rev_A_FINAL.pdf?v=1654555665",
+            "retrieved": "2026-09-30",
+            "quote": "Turn your rebound knob to the closed position, clockwise until it stops. Then turn it counter-clockwise to the number of clicks shown in the table below.",
+            "where": "605-00-269 REV A p.6"
+          }
+        },
+        "reboundMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Total not stated. Owner's guide p.6 gives only starting clicks (1-10) by pressure. Checked product page and owner's guide."
+        },
+        "hsrMax": {
+          "value": null,
+          "status": "single",
+          "url": "https://cdn.shopify.com/s/files/1/1640/5435/files/605-00-269_REV_A_2022_Marzocchi_Bomber_Air_Shock_Owner_s_Guide_Rev_A_FINAL.pdf?v=1654555665",
+          "retrieved": "2026-09-30",
+          "quote": "LOW-SPEED COMPRESSION ADJUSTER / REBOUND ADJUSTER",
+          "where": "owner's guide p.6 diagram labels (only these two adjusters); product page 'Adjustable compression and rebound'"
+        },
+        "reboundStartByPressure": {
+          "value": {
+            "unit": "clicks from closed",
+            "rows": [
+              {
+                "pressure": "<100",
+                "value": 10
+              },
+              {
+                "pressure": "100-120",
+                "value": 10
+              },
+              {
+                "pressure": "120-140",
+                "value": 9
+              },
+              {
+                "pressure": "140-160",
+                "value": 8
+              },
+              {
+                "pressure": "160-180",
+                "value": 7
+              },
+              {
+                "pressure": "180-200",
+                "value": 6
+              },
+              {
+                "pressure": "200-220",
+                "value": 5
+              },
+              {
+                "pressure": "220-240",
+                "value": 4
+              },
+              {
+                "pressure": "240-260",
+                "value": 3
+              },
+              {
+                "pressure": "260-280",
+                "value": 2
+              },
+              {
+                "pressure": "280-300",
+                "value": 1
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://cdn.shopify.com/s/files/1/1640/5435/files/605-00-269_REV_A_2022_Marzocchi_Bomber_Air_Shock_Owner_s_Guide_Rev_A_FINAL.pdf?v=1654555665",
+          "retrieved": "2026-09-30",
+          "quote": "Rebound Air Pressure (psi) Starting Rebound Setting <100 10 100-120 10 120-140 9 140-160 8 160-180 7 180-200 6 200-220 5 220-240 4 240-260 3 260-280 2 280-300 1",
+          "where": "owner's guide p.6 table"
+        },
+        "startPressureRule": {
+          "value": "psi = rider weight in lbs",
+          "status": "single",
+          "url": "https://cdn.shopify.com/s/files/1/1640/5435/files/605-00-269_REV_A_2022_Marzocchi_Bomber_Air_Shock_Owner_s_Guide_Rev_A_FINAL.pdf?v=1654555665",
+          "retrieved": "2026-09-30",
+          "quote": "Start by setting the shock air pressure (psi) to match your weight in pounds.",
+          "where": "owner's guide p.4 'SAG SETTING' step 2"
+        },
+        "hasClimbLever": {
+          "value": null,
+          "status": "missing",
+          "note": "Ambiguous: product page calls compression a '2-position, non-indexed compression sweep adjust'; owner's guide calls it a 'Low-Speed Compression knob' with an OPEN setting, no FIRM/lockout wording. Not recorded as true/false."
+        },
+        "sagPercent": {
+          "value": {
+            "min": 25,
+            "max": 30
+          },
+          "status": "verified",
+          "url": "https://cdn.shopify.com/s/files/1/1640/5435/files/605-00-269_REV_A_2022_Marzocchi_Bomber_Air_Shock_Owner_s_Guide_Rev_A_FINAL.pdf?v=1654555665",
+          "retrieved": "2026-09-30",
+          "quote": "Sag range should be set to 25–30% of total shock travel.",
+          "where": "owner's guide p.4 'SAG SETTING'",
+          "verifiedBy": {
+            "url": "https://cdn.shopify.com/s/files/1/1640/5435/files/605-00-269_REV_A_2022_Marzocchi_Bomber_Air_Shock_Owner_s_Guide_Rev_A_FINAL.pdf?v=1654555665",
+            "retrieved": "2026-09-30",
+            "quote": "Sag range should be set to 25–30% of total shock travel.",
+            "where": "605-00-269 REV A p.4"
+          }
+        },
+        "volumeSpacers": {
+          "value": "0.1 cubic-inch increments; per-size compatibility chart",
+          "status": "single",
+          "url": "https://bike.marzocchi.com/products/bomber-air",
+          "retrieved": "2026-09-30",
+          "quote": "Unique air volume spacers, available in 0.1 C.I. increments",
+          "where": "product page Features; chart: https://cdn.shopify.com/s/files/1/1640/5435/files/605-01-348_REV_A_Instruction-_BOMBER_AIR_Volume_Spacer_Installation_FINAL.pdf?v=1654555665 (605-01-348 REV A, sizes 0-1.1 by stroke)"
+        },
+        "manualUrl": {
+          "value": "https://cdn.shopify.com/s/files/1/1640/5435/files/605-00-269_REV_A_2022_Marzocchi_Bomber_Air_Shock_Owner_s_Guide_Rev_A_FINAL.pdf?v=1654555665",
+          "status": "single",
+          "url": "https://bike.marzocchi.com/products/bomber-air",
+          "retrieved": "2026-09-30",
+          "quote": "Bomber Air Owner's Manual",
+          "where": "product page, 'Product Manuals & Warranty' tab"
+        }
+      }
+    }
+  ]
+}

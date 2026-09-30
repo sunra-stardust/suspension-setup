@@ -1,0 +1,353 @@
+{
+  "maker": "santa-cruz",
+  "models": [
+    {
+      "id": "santa-cruz-megatower-90-2026",
+      "name": "Santa Cruz Megatower 90",
+      "modelYears": [
+        2026
+      ],
+      "fields": {
+        "rearTravelMm": {
+          "value": 170,
+          "status": "verified",
+          "url": "https://www.santacruzbicycles.com/collections/megatower/products/megatower-90-2026",
+          "retrieved": "2026-09-30",
+          "quote": "\"frame\":{\"value\":\"Carbon C 29\\\" 170mm Travel VPP™\"}",
+          "where": "embedded Build Kit & Specs JSON (product 9840474751258, 'Megatower 90'), field frame",
+          "verifiedBy": {
+            "url": "https://www.santacruzbicycles.com/products/megatower-90-2026",
+            "retrieved": "2026-09-30",
+            "quote": "Frame: Carbon C 29\" 170mm Travel VPP™",
+            "where": "Product page 'Build Kit & Specs' data for Megatower 90 (product id 9840474751258)"
+          }
+        },
+        "forkTravelMm": {
+          "value": 170,
+          "status": "verified",
+          "url": "https://www.santacruzbicycles.com/collections/megatower/products/megatower-90-2026",
+          "retrieved": "2026-09-30",
+          "quote": "\"fork\":{\"value\":\"FOX 38 Float Performance, Grip, 170mm\"}",
+          "where": "embedded Build Kit & Specs JSON (product 9840474751258, 'Megatower 90'), field fork",
+          "verifiedBy": {
+            "url": "https://www.santacruzbicycles.com/products/megatower-90-2026",
+            "retrieved": "2026-09-30",
+            "quote": "Fork: FOX 38 Float Performance, Grip, 170mm",
+            "where": "Product page Build Kit & Specs"
+          }
+        },
+        "wheelSize": {
+          "value": "29\"",
+          "status": "verified",
+          "url": "https://www.santacruzbicycles.com/collections/megatower/products/megatower-90-2026",
+          "retrieved": "2026-09-30",
+          "quote": "\"wheel_size\":{\"value\":\"29\\\"\"}",
+          "where": "embedded Build Kit & Specs JSON (product 9840474751258, 'Megatower 90'), field wheel_size",
+          "verifiedBy": {
+            "url": "https://www.santacruzbicycles.com/products/megatower-90-2026",
+            "retrieved": "2026-09-30",
+            "quote": "Wheel Size: 29\"",
+            "where": "Product page Build Kit & Specs"
+          }
+        },
+        "sizes": {
+          "value": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "status": "verified",
+          "url": "https://www.santacruzbicycles.com/products/megatower-90-2026.json",
+          "retrieved": "2026-09-30",
+          "quote": "Gloss Silver (Megatower 2026) / S … / M … / L … / XL … / XXL",
+          "where": "Size options (variants) of product megatower-90-2026; setup-key table rows: Small, Medium, Large, XLarge, XXLarge",
+          "verifiedBy": {
+            "url": "https://www.santacruzbicycles.com/products/megatower-90-2026",
+            "retrieved": "2026-09-30",
+            "quote": "Gloss Silver (Megatower 2026) / S ... / M ... / L ... / XL ... / XXL",
+            "where": "Product page variants"
+          }
+        },
+        "shockEyeToEyeMm": {
+          "value": 230,
+          "status": "verified",
+          "url": "https://www.santacruzbicycles.com/collections/megatower/products/megatower-90-2026",
+          "retrieved": "2026-09-30",
+          "quote": "\"rear_shock\":{\"value\":\"FOX Float X Performance, 230x65\"} / \"eye_to_eye_length\":{\"value\":\"230mm\"}",
+          "where": "embedded Build Kit & Specs JSON (product 9840474751258, 'Megatower 90'), fields rear_shock, eye_to_eye_length",
+          "verifiedBy": {
+            "url": "https://www.santacruzbicycles.com/products/megatower-90-2026",
+            "retrieved": "2026-09-30",
+            "quote": "Shock: FOX Float X Performance, 230x65 | Shock Length: 230mm",
+            "where": "Product page Build Kit & Specs"
+          }
+        },
+        "shockStrokeMm": {
+          "value": 65,
+          "status": "verified",
+          "url": "https://www.santacruzbicycles.com/collections/megatower/products/megatower-90-2026",
+          "retrieved": "2026-09-30",
+          "quote": "\"rear_shock\":{\"value\":\"FOX Float X Performance, 230x65\"} (frame field: \"stroke\":{\"value\":\"62.5mm or 65mm\"})",
+          "where": "embedded Build Kit & Specs JSON (product 9840474751258, 'Megatower 90'), fields rear_shock, stroke",
+          "verifiedBy": {
+            "url": "https://www.santacruzbicycles.com/products/megatower-90-2026",
+            "retrieved": "2026-09-30",
+            "quote": "Shock: FOX Float X Performance, 230x65 | Shock Stroke: 62.5mm or 65mm",
+            "where": "Product page Build Kit & Specs"
+          },
+          "note": "FAQ on the same page says \"stock is 62.5mm\" (older model) - see issue 11 FAQ on the same page says 230x62.5 (older model?), see https://github.com/sunra-stardust/suspension-setup/issues/11"
+        },
+        "shockMount": {
+          "value": "standard eye, 30x8 bushings front and rear",
+          "status": "single",
+          "url": "https://www.santacruzbicycles.com/collections/megatower/products/megatower-90-2026",
+          "retrieved": "2026-09-30",
+          "quote": "\"shock_mounting_bushing_front\":{\"value\":\"30x8\"},\"shock_mounting_bushing_rear\":{\"value\":\"30x8\"}; FAQ: \"The correct size is 230x62.5 with 8x30 hardware front and rear.\"",
+          "where": "embedded Build Kit & Specs JSON (product 9840474751258, 'Megatower 90') + Setup & Support FAQ 'I want to change my rear shock'"
+        },
+        "stockForkBySpec": {
+          "value": {
+            "90": "FOX 38 Float Performance, Grip, 170mm"
+          },
+          "status": "verified",
+          "url": "https://www.santacruzbicycles.com/collections/megatower/products/megatower-90-2026",
+          "retrieved": "2026-09-30",
+          "quote": "\"fork\":{\"value\":\"FOX 38 Float Performance, Grip, 170mm\"}",
+          "where": "embedded Build Kit & Specs JSON (product 9840474751258, 'Megatower 90'), field fork",
+          "verifiedBy": {
+            "url": "https://www.santacruzbicycles.com/products/megatower-90-2026",
+            "retrieved": "2026-09-30",
+            "quote": "FOX 38 Float Performance, Grip, 170mm",
+            "where": "Product page Build Kit & Specs, Fork"
+          }
+        },
+        "stockShockBySpec": {
+          "value": {
+            "90": "FOX Float X Performance, 230x65"
+          },
+          "status": "verified",
+          "url": "https://www.santacruzbicycles.com/collections/megatower/products/megatower-90-2026",
+          "retrieved": "2026-09-30",
+          "quote": "\"rear_shock\":{\"value\":\"FOX Float X Performance, 230x65\"}",
+          "where": "embedded Build Kit & Specs JSON (product 9840474751258, 'Megatower 90'), field rear_shock",
+          "verifiedBy": {
+            "url": "https://www.santacruzbicycles.com/products/megatower-90-2026",
+            "retrieved": "2026-09-30",
+            "quote": "FOX Float X Performance, 230x65",
+            "where": "Product page Build Kit & Specs, Shock"
+          }
+        },
+        "springRateBySize": {
+          "value": null,
+          "status": "missing",
+          "note": "Stock shock is air (Float X); no per-size coil spring table on product page."
+        },
+        "sagPercent": {
+          "value": "29-31%",
+          "status": "verified",
+          "url": "https://www.santacruzbicycles.com/collections/megatower/products/megatower-90-2026",
+          "retrieved": "2026-09-30",
+          "quote": "Fox Float X Performance | Rider Weight (lbs) | Rider Weight (kgs) | Pressure (psi) | Sag | Rebound (from closed) | 100 | 45 | 125 | 29-31%, | 9",
+          "where": "Setup & Support drawer, Suspension Setup tab, table 'Fox Float X Performance', Sag column (all rows 29-31%)",
+          "verifiedBy": {
+            "url": "https://www.santacruzbicycles.com/products/megatower-90-2026",
+            "retrieved": "2026-09-30",
+            "quote": "Fox Float X Performance | Rider Weight (lbs) | Rider Weight (kgs) | Pressure (psi) | Sag | Rebound (from closed) | 180 | 82 | 210 | 29-31%, | 5",
+            "where": "Product page suspension setup table 'Fox Float X Performance' (every row 29-31%)"
+          }
+        },
+        "setupGuideUrl": {
+          "value": "https://www.santacruzbicycles.com/collections/megatower/products/megatower-90-2026",
+          "status": "single",
+          "url": "https://www.santacruzbicycles.com/collections/megatower/products/megatower-90-2026",
+          "retrieved": "2026-09-30",
+          "quote": "Suspension Setup",
+          "where": "Setup & Support drawer, tab 'Suspension Setup' (tables 'Fox Float X Performance' and 'Fox 38 Performance' on the product page)"
+        },
+        "flipChip": {
+          "value": {
+            "positions": [
+              "High",
+              "Low"
+            ],
+            "recommendedStart": "High"
+          },
+          "status": "verified",
+          "url": "https://www.santacruzbicycles.com/collections/megatower/products/megatower-90-2026",
+          "retrieved": "2026-09-30",
+          "quote": "Should I ride in the High or Low shock flip-chip setting? You should definitely try both, but we typically recommend starting in High. … If your terrain is quite steep, give Low a try. This setting lowers the BB by 3.5mm, slackens the head angle by 0.3 degrees, and generally just biases your weight a little further back. The leverage curve of the suspension changes slightly as well: it's more progressive.",
+          "where": "Setup & Support drawer, FAQs",
+          "verifiedBy": {
+            "url": "https://www.santacruzbicycles.com/products/megatower-90-2026",
+            "retrieved": "2026-09-30",
+            "quote": "Should I ride in the High or Low shock flip-chip setting? You should definitely try both, but we typically recommend starting in High. ... This setting lowers the BB by 3.5mm, slackens the head angle by 0.3 degrees ... The leverage curve of the suspension changes slightly as well: it's more progressive.",
+            "where": "Product page FAQ; hardware table lists 'M8x2 Flip Chip NDS' / 'M8x2 Flip Chip DS'"
+          }
+        },
+        "shockPressureTable": {
+          "value": {
+            "unit": "psi",
+            "component": "Fox Float X Performance",
+            "rows": [
+              {
+                "rider": "100 lbs / 45 kg",
+                "value": 125,
+                "sag": "29-31%",
+                "reboundFromClosed": 9
+              },
+              {
+                "rider": "120 lbs / 54 kg",
+                "value": 145,
+                "sag": "29-31%",
+                "reboundFromClosed": 8
+              },
+              {
+                "rider": "140 lbs / 64 kg",
+                "value": 165,
+                "sag": "29-31%",
+                "reboundFromClosed": 7
+              },
+              {
+                "rider": "160 lbs / 73 kg",
+                "value": 185,
+                "sag": "29-31%",
+                "reboundFromClosed": 6
+              },
+              {
+                "rider": "180 lbs / 82 kg",
+                "value": 210,
+                "sag": "29-31%",
+                "reboundFromClosed": 5
+              },
+              {
+                "rider": "200 lbs / 91 kg",
+                "value": 230,
+                "sag": "29-31%",
+                "reboundFromClosed": 4
+              },
+              {
+                "rider": "220 lbs / 100 kg",
+                "value": 250,
+                "sag": "29-31%",
+                "reboundFromClosed": 3
+              },
+              {
+                "rider": "240 lbs / 109 kg",
+                "value": 270,
+                "sag": "29-31%",
+                "reboundFromClosed": 2
+              },
+              {
+                "rider": "260 lbs / 118 kg",
+                "value": 290,
+                "sag": "29-31%",
+                "reboundFromClosed": 1
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://www.santacruzbicycles.com/collections/megatower/products/megatower-90-2026",
+          "retrieved": "2026-09-30",
+          "quote": "Fox Float X Performance | Rider Weight (lbs) | Rider Weight (kgs) | Pressure (psi) | Sag | Rebound (from closed) | 100 45 125 29-31% 9 | 120 54 145 29-31% 8 | 140 64 165 29-31% 7 | 160 73 185 29-31% 6 | 180 82 210 29-31% 5 | 200 91 230 29-31% 4 | 220 100 250 29-31% 3 | 240 109 270 29-31% 2 | 260 118 290 29-31% 1",
+          "where": "Suspension Setup tab, table 'Fox Float X Performance'"
+        },
+        "forkPressureTable": {
+          "value": {
+            "unit": "psi",
+            "component": "Fox 38 Performance",
+            "rows": [
+              {
+                "rider": "120 lbs / 54 kg",
+                "value": 72,
+                "reboundFromClosed": 13
+              },
+              {
+                "rider": "130 lbs / 59 kg",
+                "value": 76,
+                "reboundFromClosed": 12
+              },
+              {
+                "rider": "140 lbs / 64 kg",
+                "value": 80,
+                "reboundFromClosed": 11
+              },
+              {
+                "rider": "150 lbs / 68 kg",
+                "value": 84,
+                "reboundFromClosed": 10
+              },
+              {
+                "rider": "160 lbs / 73 kg",
+                "value": 89,
+                "reboundFromClosed": 9
+              },
+              {
+                "rider": "170 lbs / 77 kg",
+                "value": 93,
+                "reboundFromClosed": 8
+              },
+              {
+                "rider": "180 lbs / 82 kg",
+                "value": 97,
+                "reboundFromClosed": 7
+              },
+              {
+                "rider": "190 lbs / 86 kg",
+                "value": 102,
+                "reboundFromClosed": 6
+              },
+              {
+                "rider": "200 lbs / 91 kg",
+                "value": 106,
+                "reboundFromClosed": 5
+              },
+              {
+                "rider": "210 lbs / 95 kg",
+                "value": 110,
+                "reboundFromClosed": 4
+              },
+              {
+                "rider": "220 lbs / 100 kg",
+                "value": 114,
+                "reboundFromClosed": 3
+              },
+              {
+                "rider": "230 lbs / 104 kg",
+                "value": 119,
+                "reboundFromClosed": 2
+              },
+              {
+                "rider": "240 lbs / 109 kg",
+                "value": 123,
+                "reboundFromClosed": 1
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://www.santacruzbicycles.com/collections/megatower/products/megatower-90-2026",
+          "retrieved": "2026-09-30",
+          "quote": "Fox 38 Performance | Rider Weight (lbs) | Rider Weight (kgs) | Pressure (psi) | Rebound (from closed) | 120 54 72 13 | 130 59 76 12 | 140 64 80 11 | 150 68 84 10 | 160 73 89 9 | 170 77 93 8 | 180 82 97 7 | 190 86 102 6 | 200 91 106 5 | 210 95 110 4 | 220 100 114 3 | 230 104 119 2 | 240 109 123 1",
+          "where": "Suspension Setup tab, table 'Fox 38 Performance'"
+        },
+        "forkOffsetMm": {
+          "value": 44,
+          "status": "single",
+          "url": "https://www.santacruzbicycles.com/collections/megatower/products/megatower-90-2026",
+          "retrieved": "2026-09-30",
+          "quote": "\"fork_offset\":{\"value\":\"44mm\"}",
+          "where": "embedded Build Kit & Specs JSON (product 9840474751258, 'Megatower 90'), field fork_offset"
+        },
+        "recommendedForkTravel": {
+          "value": "170mm (up to 180mm)",
+          "status": "single",
+          "url": "https://www.santacruzbicycles.com/collections/megatower/products/megatower-90-2026",
+          "retrieved": "2026-09-30",
+          "quote": "Our geometry is based off of a 170mm fork with a 42 or 44mm offset. We wouldn't recommend less travel than that, as the BB will get a bit low. Up to 180mm is fine if that's your preference.",
+          "where": "Setup & Support drawer, FAQs"
+        }
+      }
+    }
+  ]
+}

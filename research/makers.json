@@ -7,11 +7,11 @@
       "kinds": [
         "suspension"
       ],
-      "website": null,
-      "docHub": null,
-      "status": "seed",
-      "lastChecked": null,
-      "notes": ""
+      "website": "https://ridefox.com",
+      "docHub": "https://tech.ridefox.com/bike/list/owners-manuals",
+      "status": "listed",
+      "lastChecked": "2026-09-30",
+      "notes": "Per-model-year owner's manuals as HTML pages on tech.ridefox.com (some tables are images); user-spec drawings under /bike/list/spec-sheets; product pages on ridefox.com (Shopify, current model year, MY tags) link owner's-guide PDFs hosted on Fox's asset CDN serenity-foxfactory.asset.akeneo.cloud. The URL https://tech.ridefox.com/bike/owners-manuals returns 404; the list lives at /bike/list/owners-manuals. Fox generally publishes starting settings, rarely total click counts. Sample run 2026-09-30: only selected models researched, product list incomplete."
     },
     {
       "id": "rockshox",
@@ -19,11 +19,11 @@
       "kinds": [
         "suspension"
       ],
-      "website": null,
-      "docHub": null,
-      "status": "seed",
-      "lastChecked": null,
-      "notes": ""
+      "website": "https://www.sram.com/en/rockshox",
+      "docHub": "https://www.sram.com/en/service",
+      "status": "listed",
+      "lastChecked": "2026-09-30",
+      "notes": "Model codes: FS-LYRK-ULT-D2 / FS-ZEB-ULT-A3 = Charger 3.1 generation (listed in 2025+2026 spec PDFs); FS-LYRK-ULT-E1 / FS-ZEB-ULT-B1 = new Charger 3.2 + LinearXL + ABO generation (2027 spec PDF). Shocks: RS-SDLX-ULT-C2 (2025+), RS-VIVD-ULT-C1 (2024+), new D1 generation for both (LinearXL, numbered adjusters). RockShox 'clicks' for Charger compression = positions (-7..+7 / -2..+2). Docs: (model service pages https://www.sram.com/en/service/models/<code>); user manual https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension; spec PDFs <year>-front-suspension-specifications.pdf; Trailhead https://trailhead.rockshox.com (serial-based) Sample run 2026-09-30: only selected models researched, product list incomplete."
     },
     {
       "id": "marzocchi",
@@ -31,11 +31,11 @@
       "kinds": [
         "suspension"
       ],
-      "website": null,
-      "docHub": null,
-      "status": "seed",
-      "lastChecked": null,
-      "notes": ""
+      "website": "https://bike.marzocchi.com/",
+      "docHub": "https://bike.marzocchi.com/pages/product-service-manuals",
+      "status": "listed",
+      "lastChecked": "2026-09-30",
+      "notes": "marzocchi.com is a splash page linking bike.marzocchi.com (Shopify store). Manual PDFs are hosted on cdn.shopify.com and linked from bike.marzocchi.com product/manual pages; service procedures on tech.ridefox.com / ridefox.com. Current fork line (2026 store): Bomber Z1, Z1 Coil, Z1 E-Optimized, Z2, Z2 E-Optimized, Bomber Z, Super Z, 58, DJ. Shocks: Bomber CR, Bomber Air, Bomber Inline. Sample run 2026-09-30: only selected models researched, product list incomplete."
     },
     {
       "id": "ohlins",
@@ -43,11 +43,11 @@
       "kinds": [
         "suspension"
       ],
-      "website": null,
-      "docHub": null,
-      "status": "seed",
-      "lastChecked": null,
-      "notes": ""
+      "website": "https://www.ohlins.com",
+      "docHub": "https://www.ohlins.com/en-us/document-library",
+      "status": "listed",
+      "lastChecked": "2026-09-30",
+      "notes": "Product pages (en-us/mountain-bike/...) carry a Details table (Hsc Cli / Lsc Cli / Lsr Cli) and link the current owner's manual PDF under /storage/. Owner's manuals generally do NOT print click totals; totals come from product-page spec tables/descriptions. Öhlins HSC on shocks is a 3-position knob, not a click adjuster. Sample run 2026-09-30: only selected models researched, product list incomplete."
     },
     {
       "id": "sr-suntour",
@@ -55,11 +55,11 @@
       "kinds": [
         "suspension"
       ],
-      "website": null,
-      "docHub": null,
-      "status": "seed",
-      "lastChecked": null,
-      "notes": ""
+      "website": "https://www.srsuntour.com/",
+      "docHub": "https://www.srsuntour.com/support/product-support/owners-manuals/",
+      "status": "listed",
+      "lastChecked": "2026-09-30",
+      "notes": "srsuntour-cycling.com serves the same site as srsuntour.com. Product codes carry intro year (SF25/SF26 forks, RS24/RS25 shocks). Click totals are rarely stated; general manuals give pressure/spacer tables per model. Docs: (general manuals MY22/MY26 forks, MY22-MY27 shocks) and https://www.srsuntour.com/support/service-guide/service-manuals/ (model booklets) Sample run 2026-09-30: only selected models researched, product list incomplete."
     },
     {
       "id": "dt-swiss",
@@ -259,11 +259,11 @@
       "kinds": [
         "bike"
       ],
-      "website": null,
-      "docHub": null,
-      "status": "seed",
-      "lastChecked": null,
-      "notes": ""
+      "website": "https://www.cube.eu/",
+      "docHub": "https://www.cube.eu/support/downloads",
+      "status": "listed",
+      "lastChecked": "2026-09-30",
+      "notes": "Product pages (Shopware) carry full spec incl. shock size and a geometry table; model year is not printed on the product page, but the 'Systemgewicht Classic 2027' PDF on the downloads page lists the current bikes. General operating manual defers suspension setup to the component maker's manual. Sample run 2026-09-30: only selected models researched, product list incomplete."
     },
     {
       "id": "mondraker",
@@ -283,11 +283,11 @@
       "kinds": [
         "bike"
       ],
-      "website": null,
-      "docHub": null,
-      "status": "seed",
-      "lastChecked": null,
-      "notes": ""
+      "website": "https://www.canyon.com",
+      "docHub": "https://www.canyon.com/en-us/customer-service/",
+      "status": "listed",
+      "lastChecked": "2026-09-30",
+      "notes": "Canyon product pages embed schema.org data with a 'Year' property (current range = 2027). Component geometry table carries 'Fitting Length' (shock size) and per-size rear travel. Quick start guides (platform code e.g. M179, M185) carry sag and sometimes shock pressure tables. Docs: (per-model support pages list quick start guide PDFs; product pages have geometry pages at /productpdf/geometry/?pid=<id>) Sample run 2026-09-30: only selected models researched, product list incomplete."
     },
     {
       "id": "yt-industries",
@@ -295,11 +295,11 @@
       "kinds": [
         "bike"
       ],
-      "website": null,
-      "docHub": null,
-      "status": "seed",
-      "lastChecked": null,
-      "notes": ""
+      "website": "https://www.yt-industries.com/",
+      "docHub": "https://www.yt-industries.com/Support/Suspension-Setup/",
+      "status": "listed",
+      "lastChecked": "2026-09-30",
+      "notes": "Site is a Nuxt/Shopware SPA; spec data is in the embedded __NUXT_DATA__ JSON payload of each bike page (rendered as the Specs section). Each bike page links Technical Information PDF and RTFM manual; YT_Suspension_Guideline.pdf + interactive Suspension Guide under Support/Suspension-Setup. Sample run 2026-09-30: only selected models researched, product list incomplete."
     },
     {
       "id": "specialized",
@@ -319,11 +319,11 @@
       "kinds": [
         "bike"
       ],
-      "website": null,
-      "docHub": null,
-      "status": "seed",
-      "lastChecked": null,
-      "notes": ""
+      "website": "https://www.trekbikes.com",
+      "docHub": "https://www.trekbikes.com/us/en_US/manuals/",
+      "status": "listed",
+      "lastChecked": "2026-09-30",
+      "notes": "Product pages are client-rendered; full spec list comes from https://api.trekbikes.com/occ/v2/us/products/<code>/specifications, product docs from /occ/v2/us/products/technical/<code>, PDFs resolve to retailerassetsprd.blob.core.windows.net/techassets/ (Trek asset store). Suspension calculator is a Zoovu widget. Sample run 2026-09-30: only selected models researched, product list incomplete."
     },
     {
       "id": "santa-cruz",
@@ -331,11 +331,11 @@
       "kinds": [
         "bike"
       ],
-      "website": null,
-      "docHub": null,
-      "status": "seed",
-      "lastChecked": null,
-      "notes": ""
+      "website": "https://www.santacruzbicycles.com",
+      "docHub": "https://www.santacruzbicycles.com/pages/product-support",
+      "status": "listed",
+      "lastChecked": "2026-09-30",
+      "notes": "Shopify site; build-kit specs are embedded as URL-encoded JSON in the product page (Build Kit & Specs drawer). Product pages carry a 'Suspension Setup' tab with per-kit shock/fork pressure+rebound tables and a FAQ (flip chip). Also /pages/suspension-calculator and /pages/bike-setup (not opened). Sample run 2026-09-30: only selected models researched, product list incomplete."
     },
     {
       "id": "giant",

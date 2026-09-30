@@ -1,0 +1,199 @@
+{
+  "maker": "cube",
+  "models": [
+    {
+      "id": "cube-stereo-c62-slt-2027",
+      "name": "Cube Stereo C:62 SLT",
+      "modelYears": [
+        2027
+      ],
+      "fields": {
+        "modelYear": {
+          "value": 2027,
+          "status": "verified",
+          "url": "https://file.cube.eu/azwesc1xfg346/media/63/c3/78/1789628314/Systemgewicht_Classic_2027_EN.pdf?ts=1789628314",
+          "retrieved": "2026-09-30",
+          "quote": "Stereo C:62 SLT 4 13,6 kg 100 kg - - 115 kg",
+          "where": "Systemgewicht_Classic_2027_EN.pdf, Fullsuspension table (file title = model year 2027; weight 13,6 kg matches product page)",
+          "verifiedBy": {
+            "url": "https://www.cube.eu/blog/detail/019feaba2e7a71f8a83b0eeb3bf51371",
+            "retrieved": "2026-09-30",
+            "quote": "The all-new 2027 Stereo HPC and Stereo C:62 series are trail bikes to inspire intrepid riders. Featuring 150mm front- and 145mm rear-wheel travel, ...",
+            "where": "cube.eu blog 'CUBE 2027'"
+          }
+        },
+        "rearTravelMm": {
+          "value": null,
+          "status": "conflict",
+          "candidates": [
+            {
+              "value": 145,
+              "status": "single",
+              "url": "https://www.cube.eu/cube-stereo-c-62-slt-artichoke-n-black/1172900",
+              "retrieved": "2026-09-30",
+              "quote": "so you've got 150mm front and 145mm rear of the smoothest, best controlled suspension travel out there",
+              "where": "product page, description text (DE page: '150 mm Federweg vorne und 145 mm am Heck')"
+            },
+            {
+              "value": 146,
+              "status": "single",
+              "url": "https://www.cube.eu/cube-stereo-c-62-slt-artichoke-n-black/1172900",
+              "retrieved": "2026-09-30",
+              "quote": "Rear suspension travel 146 146 146 146",
+              "where": "product page, Geometry > Ergonomics table, row 'Rear suspension travel' (S/M/L/XL)"
+            }
+          ],
+          "note": "Cube's own page states 145 mm in text and 146 mm in the geometry table. Not resolved; second pass / owner decides.",
+          "issue": "https://github.com/sunra-stardust/suspension-setup/issues/12"
+        },
+        "forkTravelMm": {
+          "value": 150,
+          "status": "verified",
+          "url": "https://www.cube.eu/cube-stereo-c-62-slt-artichoke-n-black/1172900",
+          "retrieved": "2026-09-30",
+          "quote": "Suspension fork Fox 36 Float Factory GRIPX2, Tapered, 15x110mm, 150mm, Kashima Coated",
+          "where": "product page, components > Suspension > Suspension fork",
+          "verifiedBy": {
+            "url": "https://www.cube.eu/de-de/cube-stereo-c-62-slt-artichoke-n-black/1172900",
+            "retrieved": "2026-09-30",
+            "quote": "Fox 36 Float Factory GRIPX2, Tapered, 15x110mm, 150mm, Kashima Coated",
+            "where": "Spec 'Federgabel'"
+          }
+        },
+        "wheelSize": {
+          "value": null,
+          "status": "missing",
+          "note": "Not printed for this trim on the EN or DE product page (wheelset/tyre lines give no diameter; only 'Diameter tire maximum 761' in geometry). Series page and downloads page checked. '29''' appears only in the site-wide menu 'BY WHEEL SIZE', which is not evidence for this model."
+        },
+        "sizes": {
+          "value": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "status": "verified",
+          "url": "https://www.cube.eu/cube-stereo-c-62-slt-artichoke-n-black/1172900",
+          "retrieved": "2026-09-30",
+          "quote": "size S, M, L, XL",
+          "where": "product page, components > Frame > size",
+          "verifiedBy": {
+            "url": "https://www.cube.eu/de-de/cube-stereo-c-62-slt-artichoke-n-black/1172900",
+            "retrieved": "2026-09-30",
+            "quote": "Größe S, M, L, XL",
+            "where": "Spec 'Größe'; geometry columns S, M, L, XL"
+          }
+        },
+        "shockEyeToEyeMm": {
+          "value": 210,
+          "status": "verified",
+          "url": "https://www.cube.eu/cube-stereo-c-62-slt-artichoke-n-black/1172900",
+          "retrieved": "2026-09-30",
+          "quote": "Fox Float X Factory, 210x55mm, Adjustable LSC/LSR w/ 2-Pos. Lever",
+          "where": "product page, components > Suspension > shock",
+          "verifiedBy": {
+            "url": "https://www.cube.eu/de-de/cube-stereo-c-62-slt-artichoke-n-black/1172900",
+            "retrieved": "2026-09-30",
+            "quote": "Fox Float X Factory, 210x55mm, Adjustable LSC/LSR w/ 2-Pos. Lever",
+            "where": "Spec 'Dämpfer'"
+          }
+        },
+        "shockStrokeMm": {
+          "value": 55,
+          "status": "verified",
+          "url": "https://www.cube.eu/cube-stereo-c-62-slt-artichoke-n-black/1172900",
+          "retrieved": "2026-09-30",
+          "quote": "Fox Float X Factory, 210x55mm, Adjustable LSC/LSR w/ 2-Pos. Lever",
+          "where": "product page, components > Suspension > shock",
+          "verifiedBy": {
+            "url": "https://www.cube.eu/de-de/cube-stereo-c-62-slt-artichoke-n-black/1172900",
+            "retrieved": "2026-09-30",
+            "quote": "Fox Float X Factory, 210x55mm, Adjustable LSC/LSR w/ 2-Pos. Lever",
+            "where": "Spec 'Dämpfer'"
+          }
+        },
+        "shockMount": {
+          "value": null,
+          "status": "missing",
+          "note": "Mount type (standard eye / trunnion) not named on product page; only the hardware line is printed (see shockHardware)."
+        },
+        "shockHardware": {
+          "value": "Front: 35x8mm, Rear: w/o DU-Bushing 15 mm",
+          "status": "single",
+          "url": "https://www.cube.eu/cube-stereo-c-62-slt-artichoke-n-black/1172900",
+          "retrieved": "2026-09-30",
+          "quote": "shock hardware Front: 35x8mm, Rear: w/o DU-Bushing 15 mm",
+          "where": "product page, components > Suspension > shock hardware"
+        },
+        "stockForkBySpec": {
+          "value": {
+            "SLT": "Fox 36 Float Factory GRIPX2, Tapered, 15x110mm, 150mm, Kashima Coated"
+          },
+          "status": "verified",
+          "url": "https://www.cube.eu/cube-stereo-c-62-slt-artichoke-n-black/1172900",
+          "retrieved": "2026-09-30",
+          "quote": "Suspension fork Fox 36 Float Factory GRIPX2, Tapered, 15x110mm, 150mm, Kashima Coated",
+          "where": "product page, components > Suspension",
+          "verifiedBy": {
+            "url": "https://www.cube.eu/de-de/cube-stereo-c-62-slt-artichoke-n-black/1172900",
+            "retrieved": "2026-09-30",
+            "quote": "Fox 36 Float Factory GRIPX2, Tapered, 15x110mm, 150mm, Kashima Coated",
+            "where": "Spec 'Federgabel' (EN page 'Suspension fork' identical)"
+          }
+        },
+        "stockShockBySpec": {
+          "value": {
+            "SLT": "Fox Float X Factory, 210x55mm, Adjustable LSC/LSR w/ 2-Pos. Lever"
+          },
+          "status": "verified",
+          "url": "https://www.cube.eu/cube-stereo-c-62-slt-artichoke-n-black/1172900",
+          "retrieved": "2026-09-30",
+          "quote": "shock Fox Float X Factory, 210x55mm, Adjustable LSC/LSR w/ 2-Pos. Lever",
+          "where": "product page, components > Suspension",
+          "verifiedBy": {
+            "url": "https://www.cube.eu/de-de/cube-stereo-c-62-slt-artichoke-n-black/1172900",
+            "retrieved": "2026-09-30",
+            "quote": "Fox Float X Factory, 210x55mm, Adjustable LSC/LSR w/ 2-Pos. Lever",
+            "where": "Spec 'Dämpfer'"
+          }
+        },
+        "springRateBySize": {
+          "value": null,
+          "status": "missing",
+          "note": "Not applicable/not printed: stock shock is an air shock (Float X); no per-size spring table on the page."
+        },
+        "sagPercent": {
+          "value": null,
+          "status": "missing",
+          "note": "Not on product page. Cube operating instructions 2026 (DE), ch. 8.5 'Hinterradfederung einstellen' only says to follow the component maker's manual and set front and rear to sag equally ('dass sich das Fahrrad bei Belastung durch das Fahrergewicht am Vorder- und Hinterrad gleich weit absenkt') - no percentage. URL: https://file.cube.eu/azwesc1xfg346/media/af/d4/64/1761547899/Cube_operating%20instructions_BIKE_2026_DE.pdf?ts=1761547899"
+        },
+        "setupGuideUrl": {
+          "value": null,
+          "status": "missing",
+          "note": "No Cube bike-specific suspension setup guide found on product page or downloads page; general manual defers to component maker (https://file.cube.eu/azwesc1xfg346/media/af/d4/64/1761547899/Cube_operating%20instructions_BIKE_2026_DE.pdf?ts=1761547899, ch. 8.4/8.5)."
+        },
+        "flipChip": {
+          "value": null,
+          "status": "missing",
+          "note": "No flip chip mentioned on product page. Geometry is instead adjustable via the headset (see headsetAngleAdjustment); geometry table has 'Slack/Moderate' columns."
+        },
+        "headsetAngleAdjustment": {
+          "value": "0.6°",
+          "status": "single",
+          "url": "https://www.cube.eu/cube-stereo-c-62-slt-artichoke-n-black/1172900",
+          "retrieved": "2026-09-30",
+          "quote": "Headset Angle Adjustment 0.6°",
+          "where": "product page, frame feature list; headset line: 'Acros AZF-675, ... Fiber Inserts for Angle Adjustment'; geometry table columns 'Slack/Moderate'"
+        },
+        "maxRiderWeightKg": {
+          "value": 100,
+          "status": "single",
+          "url": "https://www.cube.eu/cube-stereo-c-62-slt-artichoke-n-black/1172900",
+          "retrieved": "2026-09-30",
+          "quote": "100 kg Maximum rider weight",
+          "where": "product page, below Bike category of use: 4"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,705 @@
+{
+  "maker": "sr-suntour",
+  "products": [
+    {
+      "id": "sr-suntour-durolux38-rc-plus-pcs-2026",
+      "name": "SR Suntour Durolux 38 (EVO, RC+ PCS, EQ air)",
+      "type": "fork",
+      "modelYears": [
+        2025,
+        2026
+      ],
+      "catalogId": null,
+      "fields": {
+        "travelMm": {
+          "value": [
+            160,
+            170,
+            180
+          ],
+          "status": "verified",
+          "url": "https://www.srsuntour.com/products/fork/SF25-DUROLUX38-EVO-Boost-7747.html",
+          "retrieved": "2026-09-30",
+          "quote": "Travel: 160 mm, 170 mm, 180 mm",
+          "where": "product page SF25 DUROLUX38 EVO Boost, Key features",
+          "verifiedBy": {
+            "url": "https://www.srsuntour.com/products/fork/SF25-DUROLUX38-EVO-Boost-7747.html",
+            "retrieved": "2026-09-30",
+            "quote": "Travel: 160 mm, 170 mm, 180 mm",
+            "where": "SF25-DUROLUX38-EVO-Boost product page, Key features (spec table: 'Travel 160/170/180')"
+          }
+        },
+        "wheelSize": {
+          "value": "29",
+          "status": "single",
+          "url": "https://www.srsuntour.com/products/fork/SF25-DUROLUX38-EVO-Boost-7747.html",
+          "retrieved": "2026-09-30",
+          "quote": "Available in 29\"",
+          "where": "product page, Key features"
+        },
+        "stanchionMm": {
+          "value": 38,
+          "status": "single",
+          "url": "https://www.srsuntour.com/products/fork/SF25-DUROLUX38-EVO-Boost-7747.html",
+          "retrieved": "2026-09-30",
+          "quote": "Stanchion DIA. (Material) 38 mm (Alloy)",
+          "where": "product page, specs"
+        },
+        "damper": {
+          "value": "RC+-PCS",
+          "status": "single",
+          "url": "https://www.srsuntour.com/products/fork/SF25-DUROLUX38-EVO-Boost-7747.html",
+          "retrieved": "2026-09-30",
+          "quote": "Damper RC+-PCS",
+          "where": "product page, specs"
+        },
+        "springType": {
+          "value": "air (EQ)",
+          "status": "single",
+          "url": "https://www.srsuntour.com/products/fork/SF25-DUROLUX38-EVO-Boost-7747.html",
+          "retrieved": "2026-09-30",
+          "quote": "Spring AIR(EQ)",
+          "where": "product page, specs"
+        },
+        "lscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Booklet https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Service_manuals/SRS-BOOKLET_DUROLUX_38.pdf.pdf p.12 describes external LSC ('Turn the right-side adjuster knob counter-clockwise towards the (-) direction') but states no click count; product page, MY26 general fork manual and 2K27 fork glossary also give none."
+        },
+        "hscMax": {
+          "value": null,
+          "status": "verified",
+          "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Service_manuals/SRS-BOOKLET_DUROLUX_38.pdf.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Internal shim based high speed compression and rebound management • External low speed compression & rebound adjust",
+          "where": "booklet p.12, RC+ PCS Cartridge Features (HSC is internal/not user-adjustable)",
+          "verifiedBy": {
+            "url": "https://www.srsuntour.com/products/fork/SF25-DUROLUX38-EVO-Boost-7747.html",
+            "retrieved": "2026-09-30",
+            "quote": "External low speed compression and rebound adjustment, internal shim based high speed compression and rebound management means less knobs and more control.",
+            "where": "Product page description; also RC+ page / booklet p.12: 'Internal shim based high speed compression and rebound management' and 'External low speed compression & rebound adjust'"
+          }
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Service_manuals/SRS-BOOKLET_DUROLUX_38.pdf.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Internal shim based high speed compression and rebound management • External low speed compression & rebound adjust",
+          "where": "booklet p.12, RC+ PCS Cartridge Features",
+          "verifiedBy": {
+            "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Service_manuals/SRS-BOOKLET_DUROLUX_38.pdf.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "Turn the knob counter-clockwise toward the ( - ) to open the low-speed rebound. Each click allows the fork rebound faster per progression.",
+            "where": "SRS-BOOKLET DUROLUX 38 (RC+ Maintenance Guide, PDF dated 2026-01-30), p.10 'REBOUND SETTING'"
+          }
+        },
+        "reboundMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Booklet shows a rebound dial graphic numbered 1 (START/CLOSE) to 25 (OPEN), but no stated total click count. The identical 1-25 graphic is reused in the Axon34, Zeron36 and TriAir2 booklets (TriAir product page says '8 click rebound' for TriAir), so it looks generic and it is unclear whether it shows 25 or 24 clicks. Not taken as max. Source: https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Service_manuals/SRS-BOOKLET_DUROLUX_38.pdf.pdf p.10 'REBOUND SETTING'. manual booklets show a generic rebound dial graphic numbered 1 (close) - 25 (open); not a stated total"
+        },
+        "reboundDialGraphic": {
+          "value": "1 (START/CLOSE) ... 25 (OPEN)",
+          "status": "single",
+          "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Service_manuals/SRS-BOOKLET_DUROLUX_38.pdf.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "TO OPEN THE LOW-SPEED REBOUND ... 13 12 11 10 9 8 7 6 5 4 3 2 1 START CLOSE / OPEN 25 24 23 22 21 20 19 18 17 16 15 14",
+          "where": "booklet p.10, rebound dial graphic (informational only, not a stated max)"
+        },
+        "hsrMax": {
+          "value": null,
+          "status": "verified",
+          "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Service_manuals/SRS-BOOKLET_DUROLUX_38.pdf.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Internal shim based high speed compression and rebound management • External low speed compression & rebound adjust",
+          "where": "booklet p.12 (HSR internal, no external adjuster)",
+          "verifiedBy": {
+            "url": "https://www.srsuntour.com/products/fork/SF25-DUROLUX38-EVO-Boost-7747.html",
+            "retrieved": "2026-09-30",
+            "quote": "External low speed compression and rebound adjustment, internal shim based high speed compression and rebound management means less knobs and more control.",
+            "where": "Product page description"
+          }
+        },
+        "lscStart": {
+          "value": null,
+          "status": "missing",
+          "note": "No recommended LSC start setting printed."
+        },
+        "hscStart": {
+          "value": null,
+          "status": "missing",
+          "note": "No external HSC."
+        },
+        "reboundStartNote": {
+          "value": "start fully closed (clockwise)",
+          "status": "single",
+          "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Service_manuals/SRS-BOOKLET_DUROLUX_38.pdf.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Always start the rebound setting process with the rebound knob (located bottom of the drive-side of the fork) in closed position by turning the adjuster knob all the way to the end of the clock-wise position (+).",
+          "where": "booklet p.10"
+        },
+        "maxPressurePsi": {
+          "value": 105,
+          "status": "verified",
+          "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Owners%20manuals/MY_26_Suspension_Fork_Manuals/MY26_General_Fork_Manual_English_20250930.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "RUX38 DUROLUX38 ... Max. pressure 105psi",
+          "where": "MY26 general fork manual p.13, EQ air system forks table, column 'RUX38 / DUROLUX38'",
+          "verifiedBy": {
+            "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Owners%20manuals/MY_26_Suspension_Fork_Manuals/MY26_General_Fork_Manual_English_20250930.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "RUX38 DUROLUX38 ... Air pressure (factory setting) 70psi ... Max. pressure 105psi",
+            "where": "MY26 General Fork Manual (EN, 20250930), p.13 'AIR PRESSURE ADJUST', <EQ air system forks> table, column 'RUX38 / DUROLUX38'"
+          }
+        },
+        "factoryPressurePsi": {
+          "value": 70,
+          "status": "single",
+          "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Owners%20manuals/MY_26_Suspension_Fork_Manuals/MY26_General_Fork_Manual_English_20250930.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Air pressure (factory setting) 70psi",
+          "where": "MY26 general fork manual p.13, column 'RUX38 / DUROLUX38'"
+        },
+        "spacersStock": {
+          "value": {
+            "180": 2,
+            "170": 3,
+            "160": 4
+          },
+          "status": "verified",
+          "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Owners%20manuals/MY_26_Suspension_Fork_Manuals/MY26_General_Fork_Manual_English_20250930.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "SF25-DUROLUX38X SF25-DUROLUX38 ... Factory setting / Max. possible spacers: 180mm 2 6; 170mm 3 7; 160mm 4 8",
+          "where": "MY26 general fork manual p.15, EQ air system forks spacer table (column shared by DUROLUX38X and DUROLUX38), rubber spacer 7.5cc-15mm",
+          "verifiedBy": {
+            "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Owners%20manuals/MY_26_Suspension_Fork_Manuals/MY26_General_Fork_Manual_English_20250930.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "SF25-DUROLUX38X SF25-DUROLUX38 ... Rubber spacer volume 7.5cc-15mm ... 180mm 2 6 / 170mm 3 7 / 160mm 4 8",
+            "where": "MY26 General Fork Manual p.15 'AIR VOLUME ADJUST', column 'SF25-DUROLUX38X / SF25-DUROLUX38' (Factory setting | Max. possible spacers)"
+          }
+        },
+        "spacersMax": {
+          "value": {
+            "180": 6,
+            "170": 7,
+            "160": 8
+          },
+          "status": "verified",
+          "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Owners%20manuals/MY_26_Suspension_Fork_Manuals/MY26_General_Fork_Manual_English_20250930.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "SF25-DUROLUX38X SF25-DUROLUX38 ... Factory setting / Max. possible spacers: 180mm 2 6; 170mm 3 7; 160mm 4 8",
+          "where": "MY26 general fork manual p.15",
+          "verifiedBy": {
+            "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Owners%20manuals/MY_26_Suspension_Fork_Manuals/MY26_General_Fork_Manual_English_20250930.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "180mm 2 6 / 170mm 3 7 / 160mm 4 8",
+            "where": "MY26 General Fork Manual p.15, same column, 'Max. possible spacers'"
+          }
+        },
+        "sagPercent": {
+          "value": {
+            "200 - 180mm": "30 - 35%",
+            "180 - 160mm": "25 - 30%",
+            "160 - 140mm": "20 - 25%"
+          },
+          "status": "single",
+          "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Owners%20manuals/MY_26_Suspension_Fork_Manuals/MY26_General_Fork_Manual_English_20250930.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Fork travel SAG (%) SAG (mm) 200 - 180mm 30 - 35% 70 - 54mm; 180 - 160mm 25 - 30% 54 - 40mm; 160 - 140mm 20 - 25% 40 - 28mm",
+          "where": "MY26 general fork manual p.14 (generic table for all forks; travel bands overlap at 160/180)"
+        },
+        "pressureTable": {
+          "value": {
+            "unit": "psi",
+            "riderUnit": "kg",
+            "rows": [
+              {
+                "rider": "< 55",
+                "value": "< 40"
+              },
+              {
+                "rider": "55 - 65",
+                "value": "40 - 50"
+              },
+              {
+                "rider": "65 - 75",
+                "value": "50 - 60"
+              },
+              {
+                "rider": "75 - 85",
+                "value": "60 - 70"
+              },
+              {
+                "rider": "85 - 95",
+                "value": "70 - 85"
+              },
+              {
+                "rider": "95 <",
+                "value": "85 +"
+              }
+            ]
+          },
+          "status": "verified",
+          "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Owners%20manuals/MY_26_Suspension_Fork_Manuals/MY26_General_Fork_Manual_English_20250930.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Rider weight (kg) / RUX38 DUROLUX38: < 55 < 40; 55 - 65 40 - 50; 65 - 75 50 - 60; 75 - 85 60 - 70; 85 - 95 70 - 85; 95 < 85 +",
+          "where": "MY26 general fork manual p.13, '< EQ air system forks > Suggested air pressure (psi)', column 'RUX38 / DUROLUX38' (values are ranges, kept as printed strings)",
+          "verifiedBy": {
+            "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Owners%20manuals/MY_26_Suspension_Fork_Manuals/MY26_General_Fork_Manual_English_20250930.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "Rider weight (kg) | RUX38 DUROLUX38: < 55 < 40; 55 - 65 40 - 50; 65 - 75 50 - 60; 75 - 85 60 - 70; 85 - 95 70 - 85; 95 < 85 +; Air pressure (factory setting) 70psi; Max. pressure 105psi",
+            "where": "MY26 General Fork Manual p.13, <EQ air system forks>, 'Suggested air pressure (psi)'"
+          }
+        },
+        "manualUrl": {
+          "value": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Owners%20manuals/MY_26_Suspension_Fork_Manuals/MY26_General_Fork_Manual_English_20250930.pdf",
+          "status": "single",
+          "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Owners%20manuals/MY_26_Suspension_Fork_Manuals/MY26_General_Fork_Manual_English_20250930.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "MY26 General Fork Manual English",
+          "where": "owners manual; model booklet: https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Service_manuals/SRS-BOOKLET_DUROLUX_38.pdf.pdf"
+        }
+      }
+    },
+    {
+      "id": "sr-suntour-zeron36-2026",
+      "name": "SR Suntour Zeron36 / Zeron36X (EQ air, 3CR/2CR/RC)",
+      "type": "fork",
+      "modelYears": [
+        2026
+      ],
+      "catalogId": null,
+      "fields": {
+        "travelMm": {
+          "value": [
+            120,
+            130,
+            140,
+            150,
+            160
+          ],
+          "status": "verified",
+          "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Service_manuals/SRS-BOOKLET_ZERON36X.pdf.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "TRAVEL: 120 mm, 130 mm, 140 mm, 150 mm, 160 mm",
+          "where": "booklet p.8 KEY SPECIFICATIONS",
+          "verifiedBy": {
+            "url": "https://www.srsuntour.com/fileadmin/user_upload/Zeron_Setup_Guide/SRS-2407-ZERON36-X-Setup-Guide_Final.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "TRAVEL: 120 mm, 130 mm, 140 mm, 150 mm, 160 mm",
+            "where": "ZERON36/X Setup Guide p.8 'KEY SPECIFICATIONS' (also p.5 and product pages SF25-ZERON36 / SF26-ZERON36X: 'Travel 120/130/140/150/160')"
+          }
+        },
+        "wheelSize": {
+          "value": [
+            "29",
+            "27.5"
+          ],
+          "status": "single",
+          "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Service_manuals/SRS-BOOKLET_ZERON36X.pdf.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "TIRE SIZE & CLEARANCE UP TO 29\" X 2.6\" (67mm WIDTH, ETRTO 65-622), 27.5\" X 2.6\" (67mm WIDTH, ETRTO 65-584)",
+          "where": "booklet p.8 KEY SPECIFICATIONS"
+        },
+        "stanchionMm": {
+          "value": 36,
+          "status": "single",
+          "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Service_manuals/SRS-BOOKLET_ZERON36X.pdf.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "STANCHION: Ø36MM, ALLOY, HARD ANODIZED FINISH",
+          "where": "booklet p.8"
+        },
+        "damper": {
+          "value": "3CR / 2CR / RC",
+          "status": "single",
+          "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Service_manuals/SRS-BOOKLET_ZERON36X.pdf.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "COMPRESSION ADJUST: 3CR/ 2CR/ RC",
+          "where": "booklet p.8"
+        },
+        "springType": {
+          "value": "air (EQ)",
+          "status": "single",
+          "url": "https://www.srsuntour.com/products/fork/SF26-ZERON36X-Boost-8140.html",
+          "retrieved": "2026-09-30",
+          "quote": "Spring AIR(EQ)",
+          "where": "product page SF26 ZERON36X Boost, specs"
+        },
+        "compressionPositions": {
+          "value": {
+            "3CR": 3,
+            "2CR": 2
+          },
+          "status": "verified",
+          "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Service_manuals/SRS-BOOKLET_ZERON36X.pdf.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "3CR Compression open mode ... Compression medium mode: Turn the right-side adjuster knob by one click: counter clockwise from the \"FIRM\" mode and clockwise from the \"OPEN\" mode ... Compression firm mode",
+          "where": "booklet p.17 COMPRESSION ADJUSTMENT (3CR = open/medium/firm; 2CR = open/firm). Positions, not a click range.",
+          "verifiedBy": {
+            "url": "https://www.srsuntour.com/fileadmin/user_upload/Zeron_Setup_Guide/SRS-2407-ZERON36-X-Setup-Guide_Final.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "3CR Compression open mode ... Compression medium mode: Turn the right-side adjuster knob by one click ... Compression firm mode ... 2CR Compression open mode ... Compression medium mode: Turn the right-side adjuster knob clockwise toward the \"Firm\" direction.",
+            "where": "ZERON36/X Setup Guide p.16 'COMPRESSION ADJUSTMENT'; cartridges per p.8 'COMPRESSION ADJUST: 3CR/ 2CR/ RC'"
+          }
+        },
+        "lscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "RC version has an LSC knob (https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Service_manuals/SRS-BOOKLET_ZERON36X.pdf.pdf p.17: 'To open the low-speed compression: Turn the right- side adjuster knob counter-clockwise towards the (-) direction') but no click count is stated anywhere (booklet, product page, MY26 general manual, glossary)."
+        },
+        "hscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No HSC adjuster mentioned for 3CR/2CR/RC; no explicit statement found that proves absence, so left missing."
+        },
+        "reboundMode": {
+          "value": null,
+          "status": "missing",
+          "note": "Only a low-speed rebound knob is described (booklet p.14 'TO OPEN THE LOW-SPEED REBOUND'); no explicit statement excluding HSR found."
+        },
+        "reboundMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Booklet shows a rebound dial graphic numbered 1 (START/CLOSE) to 25 (OPEN), but no stated total click count. The identical 1-25 graphic is reused in the Axon34, Zeron36 and TriAir2 booklets (TriAir product page says '8 click rebound' for TriAir), so it looks generic and it is unclear whether it shows 25 or 24 clicks. Not taken as max. Source: https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Service_manuals/SRS-BOOKLET_ZERON36X.pdf.pdf p.14. manual booklets show a generic rebound dial graphic numbered 1 (close) - 25 (open); not a stated total"
+        },
+        "hsrMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Not mentioned."
+        },
+        "reboundStartNote": {
+          "value": "start fully closed (clockwise)",
+          "status": "single",
+          "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Service_manuals/SRS-BOOKLET_ZERON36X.pdf.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Always start the rebound setting process by turning the red knob clock-wise (towards \"+\") all the way until it stops.",
+          "where": "booklet p.14"
+        },
+        "maxPressurePsi": {
+          "value": 145,
+          "status": "verified",
+          "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Service_manuals/SRS-BOOKLET_ZERON36X.pdf.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Do not exceed max air pressure of 145Psi.",
+          "where": "booklet p.13 WARNING; table row 'MAX. PRESSURE 145 psi'",
+          "verifiedBy": {
+            "url": "https://www.srsuntour.com/fileadmin/user_upload/Zeron_Setup_Guide/SRS-2407-ZERON36-X-Setup-Guide_Final.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "PRESSURE (FACTORY SETTING) 125 psi MAX. PRESSURE 145 psi ... Do not exceed max air pressure of 145Psi.",
+            "where": "ZERON36/X Setup Guide p.12; matches MY26 General Fork Manual p.13 column 'AION36 ZERON36X ZERON36 MOBIE36 MOBIE34' (Max. pressure 145psi, factory 125psi)"
+          }
+        },
+        "factoryPressurePsi": {
+          "value": 125,
+          "status": "single",
+          "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Service_manuals/SRS-BOOKLET_ZERON36X.pdf.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "PRESSURE (FACTORY SETTING) 125 psi",
+          "where": "booklet p.13"
+        },
+        "spacersStock": {
+          "value": {
+            "160": 3,
+            "150": 4,
+            "140": 5,
+            "130": 6,
+            "120": 7
+          },
+          "status": "verified",
+          "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Service_manuals/SRS-BOOKLET_ZERON36X.pdf.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Travel 160 / Travel 150 / Travel 140 / Travel 130 / Travel 120 ... ZERON36 / 36X Factory setting 3 4 5 6 7 Max. possible spacers 9 10 11 12 13",
+          "where": "booklet p.16 AIR VOLUME SETTING",
+          "verifiedBy": {
+            "url": "https://www.srsuntour.com/fileadmin/user_upload/Zeron_Setup_Guide/SRS-2407-ZERON36-X-Setup-Guide_Final.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "ZERON36 / 36X FEG270-10 volume spacers Factory setting Max. possible spacers Travel 160 3 9 Travel 150 4 10 Travel 140 5 11 Travel 130 6 12 Travel 120 7 13",
+            "where": "ZERON36/X Setup Guide p.15; MY26 General Fork Manual p.15 agrees for stock (SF25-ZERON36 and SF26-ZERON36X columns both 3/4/5/6/7)"
+          }
+        },
+        "spacersMax": {
+          "value": {
+            "160": 9,
+            "150": 10,
+            "140": 11,
+            "130": 12,
+            "120": 13
+          },
+          "status": "verified",
+          "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Service_manuals/SRS-BOOKLET_ZERON36X.pdf.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "ZERON36 / 36X Factory setting 3 4 5 6 7 Max. possible spacers 9 10 11 12 13",
+          "where": "booklet p.16",
+          "verifiedBy": {
+            "url": "https://www.srsuntour.com/fileadmin/user_upload/Zeron_Setup_Guide/SRS-2407-ZERON36-X-Setup-Guide_Final.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "Travel 160 3 9 Travel 150 4 10 Travel 140 5 11 Travel 130 6 12 Travel 120 7 13",
+            "where": "ZERON36/X Setup Guide p.15 (and MY26 General Fork Manual p.15 column 'SF26-ZERON36X / SF26-MOBIE36')"
+          }
+        },
+        "sagPercent": {
+          "value": "15-30",
+          "status": "verified",
+          "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Service_manuals/SRS-BOOKLET_ZERON36X.pdf.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "120 mm 18-30 mm (15-30%) ... 160 mm 24-48 mm (15-30%)",
+          "where": "booklet p.13 SAG MIN.-MAX. table",
+          "verifiedBy": {
+            "url": "https://www.srsuntour.com/fileadmin/user_upload/Zeron_Setup_Guide/SRS-2407-ZERON36-X-Setup-Guide_Final.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "PER FORK STOCK TRAVEL SAG MIN.-MAX. (mm) 120 mm 18-30 mm (15-30%) 130 mm 20-39 mm (15-30%) 140 mm 21-42 mm (15-30%) 150 mm 23-45 mm (15-30%) 160 mm 24-48 mm (15-30%)",
+            "where": "ZERON36/X Setup Guide p.12 'SAG / AIR PRESSURE SETTING'"
+          },
+          "note": "setup guide 15-30%; the general table in the MY26 manual says 20-25% for 120-160 mm"
+        },
+        "pressureTable": {
+          "value": {
+            "unit": "psi",
+            "riderUnit": "kg",
+            "rows": [
+              {
+                "rider": "< 55 kg",
+                "value": "50 - 70 psi"
+              },
+              {
+                "rider": "55 - 65 kg",
+                "value": "70 - 80 psi"
+              },
+              {
+                "rider": "65 - 75 kg",
+                "value": "80 - 90 psi"
+              },
+              {
+                "rider": "75 - 85 kg",
+                "value": "90 - 100 psi"
+              },
+              {
+                "rider": "85 - 95 kg",
+                "value": "100 - 125 psi"
+              },
+              {
+                "rider": "95 < kg",
+                "value": "125+ psi"
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Service_manuals/SRS-BOOKLET_ZERON36X.pdf.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "< 55 kg < 121 lbs 50 - 70 psi; 55 - 65 kg 121 - 143 lbs 70 - 80 psi; 65 - 75 kg 143 - 165 lbs 80 - 90 psi; 75 - 85 kg 165 - 187 lbs 90 - 100 psi; 85 - 95 kg 187 - 209 lbs 100 - 125 psi; 95 < kg 209 < lbs 125+ psi",
+          "where": "booklet p.13 RECOMMENDED AIR PRESSURE (same values in MY26 general fork manual p.13 column ZERON36X/ZERON36)"
+        },
+        "manualUrl": {
+          "value": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Service_manuals/SRS-BOOKLET_ZERON36X.pdf.pdf",
+          "status": "single",
+          "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Service_manuals/SRS-BOOKLET_ZERON36X.pdf.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "ZERON36 / X UPDATE 08-2025 ENGLISH",
+          "where": "booklet cover"
+        }
+      }
+    },
+    {
+      "id": "sr-suntour-triair-3cr-2026",
+      "name": "SR Suntour TriAir 3CR",
+      "type": "shock",
+      "modelYears": [
+        2026,
+        2027
+      ],
+      "catalogId": null,
+      "fields": {
+        "sizesAvailable": {
+          "value": {
+            "Metric": [
+              "230 x 57.5 / 60 / 62.5 / 65 mm",
+              "210 x 47.5 / 50 / 52.5 / 55 mm"
+            ],
+            "Trunnion": [
+              "225 x 67.5 / 70 / 72.5 / 75 mm",
+              "205 x 57.5 / 60 / 62.5 / 65 mm",
+              "185 x 47.5 / 50 / 52.5 / 55 mm"
+            ],
+            "Inch": [
+              "216 x 63 mm",
+              "200 x 57 mm"
+            ]
+          },
+          "status": "verified",
+          "url": "https://www.srsuntour.com/products/rear-shock/RS24-TRIAir-3CR-METRIC-8158.html",
+          "retrieved": "2026-09-30",
+          "quote": "Travel 230 x 57.5 / 60 / 62.5 / 65 mm / 210 x 47.5 / 50 / 52.5 / 55 mm | (Trunnion page) 225 x 67.5 / 70 / 72.5 / 75 mm / 205 x 57.5 / 60 / 62.5 / 65 mm / 185 x 47.5 / 50 / 52.5 / 55 mm | (Inch page) 216 x 63 mm / 200 x 57 mm",
+          "where": "specs 'Travel' on RS24-TRIAir 3CR METRIC (https://www.srsuntour.com/products/rear-shock/RS24-TRIAir-3CR-METRIC-8158.html), Trunnion (https://www.srsuntour.com/products/rear-shock/RS24-TRIAir-3CR-Trunnion-8159.html) and INCH (https://www.srsuntour.com/products/rear-shock/RS24-TRIAir-3CR-INCH-8160.html) pages",
+          "verifiedBy": {
+            "url": "https://www.srsuntour.com/products/rear-shock/RS24-TRIAir-3CR-METRIC-8158.html",
+            "retrieved": "2026-09-30",
+            "quote": "Metric: 'Travel 230 x 57.5 / 60 / 62.5 / 65 mm / 210 x 47.5 / 50 / 52.5 / 55 mm'; Trunnion: 'Travel 225 x 67.5 / 70 / 72.5 / 75 mm / 205 x 57.5 / 60 / 62.5 / 65 mm / 185 x 47.5 / 50 / 52.5 / 55 mm'; Inch: 'Travel 216 x 63 mm / 200 x 57 mm'",
+            "where": "RS24-TRIAir 3CR product pages: METRIC https://www.srsuntour.com/products/rear-shock/RS24-TRIAir-3CR-METRIC-8158.html, Trunnion https://www.srsuntour.com/products/rear-shock/RS24-TRIAir-3CR-Trunnion-8159.html, INCH https://www.srsuntour.com/products/rear-shock/RS24-TRIAir-3CR-INCH-8160.html"
+          }
+        },
+        "mount": {
+          "value": [
+            "Metric",
+            "Trunnion",
+            "Inch"
+          ],
+          "status": "single",
+          "url": "https://www.srsuntour.com/products/rear-shock/RS24-TRIAir-3CR-METRIC-8158.html",
+          "retrieved": "2026-09-30",
+          "quote": "Metric / Trunnion models",
+          "where": "product page Key features; separate INCH product page also listed"
+        },
+        "springType": {
+          "value": "air (with air-backed IFP reservoir)",
+          "status": "single",
+          "url": "https://www.srsuntour.com/products/rear-shock/RS24-TRIAir-3CR-METRIC-8158.html",
+          "retrieved": "2026-09-30",
+          "quote": "Spring Air ... Supported by an air-backed IFP in the piggy chamber",
+          "where": "product page specs + description"
+        },
+        "compressionPositions": {
+          "value": 3,
+          "status": "verified",
+          "url": "https://www.srsuntour.com/products/rear-shock/RS24-TRIAir-3CR-METRIC-8158.html",
+          "retrieved": "2026-09-30",
+          "quote": "The 3CR damping allows for 3 position compression adjustment and 8-clicks of rebound range",
+          "where": "product page description; MY27 manual p.11 '3C COMPRESSION ADJUST ... 1. Open ... 2. Middle ... 3. Close'",
+          "verifiedBy": {
+            "url": "https://www.srsuntour.com/products/rear-shock/RS24-TRIAir-3CR-METRIC-8158.html",
+            "retrieved": "2026-09-30",
+            "quote": "The 3CR damping allows for 3 position compression adjustment and 8-clicks of rebound range",
+            "where": "Product page (Establish Traction section); MY27 Rear Shock Manual p.11: 'The SR SUNTOUR Triair series shocks offers 3-steps compression settings' (Open / Middle / Close)"
+          }
+        },
+        "lscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Compression is a 3-position lever (Open/Middle/Close), not a click range; see compressionPositions. 3-position compression switch (Open/Middle/Close), not a click range"
+        },
+        "hscMax": {
+          "value": null,
+          "status": "single",
+          "url": "https://www.srsuntour.com/products/rear-shock/RS24-TRIAir-3CR-METRIC-8158.html",
+          "retrieved": "2026-09-30",
+          "quote": "Key features PCS – Piston Compensator System 3 mode compression adjust 8 click rebound Piggy back pressure adjust Air volume spacer IFP System (Internal Floating piston) Metric / Trunnion models",
+          "where": "product page Key features (adjusters listed: 3-mode compression, 8-click rebound, piggyback pressure, spacers; no HSC)"
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://www.srsuntour.com/products/rear-shock/RS24-TRIAir-3CR-METRIC-8158.html",
+          "retrieved": "2026-09-30",
+          "quote": "Key features PCS – Piston Compensator System 3 mode compression adjust 8 click rebound Piggy back pressure adjust Air volume spacer IFP System (Internal Floating piston) Metric / Trunnion models",
+          "where": "product page Key features",
+          "verifiedBy": {
+            "url": "https://www.srsuntour.com/products/rear-shock/RS24-TRIAir-3CR-METRIC-8158.html",
+            "retrieved": "2026-09-30",
+            "quote": "8 click rebound",
+            "where": "Product page key features"
+          }
+        },
+        "reboundMax": {
+          "value": 8,
+          "status": "verified",
+          "url": "https://www.srsuntour.com/products/rear-shock/RS24-TRIAir-3CR-METRIC-8158.html",
+          "retrieved": "2026-09-30",
+          "quote": "The 3CR damping allows for 3 position compression adjustment and 8-clicks of rebound range to create the proper balance between fork and shock. ... 8 click rebound",
+          "where": "product page description + Key features (identical on Metric/Trunnion/Inch pages)",
+          "verifiedBy": {
+            "url": "https://www.srsuntour.com/products/rear-shock/RS24-TRIAir-3CR-METRIC-8158.html",
+            "retrieved": "2026-09-30",
+            "quote": "The 3CR damping allows for 3 position compression adjustment and 8-clicks of rebound range",
+            "where": "RS24-TRIAir 3CR product pages (Metric/Inch/Trunnion identical)"
+          }
+        },
+        "hsrMax": {
+          "value": null,
+          "status": "single",
+          "url": "https://www.srsuntour.com/products/rear-shock/RS24-TRIAir-3CR-METRIC-8158.html",
+          "retrieved": "2026-09-30",
+          "quote": "Key features PCS – Piston Compensator System 3 mode compression adjust 8 click rebound Piggy back pressure adjust Air volume spacer IFP System (Internal Floating piston) Metric / Trunnion models",
+          "where": "product page Key features (no HSR adjuster)"
+        },
+        "hasClimbLever": {
+          "value": true,
+          "status": "verified",
+          "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Owners%20manuals/MY_27_Rear_Shock_Manuals/SRS-2602-MY27-General-Rear-Shock-Manual-English-Web_Final.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "3. Close: it is great for climbing, in order to reduce undesirable suspension bob. The heavy/closed setting is NOT a lock-out, but does offer significant resistance to weight & pedal induced suspension movement.",
+          "where": "MY27 general rear shock manual p.11, 3C COMPRESSION ADJUST (TRIAIR)",
+          "verifiedBy": {
+            "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Owners%20manuals/MY_27_Rear_Shock_Manuals/SRS-2602-MY27-General-Rear-Shock-Manual-English-Web_Final.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "3. Close: it is great for climbing, in order to reduce undesirable suspension bob. The heavy/closed setting is NOT a lock-out, but does offer significant resistance to weight & pedal induced suspension movement.",
+            "where": "MY27 General Rear Shock Manual p.11 (3C COMPRESSION ADJUST, Triair)"
+          }
+        },
+        "reboundStartNote": {
+          "value": "start fully closed, open in 2-click steps",
+          "status": "single",
+          "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Owners%20manuals/MY_27_Rear_Shock_Manuals/SRS-2602-MY27-General-Rear-Shock-Manual-English-Web_Final.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "It's best to start with the rebound adjuster in the closed setting (full clockwise) and adjust out in two-click increments.",
+          "where": "MY27 general rear shock manual p.10"
+        },
+        "maxPressurePsi": {
+          "value": 300,
+          "status": "verified",
+          "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Owners%20manuals/MY_27_Rear_Shock_Manuals/SRS-2602-MY27-General-Rear-Shock-Manual-English-Web_Final.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "SUGGESTED AIR PRESSURE (PSI) TRIAIR MAIN BODY ... MAX. PRESSURE 300",
+          "where": "MY27 general rear shock manual p.9 table (read from rendered table)",
+          "verifiedBy": {
+            "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Owners%20manuals/MY_27_Rear_Shock_Manuals/SRS-2602-MY27-General-Rear-Shock-Manual-English-Web_Final.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "SUGGESTED AIR PRESSURE (PSI) ... TRIAIR MAIN BODY / RESERVOIR (IFP): AIR PRESSURE (FACTORY SETTING) 180 / 190; MAX. PRESSURE 300 / 240; MIN. PRESSURE – / 190",
+            "where": "MY27 General Rear Shock Manual p.9 'AIR PRESSURE ADJUST' (rendered table); identical in MY26 manual p.10"
+          }
+        },
+        "factoryPressurePsi": {
+          "value": 180,
+          "status": "single",
+          "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Owners%20manuals/MY_27_Rear_Shock_Manuals/SRS-2602-MY27-General-Rear-Shock-Manual-English-Web_Final.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "TRIAIR MAIN BODY AIR PRESSURE (FACTORY SETTING) 180",
+          "where": "MY27 manual p.9"
+        },
+        "reservoirPressurePsi": {
+          "value": {
+            "factory": 190,
+            "max": 240,
+            "min": 190
+          },
+          "status": "single",
+          "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Owners%20manuals/MY_27_Rear_Shock_Manuals/SRS-2602-MY27-General-Rear-Shock-Manual-English-Web_Final.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "TRIAIR RESERVOIR (IFP): AIR PRESSURE (FACTORY SETTING) 190, MAX. PRESSURE 240, MIN. PRESSURE 190",
+          "where": "MY27 manual p.9 table"
+        },
+        "sagPercent": {
+          "value": "20-35 (stroke-dependent)",
+          "status": "verified",
+          "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Owners%20manuals/MY_27_Rear_Shock_Manuals/SRS-2602-MY27-General-Rear-Shock-Manual-English-Web_Final.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "The recommended SAG range is 20% - 35%, depending on the stroke.",
+          "where": "MY27 general rear shock manual p.7 (chart: 75-60mm 25-35%, 55mm 25-30%, 50-30mm 20-25%)",
+          "verifiedBy": {
+            "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Owners%20manuals/MY_27_Rear_Shock_Manuals/SRS-2602-MY27-General-Rear-Shock-Manual-English-Web_Final.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "The recommended SAG range is 20% - 35%, depending on the stroke. ... 75mm/70mm/65mm/60mm 25 - 35%; 55mm 25-30%; 50mm/45mm/40mm/35mm/30mm 20 - 25%",
+            "where": "MY27 General Rear Shock Manual p.7 'SETTING SAG AND AIR PRESSURE' (generic for all SRS air shocks; same in MY26 p.8)"
+          }
+        },
+        "manualUrl": {
+          "value": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Owners%20manuals/MY_27_Rear_Shock_Manuals/SRS-2602-MY27-General-Rear-Shock-Manual-English-Web_Final.pdf",
+          "status": "single",
+          "url": "https://www.srsuntour.com/fileadmin/user_upload/Downloads/Consumer/Bike/Owners%20manuals/MY_27_Rear_Shock_Manuals/SRS-2602-MY27-General-Rear-Shock-Manual-English-Web_Final.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "SR SUNTOUR / REAR SHOCK / OWNER´S MANUAL / ENGLISH ... Copyright © 2026",
+          "where": "MY27 general rear shock manual"
+        }
+      }
+    }
+  ]
+}
