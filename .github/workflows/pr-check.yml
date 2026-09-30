@@ -25,6 +25,16 @@ jobs:
           python-version: '3.11'
       - run: python3 scripts/research.py check
 
+  harness:
+    name: Harness
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python3 scripts/test_harness.py
+
   verify:
     name: Tests
     runs-on: ubuntu-latest

@@ -64,6 +64,10 @@ Why these are R3: a storage mistake corrupts riders' data and can't be rolled ba
 updater changes can brick the OTA path or break Play policy; workflows, build files and hooks
 *are* the harness — an agent must not be able to weaken its own guard rails.
 
+**Limit of the hooks:** they run as `python3` in Claude Code. Where Python or the shell is
+missing (the owner's Windows machine, where the Bash tool is broken), they fail open. The
+GitHub ruleset on `main` (§6.4, step 2) is the server-side backstop that holds everywhere.
+
 ## 4. Human in the loop — the complete list
 
 The owner is asked **only** for:
@@ -98,9 +102,9 @@ that pass all checks, research runs, release notes — runs without asking.
 | Hook | Event | What it does |
 |---|---|---|
 | `cloud-setup.sh` ✅ | SessionStart | Android SDK; background Robolectric warm-up (G5, step 1) |
-| `guard-push.sh` | PreToolUse `Bash` | blocks pushes to `main`, plain force pushes, tag/release deletion; blocks a push when `.verify-stamp` doesn't match `git rev-parse HEAD^{tree}` → "run `./gradlew verify` first" (makes rule "verify before push" mechanical) |
-| `guard-paths.sh` | PreToolUse `Edit`/`Write` | R3 path → `permissionDecision: ask` with the reason; hooks/settings/workflows always ask |
-| `verify-stamp` | Gradle task `verify` finalizer | writes the tree hash on success (local file, git-ignored) |
+| `guard.py bash` (step 3) | PreToolUse `Bash` | denies pushes to `main` and tags, force pushes without lease, ref/tag deletion, `gh release create/delete`, `gh secret`; asks before `gh pr merge` and a rollback; denies a push when `build/verify-stamp` doesn't match the pushed tree → "run `./gradlew verify` first" (skipped when the session has no Android SDK — CI verifies then) |
+| `guard.py paths` (step 3) | PreToolUse `Edit`/`Write` | path in `.claude/hooks/protected-paths.txt` (R3) → `ask` with the reason |
+| verify stamp (step 3) | Gradle task `verify`, `doLast` | writes the tested tree (committed + uncommitted, `.gitignore` respected) to `build/verify-stamp` |
 | `format-kotlin.sh` | PostToolUse `Edit` on `*.kt` | ktlint format on the edited file (fast, keeps diffs clean) |
 | `release-notes-check.sh` | PreToolUse push | lists the commit subjects that would become release notes; blocks if any is not German/user-facing per a simple heuristic or contains `WIP`, `fixup` (G7) |
 
@@ -186,7 +190,7 @@ review findings not fixed. The owner approves with a GitHub review.
 |---|---|---|---|
 | 1 | Quick fixes: `gradlew` executable bit, Robolectric warm-up in the setup hook, allow-rule for `bash ./gradlew`, skill `ship` without `gh`, `[owner-review]` marker so R3 changes arrive as PRs | R3 (settings/hook) | S — in PR |
 | 2 | Owner: `main` ruleset, secret scanning, Dependabot | owner | S |
-| 3 | `guard-push.sh`, `guard-paths.sh`, verify stamp, deny-list | R3 | M |
+| 3 | `guard.py` (push + protected paths), verify stamp, deny-list, hook tests in `pr-check.yml` | R3 | M — in PR |
 | 4 | Risk classifier + R3 → PR in `ship.yml`, PR template, skill `harness` | R3 | M |
 | 5 | Permission diff, signature pin, release-notes lint, SHA-pinned actions, wrapper validation | R3 | M |
 | 6 | Storage fixtures + downgrade read test | R3 | M |
