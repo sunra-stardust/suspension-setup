@@ -21,11 +21,14 @@ push main / claude/<topic>
 - **Version** = `versionBase` from `version.properties` + `.` + commit count on main (e.g. `0.6.27`). The count only grows, so every release can update the previous one. Bump `versionBase` only for a milestone.
 - **Pull requests against `main`** run `pr-check.yml` (`research.py check` + `./gradlew verify`); it publishes nothing.
 - **Catalog research PRs** (skill `catalog-research`): commits whose message contains `[catalog-review]` are not shipped from a `claude/*` branch; they ship when the owner merges the PR into `main`.
+- **Protected changes** (risk class R3, `docs/HARNESS.md`): same mechanism with `[owner-review]` — end every commit body with it, push the `claude/*` branch, open a PR against `main` labelled `needs-owner`. `pr-check.yml` tests it; the owner's merge ships it.
 - **Docs/agent-only changes** (nothing under `app/`, `gradle/`, build files, `version.properties`) are tested and moved to main, but produce no release.
 - **Release notes** = commit subjects since the previous tag. They appear in the app's update banner — keep them short, German, user-facing.
 - The phone checks `releases/latest/download/latest.json` at most every 12 h (and on "Nach Updates suchen" in Basics → App). The APK is downloaded, checked against the SHA-256 and handed to Android's installer (the owner taps "Installieren").
 
 ## Check a run
+
+Cloud sessions have no authenticated `gh`; use the GitHub MCP tools instead (`actions_list` → `list_workflow_runs` for `ship.yml`, `list_workflow_jobs` for a run; `get_latest_release`). Editing a published release (notes, assets) is not possible from there — tell the owner what to change.
 
 ```bash
 gh run list --workflow ship.yml --limit 3

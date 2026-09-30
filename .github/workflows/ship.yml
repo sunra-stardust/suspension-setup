@@ -4,8 +4,9 @@ name: Ship
 # GitHub Release, which the app's OTA updater picks up. claude/* pushes (cloud sessions can only
 # push their own branch) are fast-forwarded onto main first, then the branch is deleted — main
 # stays the only long-lived branch. Details: .claude/skills/ship/SKILL.md
-# Exception: a claude/* push whose head commit message contains [catalog-review] is a catalog
-# research PR (skill catalog-research) and waits for the owner's merge; it ships from main.
+# Exception: a claude/* push whose head commit message contains [catalog-review] (catalog research,
+# skill catalog-research) or [owner-review] (protected change, docs/HARNESS.md risk class R3) is
+# proposed as a PR and waits for the owner's merge; it ships from main.
 on:
   push:
     branches: [ main, 'claude/**' ]
@@ -20,7 +21,7 @@ permissions:
 
 jobs:
   ship:
-    if: ${{ !(startsWith(github.ref, 'refs/heads/claude/') && contains(github.event.head_commit.message, '[catalog-review]')) }}
+    if: ${{ !(startsWith(github.ref, 'refs/heads/claude/') && (contains(github.event.head_commit.message, '[catalog-review]') || contains(github.event.head_commit.message, '[owner-review]'))) }}
     uses: ./.github/workflows/pipeline.yml
     secrets: inherit
     with:

@@ -33,8 +33,17 @@ repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." 2>/dev/null && pwd || true)"
 if [ -n "$repo_root" ] && [ -f "$repo_root/settings.gradle.kts" ]; then
   echo "sdk.dir=$SDK" > "$repo_root/local.properties"
 fi
-if [ -n "${CLAUDE_ENV_FILE:-}" ]; then
+if [ -n "${CLAUDE_ENV_FILE:-}" ] && ! grep -qs "^export ANDROID_HOME=$SDK\$" "$CLAUDE_ENV_FILE"; then
   echo "export ANDROID_HOME=$SDK" >> "$CLAUDE_ENV_FILE"
 fi
 echo "Android SDK ready at $SDK"
+
+# Warm up Gradle and Robolectric in the background: Robolectric downloads its Android jar on the
+# first UI test, and that download once failed mid-session (false red). One smoke test here
+# fetches it early without blocking the session start. Log: /tmp/robolectric-warmup.log
+if [ -n "$repo_root" ] && [ -f "$repo_root/gradlew" ]; then
+  (cd "$repo_root" && nohup bash ./gradlew :app:testGithubDebugUnitTest --tests '*AppSmokeTest' -q \
+    >/tmp/robolectric-warmup.log 2>&1 &)
+  echo "Robolectric warm-up started in the background (log: /tmp/robolectric-warmup.log)"
+fi
 exit 0
