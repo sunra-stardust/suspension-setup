@@ -17,9 +17,10 @@ Read the primary document itself (download the PDF/HTML and search the text). Se
 
 ## Record for every value
 
-- Source URL + document title + **model year** the document covers.
-- The exact quote or table row the value comes from, and the retrieval date.
-- Today these go in a code comment next to the value (`data/ComponentCatalog.kt`, `data/BikeProfile.kt`) and in README → "Woher die Zahlen kommen". Phase 3 moves the catalog to data files with dedicated `source` fields (see `docs/ROADMAP.md`).
+- The catalog is `app/src/main/resources/catalog/catalog.json`. Each document is one entry in `sources` (title, URL, **model years** it covers, retrieval date `YYYY-MM-DD`); each value is `{ "value": …, "source": "<id>", "note": "…" }`. Put the table row / column or footnote in `note`.
+- `source: "owner"` = checked on the owner's bike, not a manufacturer document. `source: "legacy"` = entered before per-value sourcing and not yet traced — replace it with a real source when you verify the value, never add new `legacy` values.
+- An entry's `modelYears` must be covered by the sources of its charts (`CatalogDataTest` enforces it).
+- Bike-specific values still live in `data/BikeProfile.kt` with a code comment; README → "Woher die Zahlen kommen" stays the human-readable summary.
 
 ## Model years
 
@@ -34,6 +35,6 @@ Do not pick a side. Keep the current value, and open a GitHub issue labelled `da
 - [ ] Every new/changed number traced to a level-1/2 source for the right model year
 - [ ] Adjusters present/absent verified (HSC? HSR? split rebound? lever?)
 - [ ] Units right (psi vs bar, clicks counted **from closed**, lbs springs)
-- [ ] `ScenarioDataTest` pins the new values (and still passes for existing ones)
+- [ ] `CatalogDataTest` pins the new values (and still passes for existing ones)
 - [ ] README source table updated
 - [ ] Commit subject says what changed for riders ("Fox 38 2027: Drucktabelle ergänzt")

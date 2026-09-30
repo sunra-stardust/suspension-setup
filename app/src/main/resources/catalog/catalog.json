@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 1,
+  "about": "Manufacturer data per model year. Every value names a source id from 'sources'. Rules: .claude/skills/catalog-data/SKILL.md. Clicks are counted from closed. Charts have one value per Fox rider-weight row (13 rows, 120-250 lb).",
+  "sources": {
+    "fox-fork-3638-2025": {
+      "title": "Fox 36mm / 38mm fork owner's manual (2025)",
+      "url": "https://tech.ridefox.com/bike/owners-manuals/2979/fork--2025-36mm-or-38mm",
+      "modelYears": [2025],
+      "retrieved": "2026-09-29"
+    },
+    "fox-coil-2025": {
+      "title": "Fox coil shock owner's manual, DHX2 and DHX (2025)",
+      "url": "https://tech.ridefox.com/bike/owners-manuals/2981/shock--2025-all-coil-shocks-(dhx2-and-dhx-models)",
+      "modelYears": [2025],
+      "retrieved": "2026-09-29"
+    },
+    "fox-dhx2-2026": {
+      "title": "Fox DHX2 owner's manual (2026)",
+      "url": "https://tech.ridefox.com/bike/owners-manuals/3090/shock--2026-dhx2",
+      "modelYears": [2026],
+      "retrieved": "2026-09-29"
+    },
+    "mondraker-level-rr": {
+      "title": "Mondraker Level RR product page and 2026 suspension setup guide",
+      "url": "https://mondraker.com/storage/resources/product_group/file/68b5a8ed56c17847278558-level-rr-2026-suspension-setup-guide.pdf",
+      "modelYears": [2026],
+      "retrieved": "2026-09-29"
+    },
+    "sram-superdeluxe-coil-ult": {
+      "title": "RockShox Super Deluxe Coil Ultimate model page",
+      "url": "https://www.sram.com/en/rockshox/models/rs-sdlc-ult-b1",
+      "modelYears": [],
+      "retrieved": "2026-09-29"
+    },
+    "sram-vivid-coil-ult": {
+      "title": "RockShox Vivid Coil Ultimate model page",
+      "url": "https://www.sram.com/en/rockshox/models/rs-vivc-ult-c1",
+      "modelYears": [],
+      "retrieved": "2026-09-29"
+    },
+    "legacy": {
+      "title": "Entered before per-value sourcing; not yet traced to a manufacturer document",
+      "url": null,
+      "modelYears": [],
+      "retrieved": "2026-09-29"
+    },
+    "owner": {
+      "title": "Owner's own spec, checked on the bike (not a manufacturer document)",
+      "url": null,
+      "modelYears": [],
+      "retrieved": "2026-09-29"
+    }
+  },
+  "forks": [
+    {
+      "id": "fox38_gripx2",
+      "name": "Fox 38 Factory GRIP X2",
+      "maker": "Fox",
+      "modelYears": [2025],
+      "travelMm": { "value": 180, "source": "fox-fork-3638-2025" },
+      "lscMax": { "value": 18, "source": "fox-fork-3638-2025" },
+      "hscMax": { "value": 8, "source": "fox-fork-3638-2025" },
+      "reboundMode": { "value": "split", "source": "fox-fork-3638-2025" },
+      "reboundMax": { "value": 16, "source": "fox-fork-3638-2025", "note": "LSR" },
+      "hsrMax": { "value": 8, "source": "fox-fork-3638-2025" },
+      "pressureChart": {
+        "value": [72, 76, 80, 84, 89, 93, 97, 102, 106, 110, 114, 119, 123],
+        "source": "fox-fork-3638-2025",
+        "note": "FLOAT column (not E-Bike+), psi"
+      },
+      "maxPressurePsi": { "value": 140, "source": "fox-fork-3638-2025" },
+      "lsrChart": {
+        "value": [8, 7, 7, 6, 6, 5, 4, 4, 3, 2, 1, 0, 0],
+        "source": "fox-fork-3638-2025",
+        "note": "GRIP X2 rebound table, clicks from closed"
+      },
+      "hsrChart": {
+        "value": [9, 8, 7, 7, 7, 7, 6, 5, 4, 3, 3, 2, 1],
+        "source": "fox-fork-3638-2025",
+        "note": "GRIP X2 rebound table, clicks from closed"
+      },
+      "spacersStock": { "value": 1, "source": "fox-fork-3638-2025", "note": "factory count for 180 mm travel" },
+      "spacersMax": { "value": 4, "source": "fox-fork-3638-2025", "note": "180 mm travel" }
+    },
+    {
+      "id": "fox36_gripx2",
+      "name": "Fox 36 Factory GRIP X2",
+      "maker": "Fox",
+      "modelYears": [2025],
+      "travelMm": { "value": 160, "source": "fox-fork-3638-2025" },
+      "lscMax": { "value": 18, "source": "fox-fork-3638-2025" },
+      "hscMax": { "value": 8, "source": "fox-fork-3638-2025" },
+      "reboundMode": { "value": "split", "source": "fox-fork-3638-2025" },
+      "reboundMax": { "value": 16, "source": "fox-fork-3638-2025", "note": "LSR" },
+      "hsrMax": { "value": 8, "source": "fox-fork-3638-2025" },
+      "pressureChart": {
+        "value": [66, 70, 74, 78, 82, 86, 89, 94, 99, 105, 109, 113, 117],
+        "source": "fox-fork-3638-2025",
+        "note": "FLOAT column, psi"
+      },
+      "maxPressurePsi": { "value": 120, "source": "fox-fork-3638-2025" },
+      "lsrChart": {
+        "value": [8, 7, 7, 6, 6, 5, 4, 4, 3, 2, 1, 0, 0],
+        "source": "fox-fork-3638-2025",
+        "note": "GRIP X2 rebound table, clicks from closed"
+      },
+      "hsrChart": {
+        "value": [9, 8, 7, 7, 7, 7, 6, 5, 4, 3, 3, 2, 1],
+        "source": "fox-fork-3638-2025",
+        "note": "GRIP X2 rebound table, clicks from closed"
+      },
+      "spacersStock": { "value": 1, "source": "fox-fork-3638-2025" },
+      "spacersMax": { "value": 6, "source": "fox-fork-3638-2025" }
+    }
+  ],
+  "shocks": [
+    {
+      "id": "fox_dhx2_hsc_lsr",
+      "name": "Fox DHX2 (HSC · LSC · LSR)",
+      "maker": "Fox",
+      "modelYears": [],
+      "about": "The owner's unit: HSC + LSC and one rebound adjuster, no HSR. Deliberately without a series name: Fox documents HSC as Factory-only, Mondraker lists a Performance Elite (LSC/LSR only).",
+      "strokeMm": { "value": 65, "source": "mondraker-level-rr" },
+      "eyeToEyeMm": { "value": 205, "source": "mondraker-level-rr" },
+      "lscMax": { "value": 16, "source": "owner", "note": "Fox publishes no total click counts" },
+      "hscMax": { "value": 8, "source": "owner" },
+      "reboundMode": { "value": "split", "source": "owner", "note": "one rebound knob, shown as LSR" },
+      "reboundMax": { "value": 16, "source": "owner" },
+      "hsrMax": { "value": null, "source": "owner", "note": "no HSR knob on the owner's shock" },
+      "hasClimbLever": { "value": true, "source": "owner" },
+      "preloadGuide": { "value": "fox", "source": "fox-coil-2025", "note": "8 clicks from no play, max 2 turns" }
+    },
+    {
+      "id": "fox_dhx2_coil",
+      "name": "Fox DHX2 Factory",
+      "maker": "Fox",
+      "modelYears": [2025, 2026],
+      "strokeMm": { "value": 65, "source": "mondraker-level-rr" },
+      "eyeToEyeMm": { "value": 205, "source": "mondraker-level-rr" },
+      "lscMax": { "value": 16, "source": "owner", "note": "Fox publishes no total click counts" },
+      "hscMax": { "value": 8, "source": "owner", "note": "HSC present: Fox manual lists all four adjusters for Factory" },
+      "reboundMode": { "value": "split", "source": "fox-coil-2025" },
+      "reboundMax": { "value": 16, "source": "owner" },
+      "hsrMax": { "value": 8, "source": "owner", "note": "HSR present per fox-coil-2025; count from owner's spec" },
+      "hasClimbLever": { "value": true, "source": "fox-coil-2025" },
+      "preloadGuide": { "value": "fox", "source": "fox-coil-2025" }
+    },
+    {
+      "id": "fox_dhx2_pe",
+      "name": "Fox DHX2 Performance Elite",
+      "maker": "Fox",
+      "modelYears": [2025],
+      "about": "2025 manual: Performance Elite 'will only utilize' LSC and LSR. The 2026 manual dropped that sentence but keeps the 'Factory Series only' footnotes on HSC/HSR.",
+      "strokeMm": { "value": 65, "source": "mondraker-level-rr" },
+      "eyeToEyeMm": { "value": 205, "source": "mondraker-level-rr" },
+      "lscMax": { "value": 16, "source": "owner", "note": "Fox publishes no total click counts" },
+      "hscMax": { "value": null, "source": "fox-coil-2025", "note": "HSC: Factory Series only" },
+      "reboundMode": { "value": "split", "source": "fox-coil-2025" },
+      "reboundMax": { "value": 16, "source": "owner" },
+      "hsrMax": { "value": null, "source": "fox-coil-2025", "note": "HSR: Factory Series only" },
+      "hasClimbLever": { "value": false, "source": "legacy" },
+      "preloadGuide": { "value": "fox", "source": "fox-coil-2025" }
+    },
+    {
+      "id": "rockshox_superdeluxe_coil",
+      "name": "RockShox Super Deluxe Coil Ultimate",
+      "maker": "RockShox",
+      "modelYears": [],
+      "strokeMm": { "value": 65, "source": "mondraker-level-rr", "note": "the bike's shock size, not a RockShox spec" },
+      "eyeToEyeMm": { "value": 205, "source": "mondraker-level-rr", "note": "the bike's shock size, not a RockShox spec" },
+      "lscMax": { "value": 5, "source": "sram-superdeluxe-coil-ult" },
+      "hscMax": { "value": 5, "source": "sram-superdeluxe-coil-ult" },
+      "reboundMode": { "value": "single", "source": "sram-superdeluxe-coil-ult" },
+      "reboundMax": { "value": 20, "source": "sram-superdeluxe-coil-ult" },
+      "hsrMax": { "value": null, "source": "sram-superdeluxe-coil-ult" },
+      "hasClimbLever": { "value": true, "source": "sram-superdeluxe-coil-ult" },
+      "preloadGuide": { "value": "generic", "source": "sram-superdeluxe-coil-ult" }
+    },
+    {
+      "id": "rockshox_vivid_coil",
+      "name": "RockShox Vivid Coil Ultimate",
+      "maker": "RockShox",
+      "modelYears": [],
+      "strokeMm": { "value": 65, "source": "mondraker-level-rr", "note": "the bike's shock size, not a RockShox spec" },
+      "eyeToEyeMm": { "value": 205, "source": "mondraker-level-rr", "note": "the bike's shock size, not a RockShox spec" },
+      "lscMax": { "value": 5, "source": "sram-vivid-coil-ult" },
+      "hscMax": { "value": 5, "source": "sram-vivid-coil-ult" },
+      "reboundMode": { "value": "single", "source": "sram-vivid-coil-ult" },
+      "reboundMax": { "value": 20, "source": "sram-vivid-coil-ult" },
+      "hsrMax": { "value": null, "source": "sram-vivid-coil-ult" },
+      "hasClimbLever": { "value": true, "source": "sram-vivid-coil-ult" },
+      "preloadGuide": { "value": "generic", "source": "sram-vivid-coil-ult" }
+    }
+  ]
+}

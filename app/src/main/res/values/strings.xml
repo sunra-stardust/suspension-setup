@@ -325,6 +325,11 @@
     <string name="picker_split_rebound" translatable="false">LSR %1$d / HSR %2$d</string>
     <string name="picker_has_chart">Pressure and rebound from the manufacturer chart</string>
     <string name="picker_has_lever">with climb lever</string>
+    <!-- Model years the catalog's source documents cover. %1$s = "2025" or "2025, 2026". -->
+    <plurals name="picker_model_years">
+        <item quantity="one">Model year %1$s</item>
+        <item quantity="other">Model years %1$s</item>
+    </plurals>
     <string name="picker_custom_title">Custom model</string>
     <string name="picker_custom_name_label">Name</string>
     <string name="picker_custom_name_placeholder">e.g. Öhlins RXF38</string>

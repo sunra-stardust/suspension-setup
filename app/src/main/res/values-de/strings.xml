@@ -271,6 +271,10 @@
     <string name="picker_clicks_summary">LSC %1$d · HSC %2$s · Zugstufe %3$s</string>
     <string name="picker_has_chart">Druck und Zugstufe aus der Herstellertabelle</string>
     <string name="picker_has_lever">mit Kletterhebel</string>
+    <plurals name="picker_model_years">
+        <item quantity="one">Modelljahr %1$s</item>
+        <item quantity="other">Modelljahre %1$s</item>
+    </plurals>
     <string name="picker_custom_title">Eigenes Modell</string>
     <string name="picker_custom_name_label">Bezeichnung</string>
     <string name="picker_custom_name_placeholder">z. B. Öhlins RXF38</string>

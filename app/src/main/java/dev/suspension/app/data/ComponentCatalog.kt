@@ -6,11 +6,11 @@ import kotlin.math.roundToInt
 enum class ReboundMode { SPLIT, SINGLE }
 
 /**
- * A fork model's tuning envelope. Every number here comes from the manufacturer's own manual
- * (sources in README → "Komponenten-Recherche"); anything we couldn't verify is null and the
- * UI falls back to plain starting values instead of inventing data.
+ * A fork model's tuning envelope. Catalog entries come from catalog/catalog.json, where every
+ * number names its source; anything we couldn't verify is null and the UI falls back to plain
+ * starting values instead of inventing data.
  *
- * Adding a model = adding one entry to [ComponentCatalog.forks]. No other code changes needed.
+ * Adding a model = adding one entry to catalog.json. No code changes needed.
  */
 data class ForkModel(
     val id: String,
@@ -34,6 +34,10 @@ data class ForkModel(
     val spacersMax: Int?,
     /** Short name of the chart's publisher for hints ("Fox"). */
     val chartSource: String? = null,
+    /** Model years the source documents cover; empty for custom models or when no document names one. */
+    val modelYears: List<Int> = emptyList(),
+    /** Source per catalog field (e.g. "pressureChart"); empty for custom models. */
+    val provenance: Map<String, Provenance> = emptyMap(),
 ) {
     val isCustom: Boolean get() = id == CUSTOM_ID
 }
@@ -60,6 +64,11 @@ data class ShockModel(
     val preloadHintResId: Int,
     /** Preload range shown on Basics → Einstellbereiche. */
     val preloadRangeResId: Int,
+    val maker: String? = null,
+    /** Model years the source documents cover; empty for custom models or when no document names one. */
+    val modelYears: List<Int> = emptyList(),
+    /** Source per catalog field (e.g. "hscMax"); empty for custom models. */
+    val provenance: Map<String, Provenance> = emptyMap(),
 ) {
     val isCustom: Boolean get() = id == CUSTOM_ID
 }
@@ -67,133 +76,17 @@ data class ShockModel(
 const val CUSTOM_ID = "custom"
 
 /**
- * Verified fork and coil-shock catalog (manufacturer manuals, 2025/2026 model years — see
- * README). Deliberately small: a wrong number here is worse than a missing model, and the
- * custom-model entry covers everything else.
+ * Verified fork and coil-shock catalog, read from `catalog/catalog.json` (model year, source and
+ * retrieval date per value — rules in `.claude/skills/catalog-data/SKILL.md`). Deliberately
+ * small: a wrong number here is worse than a missing model, and the custom-model entry covers
+ * everything else.
  */
 object ComponentCatalog {
+    private val catalog: Catalog by lazy { CatalogJson.load() }
 
-    /** Fox 36/38 GRIP X2 rebound starting clicks from closed, per rider-weight row (manual 2025). */
-    private val FOX_GRIPX2_HSR = WeightChart(listOf(9.0, 8.0, 7.0, 7.0, 7.0, 7.0, 6.0, 5.0, 4.0, 3.0, 3.0, 2.0, 1.0))
-    private val FOX_GRIPX2_LSR = WeightChart(listOf(8.0, 7.0, 7.0, 6.0, 6.0, 5.0, 4.0, 4.0, 3.0, 2.0, 1.0, 0.0, 0.0))
-
-    val forks: List<ForkModel> = listOf(
-        ForkModel(
-            id = "fox38_gripx2",
-            displayName = "Fox 38 Factory GRIP X2",
-            travelMm = 180,
-            lscMax = 18,
-            hscMax = 8,
-            reboundMode = ReboundMode.SPLIT,
-            reboundMax = 16,
-            hsrMax = 8,
-            // FLOAT column (not E-Bike+) of the 2025 Fox 36/38 manual.
-            pressureChart = WeightChart(listOf(72.0, 76.0, 80.0, 84.0, 89.0, 93.0, 97.0, 102.0, 106.0, 110.0, 114.0, 119.0, 123.0)),
-            maxPressurePsi = 140.0,
-            lsrChart = FOX_GRIPX2_LSR,
-            hsrChart = FOX_GRIPX2_HSR,
-            // Factory spacer count for 180 mm travel; more spacers = more bottom-out resistance.
-            spacersStock = 1,
-            spacersMax = 4,
-            chartSource = "Fox",
-        ),
-        ForkModel(
-            id = "fox36_gripx2",
-            displayName = "Fox 36 Factory GRIP X2",
-            travelMm = 160,
-            lscMax = 18,
-            hscMax = 8,
-            reboundMode = ReboundMode.SPLIT,
-            reboundMax = 16,
-            hsrMax = 8,
-            pressureChart = WeightChart(listOf(66.0, 70.0, 74.0, 78.0, 82.0, 86.0, 89.0, 94.0, 99.0, 105.0, 109.0, 113.0, 117.0)),
-            maxPressurePsi = 120.0,
-            lsrChart = FOX_GRIPX2_LSR,
-            hsrChart = FOX_GRIPX2_HSR,
-            spacersStock = 1,
-            spacersMax = 6,
-            chartSource = "Fox",
-        ),
-    )
-
-    val shocks: List<ShockModel> = listOf(
-        ShockModel(
-            id = "fox_dhx2_hsc_lsr",
-            displayName = "Fox DHX2 (HSC · LSC · LSR)",
-            strokeMm = 65,
-            eyeToEyeMm = 205,
-            // The owner's unit, checked on the bike: HSC + LSC and a single rebound adjuster (LSR),
-            // no HSR. Deliberately not labelled with a series — Fox documents HSC as Factory-only and
-            // Mondraker lists a Performance Elite (LSC/LSR only), so the series name would be a guess.
-            lscMax = 16,
-            hscMax = 8,
-            reboundMode = ReboundMode.SPLIT,
-            reboundMax = 16,
-            hsrMax = null,
-            hasClimbLever = true,
-            preloadHintResId = dev.suspension.app.R.string.hint_s_pre_fox,
-            preloadRangeResId = dev.suspension.app.R.string.range_preload_fox,
-        ),
-        ShockModel(
-            id = "fox_dhx2_coil",
-            displayName = "Fox DHX2 Factory",
-            strokeMm = 65,
-            eyeToEyeMm = 205,
-            // Fox manual: the Factory Series has all four adjusters (HSC, LSC, HSR, LSR).
-            lscMax = 16,
-            hscMax = 8,
-            reboundMode = ReboundMode.SPLIT,
-            reboundMax = 16,
-            hsrMax = 8,
-            hasClimbLever = true,
-            preloadHintResId = dev.suspension.app.R.string.hint_s_pre_fox,
-            preloadRangeResId = dev.suspension.app.R.string.range_preload_fox,
-        ),
-        ShockModel(
-            id = "fox_dhx2_pe",
-            displayName = "Fox DHX2 Performance Elite",
-            strokeMm = 65,
-            eyeToEyeMm = 205,
-            // Fox manual (2025): the Performance Elite "will only utilize" LSC and LSR; HSC/HSR are
-            // footnoted "Factory Series only". Mondraker's Level RR spec lists the same.
-            lscMax = 16,
-            hscMax = null,
-            reboundMode = ReboundMode.SPLIT,
-            reboundMax = 16,
-            hsrMax = null,
-            hasClimbLever = false,
-            preloadHintResId = dev.suspension.app.R.string.hint_s_pre_fox,
-            preloadRangeResId = dev.suspension.app.R.string.range_preload_fox,
-        ),
-        ShockModel(
-            id = "rockshox_superdeluxe_coil",
-            displayName = "RockShox Super Deluxe Coil Ultimate",
-            strokeMm = 65,
-            eyeToEyeMm = 205,
-            lscMax = 5,
-            hscMax = 5,
-            reboundMode = ReboundMode.SINGLE,
-            reboundMax = 20,
-            hsrMax = null,
-            hasClimbLever = true,
-            preloadHintResId = dev.suspension.app.R.string.hint_s_pre_generic,
-            preloadRangeResId = dev.suspension.app.R.string.range_preload_generic,
-        ),
-        ShockModel(
-            id = "rockshox_vivid_coil",
-            displayName = "RockShox Vivid Coil Ultimate",
-            strokeMm = 65,
-            eyeToEyeMm = 205,
-            lscMax = 5,
-            hscMax = 5,
-            reboundMode = ReboundMode.SINGLE,
-            reboundMax = 20,
-            hsrMax = null,
-            hasClimbLever = true,
-            preloadHintResId = dev.suspension.app.R.string.hint_s_pre_generic,
-            preloadRangeResId = dev.suspension.app.R.string.range_preload_generic,
-        ),
-    )
+    val sources: Map<String, CatalogSource> get() = catalog.sources
+    val forks: List<ForkModel> get() = catalog.forks
+    val shocks: List<ShockModel> get() = catalog.shocks
 
     fun forkById(id: String): ForkModel? = forks.find { it.id == id }
     fun shockById(id: String): ShockModel? = shocks.find { it.id == id }

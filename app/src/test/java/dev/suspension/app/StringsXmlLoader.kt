@@ -40,6 +40,21 @@ object StringsXmlLoader {
             check(name !in result) { "Duplicate string \"$name\" in $relative" }
             result[name] = Entry(node.textContent, translatable)
         }
+        // Plurals: one entry per quantity, keyed "name#quantity".
+        val plurals = doc.getElementsByTagName("plurals")
+        for (i in 0 until plurals.length) {
+            val node = plurals.item(i)
+            val name = node.attributes.getNamedItem("name")?.nodeValue ?: continue
+            val translatable = node.attributes.getNamedItem("translatable")?.nodeValue != "false"
+            val items = node.childNodes
+            for (j in 0 until items.length) {
+                val item = items.item(j)
+                if (item.nodeName != "item") continue
+                val key = "$name#${item.attributes.getNamedItem("quantity").nodeValue}"
+                check(key !in result) { "Duplicate plural \"$key\" in $relative" }
+                result[key] = Entry(item.textContent, translatable)
+            }
+        }
         return result
     }
 

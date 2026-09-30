@@ -38,6 +38,10 @@ Update-Prüfung; die Play-Variante hat keine Berechtigungen.
 
 Alles sind Startwerte. Werksempfehlung der eigenen Einheit: 4-stellige ID auf ridefox.com.
 
+Der Komponenten-Katalog liegt in [`catalog.json`](app/src/main/resources/catalog/catalog.json):
+jeder Wert nennt seine Quelle (Dokument, Modelljahr, Abrufdatum). `owner` = am eigenen Rad geprüft,
+`legacy` = noch keinem Dokument zugeordnet (z. B. Kletterhebel beim DHX2 Performance Elite).
+
 **Quellen (Stand 2026):**
 - [Fox 36/38 Handbuch 2025](https://tech.ridefox.com/bike/owners-manuals/2979/fork--2025-36mm-or-38mm) — Drucktabellen, Zugstufentabelle, Spacer, Maximaldruck, Klick-Anzahlen, Sag 15–20 %
 - [Fox Coil-Dämpfer 2025 (DHX2)](https://tech.ridefox.com/bike/owners-manuals/2981/shock--2025-all-coil-shocks-(dhx2-and-dhx-models)) — Factory vs. Performance Elite, Vorspannung (8 Klicks ab spielfrei, max. 2 Umdrehungen), Sag ~30 %

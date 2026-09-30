@@ -24,6 +24,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
@@ -156,6 +157,11 @@ private fun ApplyButton(onClick: () -> Unit) {
     }
 }
 
+/** "Model year 2025" / "Model years 2025, 2026"; null when no source document names one. */
+@Composable
+private fun modelYearsText(years: List<Int>): String? =
+    if (years.isEmpty()) null else pluralStringResource(R.plurals.picker_model_years, years.size, years.sorted().joinToString(", "))
+
 @Composable
 private fun clickSummary(lscMax: Int, hscMax: Int?, reboundMode: ReboundMode, reboundMax: Int, hsrMax: Int?): String {
     val hsc = hscMax?.toString() ?: stringResource(R.string.picker_none)
@@ -185,6 +191,7 @@ fun ForkPickerOverlay(
                 val details = buildList {
                     add(clickSummary(fork.lscMax, fork.hscMax, fork.reboundMode, fork.reboundMax, fork.hsrMax))
                     if (fork.pressureChart != null) add(stringResource(R.string.picker_has_chart))
+                    modelYearsText(fork.modelYears)?.let(::add)
                 }
                 CatalogRow(
                     name = "${fork.displayName} — ${stringResource(R.string.picker_travel, fork.travelMm)}",
@@ -280,6 +287,7 @@ fun ShockPickerOverlay(
                 val details = buildList {
                     add(clickSummary(shock.lscMax, shock.hscMax, shock.reboundMode, shock.reboundMax, shock.hsrMax))
                     if (shock.hasClimbLever) add(stringResource(R.string.picker_has_lever))
+                    modelYearsText(shock.modelYears)?.let(::add)
                 }
                 CatalogRow(
                     name = "${shock.displayName} — ${stringResource(R.string.picker_stroke, shock.eyeToEyeMm, shock.strokeMm)}",
