@@ -326,6 +326,19 @@
     <string name="bike_delete_confirm">Delete %1$s with all its values?</string>
     <!-- %1$s = fork name, %2$s = shock name. -->
     <string name="bike_parts">%1$s · %2$s</string>
+    <string name="bike_catalog_title">Pick your bike</string>
+    <string name="bike_catalog_search_label">Search maker or model</string>
+    <string name="bike_catalog_search_placeholder">e.g. Mondraker Level</string>
+    <string name="bike_catalog_no_match">Not in the catalog yet. Pick \"My bike isn\'t listed\" below.</string>
+    <string name="bike_catalog_back">Back</string>
+    <string name="bike_catalog_size_hint">Frame size — the stock spring depends on it.</string>
+    <string name="bike_catalog_size_other">Other size / not sure</string>
+    <string name="bike_catalog_not_found">My bike isn\'t listed</string>
+    <!-- %d = number of bike models of one maker in the catalog. -->
+    <plurals name="bike_catalog_models">
+        <item quantity="one">%d model</item>
+        <item quantity="other">%d models</item>
+    </plurals>
     <string name="vorlage_new">New preset</string>
     <!-- %1$s = name of the preset the new one copies. -->
     <string name="vorlage_new_hint">Starts as a copy of %1$s on every bike.</string>

@@ -184,6 +184,7 @@ private fun AppRoot(updates: UpdateViewModel?, onLanguageChange: (AppLanguage) -
                 PickerOverlay.BIKES -> BikesOverlay(
                     garage = garage,
                     onSelect = { garageRepo.selectBike(it.id) },
+                    onAddCatalog = { model, size -> garageRepo.addCatalogBike(model, size) },
                     onAdd = { name ->
                         garageRepo.addBike(name, bike, BikeParts.installedSpringLbs(bike, garage.weightKg, garage.tempC))
                     },

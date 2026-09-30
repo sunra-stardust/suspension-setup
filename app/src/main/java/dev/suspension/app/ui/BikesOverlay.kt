@@ -15,6 +15,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import dev.suspension.app.R
 import dev.suspension.app.data.Bike
+import dev.suspension.app.data.BikeModel
 import dev.suspension.app.data.BikeParts
 import dev.suspension.app.data.Garage
 import dev.suspension.app.ui.components.ConfirmDialog
@@ -29,11 +30,15 @@ fun Bike.displayName(): String = name ?: stringResource(BikeParts.profile(this).
 
 private enum class BikeDialog { NONE, NEW, RENAME, COPY, DELETE }
 
-/** Bike list: switch, add, copy, rename, delete. Actions apply to the currently selected bike. */
+/**
+ * Bike list: switch, add, copy, rename, delete. Actions apply to the currently selected bike.
+ * "New bike" opens the catalog ([BikeCatalogOverlay]); an own bike is the fallback from there.
+ */
 @Composable
 fun BikesOverlay(
     garage: Garage,
     onSelect: (Bike) -> Unit,
+    onAddCatalog: (BikeModel, size: String?) -> Unit,
     onAdd: (name: String) -> Unit,
     onCopy: (Bike, name: String) -> Unit,
     onRename: (Bike, name: String) -> Unit,
@@ -45,10 +50,17 @@ fun BikesOverlay(
     val current = garage.selectedBike
     val currentName = current.displayName()
     var dialog by rememberSaveable { mutableStateOf(BikeDialog.NONE) }
+    var catalogOpen by rememberSaveable { mutableStateOf(false) }
     val customForkName = stringResource(R.string.custom_fork_default_name)
     val customShockName = stringResource(R.string.custom_shock_default_name)
 
-    PickerScaffold(title = stringResource(R.string.bikes_title), onDismiss = onDismiss) {
+    if (catalogOpen) {
+        BikeCatalogOverlay(
+            onPick = { model, size -> onAddCatalog(model, size); catalogOpen = false; onDismiss() },
+            onOwnBike = { catalogOpen = false; dialog = BikeDialog.NEW },
+            onDismiss = { catalogOpen = false },
+        )
+    } else PickerScaffold(title = stringResource(R.string.bikes_title), onDismiss = onDismiss) {
         Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
             GroupCard {
                 garage.bikes.forEachIndexed { index, bike ->
@@ -75,8 +87,7 @@ fun BikesOverlay(
             }
 
             Column(modifier = Modifier.padding(top = 8.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                ApplyButton(stringResource(R.string.bike_new)) { dialog = BikeDialog.NEW }
-                Text(text = stringResource(R.string.bike_new_hint), style = type.rowHint, color = colors.dim)
+                ApplyButton(stringResource(R.string.bike_new)) { catalogOpen = true }
             }
         }
     }
