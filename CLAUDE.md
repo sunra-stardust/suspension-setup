@@ -18,6 +18,7 @@ So:
 - Commit subjects become the release notes shown in the app: write them as short German change notes ("Dämpfer: HSC-Regler ergänzt").
 - Pipeline details, failed runs, rollback: skill **`ship`**.
 - Exception: a `claude/*` push whose head commit contains `[catalog-review]` does not ship — the monthly catalog research routine (skill **`catalog-research`**) proposes data as a PR against `main`; the owner's merge ships it.
+- Same for `[owner-review]`: changes to protected paths (risk class R3 in [`docs/HARNESS.md`](docs/HARNESS.md) — storage format, manifest, updater, build, workflows, hooks, `.claude/settings.json`, this file) go as a PR labelled `needs-owner`; every commit body ends with `[owner-review]`.
 
 ## Rules
 

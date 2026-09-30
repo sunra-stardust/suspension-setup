@@ -42,7 +42,7 @@ trustworthy.
 | G1 | Rules like "never push `main`", "no new permissions", "don't touch signing" exist only as text | a mistaken or manipulated agent is stopped only by its own discipline |
 | G2 | Every green push ships to the phone — there is no risk distinction between a typo fix and a storage-format change | the only human gate for app code is *after* release (install tap) |
 | G3 | `gradlew` is not executable after a cloud clone; the allow-rule `Bash(./gradlew:*)` never matches `bash ./gradlew` | permission prompts / classifier stops |
-| G4 | No `gh` CLI in cloud sessions, but skill `ship` assumes it; GitHub MCP can't edit releases | agent can't check or fix what the skill tells it to |
+| G4 | No `gh` CLI in cloud sessions, but skill `ship` assumes it; GitHub MCP can't edit releases | agent can't check or fix what the skill tells it to. Installing `gh` doesn't help: cloud sessions have no GitHub token for it — skill `ship` now names the MCP tools instead |
 | G5 | Robolectric downloads its Android jar on first use; the first local run failed on it | false red, wasted cycle |
 | G6 | Tests encoded product rules nobody had written down (every fork has a chart; every fork has split rebound) | discovered only at promotion time |
 | G7 | Release notes = commit subjects, unchecked | a stale subject reached the phone (v0.6.32) |
@@ -97,7 +97,7 @@ that pass all checks, research runs, release notes — runs without asking.
 ### 5.3 Hooks
 | Hook | Event | What it does |
 |---|---|---|
-| `cloud-setup.sh` ✅ | SessionStart | Android SDK; **add:** `chmod +x gradlew` (G3), `gh` CLI (G4), pre-fetch Robolectric jars with one warm-up test (G5) |
+| `cloud-setup.sh` ✅ | SessionStart | Android SDK; background Robolectric warm-up (G5, step 1) |
 | `guard-push.sh` | PreToolUse `Bash` | blocks pushes to `main`, plain force pushes, tag/release deletion; blocks a push when `.verify-stamp` doesn't match `git rev-parse HEAD^{tree}` → "run `./gradlew verify` first" (makes rule "verify before push" mechanical) |
 | `guard-paths.sh` | PreToolUse `Edit`/`Write` | R3 path → `permissionDecision: ask` with the reason; hooks/settings/workflows always ask |
 | `verify-stamp` | Gradle task `verify` finalizer | writes the tree hash on success (local file, git-ignored) |
@@ -113,7 +113,7 @@ that pass all checks, research runs, release notes — runs without asking.
 |---|---|---|
 | Catalog research ✅ | 1st of month | PR `catalog-research` |
 | Dependency update | weekly | Dependabot PRs; agent fixes breakages; merged automatically if R1/R2 and green, else `needs-owner` |
-| Harness health | weekly | one issue if anything is off: failed runs, open `data-conflict` issues > 30 days, flaky tests, stale branches, action/tool deprecations |
+| Harness report | weekly | one report every week (owner decision 4): runs and releases of the week, failed runs, open `data-conflict` / `needs-owner` items, flaky tests, stale branches, action/tool deprecations |
 | Data-conflict follow-up | monthly (with research) | re-checks sources of open conflicts; closes issues the owner answered |
 
 ## 6. CI/CD layer
@@ -177,28 +177,28 @@ review findings not fixed. The owner approves with a GitHub review.
 
 ## 8. Feedback to the owner
 - One notification per event that needs the owner (H1–H5, failed run on `main`); nothing for green routine work.
-- Weekly harness-health issue (§5.5) instead of many small pings.
+- Weekly harness report (§5.5), every week, instead of many small pings.
 - Release notes stay short, German, user-facing (G7 check).
 
 ## 9. Rollout
 
 | Step | Content | Class | Effort |
 |---|---|---|---|
-| 1 | Quick fixes: `gradlew` executable bit, setup hook (`gh`, Robolectric warm-up), allow-rule for `bash ./gradlew` | R3 (settings/hook) | S |
+| 1 | Quick fixes: `gradlew` executable bit, Robolectric warm-up in the setup hook, allow-rule for `bash ./gradlew`, skill `ship` without `gh`, `[owner-review]` marker so R3 changes arrive as PRs | R3 (settings/hook) | S — in PR |
 | 2 | Owner: `main` ruleset, secret scanning, Dependabot | owner | S |
 | 3 | `guard-push.sh`, `guard-paths.sh`, verify stamp, deny-list | R3 | M |
 | 4 | Risk classifier + R3 → PR in `ship.yml`, PR template, skill `harness` | R3 | M |
 | 5 | Permission diff, signature pin, release-notes lint, SHA-pinned actions, wrapper validation | R3 | M |
 | 6 | Storage fixtures + downgrade read test | R3 | M |
 | 7 | Lint/ktlint baseline, screenshot tests | R2 | M–L |
-| 8 | Routines: dependency update, harness health | R0 | S |
+| 8 | Routines: dependency update, weekly harness report | R0 | S |
 | 9 | CodeQL, dependency verification metadata | R3 | S–M |
 
 Order matters: step 2 and 3 first — once agents can no longer weaken the guard rails, every later
 step can be built by agents with the owner only approving the R3 PRs.
 
-## 10. Open decisions for the owner
-1. R2 (behaviour changes): ship on green + automated review (proposal) — or also owner PR?
-2. Should dependency bumps auto-merge when green, or always `needs-owner`?
-3. Screenshot tests: accept Roborazzi (Robolectric-based, no emulator) as the tool?
-4. Is a weekly health issue the right channel, or push notifications only for failures?
+## 10. Owner decisions (2026-09-30)
+1. **R2 ships on green + automated review** — no owner PR for behaviour changes.
+2. **Dependency bumps auto-merge when green** (unless they touch an R3 path or add network/analytics — then `needs-owner`).
+3. **Screenshot tests with Roborazzi.**
+4. **Weekly harness report always** — also when nothing is wrong (then it says so in one line).
