@@ -19,6 +19,7 @@ push main / claude/<topic>
 ```
 
 - **Version** = `versionBase` from `version.properties` + `.` + commit count on main (e.g. `0.6.27`). The count only grows, so every release can update the previous one. Bump `versionBase` only for a milestone.
+- **Catalog research PRs** (skill `catalog-research`): commits whose message contains `[catalog-review]` are not shipped from a `claude/*` branch; they ship when the owner merges the PR into `main`.
 - **Docs/agent-only changes** (nothing under `app/`, `gradle/`, build files, `version.properties`) are tested and moved to main, but produce no release.
 - **Release notes** = commit subjects since the previous tag. They appear in the app's update banner — keep them short, German, user-facing.
 - The phone checks `releases/latest/download/latest.json` at most every 12 h (and on "Nach Updates suchen" in Basics → App). The APK is downloaded, checked against the SHA-256 and handed to Android's installer (the owner taps "Installieren").

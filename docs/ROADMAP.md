@@ -22,7 +22,7 @@ plus the rider's own, e.g. "Nasse Wurzeln") the app holds a full set of values.
 | 1 | **Infrastructure:** agent setup (`CLAUDE.md`, skills), push = release pipeline, OTA updater, rollback workflow, crash-loop safe mode, Robolectric UI + emulator upgrade tests, `github`/`play` flavors | ✅ shipped |
 | 2 | **Languages:** English default (`values/`), German (`values-de/`), in-app language choice, test: every key in both languages | ✅ shipped |
 | 3 | **Data model:** catalog as data files (model year, source, retrieval date per value); bikes + Vorlagen (create/edit/copy); manufacturer recommendation preselected + deviation display; JSON storage (backup-ready, additive/rollback-safe) with migration of today's values. Shipped in four steps: 3.1 catalog as data file ✅ · 3.2 JSON storage + migration ✅ · 3.3 bikes + Vorlagen UI ✅ · 3.4 deviation display ✅ | ✅ shipped |
-| 4 | **Research routine:** weekly cloud routine — finds new models/model years, reads manufacturer documents, second independent verification pass, conflicts → `data-conflict` issue instead of shipping | ▶ next |
+| 4 | **Research routine:** weekly cloud routine — finds new models/model years, reads manufacturer documents, second independent verification pass, conflicts → `data-conflict` issue instead of shipping. Runbook: skill `catalog-research` ✅ · routine environment with manufacturer hosts allowed ⏳ owner · routine scheduled (Fri) ⏳ | ▶ in progress |
 | later | Backup/restore · AI assistant · Google Play release (store listing, privacy policy, Play App Signing, AAB of the `play` flavor) | |
 
 ## Decisions
@@ -41,3 +41,7 @@ plus the rider's own, e.g. "Nasse Wurzeln") the app holds a full set of values.
 - **Vorlagen are shared by all bikes**; each bike holds its own values per Vorlage. A new Vorlage starts as a copy of an existing one on every bike.
 - **Catalog is a data file** (`app/src/main/resources/catalog/catalog.json`, Java resource so app and JVM tests read the same file); every value names a source document with model year and retrieval date.
 - **Manufacturer data only from primary sources for the right model year**; conflicts go to the owner, never guessed.
+- **Research routine proposes, the owner merges** (owner decision 2026-09-30): verified data arrives as a PR against `main`, not as a direct ship. Its commits carry `[catalog-review]`, which stops `ship.yml` from shipping a `claude/*` push; the merge onto `main` ships as usual.
+- **Research routine scope: broad, rotating** (owner decision 2026-09-30): catalog families every run, the wider watchlist (Fox, RockShox, Öhlins, Marzocchi, EXT, Cane Creek, DVO, Formula, Manitou) in four weekly groups. Runs Friday morning in its own cloud environment (the default one blocks the manufacturer sites).
+- **Second pass is blind**: a sub-agent gets component, model year and field definitions but not the first pass's values or URL, and finds the document itself. Any disagreement → `data-conflict` issue.
+- **Charts only when the brackets match**: the app's charts are Fox's 13 rider-weight rows; tables with other brackets are not converted or interpolated — the chart stays empty with a note.

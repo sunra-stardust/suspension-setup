@@ -15,6 +15,8 @@ The app preselects the manufacturer's recommendation and shows the rider how far
 
 Read the primary document itself (download the PDF/HTML and search the text). Search summaries were wrong twice in this project's history.
 
+The weekly research routine (finding new models/model years, blind second pass, PR or `data-conflict` issue) is skill **`catalog-research`**.
+
 ## Record for every value
 
 - The catalog is `app/src/main/resources/catalog/catalog.json`. Each document is one entry in `sources` (title, URL, **model years** it covers, retrieval date `YYYY-MM-DD`); each value is `{ "value": …, "source": "<id>", "note": "…" }`. Put the table row / column or footnote in `note`.
