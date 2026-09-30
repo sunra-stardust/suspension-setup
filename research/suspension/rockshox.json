@@ -1,0 +1,3220 @@
+{
+  "maker": "rockshox",
+  "products": [
+    {
+      "id": "rockshox-lyrik-ultimate-d2-2026",
+      "name": "RockShox Lyrik Ultimate (Charger 3.1 RC2, FS-LYRK-ULT-D2)",
+      "type": "fork",
+      "modelYears": [
+        2025,
+        2026
+      ],
+      "catalogId": null,
+      "modelCode": "FS-LYRK-ULT-D2",
+      "fields": {
+        "travelMm": {
+          "value": [
+            140,
+            150,
+            160
+          ],
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/fs-lyrk-ult-d2",
+          "retrieved": "2026-09-30",
+          "quote": "Travel (mm) 140mm, 150mm, 160mm",
+          "where": "Model page, Specifications",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/fs-lyrk-ult-d2",
+            "retrieved": "2026-09-30",
+            "quote": "Travel (mm) 140mm, 150mm, 160mm",
+            "where": "sram.com model page, Specifications > Travel (mm)"
+          }
+        },
+        "wheelSize": {
+          "value": [
+            "27.5\"",
+            "29\""
+          ],
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-lyrk-ult-d2",
+          "retrieved": "2026-09-30",
+          "quote": "Wheel size 27.5\", 29\"",
+          "where": "Model page, Specifications"
+        },
+        "stanchionMm": {
+          "value": 35,
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-lyrk-ult-d2",
+          "retrieved": "2026-09-30",
+          "quote": "Upper tube type 35mm tapered wall aluminum",
+          "where": "Model page, Specifications"
+        },
+        "damper": {
+          "value": "Charger 3.1 RC2 W/ButterCups",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-lyrk-ult-d2",
+          "retrieved": "2026-09-30",
+          "quote": "Damper Type Charger 3.1 RC2 W/ButterCups",
+          "where": "Model page, Specifications"
+        },
+        "springType": {
+          "value": "DebonAir+ W/ButterCups (air)",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-lyrk-ult-d2",
+          "retrieved": "2026-09-30",
+          "quote": "Spring DebonAir+ W/ButterCups",
+          "where": "Model page, Specifications"
+        },
+        "lscMax": {
+          "value": 15,
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/learn/fork-deep-dives/compression-knob-logic",
+          "retrieved": "2026-09-30",
+          "quote": "HSC has five clicks of adjustment, and LSC has 15 clicks of adjustment. Two etched indicator marks show where your settings are within the adjustment range.",
+          "where": "Compression Knob Logic page, tab 'CHARGER 3/3.1' NOTE: RockShox counts positions here (Charger 3.2 knob reads -7..+7 LSC and -2..+2 HSC = 15 / 5 positions), i.e. 14 / 4 detent steps between the stops.",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/learn/fork-deep-dives/compression-knob-logic",
+            "retrieved": "2026-09-30",
+            "quote": "HSC has five clicks of adjustment, and LSC has 15 clicks of adjustment. Two etched indicator marks show where your settings are within the adjustment range.",
+            "where": "Compression Knob Logic article, tab 'CHARGER 3/3.1'"
+          },
+          "note": "RockShox counts positions (\"15 clicks\" = -7..+7), see https://github.com/sunra-stardust/suspension-setup/issues/13"
+        },
+        "hscMax": {
+          "value": 5,
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/learn/fork-deep-dives/compression-knob-logic",
+          "retrieved": "2026-09-30",
+          "quote": "HSC has five clicks of adjustment, and LSC has 15 clicks of adjustment. Two etched indicator marks show where your settings are within the adjustment range.",
+          "where": "Compression Knob Logic page, tab 'CHARGER 3/3.1' NOTE: RockShox counts positions here (Charger 3.2 knob reads -7..+7 LSC and -2..+2 HSC = 15 / 5 positions), i.e. 14 / 4 detent steps between the stops.",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/learn/fork-deep-dives/compression-knob-logic",
+            "retrieved": "2026-09-30",
+            "quote": "HSC has five clicks of adjustment, and LSC has 15 clicks of adjustment. Two etched indicator marks show where your settings are within the adjustment range.",
+            "where": "Compression Knob Logic article, tab 'CHARGER 3/3.1'"
+          },
+          "note": "RockShox counts positions (\"15 clicks\" = -7..+7), see https://github.com/sunra-stardust/suspension-setup/issues/13"
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/fs-lyrk-ult-d2",
+          "retrieved": "2026-09-30",
+          "quote": "With increased damping range and High Speed Compression, Low Speed Compression, and Low Speed Rebound adjustments, Charger 3.1 smooths out the roughest trails.",
+          "where": "Model page, Features",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/learn/charger-3-setup",
+            "retrieved": "2026-09-30",
+            "quote": "Trailhead will also give you a starting Rebound setting—the suggested setting is the number of clicks from the “closed” position (when the knob reaches the hard stop clockwise).",
+            "where": "Charger 3 and 3.1 Damper Set Up, 'Start with Air Pressure'"
+          }
+        },
+        "reboundMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No total rebound click count found for this fork. Checked: model page features/specs, 2026/2027 Front Suspension Specifications PDF, 2023+ ZEB/Lyrik/Pike service manual (only 'count the number of clicks' record table), User Manual 'UM - Suspension' (docs.sram.com; refers to Trailhead), Charger 3 setup / knob-logic / fine-tuning pages, Trailhead product page (serial-based; gives only a formula-based starting setting)."
+        },
+        "hsrMax": {
+          "value": null,
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/fs-lyrk-ult-d2",
+          "retrieved": "2026-09-30",
+          "quote": "With increased damping range and High Speed Compression, Low Speed Compression, and Low Speed Rebound adjustments, Charger 3.1 smooths out the roughest trails.",
+          "where": "Model page, Features (adjuster list names only HSC, LSC, Low Speed Rebound; Trailhead attribute for this code: 'Damping adjustments: Extl begin stroke rebnd, low speed comp, high speed comp')",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/fs-lyrk-ult-d2",
+            "retrieved": "2026-09-30",
+            "quote": "With increased damping range and High Speed Compression, Low Speed Compression, and Low Speed Rebound adjustments, Charger 3.1 smooths out the roughest trails.",
+            "where": "sram.com model page, Features"
+          }
+        },
+        "lscStart": {
+          "value": "middle",
+          "status": "single",
+          "url": "https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension",
+          "retrieved": "2026-09-30",
+          "quote": "Charger 3 RC2, Charger 3.1 RC2: Adjust the Low Speed (LSC) and High Speed (HSC) compression damper adjusters to the middle settings to start.",
+          "where": "UM - Suspension > Pressurize - DebonAir+ > Charger 3, 3.1 - RC2, step 11 (filtered to fs-lyrk-ult-d2)"
+        },
+        "hscStart": {
+          "value": "middle",
+          "status": "single",
+          "url": "https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension",
+          "retrieved": "2026-09-30",
+          "quote": "Charger 3 RC2, Charger 3.1 RC2: Adjust the Low Speed (LSC) and High Speed (HSC) compression damper adjusters to the middle settings to start.",
+          "where": "UM - Suspension > Pressurize - DebonAir+ > Charger 3, 3.1 - RC2, step 11"
+        },
+        "maxPressurePsi": {
+          "value": 163,
+          "status": "verified",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2026-front-suspension-specifications.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Lyrik FS-LYRK-UFA-D2 FS-LYRK-ULT-D2 ... DebonAir+ 27.5\" B 29\" B 140 <60 psi ... 110+ psi 163 psi",
+          "where": "2026 Front Suspension Specifications, p.9 Air Spring Pressure, MAX PSI column (also Trailhead FS-LYRK-ULT-D2: 'Max Air Pressure (PSI)':'163')",
+          "verifiedBy": {
+            "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2026-front-suspension-specifications.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "Lyrik FS-LYRK-UFA-D2 FS-LYRK-ULT-D2 FS-LYRK-SELP-D2 FS-LYRK-SEL-D1 FS-LYRK-BSE-D1 DebonAir+ 27.5\" B 29\" B 140 <60 psi 60-70 psi 70-80 psi 80-90 psi 90-100 psi 100-110 psi 110+ psi 163 psi 150-160 <50 psi ...",
+            "where": "2026 Front Suspension Specifications PDF, p.8 'Air Spring Pressure' table, column 'MAX PSI' (header note: 'E-Bikes add 10 psi')"
+          }
+        },
+        "spacersStock": {
+          "value": {
+            "140": 1,
+            "150": 0,
+            "160": 0
+          },
+          "status": "single",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2026-front-suspension-specifications.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Lyrik Ultimate FS-LYRK-ULT-D2 ... 27.5\" B 140 | 1 ... 150 ... 0 ... 160 (same for 29\" B); model page: Volume reducer 0/5 Tokens, 1/5 Tokens",
+          "where": "2026 Front Suspension Specifications p.17 Technical Specifications, BOTTOMLESS TOKENS INSTALLED column (0 is a merged cell spanning 150-160 in the layout)"
+        },
+        "spacersMax": {
+          "value": 5,
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-lyrk-ult-d2",
+          "retrieved": "2026-09-30",
+          "quote": "Volume reducer 0/5 Tokens, 1/5 Tokens",
+          "where": "Model page, Specifications"
+        },
+        "sagPercent": {
+          "value": null,
+          "status": "missing",
+          "note": "No fixed fork sag target for DebonAir+/Linear XL forks: User Manual says DebonAir+ forks are set by pressure ('If you have a DebonAir+ fork refer to Set Air Spring Pressure - DebonAir+'), general text only: 'More sag (20% - 30%) increases bump sensitivity ... Less sag (10% - 20%) ...' (UM - Suspension, Suspension Sag - Front Suspension)."
+        },
+        "pressureTable": {
+          "value": {
+            "unit": "psi",
+            "note": "E-Bikes add 10 psi (table header). Values are ranges exactly as printed, per travel row and rider-weight column.",
+            "rows": [
+              {
+                "travelMm": "140",
+                "rider": "<120 lbs (<55 kg)",
+                "value": "<60 psi"
+              },
+              {
+                "travelMm": "140",
+                "rider": "120-140 lbs (55-63 kg)",
+                "value": "60-70 psi"
+              },
+              {
+                "travelMm": "140",
+                "rider": "140-160 lbs (63-72 kg)",
+                "value": "70-80 psi"
+              },
+              {
+                "travelMm": "140",
+                "rider": "160-180 lbs (72-81 kg)",
+                "value": "80-90 psi"
+              },
+              {
+                "travelMm": "140",
+                "rider": "180-200 lbs (81-90 kg)",
+                "value": "90-100 psi"
+              },
+              {
+                "travelMm": "140",
+                "rider": "200-220 lbs (90-99 kg)",
+                "value": "100-110 psi"
+              },
+              {
+                "travelMm": "140",
+                "rider": ">220 lbs (>99 kg)",
+                "value": "110+ psi"
+              },
+              {
+                "travelMm": "150-160",
+                "rider": "<120 lbs (<55 kg)",
+                "value": "<50 psi"
+              },
+              {
+                "travelMm": "150-160",
+                "rider": "120-140 lbs (55-63 kg)",
+                "value": "50-60 psi"
+              },
+              {
+                "travelMm": "150-160",
+                "rider": "140-160 lbs (63-72 kg)",
+                "value": "60-70 psi"
+              },
+              {
+                "travelMm": "150-160",
+                "rider": "160-180 lbs (72-81 kg)",
+                "value": "70-80 psi"
+              },
+              {
+                "travelMm": "150-160",
+                "rider": "180-200 lbs (81-90 kg)",
+                "value": "80-90 psi"
+              },
+              {
+                "travelMm": "150-160",
+                "rider": "200-220 lbs (90-99 kg)",
+                "value": "90-100 psi"
+              },
+              {
+                "travelMm": "150-160",
+                "rider": ">220 lbs (>99 kg)",
+                "value": "100+ psi"
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2026-front-suspension-specifications.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "FORK AIR SPRING WHEEL TRAVEL (mm) <120 lbs ... >220 lbs MAX PSI E-Bikes add 10 psi ... 140 <60 psi 60-70 psi 70-80 psi 80-90 psi 90-100 psi 100-110 psi 110+ psi; 150-160 <50 psi 50-60 psi 60-70 psi 70-80 psi 80-90 psi 90-100 psi 100+ psi ... 163 psi",
+          "where": "2026 Front Suspension Specifications p.9, Lyrik (FS-LYRK-UFA-D2, FS-LYRK-ULT-D2, ...) DebonAir+ 27.5\" B / 29\" B"
+        },
+        "manualUrl": {
+          "value": "https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension",
+          "status": "single",
+          "url": "https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension",
+          "retrieved": "2026-09-30",
+          "quote": "UM - Suspension",
+          "where": "SRAM docs user manual (model filter includes fs-lyrk-ult-d2); service manual: https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2023-zeb-lyrik-pike-service-manual.pdf"
+        },
+        "maxSystemWeight": {
+          "value": "331lbs/150kg",
+          "status": "single",
+          "url": "https://trailhead.rockshox.com/en/product/13T46774651/tuning/setup",
+          "retrieved": "2026-09-30",
+          "quote": "\"Max recommended system weight\":\"331lbs/150kg\"",
+          "where": "Trailhead product attributes for FS-LYRK-ULT-D2 (serial 13T46774651, 29\" 150mm)"
+        }
+      }
+    },
+    {
+      "id": "rockshox-zeb-ultimate-a3-2026",
+      "name": "RockShox ZEB Ultimate (Charger 3.1 RC2, FS-ZEB-ULT-A3)",
+      "type": "fork",
+      "modelYears": [
+        2025,
+        2026
+      ],
+      "catalogId": null,
+      "modelCode": "FS-ZEB-ULT-A3",
+      "fields": {
+        "travelMm": {
+          "value": [
+            150,
+            160,
+            170,
+            180,
+            190
+          ],
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/fs-zeb-ult-a3",
+          "retrieved": "2026-09-30",
+          "quote": "Travel (mm) 150mm, 160mm, 170mm, 180mm, 190mm",
+          "where": "Model page, Specifications",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/fs-zeb-ult-a3",
+            "retrieved": "2026-09-30",
+            "quote": "Travel (mm) 150mm, 160mm, 170mm, 180mm, 190mm",
+            "where": "sram.com model page, Specifications > Travel (mm)"
+          }
+        },
+        "wheelSize": {
+          "value": [
+            "27.5\"",
+            "29\""
+          ],
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-zeb-ult-a3",
+          "retrieved": "2026-09-30",
+          "quote": "Wheel size 27.5\", 29\"",
+          "where": "Model page, Specifications"
+        },
+        "stanchionMm": {
+          "value": 38,
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-zeb-ult-a3",
+          "retrieved": "2026-09-30",
+          "quote": "Upper tube type 38mm aluminum",
+          "where": "Model page, Specifications"
+        },
+        "damper": {
+          "value": "Charger 3.1 RC2 W/ButterCups",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-zeb-ult-a3",
+          "retrieved": "2026-09-30",
+          "quote": "Damper Type Charger 3.1 RC2 W/ButterCups",
+          "where": "Model page, Specifications"
+        },
+        "springType": {
+          "value": "DebonAir+ W/ButterCups (air)",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-zeb-ult-a3",
+          "retrieved": "2026-09-30",
+          "quote": "Spring DebonAir+ W/ButterCups",
+          "where": "Model page, Specifications"
+        },
+        "lscMax": {
+          "value": 15,
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/learn/fork-deep-dives/compression-knob-logic",
+          "retrieved": "2026-09-30",
+          "quote": "HSC has five clicks of adjustment, and LSC has 15 clicks of adjustment. Two etched indicator marks show where your settings are within the adjustment range.",
+          "where": "Compression Knob Logic page, tab 'CHARGER 3/3.1' NOTE: RockShox counts positions here (Charger 3.2 knob reads -7..+7 LSC and -2..+2 HSC = 15 / 5 positions), i.e. 14 / 4 detent steps between the stops.",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/learn/fork-deep-dives/compression-knob-logic",
+            "retrieved": "2026-09-30",
+            "quote": "HSC has five clicks of adjustment, and LSC has 15 clicks of adjustment. Two etched indicator marks show where your settings are within the adjustment range.",
+            "where": "Compression Knob Logic article, tab 'CHARGER 3/3.1'"
+          },
+          "note": "RockShox counts positions (\"15 clicks\" = -7..+7), see https://github.com/sunra-stardust/suspension-setup/issues/13"
+        },
+        "hscMax": {
+          "value": 5,
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/learn/fork-deep-dives/compression-knob-logic",
+          "retrieved": "2026-09-30",
+          "quote": "HSC has five clicks of adjustment, and LSC has 15 clicks of adjustment. Two etched indicator marks show where your settings are within the adjustment range.",
+          "where": "Compression Knob Logic page, tab 'CHARGER 3/3.1' NOTE: RockShox counts positions here (Charger 3.2 knob reads -7..+7 LSC and -2..+2 HSC = 15 / 5 positions), i.e. 14 / 4 detent steps between the stops.",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/learn/fork-deep-dives/compression-knob-logic",
+            "retrieved": "2026-09-30",
+            "quote": "HSC has five clicks of adjustment, and LSC has 15 clicks of adjustment. Two etched indicator marks show where your settings are within the adjustment range.",
+            "where": "Compression Knob Logic article, tab 'CHARGER 3/3.1'"
+          },
+          "note": "RockShox counts positions (\"15 clicks\" = -7..+7), see https://github.com/sunra-stardust/suspension-setup/issues/13"
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/fs-zeb-ult-a3",
+          "retrieved": "2026-09-30",
+          "quote": "With increased damping range and High Speed Compression, Low Speed Compression, and Low Speed Rebound adjustments, Charger 3.1 smooths out the roughest trails.",
+          "where": "Model page, Features",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/learn/charger-3-setup",
+            "retrieved": "2026-09-30",
+            "quote": "Trailhead will also give you a starting Rebound setting—the suggested setting is the number of clicks from the “closed” position (when the knob reaches the hard stop clockwise).",
+            "where": "Charger 3 and 3.1 Damper Set Up, 'Start with Air Pressure'"
+          }
+        },
+        "reboundMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No total rebound click count found for this fork. Checked: model page features/specs, 2026/2027 Front Suspension Specifications PDF, 2023+ ZEB/Lyrik/Pike service manual (only 'count the number of clicks' record table), User Manual 'UM - Suspension' (docs.sram.com; refers to Trailhead), Charger 3 setup / knob-logic / fine-tuning pages, Trailhead product page (serial-based; gives only a formula-based starting setting)."
+        },
+        "hsrMax": {
+          "value": null,
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/fs-zeb-ult-a3",
+          "retrieved": "2026-09-30",
+          "quote": "With increased damping range and High Speed Compression, Low Speed Compression, and Low Speed Rebound adjustments, Charger 3.1 smooths out the roughest trails.",
+          "where": "Model page, Features (adjuster list names only HSC, LSC, Low Speed Rebound)",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/fs-zeb-ult-a3",
+            "retrieved": "2026-09-30",
+            "quote": "With increased damping range and High Speed Compression, Low Speed Compression, and Low Speed Rebound adjustments, Charger 3.1 smooths out the roughest trails.",
+            "where": "sram.com model page, Features"
+          }
+        },
+        "lscStart": {
+          "value": "middle",
+          "status": "single",
+          "url": "https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension",
+          "retrieved": "2026-09-30",
+          "quote": "Charger 3 RC2, Charger 3.1 RC2: Adjust the Low Speed (LSC) and High Speed (HSC) compression damper adjusters to the middle settings to start.",
+          "where": "UM - Suspension > Pressurize - DebonAir+ > Charger 3, 3.1 - RC2, step 11 (filtered to fs-zeb-ult-a3)"
+        },
+        "hscStart": {
+          "value": "middle",
+          "status": "single",
+          "url": "https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension",
+          "retrieved": "2026-09-30",
+          "quote": "Charger 3 RC2, Charger 3.1 RC2: Adjust the Low Speed (LSC) and High Speed (HSC) compression damper adjusters to the middle settings to start.",
+          "where": "UM - Suspension > Pressurize - DebonAir+ > Charger 3, 3.1 - RC2, step 11"
+        },
+        "maxPressurePsi": {
+          "value": 148,
+          "status": "verified",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2026-front-suspension-specifications.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "ZEB FS-ZEB-UFA-A3 FS-ZEB-ULT-A3 ... DebonAir+ 27.5\" B 29\" B 150-160 <45 psi ... 87+ psi 148 psi",
+          "where": "2026 Front Suspension Specifications, p.12 Air Spring Pressure, MAX PSI column",
+          "verifiedBy": {
+            "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2026-front-suspension-specifications.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "ZEB FS-ZEB-UFA-A3 FS-ZEB-ULT-A3 FS-ZEB-SELP-A3 FS-ZEB-SEL-A2 FS-ZEB-BSE-A2 DebonAir+ 27.5\" B 29\" B 150-160 <45 psi 45-54 psi 54-62 psi 62-70 psi 70-78 psi 78-87 psi 87+ psi 148 psi 170-180 <37 psi ... 190 <29 psi ...",
+            "where": "2026 Front Suspension Specifications PDF, 'Air Spring Pressure' table, column 'MAX PSI'"
+          }
+        },
+        "spacersStock": {
+          "value": null,
+          "status": "missing",
+          "note": "Model page lists 'Volume reducer 0/4 Tokens, 1/4 Tokens, 1/5 Tokens, 2/5 Tokens' (installed/max varies by travel). 2026 spec p.25 token columns are merged cells (150: 2 / max 5 ... 190: 0) and the per-travel mapping for 160-180 is not unambiguous in the text extraction; needs a visual check of p.25."
+        },
+        "spacersMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Varies by travel (5 or 4 per model page 'Volume reducer 0/4 Tokens, 1/4 Tokens, 1/5 Tokens, 2/5 Tokens'); per-travel mapping not unambiguous — see 2026 Front Suspension Specifications p.25."
+        },
+        "volumeReducerAsPrinted": {
+          "value": "0/4 Tokens, 1/4 Tokens, 1/5 Tokens, 2/5 Tokens",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-zeb-ult-a3",
+          "retrieved": "2026-09-30",
+          "quote": "Volume reducer 0/4 Tokens, 1/4 Tokens, 1/5 Tokens, 2/5 Tokens",
+          "where": "Model page, Specifications"
+        },
+        "sagPercent": {
+          "value": null,
+          "status": "missing",
+          "note": "No fixed fork sag target for DebonAir+/Linear XL forks: User Manual says DebonAir+ forks are set by pressure ('If you have a DebonAir+ fork refer to Set Air Spring Pressure - DebonAir+'), general text only: 'More sag (20% - 30%) increases bump sensitivity ... Less sag (10% - 20%) ...' (UM - Suspension, Suspension Sag - Front Suspension)."
+        },
+        "pressureTable": {
+          "value": {
+            "unit": "psi",
+            "note": "E-Bikes add 10 psi (table header). Values are ranges exactly as printed, per travel row and rider-weight column.",
+            "rows": [
+              {
+                "travelMm": "150-160",
+                "rider": "<120 lbs (<55 kg)",
+                "value": "<45 psi"
+              },
+              {
+                "travelMm": "150-160",
+                "rider": "120-140 lbs (55-63 kg)",
+                "value": "45-54 psi"
+              },
+              {
+                "travelMm": "150-160",
+                "rider": "140-160 lbs (63-72 kg)",
+                "value": "54-62 psi"
+              },
+              {
+                "travelMm": "150-160",
+                "rider": "160-180 lbs (72-81 kg)",
+                "value": "62-70 psi"
+              },
+              {
+                "travelMm": "150-160",
+                "rider": "180-200 lbs (81-90 kg)",
+                "value": "70-78 psi"
+              },
+              {
+                "travelMm": "150-160",
+                "rider": "200-220 lbs (90-99 kg)",
+                "value": "78-87 psi"
+              },
+              {
+                "travelMm": "150-160",
+                "rider": ">220 lbs (>99 kg)",
+                "value": "87+ psi"
+              },
+              {
+                "travelMm": "170-180",
+                "rider": "<120 lbs (<55 kg)",
+                "value": "<37 psi"
+              },
+              {
+                "travelMm": "170-180",
+                "rider": "120-140 lbs (55-63 kg)",
+                "value": "37-45 psi"
+              },
+              {
+                "travelMm": "170-180",
+                "rider": "140-160 lbs (63-72 kg)",
+                "value": "45-54 psi"
+              },
+              {
+                "travelMm": "170-180",
+                "rider": "160-180 lbs (72-81 kg)",
+                "value": "54-62 psi"
+              },
+              {
+                "travelMm": "170-180",
+                "rider": "180-200 lbs (81-90 kg)",
+                "value": "62-70 psi"
+              },
+              {
+                "travelMm": "170-180",
+                "rider": "200-220 lbs (90-99 kg)",
+                "value": "70-78 psi"
+              },
+              {
+                "travelMm": "170-180",
+                "rider": ">220 lbs (>99 kg)",
+                "value": "78+ psi"
+              },
+              {
+                "travelMm": "190",
+                "rider": "<120 lbs (<55 kg)",
+                "value": "<29 psi"
+              },
+              {
+                "travelMm": "190",
+                "rider": "120-140 lbs (55-63 kg)",
+                "value": "29-37 psi"
+              },
+              {
+                "travelMm": "190",
+                "rider": "140-160 lbs (63-72 kg)",
+                "value": "37-46 psi"
+              },
+              {
+                "travelMm": "190",
+                "rider": "160-180 lbs (72-81 kg)",
+                "value": "46-54 psi"
+              },
+              {
+                "travelMm": "190",
+                "rider": "180-200 lbs (81-90 kg)",
+                "value": "54-62 psi"
+              },
+              {
+                "travelMm": "190",
+                "rider": "200-220 lbs (90-99 kg)",
+                "value": "62-70 psi"
+              },
+              {
+                "travelMm": "190",
+                "rider": ">220 lbs (>99 kg)",
+                "value": "70+ psi"
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2026-front-suspension-specifications.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "FORK AIR SPRING WHEEL TRAVEL (mm) <120 lbs ... >220 lbs MAX PSI E-Bikes add 10 psi ... 150-160 <45 psi 45-54 psi 54-62 psi 62-70 psi 70-78 psi 78-87 psi 87+ psi; 170-180 <37 psi 37-45 psi 45-54 psi 54-62 psi 62-70 psi 70-78 psi 78+ psi; 190 <29 psi 29-37 psi 37-46 psi 46-54 psi 54-62 psi 62-70 psi 70+ psi ... 148 psi",
+          "where": "2026 Front Suspension Specifications p.12, ZEB (FS-ZEB-UFA-A3, FS-ZEB-ULT-A3, ...) DebonAir+"
+        },
+        "manualUrl": {
+          "value": "https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension",
+          "status": "single",
+          "url": "https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension",
+          "retrieved": "2026-09-30",
+          "quote": "UM - Suspension",
+          "where": "SRAM docs user manual; service manual: https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2023-zeb-lyrik-pike-service-manual.pdf"
+        }
+      }
+    },
+    {
+      "id": "rockshox-lyrik-ultimate-e1-2027",
+      "name": "RockShox Lyrik Ultimate (Charger 3.2 RC2, FS-LYRK-ULT-E1)",
+      "type": "fork",
+      "modelYears": [
+        2027
+      ],
+      "catalogId": null,
+      "modelCode": "FS-LYRK-ULT-E1",
+      "fields": {
+        "travelMm": {
+          "value": [
+            140,
+            150,
+            160,
+            170
+          ],
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/fs-lyrk-ult-e1",
+          "retrieved": "2026-09-30",
+          "quote": "Travel (mm) 140mm, 150mm, 160mm, 170mm",
+          "where": "Model page, Specifications",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/fs-lyrk-ult-e1",
+            "retrieved": "2026-09-30",
+            "quote": "Travel (mm) 140mm, 150mm, 160mm, 170mm",
+            "where": "sram.com model page, Specifications > Travel (mm)"
+          }
+        },
+        "wheelSize": {
+          "value": [
+            "27.5\"",
+            "29\""
+          ],
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-lyrk-ult-e1",
+          "retrieved": "2026-09-30",
+          "quote": "Wheel size 27.5\", 29\"",
+          "where": "Model page, Specifications"
+        },
+        "stanchionMm": {
+          "value": 35,
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-lyrk-ult-e1",
+          "retrieved": "2026-09-30",
+          "quote": "Upper tube type 35mm tapered wall aluminum",
+          "where": "Model page, Specifications"
+        },
+        "damper": {
+          "value": "Charger 3.2 RC2 W/ButterCup",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-lyrk-ult-e1",
+          "retrieved": "2026-09-30",
+          "quote": "Damper Type Charger 3.2 RC2 W/ButterCup",
+          "where": "Model page, Specifications"
+        },
+        "springType": {
+          "value": "LinearXL W/ButterCup (air)",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-lyrk-ult-e1",
+          "retrieved": "2026-09-30",
+          "quote": "Spring LinearXL W/ButterCup",
+          "where": "Model page, Specifications"
+        },
+        "lscMax": {
+          "value": 15,
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/learn/fork-deep-dives/compression-knob-logic",
+          "retrieved": "2026-09-30",
+          "quote": "HSC has five clicks of adjustment, and LSC has 15 clicks of adjustment. The numbers and accompanying lines indicate where in the adjustment range your settings are, based on the etched indicator marks. For example: -2 HSC and -7 LSC indicates the least amount of damper force / support (fully open), shown by the thinnest lines. +2 HSC and +7 LSC indicates the most amount of damper force / support (fully closed)",
+          "where": "Compression Knob Logic page, tab 'CHARGER 3.2' NOTE: RockShox counts positions here (Charger 3.2 knob reads -7..+7 LSC and -2..+2 HSC = 15 / 5 positions), i.e. 14 / 4 detent steps between the stops.",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/learn/fork-deep-dives/compression-knob-logic",
+            "retrieved": "2026-09-30",
+            "quote": "HSC has five clicks of adjustment, and LSC has 15 clicks of adjustment. The numbers and accompanying lines indicate where in the adjustment range your settings are, based on the etched indicator marks. For example: -2 HSC and -7 LSC indicates the least amount of damper force / support (fully open), shown by the thinnest lines. +2 HSC and +7 LSC indicates the most amount of damper force / support (fully closed), shown by the thickest lines",
+            "where": "Compression Knob Logic article, tab 'CHARGER 3.2'"
+          },
+          "note": "RockShox counts positions (\"15 clicks\" = -7..+7), see https://github.com/sunra-stardust/suspension-setup/issues/13"
+        },
+        "hscMax": {
+          "value": 5,
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/learn/fork-deep-dives/compression-knob-logic",
+          "retrieved": "2026-09-30",
+          "quote": "HSC has five clicks of adjustment, and LSC has 15 clicks of adjustment. The numbers and accompanying lines indicate where in the adjustment range your settings are, based on the etched indicator marks. For example: -2 HSC and -7 LSC indicates the least amount of damper force / support (fully open), shown by the thinnest lines. +2 HSC and +7 LSC indicates the most amount of damper force / support (fully closed)",
+          "where": "Compression Knob Logic page, tab 'CHARGER 3.2' NOTE: RockShox counts positions here (Charger 3.2 knob reads -7..+7 LSC and -2..+2 HSC = 15 / 5 positions), i.e. 14 / 4 detent steps between the stops.",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/learn/fork-deep-dives/compression-knob-logic",
+            "retrieved": "2026-09-30",
+            "quote": "HSC has five clicks of adjustment, and LSC has 15 clicks of adjustment. The numbers and accompanying lines indicate where in the adjustment range your settings are, based on the etched indicator marks. For example: -2 HSC and -7 LSC indicates the least amount of damper force / support (fully open), shown by the thinnest lines. +2 HSC and +7 LSC indicates the most amount of damper force / support (fully closed), shown by the thickest lines",
+            "where": "Compression Knob Logic article, tab 'CHARGER 3.2'"
+          },
+          "note": "RockShox counts positions (\"15 clicks\" = -7..+7), see https://github.com/sunra-stardust/suspension-setup/issues/13"
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension",
+          "retrieved": "2026-09-30",
+          "quote": "1. Adjust the rebound damper counterclockwise, to the full OPEN position.",
+          "where": "UM - Suspension > Pressurize - Linear XL > Charger 3.2 RC2 (only one rebound damper referenced); weaker evidence than a feature list",
+          "verifiedBy": {
+            "url": "https://trailhead.rockshox.com/en/product/FS-LYRK-ULT-E1",
+            "retrieved": "2026-09-30",
+            "quote": "Rebound suggestions are set from the full clockwise/full slow position.",
+            "where": "Trailhead product page (UI copy)"
+          }
+        },
+        "reboundMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No total rebound click count found for this fork. Checked: model page features/specs, 2026/2027 Front Suspension Specifications PDF, 2023+ ZEB/Lyrik/Pike service manual (only 'count the number of clicks' record table), User Manual 'UM - Suspension' (docs.sram.com; refers to Trailhead), Charger 3 setup / knob-logic / fine-tuning pages, Trailhead product page (serial-based; gives only a formula-based starting setting)."
+        },
+        "hsrMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Model page lists 'Intuitive HSC/LSC controls on the Charger 3.2 damper' but no explicit adjuster list proving absence of HSR; no HSR mentioned anywhere in UM for Charger 3.2."
+        },
+        "lscStart": {
+          "value": 0,
+          "status": "single",
+          "url": "https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension",
+          "retrieved": "2026-09-30",
+          "quote": "11. Adjust the Low Speed (LSC) and High Speed (HSC) compression damper adjusters to the MIDDLE settings to start. [img] LSC - Position 0 / HSC - Position 0",
+          "where": "UM - Suspension > Pressurize - Linear XL > Charger 3.2 RC2, step 11"
+        },
+        "hscStart": {
+          "value": 0,
+          "status": "single",
+          "url": "https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension",
+          "retrieved": "2026-09-30",
+          "quote": "11. Adjust the Low Speed (LSC) and High Speed (HSC) compression damper adjusters to the MIDDLE settings to start. [img] LSC - Position 0 / HSC - Position 0",
+          "where": "UM - Suspension > Pressurize - Linear XL > Charger 3.2 RC2, step 11"
+        },
+        "aboClicks": {
+          "value": 8,
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/learn/suspension-fine-tuning",
+          "retrieved": "2026-09-30",
+          "quote": "Forks with ABO offer 8 clicks and 10mm of adjustable end-stroke control for added confidence. ABO ships in the middle position.",
+          "where": "Suspension Fine Tuning page, Bottom Out Tuning > Adjustable Bottom Out (ABO), 'ZEB and Lyrik Ultimate'"
+        },
+        "maxPressurePsi": {
+          "value": 300,
+          "status": "verified",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2027-front-suspension-specifications.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Lyrik FS-LYRK-UFA-E1 FS-LYRK-ULT-E1 FS-LYRK-SELP-E1 FS-LYRK-SEL-E1 Linear XL 27.5\" B 29\" B ... 300 psi",
+          "where": "2027 Front Suspension Specifications, p.8 Air Spring Pressure, MAX PSI column",
+          "verifiedBy": {
+            "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2027-front-suspension-specifications.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "Lyrik FS-LYRK-UFA-E1 FS-LYRK-ULT-E1 FS-LYRK-SELP-E1 FS-LYRK-SEL-E1 Linear XL 27.5\" B 29\" B 140 <114 psi 114-133 psi 133-150 psi 150-163 psi 163-174 psi 174-181 psi 181+ psi 300 psi 150 <104 psi ... 160 <94 psi ... 170 <84 psi ...",
+            "where": "2027 Front Suspension Specifications PDF, p.8 'Air Spring Pressure', column 'MAX PSI'"
+          }
+        },
+        "spacersStock": {
+          "value": null,
+          "status": "missing",
+          "note": "Model page: 'Volume reducer 0/3 Tokens, 0/4 Tokens, 1/5 Tokens' — varies by travel; per-travel mapping not extracted (see 2027 Front Suspension Specifications technical pages)."
+        },
+        "spacersMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Varies by travel (3, 4 or 5 per model page); per-travel mapping not extracted."
+        },
+        "volumeReducerAsPrinted": {
+          "value": "0/3 Tokens, 0/4 Tokens, 1/5 Tokens",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-lyrk-ult-e1",
+          "retrieved": "2026-09-30",
+          "quote": "Volume reducer 0/3 Tokens, 0/4 Tokens, 1/5 Tokens",
+          "where": "Model page, Specifications"
+        },
+        "sagPercent": {
+          "value": null,
+          "status": "missing",
+          "note": "No fixed fork sag target for DebonAir+/Linear XL forks: User Manual says DebonAir+ forks are set by pressure ('If you have a DebonAir+ fork refer to Set Air Spring Pressure - DebonAir+'), general text only: 'More sag (20% - 30%) increases bump sensitivity ... Less sag (10% - 20%) ...' (UM - Suspension, Suspension Sag - Front Suspension)."
+        },
+        "pressureTable": {
+          "value": {
+            "unit": "psi",
+            "note": "E-Bikes add 10 psi (table header). Values are ranges exactly as printed, per travel row and rider-weight column.",
+            "rows": [
+              {
+                "travelMm": "140",
+                "rider": "<120 lbs (<55 kg)",
+                "value": "<114 psi"
+              },
+              {
+                "travelMm": "140",
+                "rider": "120-140 lbs (55-63 kg)",
+                "value": "114-133 psi"
+              },
+              {
+                "travelMm": "140",
+                "rider": "140-160 lbs (63-72 kg)",
+                "value": "133-150 psi"
+              },
+              {
+                "travelMm": "140",
+                "rider": "160-180 lbs (72-81 kg)",
+                "value": "150-163 psi"
+              },
+              {
+                "travelMm": "140",
+                "rider": "180-200 lbs (81-90 kg)",
+                "value": "163-174 psi"
+              },
+              {
+                "travelMm": "140",
+                "rider": "200-220 lbs (90-99 kg)",
+                "value": "174-181 psi"
+              },
+              {
+                "travelMm": "140",
+                "rider": ">220 lbs (>99 kg)",
+                "value": "181+ psi"
+              },
+              {
+                "travelMm": "150",
+                "rider": "<120 lbs (<55 kg)",
+                "value": "<104 psi"
+              },
+              {
+                "travelMm": "150",
+                "rider": "120-140 lbs (55-63 kg)",
+                "value": "104-123 psi"
+              },
+              {
+                "travelMm": "150",
+                "rider": "140-160 lbs (63-72 kg)",
+                "value": "123-140 psi"
+              },
+              {
+                "travelMm": "150",
+                "rider": "160-180 lbs (72-81 kg)",
+                "value": "140-153 psi"
+              },
+              {
+                "travelMm": "150",
+                "rider": "180-200 lbs (81-90 kg)",
+                "value": "153-164 psi"
+              },
+              {
+                "travelMm": "150",
+                "rider": "200-220 lbs (90-99 kg)",
+                "value": "164-171 psi"
+              },
+              {
+                "travelMm": "150",
+                "rider": ">220 lbs (>99 kg)",
+                "value": "171+ psi"
+              },
+              {
+                "travelMm": "160",
+                "rider": "<120 lbs (<55 kg)",
+                "value": "<94 psi"
+              },
+              {
+                "travelMm": "160",
+                "rider": "120-140 lbs (55-63 kg)",
+                "value": "94-113 psi"
+              },
+              {
+                "travelMm": "160",
+                "rider": "140-160 lbs (63-72 kg)",
+                "value": "113-130 psi"
+              },
+              {
+                "travelMm": "160",
+                "rider": "160-180 lbs (72-81 kg)",
+                "value": "130-143 psi"
+              },
+              {
+                "travelMm": "160",
+                "rider": "180-200 lbs (81-90 kg)",
+                "value": "143-154 psi"
+              },
+              {
+                "travelMm": "160",
+                "rider": "200-220 lbs (90-99 kg)",
+                "value": "154-161 psi"
+              },
+              {
+                "travelMm": "160",
+                "rider": ">220 lbs (>99 kg)",
+                "value": "161+ psi"
+              },
+              {
+                "travelMm": "170",
+                "rider": "<120 lbs (<55 kg)",
+                "value": "<84 psi"
+              },
+              {
+                "travelMm": "170",
+                "rider": "120-140 lbs (55-63 kg)",
+                "value": "84-103 psi"
+              },
+              {
+                "travelMm": "170",
+                "rider": "140-160 lbs (63-72 kg)",
+                "value": "103-120 psi"
+              },
+              {
+                "travelMm": "170",
+                "rider": "160-180 lbs (72-81 kg)",
+                "value": "120-133 psi"
+              },
+              {
+                "travelMm": "170",
+                "rider": "180-200 lbs (81-90 kg)",
+                "value": "133-144 psi"
+              },
+              {
+                "travelMm": "170",
+                "rider": "200-220 lbs (90-99 kg)",
+                "value": "144-151 psi"
+              },
+              {
+                "travelMm": "170",
+                "rider": ">220 lbs (>99 kg)",
+                "value": "151+ psi"
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2027-front-suspension-specifications.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "FORK AIR SPRING WHEEL TRAVEL (mm) <120 lbs ... >220 lbs MAX PSI E-Bikes add 10 psi ... 140 <114 psi 114-133 psi 133-150 psi 150-163 psi 163-174 psi 174-181 psi 181+ psi; 150 <104 psi 104-123 psi 123-140 psi 140-153 psi 153-164 psi 164-171 psi 171+ psi; 160 <94 psi 94-113 psi 113-130 psi 130-143 psi 143-154 psi 154-161 psi 161+ psi; 170 <84 psi 84-103 psi 103-120 psi 120-133 psi 133-144 psi 144-151 psi 151+ psi ... 300 psi",
+          "where": "2027 Front Suspension Specifications p.8, Lyrik (FS-LYRK-UFA-E1, FS-LYRK-ULT-E1, ...) Linear XL"
+        },
+        "manualUrl": {
+          "value": "https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension",
+          "status": "single",
+          "url": "https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension",
+          "retrieved": "2026-09-30",
+          "quote": "UM - Suspension",
+          "where": "SRAM docs user manual (model filter includes fs-lyrk-ult-e1)"
+        }
+      }
+    },
+    {
+      "id": "rockshox-zeb-ultimate-b1-2027",
+      "name": "RockShox ZEB Ultimate (Charger 3.2 RC2, FS-ZEB-ULT-B1)",
+      "type": "fork",
+      "modelYears": [
+        2027
+      ],
+      "catalogId": null,
+      "modelCode": "FS-ZEB-ULT-B1",
+      "fields": {
+        "travelMm": {
+          "value": [
+            150,
+            160,
+            170,
+            180
+          ],
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/fs-zeb-ult-b1",
+          "retrieved": "2026-09-30",
+          "quote": "Travel (mm) 150mm, 160mm, 170mm, 180mm",
+          "where": "Model page, Specifications",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/fs-zeb-ult-b1",
+            "retrieved": "2026-09-30",
+            "quote": "Travel (mm) 150mm, 160mm, 170mm, 180mm",
+            "where": "sram.com model page, Specifications > Travel (mm)"
+          }
+        },
+        "wheelSize": {
+          "value": [
+            "27.5\"",
+            "29\""
+          ],
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-zeb-ult-b1",
+          "retrieved": "2026-09-30",
+          "quote": "Wheel size 27.5\", 29\"",
+          "where": "Model page, Specifications"
+        },
+        "stanchionMm": {
+          "value": 38,
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-zeb-ult-b1",
+          "retrieved": "2026-09-30",
+          "quote": "Upper tube type 38mm aluminum",
+          "where": "Model page, Specifications"
+        },
+        "damper": {
+          "value": "Charger 3.2 RC2 W/ButterCup",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-zeb-ult-b1",
+          "retrieved": "2026-09-30",
+          "quote": "Damper Type Charger 3.2 RC2 W/ButterCup",
+          "where": "Model page, Specifications"
+        },
+        "springType": {
+          "value": "LinearXL W/ButterCup (air)",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-zeb-ult-b1",
+          "retrieved": "2026-09-30",
+          "quote": "Spring LinearXL W/ButterCup",
+          "where": "Model page, Specifications"
+        },
+        "lscMax": {
+          "value": 15,
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/learn/fork-deep-dives/compression-knob-logic",
+          "retrieved": "2026-09-30",
+          "quote": "HSC has five clicks of adjustment, and LSC has 15 clicks of adjustment. The numbers and accompanying lines indicate where in the adjustment range your settings are, based on the etched indicator marks. For example: -2 HSC and -7 LSC indicates the least amount of damper force / support (fully open), shown by the thinnest lines. +2 HSC and +7 LSC indicates the most amount of damper force / support (fully closed)",
+          "where": "Compression Knob Logic page, tab 'CHARGER 3.2' NOTE: RockShox counts positions here (Charger 3.2 knob reads -7..+7 LSC and -2..+2 HSC = 15 / 5 positions), i.e. 14 / 4 detent steps between the stops.",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/learn/fork-deep-dives/compression-knob-logic",
+            "retrieved": "2026-09-30",
+            "quote": "HSC has five clicks of adjustment, and LSC has 15 clicks of adjustment. The numbers and accompanying lines indicate where in the adjustment range your settings are, based on the etched indicator marks. For example: -2 HSC and -7 LSC indicates the least amount of damper force / support (fully open), shown by the thinnest lines. +2 HSC and +7 LSC indicates the most amount of damper force / support (fully closed), shown by the thickest lines",
+            "where": "Compression Knob Logic article, tab 'CHARGER 3.2'"
+          },
+          "note": "RockShox counts positions (\"15 clicks\" = -7..+7), see https://github.com/sunra-stardust/suspension-setup/issues/13"
+        },
+        "hscMax": {
+          "value": 5,
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/learn/fork-deep-dives/compression-knob-logic",
+          "retrieved": "2026-09-30",
+          "quote": "HSC has five clicks of adjustment, and LSC has 15 clicks of adjustment. The numbers and accompanying lines indicate where in the adjustment range your settings are, based on the etched indicator marks. For example: -2 HSC and -7 LSC indicates the least amount of damper force / support (fully open), shown by the thinnest lines. +2 HSC and +7 LSC indicates the most amount of damper force / support (fully closed)",
+          "where": "Compression Knob Logic page, tab 'CHARGER 3.2' NOTE: RockShox counts positions here (Charger 3.2 knob reads -7..+7 LSC and -2..+2 HSC = 15 / 5 positions), i.e. 14 / 4 detent steps between the stops.",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/learn/fork-deep-dives/compression-knob-logic",
+            "retrieved": "2026-09-30",
+            "quote": "HSC has five clicks of adjustment, and LSC has 15 clicks of adjustment. The numbers and accompanying lines indicate where in the adjustment range your settings are, based on the etched indicator marks. For example: -2 HSC and -7 LSC indicates the least amount of damper force / support (fully open), shown by the thinnest lines. +2 HSC and +7 LSC indicates the most amount of damper force / support (fully closed), shown by the thickest lines",
+            "where": "Compression Knob Logic article, tab 'CHARGER 3.2'"
+          },
+          "note": "RockShox counts positions (\"15 clicks\" = -7..+7), see https://github.com/sunra-stardust/suspension-setup/issues/13"
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension",
+          "retrieved": "2026-09-30",
+          "quote": "1. Adjust the rebound damper counterclockwise, to the full OPEN position.",
+          "where": "UM - Suspension > Pressurize - Linear XL > Charger 3.2 RC2 (only one rebound damper referenced); weaker evidence than a feature list",
+          "verifiedBy": {
+            "url": "https://trailhead.rockshox.com/en/product/FS-ZEB-ULT-B1",
+            "retrieved": "2026-09-30",
+            "quote": "Rebound suggestions are set from the full clockwise/full slow position.",
+            "where": "Trailhead product page (UI copy)"
+          }
+        },
+        "reboundMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No total rebound click count found for this fork. Checked: model page features/specs, 2026/2027 Front Suspension Specifications PDF, 2023+ ZEB/Lyrik/Pike service manual (only 'count the number of clicks' record table), User Manual 'UM - Suspension' (docs.sram.com; refers to Trailhead), Charger 3 setup / knob-logic / fine-tuning pages, Trailhead product page (serial-based; gives only a formula-based starting setting)."
+        },
+        "hsrMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No explicit adjuster list proving absence of HSR found for Charger 3.2; no HSR mentioned anywhere."
+        },
+        "lscStart": {
+          "value": 0,
+          "status": "single",
+          "url": "https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension",
+          "retrieved": "2026-09-30",
+          "quote": "11. Adjust the Low Speed (LSC) and High Speed (HSC) compression damper adjusters to the MIDDLE settings to start. [img] LSC - Position 0 / HSC - Position 0",
+          "where": "UM - Suspension > Pressurize - Linear XL > Charger 3.2 RC2, step 11"
+        },
+        "hscStart": {
+          "value": 0,
+          "status": "single",
+          "url": "https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension",
+          "retrieved": "2026-09-30",
+          "quote": "11. Adjust the Low Speed (LSC) and High Speed (HSC) compression damper adjusters to the MIDDLE settings to start. [img] LSC - Position 0 / HSC - Position 0",
+          "where": "UM - Suspension > Pressurize - Linear XL > Charger 3.2 RC2, step 11"
+        },
+        "aboClicks": {
+          "value": 8,
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/learn/suspension-fine-tuning",
+          "retrieved": "2026-09-30",
+          "quote": "Forks with ABO offer 8 clicks and 10mm of adjustable end-stroke control for added confidence. ABO ships in the middle position.",
+          "where": "Suspension Fine Tuning page, Bottom Out Tuning > Adjustable Bottom Out (ABO), 'ZEB and Lyrik Ultimate'"
+        },
+        "maxPressurePsi": {
+          "value": 300,
+          "status": "verified",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2027-front-suspension-specifications.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "ZEB FS-ZEB-UFA-B1 FS-ZEB-ULT-B1 FS-ZEB-SELP-B1 FS-ZEB-SEL-B1 Linear XL 27.5\" B 29\" B ... 300 psi",
+          "where": "2027 Front Suspension Specifications, p.11 Air Spring Pressure, MAX PSI column",
+          "verifiedBy": {
+            "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2027-front-suspension-specifications.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "ZEB FS-ZEB-UFA-B1 FS-ZEB-ULT-B1 FS-ZEB-SELP-B1 FS-ZEB-SEL-B1 Linear XL 27.5\" B 29\" B 150 <106 psi 106-125 psi 125-142 psi 142-157 psi 157-170 psi 170-181 psi 181+ psi 300 psi 160 <96 psi ... 170 <86 psi ... 180 <76 psi ...",
+            "where": "2027 Front Suspension Specifications PDF, 'Air Spring Pressure', column 'MAX PSI'"
+          }
+        },
+        "spacersStock": {
+          "value": null,
+          "status": "missing",
+          "note": "Model page: 'Volume reducer 0/3 Tokens, 0/4 Tokens, 1/4 Tokens, 1/5 Tokens' — varies by travel; per-travel mapping not extracted."
+        },
+        "spacersMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Varies by travel; per-travel mapping not extracted."
+        },
+        "volumeReducerAsPrinted": {
+          "value": "0/3 Tokens, 0/4 Tokens, 1/4 Tokens, 1/5 Tokens",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-zeb-ult-b1",
+          "retrieved": "2026-09-30",
+          "quote": "Volume reducer 0/3 Tokens, 0/4 Tokens, 1/4 Tokens, 1/5 Tokens",
+          "where": "Model page, Specifications"
+        },
+        "sagPercent": {
+          "value": null,
+          "status": "missing",
+          "note": "No fixed fork sag target for DebonAir+/Linear XL forks: User Manual says DebonAir+ forks are set by pressure ('If you have a DebonAir+ fork refer to Set Air Spring Pressure - DebonAir+'), general text only: 'More sag (20% - 30%) increases bump sensitivity ... Less sag (10% - 20%) ...' (UM - Suspension, Suspension Sag - Front Suspension)."
+        },
+        "pressureTable": {
+          "value": {
+            "unit": "psi",
+            "note": "E-Bikes add 10 psi (table header). Values are ranges exactly as printed, per travel row and rider-weight column.",
+            "rows": [
+              {
+                "travelMm": "150",
+                "rider": "<120 lbs (<55 kg)",
+                "value": "<106 psi"
+              },
+              {
+                "travelMm": "150",
+                "rider": "120-140 lbs (55-63 kg)",
+                "value": "106-125 psi"
+              },
+              {
+                "travelMm": "150",
+                "rider": "140-160 lbs (63-72 kg)",
+                "value": "125-142 psi"
+              },
+              {
+                "travelMm": "150",
+                "rider": "160-180 lbs (72-81 kg)",
+                "value": "142-157 psi"
+              },
+              {
+                "travelMm": "150",
+                "rider": "180-200 lbs (81-90 kg)",
+                "value": "157-170 psi"
+              },
+              {
+                "travelMm": "150",
+                "rider": "200-220 lbs (90-99 kg)",
+                "value": "170-181 psi"
+              },
+              {
+                "travelMm": "150",
+                "rider": ">220 lbs (>99 kg)",
+                "value": "181+ psi"
+              },
+              {
+                "travelMm": "160",
+                "rider": "<120 lbs (<55 kg)",
+                "value": "<96 psi"
+              },
+              {
+                "travelMm": "160",
+                "rider": "120-140 lbs (55-63 kg)",
+                "value": "96-115 psi"
+              },
+              {
+                "travelMm": "160",
+                "rider": "140-160 lbs (63-72 kg)",
+                "value": "115-132 psi"
+              },
+              {
+                "travelMm": "160",
+                "rider": "160-180 lbs (72-81 kg)",
+                "value": "132-147 psi"
+              },
+              {
+                "travelMm": "160",
+                "rider": "180-200 lbs (81-90 kg)",
+                "value": "147-160 psi"
+              },
+              {
+                "travelMm": "160",
+                "rider": "200-220 lbs (90-99 kg)",
+                "value": "160-171 psi"
+              },
+              {
+                "travelMm": "160",
+                "rider": ">220 lbs (>99 kg)",
+                "value": "171+ psi"
+              },
+              {
+                "travelMm": "170",
+                "rider": "<120 lbs (<55 kg)",
+                "value": "<86 psi"
+              },
+              {
+                "travelMm": "170",
+                "rider": "120-140 lbs (55-63 kg)",
+                "value": "86-105 psi"
+              },
+              {
+                "travelMm": "170",
+                "rider": "140-160 lbs (63-72 kg)",
+                "value": "105-122 psi"
+              },
+              {
+                "travelMm": "170",
+                "rider": "160-180 lbs (72-81 kg)",
+                "value": "122-137 psi"
+              },
+              {
+                "travelMm": "170",
+                "rider": "180-200 lbs (81-90 kg)",
+                "value": "137-150 psi"
+              },
+              {
+                "travelMm": "170",
+                "rider": "200-220 lbs (90-99 kg)",
+                "value": "150-161 psi"
+              },
+              {
+                "travelMm": "170",
+                "rider": ">220 lbs (>99 kg)",
+                "value": "161+ psi"
+              },
+              {
+                "travelMm": "180",
+                "rider": "<120 lbs (<55 kg)",
+                "value": "<76 psi"
+              },
+              {
+                "travelMm": "180",
+                "rider": "120-140 lbs (55-63 kg)",
+                "value": "76-95 psi"
+              },
+              {
+                "travelMm": "180",
+                "rider": "140-160 lbs (63-72 kg)",
+                "value": "95-112 psi"
+              },
+              {
+                "travelMm": "180",
+                "rider": "160-180 lbs (72-81 kg)",
+                "value": "112-127 psi"
+              },
+              {
+                "travelMm": "180",
+                "rider": "180-200 lbs (81-90 kg)",
+                "value": "127-140 psi"
+              },
+              {
+                "travelMm": "180",
+                "rider": "200-220 lbs (90-99 kg)",
+                "value": "140-151 psi"
+              },
+              {
+                "travelMm": "180",
+                "rider": ">220 lbs (>99 kg)",
+                "value": "151+ psi"
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2027-front-suspension-specifications.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "FORK AIR SPRING WHEEL TRAVEL (mm) <120 lbs ... >220 lbs MAX PSI E-Bikes add 10 psi ... 150 <106 psi 106-125 psi 125-142 psi 142-157 psi 157-170 psi 170-181 psi 181+ psi; 160 <96 psi 96-115 psi 115-132 psi 132-147 psi 147-160 psi 160-171 psi 171+ psi; 170 <86 psi 86-105 psi 105-122 psi 122-137 psi 137-150 psi 150-161 psi 161+ psi; 180 <76 psi 76-95 psi 95-112 psi 112-127 psi 127-140 psi 140-151 psi 151+ psi ... 300 psi",
+          "where": "2027 Front Suspension Specifications p.11, ZEB (FS-ZEB-UFA-B1, FS-ZEB-ULT-B1, ...) Linear XL"
+        },
+        "manualUrl": {
+          "value": "https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension",
+          "status": "single",
+          "url": "https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension",
+          "retrieved": "2026-09-30",
+          "quote": "UM - Suspension",
+          "where": "SRAM docs user manual (model filter includes fs-zeb-ult-b1)"
+        }
+      }
+    },
+    {
+      "id": "rockshox-super-deluxe-ultimate-c2-2025",
+      "name": "RockShox Super Deluxe Ultimate RC2T (RS-SDLX-ULT-C2)",
+      "type": "shock",
+      "modelYears": [
+        2025,
+        2026
+      ],
+      "catalogId": null,
+      "modelCode": "RS-SDLX-ULT-C2",
+      "fields": {
+        "sizesAvailable": {
+          "value": [
+            "165x37.5(TR)",
+            "165x40(TR)",
+            "165x42.5(TR)",
+            "165x45(TR)",
+            "185x47.5(TR)",
+            "185x50(TR)",
+            "185x52.5(TR)",
+            "185x55(TR)",
+            "190x37.5",
+            "190x40",
+            "190x42.5",
+            "190x45",
+            "205x57.5(TR)",
+            "205x60(TR)",
+            "205x62.5(TR)",
+            "205x65(TR)",
+            "210x47.5",
+            "210x50",
+            "210x52.5",
+            "210x55",
+            "230x57.5",
+            "230x60",
+            "230x62.5",
+            "230x65"
+          ],
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-sdlx-ult-c2",
+          "retrieved": "2026-09-30",
+          "quote": "Eye to eye / Stroke 165x37.5(TR), 165x40(TR), 165x42.5(TR), 165x45(TR), 185x47.5(TR), 185x50(TR), 185x52.5(TR), 185x55(TR), 190x37.5, 190x40, 190x42.5, 190x45, 205x57.5(TR), 205x60(TR), 205x62.5(TR), 205x65(TR), 210x47.5, 210x50, 210x52.5, 210x55, 230x57.5, 230x60, 230x62.5, 230x65",
+          "where": "Model page, Specifications"
+        },
+        "mount": {
+          "value": {
+            "shaftEyelet": "Bearing, Standard, Trunnion",
+            "bodyEyelet": "Bearing, No Bushing, No Bushing - 90 Deg Rotation, Standard, Standard - 90 Deg Rotation"
+          },
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-sdlx-ult-c2",
+          "retrieved": "2026-09-30",
+          "quote": "Shaft Eyelet Bearing, Standard, Trunnion Body Eyelet Bearing, No Bushing, No Bushing - 90 Deg Rotation, Standard, Standard - 90 Deg Rotation",
+          "where": "Model page, Specifications (sizes marked (TR) = Trunnion)"
+        },
+        "springType": {
+          "value": "air (DebonAir+)",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-sdlx-ult-c2",
+          "retrieved": "2026-09-30",
+          "quote": "DebonAir+ air springs maximize fine-tuning potential, allowing you to tune your air volume with Bottomless Tokens",
+          "where": "Model page, Features"
+        },
+        "damper": {
+          "value": "RC2T, RC2T Hydraulic Bottom Out",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-sdlx-ult-c2",
+          "retrieved": "2026-09-30",
+          "quote": "Damper Type RC2T, RC2T Hydraulic Bottom Out",
+          "where": "Model page, Specifications"
+        },
+        "lscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No stated TOTAL click count. RC2T article (written for 2023 Super Deluxe): 'With RC2T, the base tune is set right in the middle of the LSC and HSC adjuster knobs, determined by each frame manufacturer to best suit their specific kinematics. You then have two clicks to decrease damping and two clicks to increase damping for both HSC and LSC.' — i.e. base tune in the middle, 2 clicks each way (not converted to a total here, per brief). UM only says 'Refer to the decals on the shock for lever position and function.' RockShox counts positions (\"15 clicks\" = -7..+7), see https://github.com/sunra-stardust/suspension-setup/issues/13"
+        },
+        "hscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No stated TOTAL click count. RC2T article (written for 2023 Super Deluxe): 'With RC2T, the base tune is set right in the middle of the LSC and HSC adjuster knobs, determined by each frame manufacturer to best suit their specific kinematics. You then have two clicks to decrease damping and two clicks to increase damping for both HSC and LSC.' — i.e. base tune in the middle, 2 clicks each way (not converted to a total here, per brief). UM only says 'Refer to the decals on the shock for lever position and function.' RockShox counts positions (\"15 clicks\" = -7..+7), see https://github.com/sunra-stardust/suspension-setup/issues/13"
+        },
+        "compressionRangeAsPrinted": {
+          "value": "base tune in the middle; two clicks to decrease and two clicks to increase damping for both HSC and LSC",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/learn/shock-deep-dives/rc2t",
+          "retrieved": "2026-09-30",
+          "quote": "With RC2T, the base tune is set right in the middle of the LSC and HSC adjuster knobs, determined by each frame manufacturer to best suit their specific kinematics. You then have two clicks to decrease damping and two clicks to increase damping for both HSC and LSC.",
+          "where": "RC2T deep-dive article, 'Other Cool Features' (article covers 2023 Super Deluxe Ultimate RC2T)"
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/rs-sdlx-ult-c2",
+          "retrieved": "2026-09-30",
+          "quote": "RC2T damper offers Rebound adjustment, independent High and Low Speed Compression adjustment, and an easy-adjust Threshold lever for added pedaling efficiency.",
+          "where": "Model page, Features",
+          "verifiedBy": {
+            "url": "https://trailhead.rockshox.com/en/product/RS-SDLX-ULT-C2",
+            "retrieved": "2026-09-30",
+            "quote": "Rebound suggestions are set from the full clockwise/full slow position.",
+            "where": "Trailhead product page (UI copy)"
+          }
+        },
+        "reboundMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Maker states a range, not a single total: '14-15 clicks of Rebound adjustment offer a wider range of tunability and accommodate more rider types.' (model page Features) — see reboundClicksAsPrinted."
+        },
+        "reboundClicksAsPrinted": {
+          "value": "14-15",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-sdlx-ult-c2",
+          "retrieved": "2026-09-30",
+          "quote": "14-15 clicks of Rebound adjustment offer a wider range of tunability and accommodate more rider types.",
+          "where": "Model page, Features"
+        },
+        "hsrMax": {
+          "value": null,
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/rs-sdlx-ult-c2",
+          "retrieved": "2026-09-30",
+          "quote": "RC2T damper offers Rebound adjustment, independent High and Low Speed Compression adjustment, and an easy-adjust Threshold lever for added pedaling efficiency.",
+          "where": "Model page, Features (adjuster list: one Rebound, HSC, LSC, Threshold)",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/rs-sdlx-ult-c2",
+            "retrieved": "2026-09-30",
+            "quote": "RC2T damper offers Rebound adjustment, independent High and Low Speed Compression adjustment, and an easy-adjust Threshold lever for added pedaling efficiency.",
+            "where": "model page Features"
+          }
+        },
+        "hasClimbLever": {
+          "value": true,
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/rs-sdlx-ult-c2",
+          "retrieved": "2026-09-30",
+          "quote": "Independently adjust High and Low Speed Compression or reach for the Threshold lever if you need pedaling efficiency.",
+          "where": "Model page, Description",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/rs-sdlx-ult-c2",
+            "retrieved": "2026-09-30",
+            "quote": "RC2T damper offers Rebound adjustment, independent High and Low Speed Compression adjustment, and an easy-adjust Threshold lever for added pedaling efficiency.",
+            "where": "model page Features"
+          }
+        },
+        "maxPressurePsi": {
+          "value": null,
+          "status": "missing",
+          "note": "Not found: model page specs, 2023+ Super Deluxe service manual (Rev H) and UM contain no max psi for Gen C (only 'RockShox Shock Pump (350 psi max)' as a tool)."
+        },
+        "spacersMax": {
+          "value": 4,
+          "status": "single",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/rear-suspension/2023-super-deluxe-service-manual.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Depending on the specification, a 2023+ (Gen C) Super Deluxe rear shock may include 0 - 4 Bottomless Tokens, 0 - 1 negative volume Tokens.",
+          "where": "2023+ Super Deluxe Service Manual p.41 Bottomless Tokens and Travel Reducer (also exploded view RS-SDLX-ULT-C2 p.9: '14. Bottomless Tokens (0-4)')"
+        },
+        "hydraulicBottomOut": {
+          "value": "optional, non-adjustable",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-sdlx-ult-c2",
+          "retrieved": "2026-09-30",
+          "quote": "The optional Hydraulic Bottom Out kicks in to restrict the flow of oil within the last 20% of travel, offering a soft hydraulic cushion that reduces harsh bottom out.",
+          "where": "Model page, Features"
+        },
+        "sagPercent": {
+          "value": 30,
+          "status": "verified",
+          "url": "https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension",
+          "retrieved": "2026-09-30",
+          "quote": "Correct sag percentage for Solo Air shocks is ≈25%. Correct sag percentage for DebonAir shocks is ≈30%. Sag can be set ±5% as preferred.",
+          "where": "UM - Suspension > Set Sag - Air Rear Suspension, step 11 (block filtered to rs-sdlx-ult-c2)",
+          "verifiedBy": {
+            "url": "https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension?models=rs-sdlx-ult-c2",
+            "retrieved": "2026-09-30",
+            "quote": "Correct sag percentage for Solo Air shocks is ≈25%. Correct sag percentage for DebonAir shocks is ≈30%. Sag can be set ±5% as preferred.",
+            "where": "UM - Suspension, 'Set Sag - Air Rear Suspension' step 11"
+          }
+        },
+        "manualUrl": {
+          "value": "https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension",
+          "status": "single",
+          "url": "https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension",
+          "retrieved": "2026-09-30",
+          "quote": "UM - Suspension",
+          "where": "SRAM docs user manual; service manual: https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/rear-suspension/2023-super-deluxe-service-manual.pdf"
+        }
+      }
+    },
+    {
+      "id": "rockshox-super-deluxe-ultimate-d1",
+      "name": "RockShox Super Deluxe Ultimate RC2T (RS-SDLX-ULT-D1)",
+      "type": "shock",
+      "modelYears": [],
+      "catalogId": null,
+      "modelCode": "RS-SDLX-ULT-D1",
+      "fields": {
+        "sizesAvailable": {
+          "value": [
+            "165x37.5(TR)",
+            "165x40(TR)",
+            "165x42.5(TR)",
+            "165x45(TR)",
+            "185x47.5(TR)",
+            "185x50(TR)",
+            "185x52.5(TR)",
+            "185x55(TR)",
+            "190x37.5",
+            "190x40",
+            "190x42.5",
+            "190x45",
+            "205x57.5(TR)",
+            "205x60(TR)",
+            "205x62.5(TR)",
+            "205x65(TR)",
+            "210x47.5",
+            "210x50",
+            "210x52.5",
+            "210x55",
+            "230x57.5",
+            "230x60",
+            "230x62.5",
+            "230x65"
+          ],
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-sdlx-ult-d1",
+          "retrieved": "2026-09-30",
+          "quote": "Eye to eye / Stroke 165x37.5(TR), 165x40(TR), 165x42.5(TR), 165x45(TR), 185x47.5(TR), 185x50(TR), 185x52.5(TR), 185x55(TR), 190x37.5, 190x40, 190x42.5, 190x45, 205x57.5(TR), 205x60(TR), 205x62.5(TR), 205x65(TR), 210x47.5, 210x50, 210x52.5, 210x55, 230x57.5, 230x60, 230x62.5, 230x65",
+          "where": "Model page, Specifications"
+        },
+        "mount": {
+          "value": {
+            "shaftEyelet": "Standard, Trunnion",
+            "bodyEyelet": "No Bushing, No Bushing - 90 Deg Rotation, Standard, Standard - 90 Deg Rotation"
+          },
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-sdlx-ult-d1",
+          "retrieved": "2026-09-30",
+          "quote": "Shaft Eyelet Standard, Trunnion Body Eyelet No Bushing, No Bushing - 90 Deg Rotation, Standard, Standard - 90 Deg Rotation",
+          "where": "Model page, Specifications (sizes marked (TR) = Trunnion)"
+        },
+        "springType": {
+          "value": "air (LinearXL)",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-sdlx-ult-d1",
+          "retrieved": "2026-09-30",
+          "quote": "NEW LinearXL air spring delivers a consistent and predictable ride feel tunable with easy-to-adjust \"o-ring\" tokens",
+          "where": "Model page, Features"
+        },
+        "damper": {
+          "value": "RC2T, RC2T Hydraulic Bottom Out",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-sdlx-ult-d1",
+          "retrieved": "2026-09-30",
+          "quote": "Damper Type RC2T, RC2T Hydraulic Bottom Out",
+          "where": "Model page, Specifications"
+        },
+        "lscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Not stated. Model page: 'NEW Numbered Compression adjuster for intuitive adjustments—start at \"0\" and easily add or decrease damping'; UM: 'Refer to the graphics on the shock for adjuster position and function.' No total found. RockShox counts positions (\"15 clicks\" = -7..+7), see https://github.com/sunra-stardust/suspension-setup/issues/13"
+        },
+        "hscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Not stated (see lscMax). Model page: 'NEW Removable Rebound knob doubles as HSC adjuster'. RockShox counts positions (\"15 clicks\" = -7..+7), see https://github.com/sunra-stardust/suspension-setup/issues/13"
+        },
+        "lscStart": {
+          "value": 0,
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-sdlx-ult-d1",
+          "retrieved": "2026-09-30",
+          "quote": "NEW Numbered Compression adjuster for intuitive adjustments—start at \"0\" and easily add or decrease damping",
+          "where": "Model page, Features"
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/rs-sdlx-ult-d1",
+          "retrieved": "2026-09-30",
+          "quote": "15 clicks of rebound adjustment providing uniform rebound curves paired with a broad adjustment range provide a consistent ride feel for a wide spectrum of rider weights",
+          "where": "Model page, Features (one rebound adjuster)",
+          "verifiedBy": {
+            "url": "https://trailhead.rockshox.com/en/product/RS-SDLX-ULT-D1",
+            "retrieved": "2026-09-30",
+            "quote": "Rebound suggestions are set from the full clockwise/full slow position.",
+            "where": "Trailhead product page (UI copy)"
+          }
+        },
+        "reboundMax": {
+          "value": 15,
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/rs-sdlx-ult-d1",
+          "retrieved": "2026-09-30",
+          "quote": "15 clicks of rebound adjustment providing uniform rebound curves paired with a broad adjustment range provide a consistent ride feel for a wide spectrum of rider weights",
+          "where": "Model page, Features",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/rs-sdlx-ult-d1",
+            "retrieved": "2026-09-30",
+            "quote": "15 clicks of rebound adjustment providing uniform rebound curves paired with a broad adjustment range provide a consistent ride feel for a wide spectrum of rider weights",
+            "where": "sram.com model page RS-SDLX-ULT-D1, Features"
+          }
+        },
+        "hsrMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No explicit adjuster list for D1 proving absence of HSR (features name Rebound, LSC, HSC only, but not as an exhaustive list)."
+        },
+        "hasClimbLever": {
+          "value": true,
+          "status": "verified",
+          "url": "https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension",
+          "retrieved": "2026-09-30",
+          "quote": "Threshold (T), or Pedal, mode prevents the rear shock from compressing until moderate to significant bump impact or downward force occurs. ... [section] Super Deluxe Ultimate RC2T Gen D",
+          "where": "UM - Suspension > Threshold (T) / Pedal - Rear Suspension > Super Deluxe Ultimate RC2T Gen D (model page: Damper Type RC2T; Lockout force X05, X25, X45, X65)",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/rs-sdlx-ult-d1",
+            "retrieved": "2026-09-30",
+            "quote": "Damper Type RC2T, RC2T Hydraulic Bottom Out",
+            "where": "model page Specifications"
+          }
+        },
+        "maxPressurePsi": {
+          "value": null,
+          "status": "missing",
+          "note": "Model page says only 'NEW Max PSI increased to accomodate higher system weights' — no number; no D1 service manual listed on the service page."
+        },
+        "sagPercent": {
+          "value": null,
+          "status": "missing",
+          "note": "UM sag block (filtered incl. rs-sdlx-ult-d1) says 'Correct sag percentage for DebonAir shocks is ≈30%', but D1 uses LinearXL, not DebonAir — not applied."
+        },
+        "manualUrl": {
+          "value": "https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension",
+          "status": "single",
+          "url": "https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension",
+          "retrieved": "2026-09-30",
+          "quote": "UM - Suspension",
+          "where": "SRAM docs user manual (model filter includes rs-sdlx-ult-d1)"
+        }
+      }
+    },
+    {
+      "id": "rockshox-vivid-ultimate-c1-2024",
+      "name": "RockShox Vivid Ultimate RC2T air (RS-VIVD-ULT-C1)",
+      "type": "shock",
+      "modelYears": [
+        2024,
+        2025,
+        2026
+      ],
+      "catalogId": null,
+      "modelCode": "RS-VIVD-ULT-C1",
+      "fields": {
+        "sizesAvailable": {
+          "value": [
+            "165x37.5(TR)",
+            "165x40(TR)",
+            "165x42.5(TR)",
+            "165x45(TR)",
+            "185x47.5(TR)",
+            "185x50(TR)",
+            "185x52.5(TR)",
+            "185x55(TR)",
+            "190x37.5",
+            "190x40",
+            "190x42.5",
+            "190x45",
+            "205x57.5(TR)",
+            "205x60(TR)",
+            "205x62.5(TR)",
+            "205x65(TR)",
+            "210x47.5",
+            "210x50",
+            "210x52.5",
+            "210x55",
+            "225x67.5(TR)",
+            "225x70(TR)",
+            "225x72.5(TR)",
+            "225x75(TR)",
+            "230x57.5",
+            "230x60",
+            "230x62.5",
+            "230x65",
+            "250x67.5",
+            "250x70",
+            "250x72.5",
+            "250x75"
+          ],
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-ult-c1",
+          "retrieved": "2026-09-30",
+          "quote": "Eye to eye / Stroke 165x37.5(TR), 165x40(TR), 165x42.5(TR), 165x45(TR), 185x47.5(TR), 185x50(TR), 185x52.5(TR), 185x55(TR), 190x37.5, 190x40, 190x42.5, 190x45, 205x57.5(TR), 205x60(TR), 205x62.5(TR), 205x65(TR), 210x47.5, 210x50, 210x52.5, 210x55, 225x67.5(TR), 225x70(TR), 225x72.5(TR), 225x75(TR), 230x57.5, 230x60, 230x62.5, 230x65, 250x67.5, 250x70, 250x72.5, 250x75",
+          "where": "Model page, Specifications"
+        },
+        "mount": {
+          "value": {
+            "shaftEyelet": "Bearing, No Bushing, No Bushing - 90 Deg Rotation, Standard, Standard - 180 Deg Rotation, Standard - 75 Deg Rotation, Standard - 90 Deg Rotation",
+            "bodyEyelet": "Bearing, No Bushing, Standard, Standard - 90 Deg Rotation, Trunnion"
+          },
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-ult-c1",
+          "retrieved": "2026-09-30",
+          "quote": "Shaft Eyelet Bearing, No Bushing, No Bushing - 90 Deg Rotation, Standard, Standard - 180 Deg Rotation, Standard - 75 Deg Rotation, Standard - 90 Deg Rotation Body Eyelet Bearing, No Bushing, Standard, Standard - 90 Deg Rotation, Trunnion",
+          "where": "Model page, Specifications (sizes marked (TR) = Trunnion)"
+        },
+        "springType": {
+          "value": "air",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-ult-c1",
+          "retrieved": "2026-09-30",
+          "quote": "The most coil-like air spring we’ve ever built featuring the latest in DebonAir technology",
+          "where": "Model page, Features"
+        },
+        "damper": {
+          "value": "TouchDown RC2T (Adj. Hydraulic Bottom Out)",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-ult-c1",
+          "retrieved": "2026-09-30",
+          "quote": "Damper Type RC2 Adj. Hydraulic Bottom Out, RC2T Adj. Hydraulic Bottom Out",
+          "where": "Model page, Specifications (RC2 variant without Threshold also exists, e.g. OEM)"
+        },
+        "lscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Not stated. Checked model page, 2024+ Vivid service manual, UM ('Refer to the decals on the shock for lever position and function'), Vivid Air Setup page ('Make sure your Compression and Rebound dials are all set in the middle of their adjustment range'). RockShox counts positions (\"15 clicks\" = -7..+7), see https://github.com/sunra-stardust/suspension-setup/issues/13"
+        },
+        "hscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Not stated (see lscMax). RockShox counts positions (\"15 clicks\" = -7..+7), see https://github.com/sunra-stardust/suspension-setup/issues/13"
+        },
+        "lscStart": {
+          "value": "middle",
+          "status": "single",
+          "url": "https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension",
+          "retrieved": "2026-09-30",
+          "quote": "Vivid Air (Gen C-D): Before setting sag, rotate the Low Speed Compression (2.1) and High Speed Compression (2.2) adjusters to the middle setting.",
+          "where": "UM - Suspension > Set Sag - Air Rear Suspension, steps 1-2"
+        },
+        "hscStart": {
+          "value": "middle",
+          "status": "single",
+          "url": "https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension",
+          "retrieved": "2026-09-30",
+          "quote": "Vivid Air (Gen C-D): Before setting sag, rotate the Low Speed Compression (2.1) and High Speed Compression (2.2) adjusters to the middle setting.",
+          "where": "UM - Suspension > Set Sag - Air Rear Suspension, steps 1-2"
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-ult-c1",
+          "retrieved": "2026-09-30",
+          "quote": "NEW TouchDown RC2T damper features Rebound adjustment, independent High and Low Speed Compression adjustment, and an easy-to-adjust Threshold Lever for added pedaling efficiency.",
+          "where": "Model page, Features",
+          "verifiedBy": {
+            "url": "https://trailhead.rockshox.com/en/product/RS-VIVD-ULT-C1",
+            "retrieved": "2026-09-30",
+            "quote": "Rebound suggestions are set from the full clockwise/full slow position.",
+            "where": "Trailhead product page (UI copy)"
+          }
+        },
+        "reboundMax": {
+          "value": 20,
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-ult-c1",
+          "retrieved": "2026-09-30",
+          "quote": "20 clicks of Rebound adjustment offer a wide range of tunability to accommodate all riding styles.",
+          "where": "Model page, Features",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/rs-vivd-ult-c1",
+            "retrieved": "2026-09-30",
+            "quote": "20 clicks of Rebound adjustment offer a wide range of tunability to accommodate all riding styles.",
+            "where": "sram.com model page RS-VIVD-ULT-C1, Features"
+          }
+        },
+        "hsrMax": {
+          "value": null,
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-ult-c1",
+          "retrieved": "2026-09-30",
+          "quote": "NEW TouchDown RC2T damper features Rebound adjustment, independent High and Low Speed Compression adjustment, and an easy-to-adjust Threshold Lever for added pedaling efficiency.",
+          "where": "Model page, Features (adjuster list)",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/rs-vivd-ult-c1",
+            "retrieved": "2026-09-30",
+            "quote": "NEW TouchDown RC2T damper features Rebound adjustment, independent High and Low Speed Compression adjustment, and an easy-to-adjust Threshold Lever for added pedaling efficiency.",
+            "where": "model page Features"
+          }
+        },
+        "hasClimbLever": {
+          "value": true,
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-ult-c1",
+          "retrieved": "2026-09-30",
+          "quote": "NEW TouchDown RC2T damper features Rebound adjustment, independent High and Low Speed Compression adjustment, and an easy-to-adjust Threshold Lever for added pedaling efficiency.",
+          "where": "Model page, Features",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/rs-vivd-ult-c1",
+            "retrieved": "2026-09-30",
+            "quote": "NEW TouchDown RC2T damper features Rebound adjustment, independent High and Low Speed Compression adjustment, and an easy-to-adjust Threshold Lever for added pedaling efficiency.",
+            "where": "model page Features"
+          }
+        },
+        "hboPositions": {
+          "value": 5,
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-ult-c1",
+          "retrieved": "2026-09-30",
+          "quote": "Adjustable Hydraulic Bottom Out has five compression settings at your fingertips to customize the amount of bottom-out resistance in the last 20% of travel.",
+          "where": "Model page, Features (UM table: '+4 CLICKS (CLOSED) ... 0 CLICKS (OPEN)')"
+        },
+        "maxPressurePsi": {
+          "value": {
+            "165, 190 x 37.5-45": {
+              "0-4 tokens": 360
+            },
+            "185, 210 x 47.5-55": {
+              "0-4 tokens": 360,
+              "5-6 tokens": 300
+            },
+            "205, 230 x 57.5-65": {
+              "0-4 tokens": 360,
+              "5-6 tokens": 300
+            },
+            "225, 250 x 67.5-75": {
+              "0-4 tokens": 300
+            }
+          },
+          "status": "verified",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/rear-suspension/2024-vivid-service-manual.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Shock Length (mm) Shock Stroke (mm) MAX psi Maximum Bottomless Tokens 165, 190 37.5 - 45 360 0 - 4 185, 210 47.5 - 55 360 0 - 4 300 5 - 6 205, 230 57.5 - 65 360 0 - 4 300 5 - 6 225, 250 67.5 - 75 300 0 - 4",
+          "where": "2024+ Vivid Service Manual (GEN.0000000007397 Rev H), p.50 Bottomless Tokens and Travel Reducers",
+          "verifiedBy": {
+            "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/rear-suspension/2024-vivid-service-manual.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "Shock Length (mm) Shock Stroke (mm) MAX psi Maximum Bottomless Tokens 165, 190 37.5 - 45 360 0 - 4 185, 210 47.5 - 55 360 0 - 4 300 5 - 6 205, 230 57.5 - 65 360 0 - 4 300 5 - 6 225, 250 67.5 - 75 300 0 - 4"
+          },
+          "note": "same service-manual table in both passes; Trailhead gives 300 psi"
+        },
+        "spacersMax": {
+          "value": {
+            "165, 190 x 37.5-45": 4,
+            "185, 210 x 47.5-55": 6,
+            "205, 230 x 57.5-65": 6,
+            "225, 250 x 67.5-75": 4
+          },
+          "status": "single",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/rear-suspension/2024-vivid-service-manual.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Do not exceed the maximum number of Bottomless Tokens as indicated below. ... 165, 190 37.5 - 45 360 0 - 4 185, 210 47.5 - 55 360 0 - 4 300 5 - 6 205, 230 57.5 - 65 360 0 - 4 300 5 - 6 225, 250 67.5 - 75 300 0 - 4",
+          "where": "2024+ Vivid Service Manual p.50 (5-6 tokens only with max 300 psi)"
+        },
+        "sagPercent": {
+          "value": 30,
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/learn/vivid-air-setup",
+          "retrieved": "2026-09-30",
+          "quote": "repeat steps 4 and 5 until you reach the desired pressure and sag setting (we recommend 30% sag).",
+          "where": "Vivid Air Setup and Tuning page, Vivid Setup Procedure step 5",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/learn/vivid-air-setup",
+            "retrieved": "2026-09-30",
+            "quote": "Install the shock pump, add another 50-75 PSI, remove the shock pump, then repeat steps 4 and 5 until you reach the desired pressure and sag setting (we recommend 30% sag).",
+            "where": "Vivid Air Setup and Tuning Guide, step 5"
+          }
+        },
+        "manualUrl": {
+          "value": "https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension",
+          "status": "single",
+          "url": "https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension",
+          "retrieved": "2026-09-30",
+          "quote": "UM - Suspension",
+          "where": "SRAM docs user manual; service manual: https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/rear-suspension/2024-vivid-service-manual.pdf"
+        }
+      }
+    },
+    {
+      "id": "rockshox-vivid-ultimate-d1",
+      "name": "RockShox Vivid Ultimate RC2T air (RS-VIVD-ULT-D1)",
+      "type": "shock",
+      "modelYears": [],
+      "catalogId": null,
+      "modelCode": "RS-VIVD-ULT-D1",
+      "fields": {
+        "sizesAvailable": {
+          "value": [
+            "185x47.5(TR)",
+            "185x50(TR)",
+            "185x52.5(TR)",
+            "185x55(TR)",
+            "205x57.5(TR)",
+            "205x60(TR)",
+            "205x62.5(TR)",
+            "205x65(TR)",
+            "210x47.5",
+            "210x50",
+            "210x52.5",
+            "210x55",
+            "225x67.5(TR)",
+            "225x70(TR)",
+            "225x72.5(TR)",
+            "225x75(TR)",
+            "230x57.5",
+            "230x60",
+            "230x62.5",
+            "230x65",
+            "250x67.5",
+            "250x70",
+            "250x72.5",
+            "250x75"
+          ],
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-ult-d1",
+          "retrieved": "2026-09-30",
+          "quote": "Eye to eye / Stroke 185x47.5(TR), 185x50(TR), 185x52.5(TR), 185x55(TR), 205x57.5(TR), 205x60(TR), 205x62.5(TR), 205x65(TR), 210x47.5, 210x50, 210x52.5, 210x55, 225x67.5(TR), 225x70(TR), 225x72.5(TR), 225x75(TR), 230x57.5, 230x60, 230x62.5, 230x65, 250x67.5, 250x70, 250x72.5, 250x75",
+          "where": "Model page, Specifications"
+        },
+        "mount": {
+          "value": {
+            "shaftEyelet": "No Bushing, No Bushing - 270 Deg Rotation, No Bushing - 90 Deg Rotation, Standard, Standard - 180 Deg Rotation, Standard - 270 Deg Rotation, Standard - 75 Deg Rotation, Standard - 90 Deg Rotation",
+            "bodyEyelet": "No Bushing, Standard, Standard - 90 Deg Rotation, Trunnion"
+          },
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-ult-d1",
+          "retrieved": "2026-09-30",
+          "quote": "Shaft Eyelet No Bushing, No Bushing - 270 Deg Rotation, No Bushing - 90 Deg Rotation, Standard, Standard - 180 Deg Rotation, Standard - 270 Deg Rotation, Standard - 75 Deg Rotation, Standard - 90 Deg Rotation Body Eyelet No Bushing, Standard, Standard - 90 Deg Rotation, Trunnion",
+          "where": "Model page, Specifications (sizes marked (TR) = Trunnion)"
+        },
+        "springType": {
+          "value": "air (LinearXL)",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-ult-d1",
+          "retrieved": "2026-09-30",
+          "quote": "NEW LinearXL air spring delivers a consistent and predictable ride feel tunable with easy-to-change bottomless tokens",
+          "where": "Model page, Features"
+        },
+        "damper": {
+          "value": "RC2T Adj. Hydraulic Bottom Out",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-ult-d1",
+          "retrieved": "2026-09-30",
+          "quote": "Damper Type RC2T Adj. Hydraulic Bottom Out",
+          "where": "Model page, Specifications"
+        },
+        "lscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Not stated. Model page: 'NEW Numbered Compression adjuster for intuitive adjustments—start at \"0\" and easily add or decrease damping'; UM: 'Refer to the graphics on the shock for adjuster position and function.' RockShox counts positions (\"15 clicks\" = -7..+7), see https://github.com/sunra-stardust/suspension-setup/issues/13"
+        },
+        "hscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Not stated. Model page: 'Removable Rebound knob doubles as HSC and ABO adjuster'. RockShox counts positions (\"15 clicks\" = -7..+7), see https://github.com/sunra-stardust/suspension-setup/issues/13"
+        },
+        "lscStart": {
+          "value": 0,
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-ult-d1",
+          "retrieved": "2026-09-30",
+          "quote": "NEW Numbered Compression adjuster for intuitive adjustments—start at \"0\" and easily add or decrease damping",
+          "where": "Model page, Features"
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-ult-d1",
+          "retrieved": "2026-09-30",
+          "quote": "20 clicks of Rebound adjustment providing uniform rebound curves paired with a broad adjustment range provide a consistent ride feel for a wide spectrum of rider weights",
+          "where": "Model page, Features",
+          "verifiedBy": {
+            "url": "https://trailhead.rockshox.com/en/product/RS-VIVD-ULT-D1",
+            "retrieved": "2026-09-30",
+            "quote": "Rebound suggestions are set from the full clockwise/full slow position.",
+            "where": "Trailhead product page (UI copy)"
+          }
+        },
+        "reboundMax": {
+          "value": 20,
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-ult-d1",
+          "retrieved": "2026-09-30",
+          "quote": "20 clicks of Rebound adjustment providing uniform rebound curves paired with a broad adjustment range provide a consistent ride feel for a wide spectrum of rider weights",
+          "where": "Model page, Features",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/rs-vivd-ult-d1",
+            "retrieved": "2026-09-30",
+            "quote": "20 clicks of Rebound adjustment providing uniform rebound curves paired with a broad adjustment range provide a consistent ride feel for a wide spectrum of rider weights",
+            "where": "sram.com model page RS-VIVD-ULT-D1, Features"
+          }
+        },
+        "hsrMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No exhaustive adjuster list for D1 found."
+        },
+        "hasClimbLever": {
+          "value": true,
+          "status": "verified",
+          "url": "https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension",
+          "retrieved": "2026-09-30",
+          "quote": "Threshold (T), or Pedal, mode prevents the rear shock from compressing until moderate to significant bump impact or downward force occurs. ... [section] Vivid Air Ultimate RC2T Gen D",
+          "where": "UM - Suspension > Threshold (T) / Pedal - Rear Suspension > Vivid Air Ultimate RC2T Gen D (model page: Damper Type RC2T; Lockout force X05, X25, X45)",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/rs-vivd-ult-d1",
+            "retrieved": "2026-09-30",
+            "quote": "Damper Type RC2T Adj. Hydraulic Bottom Out",
+            "where": "model page Specifications"
+          }
+        },
+        "hboPositions": {
+          "value": 5,
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-ult-d1",
+          "retrieved": "2026-09-30",
+          "quote": "Adjustable Bottom Out (ABO) offers a convenient dial with five different compression settings to customize the cushioning you experience in the last 20% of travel",
+          "where": "Model page, Features (UM ABO table: 'POSITION +2 (CLOSED) ... POSITION -2 (OPEN)')"
+        },
+        "maxPressurePsi": {
+          "value": null,
+          "status": "missing",
+          "note": "Not found: model page has no max psi; D1 service page lists no service manual; 2024+ Vivid service manual covers C1 only."
+        },
+        "sagPercent": {
+          "value": null,
+          "status": "missing",
+          "note": "UM: 'Correct sag percentage for DebonAir shocks is ≈30%' (D1 is LinearXL); Vivid Air Setup page ('we recommend 30% sag') predates D1 — not applied."
+        },
+        "manualUrl": {
+          "value": "https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension",
+          "status": "single",
+          "url": "https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension",
+          "retrieved": "2026-09-30",
+          "quote": "UM - Suspension",
+          "where": "SRAM docs user manual (model filter includes rs-vivd-ult-d1)"
+        }
+      }
+    },
+    {
+      "id": "rockshox-zeb-select-plus-2026",
+      "name": "RockShox ZEB Select+ (FS-ZEB-SELP-A3, Charger 3.1 RC2, DebonAir+)",
+      "type": "fork",
+      "modelYears": [
+        2025,
+        2026
+      ],
+      "catalogId": null,
+      "fields": {
+        "modelCode": {
+          "value": "FS-ZEB-SELP-A3",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-zeb-selp-a3",
+          "retrieved": "2026-09-30",
+          "quote": "Model ID FS-ZEB-SELP-A3",
+          "where": "Model page header"
+        },
+        "modelYearsEvidence": {
+          "value": [
+            2025,
+            2026
+          ],
+          "status": "single",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2026-front-suspension-specifications.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "ZEB FS-ZEB-UFA-A3 FS-ZEB-ULT-A3 FS-ZEB-SELP-A3 FS-ZEB-SEL-A2 FS-ZEB-BSE-A2 DebonAir+",
+          "where": "2026 Front Suspension Specifications p.12 (also listed in 2025 spec doc; NOT listed in 2027 spec doc, where Select+ is FS-ZEB-SELP-B1)"
+        },
+        "travelMm": {
+          "value": [
+            150,
+            160,
+            170,
+            180,
+            190
+          ],
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/fs-zeb-selp-a3",
+          "retrieved": "2026-09-30",
+          "quote": "Travel (mm) 150mm, 160mm, 170mm, 180mm, 190mm",
+          "where": "Specifications",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/fs-zeb-selp-a3",
+            "retrieved": "2026-09-30",
+            "quote": "Travel (mm) 150mm, 160mm, 170mm, 180mm, 190mm",
+            "where": "Product page, Specifications"
+          }
+        },
+        "wheelSize": {
+          "value": [
+            "27.5",
+            "29"
+          ],
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-zeb-selp-a3",
+          "retrieved": "2026-09-30",
+          "quote": "Wheel size 27.5\", 29\"",
+          "where": "Specifications"
+        },
+        "stanchionMm": {
+          "value": 38,
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-zeb-selp-a3",
+          "retrieved": "2026-09-30",
+          "quote": "Upper tube type 38mm aluminum",
+          "where": "Specifications"
+        },
+        "damper": {
+          "value": "Charger 3.1 RC2",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-zeb-selp-a3",
+          "retrieved": "2026-09-30",
+          "quote": "Damper Type Charger 3.1 RC2",
+          "where": "Specifications"
+        },
+        "springType": {
+          "value": "air (DebonAir+)",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-zeb-selp-a3",
+          "retrieved": "2026-09-30",
+          "quote": "Spring DebonAir+",
+          "where": "Specifications"
+        },
+        "offsetMm": {
+          "value": [
+            "38mm (27.5\")",
+            "44mm (27.5\")",
+            "44mm (29\")",
+            "51mm (29\")"
+          ],
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-zeb-selp-a3",
+          "retrieved": "2026-09-30",
+          "quote": "Fork offset 38mm (27.5\"), 44mm (27.5\"), 44mm (29\"), 51mm (29\")",
+          "where": "Specifications"
+        },
+        "lscMax": {
+          "value": 15,
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/learn/fork-deep-dives/compression-knob-logic",
+          "retrieved": "2026-09-30",
+          "quote": "HSC has five clicks of adjustment, and LSC has 15 clicks of adjustment. Two etched indicator marks show where your settings are within the adjustment range.",
+          "where": "Compression Knob Logic, tab 'CHARGER 3/3.1'. Note: RockShox counts positions (-7...0...+7 on 3.2); 15 = number of settings stated by maker",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/learn/fork-deep-dives/compression-knob-logic",
+            "retrieved": "2026-09-30",
+            "quote": "HSC has five clicks of adjustment, and LSC has 15 clicks of adjustment.",
+            "where": "Compression Knob Logic, tab 'CHARGER 3/3.1'"
+          },
+          "note": "RockShox counts positions (\"15 clicks\" = -7..+7), see https://github.com/sunra-stardust/suspension-setup/issues/13"
+        },
+        "hscMax": {
+          "value": 5,
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/learn/fork-deep-dives/compression-knob-logic",
+          "retrieved": "2026-09-30",
+          "quote": "HSC has five clicks of adjustment, and LSC has 15 clicks of adjustment.",
+          "where": "Compression Knob Logic, tab 'CHARGER 3/3.1'",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/learn/fork-deep-dives/compression-knob-logic",
+            "retrieved": "2026-09-30",
+            "quote": "HSC has five clicks of adjustment, and LSC has 15 clicks of adjustment.",
+            "where": "Compression Knob Logic, tab 'CHARGER 3/3.1'"
+          },
+          "note": "RockShox counts positions (\"15 clicks\" = -7..+7), see https://github.com/sunra-stardust/suspension-setup/issues/13"
+        },
+        "lscStart": {
+          "value": "middle",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/learn/charger-3-setup",
+          "retrieved": "2026-09-30",
+          "quote": "we recommend starting with Low Speed Compression (LSC) and High Speed Compression (HSC) set in the middle",
+          "where": "Charger 3 and 3.1 Damper Initial Setup"
+        },
+        "hscStart": {
+          "value": "middle",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/learn/charger-3-setup",
+          "retrieved": "2026-09-30",
+          "quote": "we recommend starting with Low Speed Compression (LSC) and High Speed Compression (HSC) set in the middle",
+          "where": "Charger 3 and 3.1 Damper Initial Setup"
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/fs-zeb-selp-a3",
+          "retrieved": "2026-09-30",
+          "quote": "With increased damping range and High Speed Compression, Low Speed Compression, and Low Speed Rebound adjustments, Charger 3.1 smooths out the roughest trails.",
+          "where": "Features (only LSR named; no HSR adjuster)",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/learn/suspension-welcome-guide",
+            "retrieved": "2026-09-30",
+            "quote": "Adjust the Rebound knob based on the TrailHead suggestion—the suggested setting is the number of clicks from Closed or slowest position, indicated by the turtle icon.",
+            "where": "Suspension Welcome Guide, Fork section, '02. Initial Rebound settings'"
+          }
+        },
+        "reboundMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Searched: product page (fs-zeb-selp-*), Charger 3 setup guide, Charger 3/3.1 deep dive, Compression Knob Logic, Suspension Fine Tuning, UM - Suspension (docs.sram.com, filtered to this model), 2023 ZEB/Lyrik/Pike service manual (only 'Count the number of clicks while turning the rebound adjuster fully counterclockwise'), 2027 ZEB/Lyrik SM. No total rebound click count stated by RockShox; starting value only via Trailhead app."
+        },
+        "hsrMax": {
+          "value": null,
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/fs-zeb-selp-a3",
+          "retrieved": "2026-09-30",
+          "quote": "With increased damping range and High Speed Compression, Low Speed Compression, and Low Speed Rebound adjustments",
+          "where": "Features - adjuster list names only HSC, LSC, Low Speed Rebound",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/fs-zeb-selp-a3",
+            "retrieved": "2026-09-30",
+            "quote": "With increased damping range and High Speed Compression, Low Speed Compression, and Low Speed Rebound adjustments, Charger 3.1 smooths out the roughest trails.",
+            "where": "Product page, Features"
+          }
+        },
+        "maxPressurePsi": {
+          "value": 148,
+          "status": "verified",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2026-front-suspension-specifications.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "ZEB ... FS-ZEB-SELP-A3 ... DebonAir+ ... MAX PSI 148 psi",
+          "where": "2026 Front Suspension Specifications p.12, Air Spring Pressure table",
+          "verifiedBy": {
+            "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2025-front-suspension-specifications.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "MAX PSI ... 148 psi",
+            "where": "2025 Front Suspension Specifications p.12 Air Spring Pressure, row 'ZEB FS-ZEB-UFA-A3 FS-ZEB-ULT-A3 FS-ZEB-SELP-A3 FS-ZEB-SEL-A2 FS-ZEB-BSE-A2 / DebonAir+'"
+          }
+        },
+        "pressureTable": {
+          "value": {
+            "unit": "psi",
+            "note": "E-Bikes add 10 psi; values are ranges as printed",
+            "rows": [
+              {
+                "rider": "<120 lbs (<55 kg)",
+                "travelMm": "150-160",
+                "value": "<45 psi"
+              },
+              {
+                "rider": "120-140 lbs (55-63 kg)",
+                "travelMm": "150-160",
+                "value": "45-54 psi"
+              },
+              {
+                "rider": "140-160 lbs (63-72 kg)",
+                "travelMm": "150-160",
+                "value": "54-62 psi"
+              },
+              {
+                "rider": "160-180 lbs (72-81 kg)",
+                "travelMm": "150-160",
+                "value": "62-70 psi"
+              },
+              {
+                "rider": "180-200 lbs (81-90 kg)",
+                "travelMm": "150-160",
+                "value": "70-78 psi"
+              },
+              {
+                "rider": "200-220 lbs (90-99 kg)",
+                "travelMm": "150-160",
+                "value": "78-87 psi"
+              },
+              {
+                "rider": ">220 lbs (>99 kg)",
+                "travelMm": "150-160",
+                "value": "87+ psi"
+              },
+              {
+                "rider": "<120 lbs (<55 kg)",
+                "travelMm": "170-180",
+                "value": "<37 psi"
+              },
+              {
+                "rider": "120-140 lbs (55-63 kg)",
+                "travelMm": "170-180",
+                "value": "37-45 psi"
+              },
+              {
+                "rider": "140-160 lbs (63-72 kg)",
+                "travelMm": "170-180",
+                "value": "45-54 psi"
+              },
+              {
+                "rider": "160-180 lbs (72-81 kg)",
+                "travelMm": "170-180",
+                "value": "54-62 psi"
+              },
+              {
+                "rider": "180-200 lbs (81-90 kg)",
+                "travelMm": "170-180",
+                "value": "62-70 psi"
+              },
+              {
+                "rider": "200-220 lbs (90-99 kg)",
+                "travelMm": "170-180",
+                "value": "70-78 psi"
+              },
+              {
+                "rider": ">220 lbs (>99 kg)",
+                "travelMm": "170-180",
+                "value": "78+ psi"
+              },
+              {
+                "rider": "<120 lbs (<55 kg)",
+                "travelMm": "190",
+                "value": "<29 psi"
+              },
+              {
+                "rider": "120-140 lbs (55-63 kg)",
+                "travelMm": "190",
+                "value": "29-37 psi"
+              },
+              {
+                "rider": "140-160 lbs (63-72 kg)",
+                "travelMm": "190",
+                "value": "37-46 psi"
+              },
+              {
+                "rider": "160-180 lbs (72-81 kg)",
+                "travelMm": "190",
+                "value": "46-54 psi"
+              },
+              {
+                "rider": "180-200 lbs (81-90 kg)",
+                "travelMm": "190",
+                "value": "54-62 psi"
+              },
+              {
+                "rider": "200-220 lbs (90-99 kg)",
+                "travelMm": "190",
+                "value": "62-70 psi"
+              },
+              {
+                "rider": ">220 lbs (>99 kg)",
+                "travelMm": "190",
+                "value": "70+ psi"
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2026-front-suspension-specifications.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "150-160 | <45 psi | 45-54 psi | 54-62 psi | 62-70 psi | 70-78 psi | 78-87 psi | 87+ psi | 148 psi | 170-180 | <37 psi | 37-45 psi | 45-54 psi | 54-62 psi | 62-70 psi | 70-78 psi | 78+ psi | 190 | <29 psi | 29-37 psi | 37-46 psi | 46-54 psi | 54-62 psi | 62-70 psi | 70+ psi",
+          "where": "2026 Front Suspension Specifications p.12 (E-Bikes add 10 psi)"
+        },
+        "spacersStock": {
+          "value": {
+            "150": 2,
+            "160": 1,
+            "170": 1,
+            "180": 0,
+            "190": 0
+          },
+          "status": "single",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2026-front-suspension-specifications.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "BOTTOMLESS TOKENS INSTALLED ... 150: 2 / 160-170: 1 / 180-190: 0 (same for 27.5\" B and 29\" B)",
+          "where": "2026 Front Suspension Specifications p.25, Technical Specifications (ZEB Ultimate/Select+ A3 row group; read from table cells)"
+        },
+        "spacersMax": {
+          "value": {
+            "150": 5,
+            "160": 5,
+            "170": 4,
+            "180": 4,
+            "190": 4
+          },
+          "status": "single",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2026-front-suspension-specifications.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "BOTTOMLESS TOKENS MAX ... 150-160: 5 / 170-190: 4",
+          "where": "2026 Front Suspension Specifications p.25; product page agrees: 'Volume reducer 0/4 Tokens, 1/4 Tokens, 1/5 Tokens, 2/5 Tokens'"
+        },
+        "sagPercent": {
+          "value": null,
+          "status": "missing",
+          "note": "UM - Suspension: 'Optimal DebonAir+ air spring pressure results in small bump sensitivity, mid-stroke support, and the use of full travel. Setting DebonAir+ air spring pressure does not require the 'Set Sag' procedure.' RockShox sets forks by pressure table, no fork sag % given."
+        },
+        "maxTireWidthMm": {
+          "value": 81,
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-zeb-selp-a3",
+          "retrieved": "2026-09-30",
+          "quote": "Max Tire Width (mm) 81",
+          "where": "Specifications"
+        },
+        "manualUrl": {
+          "value": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2023-zeb-lyrik-pike-service-manual.pdf",
+          "status": "single",
+          "url": "https://www.sram.com/en/service/models/fs-zeb-selp-a3",
+          "retrieved": "2026-09-30",
+          "quote": "2023-zeb-lyrik-pike-service-manual.pdf",
+          "where": "Service page document list (user manual: https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension?models=fs-zeb-selp-a3)"
+        }
+      }
+    },
+    {
+      "id": "rockshox-zeb-select-plus-2027",
+      "name": "RockShox ZEB Select+ (FS-ZEB-SELP-B1, Charger 3.2 RC2, LinearXL)",
+      "type": "fork",
+      "modelYears": [
+        2027
+      ],
+      "catalogId": null,
+      "fields": {
+        "modelCode": {
+          "value": "FS-ZEB-SELP-B1",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-zeb-selp-b1",
+          "retrieved": "2026-09-30",
+          "quote": "Model ID FS-ZEB-SELP-B1",
+          "where": "Model page header"
+        },
+        "modelYearsEvidence": {
+          "value": [
+            2027
+          ],
+          "status": "single",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2027-front-suspension-specifications.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "ZEB FS-ZEB-UFA-B1 FS-ZEB-ULT-B1 FS-ZEB-SELP-B1 FS-ZEB-SEL-B1 Linear XL",
+          "where": "2027 Front Suspension Specifications p.11"
+        },
+        "travelMm": {
+          "value": [
+            150,
+            160,
+            170,
+            180
+          ],
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/fs-zeb-selp-b1",
+          "retrieved": "2026-09-30",
+          "quote": "Travel (mm) 150mm, 160mm, 170mm, 180mm",
+          "where": "Specifications",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/fs-zeb-selp-b1",
+            "retrieved": "2026-09-30",
+            "quote": "Travel (mm) 150mm, 160mm, 170mm, 180mm",
+            "where": "Product page, Specifications"
+          }
+        },
+        "wheelSize": {
+          "value": [
+            "27.5",
+            "29"
+          ],
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-zeb-selp-b1",
+          "retrieved": "2026-09-30",
+          "quote": "Wheel size 27.5\", 29\"",
+          "where": "Specifications"
+        },
+        "stanchionMm": {
+          "value": 38,
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-zeb-selp-b1",
+          "retrieved": "2026-09-30",
+          "quote": "Upper tube type 38mm aluminum",
+          "where": "Specifications"
+        },
+        "damper": {
+          "value": "Charger 3.2 RC2",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-zeb-selp-b1",
+          "retrieved": "2026-09-30",
+          "quote": "Damper Type Charger 3.2 RC2",
+          "where": "Specifications"
+        },
+        "springType": {
+          "value": "air (LinearXL)",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-zeb-selp-b1",
+          "retrieved": "2026-09-30",
+          "quote": "Spring LinearXL",
+          "where": "Specifications"
+        },
+        "offsetMm": {
+          "value": [
+            "38mm (27.5\")",
+            "44mm (27.5\")",
+            "44mm (29\")"
+          ],
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-zeb-selp-b1",
+          "retrieved": "2026-09-30",
+          "quote": "Fork offset 38mm (27.5\"), 44mm (27.5\"), 44mm (29\")",
+          "where": "Specifications"
+        },
+        "lscMax": {
+          "value": 15,
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/learn/fork-deep-dives/compression-knob-logic",
+          "retrieved": "2026-09-30",
+          "quote": "HSC has five clicks of adjustment, and LSC has 15 clicks of adjustment. The numbers and accompanying lines indicate where in the adjustment range your settings are",
+          "where": "Compression Knob Logic, tab 'CHARGER 3.2' ('-2 HSC and -7 LSC indicates the least amount of damper force' / '+2 HSC and +7 LSC indicates the most')",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/learn/fork-deep-dives/compression-knob-logic",
+            "retrieved": "2026-09-30",
+            "quote": "HSC has five clicks of adjustment, and LSC has 15 clicks of adjustment.",
+            "where": "Compression Knob Logic, tab 'CHARGER 3.2'"
+          },
+          "note": "RockShox counts positions (\"15 clicks\" = -7..+7), see https://github.com/sunra-stardust/suspension-setup/issues/13"
+        },
+        "hscMax": {
+          "value": 5,
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/learn/fork-deep-dives/compression-knob-logic",
+          "retrieved": "2026-09-30",
+          "quote": "HSC has five clicks of adjustment, and LSC has 15 clicks of adjustment.",
+          "where": "Compression Knob Logic, tab 'CHARGER 3.2'",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/learn/fork-deep-dives/compression-knob-logic",
+            "retrieved": "2026-09-30",
+            "quote": "HSC has five clicks of adjustment, and LSC has 15 clicks of adjustment.",
+            "where": "Compression Knob Logic, tab 'CHARGER 3.2'"
+          },
+          "note": "RockShox counts positions (\"15 clicks\" = -7..+7), see https://github.com/sunra-stardust/suspension-setup/issues/13"
+        },
+        "lscScale": {
+          "value": "-7..+7",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/learn/fork-deep-dives/compression-knob-logic",
+          "retrieved": "2026-09-30",
+          "quote": "-2 HSC and -7 LSC indicates the least amount of damper force / support (fully open) ... +2 HSC and +7 LSC indicates the most amount of damper force / support (fully closed)",
+          "where": "Compression Knob Logic, Charger 3.2"
+        },
+        "hscScale": {
+          "value": "-2..+2",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/learn/fork-deep-dives/compression-knob-logic",
+          "retrieved": "2026-09-30",
+          "quote": "-2 HSC and -7 LSC indicates the least amount of damper force / support (fully open) ... +2 HSC and +7 LSC indicates the most amount of damper force / support (fully closed)",
+          "where": "Compression Knob Logic, Charger 3.2"
+        },
+        "lscStart": {
+          "value": "0 (middle)",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/learn/fork-deep-dives/compression-knob-logic",
+          "retrieved": "2026-09-30",
+          "quote": "we recommend starting with Low Speed Compression (LSC) and High Speed Compression (HSC) set in the middle at \"0\" for a balanced feel",
+          "where": "Compression Knob Logic, Charger 3.2"
+        },
+        "hscStart": {
+          "value": "0 (middle)",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/learn/fork-deep-dives/compression-knob-logic",
+          "retrieved": "2026-09-30",
+          "quote": "we recommend starting with Low Speed Compression (LSC) and High Speed Compression (HSC) set in the middle at \"0\" for a balanced feel",
+          "where": "Compression Knob Logic, Charger 3.2"
+        },
+        "reboundMode": {
+          "value": null,
+          "status": "missing",
+          "note": "Product page names 'Rebound/Compression tunes' and HSC/LSC controls but no rebound adjuster breakdown; UM setup block 'Charger 3.2 RC2' only says 'Adjust the rebound damper counterclockwise, to the full OPEN position.' A single rebound knob is implied but not stated as a feature list -> left missing."
+        },
+        "reboundMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Searched: product page (fs-zeb-selp-*), Charger 3 setup guide, Charger 3/3.1 deep dive, Compression Knob Logic, Suspension Fine Tuning, UM - Suspension (docs.sram.com, filtered to this model), 2023 ZEB/Lyrik/Pike service manual (only 'Count the number of clicks while turning the rebound adjuster fully counterclockwise'), 2027 ZEB/Lyrik SM. No total rebound click count stated by RockShox; starting value only via Trailhead app."
+        },
+        "hsrMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No HSR mentioned anywhere for Charger 3.2 RC2 Select+, but no explicit adjuster list proving absence found."
+        },
+        "bottomOut": {
+          "value": "internally adjustable",
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/learn/suspension-fine-tuning",
+          "retrieved": "2026-09-30",
+          "quote": "ZEB and Lyrik Select+ Remove the lower legs to internally adjust bottom-out support in the last portion of travel.",
+          "where": "Suspension Fine Tuning > Adjustable Bottom Out (ABO); product page: 'Bottom Out Internally Adjustable Bottom Out'",
+          "verifiedBy": {
+            "url": "https://docs.sram.com/en-US/publications/1MdgH61bPulKX0ksJ8f3UH/SM%20-%202027+%20ZEB%20and%20Lyrik",
+            "retrieved": "2026-09-30",
+            "quote": "Three settings are available including Firm (most progressive), Medium (standard progression), and Soft (least progressive). To adjust bottom out progression on Select+ fork models, the fork lower leg must be removed.",
+            "where": "2027+ ZEB and Lyrik SM, 'ABO Adjustment - Select+'"
+          },
+          "note": "second pass: internal ABO with 3 settings (Soft/Medium/Firm)"
+        },
+        "maxPressurePsi": {
+          "value": 300,
+          "status": "verified",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2027-front-suspension-specifications.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "ZEB FS-ZEB-UFA-B1 FS-ZEB-ULT-B1 FS-ZEB-SELP-B1 FS-ZEB-SEL-B1 Linear XL ... MAX PSI 300 psi",
+          "where": "2027 Front Suspension Specifications p.11, Air Spring Pressure table",
+          "verifiedBy": {
+            "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2027-front-suspension-specifications.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "MAX PSI ... 300 psi",
+            "where": "2027 Front Suspension Specifications p.11 Air Spring Pressure, row 'ZEB FS-ZEB-UFA-B1 FS-ZEB-ULT-B1 FS-ZEB-SELP-B1 FS-ZEB-SEL-B1 / Linear XL'"
+          }
+        },
+        "pressureTable": {
+          "value": {
+            "unit": "psi",
+            "note": "E-Bikes add 10 psi; values are ranges as printed",
+            "rows": [
+              {
+                "rider": "<120 lbs (<55 kg)",
+                "travelMm": "150",
+                "value": "<106 psi"
+              },
+              {
+                "rider": "120-140 lbs (55-63 kg)",
+                "travelMm": "150",
+                "value": "106-125 psi"
+              },
+              {
+                "rider": "140-160 lbs (63-72 kg)",
+                "travelMm": "150",
+                "value": "125-142 psi"
+              },
+              {
+                "rider": "160-180 lbs (72-81 kg)",
+                "travelMm": "150",
+                "value": "142-157 psi"
+              },
+              {
+                "rider": "180-200 lbs (81-90 kg)",
+                "travelMm": "150",
+                "value": "157-170 psi"
+              },
+              {
+                "rider": "200-220 lbs (90-99 kg)",
+                "travelMm": "150",
+                "value": "170-181 psi"
+              },
+              {
+                "rider": ">220 lbs (>99 kg)",
+                "travelMm": "150",
+                "value": "181+ psi"
+              },
+              {
+                "rider": "<120 lbs (<55 kg)",
+                "travelMm": "160",
+                "value": "<96 psi"
+              },
+              {
+                "rider": "120-140 lbs (55-63 kg)",
+                "travelMm": "160",
+                "value": "96-115 psi"
+              },
+              {
+                "rider": "140-160 lbs (63-72 kg)",
+                "travelMm": "160",
+                "value": "115-132 psi"
+              },
+              {
+                "rider": "160-180 lbs (72-81 kg)",
+                "travelMm": "160",
+                "value": "132-147 psi"
+              },
+              {
+                "rider": "180-200 lbs (81-90 kg)",
+                "travelMm": "160",
+                "value": "147-160 psi"
+              },
+              {
+                "rider": "200-220 lbs (90-99 kg)",
+                "travelMm": "160",
+                "value": "160-171 psi"
+              },
+              {
+                "rider": ">220 lbs (>99 kg)",
+                "travelMm": "160",
+                "value": "171+ psi"
+              },
+              {
+                "rider": "<120 lbs (<55 kg)",
+                "travelMm": "170",
+                "value": "<86 psi"
+              },
+              {
+                "rider": "120-140 lbs (55-63 kg)",
+                "travelMm": "170",
+                "value": "86-105 psi"
+              },
+              {
+                "rider": "140-160 lbs (63-72 kg)",
+                "travelMm": "170",
+                "value": "105-122 psi"
+              },
+              {
+                "rider": "160-180 lbs (72-81 kg)",
+                "travelMm": "170",
+                "value": "122-137 psi"
+              },
+              {
+                "rider": "180-200 lbs (81-90 kg)",
+                "travelMm": "170",
+                "value": "137-150 psi"
+              },
+              {
+                "rider": "200-220 lbs (90-99 kg)",
+                "travelMm": "170",
+                "value": "150-161 psi"
+              },
+              {
+                "rider": ">220 lbs (>99 kg)",
+                "travelMm": "170",
+                "value": "161+ psi"
+              },
+              {
+                "rider": "<120 lbs (<55 kg)",
+                "travelMm": "180",
+                "value": "<76 psi"
+              },
+              {
+                "rider": "120-140 lbs (55-63 kg)",
+                "travelMm": "180",
+                "value": "76-95 psi"
+              },
+              {
+                "rider": "140-160 lbs (63-72 kg)",
+                "travelMm": "180",
+                "value": "95-112 psi"
+              },
+              {
+                "rider": "160-180 lbs (72-81 kg)",
+                "travelMm": "180",
+                "value": "112-127 psi"
+              },
+              {
+                "rider": "180-200 lbs (81-90 kg)",
+                "travelMm": "180",
+                "value": "127-140 psi"
+              },
+              {
+                "rider": "200-220 lbs (90-99 kg)",
+                "travelMm": "180",
+                "value": "140-151 psi"
+              },
+              {
+                "rider": ">220 lbs (>99 kg)",
+                "travelMm": "180",
+                "value": "151+ psi"
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2027-front-suspension-specifications.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "150 | <106 psi | 106-125 psi | 125-142 psi | 142-157 psi | 157-170 psi | 170-181 psi | 181+ psi | 300 psi | 160 | <96 psi | 96-115 psi | 115-132 psi | 132-147 psi | 147-160 psi | 160-171 psi | 171+ psi | 170 | <86 psi | 86-105 psi | 105-122 psi | 122-137 psi | 137-150 psi | 150-161 psi | 161+ psi | 180 | <76 psi | 76-95 psi | 95-112 psi | 112-127 psi | 127-140 psi | 140-151 psi | 151+ psi",
+          "where": "2027 Front Suspension Specifications p.11 (E-Bikes add 10 psi)"
+        },
+        "spacersStock": {
+          "value": {
+            "150": 1,
+            "160": 1,
+            "170": 0,
+            "180": 0
+          },
+          "status": "single",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2027-front-suspension-specifications.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "BOTTOMLESS TOKENS INSTALLED ... 150-160: 1 / 170-180: 0 (same for 27.5\" B and 29\" B)",
+          "where": "2027 Front Suspension Specifications p.24 (read from table cells)"
+        },
+        "spacersMax": {
+          "value": {
+            "150": 5,
+            "160": 4,
+            "170": 4,
+            "180": 3
+          },
+          "status": "single",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2027-front-suspension-specifications.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "BOTTOMLESS TOKENS MAX ... 150: 5 / 160-170: 4 / 180: 3",
+          "where": "2027 Front Suspension Specifications p.24; product page agrees: 'Volume reducer 0/3 Tokens, 0/4 Tokens, 1/4 Tokens, 1/5 Tokens'"
+        },
+        "sagPercent": {
+          "value": null,
+          "status": "missing",
+          "note": "UM - Suspension: 'Setting Linear XL air spring pressure does not require the 'Set Sag' procedure.' No fork sag % given."
+        },
+        "maxTireWidthMm": {
+          "value": 74.5,
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-zeb-selp-b1",
+          "retrieved": "2026-09-30",
+          "quote": "Max Tire Width (mm) 74.5",
+          "where": "Specifications"
+        },
+        "manualUrl": {
+          "value": "https://docs.sram.com/en-US/publications/1MdgH61bPulKX0ksJ8f3UH/SM%20-%202027%2B%20ZEB%20and%20Lyrik?models=fs-zeb-selp-b1",
+          "status": "single",
+          "url": "https://www.sram.com/en/service/models/fs-zeb-selp-b1",
+          "retrieved": "2026-09-30",
+          "quote": "SM - 2027+ ZEB and Lyrik",
+          "where": "Service page document list"
+        }
+      }
+    },
+    {
+      "id": "rockshox-vivid-select-plus-2026",
+      "name": "RockShox Vivid Select+ RCT (Vivid Air, RS-VIVD-SELP-C1)",
+      "type": "shock",
+      "modelYears": [
+        2024,
+        2025,
+        2026
+      ],
+      "catalogId": null,
+      "fields": {
+        "modelCode": {
+          "value": "RS-VIVD-SELP-C1",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-selp-c1",
+          "retrieved": "2026-09-30",
+          "quote": "Model ID RS-VIVD-SELP-C1",
+          "where": "Model page header"
+        },
+        "modelYearsEvidence": {
+          "value": "2024+",
+          "status": "single",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/rear-suspension/2024-vivid-service-manual.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "2024+ (C1) Vivid Select+ RCT (RS-VIVD-SELP-C1)",
+          "where": "2024+ Vivid Service Manual p.17 exploded view title (2027+ SM covers D1)"
+        },
+        "damper": {
+          "value": "RCT (TouchDown), Adj. Hydraulic Bottom Out",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-selp-c1",
+          "retrieved": "2026-09-30",
+          "quote": "Damper Type RCT Adj. Hydraulic Bottom Out",
+          "where": "Specifications"
+        },
+        "sizesAvailable": {
+          "value": [
+            "165x37.5(TR)",
+            "165x40(TR)",
+            "165x42.5(TR)",
+            "165x45(TR)",
+            "185x47.5(TR)",
+            "185x50(TR)",
+            "185x52.5(TR)",
+            "185x55(TR)",
+            "190x37.5",
+            "190x40",
+            "190x42.5",
+            "190x45",
+            "205x57.5(TR)",
+            "205x60(TR)",
+            "205x62.5(TR)",
+            "205x65(TR)",
+            "210x47.5",
+            "210x50",
+            "210x52.5",
+            "210x55",
+            "225x67.5(TR)",
+            "225x70(TR)",
+            "225x72.5(TR)",
+            "225x75(TR)",
+            "230x57.5",
+            "230x60",
+            "230x62.5",
+            "230x65",
+            "250x67.5",
+            "250x70",
+            "250x72.5",
+            "250x75"
+          ],
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-selp-c1",
+          "retrieved": "2026-09-30",
+          "quote": "Eye to eye / Stroke 165x37.5(TR), 165x40(TR), 165x42.5(TR), 165x45(TR), 185x47.5(TR), 185x50(TR), 185x52.5(TR), 185x55(TR), 190x37.5, 190x40, 190x42.5, 190x45, 205x57.5(TR), 205x60(TR), 205x62.5(TR), 205x65(TR), 210x47.5, 210x50, 210x52.5, 210x55, 225x67.5(TR), 225x70(TR), 225x72.5(TR), 225x75(TR), 230x57.5, 230x60, 230x62.5, 230x65, 250x67.5, 250x70, 250x72.5, 250x75",
+          "where": "Specifications ((TR) = trunnion)"
+        },
+        "mount": {
+          "value": [
+            "Standard",
+            "Trunnion",
+            "Bearing",
+            "No Bushing"
+          ],
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-selp-c1",
+          "retrieved": "2026-09-30",
+          "quote": "Body Eyelet Bearing, No Bushing, Standard, Standard - 90 Deg Rotation, Trunnion",
+          "where": "Specifications"
+        },
+        "springType": {
+          "value": "air",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-selp-c1",
+          "retrieved": "2026-09-30",
+          "quote": "With an air spring that acts like a coil",
+          "where": "Description"
+        },
+        "adjusters": {
+          "value": [
+            "Rebound",
+            "Threshold",
+            "Low Speed Compression",
+            "Hydraulic Bottom Out"
+          ],
+          "status": "single",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/rear-suspension/2024-vivid-service-manual.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Vivid Base R (Rebound only), Vivid Select RT (Rebound and Threshold), Vivid Select+ RTC (Rebound, Threshold, Low Speed Compression), and Vivid Ultimate DH RC2 (Rebound and Low Speed Compression)",
+          "where": "2024 Vivid SM p.82; exploded view p.17 lists '1. Adjuster - Low Speed Compression (LSC) 2. Lever - Threshold (Pedal) 3. Adjuster - Hydraulic Bottom Out (HBO) ... 31. Adjuster - Rebound'"
+        },
+        "lscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No total LSC click count stated. Searched: model page, service page docs, 2024 Vivid SM (only 'count the number of detent clicks'), UM - Suspension (LSC block: 'Refer to the decals on the shock for lever position and function.'), Vivid Air setup guide, Fine Tuning guide."
+        },
+        "hscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "CONFLICT: 2024 Vivid SM p.45 lists HSC adjustment only for 'Ultimate DH RC2, Ultimate RC2T: Rotate the high speed compression (HSC) adjuster ...', and Select+ exploded view (p.17) has no HSC adjuster; Vivid Air setup guide: 'High Speed Compression (HSC) and Low Speed Compression (LSC) adjustments for Vivid Ultimate'. But the Select+ C1 model page says 'a singular Compression adjustment that affects High and Low Speed Compression' AND 'The Rebound Knob pulls out to reveal a 3mm hex wrench that can adjust both High Speed Compression and Hydraulic Bottom Out.' Most likely no external HSC on Select+, but not recorded as null because the model page contradicts."
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/rear-suspension/2024-vivid-service-manual.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Vivid Select+ RTC (Rebound, Threshold, Low Speed Compression)",
+          "where": "2024 Vivid SM p.82",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/learn/vivid-air-setup",
+            "retrieved": "2026-09-30",
+            "quote": "Set your Rebound to the number suggested in Trailhead (remember, the number is clicks from closed).",
+            "where": "Vivid Air Setup, step 5"
+          }
+        },
+        "reboundMax": {
+          "value": 20,
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-selp-c1",
+          "retrieved": "2026-09-30",
+          "quote": "20 clicks of Rebound adjustment offer a wide range of tunability to accommodate all riding styles.",
+          "where": "Features",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/rs-vivd-selp-c1",
+            "retrieved": "2026-09-30",
+            "quote": "20 clicks of Rebound adjustment offer a wide range of tunability to accommodate all riding styles.",
+            "where": "Product page, Features"
+          }
+        },
+        "hsrMax": {
+          "value": null,
+          "status": "single",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/rear-suspension/2024-vivid-service-manual.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Vivid Select+ RTC (Rebound, Threshold, Low Speed Compression)",
+          "where": "2024 Vivid SM p.82 - adjuster list, no HSR"
+        },
+        "hasClimbLever": {
+          "value": true,
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-selp-c1",
+          "retrieved": "2026-09-30",
+          "quote": "NEW TouchDown RCT damper features Rebound adjustment, a singular Compression adjustment that affects High and Low Speed Compression, and an easy-to-adjust Threshold Lever for added pedaling efficiency.",
+          "where": "Features",
+          "verifiedBy": {
+            "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/rear-suspension/2024-vivid-service-manual.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "2.\tLever - Threshold (Pedal)",
+            "where": "2024+ Vivid SM p.17, exploded view 2024+ (C1) Vivid Select+ RCT (RS-VIVD-SELP-C1)"
+          }
+        },
+        "hboMax": {
+          "value": 5,
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-selp-c1",
+          "retrieved": "2026-09-30",
+          "quote": "Adjustable Hydraulic Bottom Out has five compression settings at your fingertips to customize the amount of bottom-out resistance in the last 20% of travel.",
+          "where": "Features (five settings)"
+        },
+        "maxPressurePsi": {
+          "value": {
+            "165, 190 x 37.5-45": "360 (0-4 tokens)",
+            "185, 210 x 47.5-55": "360 (0-4 tokens) / 300 (5-6 tokens)",
+            "205, 230 x 57.5-65": "360 (0-4 tokens) / 300 (5-6 tokens)",
+            "225, 250 x 67.5-75": "300 (0-4 tokens)"
+          },
+          "status": "verified",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/rear-suspension/2024-vivid-service-manual.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "165, 190 37.5 - 45 360 0 - 4 | 185, 210 47.5 - 55 360 0 - 4 | 300 5 - 6 | 205, 230 57.5 - 65 360 0 - 4 | 300 5 - 6 | 225, 250 67.5 - 75 300 0 - 4",
+          "where": "2024 Vivid SM p.50, Bottomless Tokens table (Shock Length / Stroke / MAX psi / Maximum Bottomless Tokens)",
+          "verifiedBy": {
+            "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/rear-suspension/2024-vivid-service-manual.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "Shock Length (mm) / Shock Stroke (mm) / MAX psi / Maximum Bottomless Tokens: 165, 190 / 37.5 - 45 / 360 / 0 - 4; 185, 210 / 47.5 - 55 / 360 / 0 - 4; 300 / 5 - 6; 205, 230 / 57.5 - 65 / 360 / 0 - 4; 300 / 5 - 6; 225, 250 / 67.5 - 75 / 300 / 0 - 4",
+            "where": "2024+ Vivid SM p.50 Bottomless Tokens and Travel Reducers"
+          }
+        },
+        "spacersStock": {
+          "value": "0-4 depending on spec",
+          "status": "single",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/rear-suspension/2024-vivid-service-manual.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Depending on the specification, a Vivid C1 rear shock may include 0 - 4 Bottomless Tokens installed.",
+          "where": "2024 Vivid SM p.50"
+        },
+        "spacersMax": {
+          "value": {
+            "165, 190": 4,
+            "185, 210": 6,
+            "205, 230": 6,
+            "225, 250": 4
+          },
+          "status": "single",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/rear-suspension/2024-vivid-service-manual.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Maximum Bottomless Tokens 165, 190: 0 - 4; 185, 210: 0 - 4 (360 psi) / 5 - 6 (300 psi); 205, 230: 0 - 4 / 5 - 6; 225, 250: 0 - 4",
+          "where": "2024 Vivid SM p.50 (6 only with max 300 psi)"
+        },
+        "sagPercent": {
+          "value": 30,
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/learn/vivid-air-setup",
+          "retrieved": "2026-09-30",
+          "quote": "repeat steps 4 and 5 until you reach the desired pressure and sag setting (we recommend 30% sag)",
+          "where": "Vivid Setup Procedure step 5",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/learn/vivid-air-setup",
+            "retrieved": "2026-09-30",
+            "quote": "repeat steps 4 and 5 until you reach the desired pressure and sag setting (we recommend 30% sag).",
+            "where": "Vivid Air Setup, step 5"
+          }
+        },
+        "manualUrl": {
+          "value": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/rear-suspension/2024-vivid-service-manual.pdf",
+          "status": "single",
+          "url": "https://www.sram.com/en/service/models/rs-vivd-selp-c1",
+          "retrieved": "2026-09-30",
+          "quote": "2024-vivid-service-manual.pdf",
+          "where": "Service page document list"
+        }
+      }
+    },
+    {
+      "id": "rockshox-vivid-select-plus-2027",
+      "name": "RockShox Vivid Select+ RCT (Vivid Air, RS-VIVD-SELP-D1)",
+      "type": "shock",
+      "modelYears": [
+        2027
+      ],
+      "catalogId": null,
+      "fields": {
+        "modelCode": {
+          "value": "RS-VIVD-SELP-D1",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-selp-d1",
+          "retrieved": "2026-09-30",
+          "quote": "Model ID RS-VIVD-SELP-D1",
+          "where": "Model page header"
+        },
+        "modelYearsEvidence": {
+          "value": "2027+",
+          "status": "single",
+          "url": "https://docs.sram.com/en-US/publications/1pIDLHcYFPJtGbLJxgJGuo/SM%20-%202027%2B%20Vivid?models=rs-vivd-selp-d1",
+          "retrieved": "2026-09-30",
+          "quote": "2027+ (D1) Vivid Select Plus",
+          "where": "SM - 2027+ Vivid, Exploded View"
+        },
+        "damper": {
+          "value": "RCT, Adj. Hydraulic Bottom Out",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-selp-d1",
+          "retrieved": "2026-09-30",
+          "quote": "Damper Type RCT Adj. Hydraulic Bottom Out",
+          "where": "Specifications"
+        },
+        "sizesAvailable": {
+          "value": [
+            "185x47.5(TR)",
+            "185x50(TR)",
+            "185x52.5(TR)",
+            "185x55(TR)",
+            "205x57.5(TR)",
+            "205x60(TR)",
+            "205x62.5(TR)",
+            "205x65(TR)",
+            "210x47.5",
+            "210x50",
+            "210x52.5",
+            "210x55",
+            "225x67.5(TR)",
+            "225x70(TR)",
+            "225x72.5(TR)",
+            "225x75(TR)",
+            "230x57.5",
+            "230x60",
+            "230x62.5",
+            "230x65",
+            "250x67.5",
+            "250x70",
+            "250x72.5",
+            "250x75"
+          ],
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-selp-d1",
+          "retrieved": "2026-09-30",
+          "quote": "Eye to eye / Stroke 185x47.5(TR), 185x50(TR), 185x52.5(TR), 185x55(TR), 205x57.5(TR), 205x60(TR), 205x62.5(TR), 205x65(TR), 210x47.5, 210x50, 210x52.5, 210x55, 225x67.5(TR), 225x70(TR), 225x72.5(TR), 225x75(TR), 230x57.5, 230x60, 230x62.5, 230x65, 250x67.5, 250x70, 250x72.5, 250x75",
+          "where": "Specifications ((TR) = trunnion)"
+        },
+        "mount": {
+          "value": [
+            "Standard",
+            "Trunnion",
+            "No Bushing"
+          ],
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-selp-d1",
+          "retrieved": "2026-09-30",
+          "quote": "Body Eyelet No Bushing, Standard, Trunnion",
+          "where": "Specifications"
+        },
+        "springType": {
+          "value": "air (LinearXL)",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-selp-d1",
+          "retrieved": "2026-09-30",
+          "quote": "The LinearXL air spring delivers a coil-like feel",
+          "where": "Description"
+        },
+        "lscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No total LSC click count stated. Searched: model page, service page docs, 2024 Vivid SM (only 'count the number of detent clicks'), UM - Suspension (LSC block: 'Refer to the decals on the shock for lever position and function.'), Vivid Air setup guide, Fine Tuning guide. D1 page: 'NEW Numbered Compression adjuster for intuitive adjustments—start at \"0\"' but no count."
+        },
+        "lscStart": {
+          "value": "0",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-selp-d1",
+          "retrieved": "2026-09-30",
+          "quote": "NEW Numbered Compression adjuster for intuitive adjustments—start at \"0\" and easily add or decrease damping",
+          "where": "Features"
+        },
+        "hscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "CONFLICT: SM 2027+ Vivid 'Set Damper Adjusters': 'Ultimate DH RC2, Ultimate RC2T: Rotate the high speed compression (HSC) adjuster counterclockwise...' (Select+ not listed), but the SM exploded view '2027+ (D1) Vivid Select Plus' lists '6. Adjuster - High Speed Compression (HSC)' and the model page says 'Removable Rebound knob doubles as HSC and ABO adjuster' and 'High Speed Tune H0, H1'. Existence/count of external HSC unresolved."
+        },
+        "reboundMode": {
+          "value": null,
+          "status": "missing",
+          "note": "Only one rebound adjuster named ('29. Adjuster - Rebound' in D1 Select Plus exploded view); no explicit statement excluding HSR, left for verifier."
+        },
+        "reboundMax": {
+          "value": 20,
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-selp-d1",
+          "retrieved": "2026-09-30",
+          "quote": "20 clicks of Rebound adjustment providing uniform rebound curves paired with a broad adjustment range provide a consistent ride feel for a wide spectrum of rider weights",
+          "where": "Features",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/rs-vivd-selp-d1",
+            "retrieved": "2026-09-30",
+            "quote": "20 clicks of Rebound adjustment providing uniform rebound curves paired with a broad adjustment range provide a consistent ride feel for a wide spectrum of rider weights",
+            "where": "Product page, Features"
+          }
+        },
+        "hsrMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No HSR named; no explicit adjuster list excluding it for D1."
+        },
+        "hasClimbLever": {
+          "value": true,
+          "status": "verified",
+          "url": "https://docs.sram.com/en-US/publications/1pIDLHcYFPJtGbLJxgJGuo/SM%20-%202027%2B%20Vivid?models=rs-vivd-selp-d1",
+          "retrieved": "2026-09-30",
+          "quote": "Select RT, Select+ RCT, Ultimate RC2T: Rotate the Threshold (pedal) lever to the open position.",
+          "where": "SM 2027+ Vivid > Air Spring Service and Tuning > Set Damper Adjusters (model page spec also lists 'Lockout force X05, X25, X45'). Note: D1 Select Plus exploded view part list does not show a threshold lever item.",
+          "verifiedBy": {
+            "url": "https://docs.sram.com/en-US/publications/1pIDLHcYFPJtGbLJxgJGuo/SM%20-%202027+%20Vivid",
+            "retrieved": "2026-09-30",
+            "quote": "Select RT, Select+ RCT, Ultimate RC2T: Rotate the Threshold (pedal) lever to the open position.",
+            "where": "2027+ Vivid SM 'Set Damper Adjusters'"
+          }
+        },
+        "aboMax": {
+          "value": 5,
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-selp-d1",
+          "retrieved": "2026-09-30",
+          "quote": "Adjustable Bottom Out (ABO) offers a convenient dial with five different compression settings to customize the cushioning you experience in the last 20% of travel",
+          "where": "Features (five settings)"
+        },
+        "maxPressurePsi": {
+          "value": {
+            "185, 210 x 47.5-55": "360 (0-4 tokens) / 300 (5-6 tokens)",
+            "205, 230 x 57.5-65": "360 (0-4 tokens) / 300 (5-6 tokens)",
+            "225, 250 x 67.5-75": "330 (0-2 tokens) / 300 (3-4 tokens)"
+          },
+          "status": "single",
+          "url": "https://docs.sram.com/en-US/publications/1pIDLHcYFPJtGbLJxgJGuo/SM%20-%202027%2B%20Vivid?models=rs-vivd-selp-d1",
+          "retrieved": "2026-09-30",
+          "quote": "Shock Length Shock Stroke (mm) MAX psi Maximum Bottomless Tokens 185, 210 47.5-55 360 0-4 185, 210 47.5-55 300 5-6 205, 230 57.5-65 360 0-4 205, 230 57.5-65 300 5-6 225, 250 67.5-75 330 0-2 225, 250 67.5-75 300 3-4",
+          "where": "SM 2027+ Vivid > Bottomless Tokens and Travel Reducers"
+        },
+        "spacersStock": {
+          "value": "0-4 depending on spec",
+          "status": "single",
+          "url": "https://docs.sram.com/en-US/publications/1pIDLHcYFPJtGbLJxgJGuo/SM%20-%202027%2B%20Vivid?models=rs-vivd-selp-d1",
+          "retrieved": "2026-09-30",
+          "quote": "Depending on the specification, a Vivid D1 rear shock may include 0 - 4 Bottomless Tokens installed.",
+          "where": "SM 2027+ Vivid > Bottomless Tokens and Travel Reducers"
+        },
+        "spacersMax": {
+          "value": {
+            "185, 210": 6,
+            "205, 230": 6,
+            "225, 250": 4
+          },
+          "status": "single",
+          "url": "https://docs.sram.com/en-US/publications/1pIDLHcYFPJtGbLJxgJGuo/SM%20-%202027%2B%20Vivid?models=rs-vivd-selp-d1",
+          "retrieved": "2026-09-30",
+          "quote": "185, 210 47.5-55 300 5-6 ... 205, 230 57.5-65 300 5-6 ... 225, 250 67.5-75 300 3-4",
+          "where": "SM 2027+ Vivid (max count only at reduced max psi)"
+        },
+        "sagPercent": {
+          "value": null,
+          "status": "missing",
+          "note": "Vivid Air setup guide (30% sag) was written for the C1 generation air spring; UM 'Correct sag percentage for DebonAir shocks is ≈30%' does not name LinearXL. No sag % found that explicitly covers D1/LinearXL."
+        },
+        "manualUrl": {
+          "value": "https://docs.sram.com/en-US/publications/1pIDLHcYFPJtGbLJxgJGuo/SM%20-%202027%2B%20Vivid?models=rs-vivd-selp-d1",
+          "status": "single",
+          "url": "https://www.sram.com/en/service/models/rs-vivd-selp-d1",
+          "retrieved": "2026-09-30",
+          "quote": "SM - 2027+ Vivid",
+          "where": "Service page document list"
+        }
+      }
+    }
+  ]
+}

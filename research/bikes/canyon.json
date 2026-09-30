@@ -1,0 +1,463 @@
+{
+  "maker": "canyon",
+  "models": [
+    {
+      "id": "canyon-spectral-cf-cf-8-2027",
+      "name": "Canyon Spectral CF 8",
+      "modelYears": [
+        2027
+      ],
+      "fields": {
+        "modelYearEvidence": {
+          "value": 2027,
+          "status": "single",
+          "url": "https://www.canyon.com/en-us/mountain-bikes/trail-bikes/spectral/cf/spectral-cf-8/4381.html",
+          "retrieved": "2026-09-30",
+          "quote": "{\"@type\":\"PropertyValue\",\"name\":\"Year\",\"value\":2027}",
+          "where": "product page embedded schema.org Product data (additionalProperty); image asset name '2027_FULL_spectral_cf-8_4381_M179_P08_P5_29'"
+        },
+        "platformCode": {
+          "value": "M179",
+          "status": "single",
+          "url": "https://www.canyon.com/on/demandware.static/-/Library-Sites-canyon-shared/default/dw4dc7fc71/documents/customer-service/mountain-bikes/canyon-spectral-cf-quick-start-guide-2024.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "QUICK START GUIDE SPECTRAL CF M179",
+          "where": "QSG cover (page 1); product page image asset name contains 'spectral_cf-8_4381_M179'"
+        },
+        "rearTravelMm": {
+          "value": 140,
+          "status": "verified",
+          "url": "https://www.canyon.com/en-us/mountain-bikes/trail-bikes/spectral/cf/spectral-cf-8/4381.html",
+          "retrieved": "2026-09-30",
+          "quote": "Our latest Spectral CF carbon frame is engineered around a 150mm fork and 140mm rear travel for that perfect all rounder setup.",
+          "where": "Key features > Next generation carbon chassis",
+          "verifiedBy": {
+            "url": "https://www.canyon.com/en-us/mountain-bikes/trail-bikes/spectral/cf/spectral-cf-8/4381.html",
+            "retrieved": "2026-09-30",
+            "quote": "Our latest Spectral CF carbon frame is engineered around a 150mm fork and 140mm rear travel for that perfect all rounder setup.",
+            "where": "Product page, Key features text"
+          }
+        },
+        "forkTravelMm": {
+          "value": 150,
+          "status": "verified",
+          "url": "https://www.canyon.com/en-us/productpdf/geometry/?pid=4381&isComplexCustomization=false",
+          "retrieved": "2026-09-30",
+          "quote": "Front Fork Travel in mm 150 150 150 150 150",
+          "where": "Geometry PDF page, Component geometry table (XS-XL); also product page 'Front Fork Travel: 150 mm'",
+          "verifiedBy": {
+            "url": "https://www.canyon.com/en-us/mountain-bikes/trail-bikes/spectral/cf/spectral-cf-8/4381.html",
+            "retrieved": "2026-09-30",
+            "quote": "Suspension Fork | FOX 36 Performance Elite | ... | Travel | 150 mm",
+            "where": "Product page, All components (based on size M); also 'Front Fork Travel: 150 mm' in header and geometry table 'Front Fork Travel in mm 150 150 150 150 150'"
+          }
+        },
+        "wheelSize": {
+          "value": {
+            "Mullet": "29\"/27.5\"",
+            "29\"": "29\""
+          },
+          "status": "verified",
+          "url": "https://www.canyon.com/en-us/productpdf/geometry/?pid=4381&isComplexCustomization=false",
+          "retrieved": "2026-09-30",
+          "quote": "Wheel Size | Mullet 29\"/27.5\" ... Wheel Size | 29\" 29\" 29\" 29\" 29\"",
+          "where": "Geometry PDF page, Component geometry table (29\" row has only S-XL values)",
+          "verifiedBy": {
+            "url": "https://www.canyon.com/en-us/mountain-bikes/trail-bikes/spectral/cf/spectral-cf-8/4381.html",
+            "retrieved": "2026-09-30",
+            "quote": "Pick your favourite wheelsize and know you can swap your wheels out to run full 29er or mullet (mullet only on XS). | Geometry table: 'Wheel Size | Mullet 29\"/27.5\" (XS-XL)'; 'Wheel Size | 29\" 29\" (S-XL)'",
+            "where": "Product page 'Flip chip to flip wheelsize' + geometry table; variants in JSON-LD: 'Spectral CF 8 | XS | Mullet', 'S|Mullet', 'S|29\"', ... 'XL|29\"'"
+          }
+        },
+        "wheelSizeFlipChip": {
+          "value": "chainstay flip chip: 29er or mullet (mullet only on XS)",
+          "status": "single",
+          "url": "https://www.canyon.com/en-us/mountain-bikes/trail-bikes/spectral/cf/spectral-cf-8/4381.html",
+          "retrieved": "2026-09-30",
+          "quote": "The chainstay flip chip lets you easily swap wheelsizes whenever you want so no more being locked into one wheelsize.",
+          "where": "Key features > Flip chip to flip wheelsize: 'Pick your favourite wheelsize and know you can swap your wheels out to run full 29er or mullet (mullet only on XS).'"
+        },
+        "sizes": {
+          "value": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "status": "verified",
+          "url": "https://www.canyon.com/en-us/mountain-bikes/trail-bikes/spectral/cf/spectral-cf-8/4381.html",
+          "retrieved": "2026-09-30",
+          "quote": "Frame size XS S M L XL",
+          "where": "Geometry & dimensions > Detailed geometry table",
+          "verifiedBy": {
+            "url": "https://www.canyon.com/en-us/mountain-bikes/trail-bikes/spectral/cf/spectral-cf-8/4381.html",
+            "retrieved": "2026-09-30",
+            "quote": "Select frame size ... XS S M L XL",
+            "where": "Product page size selector and geometry table header"
+          }
+        },
+        "shockEyeToEyeMm": {
+          "value": 210,
+          "status": "verified",
+          "url": "https://www.canyon.com/en-us/productpdf/geometry/?pid=4381&isComplexCustomization=false",
+          "retrieved": "2026-09-30",
+          "quote": "Fitting Length in mm 210X55 210X55 210X55 210X55 210X55",
+          "where": "Geometry PDF page, Component geometry table, row 'Fitting Length in mm' (label does not say 'shock'; also in product-page schema data as 'Fitting Length' '210X55')",
+          "verifiedBy": {
+            "url": "https://www.canyon.com/en-us/productpdf/geometry/?pid=4381",
+            "retrieved": "2026-09-30",
+            "quote": "Fitting Length in mm | 210X55 | 210X55 | 210X55 | 210X55 | 210X55",
+            "where": "Canyon geometry table (productpdf/geometry pid=4381), row 'Fitting Length in mm', XS-XL; identical in product-page JSON-LD per variant ('Fitting Length','value':'210X55')"
+          }
+        },
+        "shockStrokeMm": {
+          "value": 55,
+          "status": "verified",
+          "url": "https://www.canyon.com/en-us/productpdf/geometry/?pid=4381&isComplexCustomization=false",
+          "retrieved": "2026-09-30",
+          "quote": "Fitting Length in mm 210X55 210X55 210X55 210X55 210X55",
+          "where": "same row as shockEyeToEyeMm",
+          "verifiedBy": {
+            "url": "https://www.canyon.com/en-us/productpdf/geometry/?pid=4381",
+            "retrieved": "2026-09-30",
+            "quote": "Fitting Length in mm | 210X55 | 210X55 | 210X55 | 210X55 | 210X55",
+            "where": "Same row as eye-to-eye"
+          }
+        },
+        "shockMount": {
+          "value": null,
+          "status": "missing",
+          "note": "Not stated on product page, geometry PDF page, support page or M179 quick start guide (text + page 23 rendered)."
+        },
+        "stockForkBySpec": {
+          "value": {
+            "CF 8": "FOX 36 Performance Elite"
+          },
+          "status": "verified",
+          "url": "https://www.canyon.com/en-us/mountain-bikes/trail-bikes/spectral/cf/spectral-cf-8/4381.html",
+          "retrieved": "2026-09-30",
+          "quote": "Suspension Fork FOX 36 Performance Elite ... Stanchion Diameter 36 mm Travel 150 mm Offset 44 mm Volume Spacer Oe 2/7",
+          "where": "Components > All components > Suspension Fork (based on size M)",
+          "verifiedBy": {
+            "url": "https://www.canyon.com/en-us/mountain-bikes/trail-bikes/spectral/cf/spectral-cf-8/4381.html",
+            "retrieved": "2026-09-30",
+            "quote": "Suspension Fork | FOX 36 Performance Elite | Axle dimension 15x110 mm | Stanchion Diameter 36 mm | Travel 150 mm | Offset 44 mm | Volume Spacer Oe 2/7",
+            "where": "Product page, All components"
+          }
+        },
+        "stockShockBySpec": {
+          "value": {
+            "CF 8": "FOX Float X Performance Elite"
+          },
+          "status": "verified",
+          "url": "https://www.canyon.com/en-us/mountain-bikes/trail-bikes/spectral/cf/spectral-cf-8/4381.html",
+          "retrieved": "2026-09-30",
+          "quote": "Rear Shock FOX Float X Performance Elite Weight 500 g",
+          "where": "Components > All components > Rear Shock (based on size M); no size printed in this row (see shockEyeToEyeMm)",
+          "verifiedBy": {
+            "url": "https://www.canyon.com/en-us/mountain-bikes/trail-bikes/spectral/cf/spectral-cf-8/4381.html",
+            "retrieved": "2026-09-30",
+            "quote": "Rear Shock | FOX Float X Performance Elite",
+            "where": "Product page, All components; size from geometry table 'Fitting Length in mm 210X55'"
+          }
+        },
+        "forkVolumeSpacerStock": {
+          "value": "2/7",
+          "status": "single",
+          "url": "https://www.canyon.com/en-us/mountain-bikes/trail-bikes/spectral/cf/spectral-cf-8/4381.html",
+          "retrieved": "2026-09-30",
+          "quote": "Volume Spacer Oe 2/7",
+          "where": "Components > Suspension Fork"
+        },
+        "springRateBySize": {
+          "value": null,
+          "status": "missing",
+          "note": "Stock shock is air (Float X); no coil rate table on product page or QSG."
+        },
+        "sagPercent": {
+          "value": 27.5,
+          "status": "verified",
+          "url": "https://www.canyon.com/on/demandware.static/-/Library-Sites-canyon-shared/default/dw4dc7fc71/documents/customer-service/mountain-bikes/canyon-spectral-cf-quick-start-guide-2024.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Recommended SAG 27,5%",
+          "where": "Quick start guide M179, page 23, section 10 'Fork and shock setup', step 10.2 (shock). Fork: 'FORK MANUAL' only, no fork sag given.",
+          "verifiedBy": {
+            "url": "https://www.canyon.com/on/demandware.static/-/Library-Sites-canyon-shared/default/dw4dc7fc71/documents/customer-service/mountain-bikes/canyon-spectral-cf-quick-start-guide-2024.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "Recommended SAG 27,5% / ADJUST THE SHOCK WHILE STANDING ON THE PEDAL",
+            "where": "Spectral CF Quick Start Guide (linked from canyon.com/en-us/customer-service/mountain/spectral/spectral-cf/), page 23, section 10 'Fork and shock setup', panel 10.2 (shock)"
+          }
+        },
+        "shockPressureTableQsg": {
+          "value": {
+            "unit": "not printed (column header 'Pressure')",
+            "tables": {
+              "FOX FLOAT X": [
+                {
+                  "rider": "50-60 kg / 110-132 lbs",
+                  "value": "79-108"
+                },
+                {
+                  "rider": "60-70 kg / 132-154 lbs",
+                  "value": "108-136"
+                },
+                {
+                  "rider": "70-80 kg / 154-176 lbs",
+                  "value": "136-165"
+                },
+                {
+                  "rider": "80-90 kg / 176-198 lbs",
+                  "value": "165-194"
+                },
+                {
+                  "rider": "90-100 kg / 198-220 lbs",
+                  "value": "194-222"
+                },
+                {
+                  "rider": "100-110 kg / 220-243 lbs",
+                  "value": "222-251"
+                }
+              ]
+            }
+          },
+          "status": "single",
+          "url": "https://www.canyon.com/on/demandware.static/-/Library-Sites-canyon-shared/default/dw4dc7fc71/documents/customer-service/mountain-bikes/canyon-spectral-cf-quick-start-guide-2024.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Weight [kg] Weight [lbs] Pressure 50-60 110-132 79-108 60-70 132-154 108-136 70-80 154-176 136-165 80-90 176-198 165-194 90-100 198-220 194-222 100-110 220-243 222-251 ... ROCKSHOX SUPER DELUXE FOX FLOAT X",
+          "where": "QSG page 23, step 10.2; identical tables printed for RockShox Super Deluxe and Fox Float X. Pressure unit not printed (values look like psi, NOT verified)."
+        },
+        "setupGuideUrl": {
+          "value": "https://www.canyon.com/on/demandware.static/-/Library-Sites-canyon-shared/default/dw4dc7fc71/documents/customer-service/mountain-bikes/canyon-spectral-cf-quick-start-guide-2024.pdf",
+          "status": "single",
+          "url": "https://www.canyon.com/on/demandware.static/-/Library-Sites-canyon-shared/default/dw4dc7fc71/documents/customer-service/mountain-bikes/canyon-spectral-cf-quick-start-guide-2024.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "10 FORK AND SHOCK SETUP P. 23",
+          "where": "QSG contents (page 6); linked from support page https://www.canyon.com/en-us/customer-service/mountain/spectral/spectral-cf/ under Manuals; support page also has video 'Set up the suspension on your Spectral'"
+        },
+        "flipChip": {
+          "value": "geometry flip chip: steeper by 0.5°, BB +8 mm",
+          "status": "verified",
+          "url": "https://www.canyon.com/en-us/mountain-bikes/trail-bikes/spectral/cf/spectral-cf-8/4381.html",
+          "retrieved": "2026-09-30",
+          "quote": "For riders after extra pedal clearance and slow speed poise, a flip chip steepens the angles by 0.5° and raises the BB by 8mm.",
+          "where": "Key features > Adjustable Geometry; QSG page 30 'GEOMETRY ADJUSTMENT' shows +8 MM, +0,5°",
+          "verifiedBy": {
+            "url": "https://www.canyon.com/en-us/mountain-bikes/trail-bikes/spectral/cf/spectral-cf-8/4381.html",
+            "retrieved": "2026-09-30",
+            "quote": "For riders after extra pedal clearance and slow speed poise, a flip chip steepens the angles by 0.5° and raises the BB by 8mm. | The chainstay flip chip lets you easily swap wheelsizes whenever you want",
+            "where": "Product page, Key features"
+          }
+        }
+      }
+    },
+    {
+      "id": "canyon-torque-al-al-8-2027",
+      "name": "Canyon Torque AL 8",
+      "modelYears": [
+        2027
+      ],
+      "fields": {
+        "modelYearEvidence": {
+          "value": 2027,
+          "status": "single",
+          "url": "https://www.canyon.com/en-gb/mountain-bikes/enduro-bikes/torque/al/torque-al-8/4323.html",
+          "retrieved": "2026-09-30",
+          "quote": "{\"@type\":\"PropertyValue\",\"name\":\"Year\",\"value\":2027}",
+          "where": "product page embedded schema.org Product data; image asset '2027_FULL_torque_al-8_4323_M185_P01'"
+        },
+        "platformCode": {
+          "value": "M185",
+          "status": "single",
+          "url": "https://www.canyon.com/on/demandware.static/-/Library-Sites-canyon-shared/default/dwfdb269c3/documents/customer-service/mountain-bikes/canyon-torque-al-quick-start-guide-2026.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "QUICK START GUIDE TORQUE AL M185",
+          "where": "QSG cover (page 1), PDF title 'QSG 079-V01 M185 TRQ AL.indd'"
+        },
+        "rearTravelMm": {
+          "value": {
+            "XS": 170,
+            "S": 180,
+            "M": 180,
+            "L": 180,
+            "XL": 180
+          },
+          "status": "verified",
+          "url": "https://www.canyon.com/en-gb/productpdf/geometry/?pid=4323&isComplexCustomization=false",
+          "retrieved": "2026-09-30",
+          "quote": "Rear Suspension Travel in mm 170 180 180 180 180",
+          "where": "Geometry PDF page, Component geometry table (XS S M L XL)",
+          "verifiedBy": {
+            "url": "https://www.canyon.com/en-au/productpdf/geometry/?pid=4323",
+            "retrieved": "2026-09-30",
+            "quote": "Rear Suspension Travel in mm | 170 | 180 | 180 | 180 | 180",
+            "where": "Canyon geometry table (productpdf/geometry pid=4323), columns XS S M L XL"
+          }
+        },
+        "forkTravelMm": {
+          "value": 180,
+          "status": "verified",
+          "url": "https://www.canyon.com/en-gb/productpdf/geometry/?pid=4323&isComplexCustomization=false",
+          "retrieved": "2026-09-30",
+          "quote": "Front Fork Travel in mm 180 180 180 180 180",
+          "where": "Geometry PDF page, Component geometry table; product page 'Front Fork Travel: 180 mm'",
+          "verifiedBy": {
+            "url": "https://www.canyon.com/en-au/mountain-bikes/enduro-bikes/torque/al/torque-al-8/4323.html",
+            "retrieved": "2026-09-30",
+            "quote": "Suspension Fork | RockShox ZEB Select + | Stanchion Diameter 38 mm | Travel 180 mm | Offset 44 mm",
+            "where": "Product page, All components; also geometry 'Front Fork Travel in mm 180 180 180 180 180'"
+          }
+        },
+        "wheelSize": {
+          "value": "29\"/27.5\"",
+          "status": "verified",
+          "url": "https://www.canyon.com/en-gb/productpdf/geometry/?pid=4323&isComplexCustomization=false",
+          "retrieved": "2026-09-30",
+          "quote": "Wheel Size 29\"/27.5\" 29\"/27.5\" 29\"/27.5\" 29\"/27.5\" 29\"/27.5\"",
+          "where": "Geometry PDF page, Component geometry table (mullet, all sizes)",
+          "verifiedBy": {
+            "url": "https://www.canyon.com/en-au/productpdf/geometry/?pid=4323",
+            "retrieved": "2026-09-30",
+            "quote": "Wheel Size | 29\"/27.5\" | 29\"/27.5\" | 29\"/27.5\" | 29\"/27.5\" | 29\"/27.5\"",
+            "where": "Geometry table, all sizes; JSON-LD 'Wheel Size' '29\"/27.5\"'"
+          }
+        },
+        "sizes": {
+          "value": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "status": "verified",
+          "url": "https://www.canyon.com/en-gb/mountain-bikes/enduro-bikes/torque/al/torque-al-8/4323.html",
+          "retrieved": "2026-09-30",
+          "quote": "Frame size XS S M L XL",
+          "where": "Geometry & dimensions > Detailed geometry table",
+          "verifiedBy": {
+            "url": "https://www.canyon.com/en-au/mountain-bikes/enduro-bikes/torque/al/torque-al-8/4323.html",
+            "retrieved": "2026-09-30",
+            "quote": "XS S M L XL (variants 'Torque AL 8 | Powder Coat Black | XS' ... '| XL')",
+            "where": "Product page JSON-LD variants and geometry table header"
+          }
+        },
+        "shockEyeToEyeMm": {
+          "value": 250,
+          "status": "verified",
+          "url": "https://www.canyon.com/en-gb/productpdf/geometry/?pid=4323&isComplexCustomization=false",
+          "retrieved": "2026-09-30",
+          "quote": "Fitting Length in mm 250X70 250X70 250X70 250X70 250X70",
+          "where": "Geometry PDF page, Component geometry table, row 'Fitting Length in mm' (label does not say 'shock'; same for all sizes although XS rear travel is 170)",
+          "verifiedBy": {
+            "url": "https://www.canyon.com/en-au/productpdf/geometry/?pid=4323",
+            "retrieved": "2026-09-30",
+            "quote": "Fitting Length in mm | 250X70 | 250X70 | 250X70 | 250X70 | 250X70",
+            "where": "Geometry table row 'Fitting Length in mm', XS-XL; same in JSON-LD per variant"
+          }
+        },
+        "shockStrokeMm": {
+          "value": 70,
+          "status": "verified",
+          "url": "https://www.canyon.com/en-gb/productpdf/geometry/?pid=4323&isComplexCustomization=false",
+          "retrieved": "2026-09-30",
+          "quote": "Fitting Length in mm 250X70 250X70 250X70 250X70 250X70",
+          "where": "same row as shockEyeToEyeMm",
+          "verifiedBy": {
+            "url": "https://www.canyon.com/en-au/productpdf/geometry/?pid=4323",
+            "retrieved": "2026-09-30",
+            "quote": "Fitting Length in mm | 250X70 | 250X70 | 250X70 | 250X70 | 250X70",
+            "where": "Same row"
+          }
+        },
+        "shockMount": {
+          "value": null,
+          "status": "missing",
+          "note": "Not stated on product page, geometry PDF page or M185 quick start guide."
+        },
+        "stockForkBySpec": {
+          "value": {
+            "AL 8": "RockShox ZEB Select +"
+          },
+          "status": "verified",
+          "url": "https://www.canyon.com/en-gb/mountain-bikes/enduro-bikes/torque/al/torque-al-8/4323.html",
+          "retrieved": "2026-09-30",
+          "quote": "Suspension Fork RockShox ZEB Select + Stanchion Diameter 38 mm Travel 180 mm Offset 44 mm",
+          "where": "Components > All components > Suspension Fork (based on size M)",
+          "verifiedBy": {
+            "url": "https://www.canyon.com/en-au/mountain-bikes/enduro-bikes/torque/al/torque-al-8/4323.html",
+            "retrieved": "2026-09-30",
+            "quote": "Suspension Fork | RockShox ZEB Select + | Stanchion Diameter 38 mm | Travel 180 mm",
+            "where": "Product page, All components"
+          }
+        },
+        "stockShockBySpec": {
+          "value": {
+            "AL 8": "RockShox Vivid Select+"
+          },
+          "status": "verified",
+          "url": "https://www.canyon.com/en-gb/mountain-bikes/enduro-bikes/torque/al/torque-al-8/4323.html",
+          "retrieved": "2026-09-30",
+          "quote": "Rear Shock RockShox Vivid Select+",
+          "where": "Components > All components > Rear Shock; highlights list instead says 'Smooth RockShox ZEB Select+ and Vivid Air Select+'",
+          "verifiedBy": {
+            "url": "https://www.canyon.com/en-au/mountain-bikes/enduro-bikes/torque/al/torque-al-8/4323.html",
+            "retrieved": "2026-09-30",
+            "quote": "Rear Shock | RockShox Vivid Select+  ||  'Smooth RockShox ZEB Select+ and Vivid Air Select+'",
+            "where": "Component list vs. highlight bullets/meta description on same product page"
+          },
+          "note": "component list \"Vivid Select+\", highlights \"Vivid Air Select+\" (RockShox: Vivid = air shock)"
+        },
+        "springRateBySize": {
+          "value": null,
+          "status": "missing",
+          "note": "Stock shock is air per highlight text ('Vivid Air Select+'); no coil spring table on product page or QSG."
+        },
+        "sagPercent": {
+          "value": 30,
+          "status": "verified",
+          "url": "https://www.canyon.com/on/demandware.static/-/Library-Sites-canyon-shared/default/dwfdb269c3/documents/customer-service/mountain-bikes/canyon-torque-al-quick-start-guide-2026.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "30 % SAG RECOMMENDED ... ADJUST THE SHOCK WHILE STANDING ON THE PEDAL!",
+          "where": "QSG M185 page 20, section 10, step 10.2 (shock)",
+          "verifiedBy": {
+            "url": "https://www.canyon.com/on/demandware.static/-/Library-Sites-canyon-shared/default/dw552d3fdb/documents/customer-service/mountain-bikes/canyon-torque-quick-start-guide.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "SHOCK MANUAL ... Recommended SAG 30%  (FORK MANUAL ... Recommended SAG 20%)",
+            "where": "Torque AL Quick Start Guide (linked from canyon.com/en-us/customer-service/mountain/torque/torque-al/), page 21, section 10 'Fork and shock setup'; panel 10.2 (shock) = 30%, panel 10.1 (fork) = 20%"
+          }
+        },
+        "forkSagPercent": {
+          "value": "15-20",
+          "status": "single",
+          "url": "https://www.canyon.com/on/demandware.static/-/Library-Sites-canyon-shared/default/dwfdb269c3/documents/customer-service/mountain-bikes/canyon-torque-al-quick-start-guide-2026.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "15-20 % SAG RECOMMENDED",
+          "where": "QSG M185 page 20, section 10, step 10.1 (fork, verified on rendered page)"
+        },
+        "setupGuideUrl": {
+          "value": "https://www.canyon.com/on/demandware.static/-/Library-Sites-canyon-shared/default/dwfdb269c3/documents/customer-service/mountain-bikes/canyon-torque-al-quick-start-guide-2026.pdf",
+          "status": "single",
+          "url": "https://www.canyon.com/on/demandware.static/-/Library-Sites-canyon-shared/default/dwfdb269c3/documents/customer-service/mountain-bikes/canyon-torque-al-quick-start-guide-2026.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "10. Fork and shock setup 20",
+          "where": "QSG contents page 6; linked from support page https://www.canyon.com/en-gb/customer-service/mountain/torque/torque-al/; page 20 also has QR code 'Check suspension setup video'"
+        },
+        "flipChip": {
+          "value": "geometry flip chip (+0.5°, BB +4.5 mm per QSG diagram); modular dropouts 430/440 mm chainstay",
+          "status": "verified",
+          "url": "https://www.canyon.com/en-gb/mountain-bikes/enduro-bikes/torque/al/torque-al-8/4323.html",
+          "retrieved": "2026-09-30",
+          "quote": "the bike’s flip chip helps you steepen the geo and increase bottom bracket height for more ground clearance and quicker handling.",
+          "where": "Key features > Adjustable frame geometry; QSG page 21 '11. GEOMETRY ADJUSTMENT (OPTIONAL)' diagram labels: '12 MM 63,5° 78,5° +4,5 MM +0,5° +0,5°'; product page: 'Modular dropouts let you choose between short (430mm) and long (440mm) chainstay lengths.'",
+          "verifiedBy": {
+            "url": "https://www.canyon.com/en-au/mountain-bikes/enduro-bikes/torque/al/torque-al-8/4323.html",
+            "retrieved": "2026-09-30",
+            "quote": "Modular dropouts let you choose between short (430mm) and long (440mm) chainstay lengths. Similarly, the bike’s flip chip helps you steepen the geo and increase bottom bracket height for more ground clearance and quicker handling.",
+            "where": "Product page, Key features 'Adjustable frame geometry'"
+          }
+        }
+      }
+    }
+  ]
+}

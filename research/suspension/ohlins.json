@@ -1,0 +1,1094 @@
+{
+  "maker": "ohlins",
+  "products": [
+    {
+      "id": "ohlins-rxf38-m2-2026",
+      "name": "Öhlins RXF38 m.2",
+      "type": "fork",
+      "modelYears": [
+        2026
+      ],
+      "catalogId": null,
+      "fields": {
+        "travelMm": {
+          "value": [
+            160,
+            170,
+            180
+          ],
+          "status": "verified",
+          "url": "https://www.ohlins.com/en-us/mountain-bike/front-forks/am-rxf38-m-2-air-ttx18-29-44-160",
+          "retrieved": "2026-09-30",
+          "quote": "Select model: RXF38 m.2 Air TTX18 29'/44/160, RXF38 m.2 Air TTX18 29'/44/170, RXF38 m.2 Coil TTX18 29'/44/170, RXF38 m.2 Air TTX18 29'/44/180, RXF38 m.2 Air TTX18 29'/44L/180, RXF38 m.2 Air TTX18 29'/51/170 | Description: it’s available in five different iterations offering 160–180 mm of travel",
+          "where": "product page, 'Select model' list + Description",
+          "verifiedBy": {
+            "url": "https://www.ohlins.com/en-us/mountain-bike/front-forks/am-rxf38-m-2-air-ttx18-29-44-160",
+            "retrieved": "2026-09-30",
+            "quote": "Select model: RXF38 m.2 Air TTX18 29'/44/160 | 29'/44/170 | Coil 29'/44/170 | Air 29'/44/180 | Air 29'/44L/180 | Air 29'/51/170; Features: 'Fork travel: 160–180 mm'",
+            "where": "product page model selector + Details 'Travel:' on each variant page; manual p.10 'Original fork lengths' table lists 160/170/180"
+          }
+        },
+        "wheelSize": {
+          "value": "29",
+          "status": "single",
+          "url": "https://www.ohlins.com/en-us/mountain-bike/front-forks/am-rxf38-m-2-air-ttx18-29-44-160",
+          "retrieved": "2026-09-30",
+          "quote": "Wheel size:\n29 in",
+          "where": "product page, Details table"
+        },
+        "stanchionMm": {
+          "value": 38,
+          "status": "single",
+          "url": "https://www.ohlins.com/en-us/mountain-bike/front-forks/am-rxf38-m-2-air-ttx18-29-44-160",
+          "retrieved": "2026-09-30",
+          "quote": "38 mm stanchion diameter with 44 mm crown offset",
+          "where": "product page, Features"
+        },
+        "offsetMm": {
+          "value": [
+            44,
+            51
+          ],
+          "status": "single",
+          "url": "https://www.ohlins.com/en-us/mountain-bike/front-forks/am-rxf38-m-2-air-ttx18-29-44-160",
+          "retrieved": "2026-09-30",
+          "quote": "offering 160–180 mm of travel and 44 or 51 mm crown offset options",
+          "where": "product page, Description"
+        },
+        "damper": {
+          "value": "TTX18",
+          "status": "single",
+          "url": "https://www.ohlins.com/en-us/mountain-bike/front-forks/am-rxf38-m-2-air-ttx18-29-44-160",
+          "retrieved": "2026-09-30",
+          "quote": "Damp tech:\nTTX18",
+          "where": "product page, Details table"
+        },
+        "springType": {
+          "value": "air (coil variant available)",
+          "status": "single",
+          "url": "https://www.ohlins.com/en-us/mountain-bike/front-forks/am-rxf38-m-2-air-ttx18-29-44-160",
+          "retrieved": "2026-09-30",
+          "quote": "Easy to tune three-chamber air spring system",
+          "where": "product page, Features; select list also contains a Coil TTX18 29'/44/170 model"
+        },
+        "lscMax": {
+          "value": 16,
+          "status": "verified",
+          "url": "https://www.ohlins.com/en-us/mountain-bike/front-forks/am-rxf38-m-2-air-ttx18-29-44-160",
+          "retrieved": "2026-09-30",
+          "quote": "Lsc Cli:\n16",
+          "where": "product page, Details table (spec table only; the owner's manual gives no click totals)",
+          "verifiedBy": {
+            "url": "https://www.ohlins.com/en-us/mountain-bike/front-forks/am-rxf38-m-2-air-ttx18-29-44-160",
+            "retrieved": "2026-09-30",
+            "quote": "Lsc Cli: 16",
+            "where": "product page Details"
+          }
+        },
+        "hscMax": {
+          "value": 3,
+          "status": "verified",
+          "url": "https://ohlins.com/storage/4D81EA83A21214EDFB4A57331844F3692B56F2CCA1ED9BD1BE95A5CDFE6D1B1E/9bd7e6402a3e42ff93f357c6b15e645b/pdf/media/0377e17f271d4af39560e027d515d36d/Owners%20manual%20RXF38%20m.2.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "The high speed adjuster has four positions. When the adjuster is fully closed it has position 0 [zero] and when the adjuster is fully open it has position 3.",
+          "where": "owner's manual p.15, 5 Damper Setup, High speed compression damping (product page Details: 'Hsc Cli: 3')",
+          "verifiedBy": {
+            "url": "https://www.ohlins.com/en-us/mountain-bike/front-forks/am-rxf38-m-2-air-ttx18-29-44-160",
+            "retrieved": "2026-09-30",
+            "quote": "Product page Details: 'Hsc Cli: 3' | Manual p.15: 'The high speed adjuster has four positions. When the adjuster is fully closed it has position 0 [zero] and when the adjuster is fully open it has position 3.'",
+            "where": "product page Details + owner's manual p.15"
+          }
+        },
+        "hscNote": {
+          "value": "Position 0 = additional platform for long climbs; positions 1-3 for trail riding",
+          "status": "single",
+          "url": "https://ohlins.com/storage/4D81EA83A21214EDFB4A57331844F3692B56F2CCA1ED9BD1BE95A5CDFE6D1B1E/9bd7e6402a3e42ff93f357c6b15e645b/pdf/media/0377e17f271d4af39560e027d515d36d/Owners%20manual%20RXF38%20m.2.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Position 1-3 is suitable for trail riding. Position 0 [zero] is for those long climbs where the need for traction is limited and additional platform control helps to gain efficiency.",
+          "where": "owner's manual p.15"
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://ohlins.com/storage/4D81EA83A21214EDFB4A57331844F3692B56F2CCA1ED9BD1BE95A5CDFE6D1B1E/9bd7e6402a3e42ff93f357c6b15e645b/pdf/media/0377e17f271d4af39560e027d515d36d/Owners%20manual%20RXF38%20m.2.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Rebound damping adjuster 3. Adjust rebound Turn the gold coloured adjuster on the end eye/ bracket.",
+          "where": "owner's manual p.13: adjusters listed are 1 low speed compression, 2 high speed compression, 3 rebound (only one rebound adjuster)",
+          "verifiedBy": {
+            "url": "https://www.ohlins.com/storage/F2E0732EED298D02B229BA08081DF815A28E52AC26DF53FBD8B64B9A2C0B6DD1/9bd7e6402a3e42ff93f357c6b15e645b/pdf/media/0377e17f271d4af39560e027d515d36d/OM_07258-17_1_RXF38%20m2_Air_Coil.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "Manual p.13: 'Turn the adjuster clockwise to fully closed position. Then, turn counter clockwise to open, and count the clicks until you reach the recommended number of clicks.' ... '3. Adjust rebound Turn the gold coloured adjuster on the end eye/ bracket.'",
+            "where": "owner's manual p.13"
+          }
+        },
+        "reboundMax": {
+          "value": 16,
+          "status": "verified",
+          "url": "https://www.ohlins.com/en-us/mountain-bike/front-forks/am-rxf38-m-2-air-ttx18-29-44-160",
+          "retrieved": "2026-09-30",
+          "quote": "Lsr Cli:\n16",
+          "where": "product page, Details table (spec table only; the owner's manual gives no click totals)",
+          "verifiedBy": {
+            "url": "https://www.ohlins.com/en-us/mountain-bike/front-forks/am-rxf38-m-2-air-ttx18-29-44-160",
+            "retrieved": "2026-09-30",
+            "quote": "Lsr Cli: 16",
+            "where": "product page Details (all variants)"
+          }
+        },
+        "hsrMax": {
+          "value": null,
+          "status": "verified",
+          "url": "https://ohlins.com/storage/4D81EA83A21214EDFB4A57331844F3692B56F2CCA1ED9BD1BE95A5CDFE6D1B1E/9bd7e6402a3e42ff93f357c6b15e645b/pdf/media/0377e17f271d4af39560e027d515d36d/Owners%20manual%20RXF38%20m.2.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Compression damping adjuster 1. Adjust low speed ... 2. Adjust high speed ... Rebound damping adjuster 3. Adjust rebound",
+          "where": "owner's manual p.13: the three adjusters of the fork; no high-speed rebound adjuster",
+          "verifiedBy": {
+            "url": "https://www.ohlins.com/storage/F2E0732EED298D02B229BA08081DF815A28E52AC26DF53FBD8B64B9A2C0B6DD1/9bd7e6402a3e42ff93f357c6b15e645b/pdf/media/0377e17f271d4af39560e027d515d36d/OM_07258-17_1_RXF38%20m2_Air_Coil.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "Manual p.13 lists exactly three adjusters: '1. Adjust low speed', '2. Adjust high speed', '3. Adjust rebound' (single gold rebound adjuster)",
+            "where": "owner's manual p.13; product page Details list only Hsc/Lsc/Lsr"
+          }
+        },
+        "lscStart": {
+          "value": null,
+          "status": "missing",
+          "note": "No recommended click setting printed in owner's manual or on product page."
+        },
+        "hscStart": {
+          "value": null,
+          "status": "missing",
+          "note": "No recommended position printed in owner's manual or on product page."
+        },
+        "maxPressurePsi": {
+          "value": null,
+          "status": "missing",
+          "note": "Not stated in owner's manual, product page or 50h workshop manual (WSM_50h_RXF38_m.3_m.2_m.1.pdf). Highest printed recommendation is 220-230 psi ramp-up chamber; that is not a max. Manual says 'Please check pressure recommendations printed on the fork.' (fork decal not available)."
+        },
+        "airChambers": {
+          "value": "Main chamber (top valve) + Ramp up chamber (lower valve)",
+          "status": "single",
+          "url": "https://ohlins.com/storage/4D81EA83A21214EDFB4A57331844F3692B56F2CCA1ED9BD1BE95A5CDFE6D1B1E/9bd7e6402a3e42ff93f357c6b15e645b/pdf/media/0377e17f271d4af39560e027d515d36d/Owners%20manual%20RXF38%20m.2.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Unscrew the cap to the lower valve (ramp up chamber) and assemble the air pressure pump. Pump to desired pressure. ... Unscrew top air cap (Main chamber) and assemble the air pump. Pump to desired pressure.",
+          "where": "owner's manual p.8, 3 Air spring setup, Setting sag steps 1-2"
+        },
+        "spacersStock": {
+          "value": null,
+          "status": "missing",
+          "note": "Not stated in owner's manual or product page."
+        },
+        "spacersMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Not stated in owner's manual or product page."
+        },
+        "sagPercent": {
+          "value": "10-15 (air); 15-20 (coil)",
+          "status": "verified",
+          "url": "https://ohlins.com/storage/4D81EA83A21214EDFB4A57331844F3692B56F2CCA1ED9BD1BE95A5CDFE6D1B1E/9bd7e6402a3e42ff93f357c6b15e645b/pdf/media/0377e17f271d4af39560e027d515d36d/Owners%20manual%20RXF38%20m.2.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Sag should be set to approximately 10-15 % of the fork travel. [coil chapter:] Sag should be set to approximately 15-20 % of the fork travel.",
+          "where": "owner's manual p.9 (air) and p.12 (coil)",
+          "verifiedBy": {
+            "url": "https://www.ohlins.com/storage/F2E0732EED298D02B229BA08081DF815A28E52AC26DF53FBD8B64B9A2C0B6DD1/9bd7e6402a3e42ff93f357c6b15e645b/pdf/media/0377e17f271d4af39560e027d515d36d/OM_07258-17_1_RXF38%20m2_Air_Coil.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "Air: 'Sag should be set to approximately 10-15 % of the fork travel.' Coil: 'Sag should be set to approximately 15-20 % of the fork travel.'",
+            "where": "owner's manual p.9 (air) and p.12 (coil)"
+          }
+        },
+        "pressureTable": {
+          "value": {
+            "unit": "psi",
+            "note": "Printed values are RANGES, not single numbers; two chambers (Main chamber / Ramp up chamber). Recorded exactly as printed; 'value' left as the printed range string - do not average.",
+            "rows": [
+              {
+                "rider": "50-60 kg (110-132 lbs)",
+                "value": "70-80 psi",
+                "mainChamber": "70-80 psi",
+                "rampUpChamber": "160-170 psi"
+              },
+              {
+                "rider": "60-70 kg (132-154 lbs)",
+                "value": "80-90 psi",
+                "mainChamber": "80-90 psi",
+                "rampUpChamber": "170-180 psi"
+              },
+              {
+                "rider": "70-80 kg (154-176 lbs)",
+                "value": "90-100 psi",
+                "mainChamber": "90-100 psi",
+                "rampUpChamber": "180-190 psi"
+              },
+              {
+                "rider": "80-90 kg (176-198 lbs)",
+                "value": "100-110 psi",
+                "mainChamber": "100-110 psi",
+                "rampUpChamber": "190-200 psi"
+              },
+              {
+                "rider": "90-100 kg (198-220 lbs)",
+                "value": "110-120 psi",
+                "mainChamber": "110-120 psi",
+                "rampUpChamber": "200-210 psi"
+              },
+              {
+                "rider": "100-110 kg (220-243 lbs)",
+                "value": "120-130 psi",
+                "mainChamber": "120-130 psi",
+                "rampUpChamber": "210-220 psi"
+              },
+              {
+                "rider": "110-120 kg (243-265 lbs)",
+                "value": "130-140 psi",
+                "mainChamber": "130-140 psi",
+                "rampUpChamber": "220-230 psi"
+              }
+            ]
+          },
+          "status": "verified",
+          "url": "https://ohlins.com/storage/4D81EA83A21214EDFB4A57331844F3692B56F2CCA1ED9BD1BE95A5CDFE6D1B1E/9bd7e6402a3e42ff93f357c6b15e645b/pdf/media/0377e17f271d4af39560e027d515d36d/Owners%20manual%20RXF38%20m.2.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Rider weight Main chamber Ramp up chamber 50-60 kg (110-132 lbs) 70-80 psi 160-170 psi 60-70 kg (132-154 lbs) 80-90 psi 170-180 psi 70-80 kg (154-176 lbs) 90-100 psi 180-190 psi 80-90 kg (176-198 lbs) 100-110 psi 190-200 psi 90-100 kg (198-220 lbs) 110-120 psi 200-210 psi 100-110 kg (220-243 lbs) 120-130 psi 210-220 psi 110-120 kg (243-265 lbs) 130-140 psi 220-230 psi",
+          "where": "owner's manual p.9, table under 3 Air spring setup",
+          "verifiedBy": {
+            "url": "https://www.ohlins.com/storage/F2E0732EED298D02B229BA08081DF815A28E52AC26DF53FBD8B64B9A2C0B6DD1/9bd7e6402a3e42ff93f357c6b15e645b/pdf/media/0377e17f271d4af39560e027d515d36d/OM_07258-17_1_RXF38%20m2_Air_Coil.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "Rider weight | Main chamber | Ramp up chamber / 50-60 kg (110-132 lbs) 70-80 psi 160-170 psi ... 110-120 kg (243-265 lbs) 130-140 psi 220-230 psi",
+            "where": "owner's manual p.9 (3 Air spring setup)"
+          }
+        },
+        "axleToCrownMm": {
+          "value": {
+            "160": 573,
+            "170": 583,
+            "180": 593
+          },
+          "status": "single",
+          "url": "https://ohlins.com/storage/4D81EA83A21214EDFB4A57331844F3692B56F2CCA1ED9BD1BE95A5CDFE6D1B1E/9bd7e6402a3e42ff93f357c6b15e645b/pdf/media/0377e17f271d4af39560e027d515d36d/Owners%20manual%20RXF38%20m.2.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Fork travel [mm] Wiper seal to crown [mm] Axle to crown [mm] 160 162 573 170 172 583 180 182 593",
+          "where": "owner's manual p.10, Original fork lengths"
+        },
+        "coilSpringChart": {
+          "value": [
+            {
+              "springRateNmm": 7.0,
+              "tubeColor": "Yellow (3x)",
+              "riderWeightKg": 55,
+              "partNo": "19286-01"
+            },
+            {
+              "springRateNmm": 7.9,
+              "tubeColor": "Green (3x)",
+              "riderWeightKg": 64,
+              "partNo": "19286-02"
+            },
+            {
+              "springRateNmm": 8.8,
+              "tubeColor": "Blue (3x)",
+              "riderWeightKg": 72,
+              "partNo": "19286-03"
+            },
+            {
+              "springRateNmm": 9.7,
+              "tubeColor": "White (3x)",
+              "riderWeightKg": 82,
+              "partNo": "19286-04* (Standard AM fork)"
+            },
+            {
+              "springRateNmm": 10.6,
+              "tubeColor": "Black (3x)",
+              "riderWeightKg": 91,
+              "partNo": "19286-05"
+            },
+            {
+              "springRateNmm": 11.5,
+              "tubeColor": "Red, Black, Red",
+              "riderWeightKg": 100,
+              "partNo": "19286-06"
+            },
+            {
+              "springRateNmm": 12.4,
+              "tubeColor": "Yellow, Black, Yellow",
+              "riderWeightKg": 109,
+              "partNo": "19286-07"
+            }
+          ],
+          "status": "single",
+          "url": "https://ohlins.com/storage/4D81EA83A21214EDFB4A57331844F3692B56F2CCA1ED9BD1BE95A5CDFE6D1B1E/9bd7e6402a3e42ff93f357c6b15e645b/pdf/media/0377e17f271d4af39560e027d515d36d/Owners%20manual%20RXF38%20m.2.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Spring rate [N/mm] Tube color Rider weight (kg) Part no 7.0 Yellow (3x) 55 19286-01 7.9 Green (3x) 64 19286-02 8.8 Blue (3x) 72 19286-03 9.7 White (3x) 82 19286-04* 10.6 Black (3x) 91 19286-05 11.5 Red, Black, Red 100 19286-06 12.4 Yellow, Black, Yellow 109 19286-07 * Standard AM fork",
+          "where": "owner's manual p.12, 4 Coil spring setup"
+        },
+        "adjusterDirection": {
+          "value": "clockwise = more damping; count clicks from fully closed",
+          "status": "single",
+          "url": "https://ohlins.com/storage/4D81EA83A21214EDFB4A57331844F3692B56F2CCA1ED9BD1BE95A5CDFE6D1B1E/9bd7e6402a3e42ff93f357c6b15e645b/pdf/media/0377e17f271d4af39560e027d515d36d/Owners%20manual%20RXF38%20m.2.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Turn the adjuster clockwise to fully closed position. Then, turn counter clockwise to open, and count the clicks until you reach the recommended number of clicks.",
+          "where": "owner's manual p.13"
+        },
+        "manualUrl": {
+          "value": "https://ohlins.com/storage/4D81EA83A21214EDFB4A57331844F3692B56F2CCA1ED9BD1BE95A5CDFE6D1B1E/9bd7e6402a3e42ff93f357c6b15e645b/pdf/media/0377e17f271d4af39560e027d515d36d/Owners%20manual%20RXF38%20m.2.pdf",
+          "status": "single",
+          "url": "https://ohlins.com/storage/4D81EA83A21214EDFB4A57331844F3692B56F2CCA1ED9BD1BE95A5CDFE6D1B1E/9bd7e6402a3e42ff93f357c6b15e645b/pdf/media/0377e17f271d4af39560e027d515d36d/Owners%20manual%20RXF38%20m.2.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "RXF38 m.2 Air/Coil Owner’s Manual Front fork",
+          "where": "cover"
+        }
+      }
+    },
+    {
+      "id": "ohlins-rxf38-m3-2026",
+      "name": "Öhlins RXF38 m.3",
+      "type": "fork",
+      "modelYears": [
+        2026
+      ],
+      "catalogId": null,
+      "fields": {
+        "travelMm": {
+          "value": [
+            160,
+            170,
+            180
+          ],
+          "status": "verified",
+          "url": "https://www.ohlins.com/en-us/mountain-bike/front-forks/am-rxf38-m-3-air-ttx18-29-44-160",
+          "retrieved": "2026-09-30",
+          "quote": "Select model: RXF38 m.3 Air TTX18 29''/44/160, RXF38 m.3 Air TTX18 29''/44/170, RXF38 m.3 Coil TTX18 29''/44/170, RXF38 m.3 Air TTX18 29''/44/180 | Description: with four iterations offering 160-180 mm of travel and a 44 mm crown offset",
+          "where": "product page, 'Select model' list + Description",
+          "verifiedBy": {
+            "url": "https://www.ohlins.com/en-us/mountain-bike/front-forks/am-rxf38-m-3-air-ttx18-29-44-160",
+            "retrieved": "2026-09-30",
+            "quote": "'The RXF38 m.3 is available for 29” wheel sized frames, with four iterations offering 160-180 mm of travel and a 44 mm crown offset.' Select model: Air 160 | Air 170 | Coil 170 | Air 180",
+            "where": "product page model selector + Details 'Travel:' on each variant page; manual p.10 'Original fork lengths' table lists 160/170/180"
+          }
+        },
+        "wheelSize": {
+          "value": "29",
+          "status": "single",
+          "url": "https://www.ohlins.com/en-us/mountain-bike/front-forks/am-rxf38-m-3-air-ttx18-29-44-160",
+          "retrieved": "2026-09-30",
+          "quote": "Wheel size:\n29 in",
+          "where": "product page, Details table"
+        },
+        "stanchionMm": {
+          "value": 38,
+          "status": "single",
+          "url": "https://www.ohlins.com/en-us/mountain-bike/front-forks/am-rxf38-m-3-air-ttx18-29-44-160",
+          "retrieved": "2026-09-30",
+          "quote": "38 mm stanchion tube",
+          "where": "product page, Features"
+        },
+        "offsetMm": {
+          "value": [
+            44
+          ],
+          "status": "single",
+          "url": "https://www.ohlins.com/en-us/mountain-bike/front-forks/am-rxf38-m-3-air-ttx18-29-44-160",
+          "retrieved": "2026-09-30",
+          "quote": "with four iterations offering 160-180 mm of travel and a 44 mm crown offset",
+          "where": "product page, Description"
+        },
+        "damper": {
+          "value": "TTX18",
+          "status": "single",
+          "url": "https://www.ohlins.com/en-us/mountain-bike/front-forks/am-rxf38-m-3-air-ttx18-29-44-160",
+          "retrieved": "2026-09-30",
+          "quote": "Damp tech:\nTTX18",
+          "where": "product page, Details table"
+        },
+        "springType": {
+          "value": "air (coil variant available)",
+          "status": "single",
+          "url": "https://www.ohlins.com/en-us/mountain-bike/front-forks/am-rxf38-m-3-air-ttx18-29-44-160",
+          "retrieved": "2026-09-30",
+          "quote": "Prepared for coil spring",
+          "where": "product page, Features; select list also contains a Coil TTX18 29'/44/170 model"
+        },
+        "lscMax": {
+          "value": 16,
+          "status": "verified",
+          "url": "https://www.ohlins.com/en-us/mountain-bike/front-forks/am-rxf38-m-3-air-ttx18-29-44-160",
+          "retrieved": "2026-09-30",
+          "quote": "The RXF38 m.3’s adjustment range provides 16 clicks of low-speed compression, 3 clicks of high-speed compression, and 16 clicks of rebound adjustment.",
+          "where": "product page, Description (matches Details table 'Lsc Cli: 16', 'Lsr Cli: 16')",
+          "verifiedBy": {
+            "url": "https://www.ohlins.com/en-us/mountain-bike/front-forks/am-rxf38-m-3-air-ttx18-29-44-160",
+            "retrieved": "2026-09-30",
+            "quote": "'The RXF38 m.3’s adjustment range provides 16 clicks of low-speed compression, 3 clicks of high-speed compression, and 16 clicks of rebound adjustment.' / Details 'Lsc Cli: 16'",
+            "where": "product page Details"
+          }
+        },
+        "hscMax": {
+          "value": 3,
+          "status": "verified",
+          "url": "https://www.ohlins.com/en-us/mountain-bike/front-forks/am-rxf38-m-3-air-ttx18-29-44-160",
+          "retrieved": "2026-09-30",
+          "quote": "The RXF38 m.3’s adjustment range provides 16 clicks of low-speed compression, 3 clicks of high-speed compression, and 16 clicks of rebound adjustment. [manual p.15:] The high speed adjuster has four positions. When the adjuster is fully closed it has position 0 [zero] and when the adjuster is fully open it has position 3.",
+          "where": "product page Description; confirmed by owner's manual p.15 (https://www.ohlins.com/storage/1AE4DA29D21CAA79D6192380D728E019EEE4C87439A592FCD85945C3239A3A1F/f8dcfd6ac688452eb9870cc94bcce413/pdf/media/43170288b694450fbffba2d0e98b2f33/OM_07258-19_2_RXF38%20m.3.pdf)",
+          "verifiedBy": {
+            "url": "https://www.ohlins.com/en-us/mountain-bike/front-forks/am-rxf38-m-3-air-ttx18-29-44-160",
+            "retrieved": "2026-09-30",
+            "quote": "Product page: '3 clicks of high-speed compression' / 'Hsc Cli: 3' | Manual p.15: 'The high speed adjuster has four positions. When the adjuster is fully closed it has position 0 [zero] and when the adjuster is fully open it has position 3.'",
+            "where": "product page Details + owner's manual p.15"
+          }
+        },
+        "hscNote": {
+          "value": "Position 0 = additional platform for long climbs; positions 1-3 for trail riding",
+          "status": "single",
+          "url": "https://www.ohlins.com/storage/1AE4DA29D21CAA79D6192380D728E019EEE4C87439A592FCD85945C3239A3A1F/f8dcfd6ac688452eb9870cc94bcce413/pdf/media/43170288b694450fbffba2d0e98b2f33/OM_07258-19_2_RXF38%20m.3.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Position 1-3 is suitable for trail riding. Position 0 [zero] is for those long climbs where the need for traction is limited and additional platform control helps to gain efficiency.",
+          "where": "owner's manual p.15"
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://www.ohlins.com/storage/1AE4DA29D21CAA79D6192380D728E019EEE4C87439A592FCD85945C3239A3A1F/f8dcfd6ac688452eb9870cc94bcce413/pdf/media/43170288b694450fbffba2d0e98b2f33/OM_07258-19_2_RXF38%20m.3.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Rebound damping adjuster 3. Adjust rebound Turn the gold coloured adjuster on the end eye/ bracket.",
+          "where": "owner's manual p.13: adjusters listed are 1 low speed compression, 2 high speed compression, 3 rebound (only one rebound adjuster)",
+          "verifiedBy": {
+            "url": "https://www.ohlins.com/storage/1AE4DA29D21CAA79D6192380D728E019EEE4C87439A592FCD85945C3239A3A1F/f8dcfd6ac688452eb9870cc94bcce413/pdf/media/43170288b694450fbffba2d0e98b2f33/OM_07258-19_2_RXF38%20m.3.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "Manual p.13: 'Turn the adjuster clockwise to fully closed position. Then, turn counter clockwise to open, and count the clicks until you reach the recommended number of clicks.' ... '3. Adjust rebound Turn the gold coloured adjuster on the end eye/ bracket.'",
+            "where": "owner's manual p.13"
+          }
+        },
+        "reboundMax": {
+          "value": 16,
+          "status": "verified",
+          "url": "https://www.ohlins.com/en-us/mountain-bike/front-forks/am-rxf38-m-3-air-ttx18-29-44-160",
+          "retrieved": "2026-09-30",
+          "quote": "The RXF38 m.3’s adjustment range provides 16 clicks of low-speed compression, 3 clicks of high-speed compression, and 16 clicks of rebound adjustment.",
+          "where": "product page, Description (matches Details table 'Lsc Cli: 16', 'Lsr Cli: 16')",
+          "verifiedBy": {
+            "url": "https://www.ohlins.com/en-us/mountain-bike/front-forks/am-rxf38-m-3-air-ttx18-29-44-160",
+            "retrieved": "2026-09-30",
+            "quote": "'16 clicks of rebound adjustment' / 'Lsr Cli: 16'",
+            "where": "product page Details (all variants)"
+          }
+        },
+        "hsrMax": {
+          "value": null,
+          "status": "verified",
+          "url": "https://www.ohlins.com/storage/1AE4DA29D21CAA79D6192380D728E019EEE4C87439A592FCD85945C3239A3A1F/f8dcfd6ac688452eb9870cc94bcce413/pdf/media/43170288b694450fbffba2d0e98b2f33/OM_07258-19_2_RXF38%20m.3.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Compression damping adjuster 1. Adjust low speed ... 2. Adjust high speed ... Rebound damping adjuster 3. Adjust rebound",
+          "where": "owner's manual p.13: the three adjusters of the fork; no high-speed rebound adjuster",
+          "verifiedBy": {
+            "url": "https://www.ohlins.com/storage/1AE4DA29D21CAA79D6192380D728E019EEE4C87439A592FCD85945C3239A3A1F/f8dcfd6ac688452eb9870cc94bcce413/pdf/media/43170288b694450fbffba2d0e98b2f33/OM_07258-19_2_RXF38%20m.3.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "Manual p.13 lists exactly three adjusters: '1. Adjust low speed', '2. Adjust high speed', '3. Adjust rebound' (single gold rebound adjuster)",
+            "where": "owner's manual p.13; product page Details list only Hsc/Lsc/Lsr"
+          }
+        },
+        "lscStart": {
+          "value": null,
+          "status": "missing",
+          "note": "No recommended click setting printed in owner's manual or on product page."
+        },
+        "hscStart": {
+          "value": null,
+          "status": "missing",
+          "note": "No recommended position printed in owner's manual or on product page."
+        },
+        "maxPressurePsi": {
+          "value": null,
+          "status": "missing",
+          "note": "Not stated in owner's manual, product page or 50h workshop manual (WSM_50h_RXF38_m.3_m.2_m.1.pdf). Highest printed recommendation is 220-230 psi ramp-up chamber; that is not a max. Manual says 'Please check pressure recommendations printed on the fork.' (fork decal not available)."
+        },
+        "airChambers": {
+          "value": "Main chamber (top valve) + Ramp up chamber (lower valve)",
+          "status": "single",
+          "url": "https://www.ohlins.com/storage/1AE4DA29D21CAA79D6192380D728E019EEE4C87439A592FCD85945C3239A3A1F/f8dcfd6ac688452eb9870cc94bcce413/pdf/media/43170288b694450fbffba2d0e98b2f33/OM_07258-19_2_RXF38%20m.3.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Unscrew the cap to the lower valve (ramp up chamber) and assemble the air pressure pump. Pump to desired pressure. ... Unscrew top air cap (Main chamber) and assemble the air pump. Pump to desired pressure.",
+          "where": "owner's manual p.8, 3 Air spring setup, Setting sag steps 1-2"
+        },
+        "spacersStock": {
+          "value": null,
+          "status": "missing",
+          "note": "Not stated in owner's manual or product page."
+        },
+        "spacersMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Not stated in owner's manual or product page. m.3 page mentions the system is 'further optimized for use with volume spacers' but gives no count."
+        },
+        "sagPercent": {
+          "value": "10-15 (air); 15-20 (coil)",
+          "status": "verified",
+          "url": "https://www.ohlins.com/storage/1AE4DA29D21CAA79D6192380D728E019EEE4C87439A592FCD85945C3239A3A1F/f8dcfd6ac688452eb9870cc94bcce413/pdf/media/43170288b694450fbffba2d0e98b2f33/OM_07258-19_2_RXF38%20m.3.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Sag should be set to approximately 10-15 % of the fork travel. [coil chapter:] Sag should be set to approximately 15-20 % of the fork travel.",
+          "where": "owner's manual p.9 (air) and p.12 (coil)",
+          "verifiedBy": {
+            "url": "https://www.ohlins.com/storage/1AE4DA29D21CAA79D6192380D728E019EEE4C87439A592FCD85945C3239A3A1F/f8dcfd6ac688452eb9870cc94bcce413/pdf/media/43170288b694450fbffba2d0e98b2f33/OM_07258-19_2_RXF38%20m.3.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "Air: 'Sag should be set to approximately 10-15 % of the fork travel.' Coil: 'Sag should be set to approximately 15-20 % of the fork travel.'",
+            "where": "owner's manual p.9 (air) and p.12 (coil)"
+          }
+        },
+        "pressureTable": {
+          "value": {
+            "unit": "psi",
+            "note": "Printed values are RANGES, not single numbers; two chambers (Main chamber / Ramp up chamber). Recorded exactly as printed; 'value' left as the printed range string - do not average.",
+            "rows": [
+              {
+                "rider": "50-60 kg (110-132 lbs)",
+                "value": "70-80 psi",
+                "mainChamber": "70-80 psi",
+                "rampUpChamber": "160-170 psi"
+              },
+              {
+                "rider": "60-70 kg (132-154 lbs)",
+                "value": "80-90 psi",
+                "mainChamber": "80-90 psi",
+                "rampUpChamber": "170-180 psi"
+              },
+              {
+                "rider": "70-80 kg (154-176 lbs)",
+                "value": "90-100 psi",
+                "mainChamber": "90-100 psi",
+                "rampUpChamber": "180-190 psi"
+              },
+              {
+                "rider": "80-90 kg (176-198 lbs)",
+                "value": "100-110 psi",
+                "mainChamber": "100-110 psi",
+                "rampUpChamber": "190-200 psi"
+              },
+              {
+                "rider": "90-100 kg (198-220 lbs)",
+                "value": "110-120 psi",
+                "mainChamber": "110-120 psi",
+                "rampUpChamber": "200-210 psi"
+              },
+              {
+                "rider": "100-110 kg (220-243 lbs)",
+                "value": "120-130 psi",
+                "mainChamber": "120-130 psi",
+                "rampUpChamber": "210-220 psi"
+              },
+              {
+                "rider": "110-120 kg (243-265 lbs)",
+                "value": "130-140 psi",
+                "mainChamber": "130-140 psi",
+                "rampUpChamber": "220-230 psi"
+              }
+            ]
+          },
+          "status": "verified",
+          "url": "https://www.ohlins.com/storage/1AE4DA29D21CAA79D6192380D728E019EEE4C87439A592FCD85945C3239A3A1F/f8dcfd6ac688452eb9870cc94bcce413/pdf/media/43170288b694450fbffba2d0e98b2f33/OM_07258-19_2_RXF38%20m.3.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Rider weight Main chamber Ramp up chamber 50-60 kg (110-132 lbs) 70-80 psi 160-170 psi 60-70 kg (132-154 lbs) 80-90 psi 170-180 psi 70-80 kg (154-176 lbs) 90-100 psi 180-190 psi 80-90 kg (176-198 lbs) 100-110 psi 190-200 psi 90-100 kg (198-220 lbs) 110-120 psi 200-210 psi 100-110 kg (220-243 lbs) 120-130 psi 210-220 psi 110-120 kg (243-265 lbs) 130-140 psi 220-230 psi",
+          "where": "owner's manual p.9, table under 3 Air spring setup",
+          "verifiedBy": {
+            "url": "https://www.ohlins.com/storage/1AE4DA29D21CAA79D6192380D728E019EEE4C87439A592FCD85945C3239A3A1F/f8dcfd6ac688452eb9870cc94bcce413/pdf/media/43170288b694450fbffba2d0e98b2f33/OM_07258-19_2_RXF38%20m.3.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "Rider weight | Main chamber | Ramp up chamber / 50-60 kg (110-132 lbs) 70-80 psi 160-170 psi ... 110-120 kg (243-265 lbs) 130-140 psi 220-230 psi",
+            "where": "owner's manual p.9 (3 Air spring setup)"
+          }
+        },
+        "axleToCrownMm": {
+          "value": {
+            "160": 573,
+            "170": 583,
+            "180": 593
+          },
+          "status": "single",
+          "url": "https://www.ohlins.com/storage/1AE4DA29D21CAA79D6192380D728E019EEE4C87439A592FCD85945C3239A3A1F/f8dcfd6ac688452eb9870cc94bcce413/pdf/media/43170288b694450fbffba2d0e98b2f33/OM_07258-19_2_RXF38%20m.3.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Fork travel [mm] Wiper seal to crown [mm] Axle to crown [mm] 160 162 573 170 172 583 180 182 593",
+          "where": "owner's manual p.10, Original fork lengths"
+        },
+        "coilSpringChart": {
+          "value": [
+            {
+              "springRateNmm": 7.0,
+              "tubeColor": "Yellow (3x)",
+              "riderWeightKg": 55,
+              "partNo": "19286-01"
+            },
+            {
+              "springRateNmm": 7.9,
+              "tubeColor": "Green (3x)",
+              "riderWeightKg": 64,
+              "partNo": "19286-02"
+            },
+            {
+              "springRateNmm": 8.8,
+              "tubeColor": "Blue (3x)",
+              "riderWeightKg": 72,
+              "partNo": "19286-03"
+            },
+            {
+              "springRateNmm": 9.7,
+              "tubeColor": "White (3x)",
+              "riderWeightKg": 82,
+              "partNo": "19286-04* (Standard AM fork)"
+            },
+            {
+              "springRateNmm": 10.6,
+              "tubeColor": "Black (3x)",
+              "riderWeightKg": 91,
+              "partNo": "19286-05"
+            },
+            {
+              "springRateNmm": 11.5,
+              "tubeColor": "Red, Black, Red",
+              "riderWeightKg": 100,
+              "partNo": "19286-06"
+            },
+            {
+              "springRateNmm": 12.4,
+              "tubeColor": "Yellow, Black, Yellow",
+              "riderWeightKg": 109,
+              "partNo": "19286-07"
+            }
+          ],
+          "status": "single",
+          "url": "https://www.ohlins.com/storage/1AE4DA29D21CAA79D6192380D728E019EEE4C87439A592FCD85945C3239A3A1F/f8dcfd6ac688452eb9870cc94bcce413/pdf/media/43170288b694450fbffba2d0e98b2f33/OM_07258-19_2_RXF38%20m.3.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Spring rate [N/mm] Tube color Rider weight (kg) Part no 7.0 Yellow (3x) 55 19286-01 7.9 Green (3x) 64 19286-02 8.8 Blue (3x) 72 19286-03 9.7 White (3x) 82 19286-04* 10.6 Black (3x) 91 19286-05 11.5 Red, Black, Red 100 19286-06 12.4 Yellow, Black, Yellow 109 19286-07 * Standard AM fork",
+          "where": "owner's manual p.12, 4 Coil spring setup"
+        },
+        "adjusterDirection": {
+          "value": "clockwise = more damping; count clicks from fully closed",
+          "status": "single",
+          "url": "https://www.ohlins.com/storage/1AE4DA29D21CAA79D6192380D728E019EEE4C87439A592FCD85945C3239A3A1F/f8dcfd6ac688452eb9870cc94bcce413/pdf/media/43170288b694450fbffba2d0e98b2f33/OM_07258-19_2_RXF38%20m.3.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Turn the adjuster clockwise to fully closed position. Then, turn counter clockwise to open, and count the clicks until you reach the recommended number of clicks.",
+          "where": "owner's manual p.13"
+        },
+        "manualUrl": {
+          "value": "https://www.ohlins.com/storage/1AE4DA29D21CAA79D6192380D728E019EEE4C87439A592FCD85945C3239A3A1F/f8dcfd6ac688452eb9870cc94bcce413/pdf/media/43170288b694450fbffba2d0e98b2f33/OM_07258-19_2_RXF38%20m.3.pdf",
+          "status": "single",
+          "url": "https://www.ohlins.com/storage/1AE4DA29D21CAA79D6192380D728E019EEE4C87439A592FCD85945C3239A3A1F/f8dcfd6ac688452eb9870cc94bcce413/pdf/media/43170288b694450fbffba2d0e98b2f33/OM_07258-19_2_RXF38%20m.3.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "RXF38 m.3 Owner’s Manual Front fork",
+          "where": "cover"
+        }
+      }
+    },
+    {
+      "id": "ohlins-ttx2air-m2-2026",
+      "name": "Öhlins TTX2Air m.2",
+      "type": "shock",
+      "modelYears": [
+        2026
+      ],
+      "catalogId": null,
+      "fields": {
+        "sizesAvailable": {
+          "value": [
+            "185 x 55/52.5/50/47.5 mm",
+            "205 x 65/62.5/60/57.5 mm",
+            "210 x 55/52.5/50/47.5 mm",
+            "230 x 65/62.5/60/57.5 mm"
+          ],
+          "status": "verified",
+          "url": "https://www.ohlins.com/en-us/mountain-bike/rear-shocks/ttx2air-m-2-185x55-am",
+          "retrieved": "2026-09-30",
+          "quote": "Select model: TTX2Air m.2 185x55, TTX2Air m.2 205x65, TTX2Air m.2 210x55, TTX2Air m.2 230x65 | Features (185x55 page): 185 x 55/52.5/50/47.5 mm",
+          "where": "product page select list + Features line on each of the four m.2 pages (https://www.ohlins.com/en-us/mountain-bike/rear-shocks/ttx2air-m-2-{185x55,205x65,210x55,230x65}-am)",
+          "verifiedBy": {
+            "url": "https://www.ohlins.com/en-us/mountain-bike/rear-shocks/ttx2air-m-2-185x55-am",
+            "retrieved": "2026-09-30",
+            "quote": "Select model: TTX2Air m.2 185x55 | TTX2Air m.2 205x65 | TTX2Air m.2 210x55 | TTX2Air m.2 230x65 | TTX2Air TM 185x55 | TTX2Air TM 205x65 | TTX2Air 190x45 | TTX2Air 210x55 | TTX2Air 230x65",
+            "where": "product page model selector + variant pages"
+          }
+        },
+        "strokeAdjust": {
+          "value": "stroke reducible in 2.5 mm steps (1-3 reducers)",
+          "status": "single",
+          "url": "https://www.ohlins.com/storage/EA440DBF6991433557E62D41C15D181108B7A5ED404E8EBAD5E6E430A0BE1CD9/334871ffd335434d9b316970be9ec628/pdf/media/03ee701433b042a8a129f0be2540708d/OM_07258-18_3_TTX_Air_m.2.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Each spacer reduces the stroke with 2.5 mm. Use 1, 2 or 3 spacers to reduce the stroke.",
+          "where": "owner's manual p.12, Stroke adjustment"
+        },
+        "mount": {
+          "value": null,
+          "status": "missing",
+          "note": "Product page only says 'Available in trunnion metric lengths' (Features) without per-size mount type; select list names carry no mount label. Not recorded to avoid inference."
+        },
+        "springType": {
+          "value": "air",
+          "status": "single",
+          "url": "https://www.ohlins.com/en-us/mountain-bike/rear-shocks/ttx2air-m-2-185x55-am",
+          "retrieved": "2026-09-30",
+          "quote": "Spring t:\nAir",
+          "where": "product page, Details table"
+        },
+        "lscMax": {
+          "value": 16,
+          "status": "verified",
+          "url": "https://www.ohlins.com/en-us/mountain-bike/rear-shocks/ttx2air-m-2-185x55-am",
+          "retrieved": "2026-09-30",
+          "quote": "Lsc Cli:\n16",
+          "where": "product page Details table; identical on all four m.2 size pages. Owner's manual gives no click total.",
+          "verifiedBy": {
+            "url": "https://www.ohlins.com/en-us/mountain-bike/rear-shocks/ttx2air-m-2-185x55-am",
+            "retrieved": "2026-09-30",
+            "quote": "Lsc Cli: 16",
+            "where": "product page Details (185x55, 205x65, 210x55, 230x65 identical)"
+          }
+        },
+        "hscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Maker gives positions, not clicks: product page 'Hsc Cli: 3' but owner's manual describes 3 named positions (1 Soft, 2 Medium, P Pedaling platform). See hscPositions. product page Details say \"Hsc Cli: 3\", manual describes 3 named positions (1 soft, 2 medium, P pedal platform) - positions, not a click range"
+        },
+        "hscPositions": {
+          "value": [
+            "1 Soft",
+            "2 Medium",
+            "P Pedaling platform"
+          ],
+          "status": "single",
+          "url": "https://www.ohlins.com/storage/EA440DBF6991433557E62D41C15D181108B7A5ED404E8EBAD5E6E430A0BE1CD9/334871ffd335434d9b316970be9ec628/pdf/media/03ee701433b042a8a129f0be2540708d/OM_07258-18_3_TTX_Air_m.2.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "The high speed adjuster has three positions, 1 soft, 2 medium and P Pedaling platform. The shocks are delivered with the adjuster set to position 2.",
+          "where": "owner's manual p.7, High speed compression damping"
+        },
+        "hscStart": {
+          "value": "2",
+          "status": "single",
+          "url": "https://www.ohlins.com/storage/EA440DBF6991433557E62D41C15D181108B7A5ED404E8EBAD5E6E430A0BE1CD9/334871ffd335434d9b316970be9ec628/pdf/media/03ee701433b042a8a129f0be2540708d/OM_07258-18_3_TTX_Air_m.2.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "The shocks are delivered with the adjuster set to position 2. This is the best all-round set up",
+          "where": "owner's manual p.7"
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://www.ohlins.com/storage/EA440DBF6991433557E62D41C15D181108B7A5ED404E8EBAD5E6E430A0BE1CD9/334871ffd335434d9b316970be9ec628/pdf/media/03ee701433b042a8a129f0be2540708d/OM_07258-18_3_TTX_Air_m.2.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Rebound damping adjuster 3. Adjust rebound Turn the adjuster placed in the center of the gold coloured nut on the side of the cylinder head.",
+          "where": "owner's manual p.6: adjusters 1 low speed, 2 high speed, 3 rebound",
+          "verifiedBy": {
+            "url": "https://www.ohlins.com/storage/EA440DBF6991433557E62D41C15D181108B7A5ED404E8EBAD5E6E430A0BE1CD9/334871ffd335434d9b316970be9ec628/pdf/media/03ee701433b042a8a129f0be2540708d/OM_07258-18_3_TTX_Air_m.2.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "'Turn the adjuster clockwise to fully closed position (position zero [0]). Then, turn counter clockwise to open, and count the clicks until you reach the recommended number of clicks.'",
+            "where": "owner's manual p.6"
+          }
+        },
+        "reboundMax": {
+          "value": 7,
+          "status": "verified",
+          "url": "https://www.ohlins.com/en-us/mountain-bike/rear-shocks/ttx2air-m-2-185x55-am",
+          "retrieved": "2026-09-30",
+          "quote": "Lsr Cli:\n7",
+          "where": "product page Details table; identical on all four m.2 size pages. Owner's manual gives no click total. (Previous TTX2Air pages show 'Lsr Cli: 12'.)",
+          "verifiedBy": {
+            "url": "https://www.ohlins.com/en-us/mountain-bike/rear-shocks/ttx2air-m-2-185x55-am",
+            "retrieved": "2026-09-30",
+            "quote": "Lsr Cli: 7",
+            "where": "product page Details (all four m.2 sizes)"
+          }
+        },
+        "hsrMax": {
+          "value": null,
+          "status": "verified",
+          "url": "https://www.ohlins.com/storage/EA440DBF6991433557E62D41C15D181108B7A5ED404E8EBAD5E6E430A0BE1CD9/334871ffd335434d9b316970be9ec628/pdf/media/03ee701433b042a8a129f0be2540708d/OM_07258-18_3_TTX_Air_m.2.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Compression damping adjuster 1. Adjust low speed ... 2. Adjust high speed ... Rebound damping adjuster 3. Adjust rebound",
+          "where": "owner's manual p.6; no high-speed rebound adjuster",
+          "verifiedBy": {
+            "url": "https://www.ohlins.com/storage/EA440DBF6991433557E62D41C15D181108B7A5ED404E8EBAD5E6E430A0BE1CD9/334871ffd335434d9b316970be9ec628/pdf/media/03ee701433b042a8a129f0be2540708d/OM_07258-18_3_TTX_Air_m.2.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "Manual p.6 lists adjusters '1. Adjust low speed', '2. Adjust high speed', '3. Adjust rebound' (single rebound adjuster)",
+            "where": "owner's manual p.6"
+          }
+        },
+        "hasClimbLever": {
+          "value": true,
+          "status": "verified",
+          "url": "https://www.ohlins.com/en-us/mountain-bike/rear-shocks/ttx2air-m-2-185x55-am",
+          "retrieved": "2026-09-30",
+          "quote": "Climb mode",
+          "where": "product page Features; manual p.7: 'Position P is for those long climbs' (HSC knob position P, remote-compatible)",
+          "verifiedBy": {
+            "url": "https://www.ohlins.com/en-us/mountain-bike/rear-shocks/ttx2air-m-2-185x55-am",
+            "retrieved": "2026-09-30",
+            "quote": "Product page Features: 'Climb mode' | Manual p.6: 'Position 1 Soft 2 Medium P Pedaling platform' / p.7 'Position P is for those long climbs'",
+            "where": "product page Features + owner's manual p.6-7"
+          }
+        },
+        "remoteCompatible": {
+          "value": true,
+          "status": "single",
+          "url": "https://www.ohlins.com/en-us/mountain-bike/rear-shocks/ttx2air-m-2-185x55-am",
+          "retrieved": "2026-09-30",
+          "quote": "The system works with any remote that pulls 7.5 mm of cable per click, including the Öhlins 3-Mode Remote, Scott TwinLoc, and Orbea Squidlock.",
+          "where": "product page Description"
+        },
+        "maxPressurePsi": {
+          "value": 325,
+          "status": "verified",
+          "url": "https://www.ohlins.com/en-us/mountain-bike/rear-shocks/ttx2air-m-2-185x55-am",
+          "retrieved": "2026-09-30",
+          "quote": "Maximum air pressure: 325 psi",
+          "where": "product page Features (manual p.4: '325 psi for double tube air spring')",
+          "verifiedBy": {
+            "url": "https://www.ohlins.com/en-us/mountain-bike/rear-shocks/ttx2air-m-2-185x55-am",
+            "retrieved": "2026-09-30",
+            "quote": "Product page: 'Maximum air pressure: 325 psi' / 'Pressure: 325 psi' | Manual p.4: 'Maximum air pressure: 300 psi for single tube air spring. 325 psi for double tube air spring'",
+            "where": "product page Features/Details + owner's manual p.4"
+          }
+        },
+        "pressureStartPsi": {
+          "value": 170,
+          "status": "single",
+          "url": "https://www.ohlins.com/storage/EA440DBF6991433557E62D41C15D181108B7A5ED404E8EBAD5E6E430A0BE1CD9/334871ffd335434d9b316970be9ec628/pdf/media/03ee701433b042a8a129f0be2540708d/OM_07258-18_3_TTX_Air_m.2.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Use a shock absorber pump to fill up the shock absorber. Start with 170 PSI.",
+          "where": "owner's manual p.5, Setting sag step 1"
+        },
+        "sagPercent": {
+          "value": "25-35",
+          "status": "verified",
+          "url": "https://www.ohlins.com/storage/EA440DBF6991433557E62D41C15D181108B7A5ED404E8EBAD5E6E430A0BE1CD9/334871ffd335434d9b316970be9ec628/pdf/media/03ee701433b042a8a129f0be2540708d/OM_07258-18_3_TTX_Air_m.2.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "The recommended sag is 25-35% of the shock stroke",
+          "where": "owner's manual p.5",
+          "verifiedBy": {
+            "url": "https://www.ohlins.com/storage/EA440DBF6991433557E62D41C15D181108B7A5ED404E8EBAD5E6E430A0BE1CD9/334871ffd335434d9b316970be9ec628/pdf/media/03ee701433b042a8a129f0be2540708d/OM_07258-18_3_TTX_Air_m.2.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "'The recommended sag is 25-35% of the shock stroke'",
+            "where": "owner's manual p.5"
+          }
+        },
+        "sagNote": {
+          "value": "HSC in position 1 or 2 when setting sag",
+          "status": "single",
+          "url": "https://www.ohlins.com/storage/EA440DBF6991433557E62D41C15D181108B7A5ED404E8EBAD5E6E430A0BE1CD9/334871ffd335434d9b316970be9ec628/pdf/media/03ee701433b042a8a129f0be2540708d/OM_07258-18_3_TTX_Air_m.2.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Make sure the high speed adjuster is in position 1 or 2 while setting sag. Setting sag in position P will result in wrong set up.",
+          "where": "owner's manual p.5"
+        },
+        "volumeSpacers": {
+          "value": {
+            "spacerMm3": 2000,
+            "MTBM 2565 & MTBM 2585": {
+              "production": 10000,
+              "max": 16000
+            },
+            "MTBM 2569 & MTBM 2589": {
+              "production": 12000,
+              "max": 18000
+            }
+          },
+          "status": "single",
+          "url": "https://www.ohlins.com/storage/EA440DBF6991433557E62D41C15D181108B7A5ED404E8EBAD5E6E430A0BE1CD9/334871ffd335434d9b316970be9ec628/pdf/media/03ee701433b042a8a129f0be2540708d/OM_07258-18_3_TTX_Air_m.2.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Each spacer = 2000 mm3. ... Production setting MTBM 2565 & MTBM 2585 10 000 mm3 Maximum reducer volume allowed: 16 000 mm3 MTBM 2569 & MTBM 2589 12 000 mm3 Maximum reducer volume allowed: 18 000 mm3",
+          "where": "owner's manual p.10, TTX2AIR (part nos: 185x55=MTBM 2565, 210x55=MTBM 2585, 205x65=MTBM 2569, 230x65=MTBM 2589 per product pages)"
+        },
+        "manualUrl": {
+          "value": "https://www.ohlins.com/storage/EA440DBF6991433557E62D41C15D181108B7A5ED404E8EBAD5E6E430A0BE1CD9/334871ffd335434d9b316970be9ec628/pdf/media/03ee701433b042a8a129f0be2540708d/OM_07258-18_3_TTX_Air_m.2.pdf",
+          "status": "single",
+          "url": "https://www.ohlins.com/storage/EA440DBF6991433557E62D41C15D181108B7A5ED404E8EBAD5E6E430A0BE1CD9/334871ffd335434d9b316970be9ec628/pdf/media/03ee701433b042a8a129f0be2540708d/OM_07258-18_3_TTX_Air_m.2.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Owner’s Manual | Part No. OM_07258-18 TTXAir m.2 | Issued 2025-04-17",
+          "where": "back page"
+        }
+      }
+    },
+    {
+      "id": "ohlins-ttx22m2-coil-2026",
+      "name": "Öhlins TTX22m.2 Coil",
+      "type": "shock",
+      "modelYears": [
+        2026
+      ],
+      "catalogId": null,
+      "fields": {
+        "sizesAvailable": {
+          "value": [
+            "210 x 55/52.5/50/47.5 mm",
+            "230 x 65/62.5/60/57.5 mm",
+            "250 x 75/72.5/70/67.5 mm",
+            "TM 185 x 55/52.5/50/47.5 mm",
+            "TM 205 x 65/62.5/60/57.5 mm",
+            "TM 225 x 75/72.5/70/67.5 mm",
+            "TM PB 185 x 55/52.5/50/47.5 mm",
+            "TM PB 205 x 65/62.5/60/57.5 mm",
+            "TM PB 225 x 75/72.5/70/67.5 mm"
+          ],
+          "status": "verified",
+          "url": "https://www.ohlins.com/en-us/mountain-bike/rear-shocks/ttx22m-2-coil-210x55-am",
+          "retrieved": "2026-09-30",
+          "quote": "Select model: TTX22M.2 Coil 210x55, TTX22M.2 Coil 230x65, TTX22M.2 Coil 250x75, TTX22M.2 Coil TM 185x55, TTX22M.2 Coil TM 205x65, TTX22M.2 Coil TM 225x75, TTX22M.2 Coil TM PB 185x55, TTX22M.2 Coil TM PB 205x65, TTX22M.2 Coil TM PB 225x75 | 210x55 page Features: 210 x 55/52.5/50/47.5 mm",
+          "where": "product page select list; stroke options from the Features line on each size page (ttx22m-2-coil-{210x55,230x65,250x75,tm-185x55,tm-205x65,tm-225x75,tm-pb-185x55,tm-pb-205x65,tm-pb-225x75}-am). 'TM'/'PB' labels as printed; meaning of 'PB' not stated.",
+          "verifiedBy": {
+            "url": "https://www.ohlins.com/en-us/mountain-bike/rear-shocks/ttx22m-2-coil-210x55-am",
+            "retrieved": "2026-09-30",
+            "quote": "Select model: TTX22M.2 Coil 210x55 | 230x65 | 250x75 | TM 185x55 | TM 205x65 | TM 225x75 | TM PB 185x55 | TM PB 205x65 | TM PB 225x75",
+            "where": "product page model selector + variant pages"
+          }
+        },
+        "mount": {
+          "value": null,
+          "status": "missing",
+          "note": "Only the size names carry 'TM' labels; no explicit mount description per size. Not recorded."
+        },
+        "springType": {
+          "value": "coil",
+          "status": "single",
+          "url": "https://www.ohlins.com/en-us/mountain-bike/rear-shocks/ttx22m-2-coil-210x55-am",
+          "retrieved": "2026-09-30",
+          "quote": "Spring t:\nCoil",
+          "where": "product page, Details table"
+        },
+        "lscMax": {
+          "value": 16,
+          "status": "verified",
+          "url": "https://www.ohlins.com/en-us/mountain-bike/rear-shocks/ttx22m-2-coil-210x55-am",
+          "retrieved": "2026-09-30",
+          "quote": "External, 16 click low-speed compression adjustment rebound damping adjustment",
+          "where": "product page Features (matches Details table 'Lsc Cli: 16' on all 9 size pages)",
+          "verifiedBy": {
+            "url": "https://www.ohlins.com/en-us/mountain-bike/rear-shocks/ttx22m-2-coil-210x55-am",
+            "retrieved": "2026-09-30",
+            "quote": "Features: 'External, 16 click low-speed compression adjustment rebound damping adjustment' / Details 'Lsc Cli: 16'",
+            "where": "product page (all 9 variants)"
+          }
+        },
+        "hscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Maker gives levels, not clicks: 'External, 3 level high-speed compression adjustment' and manual 'three positions, I soft, II medium and III hard/pedal platform'. See hscPositions. product page Details say \"Hsc Cli: 3\", manual: positions I soft / II medium / III hard-pedal platform - positions, not a click range"
+        },
+        "hscPositions": {
+          "value": [
+            "I soft",
+            "II medium",
+            "III hard/pedal platform"
+          ],
+          "status": "single",
+          "url": "https://ohlins.com/storage/513B4A86F95FBCE454466FC32A2535A8345BC4AB02A482909AB1EB01DA34FC13/4217d1ac8ed14007a7b8af264e3b26b4/pdf/media/989d9fb5c12b4f28a687776f34b3aff8/OM_07254-05_2_TTX22m.2_Trunnion.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "The high speed adjuster has three positions, I soft, II medium and III hard/pedal platform. The shocks are delivered with the adjuster set to position II.",
+          "where": "owner's manual p.11, High speed compression damping"
+        },
+        "hscStart": {
+          "value": "II",
+          "status": "single",
+          "url": "https://ohlins.com/storage/513B4A86F95FBCE454466FC32A2535A8345BC4AB02A482909AB1EB01DA34FC13/4217d1ac8ed14007a7b8af264e3b26b4/pdf/media/989d9fb5c12b4f28a687776f34b3aff8/OM_07254-05_2_TTX22m.2_Trunnion.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "The shocks are delivered with the adjuster set to position II. This is the best all-round set up",
+          "where": "owner's manual p.11"
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://ohlins.com/storage/513B4A86F95FBCE454466FC32A2535A8345BC4AB02A482909AB1EB01DA34FC13/4217d1ac8ed14007a7b8af264e3b26b4/pdf/media/989d9fb5c12b4f28a687776f34b3aff8/OM_07254-05_2_TTX22m.2_Trunnion.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Rebound damping adjuster 3. Adjust rebound Turn the gold colored adjuster on the end eye/ bracket.",
+          "where": "owner's manual p.9",
+          "verifiedBy": {
+            "url": "https://www.ohlins.com/storage/513B4A86F95FBCE454466FC32A2535A8345BC4AB02A482909AB1EB01DA34FC13/4217d1ac8ed14007a7b8af264e3b26b4/pdf/media/989d9fb5c12b4f28a687776f34b3aff8/OM_07254-05_2_TTX22m.2_Trunnion.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "'Turn the adjuster clockwise to fully closed position (position zero [0]). Then, turn counter clockwise to open, and count the clicks until you reach the recommended number of clicks.'",
+            "where": "owner's manual p.9"
+          }
+        },
+        "reboundMax": {
+          "value": null,
+          "status": "conflict",
+          "candidates": [
+            {
+              "value": 7,
+              "url": "https://www.ohlins.com/en-us/mountain-bike/rear-shocks/ttx22m-2-coil-210x55-am",
+              "quote": "External, 7 click rebound adjustment",
+              "where": "Features"
+            },
+            {
+              "value": 6,
+              "url": "https://www.ohlins.com/en-us/mountain-bike/rear-shocks/ttx22m-2-coil-210x55-am",
+              "quote": "Lsr Cli: 6",
+              "where": "Details table"
+            }
+          ],
+          "issue": "https://github.com/sunra-stardust/suspension-setup/issues/10",
+          "note": "documents disagree; see issue"
+        },
+        "hsrMax": {
+          "value": null,
+          "status": "verified",
+          "url": "https://ohlins.com/storage/513B4A86F95FBCE454466FC32A2535A8345BC4AB02A482909AB1EB01DA34FC13/4217d1ac8ed14007a7b8af264e3b26b4/pdf/media/989d9fb5c12b4f28a687776f34b3aff8/OM_07254-05_2_TTX22m.2_Trunnion.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Compression damping adjuster 1. Adjust low speed ... 2. Adjust high speed ... Rebound damping adjuster 3. Adjust rebound",
+          "where": "owner's manual p.9; no high-speed rebound adjuster",
+          "verifiedBy": {
+            "url": "https://www.ohlins.com/storage/513B4A86F95FBCE454466FC32A2535A8345BC4AB02A482909AB1EB01DA34FC13/4217d1ac8ed14007a7b8af264e3b26b4/pdf/media/989d9fb5c12b4f28a687776f34b3aff8/OM_07254-05_2_TTX22m.2_Trunnion.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "'The rebound adjuster controls the low speed rebound damping.'",
+            "where": "owner's manual p.11"
+          }
+        },
+        "hasClimbLever": {
+          "value": null,
+          "status": "missing",
+          "note": "No 'climb mode' feature listed. Manual: 'For certain models the third position is a pedal platform' - not definitive for this shock."
+        },
+        "preloadGuide": {
+          "value": "max 2 full turns of preload",
+          "status": "verified",
+          "url": "https://ohlins.com/storage/513B4A86F95FBCE454466FC32A2535A8345BC4AB02A482909AB1EB01DA34FC13/4217d1ac8ed14007a7b8af264e3b26b4/pdf/media/989d9fb5c12b4f28a687776f34b3aff8/OM_07254-05_2_TTX22m.2_Trunnion.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Turn the spring seat against the spring. Preload the spring a maximum of 2 full turns.",
+          "where": "owner's manual p.7, Change spring and set spring preload step 5",
+          "verifiedBy": {
+            "url": "https://www.ohlins.com/storage/513B4A86F95FBCE454466FC32A2535A8345BC4AB02A482909AB1EB01DA34FC13/4217d1ac8ed14007a7b8af264e3b26b4/pdf/media/989d9fb5c12b4f28a687776f34b3aff8/OM_07254-05_2_TTX22m.2_Trunnion.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "'Turn the spring seat against the spring. Preload the spring a maximum of 2 full turns.'",
+            "where": "owner's manual p.7"
+          }
+        },
+        "springRateSteps": {
+          "value": "4 N/mm (23 lb/in) increments",
+          "status": "single",
+          "url": "https://www.ohlins.com/en-us/mountain-bike/rear-shocks/ttx22m-2-coil-210x55-am",
+          "retrieved": "2026-09-30",
+          "quote": "Suitable for our lightweight springs with 4 N/mm (23 lb/in) increments",
+          "where": "product page Features"
+        },
+        "sagPercent": {
+          "value": "25-35",
+          "status": "verified",
+          "url": "https://ohlins.com/storage/513B4A86F95FBCE454466FC32A2535A8345BC4AB02A482909AB1EB01DA34FC13/4217d1ac8ed14007a7b8af264e3b26b4/pdf/media/989d9fb5c12b4f28a687776f34b3aff8/OM_07254-05_2_TTX22m.2_Trunnion.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "A general guideline for recommended sag is 25-35% of the stroke.",
+          "where": "owner's manual p.10",
+          "verifiedBy": {
+            "url": "https://www.ohlins.com/storage/513B4A86F95FBCE454466FC32A2535A8345BC4AB02A482909AB1EB01DA34FC13/4217d1ac8ed14007a7b8af264e3b26b4/pdf/media/989d9fb5c12b4f28a687776f34b3aff8/OM_07254-05_2_TTX22m.2_Trunnion.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "'A general guideline for recommended sag is 25-35% of the stroke.'",
+            "where": "owner's manual p.10"
+          }
+        },
+        "strokeAdjust": {
+          "value": "stroke spacers 18099-01, -2.5/-5/-7.5 mm",
+          "status": "single",
+          "url": "https://ohlins.com/storage/513B4A86F95FBCE454466FC32A2535A8345BC4AB02A482909AB1EB01DA34FC13/4217d1ac8ed14007a7b8af264e3b26b4/pdf/media/989d9fb5c12b4f28a687776f34b3aff8/OM_07254-05_2_TTX22m.2_Trunnion.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Travel Stroke spacer (18099-01) Screw (x2) -0 0 00828-04 (8 mm) -2.5 1 00828-04 (8 mm) -5 2 00828-05 (12 mm) -7.5 3 00828-05 (12 mm)",
+          "where": "owner's manual p.8"
+        },
+        "manualUrl": {
+          "value": "https://ohlins.com/storage/513B4A86F95FBCE454466FC32A2535A8345BC4AB02A482909AB1EB01DA34FC13/4217d1ac8ed14007a7b8af264e3b26b4/pdf/media/989d9fb5c12b4f28a687776f34b3aff8/OM_07254-05_2_TTX22m.2_Trunnion.pdf",
+          "status": "single",
+          "url": "https://ohlins.com/storage/513B4A86F95FBCE454466FC32A2535A8345BC4AB02A482909AB1EB01DA34FC13/4217d1ac8ed14007a7b8af264e3b26b4/pdf/media/989d9fb5c12b4f28a687776f34b3aff8/OM_07254-05_2_TTX22m.2_Trunnion.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Owner’s Manual | Part No. TTX22m.2 | Part No. 07254-05_2 | Issued 2026-05-18",
+          "where": "back page"
+        }
+      }
+    }
+  ]
+}

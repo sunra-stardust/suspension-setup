@@ -1,0 +1,206 @@
+{
+  "maker": "trek",
+  "models": [
+    {
+      "id": "trek-slash-9-8-xt-di2-gen-6",
+      "name": "Trek Slash 9.8 XT Di2 Gen 6",
+      "modelYears": [],
+      "productPageUrl": "https://www.trekbikes.com/us/en_US/bikes/mountain-bikes/trail-mountain-bikes/slash/f/F341/slash-9-8-xt-di2-gen-6/52582/",
+      "fields": {
+        "rearTravelMm": {
+          "value": 170,
+          "status": "verified",
+          "url": "https://api.trekbikes.com/occ/v2/us/products/52582/specifications?lang=en_US",
+          "retrieved": "2026-09-30",
+          "quote": "OCLV Mountain Carbon, high main pivot, idler pulley, internal storage, angle-adjust headset, adjustable leverage rate, integrated frame protection, internal routing, alloy rocker link, ISCG 05, Active Braking Pivot, UDH, 148x12mm thru axle, 170mm travel",
+          "where": "Spec list (as rendered on product page), item 'Frame'",
+          "verifiedBy": {
+            "url": "https://api.trekbikes.com/occ/v2/us/products/52582/specifications?lang=en_US",
+            "retrieved": "2026-09-30",
+            "quote": "OCLV Mountain Carbon, high main pivot, idler pulley, internal storage, angle-adjust headset, adjustable leverage rate, ... 148x12mm thru axle, 170mm travel",
+            "where": "Spec table 'Frame' (all sizes S–XL); also shortSpecFrame 'OCLV Mountain Carbon, 170mm'"
+          }
+        },
+        "forkTravelMm": {
+          "value": 170,
+          "status": "verified",
+          "url": "https://api.trekbikes.com/occ/v2/us/products/52582/specifications?lang=en_US",
+          "retrieved": "2026-09-30",
+          "quote": "RockShox ZEB Select+, DebonAir spring, Charger 3.1 RC2 damper, tapered steerer, 44mm offset, Boost110, Maxle Stealth, 170mm travel",
+          "where": "Spec list, item 'Fork' (all sizes S-XL)",
+          "verifiedBy": {
+            "url": "https://api.trekbikes.com/occ/v2/us/products/52582/specifications?lang=en_US",
+            "retrieved": "2026-09-30",
+            "quote": "RockShox ZEB Select+, DebonAir spring, Charger 3.1 RC2 damper, tapered steerer, 44mm offset, Boost110, Maxle Stealth, 170mm travel",
+            "where": "Spec table 'Fork', all sizes"
+          }
+        },
+        "forkTravelMaxMm": {
+          "value": 190,
+          "status": "single",
+          "url": "https://retailerassetsprd.blob.core.windows.net/techassets/Slash_AlloyCarbon_ServiceManual_MY24_EN-US_2025-8-13.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Frame size Axle to Race (mm) Travel / S Recommended 566 170 / Maximum 587 190 / M, ML, L, XL Recommended 586 170 / Maximum 606 190",
+          "where": "Service manual p.23 (PDF page 24) 'Specifications' > Fork"
+        },
+        "wheelSize": {
+          "value": {
+            "S": {
+              "front": "27.5",
+              "rear": "27.5"
+            },
+            "M-XL": {
+              "front": "29",
+              "rear": "27.5"
+            }
+          },
+          "status": "verified",
+          "url": "https://api.trekbikes.com/occ/v2/us/products/52582/specifications?lang=en_US",
+          "retrieved": "2026-09-30",
+          "quote": "Wheel front: 'Bontrager Line Comp 30, Tubeless Ready, 6-bolt, Boost110, 15mm thru axle, 27.5''' [S] / 'Bontrager Line Comp 30, Tubeless Ready, 6-bolt, Boost110, 15mm thru axle, 29''' [M, ML, L, XL]; Wheel rear: 'Bontrager Line Comp 30, Tubeless Ready, Rapid Drive 108, 6-bolt, Shimano Micro Spline freehub, Boost148, 12mm thru axle, 27.5''' [S, M, ML, L, XL]",
+          "where": "Spec list, items 'Wheel front' / 'Wheel rear' with frame-size mapping. FAQ confirms: 'Stock mixed-wheel builds (29” front, 27.5” rear) on all sizes except S (27.5” front and rear)'",
+          "verifiedBy": {
+            "url": "https://api.trekbikes.com/occ/v2/us/products/52582/specifications?lang=en_US",
+            "retrieved": "2026-09-30",
+            "quote": "Wheel front: 'Bontrager Line Comp 30, ... 27.5''' [S] / '... 29''' [M, ML, L, XL]; Wheel rear: '... Boost148, 12mm thru axle, 27.5''' [S, M, ML, L, XL]",
+            "where": "Spec table 'Wheel front' / 'Wheel rear'"
+          }
+        },
+        "sizes": {
+          "value": [
+            "S",
+            "M",
+            "ML",
+            "L",
+            "XL"
+          ],
+          "status": "verified",
+          "url": "https://www.trekbikes.com/us/en_US/v1/api/product/52582/full/",
+          "retrieved": "2026-09-30",
+          "quote": "Size options: \"S (27.5\\\" wheel)\", \"M\", \"ML\", \"L\", \"XL\"",
+          "where": "Product JSON variantAttributesDirectory bike_sizeFrame (size selector on product page); spec list maps every item to 'S ', 'M', 'ML', 'L', 'XL'",
+          "verifiedBy": {
+            "url": "https://api.trekbikes.com/occ/v2/us/products/52582/full (same data as https://www.trekbikes.com/us/en_US/v1/api/product/52582/full/)",
+            "retrieved": "2026-09-30",
+            "quote": "variantAttributesDirectory Size options: 'S (27.5\" wheel)', 'M', 'ML', 'L', 'XL'",
+            "where": "Product JSON size selector; spec table size columns 'S ','M','ML','L','XL'"
+          }
+        },
+        "shockEyeToEyeMm": {
+          "value": 230,
+          "status": "verified",
+          "url": "https://retailerassetsprd.blob.core.windows.net/techassets/Slash_AlloyCarbon_ServiceManual_MY24_EN-US_2025-8-13.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Shock Dimensions / Eye-to Eye-length: 230mm / Stroke length: 65mm",
+          "where": "Service manual p.9 (PDF page 10) 'Rear shock hardware'; also spec list 'Shock': 'RockShox Vivid Select+, 230mm x 65mm'",
+          "verifiedBy": {
+            "url": "https://api.trekbikes.com/occ/v2/us/products/52582/specifications?lang=en_US",
+            "retrieved": "2026-09-30",
+            "quote": "RockShox Vivid Select+, 230mm x 65mm",
+            "where": "Spec table 'Shock'"
+          }
+        },
+        "shockStrokeMm": {
+          "value": 65,
+          "status": "verified",
+          "url": "https://retailerassetsprd.blob.core.windows.net/techassets/Slash_AlloyCarbon_ServiceManual_MY24_EN-US_2025-8-13.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Stroke length: 65mm",
+          "where": "Service manual p.9 (PDF page 10) 'Rear shock hardware'",
+          "verifiedBy": {
+            "url": "https://retailerassetsprd.blob.core.windows.net/techassets/Slash_AlloyCarbon_ServiceManual_MY24_EN-US_2025-8-13.pdf (Trek 'Service manual - Slash Gen 6', linked from the bike page via https://api.trekbikes.com/occ/v2/us/products/technical/52582 + /products/processLink)",
+            "retrieved": "2026-09-30",
+            "quote": "Stroke length: 65mm",
+            "where": "Service manual 'Rear shock hardware' page (p.9), Shock Dimensions"
+          }
+        },
+        "shockMount": {
+          "value": "standard pin mount (eyelet), 54mm x 10mm upper, 20mm x 8mm lower",
+          "status": "single",
+          "url": "https://www.trekbikes.com/us/en_US/FAQ/Slash-Gen6/",
+          "retrieved": "2026-09-30",
+          "quote": "Slash takes a 230mm x 65mm shock with an industry standard 54mm x 10mm upper and 20mm x 8mm lower standard pin mount.",
+          "where": "FAQ 'What size hardware is needed for aftermarket shocks?'; service manual p.9: 'Shock air can mount/bolt: 54mmx10mm / Shock shaft mount/bolt: 20mmx8mm'. NOTE conflict: the spec list's service description says '20mm x 10mm lower eyelet hardware'"
+        },
+        "stockForkBySpec": {
+          "value": {
+            "Slash 9.8 XT Di2 Gen 6": "RockShox ZEB Select+, DebonAir spring, Charger 3.1 RC2 damper, tapered steerer, 44mm offset, Boost110, Maxle Stealth, 170mm travel"
+          },
+          "status": "verified",
+          "url": "https://api.trekbikes.com/occ/v2/us/products/52582/specifications?lang=en_US",
+          "retrieved": "2026-09-30",
+          "quote": "RockShox ZEB Select+, DebonAir spring, Charger 3.1 RC2 damper, tapered steerer, 44mm offset, Boost110, Maxle Stealth, 170mm travel",
+          "where": "Spec list item 'Fork' (sizes S, M, ML, L, XL); short spec on page: 'RockShox ZEB Select+, 170mm'; service description adds 'SRAM part number 00.4021.043.020'",
+          "verifiedBy": {
+            "url": "https://api.trekbikes.com/occ/v2/us/products/52582/specifications?lang=en_US",
+            "retrieved": "2026-09-30",
+            "quote": "RockShox ZEB Select+, DebonAir spring, Charger 3.1 RC2 damper, tapered steerer, 44mm offset, Boost110, Maxle Stealth, 170mm travel",
+            "where": "Spec table 'Fork'"
+          }
+        },
+        "stockShockBySpec": {
+          "value": {
+            "Slash 9.8 XT Di2 Gen 6": "RockShox Vivid Select+, 230mm x 65mm"
+          },
+          "status": "verified",
+          "url": "https://api.trekbikes.com/occ/v2/us/products/52582/specifications?lang=en_US",
+          "retrieved": "2026-09-30",
+          "quote": "RockShox Vivid Select+, 230mm x 65mm",
+          "where": "Spec list item 'Shock' (sizes S, M, ML, L, XL); service description: 'RockShox Vivid Select+, 230mm x 65mm, 54mm x 10mm upper eyelet hardware, 20mm x 10mm lower eyelet hardware, SRAM part number 00.4118.371.283'",
+          "verifiedBy": {
+            "url": "https://api.trekbikes.com/occ/v2/us/products/52582/specifications?lang=en_US",
+            "retrieved": "2026-09-30",
+            "quote": "RockShox Vivid Select+, 230mm x 65mm",
+            "where": "Spec table 'Shock' (all sizes)"
+          }
+        },
+        "sagPercent": {
+          "value": null,
+          "status": "missing",
+          "note": "Service manual p.23 only says 'Recommended sag: Refer to the suspension calculator at Trekbikes.com/suspension-calculator.' The calculator (trekbikes.com/us/en_US/suspension-calculator/) is an interactive widget served from api-barracuda.zoovu.com (third-party host), no static sag value on trekbikes.com; product page JSON and Slash Gen 6 FAQ contain no sag figure."
+        },
+        "setupGuideUrl": {
+          "value": "https://www.trekbikes.com/us/en_US/suspension-calculator/",
+          "status": "single",
+          "url": "https://retailerassetsprd.blob.core.windows.net/techassets/Slash_AlloyCarbon_ServiceManual_MY24_EN-US_2025-8-13.pdf",
+          "retrieved": "2026-09-30",
+          "quote": "Recommended sag: Refer to the suspension calculator at Trekbikes.com/suspension-calculator.",
+          "where": "Service manual p.23 (PDF page 24) 'Specifications' > Fork"
+        },
+        "flipChip": {
+          "value": {
+            "minoLink": false,
+            "progressionChip": [
+              "20% Progression Softer",
+              "25% Progression Firmer"
+            ]
+          },
+          "status": "verified",
+          "url": "https://www.trekbikes.com/us/en_US/FAQ/Slash-Gen6/",
+          "retrieved": "2026-09-30",
+          "quote": "Why doesn’t it have Mino Link? Because the angle-adjust headset and bolt-on lower shock mount make it redundant.",
+          "where": "Slash Gen 6 FAQ; service manual p.22 (PDF page 23) 'Adjust the progression': 'The shock progression chip can be flipped to fine tune the shock performance for the terrain or rider preference. ... 20% Progression Softer 25% Progression Firmer' (part: 'Progression mino link — 5303333')",
+          "verifiedBy": {
+            "url": "https://retailerassetsprd.blob.core.windows.net/techassets/Slash_AlloyCarbon_ServiceManual_MY24_EN-US_2025-8-13.pdf (Trek 'Service manual - Slash Gen 6', linked from the bike page via https://api.trekbikes.com/occ/v2/us/products/technical/52582 + /products/processLink)",
+            "retrieved": "2026-09-30",
+            "quote": "Adjust the progression — The shock progression chip can be flipped to fine tune the shock performance for the terrain or rider preference. ... 20% Progression Softer 25% Progression Firmer",
+            "where": "Service manual p.22 'Adjust the progression'"
+          }
+        },
+        "serviceManualUrl": {
+          "value": "https://retailerassetsprd.blob.core.windows.net/techassets/Slash_AlloyCarbon_ServiceManual_MY24_EN-US_2025-8-13.pdf",
+          "status": "single",
+          "url": "https://api.trekbikes.com/occ/v2/us/products/technical/52582?lang=en_US",
+          "retrieved": "2026-09-30",
+          "quote": "\"link\" : \"Slash_AlloyCarbon_ServiceManual_MY24_EN-US_2025-8-13.pdf\", \"title\" : \"Service manual - Slash Gen 6\"",
+          "where": "Product technical references (Documents on product page); resolved via trekbikes processLink to Trek's Azure asset store (SAS query string omitted)"
+        },
+        "modelYear": {
+          "value": null,
+          "status": "missing",
+          "note": "No model year printed on the product page, spec list or JSON (site sets b2cHideBikeModelYearToggle: true). Only hints: image asset ids 'Slash98-26-52582-...' and powerReviewsID '47279_2025'; product flagged BADGE_CLOSEOUT. modelYears [2026] is an assumption (current listing on 2026-09-30), not a quote."
+        }
+      }
+    }
+  ]
+}

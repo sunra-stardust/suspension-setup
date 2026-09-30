@@ -1,0 +1,244 @@
+{
+  "maker": "yt-industries",
+  "models": [
+    {
+      "id": "yt-industries-capra-mx-core-3-cf",
+      "name": "YT Industries Capra MX Core 3 CF",
+      "modelYears": [],
+      "fields": {
+        "modelYear": {
+          "value": null,
+          "status": "missing",
+          "note": "no model year printed; only image file names contain 'MY25' (not evidence); YT: 'CAPRA | MK3 | 2021 - Current'"
+        },
+        "variantShown": {
+          "value": "Capra MX CORE 3 CF (product no. 103772)",
+          "status": "single",
+          "url": "https://www.yt-industries.com/Bikes/Enduro-Capra/CORE-3/Core-3-CF/",
+          "retrieved": "2026-09-30",
+          "quote": "Capra MX CORE 3 CF",
+          "where": "page payload: product header 'MX' / productNumber 103772; compare card name"
+        },
+        "rearTravelMm": {
+          "value": 170,
+          "status": "verified",
+          "url": "https://www.yt-industries.com/Bikes/Enduro-Capra/",
+          "retrieved": "2026-09-30",
+          "quote": "<b>MX:</b> Playful and responsive, the CAPRA MX is our go-to enduro bike for rowdy riding. If you want to pull up off every little lip, the progressive suspension tune and 170mm of front and rear travel make this bike our designated bruiser.",
+          "where": "Capra overview section (also on Core-3-CF page); compare card for 'Capra MX CORE 3 CF': travel '170 mm / 170 mm'",
+          "verifiedBy": {
+            "url": "https://www.yt-industries.com/Bikes/Enduro-Capra/CORE-3/Core-3-CF/",
+            "retrieved": "2026-09-30",
+            "quote": "MX: Playful and responsive, the CAPRA MX is our go-to enduro bike for rowdy riding. If you want to pull up off every little lip, the progressive suspension tune and 170mm of front and rear travel make this bike our designated bruiser.",
+            "where": "Bike page CMS text (Capra MX description); header badge '170 mm / 170 mm' for the MX CF build"
+          }
+        },
+        "forkTravelMm": {
+          "value": 170,
+          "status": "verified",
+          "url": "https://www.yt-industries.com/Bikes/Enduro-Capra/CORE-3/Core-3-CF/",
+          "retrieved": "2026-09-30",
+          "quote": "ÖHLINS RXF38 M.2 — 29“ | 170 mm | H/LSC LSR | 15x110 mm | 44mm Offset",
+          "where": "Specs > Suspension > Fork",
+          "verifiedBy": {
+            "url": "https://www.yt-industries.com/Bikes/Enduro-Capra/CORE-3/Core-3-CF/",
+            "retrieved": "2026-09-30",
+            "quote": "ÖHLINS RXF38 M.2 — 29“ | 170 mm | H/LSC LSR | 15x110 mm | 44mm Offset",
+            "where": "Tech & Spec > Suspension > Fork (expanded detail)"
+          }
+        },
+        "wheelSize": {
+          "value": "MX (29\" front / 27.5\" rear)",
+          "status": "verified",
+          "url": "https://www.yt-industries.com/Bikes/Enduro-Capra/CORE-3/Core-3-CF/",
+          "retrieved": "2026-09-30",
+          "quote": "Front: Aluminum Rim 29“ | Inner Width 31.5 mm | Front Hub 110 x 15 mm | Rear: Aluminum Rim 27.5“ | Inner Width 29.5 mm | Rear Hub 148 x 12 mm | Freehub XD",
+          "where": "Specs (MX variant) > Wheels > CRANKBROTHERS SYNTHESIS Enduro 2 Alloy",
+          "verifiedBy": {
+            "url": "https://www.yt-industries.com/Bikes/Enduro-Capra/CORE-3/Core-3-CF/",
+            "retrieved": "2026-09-30",
+            "quote": "CRANKBROTHERS SYNTHESIS Enduro 2 Alloy — Front: Aluminum Rim 29“ | ... | Rear: Aluminum Rim 27.5“ | ...; Tires: Front: 29’’ x 2.4 WT I Super Soft I Enduro | Rear: 27.5’’ x 2.4 WT | Soft I Enduro",
+            "where": "Tech & Spec, MX set, Wheels / Tires"
+          }
+        },
+        "sizes": {
+          "value": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "status": "verified",
+          "url": "https://www.yt-industries.com/Bikes/Enduro-Capra/CORE-3/Core-3-CF/",
+          "retrieved": "2026-09-30",
+          "quote": " S, M, L, XL, XXL ",
+          "where": "Specs > Frame > Frame Size",
+          "verifiedBy": {
+            "url": "https://www.yt-industries.com/Bikes/Enduro-Capra/CORE-3/Core-3-CF/",
+            "retrieved": "2026-09-30",
+            "quote": "Frame Size  S, M, L, XL, XXL ",
+            "where": "Tech & Spec > Frame; store product properties 'Bike Size' S, M, L, XL, XXL"
+          }
+        },
+        "shockEyeToEyeMm": {
+          "value": 230,
+          "status": "verified",
+          "url": "https://www.yt-industries.com/Bikes/Enduro-Capra/CORE-3/Core-3-CF/",
+          "retrieved": "2026-09-30",
+          "quote": "ÖHLINS TTX22 M.2 — Length: 230 x 65 mm | H/LSC LSR | C10R40 (S-L) | C10R50 (XL-XXL)\n\nÖHLINS STEEL SPRING: 343 lbs (S) I 365 (M) I 388 (L) I 411 (XL) I 434 (XXL)",
+          "where": "Specs > Suspension > Shock (same line in MX and 29 spec blocks); confirmed by Technical Information PDF 'shock installation lengTh 230 x 65 mm' (https://www.yt-industries.com/media/1c/a7/6f/1729759076/CAPRA-MK3-CF-29-MX-TECHNICAL_INFORMATION_CUSTOMER_210518.pdf?ts=1729759076)",
+          "verifiedBy": {
+            "url": "https://www.yt-industries.com/Bikes/Enduro-Capra/CORE-3/Core-3-CF/",
+            "retrieved": "2026-09-30",
+            "quote": "ÖHLINS TTX22 M.2 — Length: 230 x 65 mm | H/LSC LSR | C10R40 (S-L) | C10R50 (XL-XXL)",
+            "where": "Tech & Spec > Suspension > Shock"
+          }
+        },
+        "shockStrokeMm": {
+          "value": 65,
+          "status": "verified",
+          "url": "https://www.yt-industries.com/Bikes/Enduro-Capra/CORE-3/Core-3-CF/",
+          "retrieved": "2026-09-30",
+          "quote": "ÖHLINS TTX22 M.2 — Length: 230 x 65 mm | H/LSC LSR | C10R40 (S-L) | C10R50 (XL-XXL)\n\nÖHLINS STEEL SPRING: 343 lbs (S) I 365 (M) I 388 (L) I 411 (XL) I 434 (XXL)",
+          "where": "Specs > Suspension > Shock; confirmed by Technical Information PDF p.1",
+          "verifiedBy": {
+            "url": "https://www.yt-industries.com/media/1c/a7/6f/1729759076/CAPRA-MK3-CF-29-MX-TECHNICAL_INFORMATION_CUSTOMER_210518.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "shock installation lengTh 230 x 65 mm",
+            "where": "CAPRA MK3 29 & MX carbon Technical Information (2021-05-18), p.1"
+          }
+        },
+        "shockMount": {
+          "value": null,
+          "status": "missing",
+          "note": "Mount type (standard eye / trunnion) not named. Technical Information PDF p.1 only gives hardware: 'shock hardware front: Ø8x20 mm rear: Ø8x15 mm'."
+        },
+        "shockHardware": {
+          "value": "front: Ø8x20 mm, rear: Ø8x15 mm",
+          "status": "single",
+          "url": "https://www.yt-industries.com/media/1c/a7/6f/1729759076/CAPRA-MK3-CF-29-MX-TECHNICAL_INFORMATION_CUSTOMER_210518.pdf?ts=1729759076",
+          "retrieved": "2026-09-30",
+          "quote": "shock hardware front:  Ø8x20 mm rear: Ø8x15 mm",
+          "where": "CAPRA MK3 29 & MX carbon Technical Information (2021-05-18), p.1"
+        },
+        "stockForkBySpec": {
+          "value": {
+            "Core 3 CF": "ÖHLINS RXF38 M.2 | 29“ | 170 mm | H/LSC LSR | 15x110 mm | 44mm Offset"
+          },
+          "status": "verified",
+          "url": "https://www.yt-industries.com/Bikes/Enduro-Capra/CORE-3/Core-3-CF/",
+          "retrieved": "2026-09-30",
+          "quote": "ÖHLINS RXF38 M.2 — 29“ | 170 mm | H/LSC LSR | 15x110 mm | 44mm Offset",
+          "where": "Specs > Suspension > Fork",
+          "verifiedBy": {
+            "url": "https://www.yt-industries.com/Bikes/Enduro-Capra/CORE-3/Core-3-CF/",
+            "retrieved": "2026-09-30",
+            "quote": "ÖHLINS RXF38 M.2 — 29“ | 170 mm | H/LSC LSR | 15x110 mm | 44mm Offset",
+            "where": "Tech & Spec > Fork"
+          }
+        },
+        "stockShockBySpec": {
+          "value": {
+            "Core 3 CF": "ÖHLINS TTX22 M.2 | Length: 230 x 65 mm | H/LSC LSR | C10R40 (S-L) | C10R50 (XL-XXL)"
+          },
+          "status": "verified",
+          "url": "https://www.yt-industries.com/Bikes/Enduro-Capra/CORE-3/Core-3-CF/",
+          "retrieved": "2026-09-30",
+          "quote": "ÖHLINS TTX22 M.2 — Length: 230 x 65 mm | H/LSC LSR | C10R40 (S-L) | C10R50 (XL-XXL)\n\nÖHLINS STEEL SPRING: 343 lbs (S) I 365 (M) I 388 (L) I 411 (XL) I 434 (XXL)",
+          "where": "Specs > Suspension > Shock",
+          "verifiedBy": {
+            "url": "https://www.yt-industries.com/Bikes/Enduro-Capra/CORE-3/Core-3-CF/",
+            "retrieved": "2026-09-30",
+            "quote": "ÖHLINS TTX22 M.2 — Length: 230 x 65 mm | H/LSC LSR | C10R40 (S-L) | C10R50 (XL-XXL)",
+            "where": "Tech & Spec > Shock"
+          }
+        },
+        "shockSpringType": {
+          "value": "coil",
+          "status": "single",
+          "url": "https://www.yt-industries.com/Bikes/Enduro-Capra/CORE-3/Core-3-CF/",
+          "retrieved": "2026-09-30",
+          "quote": "ÖHLINS STEEL SPRING: 343 lbs (S) I 365 (M) I 388 (L) I 411 (XL) I 434 (XXL)",
+          "where": "Specs > Suspension > Shock description"
+        },
+        "springRateBySize": {
+          "value": {
+            "S": 343,
+            "M": 365,
+            "L": 388,
+            "XL": 411,
+            "XXL": 434
+          },
+          "status": "verified",
+          "url": "https://www.yt-industries.com/Bikes/Enduro-Capra/CORE-3/Core-3-CF/",
+          "retrieved": "2026-09-30",
+          "quote": "ÖHLINS STEEL SPRING: 343 lbs (S) I 365 (M) I 388 (L) I 411 (XL) I 434 (XXL)",
+          "where": "Specs > Suspension > Shock description (stock spring per frame size, lbs)",
+          "verifiedBy": {
+            "url": "https://www.yt-industries.com/Bikes/Enduro-Capra/CORE-3/Core-3-CF/",
+            "retrieved": "2026-09-30",
+            "quote": "ÖHLINS STEEL SPRING: 343 lbs (S) I 365 (M) I 388 (L) I 411 (XL) I 434 (XXL) ",
+            "where": "Tech & Spec > Shock detail"
+          }
+        },
+        "shockTuneBySize": {
+          "value": {
+            "S-L": "C10R40",
+            "XL-XXL": "C10R50"
+          },
+          "status": "single",
+          "url": "https://www.yt-industries.com/Bikes/Enduro-Capra/CORE-3/Core-3-CF/",
+          "retrieved": "2026-09-30",
+          "quote": "C10R40 (S-L) | C10R50 (XL-XXL)",
+          "where": "Specs > Suspension > Shock description"
+        },
+        "sagPercent": {
+          "value": "25-30",
+          "status": "verified",
+          "url": "https://www.yt-industries.com/media/26/83/a6/1718800590/RTFM_2021_CAPRA_MK3_900170_web.pdf?ts=1718800590",
+          "retrieved": "2026-09-30",
+          "quote": "Sag should be between 25 – 30 % for Enduro bikes, between 30 – 40 % for Downhill bikes, and between 10 – 20 % for Dirt bikes.",
+          "where": "RTFM Capra MK3 manual (EN), section BASIC SETTINGS (~p.11). Note: generic YT_Suspension_Guideline.pdf p.8 shows 'SAG-RANGE 20 - 30%' (https://www.yt-industries.com/media/8d/4e/98/1728893010/YT_Suspension_Guideline.pdf)",
+          "verifiedBy": {
+            "url": "https://www.yt-industries.com/media/26/83/a6/1718800590/RTFM_2021_CAPRA_MK3_900170_web.pdf",
+            "retrieved": "2026-09-30",
+            "quote": "Sag should be between 25 – 30 % for Enduro bikes, between 30 – 40 % for Downhill bikes, and between 10 – 20 % for Dirt bikes.",
+            "where": "RTFM 2021 CAPRA MK3 manual (linked in bike page Downloads), 'Basic settings'"
+          },
+          "note": "YT's general suspension guideline PDF says 20-30% for all models"
+        },
+        "setupGuideUrl": {
+          "value": "https://www.yt-industries.com/Support/Suspension-Setup/",
+          "status": "single",
+          "url": "https://www.yt-industries.com/Support/Suspension-Setup/",
+          "retrieved": "2026-09-30",
+          "quote": "SUSPENSION SETUP",
+          "where": "YT support page with interactive Suspension Guide + FAQ; PDF: https://www.yt-industries.com/media/8d/4e/98/1728893010/YT_Suspension_Guideline.pdf"
+        },
+        "flipChip": {
+          "value": true,
+          "status": "verified",
+          "url": "https://www.yt-industries.com/Bikes/Enduro-Capra/CORE-3/Core-3-CF/",
+          "retrieved": "2026-09-30",
+          "quote": "The new generation of CAPRA features a Flip Chip on both the MX and 29 builds, to allow you to adjust the geometry according to the terrain and your riding style. The Flip Chip eyelet can now be found on the shock yoke. The low position provides for a more aggressive headtube angle and lowers the BB, ideal for fast tracks. In the high position, the headtube angle is 0.3 degrees steeper and the BB is higher for more ground clearance and better performance on steep climbs.",
+          "where": "Frame feature 'FLIP CHIP'; geometry table has 'Flip Chip Position high/low' (HTA 64,2° / 64,5°, BB drop 27 / 22 mm)",
+          "verifiedBy": {
+            "url": "https://www.yt-industries.com/Bikes/Enduro-Capra/CORE-3/Core-3-CF/",
+            "retrieved": "2026-09-30",
+            "quote": "The new generation of CAPRA features a Flip Chip on both the MX and 29 builds, to allow you to adjust the geometry according to the terrain and your riding style. The Flip Chip eyelet can now be found on the shock yoke. The low position provides for a more aggressive headtube angle and lowers the BB, ideal for fast tracks. In the high position, the headtube angle is 0.3 degrees steeper and the BB is higher for more ground clearance and better performance on steep climbs.",
+            "where": "Bike page CMS text; geometry widget 'Flip Chip Position' high/low"
+          }
+        },
+        "manualUrl": {
+          "value": "https://www.yt-industries.com/media/26/83/a6/1718800590/RTFM_2021_CAPRA_MK3_900170_web.pdf?ts=1718800590",
+          "status": "single",
+          "url": "https://www.yt-industries.com/media/26/83/a6/1718800590/RTFM_2021_CAPRA_MK3_900170_web.pdf?ts=1718800590",
+          "retrieved": "2026-09-30",
+          "quote": "SETUP FLIP CHIP ... Low = bolt is in rear position / High = bolt is in front position",
+          "where": "RTFM Capra MK3 (linked on product page as 'Capra Manual (MK3 / 2021 - Current)')"
+        }
+      }
+    }
+  ]
+}
