@@ -6,6 +6,7 @@ import dev.suspension.app.data.ComponentCatalog
 import dev.suspension.app.data.ForkModel
 import dev.suspension.app.data.ReboundMode
 import dev.suspension.app.data.ShockModel
+import dev.suspension.app.data.StockPart
 import dev.suspension.app.data.WeightChart
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotNull
@@ -38,6 +39,16 @@ class CatalogDataTest {
             maxPressurePsi = 120.0, lsrChart = gripX2Lsr, hsrChart = gripX2Hsr,
             spacersStock = 1, spacersMax = 6, chartSource = "Fox", lscStart = 10, hscStart = 5,
         ),
+        ohlinsRxf38("ohlins_rxf38_m2_170", "Öhlins RXF38 m.2 Air 170"),
+        ohlinsRxf38("ohlins_rxf38_m3_170", "Öhlins RXF38 m.3 Air 170"),
+    )
+
+    /** Öhlins publishes click ranges but no max pressure and no chart in the app's weight rows. */
+    private fun ohlinsRxf38(id: String, name: String) = ForkModel(
+        id = id, displayName = name, travelMm = 170,
+        lscMax = 16, hscMax = 3, reboundMode = ReboundMode.SINGLE, reboundMax = 16, hsrMax = null,
+        pressureChart = null, maxPressurePsi = null, lsrChart = null, hsrChart = null,
+        spacersStock = null, spacersMax = null, chartSource = "Öhlins", lscStart = null, hscStart = null,
     )
 
     private fun shock(id: String, name: String, lsc: Int, hsc: Int?, mode: ReboundMode, reb: Int, hsr: Int?, lever: Boolean, fox: Boolean) =
@@ -68,11 +79,14 @@ class CatalogDataTest {
 
     @Test
     fun `every catalog field names a source`() {
-        val forkFields = listOf("travelMm", "lscMax", "hscMax", "reboundMode", "reboundMax", "hsrMax", "pressureChart", "maxPressurePsi")
+        // pressureChart / maxPressurePsi are optional (e.g. Öhlins publishes neither); when present they carry a source like every field
+        val forkFields = listOf("travelMm", "lscMax", "hscMax", "reboundMode", "reboundMax", "hsrMax")
         val shockFields = listOf("strokeMm", "eyeToEyeMm", "lscMax", "hscMax", "reboundMode", "reboundMax", "hsrMax", "hasClimbLever", "preloadGuide")
         val missing = ComponentCatalog.forks.flatMap { f -> (forkFields - f.provenance.keys).map { "${f.id}.$it" } } +
             ComponentCatalog.shocks.flatMap { s -> (shockFields - s.provenance.keys).map { "${s.id}.$it" } }
         assertTrue(missing.isEmpty(), "Fields without source: $missing")
+        val foxWithoutChart = ComponentCatalog.forks.filter { it.chartSource == "Fox" && (it.pressureChart == null || it.maxPressurePsi == null) }
+        assertTrue(foxWithoutChart.isEmpty(), "Fox forks lost their chart: ${foxWithoutChart.map { it.id }}")
     }
 
     @Test
@@ -125,7 +139,29 @@ class CatalogDataTest {
         assertEquals(BikeProfiles.levelRr.stockForkId, bike.stockFork.catalogId)
         assertEquals(BikeProfiles.levelRr.stockShockId, bike.stockShock.catalogId)
         assertEquals(mapOf("L" to 500.0, "XL" to 500.0), bike.springLbsBySize)
-        assertEquals(listOf("Mondraker"), ComponentCatalog.bikeMakers)
+    }
+
+    @Test
+    fun `bikes from the 2026-09 research sample keep their verified stock parts`() {
+        fun part(id: String, fork: Boolean) = ComponentCatalog.bikeById(id)!!.let { if (fork) it.stockFork else it.stockShock }
+        assertEquals(StockPart(null, "Fox 36 Performance Elite", travelMm = 150), part("canyon_spectral_cf_8_2027", fork = true))
+        assertEquals(StockPart(null, "Fox Float X Performance Elite", eyeToEyeMm = 210, strokeMm = 55), part("canyon_spectral_cf_8_2027", fork = false))
+        assertEquals(StockPart(null, "RockShox ZEB Select+", travelMm = 180), part("canyon_torque_al_8_2027", fork = true))
+        assertEquals(StockPart(null, "RockShox Vivid Select+", eyeToEyeMm = 250, strokeMm = 70), part("canyon_torque_al_8_2027", fork = false))
+        assertEquals(StockPart(null, "Fox 38 Float Performance Grip", travelMm = 170), part("santacruz_megatower_90_2026", fork = true))
+        assertEquals(StockPart(null, "Fox Float X Performance", eyeToEyeMm = 230, strokeMm = 65), part("santacruz_megatower_90_2026", fork = false))
+        assertEquals(StockPart(null, "RockShox ZEB Select+", travelMm = 170), part("trek_slash_98_xt_di2_gen6", fork = true))
+        assertEquals(StockPart(null, "RockShox Vivid Select+", eyeToEyeMm = 230, strokeMm = 65), part("trek_slash_98_xt_di2_gen6", fork = false))
+        assertEquals(StockPart(null, "Fox 36 Float Factory GRIP X2", travelMm = 150), part("cube_stereo_c62_slt_2027", fork = true))
+        assertEquals(StockPart(null, "Fox Float X Factory", eyeToEyeMm = 210, strokeMm = 55), part("cube_stereo_c62_slt_2027", fork = false))
+        assertEquals(StockPart("ohlins_rxf38_m2_170", "Öhlins RXF38 m.2", travelMm = 170), part("yt_capra_mx_core3_cf", fork = true))
+        assertEquals(StockPart(null, "Öhlins TTX22 m.2", eyeToEyeMm = 230, strokeMm = 65), part("yt_capra_mx_core3_cf", fork = false))
+
+        val capra = ComponentCatalog.bikeById("yt_capra_mx_core3_cf")!!
+        assertEquals(mapOf("S" to 343.0, "M" to 365.0, "L" to 388.0, "XL" to 411.0, "XXL" to 434.0), capra.springLbsBySize)
+        assertEquals("YT Industries Capra MX Core 3 CF", capra.displayName)
+        assertEquals("Trek Slash 9.8 XT Di2 Gen 6", ComponentCatalog.bikeById("trek_slash_98_xt_di2_gen6")!!.displayName)
+        assertEquals(listOf("Canyon", "Cube", "Mondraker", "Santa Cruz", "Trek", "YT Industries"), ComponentCatalog.bikeMakers)
     }
 
     @Test

@@ -3,6 +3,7 @@ package dev.suspension.app
 import dev.suspension.app.data.BikeProfiles
 import dev.suspension.app.data.ComponentCatalog
 import dev.suspension.app.data.Deviation
+import dev.suspension.app.data.ReboundMode
 import dev.suspension.app.data.RowSpec
 import dev.suspension.app.data.ScenarioData
 import org.junit.jupiter.api.Assertions.assertEquals
@@ -54,7 +55,8 @@ class DeviationTest {
             if (lsc.referenceMaker != null) assertEquals(fork.lscStart!!.toDouble(), lsc.start, "${fork.id} LSC")
             val hsc = forkRow("f_hsc", fork) as RowSpec.Stepper
             if (hsc.referenceMaker != null) assertEquals(fork.hscStart!!.toDouble(), hsc.start, "${fork.id} HSC")
-            val lsr = forkRow("f_lsr", fork) as RowSpec.Stepper
+            // single-rebound forks (e.g. Öhlins RXF38) have "f_reb" instead of "f_lsr"
+            val lsr = forkRow(if (fork.reboundMode == ReboundMode.SPLIT) "f_lsr" else "f_reb", fork) as RowSpec.Stepper
             if (lsr.referenceMaker != null) assertEquals(fork.lsrChart!!.valueFor(98.0), lsr.start, "${fork.id} LSR")
             val psi = forkRow("f_psi", fork) as RowSpec.Stepper
             if (psi.referenceMaker != null) assertEquals(fork.pressureChart!!.valueFor(98.0), psi.start, "${fork.id} psi")

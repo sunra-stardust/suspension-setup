@@ -53,9 +53,20 @@ jeder Wert nennt seine Quelle (Dokument, Modelljahr, Abrufdatum). `owner` = am e
 - [SRAM Charger 3 Setup](https://www.sram.com/en/rockshox/learn/charger-3-setup), [Super Deluxe Coil Ultimate](https://www.sram.com/en/rockshox/models/rs-sdlc-ult-b1), [Vivid Coil Ultimate](https://www.sram.com/en/rockshox/models/rs-vivc-ult-c1) — RockShox-Klicks und Hebel
 - [Pinkbike: Temperatur und Fahrwerk](https://www.pinkbike.com/news/nerding-out-how-temperature-affects-your-suspension.html), [NSMB: Cold Weather Suspension](https://nsmb.com/articles/cold-weather-mountain-bike-suspension/), [Singletracks: Cold-Weather Tuning](https://www.singletracks.com/mtb-gear/tuning-your-mountain-bike-fork-and-shock-for-cold-weather-riding/) — Öl-Viskosität, Klick-Richtung, Druck bei Fahrtemperatur prüfen
 
-RockShox-**Gabeln** sind bewusst nicht im Katalog: RockShox veröffentlicht keine allgemeine
-Drucktabelle, und die Werte auf dem Casting unterscheiden sich je Modelljahr/Federweg. Solche
-Gabeln laufen über „Eigenes Modell" mit dem Startdruck vom Aufkleber.
+Eine Gabel kommt in den Katalog, wenn der Hersteller ihre Regler und Klickbereiche belegt. Eine
+Drucktabelle ist optional: Ohne Tabelle in den Gewichtszeilen der App (z. B. Öhlins RXF38 – zwei
+Kammern, Bereiche je 10 kg, kein Maximaldruck) gilt der Startdruck vom Aufkleber. RockShox-**Gabeln**
+fehlen weiterhin, weil RockShox keine Gesamtzahl der Rebound-Klicks nennt; sie laufen über
+„Eigenes Modell".
+
+**Katalog-Recherche 2026-09 (Stichprobe):** Öhlins RXF38 m.2 / m.3 Air 170
+([m.2](https://www.ohlins.com/en-us/mountain-bike/front-forks/am-rxf38-m-2-air-ttx18-29-44-160),
+[m.3](https://www.ohlins.com/en-us/mountain-bike/front-forks/am-rxf38-m-3-air-ttx18-29-44-160):
+LSC 16, HSC 3 Positionen, Rebound 16) und die Serienteile von Canyon Spectral CF 8 / Torque AL 8,
+Santa Cruz Megatower 90, Trek Slash 9.8 XT Di2 Gen 6, Cube Stereo C:62 SLT und YT Capra MX Core 3 CF
+(inkl. Federraten je Größe) — jeder Wert in zwei unabhängigen Durchgängen bestätigt, Details in
+[`research/`](research/README.md). Die Dämpfer dieser Bikes sind nicht im Katalog (Luftdämpfer oder
+keine veröffentlichten Gesamtklicks) und werden als eigenes Teil vorbefüllt.
 
 ## Drehrichtung (Change 01 — safety fix)
 
