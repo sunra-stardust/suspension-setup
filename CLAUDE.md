@@ -17,7 +17,7 @@ So:
 - After pushing, check the run (`gh run list --workflow ship.yml --limit 3`) and report the outcome with the version number.
 - Commit subjects become the release notes shown in the app: write them as short German change notes ("Dämpfer: HSC-Regler ergänzt").
 - Pipeline details, failed runs, rollback: skill **`ship`**.
-- Exception: a `claude/*` push whose head commit contains `[catalog-review]` does not ship — the weekly catalog research routine (skill **`catalog-research`**) proposes data as a PR against `main`; the owner's merge ships it.
+- Exception: a `claude/*` push whose head commit contains `[catalog-review]` does not ship — the monthly catalog research routine (skill **`catalog-research`**) proposes data as a PR against `main`; the owner's merge ships it.
 
 ## Rules
 

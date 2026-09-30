@@ -15,7 +15,7 @@ The app preselects the manufacturer's recommendation and shows the rider how far
 
 Read the primary document itself (download the PDF/HTML and search the text). Search summaries were wrong twice in this project's history.
 
-The weekly research routine (finding new models/model years, blind second pass, PR or `data-conflict` issue) is skill **`catalog-research`**.
+The research routine (register of all bike + suspension makers, data in `research/`, blind second pass, review PR or `data-conflict` issue) is skill **`catalog-research`**.
 
 ## Record for every value
 
