@@ -19,6 +19,7 @@ push main / claude/<topic>
 ```
 
 - **Version** = `versionBase` from `version.properties` + `.` + commit count on main (e.g. `0.6.27`). The count only grows, so every release can update the previous one. Bump `versionBase` only for a milestone.
+- **Pull requests against `main`** run `pr-check.yml` (`research.py check` + `./gradlew verify`); it publishes nothing.
 - **Catalog research PRs** (skill `catalog-research`): commits whose message contains `[catalog-review]` are not shipped from a `claude/*` branch; they ship when the owner merges the PR into `main`.
 - **Docs/agent-only changes** (nothing under `app/`, `gradle/`, build files, `version.properties`) are tested and moved to main, but produce no release.
 - **Release notes** = commit subjects since the previous tag. They appear in the app's update banner — keep them short, German, user-facing.
