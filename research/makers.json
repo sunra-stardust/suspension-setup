@@ -1,0 +1,977 @@
+{
+  "about": "Register of MTB bike and suspension makers for the catalog research routine. Seeded by name only (status 'seed'); the routine completes it. Format: research/FORMAT.md.",
+  "makers": [
+    {
+      "id": "fox",
+      "name": "Fox",
+      "kinds": [
+        "suspension"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "rockshox",
+      "name": "RockShox",
+      "kinds": [
+        "suspension"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "marzocchi",
+      "name": "Marzocchi",
+      "kinds": [
+        "suspension"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "ohlins",
+      "name": "Öhlins",
+      "kinds": [
+        "suspension"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "sr-suntour",
+      "name": "SR Suntour",
+      "kinds": [
+        "suspension"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "dt-swiss",
+      "name": "DT Swiss",
+      "kinds": [
+        "suspension"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "manitou",
+      "name": "Manitou",
+      "kinds": [
+        "suspension"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "x-fusion",
+      "name": "X-Fusion",
+      "kinds": [
+        "suspension"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "cane-creek",
+      "name": "Cane Creek",
+      "kinds": [
+        "suspension"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "dvo",
+      "name": "DVO",
+      "kinds": [
+        "suspension"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "ext",
+      "name": "EXT",
+      "kinds": [
+        "suspension"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "formula",
+      "name": "Formula",
+      "kinds": [
+        "suspension"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "intend",
+      "name": "Intend",
+      "kinds": [
+        "suspension"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "mrp",
+      "name": "MRP",
+      "kinds": [
+        "suspension"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "push-industries",
+      "name": "Push Industries",
+      "kinds": [
+        "suspension"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "bos",
+      "name": "BOS",
+      "kinds": [
+        "suspension"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "magura",
+      "name": "Magura",
+      "kinds": [
+        "suspension"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "trust-performance",
+      "name": "Trust Performance",
+      "kinds": [
+        "suspension"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "fast-suspension",
+      "name": "Fast Suspension",
+      "kinds": [
+        "suspension"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "durolux",
+      "name": "Durolux",
+      "kinds": [
+        "suspension"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "mojo-suspension",
+      "name": "Mojo Suspension",
+      "kinds": [
+        "suspension"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "cube",
+      "name": "Cube",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "mondraker",
+      "name": "Mondraker",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "canyon",
+      "name": "Canyon",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "yt-industries",
+      "name": "YT Industries",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "specialized",
+      "name": "Specialized",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "trek",
+      "name": "Trek",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "santa-cruz",
+      "name": "Santa Cruz",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "giant",
+      "name": "Giant",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "scott",
+      "name": "Scott",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "orbea",
+      "name": "Orbea",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "commencal",
+      "name": "Commencal",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "propain",
+      "name": "Propain",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "radon",
+      "name": "Radon",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "rose",
+      "name": "Rose",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "ghost",
+      "name": "Ghost",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "nukeproof",
+      "name": "Nukeproof",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "transition",
+      "name": "Transition",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "pivot",
+      "name": "Pivot",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "yeti",
+      "name": "Yeti",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "rocky-mountain",
+      "name": "Rocky Mountain",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "norco",
+      "name": "Norco",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "merida",
+      "name": "Merida",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "lapierre",
+      "name": "Lapierre",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "focus",
+      "name": "Focus",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "bulls",
+      "name": "Bulls",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "haibike",
+      "name": "Haibike",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "kona",
+      "name": "Kona",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "gt",
+      "name": "GT",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "cannondale",
+      "name": "Cannondale",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "ibis",
+      "name": "Ibis",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "evil",
+      "name": "Evil",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "forbidden",
+      "name": "Forbidden",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "atherton",
+      "name": "Atherton",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "nicolai",
+      "name": "Nicolai",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "liteville",
+      "name": "Liteville",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "last",
+      "name": "Last",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "alutech",
+      "name": "Alutech",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "banshee",
+      "name": "Banshee",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "whyte",
+      "name": "Whyte",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "marin",
+      "name": "Marin",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "polygon",
+      "name": "Polygon",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "devinci",
+      "name": "Devinci",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "knolly",
+      "name": "Knolly",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "privateer",
+      "name": "Privateer",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "raaw",
+      "name": "RAAW",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "vitus",
+      "name": "Vitus",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "pole",
+      "name": "Pole",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "unno",
+      "name": "Unno",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "bmc",
+      "name": "BMC",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "kellys",
+      "name": "Kellys",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "saracen",
+      "name": "Saracen",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "juliana",
+      "name": "Juliana",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "revel",
+      "name": "Revel",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "guerrilla-gravity",
+      "name": "Guerrilla Gravity",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "starling",
+      "name": "Starling",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "stanton",
+      "name": "Stanton",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "hope",
+      "name": "Hope",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "bird",
+      "name": "Bird",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "airdrop",
+      "name": "Airdrop",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    },
+    {
+      "id": "ragley",
+      "name": "Ragley",
+      "kinds": [
+        "bike"
+      ],
+      "website": null,
+      "docHub": null,
+      "status": "seed",
+      "lastChecked": null,
+      "notes": ""
+    }
+  ]
+}
