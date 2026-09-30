@@ -34,6 +34,10 @@ data class Bike(
     val springLbs: Double?,
     /** Vorlage id → row id → edit. Absent = the row shows its starting value. */
     val edits: Map<String, Map<String, Edit>>,
+    /** The catalog bike ([BikeModel]) this bike was created from; null = own frame or the pre-catalog profile. */
+    val catalogBikeId: String? = null,
+    /** Frame size the rider picked for [catalogBikeId]; null = not picked. */
+    val size: String? = null,
 ) {
     fun editsFor(vorlageId: String): Map<String, Edit> = edits[vorlageId].orEmpty()
 }
@@ -127,6 +131,8 @@ object GarageJson {
             customShock = o.optJSONObject("customShock")?.let(::parseCustomShock),
             springLbs = if (o.has("springLbs") && !o.isNull("springLbs")) o.getDouble("springLbs") else null,
             edits = edits,
+            catalogBikeId = o.optStringOrNull("catalogBike"),
+            size = o.optStringOrNull("size"),
         )
     }
 
@@ -139,6 +145,7 @@ object GarageJson {
         .put("reboundMax", f.reboundMax)
         .put("hsrMax", f.hsrMax ?: JSONObject.NULL)
         .put("baselinePsi", f.baselinePsi)
+        .apply { if (f.needsCheck) put("needsCheck", true) }
 
     private fun parseCustomFork(o: JSONObject) = ForkModel(
         id = CUSTOM_ID,
@@ -154,6 +161,7 @@ object GarageJson {
         maxPressurePsi = null,
         spacersStock = null,
         spacersMax = null,
+        needsCheck = o.optBoolean("needsCheck", false),
     )
 
     fun customShockJson(s: ShockModel): JSONObject = JSONObject()
@@ -167,6 +175,7 @@ object GarageJson {
         .put("hsrMax", s.hsrMax ?: JSONObject.NULL)
         .put("climbLever", s.hasClimbLever)
         .put("springLbs", s.customSpringLbs ?: JSONObject.NULL)
+        .apply { if (s.needsCheck) put("needsCheck", true) }
 
     private fun parseCustomShock(o: JSONObject) = ShockModel(
         id = CUSTOM_ID,
@@ -182,6 +191,7 @@ object GarageJson {
         customSpringLbs = if (o.isNull("springLbs")) null else o.getDouble("springLbs"),
         preloadHintResId = dev.suspension.app.R.string.hint_s_pre_generic,
         preloadRangeResId = dev.suspension.app.R.string.range_preload_generic,
+        needsCheck = o.optBoolean("needsCheck", false),
     )
 
     /** A fresh document: one bike on its stock parts, the built-in Vorlagen, no edits. */
@@ -292,6 +302,33 @@ object GarageDoc {
             .put("values", JSONObject())
         template.customFork?.let { bike.put("customFork", GarageJson.customForkJson(it)) }
         template.customShock?.let { bike.put("customShock", GarageJson.customShockJson(it)) }
+        bikes(doc).put(bike)
+        selectBike(doc, newId)
+    }
+
+    /**
+     * A new bike from the catalog: named after the model, its stock parts selected — catalog parts
+     * where we have them, otherwise the rider's own part prefilled from the bike maker's data
+     * (marked "needs check"). The spring is the maker's rate for [size] when published.
+     */
+    fun addCatalogBike(doc: JSONObject, newId: String, model: BikeModel, size: String?) {
+        val profile = model.profileId?.let(BikeProfiles::byId) ?: BikeProfiles.generic
+        val spring = size?.let { model.springLbsBySize[it] }
+        val (forkId, customFork) = BikeSetup.fork(model.stockFork)
+        val (shockId, customShock) = BikeSetup.shock(model.stockShock, spring)
+        val bike = JSONObject()
+            .put("id", newId)
+            .put("name", model.displayName)
+            .put("profile", profile.id)
+            .put("catalogBike", model.id)
+            .put("forkId", forkId)
+            .put("shockId", shockId)
+            .put("values", JSONObject())
+        size?.let { bike.put("size", it) }
+        // Without a published per-size rate the profile's stock spring applies (the rider adjusts it in Basis).
+        spring?.let { bike.put("springLbs", it) }
+        customFork?.let { bike.put("customFork", GarageJson.customForkJson(it)) }
+        customShock?.let { bike.put("customShock", GarageJson.customShockJson(it)) }
         bikes(doc).put(bike)
         selectBike(doc, newId)
     }

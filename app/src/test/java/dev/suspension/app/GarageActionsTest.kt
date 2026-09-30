@@ -1,12 +1,16 @@
 package dev.suspension.app
 
+import dev.suspension.app.data.BikeModel
 import dev.suspension.app.data.BikeParts
 import dev.suspension.app.data.BikeProfiles
+import dev.suspension.app.data.CUSTOM_ID
+import dev.suspension.app.data.ComponentCatalog
 import dev.suspension.app.data.Edit
 import dev.suspension.app.data.GarageDoc
 import dev.suspension.app.data.GarageJson
 import dev.suspension.app.data.RowSpec
 import dev.suspension.app.data.ScenarioData
+import dev.suspension.app.data.StockPart
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Assertions.assertNull
@@ -104,5 +108,61 @@ class GarageActionsTest {
 
         assertThrows<IllegalArgumentException> { GarageDoc.renameVorlage(d, "bikepark", "x") }
         assertThrows<IllegalArgumentException> { GarageDoc.deleteVorlage(d, "basis") }
+    }
+
+    // --- Phase 5.1: bikes from the catalog -----------------------------------------------------
+
+    @Test
+    fun `a catalog bike starts on its stock parts and the maker's spring for the size`() {
+        val d = doc()
+        val model = ComponentCatalog.bikeById("mondraker_level_rr_2026")!!
+        GarageDoc.addCatalogBike(d, "b-2", model, "L")
+        val bike = GarageJson.parse(d).selectedBike
+        assertEquals("b-2", bike.id)
+        assertEquals("Mondraker Level RR 2026", bike.name)
+        assertEquals(model.id, bike.catalogBikeId)
+        assertEquals("L", bike.size)
+        assertEquals(BikeProfiles.levelRr.id, bike.profileId)
+        assertEquals("fox38_gripx2", bike.forkId)
+        assertEquals("fox_dhx2_hsc_lsr", bike.shockId)
+        assertEquals(500.0, bike.springLbs)
+        assertNull(bike.customFork)
+        assertTrue(bike.edits.isEmpty())
+    }
+
+    @Test
+    fun `without a published rate for the size the profile's stock spring applies`() {
+        val d = doc()
+        GarageDoc.addCatalogBike(d, "b-2", ComponentCatalog.bikeById("mondraker_level_rr_2026")!!, "S")
+        val bike = GarageJson.parse(d).selectedBike
+        assertEquals("S", bike.size)
+        assertNull(bike.springLbs)
+        assertEquals(BikeProfiles.levelRr.stockSpringLbs, BikeParts.profile(bike).stockSpringLbs)
+    }
+
+    @Test
+    fun `stock parts we don't have become prefilled own parts marked for checking`() {
+        val d = doc()
+        val model = BikeModel(
+            id = "test_bike", maker = "Test", model = "Enduro", trim = "Pro", modelYears = listOf(2026), profileId = null,
+            stockFork = StockPart(catalogId = null, name = "SR Suntour Durolux", travelMm = 170),
+            stockShock = StockPart(catalogId = null, name = "SR Suntour TriAir", eyeToEyeMm = 230, strokeMm = 60),
+            springLbsBySize = emptyMap(),
+        )
+        GarageDoc.addCatalogBike(d, "b-2", model, null)
+        val bike = GarageJson.parse(d).selectedBike
+        assertEquals(BikeProfiles.GENERIC_ID, bike.profileId)
+        assertEquals(CUSTOM_ID, bike.forkId)
+        assertEquals(CUSTOM_ID, bike.shockId)
+        val fork = bike.customFork!!
+        assertEquals("SR Suntour Durolux", fork.displayName)
+        assertEquals(170, fork.travelMm)
+        assertTrue(fork.needsCheck)
+        val shock = bike.customShock!!
+        assertEquals(230, shock.eyeToEyeMm)
+        assertEquals(60, shock.strokeMm)
+        assertTrue(shock.needsCheck)
+        assertNull(bike.size)
+        assertEquals("Test Enduro Pro 2026", bike.name)
     }
 }

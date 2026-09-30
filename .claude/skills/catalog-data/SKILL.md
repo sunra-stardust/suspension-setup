@@ -22,7 +22,7 @@ The research routine (register of all bike + suspension makers, data in `researc
 - The catalog is `app/src/main/resources/catalog/catalog.json`. Each document is one entry in `sources` (title, URL, **model years** it covers, retrieval date `YYYY-MM-DD`); each value is `{ "value": …, "source": "<id>", "note": "…" }`. Put the table row / column or footnote in `note`.
 - `source: "owner"` = checked on the owner's bike, not a manufacturer document. `source: "legacy"` = entered before per-value sourcing and not yet traced — replace it with a real source when you verify the value, never add new `legacy` values.
 - An entry's `modelYears` must be covered by the sources of its charts (`CatalogDataTest` enforces it).
-- Bike-specific values still live in `data/BikeProfile.kt` with a code comment; README → "Woher die Zahlen kommen" stays the human-readable summary.
+- Bikes as sold (maker, model, trim, year, stock parts, spring per size) live in `catalog.json` → `bikes`, same value/source format. Frame features that need code (flip chip, dropper, spring rule) stay in `data/BikeProfile.kt` with a code comment, linked via the bike's `profile`; README → "Woher die Zahlen kommen" stays the human-readable summary.
 
 ## Model years
 

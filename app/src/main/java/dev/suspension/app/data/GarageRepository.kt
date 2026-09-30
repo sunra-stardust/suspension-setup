@@ -192,6 +192,10 @@ class GarageRepository private constructor(context: Context) {
     fun addBike(name: String, template: Bike, templateSpringLbs: Double) =
         update { GarageDoc.addBike(it, newId("b"), name.trim(), template, templateSpringLbs) }
 
+    /** New bike from the catalog on its stock parts (see [GarageDoc.addCatalogBike]). */
+    fun addCatalogBike(model: BikeModel, size: String?) =
+        update { GarageDoc.addCatalogBike(it, newId("b"), model, size) }
+
     fun addVorlage(name: String, copyFromId: String) = update { GarageDoc.addVorlage(it, newId("v"), name.trim(), copyFromId) }
     fun renameVorlage(vorlageId: String, name: String) = update { GarageDoc.renameVorlage(it, vorlageId, name.trim()) }
     fun deleteVorlage(vorlageId: String) = update { GarageDoc.deleteVorlage(it, vorlageId) }
