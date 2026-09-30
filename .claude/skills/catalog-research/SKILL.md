@@ -78,7 +78,8 @@ Anything touching `app/` must pass `./gradlew verify`.
 2. `python3 scripts/research.py overview` — regenerates `research/README.md`.
 3. `python3 scripts/research.py review --base origin/main` — writes `research/reviews/<date>.md`: every new or changed value with before/after, status icon, source link and quote.
 4. Commit. German subject ("Katalog-Recherche Oktober 2026: 12 Hersteller, 140 Werte"). **Every commit body ends with the line `[catalog-review]`** — on a `claude/*` branch `ship.yml` then neither ships nor moves the branch onto `main`. Check before pushing: `git log origin/main..HEAD --format=%B | grep -c '\[catalog-review\]'` equals the number of commits.
-5. Push the session branch and open **one PR against `main`**. Title = commit subject. Body (German, short): what was covered, counts (✅/🔸/⚠️/⬜, new makers, catalog entries changed), links to `research/reviews/<date>.md` and `research/README.md`, list of `data-conflict` issues, makers not finished. Label `catalog-research`. No auto-merge, never merge it yourself.
+5. Push the session branch and open **one PR against `main`**. Title = commit subject. Body (German, short): what was covered, counts (✅/🔸/⚠️/⬜, new makers, catalog entries changed), links to `research/reviews/<date>.md` and `research/README.md`, list of `data-conflict` issues, makers not finished. Label `catalog-research`. No auto-merge, never merge it yourself. `pr-check.yml` runs `research.py check` and `./gradlew verify` on it; if it goes red, fix and push before you finish.
+   If you have no tool to open a PR or issue (no GitHub MCP tools in this session), push the branch anyway and put the compare link `https://github.com/sunra-stardust/suspension-setup/compare/main...<branch>` and the conflict details into the final message instead — the owner opens them.
 6. Final message = the routine's notification: the same summary plus the PR link.
 
 ## Guardrails
