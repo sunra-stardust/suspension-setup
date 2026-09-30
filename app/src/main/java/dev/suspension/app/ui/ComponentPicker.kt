@@ -246,6 +246,7 @@ fun ForkPickerOverlay(
         Column(verticalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(top = 20.dp)) {
             Text(text = stringResource(R.string.picker_custom_title), style = type.groupHeading, color = colors.ink)
             Text(text = stringResource(R.string.picker_custom_no_weight_scaling), style = type.rowHint, color = colors.dim)
+            if (initialCustomFork.needsCheck) Text(text = stringResource(R.string.picker_custom_needs_check), style = type.rowHint, color = colors.ink)
 
             var name by remember { mutableStateOf(initialCustomFork.displayName) }
             var travel by remember { mutableStateOf(initialCustomFork.travelMm.toDouble()) }
@@ -338,6 +339,7 @@ fun ShockPickerOverlay(
 
         Column(verticalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(top = 20.dp)) {
             Text(text = stringResource(R.string.picker_custom_title), style = type.groupHeading, color = colors.ink)
+            if (initialCustomShock.needsCheck) Text(text = stringResource(R.string.picker_custom_needs_check), style = type.rowHint, color = colors.ink)
 
             var name by remember { mutableStateOf(initialCustomShock.displayName) }
             var stroke by remember { mutableStateOf(initialCustomShock.strokeMm.toDouble()) }

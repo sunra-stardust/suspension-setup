@@ -165,4 +165,24 @@ class GarageActionsTest {
         assertNull(bike.size)
         assertEquals("Test Enduro Pro 2026", bike.name)
     }
+
+    @Test
+    fun `saving the own part in the picker clears the check mark`() {
+        val d = doc()
+        val model = BikeModel(
+            id = "test_bike", maker = "Test", model = "Enduro", trim = "", modelYears = emptyList(), profileId = null,
+            stockFork = StockPart(catalogId = null, name = "Unknown fork", travelMm = 160),
+            stockShock = StockPart(catalogId = "fox_dhx2_coil", name = "Fox DHX2 Factory"),
+            springLbsBySize = emptyMap(),
+        )
+        GarageDoc.addCatalogBike(d, "b-2", model, null)
+        val prefilled = GarageJson.parse(d).selectedBike.customFork!!
+        assertTrue(prefilled.needsCheck)
+        assertEquals("fox_dhx2_coil", GarageJson.parse(d).selectedBike.shockId)
+
+        GarageDoc.selectFork(d, "b-2", CUSTOM_ID, prefilled.copy(lscMax = 20, needsCheck = false))
+        val saved = GarageJson.parse(d).selectedBike.customFork!!
+        assertFalse(saved.needsCheck)
+        assertEquals(20, saved.lscMax)
+    }
 }

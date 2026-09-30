@@ -323,6 +323,8 @@
     <string name="picker_search_label">Hersteller oder Modell suchen</string>
     <string name="picker_search_placeholder">z. B. Fox oder DHX2</string>
     <string name="picker_search_no_match">Nicht im Katalog. Unten als eigenes Modell eingeben.</string>
+    <string name="setup_needs_check">Aus den Daten des Bike-Herstellers übernommen — die Klick-Anzahlen sind Platzhalter. Tippen und am Bike prüfen.</string>
+    <string name="picker_custom_needs_check">Vorbefüllt aus den Daten des Bike-Herstellers: Name und Maße stammen vom Hersteller, die Klick-Anzahlen sind Platzhalter. Am Bike zählen, dann übernehmen.</string>
     <string name="picker_custom_title">Eigenes Modell</string>
     <string name="picker_custom_name_label">Bezeichnung</string>
     <string name="picker_custom_name_placeholder">z. B. Öhlins RXF38</string>

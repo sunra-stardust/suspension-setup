@@ -387,6 +387,8 @@
     <string name="picker_search_label">Search maker or model</string>
     <string name="picker_search_placeholder">e.g. Fox or DHX2</string>
     <string name="picker_search_no_match">Not in the catalog. Enter it as your own model below.</string>
+    <string name="setup_needs_check">Taken from the bike maker\'s data — the click counts are placeholders. Tap to check them on your bike.</string>
+    <string name="picker_custom_needs_check">Prefilled from the bike maker\'s data: name and size are the maker\'s, the click counts are placeholders. Count them on your bike, then save.</string>
     <string name="picker_custom_title">Custom model</string>
     <string name="picker_custom_name_label">Name</string>
     <string name="picker_custom_name_placeholder">e.g. Öhlins RXF38</string>
