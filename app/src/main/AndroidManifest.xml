@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- No permissions here. The GitHub build adds INTERNET + REQUEST_INSTALL_PACKAGES for its
-         self-updater only (src/github/AndroidManifest.xml); the Play build stays permission-free. -->
+    <!-- Only permission of the main manifest: notifications for the maintenance reminders (Pflege tab),
+         requested at runtime on Android 13+ and only when the rider switches reminders on.
+         The GitHub build adds INTERNET + REQUEST_INSTALL_PACKAGES for its self-updater only
+         (src/github/AndroidManifest.xml); the Play build has no others. -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- WorkManager (daily reminder check) declares boot and foreground-service support we do not
+         use: no boot permission, no foreground service. After a reboot the check is registered
+         again the next time the app opens. -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" tools:node="remove" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" tools:node="remove" />
 
     <application
         android:name=".SuspensionApp"
@@ -13,14 +23,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SuspensionSetup">
 
+        <!-- singleTop: tapping a reminder while the app is open reuses it (onNewIntent). -->
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service android:name="androidx.work.impl.foreground.SystemForegroundService" tools:node="remove" />
+        <receiver android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver" tools:node="remove" />
 
     </application>
 

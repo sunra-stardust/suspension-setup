@@ -25,9 +25,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import dev.suspension.app.R
+import dev.suspension.app.care.EntryValidation
 import dev.suspension.app.ui.theme.AppTheme
 
 /** Dialog frame in the app's own look (surface card, no Material chrome). */
@@ -101,6 +103,29 @@ fun NameDialog(title: String, hint: String?, initial: String, onConfirm: (String
             confirmLabel = stringResource(R.string.action_save),
             confirmEnabled = name.isNotBlank(),
             onConfirm = { onConfirm(name.trim()) },
+            onDismiss = onDismiss,
+        )
+    }
+}
+
+/** Asks for a non-negative whole number (odometer). The confirm button stays disabled while the field is empty. */
+@Composable
+fun NumberDialog(title: String, label: String, hint: String?, initial: String, onConfirm: (Int) -> Unit, onDismiss: () -> Unit) {
+    var text by rememberSaveable { mutableStateOf(initial) }
+    val number = EntryValidation.parseKm(text)
+    AppDialog(onDismiss) {
+        Text(text = title, style = AppTheme.type.groupHeading, color = AppTheme.colors.ink)
+        AppTextField(
+            value = text,
+            onValueChange = { text = it.filter(Char::isDigit).take(EntryValidation.MAX_KM_DIGITS) },
+            label = label,
+            hint = hint,
+            keyboardType = KeyboardType.Number,
+        )
+        DialogButtons(
+            confirmLabel = stringResource(R.string.action_save),
+            confirmEnabled = number != null,
+            onConfirm = { number?.let(onConfirm) },
             onDismiss = onDismiss,
         )
     }

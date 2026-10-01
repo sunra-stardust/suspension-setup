@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -19,6 +20,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
@@ -30,6 +32,40 @@ enum class AppTab(val labelResId: Int) {
     SETUP(R.string.tab_setup),
     DIAGNOSE(R.string.tab_diagnose),
     BASICS(R.string.tab_basics),
+    CARE(R.string.tab_care),
+}
+
+/** Section chips of the Pflege tab: same look as the scenario chips; exactly one is selected. */
+@Composable
+fun SectionChips(
+    sectionIds: List<String>,
+    selectedId: String,
+    labelFor: @Composable (String) -> String,
+    onSelect: (String) -> Unit,
+) {
+    val colors = AppTheme.colors
+    val type = AppTheme.type
+    LazyRow(
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
+    ) {
+        items(sectionIds, key = { it }) { id ->
+            val isSelected = id == selectedId
+            val label = labelFor(id)
+            Box(
+                contentAlignment = Alignment.Center,
+                modifier = Modifier
+                    .heightIn(min = 44.dp)
+                    .clip(RoundedCornerShape(8.dp))
+                    .background(if (isSelected) colors.ink else colors.hit)
+                    .selectable(selected = isSelected, role = Role.Tab, onClick = { onSelect(id) })
+                    .semantics { contentDescription = label }
+                    .padding(horizontal = 14.dp, vertical = 8.dp),
+            ) {
+                Text(text = label, style = type.navLabel, color = if (isSelected) colors.bg else colors.ink)
+            }
+        }
+    }
 }
 
 @Composable

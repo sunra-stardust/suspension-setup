@@ -27,7 +27,7 @@ So:
 3. **Stored data is rollback-safe:** only add keys/fields; never rename or delete stored keys without a migration and a test (an older release must still read what a newer one wrote). `garage.json` changes go through `GarageDoc` (edits the JSON in place, so unknown fields survive); keep the legacy mirror working (`LegacyStorageTest`, `GarageRepositoryTest`).
 4. **Logic change ⇒ unit test. New screen or flow ⇒ extend `AppSmokeTest`.** Reproduce a bug as a failing test first.
 5. **Two flavors:** `github` (sideload, self-updater, INTERNET + REQUEST_INSTALL_PACKAGES) and `play` (no self-update code or permissions — Google Play policy). Flavor-specific code goes in `src/github` / `src/play` behind `update/Distribution`.
-6. No new permissions, network use, analytics or accounts unless the owner asks.
+6. No new permissions, network use, analytics or accounts unless the owner asks. (Only exception so far: POST_NOTIFICATIONS for the Pflege reminders, requested when the rider switches them on; WorkManager's boot/foreground-service additions are removed in the main manifest.)
 7. Never force-push `main`, delete tags/releases, or touch the signing secrets.
 
 Rules 6–7, "verify before push" and the protected paths are enforced by the PreToolUse hook

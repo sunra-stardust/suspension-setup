@@ -1,12 +1,22 @@
 package dev.suspension.app
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.background
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Text
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.unit.dp
+import java.time.LocalDate
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.foundation.lazy.LazyListState
@@ -24,6 +34,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.viewmodel.compose.viewModel
+import dev.suspension.app.care.CareContent
+import dev.suspension.app.care.CareFormat
+import dev.suspension.app.care.CareReminders
+import dev.suspension.app.care.CareRepository
 import dev.suspension.app.data.AppLanguage
 import dev.suspension.app.data.BikeParts
 import dev.suspension.app.data.BikeProfiles
@@ -39,6 +53,9 @@ import dev.suspension.app.ui.SetupScreen
 import dev.suspension.app.safety.CrashGuard
 import dev.suspension.app.safety.CrashLoopPolicy
 import dev.suspension.app.ui.SafeModeScreen
+import dev.suspension.app.ui.care.CareActions
+import dev.suspension.app.ui.care.CareScreen
+import dev.suspension.app.ui.care.ServiceEntryScreen
 import dev.suspension.app.ui.ShockPickerOverlay
 import dev.suspension.app.ui.UpdateBanner
 import dev.suspension.app.ui.components.AppTab
@@ -50,6 +67,20 @@ import dev.suspension.app.update.UpdateViewModel
 import kotlinx.coroutines.delay
 
 class MainActivity : ComponentActivity() {
+    /** Bumped each time a reminder notification asks to open Pflege → Kalender. */
+    private val careRequest = mutableIntStateOf(0)
+
+    private fun handleCareIntent(intent: Intent?) {
+        if (intent?.getBooleanExtra(CareReminders.EXTRA_OPEN_CARE, false) == true) careRequest.intValue++
+        // Debug builds only: run the daily reminder check once, now (acceptance test of the worker).
+        if (BuildConfig.DEBUG && intent?.getBooleanExtra(CareReminders.EXTRA_RUN_CHECK, false) == true) CareReminders.runOnce(applicationContext)
+    }
+
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        setIntent(intent)
+        handleCareIntent(intent)
+    }
     // The in-app language choice overrides the device language for everything this activity shows.
     override fun attachBaseContext(newBase: Context) {
         super.attachBaseContext(LanguageStore.wrap(newBase))
@@ -59,6 +90,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         val crashGuard = CrashGuard.from(this)
+        if (savedInstanceState == null) handleCareIntent(intent)
+        // The daily check lives in WorkManager; re-register it in case the app was updated or data restored.
+        if (CareRepository.get(this).state.value.remindersEnabled) CareReminders.schedule(applicationContext)
         val updater = Distribution.updater(applicationContext)
         val storeUrl = Distribution.storeUrl(applicationContext)
         val updatePrefs = getSharedPreferences("updates", MODE_PRIVATE)
@@ -79,7 +113,7 @@ class MainActivity : ComponentActivity() {
                                 crashGuard.clear()
                             }
                             LaunchedEffect(updates) { updates?.autoCheck() }
-                            AppRoot(updates, onLanguageChange = { language ->
+                            AppRoot(updates, careRequest = careRequest.intValue, onLanguageChange = { language ->
                                 LanguageStore.set(this@MainActivity, language)
                                 recreate()
                             })
@@ -94,7 +128,7 @@ class MainActivity : ComponentActivity() {
 private enum class PickerOverlay { NONE, FORK, SHOCK, BIKES }
 
 @Composable
-private fun AppRoot(updates: UpdateViewModel?, onLanguageChange: (AppLanguage) -> Unit) {
+private fun AppRoot(updates: UpdateViewModel?, careRequest: Int, onLanguageChange: (AppLanguage) -> Unit) {
     val context = LocalContext.current
     val garageRepo = remember { GarageRepository.get(context) }
     val garage by garageRepo.state.collectAsState()
@@ -114,6 +148,21 @@ private fun AppRoot(updates: UpdateViewModel?, onLanguageChange: (AppLanguage) -
     val shock = BikeParts.shock(bike, profile).let { if (it.isCustom) it.copy(displayName = it.displayName.ifBlank { customShockName }) else it }
 
     var overlay by remember { mutableStateOf(PickerOverlay.NONE) }
+
+    // Pflege: repository, selected section, the entry screen ("new", "new:<ids>" or "edit:<id>") and a transient message.
+    val careRepo = remember { CareRepository.get(context) }
+    val care by careRepo.state.collectAsState()
+    var careSection by rememberSaveable { mutableStateOf(CareContent.CALENDAR_ID) }
+    var careEntry by rememberSaveable { mutableStateOf<String?>(null) }
+    var careMessage by rememberSaveable { mutableStateOf<String?>(null) }
+    LaunchedEffect(careRequest) {
+        if (careRequest > 0) {
+            selectedTab = AppTab.CARE.ordinal
+            careSection = CareContent.CALENDAR_ID
+            careEntry = null
+            overlay = PickerOverlay.NONE
+        }
+    }
 
     Column(modifier = Modifier.fillMaxSize()) {
         if (updates != null) UpdateBanner(updates)
@@ -163,6 +212,68 @@ private fun AppRoot(updates: UpdateViewModel?, onLanguageChange: (AppLanguage) -
                             selectedTab = AppTab.SETUP.ordinal
                         },
                     )
+                }
+                AppTab.CARE -> {
+                    val today = LocalDate.now()
+                    CareScreen(
+                        sectionId = careSection,
+                        onSectionChange = { careSection = it },
+                        data = care,
+                        today = today,
+                        actions = CareActions(
+                            onPurchaseDate = careRepo::setPurchaseDate,
+                            onOdometer = { km -> careRepo.setOdometer(km, today) },
+                            onReminders = { on ->
+                                careRepo.setReminders(on)
+                                if (on) CareReminders.schedule(context.applicationContext) else CareReminders.cancel(context.applicationContext)
+                            },
+                            onKmPerHour = careRepo::setKmPerHour,
+                            onTaskReminder = careRepo::setTaskReminder,
+                            onLogService = { ids -> careEntry = if (ids.isEmpty()) "new" else "new:" + ids.joinToString(",") },
+                            onEditEntry = { id -> careEntry = "edit:$id" },
+                        ),
+                    )
+                }
+            }
+
+            careEntry?.let { key ->
+                val today = LocalDate.now()
+                val editing = if (key.startsWith("edit:")) care.log.firstOrNull { it.id == key.removePrefix("edit:") } else null
+                if (key.startsWith("edit:") && editing == null) {
+                    careEntry = null
+                } else {
+                    ServiceEntryScreen(
+                        initial = editing,
+                        preselected = if (key.startsWith("new:")) key.removePrefix("new:").split(",") else emptyList(),
+                        odometerKm = care.odometerKm,
+                        today = today,
+                        onSave = { entry ->
+                            if (careRepo.saveEntry(entry, today)) {
+                                careMessage = context.getString(R.string.care_snack_odometer, CareFormat.km(entry.km))
+                            }
+                            careEntry = null
+                        },
+                        onDelete = editing?.let { e -> { careRepo.deleteEntry(e.id); careEntry = null } },
+                        onCancel = { careEntry = null },
+                    )
+                }
+            }
+
+            careMessage?.let { message ->
+                LaunchedEffect(message) {
+                    delay(4000)
+                    careMessage = null
+                }
+                Box(
+                    contentAlignment = Alignment.Center,
+                    modifier = Modifier
+                        .align(Alignment.BottomCenter)
+                        .padding(16.dp)
+                        .clip(RoundedCornerShape(10.dp))
+                        .background(AppTheme.colors.ink)
+                        .padding(horizontal = 16.dp, vertical = 12.dp),
+                ) {
+                    Text(text = message, style = AppTheme.type.body, color = AppTheme.colors.bg)
                 }
             }
 
