@@ -444,14 +444,34 @@
           }
         },
         "spacersStock": {
-          "value": null,
-          "status": "missing",
-          "note": "Model page lists 'Volume reducer 0/4 Tokens, 1/4 Tokens, 1/5 Tokens, 2/5 Tokens' (installed/max varies by travel). 2026 spec p.25 token columns are merged cells (150: 2 / max 5 ... 190: 0) and the per-travel mapping for 160-180 is not unambiguous in the text extraction; needs a visual check of p.25."
+          "value": {
+            "150": 2,
+            "160": 1,
+            "170": 1,
+            "180": 0,
+            "190": 0
+          },
+          "status": "single",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2026-front-suspension-specifications.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "ZEB Ultimate FS-ZEB-ULT-A3 ... 150: BOTTOMLESS TOKENS INSTALLED 2 MAX 5; 160-170: installed 1; 180-190: installed 0; max 4 for 160-190",
+          "where": "2026 Front Suspension Specifications p.25 Technical Specifications (Bottomless Tokens)",
+          "note": "Per-travel values (same for 27.5\" B and 29\" B) read from the rendered table page; row cells are merged across travels."
         },
         "spacersMax": {
-          "value": null,
-          "status": "missing",
-          "note": "Varies by travel (5 or 4 per model page 'Volume reducer 0/4 Tokens, 1/4 Tokens, 1/5 Tokens, 2/5 Tokens'); per-travel mapping not unambiguous — see 2026 Front Suspension Specifications p.25."
+          "value": {
+            "150": 5,
+            "160": 4,
+            "170": 4,
+            "180": 4,
+            "190": 4
+          },
+          "status": "single",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2026-front-suspension-specifications.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "ZEB Ultimate FS-ZEB-ULT-A3 ... 150: BOTTOMLESS TOKENS INSTALLED 2 MAX 5; 160-170: installed 1; 180-190: installed 0; max 4 for 160-190",
+          "where": "2026 Front Suspension Specifications p.25 Technical Specifications (Bottomless Tokens)",
+          "note": "Per-travel values (same for 27.5\" B and 29\" B) read from the rendered table page; row cells are merged across travels."
         },
         "volumeReducerAsPrinted": {
           "value": "0/4 Tokens, 1/4 Tokens, 1/5 Tokens, 2/5 Tokens",
@@ -751,14 +771,32 @@
           }
         },
         "spacersStock": {
-          "value": null,
-          "status": "missing",
-          "note": "Model page: 'Volume reducer 0/3 Tokens, 0/4 Tokens, 1/5 Tokens' — varies by travel; per-travel mapping not extracted (see 2027 Front Suspension Specifications technical pages)."
+          "value": {
+            "140": 1,
+            "150": 0,
+            "160": 0,
+            "170": 0
+          },
+          "status": "single",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2027-front-suspension-specifications.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Lyrik Ultimate FS-LYRK-ULT-E1 ... 140: BOTTOMLESS TOKENS INSTALLED 1 MAX 5; 150-160: installed 0, max 4; 170: installed 0, max 3",
+          "where": "2027 Front Suspension Specifications p.16 Technical Specifications (Bottomless Tokens)",
+          "note": "Per-travel values (same for 27.5\" B and 29\" B) read from the rendered table page; row cells are merged across travels."
         },
         "spacersMax": {
-          "value": null,
-          "status": "missing",
-          "note": "Varies by travel (3, 4 or 5 per model page); per-travel mapping not extracted."
+          "value": {
+            "140": 5,
+            "150": 4,
+            "160": 4,
+            "170": 3
+          },
+          "status": "single",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2027-front-suspension-specifications.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Lyrik Ultimate FS-LYRK-ULT-E1 ... 140: BOTTOMLESS TOKENS INSTALLED 1 MAX 5; 150-160: installed 0, max 4; 170: installed 0, max 3",
+          "where": "2027 Front Suspension Specifications p.16 Technical Specifications (Bottomless Tokens)",
+          "note": "Per-travel values (same for 27.5\" B and 29\" B) read from the rendered table page; row cells are merged across travels."
         },
         "volumeReducerAsPrinted": {
           "value": "0/3 Tokens, 0/4 Tokens, 1/5 Tokens",
@@ -1093,14 +1131,32 @@
           }
         },
         "spacersStock": {
-          "value": null,
-          "status": "missing",
-          "note": "Model page: 'Volume reducer 0/3 Tokens, 0/4 Tokens, 1/4 Tokens, 1/5 Tokens' — varies by travel; per-travel mapping not extracted."
+          "value": {
+            "150": 1,
+            "160": 1,
+            "170": 0,
+            "180": 0
+          },
+          "status": "single",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2027-front-suspension-specifications.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "ZEB Ultimate FS-ZEB-ULT-B1 ... 150: BOTTOMLESS TOKENS INSTALLED 1 MAX 5; 160: 1 / 4; 170: 0 / 4; 180: 0 / 3",
+          "where": "2027 Front Suspension Specifications p.24 Technical Specifications (Bottomless Tokens)",
+          "note": "Per-travel values (same for 27.5\" B and 29\" B) read from the rendered table page; row cells are merged across travels."
         },
         "spacersMax": {
-          "value": null,
-          "status": "missing",
-          "note": "Varies by travel; per-travel mapping not extracted."
+          "value": {
+            "150": 5,
+            "160": 4,
+            "170": 4,
+            "180": 3
+          },
+          "status": "single",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2027-front-suspension-specifications.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "ZEB Ultimate FS-ZEB-ULT-B1 ... 150: BOTTOMLESS TOKENS INSTALLED 1 MAX 5; 160: 1 / 4; 170: 0 / 4; 180: 0 / 3",
+          "where": "2027 Front Suspension Specifications p.24 Technical Specifications (Bottomless Tokens)",
+          "note": "Per-travel values (same for 27.5\" B and 29\" B) read from the rendered table page; row cells are merged across travels."
         },
         "volumeReducerAsPrinted": {
           "value": "0/3 Tokens, 0/4 Tokens, 1/4 Tokens, 1/5 Tokens",
@@ -3213,6 +3269,582 @@
           "retrieved": "2026-09-30",
           "quote": "SM - 2027+ Vivid",
           "where": "Service page document list"
+        }
+      }
+    },
+    {
+      "id": "rockshox-deluxe-coil-select-b1",
+      "name": "RockShox Deluxe Coil Select (RS-DLXC-SEL-B1)",
+      "type": "shock",
+      "modelYears": [],
+      "catalogId": null,
+      "modelCode": "RS-DLXC-SEL-B1",
+      "fields": {
+        "sizesAvailable": {
+          "value": [
+            "165x37.5(TR)",
+            "165x40(TR)",
+            "165x42.5(TR)",
+            "165x45(TR)",
+            "185x47.5(TR)",
+            "185x50(TR)",
+            "185x52.5(TR)",
+            "185x55(TR)",
+            "190x37.5",
+            "190x40",
+            "190x42.5",
+            "190x45",
+            "205x57.5(TR)",
+            "205x60(TR)",
+            "205x62.5(TR)",
+            "205x65(TR)",
+            "210x47.5",
+            "210x50",
+            "210x52.5",
+            "210x55",
+            "225x67.5(TR)",
+            "225x70(TR)",
+            "225x72.5(TR)",
+            "225x75(TR)",
+            "230x57.5",
+            "230x60",
+            "230x62.5",
+            "230x65",
+            "250x67.5",
+            "250x70",
+            "250x72.5",
+            "250x75"
+          ],
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/rs-dlxc-sel-b1",
+          "retrieved": "2026-10-01",
+          "quote": "Eye to eye / Stroke 165x37.5(TR), 165x40(TR), 165x42.5(TR) ...",
+          "where": "Model page, Specifications",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/rs-dlxc-sel-b1",
+            "retrieved": "2026-10-01",
+            "quote": "Eye to eye / Stroke | 165x37.5(TR), 165x40(TR), 165x42.5(TR), 165x45(TR), 185x47.5(TR), 185x50(TR), 185x52.5(TR), 185x55(TR), 190x37.5, 190x40, 190x42.5, 190x45, 205x57.5(TR), 205x60(TR), 205x62.5(TR), 205x65(TR), 210x47.5, 210x50, 210x52.5, 210x55, 225x67.5(TR), 225x70(TR), 225x72.5(TR), 225x75(TR), 230x57.5, 230x60, 230x62.5, 230x65, 250x67.5, 250x70, 250x72.5, 250x75",
+            "where": "Specifications table (eye-to-eye x stroke mm; TR = trunnion)"
+          }
+        },
+        "damper": {
+          "value": "R",
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/rs-dlxc-sel-b1",
+          "retrieved": "2026-10-01",
+          "quote": "Damper Type R",
+          "where": "Model page, Specifications",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/rs-dlxc-sel-b1",
+            "retrieved": "2026-10-01",
+            "quote": "Damper Type | R",
+            "where": "Specifications table"
+          }
+        },
+        "springType": {
+          "value": "coil",
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/rs-dlxc-sel-b1",
+          "retrieved": "2026-10-01",
+          "quote": "Shared chassis design with the podium-proven Super Deluxe Coil.",
+          "where": "Model page, Features",
+          "note": "Coil inferred from model name/page 'Deluxe Coil Select'; no explicit 'coil spring' sentence quoted.",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/rs-dlxc-sel-b1",
+            "retrieved": "2026-10-01",
+            "quote": "Deluxe Coil Select",
+            "where": "Product name only; specs table has no spring-type row"
+          }
+        },
+        "reboundMax": {
+          "value": 20,
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-dlxc-sel-b1",
+          "retrieved": "2026-10-01",
+          "quote": "20 clicks of Rebound adjustment offer wider range of tunability and accommodate more rider types.",
+          "where": "Model page, Features",
+          "note": "Maker says 'clicks'; whether positions or detent steps is not stated (see issue #13). Value recorded as printed."
+        }
+      }
+    },
+    {
+      "id": "rockshox-super-deluxe-ultimate-flight-attendant-d1",
+      "name": "RockShox Super Deluxe Ultimate Flight Attendant (RS-SDLX-UFA-D1)",
+      "type": "shock",
+      "modelYears": [],
+      "catalogId": null,
+      "modelCode": "RS-SDLX-UFA-D1",
+      "fields": {
+        "sizesAvailable": {
+          "value": [
+            "165x37.5(TR)",
+            "165x40(TR)",
+            "165x42.5(TR)",
+            "165x45(TR)",
+            "185x47.5(TR)",
+            "185x50(TR)",
+            "185x52.5(TR)",
+            "185x55(TR)",
+            "190x37.5",
+            "190x40",
+            "190x42.5",
+            "190x45",
+            "205x57.5(TR)",
+            "205x60(TR)",
+            "205x62.5(TR)",
+            "205x65(TR)",
+            "210x47.5",
+            "210x50",
+            "210x52.5",
+            "210x55",
+            "230x57.5",
+            "230x60",
+            "230x62.5",
+            "230x65"
+          ],
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/rs-sdlx-ufa-d1",
+          "retrieved": "2026-10-01",
+          "quote": "Eye to eye / Stroke 165x37.5(TR), 165x40(TR), 165x42.5(TR) ...",
+          "where": "Model page, Specifications",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/rs-sdlx-ufa-d1",
+            "retrieved": "2026-10-01",
+            "quote": "Eye to eye / Stroke | 165x37.5(TR), 165x40(TR), 165x42.5(TR), 165x45(TR), 185x47.5(TR), 185x50(TR), 185x52.5(TR), 185x55(TR), 190x37.5, 190x40, 190x42.5, 190x45, 205x57.5(TR), 205x60(TR), 205x62.5(TR), 205x65(TR), 210x47.5, 210x50, 210x52.5, 210x55, 230x57.5, 230x60, 230x62.5, 230x65",
+            "where": "Specifications table (eye-to-eye x stroke mm; TR = trunnion)"
+          }
+        },
+        "damper": {
+          "value": "RC3, RC3 Hydraulic Bottom Out",
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/rs-sdlx-ufa-d1",
+          "retrieved": "2026-10-01",
+          "quote": "Damper Type RC3, RC3 Hydraulic Bottom Out",
+          "where": "Model page, Specifications",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/rs-sdlx-ufa-d1",
+            "retrieved": "2026-10-01",
+            "quote": "Damper Type | RC3, RC3 Hydraulic Bottom Out",
+            "where": "Specifications table"
+          }
+        },
+        "springType": {
+          "value": "air (LinearXL)",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-sdlx-ufa-d1",
+          "retrieved": "2026-10-01",
+          "quote": "NEW LinearXL air spring delivers a consistent and predictable ride feel tunable with easy-to-adjust \"o-ring\" tokens",
+          "where": "Model page, Features"
+        },
+        "reboundMax": {
+          "value": 15,
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-sdlx-ufa-d1",
+          "retrieved": "2026-10-01",
+          "quote": "15 clicks of rebound adjustment providing uniform rebound curves paired with a broad adjustment range provide a consistent ride feel for a wide spectrum of rider weights",
+          "where": "Model page, Features",
+          "note": "Maker says 'clicks'; whether positions or detent steps is not stated (see issue #13). Value recorded as printed."
+        }
+      }
+    },
+    {
+      "id": "rockshox-vivid-select-d1",
+      "name": "RockShox Vivid Select RT (Vivid Air, RS-VIVD-SEL-D1)",
+      "type": "shock",
+      "modelYears": [],
+      "catalogId": null,
+      "modelCode": "RS-VIVD-SEL-D1",
+      "fields": {
+        "sizesAvailable": {
+          "value": [
+            "185x47.5(TR)",
+            "185x50(TR)",
+            "185x52.5(TR)",
+            "185x55(TR)",
+            "205x57.5(TR)",
+            "205x60(TR)",
+            "205x62.5(TR)",
+            "205x65(TR)",
+            "210x47.5",
+            "210x50",
+            "210x52.5",
+            "210x55",
+            "225x67.5(TR)",
+            "225x70(TR)",
+            "225x72.5(TR)",
+            "225x75(TR)",
+            "230x57.5",
+            "230x60",
+            "230x62.5",
+            "230x65",
+            "250x67.5",
+            "250x70",
+            "250x72.5",
+            "250x75"
+          ],
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-sel-d1",
+          "retrieved": "2026-10-01",
+          "quote": "Eye to eye / Stroke 185x47.5(TR), 185x50(TR), 185x52.5(TR) ...",
+          "where": "Model page, Specifications",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/rs-vivd-sel-d1",
+            "retrieved": "2026-10-01",
+            "quote": "Eye to eye / Stroke | 185x47.5(TR), 185x50(TR), 185x52.5(TR), 185x55(TR), 205x57.5(TR), 205x60(TR), 205x62.5(TR), 205x65(TR), 210x47.5, 210x50, 210x52.5, 210x55, 225x67.5(TR), 225x70(TR), 225x72.5(TR), 225x75(TR), 230x57.5, 230x60, 230x62.5, 230x65, 250x67.5, 250x70, 250x72.5, 250x75",
+            "where": "Specifications table (eye-to-eye x stroke mm; TR = trunnion)"
+          }
+        },
+        "damper": {
+          "value": "RT",
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-sel-d1",
+          "retrieved": "2026-10-01",
+          "quote": "Damper Type RT",
+          "where": "Model page, Specifications",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/rs-vivd-sel-d1",
+            "retrieved": "2026-10-01",
+            "quote": "Damper Type | RT",
+            "where": "Specifications table"
+          }
+        },
+        "springType": {
+          "value": "air (LinearXL)",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-sel-d1",
+          "retrieved": "2026-10-01",
+          "quote": "NEW LinearXL air spring delivers a consistent and predictable ride feel tunable with easy-to-change bottomless tokens",
+          "where": "Model page, Features"
+        },
+        "reboundMax": {
+          "value": 20,
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-sel-d1",
+          "retrieved": "2026-10-01",
+          "quote": "20 clicks of Rebound adjustment providing uniform rebound curves paired with a broad adjustment range provide a consistent ride feel for a wide spectrum of rider weights",
+          "where": "Model page, Features",
+          "note": "Maker says 'clicks'; whether positions or detent steps is not stated (see issue #13). Value recorded as printed."
+        },
+        "hasClimbLever": {
+          "value": true,
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivd-sel-d1",
+          "retrieved": "2026-10-01",
+          "quote": "NEW RT damper providing a threshold lever for climbing efficiency",
+          "where": "Model page, Features"
+        }
+      }
+    },
+    {
+      "id": "rockshox-vivid-coil-ultimate-dh-d1",
+      "name": "RockShox Vivid Coil Ultimate DH RC2 (RS-VIVC-UDH-D1)",
+      "type": "shock",
+      "modelYears": [],
+      "catalogId": null,
+      "modelCode": "RS-VIVC-UDH-D1",
+      "fields": {
+        "sizesAvailable": {
+          "value": [
+            "225x67.5(TR)",
+            "225x70(TR)",
+            "225x72.5(TR)",
+            "225x75(TR)",
+            "250x67.5",
+            "250x70",
+            "250x72.5",
+            "250x75"
+          ],
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivc-udh-d1",
+          "retrieved": "2026-10-01",
+          "quote": "Eye to eye / Stroke 225x67.5(TR), 225x70(TR), 225x72.5(TR) ...",
+          "where": "Model page, Specifications",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/rs-vivc-udh-d1",
+            "retrieved": "2026-10-01",
+            "quote": "Eye to eye / Stroke | 225x67.5(TR), 225x70(TR), 225x72.5(TR), 225x75(TR), 250x67.5, 250x70, 250x72.5, 250x75",
+            "where": "Specifications table (eye-to-eye x stroke mm; TR = trunnion)"
+          }
+        },
+        "damper": {
+          "value": "RC2 Adj. Hydraulic Bottom Out",
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivc-udh-d1",
+          "retrieved": "2026-10-01",
+          "quote": "Damper Type RC2 Adj. Hydraulic Bottom Out",
+          "where": "Model page, Specifications",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/rs-vivc-udh-d1",
+            "retrieved": "2026-10-01",
+            "quote": "Damper Type | RC2 Adj. Hydraulic Bottom Out",
+            "where": "Specifications table"
+          }
+        },
+        "springType": {
+          "value": "coil",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivc-udh-d1",
+          "retrieved": "2026-10-01",
+          "quote": "There’s a reason everyone loves coil—the feel is unmistakable",
+          "where": "Model page, Description",
+          "note": "Coil per page description of 'Vivid Coil Ultimate DH'."
+        },
+        "reboundMax": {
+          "value": 20,
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivc-udh-d1",
+          "retrieved": "2026-10-01",
+          "quote": "20 clicks of Rebound adjustment providing uniform rebound curves paired with a broad adjustment range provide a consistent ride feel for a wide spectrum of rider weights",
+          "where": "Model page, Features",
+          "note": "Maker says 'clicks'; whether positions or detent steps is not stated (see issue #13). Value recorded as printed."
+        },
+        "hboPositions": {
+          "value": 5,
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/rs-vivc-udh-d1",
+          "retrieved": "2026-10-01",
+          "quote": "Adjustable Bottom Out (ABO) offers a convenient dial with five different compression settings to customize the cushioning you experience in the last 20% of travel",
+          "where": "Model page, Features"
+        }
+      }
+    },
+    {
+      "id": "rockshox-boxxer-ultimate-d2-2027",
+      "name": "RockShox BoXXer Ultimate (Charger 3.2 RC2, FS-BXR-ULT-D2)",
+      "type": "fork",
+      "modelYears": [
+        2027
+      ],
+      "catalogId": null,
+      "modelCode": "FS-BXR-ULT-D2",
+      "fields": {
+        "travelMm": {
+          "value": [
+            180,
+            190,
+            200
+          ],
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/fs-bxr-ult-d2",
+          "retrieved": "2026-10-01",
+          "quote": "Travel (mm) 180mm, 190mm, 200mm",
+          "where": "Model page, Specifications",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/fs-bxr-ult-d2",
+            "retrieved": "2026-10-01",
+            "quote": "Travel (mm) | 180mm, 190mm, 200mm",
+            "where": "Specifications table; page does not state model year 2027"
+          }
+        },
+        "wheelSize": {
+          "value": [
+            "27.5\"",
+            "29\""
+          ],
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-bxr-ult-d2",
+          "retrieved": "2026-10-01",
+          "quote": "Wheel size 27.5\", 29\"",
+          "where": "Model page, Specifications"
+        },
+        "stanchionMm": {
+          "value": 38,
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/fs-bxr-ult-d2",
+          "retrieved": "2026-10-01",
+          "quote": "Upper tube type 38mm aluminum",
+          "where": "Model page, Specifications",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/fs-bxr-ult-d2",
+            "retrieved": "2026-10-01",
+            "quote": "Upper tube type | 38mm aluminum",
+            "where": "Specifications table; page does not state model year 2027"
+          }
+        },
+        "damper": {
+          "value": "Charger 3.2 RC2 W/ButterCups",
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/fs-bxr-ult-d2",
+          "retrieved": "2026-10-01",
+          "quote": "Damper Type Charger 3.2 RC2 W/ButterCups",
+          "where": "Model page, Specifications",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/fs-bxr-ult-d2",
+            "retrieved": "2026-10-01",
+            "quote": "Damper Type | Charger 3.2 RC2 W/ButterCups",
+            "where": "Specifications table; page does not state model year 2027"
+          }
+        },
+        "springType": {
+          "value": "DebonAir+ / Linear XL (air)",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-bxr-ult-d2",
+          "retrieved": "2026-10-01",
+          "quote": "Spring DebonAir+ W/ ButterCups, Linear XL W/ ButterCup",
+          "where": "Model page, Specifications"
+        },
+        "volumeReducerAsPrinted": {
+          "value": "0/6 Tokens, 1/6 Tokens",
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/fs-bxr-ult-d2",
+          "retrieved": "2026-10-01",
+          "quote": "Volume reducer 0/6 Tokens, 1/6 Tokens",
+          "where": "Model page, Specifications",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/fs-bxr-ult-d2",
+            "retrieved": "2026-10-01",
+            "quote": "Volume reducer | 0/6 Tokens, 1/6 Tokens",
+            "where": "Specifications table; page does not state model year 2027"
+          }
+        },
+        "spacersStock": {
+          "value": {
+            "180": 1,
+            "190": 0,
+            "200": 0
+          },
+          "status": "single",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2027-front-suspension-specifications.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "BoXXer Ultimate FS-BXR-ULT-D2 ... 180: BOTTOMLESS TOKENS INSTALLED 1 ... 190/200: 0 ... MAX 6",
+          "where": "2027 Front Suspension Specifications p.13 Technical Specifications (Bottomless Tokens)",
+          "note": "Same for 27.5\" B and 29\" B."
+        },
+        "spacersMax": {
+          "value": 6,
+          "status": "single",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2027-front-suspension-specifications.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "BoXXer Ultimate FS-BXR-ULT-D2 ... BOTTOMLESS TOKENS ... MAX 6",
+          "where": "2027 Front Suspension Specifications p.13 Technical Specifications (Bottomless Tokens)"
+        }
+      }
+    },
+    {
+      "id": "rockshox-lyrik-ultimate-flight-attendant-e1-2027",
+      "name": "RockShox Lyrik Ultimate Flight Attendant (Charger 3.2 FA, FS-LYRK-UFA-E1)",
+      "type": "fork",
+      "modelYears": [
+        2027
+      ],
+      "catalogId": null,
+      "modelCode": "FS-LYRK-UFA-E1",
+      "fields": {
+        "travelMm": {
+          "value": [
+            140,
+            150,
+            160,
+            170
+          ],
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/fs-lyrk-ufa-e1",
+          "retrieved": "2026-10-01",
+          "quote": "Travel (mm) 140mm, 150mm, 160mm, 170mm",
+          "where": "Model page, Specifications",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/fs-lyrk-ufa-e1",
+            "retrieved": "2026-10-01",
+            "quote": "Travel (mm) | 140mm, 150mm, 160mm, 170mm",
+            "where": "Specifications table; page does not state model year 2027"
+          }
+        },
+        "wheelSize": {
+          "value": [
+            "27.5\"",
+            "29\""
+          ],
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-lyrk-ufa-e1",
+          "retrieved": "2026-10-01",
+          "quote": "Wheel size 27.5\", 29\"",
+          "where": "Model page, Specifications"
+        },
+        "stanchionMm": {
+          "value": 35,
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/fs-lyrk-ufa-e1",
+          "retrieved": "2026-10-01",
+          "quote": "Upper tube type 35mm tapered wall aluminum",
+          "where": "Model page, Specifications",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/fs-lyrk-ufa-e1",
+            "retrieved": "2026-10-01",
+            "quote": "Upper tube type | 35mm tapered wall aluminum",
+            "where": "Specifications table; page does not state model year 2027"
+          }
+        },
+        "damper": {
+          "value": "Charger 3.2 Flight Attendant W/ButterCup",
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/fs-lyrk-ufa-e1",
+          "retrieved": "2026-10-01",
+          "quote": "Damper Type Charger 3.2 Flight Attendant W/ButterCup",
+          "where": "Model page, Specifications",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/fs-lyrk-ufa-e1",
+            "retrieved": "2026-10-01",
+            "quote": "Damper Type | Charger 3.2 Flight Attendant W/ButterCup",
+            "where": "Specifications table; page does not state model year 2027"
+          }
+        },
+        "springType": {
+          "value": "LinearXL W/ButterCup (air)",
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/models/fs-lyrk-ufa-e1",
+          "retrieved": "2026-10-01",
+          "quote": "Spring LinearXL W/ButterCup",
+          "where": "Model page, Specifications"
+        },
+        "volumeReducerAsPrinted": {
+          "value": "0/3 Tokens, 0/4 Tokens, 1/5 Tokens",
+          "status": "verified",
+          "url": "https://www.sram.com/en/rockshox/models/fs-lyrk-ufa-e1",
+          "retrieved": "2026-10-01",
+          "quote": "Volume reducer 0/3 Tokens, 0/4 Tokens, 1/5 Tokens",
+          "where": "Model page, Specifications",
+          "verifiedBy": {
+            "url": "https://www.sram.com/en/rockshox/models/fs-lyrk-ufa-e1",
+            "retrieved": "2026-10-01",
+            "quote": "Volume reducer | 0/3 Tokens, 0/4 Tokens, 1/5 Tokens",
+            "where": "Specifications table; page does not state model year 2027"
+          }
+        },
+        "spacersStock": {
+          "value": {
+            "140": 1,
+            "150": 0,
+            "160": 0,
+            "170": 0
+          },
+          "status": "single",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2027-front-suspension-specifications.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Lyrik Ultimate FS-LYRK-ULT-E1 ... 140: BOTTOMLESS TOKENS INSTALLED 1 MAX 5; 150-160: installed 0, max 4; 170: installed 0, max 3",
+          "where": "2027 Front Suspension Specifications p.16 Technical Specifications (Bottomless Tokens)",
+          "note": "Per-travel values (same for 27.5\" B and 29\" B) read from the rendered table page; row cells are merged across travels."
+        },
+        "spacersMax": {
+          "value": {
+            "140": 5,
+            "150": 4,
+            "160": 4,
+            "170": 3
+          },
+          "status": "single",
+          "url": "https://www.sram.com/globalassets/document-hierarchy/service-manuals/rockshox/front-suspension/2027-front-suspension-specifications.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Lyrik Ultimate FS-LYRK-ULT-E1 ... 140: BOTTOMLESS TOKENS INSTALLED 1 MAX 5; 150-160: installed 0, max 4; 170: installed 0, max 3",
+          "where": "2027 Front Suspension Specifications p.16 Technical Specifications (Bottomless Tokens)",
+          "note": "Per-travel values (same for 27.5\" B and 29\" B) read from the rendered table page; row cells are merged across travels."
+        },
+        "aboClicks": {
+          "value": 8,
+          "status": "single",
+          "url": "https://www.sram.com/en/rockshox/learn/suspension-fine-tuning",
+          "retrieved": "2026-10-01",
+          "quote": "Forks with ABO offer 8 clicks and 10mm of adjustable end-stroke control for added confidence.",
+          "where": "Suspension Fine Tuning page, Bottom Out Tuning"
         }
       }
     }

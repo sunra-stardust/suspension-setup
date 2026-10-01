@@ -91,7 +91,7 @@
         "lscMax": {
           "value": null,
           "status": "missing",
-          "note": "No click count stated. Compression is a sweep lever: owner's guide p.11 'The 2-Position Sweep Adjust lever ... Use the positions between OPEN and FIRM modes'; product page 'A single sweep compression adjuster lets you lock out for climbing and open it up'. See compressionAdjuster."
+          "note": "No click count stated. Compression is a sweep lever: owner's guide p.11 'The 2-Position Sweep Adjust lever ... Use the positions between OPEN and FIRM modes'; product page 'A single sweep compression adjuster lets you lock out for climbing and open it up'. See compressionAdjuster. Retried 2026-10-01: no new document, unchanged."
         },
         "hscMax": {
           "value": null,
@@ -124,7 +124,7 @@
         "reboundMax": {
           "value": null,
           "status": "missing",
-          "note": "Total rebound clicks not stated. Owner's guide p.10 table gives starting clicks 1-13 from closed; p.11 diagram numbers 1-9 only. Neither is a stated total. Checked product page, Z1 owner's guide 605-00-311 REV B, manuals page."
+          "note": "Total rebound clicks not stated. Owner's guide p.10 table gives starting clicks 1-13 from closed; p.11 diagram numbers 1-9 only. Neither is a stated total. Checked product page, Z1 owner's guide 605-00-311 REV B, manuals page. Retried 2026-10-01: no new document, unchanged."
         },
         "hsrMax": {
           "value": null,
@@ -143,12 +143,12 @@
         "lscStart": {
           "value": null,
           "status": "missing",
-          "note": "No compression starting setting given (guide only says set sag with lever in OPEN)."
+          "note": "No compression starting setting given (guide only says set sag with lever in OPEN). Retried 2026-10-01: no new document, unchanged."
         },
         "hscStart": {
           "value": null,
           "status": "missing",
-          "note": "No HSC adjuster."
+          "note": "No HSC adjuster. Retried 2026-10-01: no new document, unchanged."
         },
         "maxPressurePsi": {
           "value": 120,
@@ -444,7 +444,7 @@
         "lscMax": {
           "value": null,
           "status": "missing",
-          "note": "No click count stated. Checked product page, Bomber CR Tuning Guide 605-00-205 REV A (p.4 only: 'Turning the LSC knob clockwise increases low-speed compression damping'), Rear Shock Owner's Guide 605-00-201 REV A. Also rendered tuning-guide pages 4-5 as images: no click numbers."
+          "note": "No click count stated. Checked product page, Bomber CR Tuning Guide 605-00-205 REV A (p.4 only: 'Turning the LSC knob clockwise increases low-speed compression damping'), Rear Shock Owner's Guide 605-00-201 REV A. Also rendered tuning-guide pages 4-5 as images: no click numbers. Retried 2026-10-01: no new document, unchanged."
         },
         "hscMax": {
           "value": null,
@@ -471,7 +471,7 @@
         "reboundMax": {
           "value": null,
           "status": "missing",
-          "note": "No click count stated. Tuning guide p.5 only: 'Turning your rebound knob clockwise slows down rebound. Turning your rebound knob counter-clockwise speeds up rebound.' No starting-click table either."
+          "note": "No click count stated. Tuning guide p.5 only: 'Turning your rebound knob clockwise slows down rebound. Turning your rebound knob counter-clockwise speeds up rebound.' No starting-click table either. Retried 2026-10-01: no new document, unchanged."
         },
         "hsrMax": {
           "value": null,
@@ -634,7 +634,7 @@
         "lscMax": {
           "value": null,
           "status": "missing",
-          "note": "No clicks: product page says compression sweep is 'non-indexed'; no count stated anywhere (product page, owner's guide 605-00-269 p.6)."
+          "note": "No clicks: product page says compression sweep is 'non-indexed'; no count stated anywhere (product page, owner's guide 605-00-269 p.6). Retried 2026-10-01: no new document, unchanged."
         },
         "hscMax": {
           "value": null,
@@ -661,7 +661,7 @@
         "reboundMax": {
           "value": null,
           "status": "missing",
-          "note": "Total not stated. Owner's guide p.6 gives only starting clicks (1-10) by pressure. Checked product page and owner's guide."
+          "note": "Total not stated. Owner's guide p.6 gives only starting clicks (1-10) by pressure. Checked product page and owner's guide. Retried 2026-10-01: no new document, unchanged."
         },
         "hsrMax": {
           "value": null,
@@ -738,7 +738,7 @@
         "hasClimbLever": {
           "value": null,
           "status": "missing",
-          "note": "Ambiguous: product page calls compression a '2-position, non-indexed compression sweep adjust'; owner's guide calls it a 'Low-Speed Compression knob' with an OPEN setting, no FIRM/lockout wording. Not recorded as true/false."
+          "note": "Ambiguous: product page calls compression a '2-position, non-indexed compression sweep adjust'; owner's guide calls it a 'Low-Speed Compression knob' with an OPEN setting, no FIRM/lockout wording. Not recorded as true/false. Retried 2026-10-01: no new document, unchanged."
         },
         "sagPercent": {
           "value": {
@@ -772,6 +772,360 @@
           "retrieved": "2026-09-30",
           "quote": "Bomber Air Owner's Manual",
           "where": "product page, 'Product Manuals & Warranty' tab"
+        }
+      }
+    },
+    {
+      "id": "marzocchi-bomber-z-2026",
+      "name": "Marzocchi Bomber Z",
+      "type": "fork",
+      "modelYears": [
+        2026
+      ],
+      "catalogId": null,
+      "fields": {
+        "travelMm": {
+          "value": [
+            150,
+            160,
+            170,
+            180,
+            190
+          ],
+          "status": "verified",
+          "url": "https://bike.marzocchi.com/products/bomber-z",
+          "retrieved": "2026-10-01",
+          "quote": "TRAVEL: 150mm, 160mm, 170mm, 180mm, 190mm",
+          "where": "product page, Specs tab",
+          "verifiedBy": {
+            "url": "https://bike.marzocchi.com/products/bomber-z",
+            "retrieved": "2026-10-01",
+            "quote": "TRAVEL: 150mm, 160mm, 170mm, 180mm, 190mm",
+            "where": "Product page, Specs tab (not year-specific)"
+          }
+        },
+        "wheelSize": {
+          "value": [
+            "27.5",
+            "29"
+          ],
+          "status": "single",
+          "url": "https://bike.marzocchi.com/products/bomber-z",
+          "retrieved": "2026-10-01",
+          "quote": "WHEELSIZE: 27.5\", 29\"",
+          "where": "product page, Specs tab"
+        },
+        "stanchionMm": {
+          "value": 38,
+          "status": "verified",
+          "url": "https://bike.marzocchi.com/products/bomber-z",
+          "retrieved": "2026-10-01",
+          "quote": "CHASSIS: 38 mm Black Anodized",
+          "where": "product page, Specs tab",
+          "verifiedBy": {
+            "url": "https://bike.marzocchi.com/products/bomber-z",
+            "retrieved": "2026-10-01",
+            "quote": "CHASSIS: 38 mm Black Anodized",
+            "where": "Product page, Specs tab"
+          }
+        },
+        "damper": {
+          "value": "GRIP",
+          "status": "single",
+          "url": "https://bike.marzocchi.com/products/bomber-z",
+          "retrieved": "2026-10-01",
+          "quote": "DAMPING: GRIP",
+          "where": "product page, Specs tab"
+        },
+        "springType": {
+          "value": "air",
+          "status": "verified",
+          "url": "https://bike.marzocchi.com/products/bomber-z",
+          "retrieved": "2026-10-01",
+          "quote": "SPRING: Air",
+          "where": "product page, Specs tab",
+          "verifiedBy": {
+            "url": "https://bike.marzocchi.com/products/bomber-z",
+            "retrieved": "2026-10-01",
+            "quote": "SPRING: Air",
+            "where": "Product page, Specs tab"
+          }
+        },
+        "rakeMm": {
+          "value": [
+            37,
+            44
+          ],
+          "status": "verified",
+          "url": "https://bike.marzocchi.com/products/bomber-z",
+          "retrieved": "2026-10-01",
+          "quote": "RAKE: 37mm (27.5 only), 44mm (27.5, 29)",
+          "where": "product page, Specs tab",
+          "verifiedBy": {
+            "url": "https://bike.marzocchi.com/products/bomber-z",
+            "retrieved": "2026-10-01",
+            "quote": "RAKE: 37mm (27.5 only), 44mm (27.5, 29)",
+            "where": "Product page, Specs tab; 37 only for 27.5, 44 for both"
+          }
+        },
+        "axle": {
+          "value": "15QRx110",
+          "status": "verified",
+          "url": "https://bike.marzocchi.com/products/bomber-z",
+          "retrieved": "2026-10-01",
+          "quote": "AXLE: 15QRx110",
+          "where": "product page, Specs tab",
+          "verifiedBy": {
+            "url": "https://bike.marzocchi.com/products/bomber-z",
+            "retrieved": "2026-10-01",
+            "quote": "AXLE: 15QRx110",
+            "where": "Product page, Specs tab"
+          }
+        },
+        "compressionAdjuster": {
+          "value": "3-position micro adjust lever (OPEN / MEDIUM / FIRM, positions between usable), not clicked",
+          "status": "single",
+          "url": "https://cdn.shopify.com/s/files/1/1640/5435/files/605-00-323_REV_A_-_Marzocchi_BOMBER_Z_Fork_Owners_Guide.pdf?v=1742509173",
+          "retrieved": "2026-10-01",
+          "quote": "The 3-Position Micro Adjust lever is useful to make on-the-fly adjustments to control fork performance. Use the positions between the OPEN, MEDIUM, and FIRM modes to fine-tune your compression damping.",
+          "where": "605-00-323 REV A BOMBER Z Owner's Guide, English section, p.10 'GRIP COMPRESSION ADJUST'"
+        },
+        "lscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No click count stated. Compression is a 3-position lever (owner's guide 605-00-323 REV A p.10); checked product page and guide."
+        },
+        "hscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Guide describes a single compression lever only ('GRIP COMPRESSION ADJUST'); no separate HSC adjuster stated, but absence is not explicitly documented."
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "single",
+          "url": "https://cdn.shopify.com/s/files/1/1640/5435/files/605-00-323_REV_A_-_Marzocchi_BOMBER_Z_Fork_Owners_Guide.pdf?v=1742509173",
+          "retrieved": "2026-10-01",
+          "quote": "Turn your rebound knob to the closed position, clockwise until it stops. Then turn it counter-clockwise to the number of clicks shown in the table on page 9.",
+          "where": "605-00-323 REV A BOMBER Z Owner's Guide, English section, p.10 'REBOUND ADJUSTMENT / GRIP REBOUND'"
+        },
+        "reboundMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Total rebound clicks not stated. Owner's guide p.9 table gives starting clicks 1-13 from closed; p.10 diagram numbers 9..1 only. Neither is a stated total."
+        },
+        "lscStart": {
+          "value": null,
+          "status": "missing",
+          "note": "No compression starting setting given (guide only says set sag with lever in OPEN)."
+        },
+        "maxPressurePsi": {
+          "value": 120,
+          "status": "verified",
+          "url": "https://cdn.shopify.com/s/files/1/1640/5435/files/605-00-323_REV_A_-_Marzocchi_BOMBER_Z_Fork_Owners_Guide.pdf?v=1742509173",
+          "retrieved": "2026-10-01",
+          "quote": "Do not exceed maximum air pressure: BOMBER Z maximum air pressure is 120 psi.",
+          "where": "605-00-323 REV A BOMBER Z Owner's Guide, English section, p.7 warning box (repeated p.9)",
+          "verifiedBy": {
+            "url": "https://cdn.shopify.com/s/files/1/1640/5435/files/605-00-323_REV_A_-_Marzocchi_BOMBER_Z_Fork_Owners_Guide.pdf?v=1742509173",
+            "retrieved": "2026-10-01",
+            "quote": "BOMBER Z maximum air pressure is 120 psi.",
+            "where": "Owner's Guide (English), air pressure warning"
+          }
+        },
+        "minPressurePsi": {
+          "value": 40,
+          "status": "verified",
+          "url": "https://cdn.shopify.com/s/files/1/1640/5435/files/605-00-323_REV_A_-_Marzocchi_BOMBER_Z_Fork_Owners_Guide.pdf?v=1742509173",
+          "retrieved": "2026-10-01",
+          "quote": "Minimum air pressure is: 40 psi.",
+          "where": "605-00-323 REV A BOMBER Z Owner's Guide, English section, p.7 warning box",
+          "verifiedBy": {
+            "url": "https://cdn.shopify.com/s/files/1/1640/5435/files/605-00-323_REV_A_-_Marzocchi_BOMBER_Z_Fork_Owners_Guide.pdf?v=1742509173",
+            "retrieved": "2026-10-01",
+            "quote": "Minimum air pressure is: 40 psi.",
+            "where": "Owner's Guide (English), air pressure warning"
+          }
+        },
+        "pressureTable": {
+          "value": {
+            "unit": "psi",
+            "rows": [
+              {
+                "rider": "120-130 lbs",
+                "value": 54
+              },
+              {
+                "rider": "130-140 lbs",
+                "value": 58
+              },
+              {
+                "rider": "140-150 lbs",
+                "value": 62
+              },
+              {
+                "rider": "150-160 lbs",
+                "value": 67
+              },
+              {
+                "rider": "160-170 lbs",
+                "value": 71
+              },
+              {
+                "rider": "170-180 lbs",
+                "value": 75
+              },
+              {
+                "rider": "180-190 lbs",
+                "value": 79
+              },
+              {
+                "rider": "190-200 lbs",
+                "value": 83
+              },
+              {
+                "rider": "200-210 lbs",
+                "value": 87
+              },
+              {
+                "rider": "210-220 lbs",
+                "value": 92
+              },
+              {
+                "rider": "220-230 lbs",
+                "value": 96
+              },
+              {
+                "rider": "230-240 lbs",
+                "value": 100
+              },
+              {
+                "rider": "240-250 lbs",
+                "value": 104
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://cdn.shopify.com/s/files/1/1640/5435/files/605-00-323_REV_A_-_Marzocchi_BOMBER_Z_Fork_Owners_Guide.pdf?v=1742509173",
+          "retrieved": "2026-10-01",
+          "quote": "Suggested Starting Points for Setting Sag | Rider Weight (lbs) | Rider Weight (kgs) | BOMBER Z Pressure | BOMBER Z Rebound Setting | 120-130 | 54-59 | 54 psi (3.7 bar) | 13 ... 240-250 | 109-113 | 104 psi (7.2 bar) | 1",
+          "where": "605-00-323 REV A BOMBER Z Owner's Guide, English section, p.9 table 'Suggested Starting Points for Setting Sag' (13 rows, lbs column; kg column also printed)"
+        },
+        "reboundStartByRider": {
+          "value": {
+            "unit": "clicks from closed",
+            "rows": [
+              {
+                "rider": "120-130 lbs",
+                "value": 13
+              },
+              {
+                "rider": "130-140 lbs",
+                "value": 12
+              },
+              {
+                "rider": "140-150 lbs",
+                "value": 11
+              },
+              {
+                "rider": "150-160 lbs",
+                "value": 10
+              },
+              {
+                "rider": "160-170 lbs",
+                "value": 9
+              },
+              {
+                "rider": "170-180 lbs",
+                "value": 8
+              },
+              {
+                "rider": "180-190 lbs",
+                "value": 7
+              },
+              {
+                "rider": "190-200 lbs",
+                "value": 6
+              },
+              {
+                "rider": "200-210 lbs",
+                "value": 5
+              },
+              {
+                "rider": "210-220 lbs",
+                "value": 4
+              },
+              {
+                "rider": "220-230 lbs",
+                "value": 3
+              },
+              {
+                "rider": "230-240 lbs",
+                "value": 2
+              },
+              {
+                "rider": "240-250 lbs",
+                "value": 1
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://cdn.shopify.com/s/files/1/1640/5435/files/605-00-323_REV_A_-_Marzocchi_BOMBER_Z_Fork_Owners_Guide.pdf?v=1742509173",
+          "retrieved": "2026-10-01",
+          "quote": "BOMBER Z Rebound Setting ... 120-130 ... 13 ... 240-250 ... 1",
+          "where": "605-00-323 REV A BOMBER Z Owner's Guide, English section, p.9 same table, 'BOMBER Z Rebound Setting' column"
+        },
+        "spacersStock": {
+          "value": {
+            "190": 0,
+            "180": 1,
+            "170": 2,
+            "160": 3,
+            "150": 4
+          },
+          "status": "single",
+          "url": "https://cdn.shopify.com/s/files/1/1640/5435/files/605-00-323_REV_A_-_Marzocchi_BOMBER_Z_Fork_Owners_Guide.pdf?v=1742509173",
+          "retrieved": "2026-10-01",
+          "quote": "BOMBER Z Volume Spacer Configurations | Travel | Volume Spacers Factory Installed | *Max Volume Spacers | 190 mm 0 4 | 180 mm 1 5 | 170 mm 2 6 | 160 mm 3 7 | 150 mm 4 8",
+          "where": "605-00-323 REV A BOMBER Z Owner's Guide, English section, p.11 table (keys = travel in mm)"
+        },
+        "spacersMax": {
+          "value": {
+            "190": 4,
+            "180": 5,
+            "170": 6,
+            "160": 7,
+            "150": 8
+          },
+          "status": "single",
+          "url": "https://cdn.shopify.com/s/files/1/1640/5435/files/605-00-323_REV_A_-_Marzocchi_BOMBER_Z_Fork_Owners_Guide.pdf?v=1742509173",
+          "retrieved": "2026-10-01",
+          "quote": "BOMBER Z Volume Spacer Configurations | Travel | Volume Spacers Factory Installed | *Max Volume Spacers | 190 mm 0 4 | 180 mm 1 5 | 170 mm 2 6 | 160 mm 3 7 | 150 mm 4 8",
+          "where": "605-00-323 REV A BOMBER Z Owner's Guide, English section, p.11 table (keys = travel in mm)"
+        },
+        "sagPercent": {
+          "value": {
+            "min": 15,
+            "max": 20
+          },
+          "status": "single",
+          "url": "https://cdn.shopify.com/s/files/1/1640/5435/files/605-00-323_REV_A_-_Marzocchi_BOMBER_Z_Fork_Owners_Guide.pdf?v=1742509173",
+          "retrieved": "2026-10-01",
+          "quote": "Sag range should be set to 15–20% of total fork travel.",
+          "where": "605-00-323 REV A BOMBER Z Owner's Guide, English section, p.9 'SAG SETTING'"
+        },
+        "manualUrl": {
+          "value": "https://cdn.shopify.com/s/files/1/1640/5435/files/605-00-323_REV_A_-_Marzocchi_BOMBER_Z_Fork_Owners_Guide.pdf?v=1742509173",
+          "status": "verified",
+          "url": "https://bike.marzocchi.com/products/bomber-z",
+          "retrieved": "2026-10-01",
+          "quote": "Tuning & Product Manuals ... Marzocchi Fork Owners Guide",
+          "where": "product page manual link; doc number 605-00-323 REV A",
+          "verifiedBy": {
+            "url": "https://bike.marzocchi.com/products/bomber-z",
+            "retrieved": "2026-10-01",
+            "quote": "Marzocchi Fork Owners Guide (listed under Tuning & Product Manuals; PDF 605-00-323 REV A Bomber Z Fork Owners Guide)",
+            "where": "Product page, Tuning & Product Manuals"
+          }
         }
       }
     }

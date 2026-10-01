@@ -10,8 +10,8 @@
       "website": "https://ridefox.com",
       "docHub": "https://tech.ridefox.com/bike/list/owners-manuals",
       "status": "listed",
-      "lastChecked": "2026-09-30",
-      "notes": "Per-model-year owner's manuals as HTML pages on tech.ridefox.com (some tables are images); user-spec drawings under /bike/list/spec-sheets; product pages on ridefox.com (Shopify, current model year, MY tags) link owner's-guide PDFs hosted on Fox's asset CDN serenity-foxfactory.asset.akeneo.cloud. The URL https://tech.ridefox.com/bike/owners-manuals returns 404; the list lives at /bike/list/owners-manuals. Fox generally publishes starting settings, rarely total click counts. Sample run 2026-09-30: only selected models researched, product list incomplete."
+      "lastChecked": "2026-10-01",
+      "notes": "Per-model-year owner's manuals as HTML pages on tech.ridefox.com (some tables are images); user-spec drawings under /bike/list/spec-sheets; product pages on ridefox.com (Shopify, current model year, MY tags) link owner's-guide PDFs hosted on Fox's asset CDN serenity-foxfactory.asset.akeneo.cloud. The URL https://tech.ridefox.com/bike/owners-manuals returns 404; the list lives at /bike/list/owners-manuals. Fox generally publishes starting settings, rarely total click counts. Sample run 2026-09-30: only selected models researched, product list incomplete. Monthly update 2026-10-01: MY2027 manuals exist for every family (hub ids 3162-3174, 3183; MY27 owner's-guide PDFs for 38/40/FLOAT X/DHX linked from product pages); added MY2027 items for 34, 36, 38, 40, FLOAT X, FLOAT X2, DHX2. Not yet covered: 32 (TC/Step-Cast/Rhythm), 34SL, 36SL, AWL, Podium, FLOAT SL/DPS, DHX, Live Valve NEO, 2026 38/40 and 2026 FLOAT/DHX/DHX2 items."
     },
     {
       "id": "rockshox",
@@ -22,8 +22,8 @@
       "website": "https://www.sram.com/en/rockshox",
       "docHub": "https://www.sram.com/en/service",
       "status": "listed",
-      "lastChecked": "2026-09-30",
-      "notes": "Model codes: FS-LYRK-ULT-D2 / FS-ZEB-ULT-A3 = Charger 3.1 generation (listed in 2025+2026 spec PDFs); FS-LYRK-ULT-E1 / FS-ZEB-ULT-B1 = new Charger 3.2 + LinearXL + ABO generation (2027 spec PDF). Shocks: RS-SDLX-ULT-C2 (2025+), RS-VIVD-ULT-C1 (2024+), new D1 generation for both (LinearXL, numbered adjusters). RockShox 'clicks' for Charger compression = positions (-7..+7 / -2..+2). Docs: (model service pages https://www.sram.com/en/service/models/<code>); user manual https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension; spec PDFs <year>-front-suspension-specifications.pdf; Trailhead https://trailhead.rockshox.com (serial-based) Sample run 2026-09-30: only selected models researched, product list incomplete."
+      "lastChecked": "2026-10-01",
+      "notes": "Model codes: FS-LYRK-ULT-D2 / FS-ZEB-ULT-A3 = Charger 3.1 generation (listed in 2025+2026 spec PDFs); FS-LYRK-ULT-E1 / FS-ZEB-ULT-B1 = new Charger 3.2 + LinearXL + ABO generation (2027 spec PDF). Shocks: RS-SDLX-ULT-C2 (2025+), RS-VIVD-ULT-C1 (2024+), new D1 generation for both (LinearXL, numbered adjusters). RockShox 'clicks' for Charger compression = positions (-7..+7 / -2..+2). Docs: (model service pages https://www.sram.com/en/service/models/<code>); user manual https://docs.sram.com/en-US/publications/5ODr3E6BhL1uWDnWhq4ATB/UM%20-%20Suspension; spec PDFs <year>-front-suspension-specifications.pdf; Trailhead https://trailhead.rockshox.com (serial-based) Monthly update 2026-10-01: added BoXXer Ultimate D2, Lyrik Flight Attendant E1, Super Deluxe Flight Attendant D1, Vivid Select D1, Vivid Coil Ultimate DH D1, Deluxe Coil Select B1; still not covered: ZEB Flight Attendant B1, Select/Select+/Base fork variants, Domain, Pike, SID, Reverb. Sample run 2026-09-30: only selected models researched, product list incomplete."
     },
     {
       "id": "marzocchi",
@@ -34,8 +34,8 @@
       "website": "https://bike.marzocchi.com/",
       "docHub": "https://bike.marzocchi.com/pages/product-service-manuals",
       "status": "listed",
-      "lastChecked": "2026-09-30",
-      "notes": "marzocchi.com is a splash page linking bike.marzocchi.com (Shopify store). Manual PDFs are hosted on cdn.shopify.com and linked from bike.marzocchi.com product/manual pages; service procedures on tech.ridefox.com / ridefox.com. Current fork line (2026 store): Bomber Z1, Z1 Coil, Z1 E-Optimized, Z2, Z2 E-Optimized, Bomber Z, Super Z, 58, DJ. Shocks: Bomber CR, Bomber Air, Bomber Inline. Sample run 2026-09-30: only selected models researched, product list incomplete."
+      "lastChecked": "2026-10-01",
+      "notes": "marzocchi.com is a splash page linking bike.marzocchi.com (Shopify store). Manual PDFs are hosted on cdn.shopify.com and linked from bike.marzocchi.com product/manual pages; service procedures on tech.ridefox.com / ridefox.com. Current fork line (2026 store): Bomber Z1, Z1 Coil, Z1 E-Optimized, Z2, Z2 E-Optimized, Bomber Z, Super Z, 58, DJ. Shocks: Bomber CR, Bomber Air, Bomber Inline. Sample run 2026-09-30: only selected models researched, product list incomplete. 2026-10-01 monthly update: added Bomber Z 2026 (owner's guide 605-00-323 REV A); Z2, Z1 Coil, Z1 E-Optimized, Super Z, 58, DJ, Bomber Inline still not researched."
     },
     {
       "id": "ohlins",
@@ -46,8 +46,8 @@
       "website": "https://www.ohlins.com",
       "docHub": "https://www.ohlins.com/en-us/document-library",
       "status": "listed",
-      "lastChecked": "2026-09-30",
-      "notes": "Product pages (en-us/mountain-bike/...) carry a Details table (Hsc Cli / Lsc Cli / Lsr Cli) and link the current owner's manual PDF under /storage/. Owner's manuals generally do NOT print click totals; totals come from product-page spec tables/descriptions. Öhlins HSC on shocks is a 3-position knob, not a click adjuster. Sample run 2026-09-30: only selected models researched, product list incomplete."
+      "lastChecked": "2026-10-01",
+      "notes": "Product pages (en-us/mountain-bike/...) carry a Details table (Hsc Cli / Lsc Cli / Lsr Cli) and link the current owner's manual PDF under /storage/. Owner's manuals generally do NOT print click totals; totals come from product-page spec tables/descriptions. Öhlins HSC on shocks is a 3-position knob, not a click adjuster. Sample run 2026-09-30: only selected models researched, product list incomplete. 2026-10-01 monthly update: no new model years on the store; retried missing values, TTX2Air m.2 mount found. Not yet researched: RXF36/RXF34/RXC34/DH38/RXF DJ forks, TTX1Air, TXC1/2Air."
     },
     {
       "id": "sr-suntour",
@@ -58,8 +58,8 @@
       "website": "https://www.srsuntour.com/",
       "docHub": "https://www.srsuntour.com/support/product-support/owners-manuals/",
       "status": "listed",
-      "lastChecked": "2026-09-30",
-      "notes": "srsuntour-cycling.com serves the same site as srsuntour.com. Product codes carry intro year (SF25/SF26 forks, RS24/RS25 shocks). Click totals are rarely stated; general manuals give pressure/spacer tables per model. Docs: (general manuals MY22/MY26 forks, MY22-MY27 shocks) and https://www.srsuntour.com/support/service-guide/service-manuals/ (model booklets) Sample run 2026-09-30: only selected models researched, product list incomplete."
+      "lastChecked": "2026-10-01",
+      "notes": "srsuntour-cycling.com serves the same site as srsuntour.com. Product codes carry intro year (SF25/SF26 forks, RS24/RS25 shocks). Click totals are rarely stated; general manuals give pressure/spacer tables per model. Docs: (general manuals MY22/MY26 forks, MY22-MY27 shocks) and https://www.srsuntour.com/support/service-guide/service-manuals/ (model booklets) Sample run 2026-09-30: only selected models researched. 2026-10-01: added RUX38, Auron36, Axon34, Aion36X, Aion38X, TriAir2, Edge EVO; model booklets are on the Service manuals page as .pdf (the .pdf.pdf URLs cited in the 2026-09-30 values return 404). Still open: Durolux38X/36X, Zeron36 non-X, Raidon, XCR/XCM, GVX/NRX/NCX/Mobie/Epixon (e-bike/XC/urban), Edge X/Raidon shocks, MY27 fork manual."
     },
     {
       "id": "dt-swiss",
@@ -91,11 +91,11 @@
       "kinds": [
         "suspension"
       ],
-      "website": null,
-      "docHub": null,
-      "status": "seed",
-      "lastChecked": null,
-      "notes": ""
+      "website": "https://www.xfusionshox.com/",
+      "docHub": "https://www.xfusionshox.com/help/all/1.htm",
+      "status": "researched",
+      "lastChecked": "2026-10-01",
+      "notes": "Help page lists owner's manual (English PDF dated 2024-08), per-stanchion fork set-up guides 2025 (32/34/36/38 mm), shock set-up guides (O2, H3C, Vector), Air & Coil Spring Chart (image-only PDF) and the 2027 AM catalog. Click counts are given as 'about'/'approximately' only in the fork guides and the H3C guide. 2026-10-01: Vengeance 38, RV1 38, Trace 36, Sweep Boost, Slide Boost, Rezza fork, O2 PRO, Rezza shock, H3A, H3C researched; Slant, Roamin 20/24, G.E.T. 30, Velvet/RC32/Migo OEM forks and Vector/Microlite shocks not yet."
     },
     {
       "id": "cane-creek",
@@ -115,11 +115,11 @@
       "kinds": [
         "suspension"
       ],
-      "website": null,
-      "docHub": null,
-      "status": "seed",
-      "lastChecked": null,
-      "notes": ""
+      "website": "https://dvosuspension.com",
+      "docHub": "https://dvosuspension.com/product-category/suspension/",
+      "status": "researched",
+      "lastChecked": "2026-10-01",
+      "notes": "Setup guides (PDF) are linked from each product page; tech.dvosuspension.com is behind a captcha. Researched: Onyx 38 D1 SL/Core, Onyx SC D2, Diamond 36 D1 SL/Core, Topaz Gen 3/Prime, Jade X/Prime. Not done: D3/E3, Opal HV, Topaz 2, Topaz Gen 1, Jade, Dirt Jump, WP editions, Emerald."
     },
     {
       "id": "ext",
@@ -139,11 +139,11 @@
       "kinds": [
         "suspension"
       ],
-      "website": null,
-      "docHub": null,
-      "status": "seed",
-      "lastChecked": null,
-      "notes": ""
+      "website": "https://www.rideformula.com",
+      "docHub": "https://www.rideformula.com/support/downloads/",
+      "status": "researched",
+      "lastChecked": "2026-10-01",
+      "notes": "MTB forks and shocks only (brakes, wheels, moto excluded). Researched: Selva V/R/S/C, Belva, MOD, MOD DH, Nebbia. Not done: Nero R/C (2017 manuals), Josh Bryceland Selva, 33/35 legacy forks. Model years are not stated in the documents (modelYears empty)."
     },
     {
       "id": "intend",
