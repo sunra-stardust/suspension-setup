@@ -1,0 +1,1378 @@
+{
+  "maker": "dvo",
+  "products": [
+    {
+      "id": "dvo-onyx-38-d1-sl",
+      "name": "DVO Onyx 38 D1 SL",
+      "type": "fork",
+      "modelYears": [],
+      "catalogId": null,
+      "fields": {
+        "travelMm": {
+          "value": [
+            160,
+            170,
+            180
+          ],
+          "status": "verified",
+          "url": "https://dvosuspension.com/product/onyx-d1-38/",
+          "retrieved": "2026-10-01",
+          "quote": "Travel Range: 160-180mm",
+          "where": "product page, SPECS",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/product/onyx-d1-38/",
+            "retrieved": "2026-10-01",
+            "quote": "Travel Range: 160-180mm",
+            "where": "Specifications; options 29 at 160/170/180mm"
+          }
+        },
+        "wheelSize": {
+          "value": "29",
+          "status": "verified",
+          "url": "https://dvosuspension.com/product/onyx-d1-38/",
+          "retrieved": "2026-10-01",
+          "quote": "Wheel Size: 29",
+          "where": "product page, SPECS",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/product/onyx-d1-38/",
+            "retrieved": "2026-10-01",
+            "quote": "Wheel Size: 29",
+            "where": "Specifications"
+          }
+        },
+        "stanchionMm": {
+          "value": 38,
+          "status": "verified",
+          "url": "https://dvosuspension.com/product/onyx-d1-38/",
+          "retrieved": "2026-10-01",
+          "quote": "Stanchions: 38mm Tapered Alloy",
+          "where": "product page, SPECS",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/product/onyx-d1-38/",
+            "retrieved": "2026-10-01",
+            "quote": "Stanchions: 38mm Tapered Alloy",
+            "where": "Specifications"
+          }
+        },
+        "damper": {
+          "value": "D1 (remastered)",
+          "status": "single",
+          "url": "https://dvosuspension.com/product/onyx-d1-38/",
+          "retrieved": "2026-10-01",
+          "quote": "REMASTERED D1 DAMPER",
+          "where": "product page, SPECS"
+        },
+        "springType": {
+          "value": "air (SL dual-chamber)",
+          "status": "single",
+          "url": "https://dvosuspension.com/product/onyx-d1-38/",
+          "retrieved": "2026-10-01",
+          "quote": "It’s a full air on air system that’s easy to set up and offers end stroke volume spacer adjustability.",
+          "where": "product page, SPECS"
+        },
+        "lscSettings": {
+          "value": 5,
+          "status": "verified",
+          "url": "https://dvosuspension.com/wp-content/uploads/2024/08/38-Setup-Guide-v1.1.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "The D1 models have an adjustable low speed compression with 5 settings.",
+          "where": "guide p.14 (Low Speed Compression)",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/wp-content/uploads/2024/08/38-Setup-Guide-v1.1.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "The D1 models have an adjustable low speed compression with 5 settings.",
+            "where": "p.14 Low Speed Compression"
+          }
+        },
+        "reboundMax": {
+          "value": 25,
+          "status": "verified",
+          "url": "https://dvosuspension.com/wp-content/uploads/2024/08/38-Setup-Guide-v1.1.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Open 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 Closed",
+          "where": "guide p.10 (Rebound scale; counted from closed)",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/wp-content/uploads/2024/08/38-Setup-Guide-v1.1.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "Open 25 24 23 ... 2 1 Closed",
+            "where": "p.10 rebound scale (Rebound Adjuster)"
+          }
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://dvosuspension.com/product/onyx-d1-38/",
+          "retrieved": "2026-10-01",
+          "quote": "Adjustments: D1 SL: High/Low Speed Compression | Rebound | Positive Volume Reducers",
+          "where": "product page, SPECS",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/wp-content/uploads/2024/08/38-Setup-Guide-v1.1.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "Rebound Adjuster (one rebound adjuster)",
+            "where": "p.4/p.10; Specifications list a single 'Rebound'"
+          }
+        },
+        "spacersStock": {
+          "value": 0,
+          "status": "verified",
+          "url": "https://dvosuspension.com/wp-content/uploads/2024/08/38-Setup-Guide-v1.1.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "160-180mm 0 4",
+          "where": "guide p.20, Volume Spacer Configurations",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/wp-content/uploads/2024/08/38-Setup-Guide-v1.1.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "Travel 160-180mm | Factory Installed Volume Spacers 0 | Max Volume Spacers 4",
+            "where": "p.20 Volume Spacer Configurations (Onyx SL Models)"
+          }
+        },
+        "spacersMax": {
+          "value": 4,
+          "status": "verified",
+          "url": "https://dvosuspension.com/wp-content/uploads/2024/08/38-Setup-Guide-v1.1.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "A maximum of 4 volume spacers can be used.",
+          "where": "guide p.18 (Air Volume Tuning)",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/wp-content/uploads/2024/08/38-Setup-Guide-v1.1.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "A maximum of 4 volume spacers can be used.",
+            "where": "p.18"
+          }
+        },
+        "axleToCrownMm": {
+          "value": "597 at 180 mm travel",
+          "status": "single",
+          "url": "https://dvosuspension.com/product/onyx-d1-38/",
+          "retrieved": "2026-10-01",
+          "quote": "Axle To Crown 29 = 597mm at 180mm",
+          "where": "product page, SPECS"
+        },
+        "hscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Not stated as a click count in the guide; HSC base chart uses full rotations 0-5 (graphic) but no maximum is stated in text."
+        },
+        "maxPressurePsi": {
+          "value": 100,
+          "status": "verified",
+          "url": "https://dvosuspension.com/wp-content/uploads/2024/08/38-Setup-Guide-v1.1.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "DO NOT exceed maximum air pressure of 100PSI.",
+          "where": "guide p.8 (Setting SAG and Air Pressure)",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/wp-content/uploads/2024/08/38-Setup-Guide-v1.1.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "DO NOT exceed maximum air pressure of 100PSI.",
+            "where": "p.9"
+          }
+        },
+        "sagPercent": {
+          "value": "15-30",
+          "status": "verified",
+          "url": "https://dvosuspension.com/wp-content/uploads/2024/08/38-Setup-Guide-v1.1.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "The recommended SAG is 15% - 30%.",
+          "where": "guide p.8 (Setting SAG and Air Pressure)",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/wp-content/uploads/2024/08/38-Setup-Guide-v1.1.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "The recommended SAG is 15% - 30%.",
+            "where": "p.8"
+          }
+        },
+        "pressureTable": {
+          "value": {
+            "unit": "psi",
+            "riderUnit": "lbs (kg)",
+            "note": "Printed as a grid: a PLUSH cell and a FIRM cell per weight row; value = PLUSH psi to FIRM psi. Read from the chart graphic.",
+            "rows": [
+              {
+                "rider": "120-139 lbs (54-63 kg)",
+                "value": "50-60"
+              },
+              {
+                "rider": "140-159 lbs (64-72 kg)",
+                "value": "55-65"
+              },
+              {
+                "rider": "160-179 lbs (73-81 kg)",
+                "value": "60-70"
+              },
+              {
+                "rider": "180-199 lbs (82-90 kg)",
+                "value": "65-75"
+              },
+              {
+                "rider": "200-219 lbs (91-100 kg)",
+                "value": "70-80"
+              },
+              {
+                "rider": "220-239 lbs (101-108 kg)",
+                "value": "75-85"
+              },
+              {
+                "rider": "240-249 lbs (109-113 kg)",
+                "value": "80-90"
+              },
+              {
+                "rider": "250-259 lbs (114-117 kg)",
+                "value": "90-100"
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://dvosuspension.com/wp-content/uploads/2024/08/38-Setup-Guide-v1.1.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Air Pressure Base Setting Chart",
+          "where": "guide p.9 (DVO Onyx 38 D1 SL)"
+        },
+        "manualUrl": {
+          "value": "https://dvosuspension.com/wp-content/uploads/2024/08/38-Setup-Guide-v1.1.pdf",
+          "status": "verified",
+          "url": "https://dvosuspension.com/wp-content/uploads/2024/08/38-Setup-Guide-v1.1.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "SET-UP GUIDE",
+          "where": "guide cover",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/wp-content/uploads/2024/08/38-Setup-Guide-v1.1.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "Onyx 38 Set-Up Guide Version 1.1",
+            "where": "PDF; linked from product page Resources"
+          }
+        }
+      }
+    },
+    {
+      "id": "dvo-onyx-38-core",
+      "name": "DVO Onyx 38 Core",
+      "type": "fork",
+      "modelYears": [],
+      "catalogId": null,
+      "fields": {
+        "travelMm": {
+          "value": [
+            160,
+            170,
+            180
+          ],
+          "status": "verified",
+          "url": "https://dvosuspension.com/product/onyx-38-core/",
+          "retrieved": "2026-10-01",
+          "quote": "Travel Range: 160-180mm",
+          "where": "product page, intro/SPECS",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/product/onyx-38-core/",
+            "retrieved": "2026-10-01",
+            "quote": "Travel Range: 160-180mm",
+            "where": "Specifications"
+          }
+        },
+        "wheelSize": {
+          "value": "29",
+          "status": "verified",
+          "url": "https://dvosuspension.com/product/onyx-38-core/",
+          "retrieved": "2026-10-01",
+          "quote": "Wheel Size: 29",
+          "where": "product page, intro/SPECS",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/product/onyx-38-core/",
+            "retrieved": "2026-10-01",
+            "quote": "Wheel Size: 29",
+            "where": "Specifications"
+          }
+        },
+        "stanchionMm": {
+          "value": 38,
+          "status": "verified",
+          "url": "https://dvosuspension.com/product/onyx-38-core/",
+          "retrieved": "2026-10-01",
+          "quote": "Stanchions: 38mm Tapered Alloy",
+          "where": "product page, intro/SPECS",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/product/onyx-38-core/",
+            "retrieved": "2026-10-01",
+            "quote": "Stanchions: 38mm Tapered Alloy",
+            "where": "Specifications"
+          }
+        },
+        "damper": {
+          "value": "CORE",
+          "status": "single",
+          "url": "https://dvosuspension.com/product/onyx-38-core/",
+          "retrieved": "2026-10-01",
+          "quote": "the all-new Core Damper",
+          "where": "product page, intro/SPECS"
+        },
+        "springType": {
+          "value": "air (SL dual-chamber)",
+          "status": "single",
+          "url": "https://dvosuspension.com/product/onyx-38-core/",
+          "retrieved": "2026-10-01",
+          "quote": "SL Air System: SuperLight Air System delivers incredible small bump sensitivity, mid-support, and bottom out control.",
+          "where": "product page, intro/SPECS"
+        },
+        "lscSettings": {
+          "value": null,
+          "status": "missing",
+          "note": "Product page says 'full-range Low Speed Compression'; click/rotation count not stated. Onyx 38 guide (v1.0 Nov22) describes D1/D2/D3 LSC only, not CORE."
+        },
+        "reboundMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Rebound scale for the CORE damper not documented separately; the Onyx 38 guide has no CORE section."
+        },
+        "axleToCrownMm": {
+          "value": "597 at 180 mm travel",
+          "status": "single",
+          "url": "https://dvosuspension.com/product/onyx-38-core/",
+          "retrieved": "2026-10-01",
+          "quote": "Axle To Crown 29 = 597mm at 180mm",
+          "where": "product page, SPECS"
+        },
+        "adjusters": {
+          "value": "Low Speed Compression | Rebound | Positive Volume Reducers",
+          "status": "single",
+          "url": "https://dvosuspension.com/product/onyx-38-core/",
+          "retrieved": "2026-10-01",
+          "quote": "Low Speed Compression | Rebound | Positive Volume Reducers",
+          "where": "product page, SPECS"
+        },
+        "hscMax": {
+          "value": null,
+          "status": "verified",
+          "url": "https://dvosuspension.com/product/onyx-38-core/",
+          "retrieved": "2026-10-01",
+          "quote": "Low Speed Compression | Rebound | Positive Volume Reducers",
+          "where": "product page SPECS lists no HSC adjuster",
+          "note": "Adjuster list has no HSC; null = adjuster not listed (single source, not verified).",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/product/onyx-38-core/",
+            "retrieved": "2026-10-01",
+            "quote": "Adjustments: Low Speed Compression | Rebound | Positive Volume Reducers",
+            "where": "Specifications"
+          }
+        },
+        "maxPressurePsi": {
+          "value": 100,
+          "status": "verified",
+          "url": "https://dvosuspension.com/wp-content/uploads/2023/11/38-Setup-Guide-Nov22.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "DO NOT exceed maximum air pressure of 100PSI.",
+          "where": "guide p.8 (Onyx 38 Series, v1.0; page links this guide)",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/wp-content/uploads/2024/08/38-Setup-Guide-v1.1.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "DO NOT exceed maximum air pressure of 100PSI.",
+            "where": "p.9 (guide: 'for all onyx 38 models'; Core not named explicitly)"
+          }
+        },
+        "sagPercent": {
+          "value": "15-30",
+          "status": "verified",
+          "url": "https://dvosuspension.com/wp-content/uploads/2023/11/38-Setup-Guide-Nov22.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "The recommended SAG is 15% - 30%.",
+          "where": "guide p.8 (Onyx 38 Series, v1.0; page links this guide)",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/wp-content/uploads/2024/08/38-Setup-Guide-v1.1.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "The recommended SAG is 15% - 30%.",
+            "where": "p.8"
+          }
+        },
+        "pressureTable": {
+          "value": {
+            "unit": "psi",
+            "riderUnit": "lbs (kg)",
+            "note": "Printed as a grid: a PLUSH cell and a FIRM cell per weight row; value = PLUSH psi to FIRM psi. Read from the chart graphic.",
+            "rows": [
+              {
+                "rider": "120-139 lbs (54-63 kg)",
+                "value": "50-60"
+              },
+              {
+                "rider": "140-159 lbs (64-72 kg)",
+                "value": "55-65"
+              },
+              {
+                "rider": "160-179 lbs (73-81 kg)",
+                "value": "60-70"
+              },
+              {
+                "rider": "180-199 lbs (82-90 kg)",
+                "value": "65-75"
+              },
+              {
+                "rider": "200-219 lbs (91-100 kg)",
+                "value": "70-80"
+              },
+              {
+                "rider": "220-239 lbs (101-108 kg)",
+                "value": "75-85"
+              },
+              {
+                "rider": "240-249 lbs (109-113 kg)",
+                "value": "80-90"
+              },
+              {
+                "rider": "250-259 lbs (114-117 kg)",
+                "value": "90-100"
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://dvosuspension.com/wp-content/uploads/2023/11/38-Setup-Guide-Nov22.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Air Pressure Base Setting Chart",
+          "where": "guide p.9 (DVO Onyx 38 Core)"
+        },
+        "manualUrl": {
+          "value": "https://dvosuspension.com/wp-content/uploads/2023/11/38-Setup-Guide-Nov22.pdf",
+          "status": "single",
+          "url": "https://dvosuspension.com/wp-content/uploads/2023/11/38-Setup-Guide-Nov22.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "SET-UP GUIDE",
+          "where": "guide cover"
+        },
+        "spacersMax": {
+          "value": 4,
+          "status": "single",
+          "url": "https://dvosuspension.com/wp-content/uploads/2023/11/38-Setup-Guide-Nov22.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "A maximum of 4 volume spacers can be used.",
+          "where": "guide p.18 (Air Volume Tuning)"
+        }
+      }
+    },
+    {
+      "id": "dvo-diamond-36-core",
+      "name": "DVO Diamond 36 Core",
+      "type": "fork",
+      "modelYears": [],
+      "catalogId": null,
+      "fields": {
+        "travelMm": {
+          "value": [
+            140,
+            150,
+            160,
+            170
+          ],
+          "status": "verified",
+          "url": "https://dvosuspension.com/product/diamond-36-core/",
+          "retrieved": "2026-10-01",
+          "quote": "Travel Range: 140-170mm (160 stock)",
+          "where": "product page, intro/SPECS",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/product/diamond-36-core/",
+            "retrieved": "2026-10-01",
+            "quote": "Travel Range: 140-170mm (160 stock)",
+            "where": "Specifications; options 140/150/160/170"
+          }
+        },
+        "wheelSize": {
+          "value": "29",
+          "status": "verified",
+          "url": "https://dvosuspension.com/product/diamond-36-core/",
+          "retrieved": "2026-10-01",
+          "quote": "Wheel Size: 29",
+          "where": "product page, intro/SPECS",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/product/diamond-36-core/",
+            "retrieved": "2026-10-01",
+            "quote": "Wheel Size: 29",
+            "where": "Specifications"
+          }
+        },
+        "stanchionMm": {
+          "value": 36,
+          "status": "verified",
+          "url": "https://dvosuspension.com/product/diamond-36-core/",
+          "retrieved": "2026-10-01",
+          "quote": "Stanchions: 36mm Tapered Alloy",
+          "where": "product page, intro/SPECS",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/product/diamond-36-core/",
+            "retrieved": "2026-10-01",
+            "quote": "Stanchions: 36mm Tapered Alloy",
+            "where": "Specifications"
+          }
+        },
+        "damper": {
+          "value": "CORE",
+          "status": "single",
+          "url": "https://dvosuspension.com/product/diamond-36-core/",
+          "retrieved": "2026-10-01",
+          "quote": "The heartbeat of this fork is the all-new CORE Damper",
+          "where": "product page, intro/SPECS"
+        },
+        "springType": {
+          "value": "air (dual chamber)",
+          "status": "single",
+          "url": "https://dvosuspension.com/wp-content/uploads/2026/05/V3Diamond-CORE-Set-up-Guide.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Our dual chamber air system needs to equalize pressure between positive and negative",
+          "where": "guide p.6 (Important Note)"
+        },
+        "lscSettings": {
+          "value": null,
+          "status": "missing",
+          "note": "Product page: 'Full Range Low Speed Compression'; click/rotation count not stated in text."
+        },
+        "reboundMax": {
+          "value": 28,
+          "status": "verified",
+          "url": "https://dvosuspension.com/wp-content/uploads/2026/05/V3Diamond-CORE-Set-up-Guide.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1",
+          "where": "guide p.8 (Rebound scale from open to closed)",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/wp-content/uploads/2026/05/V3Diamond-CORE-Set-up-Guide.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "Open 28 27 26 ... 2 1 Closed",
+            "where": "p.8 rebound scale"
+          }
+        },
+        "spacersStock": {
+          "value": 0,
+          "status": "verified",
+          "url": "https://dvosuspension.com/wp-content/uploads/2026/05/V3Diamond-CORE-Set-up-Guide.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "140-170mm 0 6",
+          "where": "guide Volume Spacer Configurations",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/wp-content/uploads/2026/05/V3Diamond-CORE-Set-up-Guide.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "140-170mm | Factory Installed Volume Spacers 0 | Max Volume Spacers 6",
+            "where": "p.16"
+          }
+        },
+        "spacersMax": {
+          "value": 6,
+          "status": "verified",
+          "url": "https://dvosuspension.com/wp-content/uploads/2026/05/V3Diamond-CORE-Set-up-Guide.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "A maximum of 6 volume spacers can be used.",
+          "where": "guide Air Volume Tuning",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/wp-content/uploads/2026/05/V3Diamond-CORE-Set-up-Guide.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "A maximum of 6 volume spacers can be used.",
+            "where": "p.14"
+          }
+        },
+        "axleToCrownMm": {
+          "value": "585 at 170 mm travel",
+          "status": "single",
+          "url": "https://dvosuspension.com/product/diamond-36-core/",
+          "retrieved": "2026-10-01",
+          "quote": "Axle To Crown 29 -585mm Measurements at max travels (170mm)",
+          "where": "product page, SPECS"
+        },
+        "adjusters": {
+          "value": "Full Range Low Speed Compression | Rebound | Volume Spacers",
+          "status": "single",
+          "url": "https://dvosuspension.com/product/diamond-36-core/",
+          "retrieved": "2026-10-01",
+          "quote": "Full Range Low Speed Compression | Rebound | Volume Spacers",
+          "where": "product page, SPECS"
+        },
+        "hscMax": {
+          "value": null,
+          "status": "verified",
+          "url": "https://dvosuspension.com/product/diamond-36-core/",
+          "retrieved": "2026-10-01",
+          "quote": "Full Range Low Speed Compression | Rebound | Volume Spacers",
+          "where": "product page SPECS lists no HSC adjuster",
+          "note": "Adjuster list has no HSC; null = adjuster not listed (single source).",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/product/diamond-36-core/",
+            "retrieved": "2026-10-01",
+            "quote": "Adjustments: Full Range Low Speed Compression | Rebound | Volume Spacers",
+            "where": "Specifications"
+          }
+        },
+        "maxPressurePsi": {
+          "value": 100,
+          "status": "verified",
+          "url": "https://dvosuspension.com/wp-content/uploads/2026/05/V3Diamond-CORE-Set-up-Guide.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "DO NOT exceed maximum air pressure of 100PSI.",
+          "where": "guide p.6 (Setting SAG & Air Pressure)",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/wp-content/uploads/2026/05/V3Diamond-CORE-Set-up-Guide.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "DO NOT exceed maximum air pressure of 100PSI.",
+            "where": "p.6"
+          }
+        },
+        "sagPercent": {
+          "value": "15-30",
+          "status": "verified",
+          "url": "https://dvosuspension.com/wp-content/uploads/2026/05/V3Diamond-CORE-Set-up-Guide.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "The recommended SAG is 15% - 30%.",
+          "where": "guide p.6 (Setting SAG & Air Pressure)",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/wp-content/uploads/2026/05/V3Diamond-CORE-Set-up-Guide.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "The recommended SAG is 15% - 30%.",
+            "where": "p.6"
+          }
+        },
+        "pressureTable": {
+          "value": {
+            "unit": "psi",
+            "riderUnit": "lbs (kg)",
+            "note": "Printed as a grid: a PLUSH cell and a FIRM cell per weight row; value = PLUSH psi to FIRM psi. Read from the chart graphic.",
+            "rows": [
+              {
+                "rider": "120-139 lbs (54-63 kg)",
+                "value": "50-60"
+              },
+              {
+                "rider": "140-159 lbs (64-72 kg)",
+                "value": "55-65"
+              },
+              {
+                "rider": "160-179 lbs (73-81 kg)",
+                "value": "60-70"
+              },
+              {
+                "rider": "180-199 lbs (82-90 kg)",
+                "value": "65-75"
+              },
+              {
+                "rider": "200-219 lbs (91-100 kg)",
+                "value": "70-80"
+              },
+              {
+                "rider": "220-239 lbs (101-108 kg)",
+                "value": "75-85"
+              },
+              {
+                "rider": "240-249 lbs (109-113 kg)",
+                "value": "80-90"
+              },
+              {
+                "rider": "250-259 lbs (114-117 kg)",
+                "value": "90-100"
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://dvosuspension.com/wp-content/uploads/2026/05/V3Diamond-CORE-Set-up-Guide.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Air Pressure Base Setting Chart",
+          "where": "guide p.7 (DVO Diamond 36 Core)"
+        },
+        "manualUrl": {
+          "value": "https://dvosuspension.com/wp-content/uploads/2026/05/V3Diamond-CORE-Set-up-Guide.pdf",
+          "status": "verified",
+          "url": "https://dvosuspension.com/wp-content/uploads/2026/05/V3Diamond-CORE-Set-up-Guide.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "SET-UP GUIDE",
+          "where": "guide cover",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/wp-content/uploads/2026/05/V3Diamond-CORE-Set-up-Guide.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "Diamond CORE Set-Up Guide",
+            "where": "PDF linked from product page"
+          }
+        }
+      }
+    },
+    {
+      "id": "dvo-diamond-36-d1-sl",
+      "name": "DVO Diamond 36 D1 SL",
+      "type": "fork",
+      "modelYears": [],
+      "catalogId": null,
+      "fields": {
+        "travelMm": {
+          "value": [
+            140,
+            150,
+            160
+          ],
+          "status": "verified",
+          "url": "https://dvosuspension.com/product/diamond-d1-2024/",
+          "retrieved": "2026-10-01",
+          "quote": "Travel Range: 140-160mm (160 stock)",
+          "where": "product page, intro/SPECS",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/product/diamond-d1-2024/",
+            "retrieved": "2026-10-01",
+            "quote": "Travel Range: 140-160mm (160 stock)",
+            "where": "Specifications; options 140/150/160"
+          }
+        },
+        "wheelSize": {
+          "value": "29",
+          "status": "verified",
+          "url": "https://dvosuspension.com/product/diamond-d1-2024/",
+          "retrieved": "2026-10-01",
+          "quote": "Wheel Size: 29",
+          "where": "product page, intro/SPECS",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/product/diamond-d1-2024/",
+            "retrieved": "2026-10-01",
+            "quote": "Wheel Size: 29",
+            "where": "Specifications"
+          }
+        },
+        "stanchionMm": {
+          "value": 36,
+          "status": "verified",
+          "url": "https://dvosuspension.com/product/diamond-d1-2024/",
+          "retrieved": "2026-10-01",
+          "quote": "Stanchions: 36mm Tapered Alloy",
+          "where": "product page, intro/SPECS",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/product/diamond-d1-2024/",
+            "retrieved": "2026-10-01",
+            "quote": "Stanchions: 36mm Tapered Alloy",
+            "where": "Specifications"
+          }
+        },
+        "damper": {
+          "value": "D1 (remastered)",
+          "status": "single",
+          "url": "https://dvosuspension.com/product/diamond-d1-2024/",
+          "retrieved": "2026-10-01",
+          "quote": "remastered D1 damper",
+          "where": "product page, intro/SPECS"
+        },
+        "springType": {
+          "value": "air (SL)",
+          "status": "single",
+          "url": "https://dvosuspension.com/product/diamond-d1-2024/",
+          "retrieved": "2026-10-01",
+          "quote": "our industry leading SL air spring",
+          "where": "product page, intro"
+        },
+        "lscSettings": {
+          "value": 5,
+          "status": "verified",
+          "url": "https://dvosuspension.com/wp-content/uploads/2024/05/DVO-Diamond-36-Setup-Guide-May16.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "The D1 models have an adjustable low speed compression with 5 settings.",
+          "where": "guide Low Speed Compression",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/wp-content/uploads/2024/05/DVO-Diamond-36-Setup-Guide-May16.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "The D1 models have an adjustable low speed compression with 5 settings.",
+            "where": "p.14"
+          }
+        },
+        "reboundMax": {
+          "value": 25,
+          "status": "verified",
+          "url": "https://dvosuspension.com/wp-content/uploads/2024/05/DVO-Diamond-36-Setup-Guide-May16.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1",
+          "where": "guide p.8 (Rebound scale from open to closed)",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/wp-content/uploads/2024/05/DVO-Diamond-36-Setup-Guide-May16.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "Open 25 24 23 ... 2 1 Closed",
+            "where": "p.10 rebound scale"
+          }
+        },
+        "spacersStock": {
+          "value": 0,
+          "status": "verified",
+          "url": "https://dvosuspension.com/wp-content/uploads/2024/05/DVO-Diamond-36-Setup-Guide-May16.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "140-160mm 0 6",
+          "where": "guide Volume Spacer Configurations",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/wp-content/uploads/2024/05/DVO-Diamond-36-Setup-Guide-May16.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "140-160mm | Factory Installed Volume Spacers 0 | Max Volume Spacers 6",
+            "where": "p.20 table"
+          }
+        },
+        "spacersMax": {
+          "value": 6,
+          "status": "verified",
+          "url": "https://dvosuspension.com/wp-content/uploads/2024/05/DVO-Diamond-36-Setup-Guide-May16.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "140-160mm 0 6",
+          "where": "guide Volume Spacer Configurations (Max Volume Spacers column)",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/wp-content/uploads/2024/05/DVO-Diamond-36-Setup-Guide-May16.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "Volume Spacer Configurations table: Max Volume Spacers 6",
+            "where": "p.20 table"
+          }
+        },
+        "axleToCrownMm": {
+          "value": "572 at 160 mm travel",
+          "status": "single",
+          "url": "https://dvosuspension.com/product/diamond-d1-2024/",
+          "retrieved": "2026-10-01",
+          "quote": "Axle To Crown 29 -572mm Measurements at max travels (160mm)",
+          "where": "product page, SPECS"
+        },
+        "hscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Not stated as a click count in the guide; HSC base chart uses full rotations 0-5 (graphic) but no maximum is stated in text."
+        },
+        "maxPressurePsi": {
+          "value": 100,
+          "status": "verified",
+          "url": "https://dvosuspension.com/wp-content/uploads/2024/05/DVO-Diamond-36-Setup-Guide-May16.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "DO NOT exceed maximum air pressure of 100PSI.",
+          "where": "guide p.6 (Setting SAG and Air Pressure)",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/wp-content/uploads/2024/05/DVO-Diamond-36-Setup-Guide-May16.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "DO NOT exceed maximum air pressure of 100PSI.",
+            "where": "p.9"
+          }
+        },
+        "sagPercent": {
+          "value": "15-30",
+          "status": "verified",
+          "url": "https://dvosuspension.com/wp-content/uploads/2024/05/DVO-Diamond-36-Setup-Guide-May16.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "The recommended SAG is 15% - 30%.",
+          "where": "guide p.6 (Setting SAG and Air Pressure)",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/wp-content/uploads/2024/05/DVO-Diamond-36-Setup-Guide-May16.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "The recommended SAG is 15% - 30%.",
+            "where": "p.8"
+          }
+        },
+        "pressureTable": {
+          "value": {
+            "unit": "psi",
+            "riderUnit": "lbs (kg)",
+            "note": "Printed as a grid: a PLUSH cell and a FIRM cell per weight row; value = PLUSH psi to FIRM psi. Read from the chart graphic.",
+            "rows": [
+              {
+                "rider": "120-139 lbs (54-63 kg)",
+                "value": "50-60"
+              },
+              {
+                "rider": "140-159 lbs (64-72 kg)",
+                "value": "55-65"
+              },
+              {
+                "rider": "160-179 lbs (73-81 kg)",
+                "value": "60-70"
+              },
+              {
+                "rider": "180-199 lbs (82-90 kg)",
+                "value": "65-75"
+              },
+              {
+                "rider": "200-219 lbs (91-100 kg)",
+                "value": "70-80"
+              },
+              {
+                "rider": "220-239 lbs (101-108 kg)",
+                "value": "75-85"
+              },
+              {
+                "rider": "240-249 lbs (109-113 kg)",
+                "value": "80-90"
+              },
+              {
+                "rider": "250-259 lbs (114-117 kg)",
+                "value": "90-100"
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://dvosuspension.com/wp-content/uploads/2024/05/DVO-Diamond-36-Setup-Guide-May16.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Air Pressure Base Setting Chart",
+          "where": "guide p.7 (DVO Diamond 36 D1 SL)"
+        },
+        "manualUrl": {
+          "value": "https://dvosuspension.com/wp-content/uploads/2024/05/DVO-Diamond-36-Setup-Guide-May16.pdf",
+          "status": "verified",
+          "url": "https://dvosuspension.com/wp-content/uploads/2024/05/DVO-Diamond-36-Setup-Guide-May16.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "SET-UP GUIDE",
+          "where": "guide cover",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/wp-content/uploads/2024/05/DVO-Diamond-36-Setup-Guide-May16.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "Diamond 36 Set-Up Guide Version 1.1",
+            "where": "PDF linked from product page (product URL: https://dvosuspension.com/product/diamond-d1-2024/ titled 'Diamond 36 D1 SL')"
+          }
+        }
+      }
+    },
+    {
+      "id": "dvo-onyx-sc-d2-oem",
+      "name": "DVO Onyx SC D2 (OEM)",
+      "type": "fork",
+      "modelYears": [],
+      "catalogId": null,
+      "fields": {
+        "travelMm": {
+          "value": [
+            160,
+            170,
+            180
+          ],
+          "status": "verified",
+          "url": "https://dvosuspension.com/product/onyx-sc-d2/",
+          "retrieved": "2026-10-01",
+          "quote": "Travel Range: 160-180mm",
+          "where": "product page, SPECS",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/product/onyx-sc-d2/",
+            "retrieved": "2026-10-01",
+            "quote": "Travel Range: 160-180mm",
+            "where": "Specifications"
+          }
+        },
+        "wheelSize": {
+          "value": "29",
+          "status": "verified",
+          "url": "https://dvosuspension.com/product/onyx-sc-d2/",
+          "retrieved": "2026-10-01",
+          "quote": "Wheel Size: 29",
+          "where": "product page, SPECS",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/product/onyx-sc-d2/",
+            "retrieved": "2026-10-01",
+            "quote": "Wheel Size: 29",
+            "where": "Specifications"
+          }
+        },
+        "stanchionMm": {
+          "value": 36,
+          "status": "verified",
+          "url": "https://dvosuspension.com/product/onyx-sc-d2/",
+          "retrieved": "2026-10-01",
+          "quote": "Stanchions: 36mm Tapered Alloy",
+          "where": "product page, SPECS",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/product/onyx-sc-d2/",
+            "retrieved": "2026-10-01",
+            "quote": "Stanchions: 36mm Tapered Alloy",
+            "where": "Specifications"
+          }
+        },
+        "adjusters": {
+          "value": "Low Speed Compression | Rebound | Internally adjusted OTT",
+          "status": "single",
+          "url": "https://dvosuspension.com/product/onyx-sc-d2/",
+          "retrieved": "2026-10-01",
+          "quote": "Low Speed Compression | Rebound | Internally adjusted OTT",
+          "where": "product page, SPECS"
+        },
+        "lscSettings": {
+          "value": 4,
+          "status": "verified",
+          "url": "https://dvosuspension.com/product/onyx-sc-d2/",
+          "retrieved": "2026-10-01",
+          "quote": "Four clicks of low speed compression give quick access to firming up the fork",
+          "where": "product page, intro",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/product/onyx-sc-d2/",
+            "retrieved": "2026-10-01",
+            "quote": "Four clicks of low speed compression give quick access to firming up the fork",
+            "where": "Details"
+          }
+        },
+        "hscMax": {
+          "value": null,
+          "status": "verified",
+          "url": "https://dvosuspension.com/product/onyx-sc-d2/",
+          "retrieved": "2026-10-01",
+          "quote": "Low Speed Compression | Rebound | Internally adjusted OTT",
+          "where": "product page SPECS lists no HSC adjuster",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/product/onyx-sc-d2/",
+            "retrieved": "2026-10-01",
+            "quote": "Adjustments: Low Speed Compression | Rebound | Internally adjusted OTT",
+            "where": "Specifications"
+          }
+        },
+        "reboundMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No D2/OEM-specific guide found; Onyx 38 guide covers D1/D2/D3 LSC but gives rebound only 'for all onyx 38 models' (scale 25..1) - not confirmed for the 36 mm SC D2."
+        },
+        "maxPressurePsi": {
+          "value": null,
+          "status": "missing",
+          "note": "No setup guide for the Onyx SC D2 (36 mm) found on dvosuspension.com; product page links none."
+        },
+        "pressureTable": {
+          "value": null,
+          "status": "missing",
+          "note": "As above: no guide for this model found."
+        },
+        "axleToCrownMm": {
+          "value": "592",
+          "status": "verified",
+          "url": "https://dvosuspension.com/product/onyx-sc-d2/",
+          "retrieved": "2026-10-01",
+          "quote": "Axle To Crown 29 -592mm Measurements at max travels",
+          "where": "product page, SPECS",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/product/onyx-sc-d2/",
+            "retrieved": "2026-10-01",
+            "quote": "Axle To Crown 29 -592mm Measurements at max travels",
+            "where": "Specifications"
+          }
+        }
+      }
+    },
+    {
+      "id": "dvo-topaz-gen-3",
+      "name": "DVO Topaz Gen 3 (air)",
+      "type": "shock",
+      "modelYears": [],
+      "catalogId": null,
+      "fields": {
+        "springType": {
+          "value": "air",
+          "status": "verified",
+          "url": "https://dvosuspension.com/product/topaz-gen-3/",
+          "retrieved": "2026-10-01",
+          "quote": "Our do-it-all air shock",
+          "where": "product page",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/product/topaz-gen-3/",
+            "retrieved": "2026-10-01",
+            "quote": "The Topaz Air Series is our highly tunable family of air shocks",
+            "where": "Details"
+          }
+        },
+        "sizesAvailable": {
+          "value": "Metric: 190x40, 190x42.5, 190x45, 210x50, 210x52.5, 210x55, 230x60, 230x62.5, 230x65; Trunnion: 165x40, 165x42.5, 165x50, 185x50, 185x52.5, 185x55 (list as on page, may continue)",
+          "status": "single",
+          "url": "https://dvosuspension.com/product/topaz-gen-3/",
+          "retrieved": "2026-10-01",
+          "quote": "Metric Sizes: 190×40 190×42.5 190×45 210×50 210×52.5 210×55 230×60 230×62.5 230×65",
+          "where": "product page, SPECS"
+        },
+        "adjusters": {
+          "value": "T3 Compression, Rebound, Bladder Pressure Adjust",
+          "status": "single",
+          "url": "https://dvosuspension.com/product/topaz-gen-3/",
+          "retrieved": "2026-10-01",
+          "quote": "T3 Compression, Rebound, Bladder Pressure Adjust",
+          "where": "product page, SPECS (Damper Features)"
+        },
+        "lscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "T3 compression is a 3-position switch (page: '3 quick compression settings'); no click count."
+        },
+        "hscMax": {
+          "value": null,
+          "status": "verified",
+          "url": "https://dvosuspension.com/product/topaz-gen-3/",
+          "retrieved": "2026-10-01",
+          "quote": "T3 Compression, Rebound, Bladder Pressure Adjust",
+          "where": "SPECS lists no HSC adjuster",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/product/topaz-gen-3/",
+            "retrieved": "2026-10-01",
+            "quote": "Damper Features T3 Compression, Rebound, Bladder Pressure Adjust",
+            "where": "Specifications"
+          }
+        },
+        "maxPressurePsi": {
+          "value": 300,
+          "status": "verified",
+          "url": "https://dvosuspension.com/wp-content/uploads/2024/05/DVO-Topaz-Setup-Guide-May9.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "DO NOT EXCEED MAXIMUM AIR PRESSURE! 300PSI",
+          "where": "guide p.10 (air pressure)",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/wp-content/uploads/2024/05/DVO-Topaz-Setup-Guide-May9.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "DO NOT EXCEED MAXIMUM AIR PRESSURE! 300PSI",
+            "where": "p.10 main air chamber"
+          }
+        },
+        "bladderPressureTable": {
+          "value": "Range 140-180 psi",
+          "status": "single",
+          "url": "https://dvosuspension.com/wp-content/uploads/2024/05/DVO-Topaz-Setup-Guide-May9.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "RANGE 140-180PSI",
+          "where": "guide p.8 (Bladder Adjust)"
+        },
+        "sagPercent": {
+          "value": "20-30",
+          "status": "verified",
+          "url": "https://dvosuspension.com/wp-content/uploads/2024/05/DVO-Topaz-Setup-Guide-May9.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "The recommended SAG is 20% - 30%.",
+          "where": "guide p.9 (Setting SAG)",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/wp-content/uploads/2024/05/DVO-Topaz-Setup-Guide-May9.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "The recommended SAG is 20% - 30%.",
+            "where": "p.8"
+          }
+        },
+        "pressureTable": {
+          "value": null,
+          "status": "missing",
+          "note": "Air pressure chart (guide p.10, 140-250+ psi by rider weight) is a graphic (PLUSH/FIRM cells) and was not transcribed in this pass."
+        },
+        "reboundMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Rebound clicks-from-closed chart (guide p.12, 1-9) not transcribed; total clicks not stated in text."
+        },
+        "manualUrl": {
+          "value": "https://dvosuspension.com/wp-content/uploads/2024/05/DVO-Topaz-Setup-Guide-May9.pdf",
+          "status": "verified",
+          "url": "https://dvosuspension.com/wp-content/uploads/2024/05/DVO-Topaz-Setup-Guide-May9.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Version 2.1   TOPAZ AIR SET-UP GUIDE",
+          "where": "guide cover",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/wp-content/uploads/2024/05/DVO-Topaz-Setup-Guide-May9.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "Topaz Air Set-Up Guide Version 2.1",
+            "where": "PDF linked from product page"
+          }
+        }
+      }
+    },
+    {
+      "id": "dvo-topaz-prime",
+      "name": "DVO Topaz Prime (air)",
+      "type": "shock",
+      "modelYears": [],
+      "catalogId": null,
+      "fields": {
+        "springType": {
+          "value": "air",
+          "status": "verified",
+          "url": "https://dvosuspension.com/product/topaz-prime/",
+          "retrieved": "2026-10-01",
+          "quote": "Air Spring Features: Adjustable Positive and Negative air volume via spacers (included).",
+          "where": "product page, SPECS",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/product/topaz-prime/",
+            "retrieved": "2026-10-01",
+            "quote": "Air Spring Features: Adjustable Positive and Negative air volume via spacers (included).",
+            "where": "Specifications"
+          }
+        },
+        "sizesAvailable": {
+          "value": "Metric: 210x50, 210x52.5, 210x55, 230x57.5, 230x60, 230x62.5, 230x65; Trunnion: 185x50, 185x52.5, 185x55, 205x57.5, 205x60, 205x62.5, 205x65",
+          "status": "single",
+          "url": "https://dvosuspension.com/product/topaz-prime/",
+          "retrieved": "2026-10-01",
+          "quote": "Metric Sizes: 210×50 210×52.5 210×55 230×57.5 230×60 230×62.5 230×65",
+          "where": "product page, SPECS"
+        },
+        "adjusters": {
+          "value": "Low-Speed Compression | High-Speed Compression | Low-Speed Rebound | Bladder Air Pressure Adjust",
+          "status": "single",
+          "url": "https://dvosuspension.com/product/topaz-prime/",
+          "retrieved": "2026-10-01",
+          "quote": "Low-Speed Compression | High-Speed Compression | Low-Speed Rebound | Bladder Air Pressure Adjust",
+          "where": "product page, SPECS (Damper Features)"
+        },
+        "lscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No click counts on product page; Prime-specific setup guide not found (page links the Topaz WP/Gen 3 guides)."
+        },
+        "hscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "As above."
+        },
+        "reboundMax": {
+          "value": null,
+          "status": "missing",
+          "note": "As above."
+        },
+        "maxPressurePsi": {
+          "value": null,
+          "status": "missing",
+          "note": "Prime guide not found; Topaz (Gen 3) guide gives 300 psi but is not for Prime."
+        },
+        "pressureTable": {
+          "value": null,
+          "status": "missing",
+          "note": "As above."
+        }
+      }
+    },
+    {
+      "id": "dvo-jade-x",
+      "name": "DVO Jade X (coil)",
+      "type": "shock",
+      "modelYears": [],
+      "catalogId": null,
+      "fields": {
+        "springType": {
+          "value": "coil",
+          "status": "verified",
+          "url": "https://dvosuspension.com/product/jade-x/",
+          "retrieved": "2026-10-01",
+          "quote": "Coil Spring Preload | Option of our LS Spring (light steel) or regular steel spring",
+          "where": "product page, SPECS",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/product/jade-x/",
+            "retrieved": "2026-10-01",
+            "quote": "Coil Spring Preload | Option of our LS Spring (light steel) or regular steel spring",
+            "where": "Specifications"
+          }
+        },
+        "sizesAvailable": {
+          "value": "Metric: 230x65, 230x60, 230x57.5, 210x55, 210x52.5, 210x50; Trunnion: 205x65, 205x62.5, 205x60, 205x57.5, 185x55, 185x52.5, 185x50; Standard: 8.5x2.5, 7.875x2.25",
+          "status": "single",
+          "url": "https://dvosuspension.com/product/jade-x/",
+          "retrieved": "2026-10-01",
+          "quote": "Metric Sizes: 230×65 230×60 230×57.5 210×55 210×52.5 210×50",
+          "where": "product page, SPECS"
+        },
+        "adjusters": {
+          "value": "T3 Compression | Rebound | Bladder Pressure Adjust",
+          "status": "single",
+          "url": "https://dvosuspension.com/product/jade-x/",
+          "retrieved": "2026-10-01",
+          "quote": "T3 Compression | Rebound | Bladder Pressure Adjust",
+          "where": "product page, SPECS (Damper)"
+        },
+        "hscMax": {
+          "value": null,
+          "status": "verified",
+          "url": "https://dvosuspension.com/product/jade-x/",
+          "retrieved": "2026-10-01",
+          "quote": "T3 Compression | Rebound | Bladder Pressure Adjust",
+          "where": "SPECS lists no HSC adjuster",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/product/jade-x/",
+            "retrieved": "2026-10-01",
+            "quote": "Damper: T3 Compression | Rebound | Bladder Pressure Adjust",
+            "where": "Specifications"
+          }
+        },
+        "lscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "T3 = 3-position compression; no click count given."
+        },
+        "reboundMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Rebound clicks chart not transcribed; total clicks not stated in text."
+        },
+        "bladderPressureTable": {
+          "value": "Range 140-180 psi",
+          "status": "single",
+          "url": "https://dvosuspension.com/wp-content/uploads/2024/05/DVO-Jade-X-Setup-Guide-May16.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "RANGE 140-180PSI",
+          "where": "guide p.8 (Bladder Adjust)"
+        },
+        "sagPercent": {
+          "value": "25-30",
+          "status": "verified",
+          "url": "https://dvosuspension.com/wp-content/uploads/2024/05/DVO-Jade-X-Setup-Guide-May16.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "The recommended SAG is 25% - 30%.",
+          "where": "guide p.9 (Setting SAG)",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/wp-content/uploads/2024/05/DVO-Jade-X-Setup-Guide-May16.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "The recommended SAG is 25% - 30%.",
+            "where": "p.8"
+          }
+        },
+        "preloadGuide": {
+          "value": "One (1) rotation equals 1mm of preload.",
+          "status": "single",
+          "url": "https://dvosuspension.com/wp-content/uploads/2024/05/DVO-Jade-X-Setup-Guide-May16.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "One (1) rotation equals 1mm of preload.",
+          "where": "guide p.10"
+        },
+        "manualUrl": {
+          "value": "https://dvosuspension.com/wp-content/uploads/2024/05/DVO-Jade-X-Setup-Guide-May16.pdf",
+          "status": "verified",
+          "url": "https://dvosuspension.com/wp-content/uploads/2024/05/DVO-Jade-X-Setup-Guide-May16.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Version 2.0   JADE X SERIES SET-UP GUIDE",
+          "where": "guide cover",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/wp-content/uploads/2024/05/DVO-Jade-X-Setup-Guide-May16.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "Jade X Series Set-Up Guide Version 2.0",
+            "where": "PDF linked from product page"
+          }
+        }
+      }
+    },
+    {
+      "id": "dvo-jade-x-prime",
+      "name": "DVO Jade X Prime (coil)",
+      "type": "shock",
+      "modelYears": [],
+      "catalogId": null,
+      "fields": {
+        "springType": {
+          "value": "coil",
+          "status": "verified",
+          "url": "https://dvosuspension.com/product/jade-x-prime/",
+          "retrieved": "2026-10-01",
+          "quote": "Spring Features: Coil Spring Preload",
+          "where": "product page, SPECS",
+          "verifiedBy": {
+            "url": "https://dvosuspension.com/product/jade-x-prime/",
+            "retrieved": "2026-10-01",
+            "quote": "Spring Features: Coil Spring Preload",
+            "where": "Specifications"
+          }
+        },
+        "sizesAvailable": {
+          "value": "Metric: 250x75, 250x70, 230x65, 230x62.5, 230x60, 210x55, 210x52.5, 210x50; Trunnion: 225x75, 225x70, 205x65, 205x62.5, 205x60, 185x55, 185x52.5, 185x50",
+          "status": "single",
+          "url": "https://dvosuspension.com/product/jade-x-prime/",
+          "retrieved": "2026-10-01",
+          "quote": "Metric Sizes: 250×75 250×70 230×65 230×62.5 230×60 210×55 210×52.5 210×50",
+          "where": "product page, SPECS"
+        },
+        "adjusters": {
+          "value": "Prime Damper | Low-Speed Compression | High-Speed Compression | Rebound | Bladder Pressure Adjust",
+          "status": "single",
+          "url": "https://dvosuspension.com/product/jade-x-prime/",
+          "retrieved": "2026-10-01",
+          "quote": "Prime Damper | Low-Speed Compression | High-Speed Compression | Rebound | Bladder Pressure Adjust",
+          "where": "product page, SPECS (Damper)"
+        },
+        "lscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No click counts on product page; no Prime-specific guide found."
+        },
+        "hscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "As above."
+        },
+        "reboundMax": {
+          "value": null,
+          "status": "missing",
+          "note": "As above."
+        }
+      }
+    }
+  ]
+}

@@ -152,17 +152,17 @@
         "lscStart": {
           "value": null,
           "status": "missing",
-          "note": "No recommended click setting printed in owner's manual or on product page."
+          "note": "No recommended click setting printed in owner's manual or on product page. Retried 2026-10-01: no new document or page text, unchanged."
         },
         "hscStart": {
           "value": null,
           "status": "missing",
-          "note": "No recommended position printed in owner's manual or on product page."
+          "note": "No recommended position printed in owner's manual or on product page. Retried 2026-10-01: no new document or page text, unchanged."
         },
         "maxPressurePsi": {
           "value": null,
           "status": "missing",
-          "note": "Not stated in owner's manual, product page or 50h workshop manual (WSM_50h_RXF38_m.3_m.2_m.1.pdf). Highest printed recommendation is 220-230 psi ramp-up chamber; that is not a max. Manual says 'Please check pressure recommendations printed on the fork.' (fork decal not available)."
+          "note": "Not stated in owner's manual, product page or 50h workshop manual (WSM_50h_RXF38_m.3_m.2_m.1.pdf). Highest printed recommendation is 220-230 psi ramp-up chamber; that is not a max. Manual says 'Please check pressure recommendations printed on the fork.' (fork decal not available). Retried 2026-10-01: no new document or page text, unchanged."
         },
         "airChambers": {
           "value": "Main chamber (top valve) + Ramp up chamber (lower valve)",
@@ -175,12 +175,12 @@
         "spacersStock": {
           "value": null,
           "status": "missing",
-          "note": "Not stated in owner's manual or product page."
+          "note": "Not stated in owner's manual or product page. Retried 2026-10-01: no new document or page text, unchanged."
         },
         "spacersMax": {
           "value": null,
           "status": "missing",
-          "note": "Not stated in owner's manual or product page."
+          "note": "Not stated in owner's manual or product page. Retried 2026-10-01: no new document or page text, unchanged."
         },
         "sagPercent": {
           "value": "10-15 (air); 15-20 (coil)",
@@ -488,17 +488,17 @@
         "lscStart": {
           "value": null,
           "status": "missing",
-          "note": "No recommended click setting printed in owner's manual or on product page."
+          "note": "No recommended click setting printed in owner's manual or on product page. Retried 2026-10-01: no new document or page text, unchanged."
         },
         "hscStart": {
           "value": null,
           "status": "missing",
-          "note": "No recommended position printed in owner's manual or on product page."
+          "note": "No recommended position printed in owner's manual or on product page. Retried 2026-10-01: no new document or page text, unchanged."
         },
         "maxPressurePsi": {
           "value": null,
           "status": "missing",
-          "note": "Not stated in owner's manual, product page or 50h workshop manual (WSM_50h_RXF38_m.3_m.2_m.1.pdf). Highest printed recommendation is 220-230 psi ramp-up chamber; that is not a max. Manual says 'Please check pressure recommendations printed on the fork.' (fork decal not available)."
+          "note": "Not stated in owner's manual, product page or 50h workshop manual (WSM_50h_RXF38_m.3_m.2_m.1.pdf). Highest printed recommendation is 220-230 psi ramp-up chamber; that is not a max. Manual says 'Please check pressure recommendations printed on the fork.' (fork decal not available). Retried 2026-10-01: no new document or page text, unchanged."
         },
         "airChambers": {
           "value": "Main chamber (top valve) + Ramp up chamber (lower valve)",
@@ -511,12 +511,12 @@
         "spacersStock": {
           "value": null,
           "status": "missing",
-          "note": "Not stated in owner's manual or product page."
+          "note": "Not stated in owner's manual or product page. Retried 2026-10-01: no new document or page text, unchanged."
         },
         "spacersMax": {
           "value": null,
           "status": "missing",
-          "note": "Not stated in owner's manual or product page. m.3 page mentions the system is 'further optimized for use with volume spacers' but gives no count."
+          "note": "Not stated in owner's manual or product page. m.3 page mentions the system is 'further optimized for use with volume spacers' but gives no count. Retried 2026-10-01: no new document or page text, unchanged."
         },
         "sagPercent": {
           "value": "10-15 (air); 15-20 (coil)",
@@ -711,9 +711,12 @@
           "where": "owner's manual p.12, Stroke adjustment"
         },
         "mount": {
-          "value": null,
-          "status": "missing",
-          "note": "Product page only says 'Available in trunnion metric lengths' (Features) without per-size mount type; select list names carry no mount label. Not recorded to avoid inference."
+          "value": "trunnion",
+          "status": "single",
+          "url": "https://www.ohlins.com/en-us/mountain-bike/rear-shocks/ttx2air-m-2-185x55-am",
+          "retrieved": "2026-10-01",
+          "quote": "Available in trunnion metric lengths",
+          "where": "product page, Features list"
         },
         "springType": {
           "value": "air",
@@ -740,7 +743,7 @@
         "hscMax": {
           "value": null,
           "status": "missing",
-          "note": "Maker gives positions, not clicks: product page 'Hsc Cli: 3' but owner's manual describes 3 named positions (1 Soft, 2 Medium, P Pedaling platform). See hscPositions. product page Details say \"Hsc Cli: 3\", manual describes 3 named positions (1 soft, 2 medium, P pedal platform) - positions, not a click range"
+          "note": "Maker gives positions, not clicks: product page 'Hsc Cli: 3' but owner's manual describes 3 named positions (1 Soft, 2 Medium, P Pedaling platform). See hscPositions. product page Details say \"Hsc Cli: 3\", manual describes 3 named positions (1 soft, 2 medium, P pedal platform) - positions, not a click range Retried 2026-10-01: no new document or page text, unchanged."
         },
         "hscPositions": {
           "value": [
@@ -934,7 +937,7 @@
         "mount": {
           "value": null,
           "status": "missing",
-          "note": "Only the size names carry 'TM' labels; no explicit mount description per size. Not recorded."
+          "note": "Only the size names carry 'TM' labels; no explicit mount description per size. Not recorded. Retried 2026-10-01: no new document or page text, unchanged."
         },
         "springType": {
           "value": "coil",
@@ -961,7 +964,7 @@
         "hscMax": {
           "value": null,
           "status": "missing",
-          "note": "Maker gives levels, not clicks: 'External, 3 level high-speed compression adjustment' and manual 'three positions, I soft, II medium and III hard/pedal platform'. See hscPositions. product page Details say \"Hsc Cli: 3\", manual: positions I soft / II medium / III hard-pedal platform - positions, not a click range"
+          "note": "Maker gives levels, not clicks: 'External, 3 level high-speed compression adjustment' and manual 'three positions, I soft, II medium and III hard/pedal platform'. See hscPositions. product page Details say \"Hsc Cli: 3\", manual: positions I soft / II medium / III hard-pedal platform - positions, not a click range Retried 2026-10-01: no new document or page text, unchanged."
         },
         "hscPositions": {
           "value": [
@@ -1034,7 +1037,7 @@
         "hasClimbLever": {
           "value": null,
           "status": "missing",
-          "note": "No 'climb mode' feature listed. Manual: 'For certain models the third position is a pedal platform' - not definitive for this shock."
+          "note": "No 'climb mode' feature listed. Manual: 'For certain models the third position is a pedal platform' - not definitive for this shock. Retried 2026-10-01: no new document or page text, unchanged."
         },
         "preloadGuide": {
           "value": "max 2 full turns of preload",

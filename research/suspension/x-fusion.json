@@ -1,0 +1,2261 @@
+{
+  "maker": "x-fusion",
+  "products": [
+    {
+      "id": "x-fusion-vengeance38-finecut-hlr-2027",
+      "name": "X-Fusion Vengeance 38 (Finecut HLR)",
+      "type": "fork",
+      "modelYears": [
+        2027
+      ],
+      "catalogId": null,
+      "fields": {
+        "catalogEdition": {
+          "value": "2027 AM CATALOG",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/help_detail/18.htm",
+          "retrieved": "2026-10-01",
+          "quote": "2027 AM CATALOG",
+          "where": "Help > AM Catalog page (link text of the catalog PDF); catalog PDF itself carries no year",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/help_detail/18.htm",
+            "retrieved": "2026-10-01",
+            "quote": "2027 AM CATALOG",
+            "where": "Help > New Catalog > AM; page titled \"2026 AM Catalog\" in <title>, heading \"2027 AM CATALOG\" (PDF AM27 CATALOGUE.pdf, created 2026-03-30)"
+          }
+        },
+        "travelMm": {
+          "value": [
+            160,
+            170,
+            180
+          ],
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "160mm, 170mm, 180mm",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.10-11 VENGEANCE 38 Series spec table, Travel",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/108.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Travel: 180mm, (ITA 160/170/180)",
+            "where": "Product page SPECIFICATIONS; catalog p.10 \"Finecut HLR Travel 160mm, 170mm, 180mm\""
+          }
+        },
+        "wheelSize": {
+          "value": "29",
+          "status": "single",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "29 inch",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.10 VENGEANCE 38 spec table, Wheel Size"
+        },
+        "stanchionMm": {
+          "value": 38,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "38mm Ano aluminum",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.10 VENGEANCE 38 spec table, Stanchion",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/108.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Stanchion: 38mm Aluminum",
+            "where": "Product page SPECIFICATIONS"
+          }
+        },
+        "damper": {
+          "value": "Finecut HLR",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Finecut HLR",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.10 spec table, Damper",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/108.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Damper: Finecut HLR",
+            "where": "Product page SPECIFICATIONS"
+          }
+        },
+        "springType": {
+          "value": "air",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Air",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.10 spec table, Spring",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/108.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Spring: Air Spring",
+            "where": "Product page SPECIFICATIONS"
+          }
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/products_detail/108.htm",
+          "retrieved": "2026-10-01",
+          "quote": "Adjustments: High and Low Speed Compression, Rebound",
+          "where": "product page products_detail/108, SPECIFICATIONS (one rebound adjuster listed)",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/38mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "Turning the red adjustment knob clockwise will slow down the rebound (return speed)",
+            "where": "38mm Fork Set Up Guide p.2: one red rebound knob; blue = LSC, gold = HSC (p.3)"
+          }
+        },
+        "lscMax": {
+          "value": 14,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/38mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "There are about 14 clicks of LSC adjustment.",
+          "where": "38mm Fork Set Up Guide 2025 (PDF created 2025-08-22), p.4 Low Speed Compression Adjustment; figure labelled FINECUT HLR; 'about' 14 clicks",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/38mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "There are about 14 clicks of LSC adjustment.",
+            "where": "38mm Fork Set Up Guide p.4 (approximate count \"about 14\")"
+          }
+        },
+        "hscMax": {
+          "value": 7,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/38mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "There are about 7 clicks of HSC adjustment.",
+          "where": "38mm Fork Set Up Guide 2025, p.5 High Speed Compression Adjustment (HLR Model Only); 'about' 7 clicks",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/38mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "There are about 7 clicks of HSC adjustment.",
+            "where": "38mm Fork Set Up Guide p.5 (approximate count \"about 7\")"
+          }
+        },
+        "reboundMax": {
+          "value": 25,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/38mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "There are approximately 25 clicks of adjustment).",
+          "where": "38mm Fork Set Up Guide 2025, p.2 Step 3 Rebound Damping (clockwise = slowest, then 12 clicks counter-clockwise = base); 'approximately' 25 clicks",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/38mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "(There are approximately 25 clicks of adjustment).",
+            "where": "38mm Fork Set Up Guide p.2 Step 3 (approximate)"
+          }
+        },
+        "hsrMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No separate high-speed rebound adjuster listed: product page 108 adjustments are 'High and Low Speed Compression, Rebound'. Absence not confirmed by a second document."
+        },
+        "reboundStartNote": {
+          "value": "start fully closed (clockwise), then 12 clicks counter-clockwise",
+          "status": "single",
+          "url": "https://www.xfusionshox.com/upload/files/38mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Turn the rebound knob all the way clockwise until it reaches the end of the adjustment. This setting is the slowest return setting.",
+          "where": "38mm Fork Set Up Guide 2025, p.2 Step 3, items 1-2 ('Turn the adjustment knob 12 clicks counter clockwise')"
+        },
+        "lscStart": {
+          "value": null,
+          "status": "missing",
+          "note": "No recommended LSC start setting printed in 38mm Set Up Guide 2025."
+        },
+        "hscStart": {
+          "value": null,
+          "status": "missing",
+          "note": "No recommended HSC start setting printed in 38mm Set Up Guide 2025."
+        },
+        "maxPressurePsi": {
+          "value": 140,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/Owner's%20Manual-English(1).pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Max. Gas Spring Pressure for Air Fork: 【140PSI】",
+          "where": "Owner's Manual English (PDF created 2024-08-07), 'Installing a XFUSION Fork', Max. Gas Spring Pressure for Air Fork, 140 PSI group; model name listed in that group: Vengeance 38",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/Owner's%20Manual-English(1).pdf",
+            "retrieved": "2026-10-01",
+            "quote": "Max. Gas Spring Pressure for Air Fork: 【140PSI】 Velvet, Migo 9mm 27.5, ... Slant ,Sweep Boost, Slide Boost, E-Slide Boost, Mcqueen Boost, ... Vengeance 38, Rezza 29 Boost",
+            "where": "Owner's Manual English, p.4 'Installing a XFUSION Fork' (general list by model, not per model year)"
+          }
+        },
+        "minPressurePsi": {
+          "value": 50,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/Owner's%20Manual-English(1).pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Min. Gas Spring Pressure for Air Fork: 【50PSI】",
+          "where": "Owner's Manual English (PDF created 2024-08-07), 'Installing a XFUSION Fork', Min. Gas Spring Pressure for Air Fork, 50 PSI group; model name listed in that group: Vengeance 38",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/Owner's%20Manual-English(1).pdf",
+            "retrieved": "2026-10-01",
+            "quote": "Min. Gas Spring Pressure for Air Fork: 【50PSI】 Velvet, Slant, ... Slide Boost, ... Rezza 29 Boost, Vengeance 38, Trace36, Metric, RV1 38",
+            "where": "Owner's Manual English, p.4 'Installing a XFUSION Fork' (general list by model, not per model year)"
+          }
+        },
+        "sagPercent": {
+          "value": [
+            25,
+            30
+          ],
+          "status": "single",
+          "url": "https://www.xfusionshox.com/upload/files/38mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "We recommend that you set your fork sag at 25-30%",
+          "where": "38mm Fork Set Up Guide 2025, p.1 Step 2 Setting Sag"
+        },
+        "pressureTable": {
+          "value": null,
+          "status": "missing",
+          "note": "Air & Coil Spring Rate PDF (https://www.xfusionshox.com/upload/files/Air%20%26%20Coil%20Spring%20Rate-v2.pdf) has tables for 32/34mm RC/RL, 34mm RoughCut, 36mm and RV-1 coil only; no table names this model/damper. Vengeance 38 is not covered; no table for 38mm stanchion found on the Help page or the product page."
+        },
+        "axleToCrownMm": {
+          "value": 596,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/products_detail/108.htm",
+          "retrieved": "2026-10-01",
+          "quote": "Axle to Crown: 596mm @ 180mm of travel",
+          "where": "product page products_detail/108, SPECIFICATIONS",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/108.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Axle to Crown: 596mm @ 180mm of travel",
+            "where": "Product page SPECIFICATIONS; catalog p.19 table 596mm/180mm"
+          }
+        },
+        "offsetMm": {
+          "value": [
+            44,
+            51
+          ],
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "51mm & 44mm",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.10 spec table, Offset",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/108.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Offset: 44mm/51mm",
+            "where": "Product page SPECIFICATIONS; catalog p.10 \"Offset 51mm & 44mm\""
+          }
+        },
+        "manualUrl": {
+          "value": "https://www.xfusionshox.com/upload/files/Owner's%20Manual-English(1).pdf",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/Owner's%20Manual-English(1).pdf",
+          "retrieved": "2026-10-01",
+          "quote": "XFUSION Owner’s Manual-English",
+          "where": "Owner's Manual English p.1 title (linked from product page 108 and Help > Forks/Shocks)",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/108.htm",
+            "retrieved": "2026-10-01",
+            "quote": "OWNER'S MANUALS (link to /upload/files/Owner's Manual-English(1).pdf)",
+            "where": "Product page DOWNLOAD section; the manual lists Vengeance 38 in its fork pressure list"
+          }
+        }
+      }
+    },
+    {
+      "id": "x-fusion-rv1-38-dh-2027",
+      "name": "X-Fusion RV1 38 DH (Finecut HLR)",
+      "type": "fork",
+      "modelYears": [
+        2027
+      ],
+      "catalogId": null,
+      "fields": {
+        "catalogEdition": {
+          "value": "2027 AM CATALOG",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/help_detail/18.htm",
+          "retrieved": "2026-10-01",
+          "quote": "2027 AM CATALOG",
+          "where": "Help > AM Catalog page (link text of the catalog PDF); catalog PDF itself carries no year",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/help_detail/18.htm",
+            "retrieved": "2026-10-01",
+            "quote": "2027 AM CATALOG",
+            "where": "Help > New Catalog > AM; page titled \"2026 AM Catalog\" in <title>, heading \"2027 AM CATALOG\" (PDF AM27 CATALOGUE.pdf, created 2026-03-30)"
+          }
+        },
+        "travelMm": {
+          "value": 200,
+          "status": "single",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "200mm",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.12 RV1 38 DH Series spec table, Travel"
+        },
+        "wheelSize": {
+          "value": "29 / 27.5",
+          "status": "single",
+          "url": "https://www.xfusionshox.com/products_detail/109.htm",
+          "retrieved": "2026-10-01",
+          "quote": "Wheel Size: 29 inch / 27.5 inch",
+          "where": "product page products_detail/109, SPECIFICATIONS"
+        },
+        "stanchionMm": {
+          "value": 38,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "38mm Ano aluminum",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.12 RV1 38mm spec table, Stanchion",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/109.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Stanchion: 38mm Aluminum",
+            "where": "Product page SPECIFICATIONS"
+          }
+        },
+        "damper": {
+          "value": "Finecut HLR",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Finecut HLR",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.12 spec table, Damper",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/109.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Damper: Finecut HLR",
+            "where": "Product page SPECIFICATIONS"
+          }
+        },
+        "springType": {
+          "value": "air",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Air",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.12 spec table, Spring",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/109.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Spring: Air Spring",
+            "where": "Product page SPECIFICATIONS"
+          }
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/products_detail/109.htm",
+          "retrieved": "2026-10-01",
+          "quote": "Adjustments: High and Low Speed Compression, Rebound",
+          "where": "product page products_detail/109, SPECIFICATIONS (one rebound adjuster listed)",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/109.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Adjustments: High and Low Speed Compression, Rebound",
+            "where": "Product page SPECIFICATIONS (single \"Rebound\" adjuster; guide for 38mm Finecut HLR shows one red rebound knob)"
+          }
+        },
+        "lscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "38mm Fork Set Up Guide 2025 gives 14 LSC clicks for 38mm Finecut HLR forks but does not name the RV1 38 DH; the RV1 page 109 links only the old 36mm guide and a 2021 manual (both image PDFs, no click counts found). Not transferred."
+        },
+        "hscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Same as lscMax: 38mm Set Up Guide 2025 (7 HSC clicks) does not name the RV1."
+        },
+        "reboundMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Same as lscMax: 38mm Set Up Guide 2025 (about 25 rebound clicks) does not name the RV1."
+        },
+        "hsrMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No separate high-speed rebound adjuster listed on product page 109."
+        },
+        "maxPressurePsi": {
+          "value": 120,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/Owner's%20Manual-English(1).pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Max. Gas Spring Pressure for Air Fork: … 【120PSI】",
+          "where": "Owner's Manual English (PDF created 2024-08-07), 'Installing a XFUSION Fork', Max. Gas Spring Pressure for Air Fork, 120 PSI group (Trace36, Metric, RV1 38)",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/Owner's%20Manual-English(1).pdf",
+            "retrieved": "2026-10-01",
+            "quote": "【120PSI】 Trace36, Metric, RV1 38",
+            "where": "Owner's Manual English, p.4 'Installing a XFUSION Fork' (general list by model, not per model year)"
+          }
+        },
+        "minPressurePsi": {
+          "value": 50,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/Owner's%20Manual-English(1).pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Min. Gas Spring Pressure for Air Fork: 【50PSI】",
+          "where": "Owner's Manual English (PDF created 2024-08-07), 'Installing a XFUSION Fork', Min. Gas Spring Pressure for Air Fork, 50 PSI group; model name listed in that group: RV1 38",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/Owner's%20Manual-English(1).pdf",
+            "retrieved": "2026-10-01",
+            "quote": "Min. Gas Spring Pressure for Air Fork: 【50PSI】 Velvet, Slant, ... Slide Boost, ... Rezza 29 Boost, Vengeance 38, Trace36, Metric, RV1 38",
+            "where": "Owner's Manual English, p.4 'Installing a XFUSION Fork' (general list by model, not per model year)"
+          }
+        },
+        "pressureTable": {
+          "value": null,
+          "status": "missing",
+          "note": "Air & Coil Spring Rate PDF (https://www.xfusionshox.com/upload/files/Air%20%26%20Coil%20Spring%20Rate-v2.pdf) has tables for 32/34mm RC/RL, 34mm RoughCut, 36mm and RV-1 coil only; no table names this model/damper. The RV-1 table is a coil-spring table (Soft/Stock/Firm/Extra Firm) and this fork is listed as 'Air Spring'; not transferred."
+        },
+        "axleToCrownMm": {
+          "value": 610,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/products_detail/109.htm",
+          "retrieved": "2026-10-01",
+          "quote": "Axle to Crown: 610mm @ 200mm of travel",
+          "where": "product page products_detail/109, SPECIFICATIONS",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/109.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Axle to Crown: 610mm @ 200mm of travel",
+            "where": "Product page SPECIFICATIONS"
+          }
+        },
+        "offsetMm": {
+          "value": [
+            46,
+            56
+          ],
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/products_detail/109.htm",
+          "retrieved": "2026-10-01",
+          "quote": "Offset: 46mm/56mm",
+          "where": "product page products_detail/109, SPECIFICATIONS",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/109.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Offset: 46mm/56mm",
+            "where": "Product page SPECIFICATIONS"
+          }
+        },
+        "sagPercent": {
+          "value": null,
+          "status": "missing",
+          "note": "No sag recommendation for the RV1 in any document found."
+        }
+      }
+    },
+    {
+      "id": "x-fusion-trace36-2027",
+      "name": "X-Fusion Trace 36 (RC / Roughcut HLR / Roughcut RCP)",
+      "type": "fork",
+      "modelYears": [
+        2027
+      ],
+      "catalogId": null,
+      "fields": {
+        "catalogEdition": {
+          "value": "2027 AM CATALOG",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/help_detail/18.htm",
+          "retrieved": "2026-10-01",
+          "quote": "2027 AM CATALOG",
+          "where": "Help > AM Catalog page (link text of the catalog PDF); catalog PDF itself carries no year",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "TRACE 36 Trail/AM/FR 29\" 36mm Air 140-170 581mm/170mm 68x760 44&51",
+            "where": "Catalog PDF p.19 \"Fork tech document\" table (edition: help page heading \"2027 AM CATALOG\")"
+          }
+        },
+        "travelMm": {
+          "value": [
+            140,
+            160,
+            170
+          ],
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "140mm, 160mm, 170mm",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.9 TRACE 36 Series spec tables, Travel (all three variants)",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/60.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Travel: 170mm, (ITA 140/160/170)",
+            "where": "Product pages TRACE36 HLR / RC SPECIFICATIONS; catalog p.19 \"140-170\""
+          }
+        },
+        "wheelSize": {
+          "value": "29",
+          "status": "single",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "29 inch",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.9 TRACE 36 spec tables, Wheel Size"
+        },
+        "stanchionMm": {
+          "value": 36,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "36mm Ano aluminum",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.9 spec tables, Stanchion",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/60.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Stanchion: 36mm Aluminum",
+            "where": "Product page SPECIFICATIONS"
+          }
+        },
+        "damper": {
+          "value": [
+            "RC",
+            "Roughcut HLR",
+            "Roughcut RCP"
+          ],
+          "status": "single",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Roughcut HLR",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.9: Trace 36 RC, Trace 36 Roughcut HLR, Trace 36 Roughcut RCP; spec row 'Damper' reads 'RC Damper' / 'Roughcut HLR' / 'Roughcut RCP'"
+        },
+        "springType": {
+          "value": "air",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Air spring",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.9 spec tables, Spring",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/60.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Spring: Air Spring",
+            "where": "Product page SPECIFICATIONS"
+          }
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/products_detail/60.htm",
+          "retrieved": "2026-10-01",
+          "quote": "Adjustments HLR: High & Low Speed Compression, Rebound, Air Pressure",
+          "where": "product page products_detail/60, HLR product page SPECIFICATIONS; RC page 56: 'Adjustments : Low Speed Comp., Rebound,,Air Pressure'",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/36mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "Turning the red adjustment knob clockwise will slow down the rebound (return speed)",
+            "where": "36mm Fork Set Up Guide p.2: one red rebound knob"
+          }
+        },
+        "lscMax": {
+          "value": 13,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/36mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "There are about 13 clicks of LSC adjustment.",
+          "where": "36mm Fork Set Up Guide 2025 (PDF created 2025-08-22), p.4 Low Speed Compression Adjustment; 'about' 13 clicks",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/36mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "There are about 13 clicks of LSC adjustment.",
+            "where": "36mm Fork Set Up Guide p.4 (approximate; Roughcut HLR section)"
+          }
+        },
+        "hscMax": {
+          "value": 15,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/36mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "There are about 15 clicks of HSC adjust- ment.",
+          "where": "36mm Fork Set Up Guide 2025, p.5 High Speed Compression Adjustment (HLR Model Only); 'about' 15 clicks. Only the HLR variant has an HSC adjuster; RC has LSC only",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/36mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "There are about 15 clicks of HSC adjustment.",
+            "where": "36mm Fork Set Up Guide p.5 (HLR model only, approximate)"
+          }
+        },
+        "reboundMax": {
+          "value": 16,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/36mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "There are approximately 16 clicks of adjustment).",
+          "where": "36mm Fork Set Up Guide 2025, p.2 Step 3 Rebound Damping; 'approximately' 16 clicks",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/36mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "(There are approximately 16 clicks of adjustment).",
+            "where": "36mm Fork Set Up Guide p.2 Step 3 (approximate)"
+          }
+        },
+        "hsrMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No separate high-speed rebound adjuster listed on product pages 56/60."
+        },
+        "reboundStartNote": {
+          "value": "start fully closed (clockwise), then 8 clicks counter-clockwise",
+          "status": "single",
+          "url": "https://www.xfusionshox.com/upload/files/36mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Turn the adjustment knob 8 clicks counter clockwise.",
+          "where": "36mm Fork Set Up Guide 2025, p.2 Step 3"
+        },
+        "maxPressurePsi": {
+          "value": 120,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/Owner's%20Manual-English(1).pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Max. Gas Spring Pressure for Air Fork: … 【120PSI】",
+          "where": "Owner's Manual English (PDF created 2024-08-07), 'Installing a XFUSION Fork', Max. Gas Spring Pressure for Air Fork, 120 PSI group (Trace36, Metric, RV1 38)",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/Owner's%20Manual-English(1).pdf",
+            "retrieved": "2026-10-01",
+            "quote": "【120PSI】 Trace36, Metric, RV1 38",
+            "where": "Owner's Manual English, p.4 'Installing a XFUSION Fork' (general list by model, not per model year)"
+          }
+        },
+        "minPressurePsi": {
+          "value": 50,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/Owner's%20Manual-English(1).pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Min. Gas Spring Pressure for Air Fork: 【50PSI】",
+          "where": "Owner's Manual English (PDF created 2024-08-07), 'Installing a XFUSION Fork', Min. Gas Spring Pressure for Air Fork, 50 PSI group; model name listed in that group: Trace36",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/Owner's%20Manual-English(1).pdf",
+            "retrieved": "2026-10-01",
+            "quote": "Min. Gas Spring Pressure for Air Fork: 【50PSI】 Velvet, Slant, ... Slide Boost, ... Rezza 29 Boost, Vengeance 38, Trace36, Metric, RV1 38",
+            "where": "Owner's Manual English, p.4 'Installing a XFUSION Fork' (general list by model, not per model year)"
+          }
+        },
+        "sagPercent": {
+          "value": [
+            25,
+            30
+          ],
+          "status": "single",
+          "url": "https://www.xfusionshox.com/upload/files/36mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "We recommend that you set your fork sag at 25-30%",
+          "where": "36mm Fork Set Up Guide 2025, p.1 Step 2 Setting Sag"
+        },
+        "pressureTable": {
+          "value": {
+            "unit": "psi",
+            "rows": [
+              {
+                "rider": "100lbs/45 Kg",
+                "value": 45
+              },
+              {
+                "rider": "110lbs/50 Kg",
+                "value": 47.5
+              },
+              {
+                "rider": "120lbs/54 Kg",
+                "value": 50
+              },
+              {
+                "rider": "130lbs/59 Kg",
+                "value": 52.5
+              },
+              {
+                "rider": "140lbs/63 Kg",
+                "value": 55
+              },
+              {
+                "rider": "150lbs/68 Kg",
+                "value": 57.5
+              },
+              {
+                "rider": "160lbs/73 Kg",
+                "value": 60
+              },
+              {
+                "rider": "170lbs/77 Kg",
+                "value": 65
+              },
+              {
+                "rider": "180lbs/82 Kg",
+                "value": 70
+              },
+              {
+                "rider": "190lbs/86 Kg",
+                "value": 75
+              },
+              {
+                "rider": "200 lbs/90 Kg",
+                "value": 80
+              },
+              {
+                "rider": "220+lbs/100+ Kg",
+                "value": 85
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://www.xfusionshox.com/upload/files/Air%20%26%20Coil%20Spring%20Rate-v2.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "36mm Stanchion: 100lbs/45 Kg 45 PSI … 220+lbs/100+ Kg 85 PSI",
+          "where": "Air & Coil Spring Rate PDF (image-only, no text layer; read from the rendered page), table '36mm Stanchion', column Air Pressure PSI/BAR (psi values as printed)"
+        },
+        "axleToCrownMm": {
+          "value": 581,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/products_detail/60.htm",
+          "retrieved": "2026-10-01",
+          "quote": "Axle to Crown: 581mm @ 170mm",
+          "where": "product page products_detail/60, HLR product page SPECIFICATIONS",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/60.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Axle to Crown: 581mm @ 170mm",
+            "where": "Product page SPECIFICATIONS; catalog p.19 581mm/170mm"
+          }
+        },
+        "offsetMm": {
+          "value": [
+            44,
+            51
+          ],
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "51mm & 44mm",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.9 spec tables, Offset",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/60.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Offset: 44/51mm",
+            "where": "Product pages (HLR page also repeats \"Offset: 51mm\"); catalog p.19 \"44&51\""
+          }
+        },
+        "manualUrl": {
+          "value": "https://www.xfusionshox.com/upload/files/Owner's%20Manual-English(1).pdf",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/Owner's%20Manual-English(1).pdf",
+          "retrieved": "2026-10-01",
+          "quote": "XFUSION Owner’s Manual-English",
+          "where": "Owner's Manual English p.1 title (linked from product pages 56/60)",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/56.htm",
+            "retrieved": "2026-10-01",
+            "quote": "OWNER'S MAUNALS (link to /upload/files/Owner's Manual-English(1).pdf)",
+            "where": "TRACE36 RC product page DOWNLOAD section"
+          }
+        }
+      }
+    },
+    {
+      "id": "x-fusion-sweep-boost-2027",
+      "name": "X-Fusion Sweep Boost (RC / Roughcut HLR / Roughcut RCP)",
+      "type": "fork",
+      "modelYears": [
+        2027
+      ],
+      "catalogId": null,
+      "fields": {
+        "catalogEdition": {
+          "value": "2027 AM CATALOG",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/help_detail/18.htm",
+          "retrieved": "2026-10-01",
+          "quote": "2027 AM CATALOG",
+          "where": "Help > AM Catalog page (link text of the catalog PDF); catalog PDF itself carries no year",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/help_detail/18.htm",
+            "retrieved": "2026-10-01",
+            "quote": "2027 AM CATALOG",
+            "where": "Help > New Catalog > AM; page titled \"2026 AM Catalog\" in <title>, heading \"2027 AM CATALOG\" (PDF AM27 CATALOGUE.pdf, created 2026-03-30)"
+          }
+        },
+        "travelMm": {
+          "value": [
+            120,
+            140,
+            160
+          ],
+          "status": "single",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "120mm, 140mm, 160mm",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.7 SWEEP Series spec tables, Travel"
+        },
+        "wheelSize": {
+          "value": "27.5",
+          "status": "single",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "27.5 inch",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.7 spec tables, Wheel Size"
+        },
+        "stanchionMm": {
+          "value": 34,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "34mm Ano aluminum",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.7 spec tables, Stanchion",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/63.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Stanchion: 34mm Aluminum",
+            "where": "Product page SPECIFICATIONS"
+          }
+        },
+        "damper": {
+          "value": [
+            "RC",
+            "Roughcut HLR",
+            "Roughcut RCP"
+          ],
+          "status": "single",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Roughcut HLR",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.7: Sweep RC, Sweep Roughcut HLR, Sweep Roughcut RCP"
+        },
+        "springType": {
+          "value": "air",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Air",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.7 spec tables, Spring",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/63.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Spring: Air Spring",
+            "where": "Product page SPECIFICATIONS"
+          }
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/products_detail/62.htm",
+          "retrieved": "2026-10-01",
+          "quote": "Adjustments: High and Low Speed Comp., Rebound, Air Spring",
+          "where": "product page products_detail/62, HLR product page SPECIFICATIONS",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/34mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "Turning the red adjustment knob clockwise will slow down the rebound (return speed)",
+            "where": "34mm Fork Set Up Guide p.2: one red rebound knob"
+          }
+        },
+        "lscMax": {
+          "value": 13,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/34mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "There are about 13 clicks of LSC adjustment.",
+          "where": "34mm Fork Set Up Guide 2025 (PDF created 2025-08-22), p.4 Low Speed Compression Adjustment (guide covers 34mm HLR/RC models); 'about' 13 clicks",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/34mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "13 clicks of LSC adjustment.",
+            "where": "34mm Fork Set Up Guide p.4 (text \"There are about 13 clicks of LSC adjustment\", approximate)"
+          }
+        },
+        "hscMax": {
+          "value": 15,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/34mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "There are about 15 clicks of HSC adjust- ment.",
+          "where": "34mm Fork Set Up Guide 2025, p.5 High Speed Compression Adjustment (HLR Model Only); 'about' 15 clicks",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/34mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "are about 15 clicks of HSC adjust-",
+            "where": "34mm Fork Set Up Guide p.5 (HLR model only, approximate)"
+          }
+        },
+        "reboundMax": {
+          "value": 16,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/34mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "There are approximately 16 clicks of adjustment).",
+          "where": "34mm Fork Set Up Guide 2025, p.2 Step 3 Rebound Damping; 'approximately' 16 clicks",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/34mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "(There are approximately 16 clicks of adjustment).",
+            "where": "34mm Fork Set Up Guide p.2 Step 3 (approximate)"
+          }
+        },
+        "hsrMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No separate high-speed rebound adjuster listed on the product page."
+        },
+        "reboundStartNote": {
+          "value": "start fully closed (clockwise), then 8 clicks counter-clockwise",
+          "status": "single",
+          "url": "https://www.xfusionshox.com/upload/files/34mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Turn the adjustment knob 8 clicks counter clockwise.",
+          "where": "34mm Fork Set Up Guide 2025, p.2 Step 3"
+        },
+        "maxPressurePsi": {
+          "value": 140,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/Owner's%20Manual-English(1).pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Max. Gas Spring Pressure for Air Fork: 【140PSI】",
+          "where": "Owner's Manual English (PDF created 2024-08-07), 'Installing a XFUSION Fork', Max. Gas Spring Pressure for Air Fork, 140 PSI group; model name listed in that group: Sweep Boost",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/Owner's%20Manual-English(1).pdf",
+            "retrieved": "2026-10-01",
+            "quote": "Max. Gas Spring Pressure for Air Fork: 【140PSI】 Velvet, Migo 9mm 27.5, ... Slant ,Sweep Boost, Slide Boost, E-Slide Boost, Mcqueen Boost, ... Vengeance 38, Rezza 29 Boost",
+            "where": "Owner's Manual English, p.4 'Installing a XFUSION Fork' (general list by model, not per model year)"
+          }
+        },
+        "minPressurePsi": {
+          "value": 50,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/Owner's%20Manual-English(1).pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Min. Gas Spring Pressure for Air Fork: 【50PSI】",
+          "where": "Owner's Manual English (PDF created 2024-08-07), 'Installing a XFUSION Fork', Min. Gas Spring Pressure for Air Fork, 50 PSI group; model name listed in that group: Sweep Boost",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/Owner's%20Manual-English(1).pdf",
+            "retrieved": "2026-10-01",
+            "quote": "Min. Gas Spring Pressure for Air Fork: 【50PSI】 Velvet, Slant, ... Slide Boost, ... Rezza 29 Boost, Vengeance 38, Trace36, Metric, RV1 38",
+            "where": "Owner's Manual English, p.4 'Installing a XFUSION Fork' (general list by model, not per model year)"
+          }
+        },
+        "sagPercent": {
+          "value": [
+            25,
+            30
+          ],
+          "status": "single",
+          "url": "https://www.xfusionshox.com/upload/files/34mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "We recommend that you set your fork sag at 25-30%",
+          "where": "34mm Fork Set Up Guide 2025, p.1 Step 2 Setting Sag"
+        },
+        "pressureTableRc": {
+          "value": {
+            "unit": "psi",
+            "rows": [
+              {
+                "rider": "100lbs/45 Kg",
+                "value": 55
+              },
+              {
+                "rider": "110lbs/50 Kg",
+                "value": 57.5
+              },
+              {
+                "rider": "120lbs/54 Kg",
+                "value": 60
+              },
+              {
+                "rider": "130lbs/59 Kg",
+                "value": 65
+              },
+              {
+                "rider": "140lbs/63 Kg",
+                "value": 70
+              },
+              {
+                "rider": "150lbs/68 Kg",
+                "value": 75
+              },
+              {
+                "rider": "160lbs/73 Kg",
+                "value": 80
+              },
+              {
+                "rider": "170lbs/77 Kg",
+                "value": 85
+              },
+              {
+                "rider": "180lbs/82 Kg",
+                "value": 90
+              },
+              {
+                "rider": "190lbs/86 Kg",
+                "value": 95
+              },
+              {
+                "rider": "200 lbs/90 Kg",
+                "value": 100
+              },
+              {
+                "rider": "220+lbs/100+ Kg",
+                "value": 110
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://www.xfusionshox.com/upload/files/Air%20%26%20Coil%20Spring%20Rate-v2.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "32/34mm Stanchion(RC/RL): 100lbs/45 Kg 55 PSI … 220+lbs/100+ Kg 110 PSI",
+          "where": "Air & Coil Spring Rate PDF (image-only, no text layer; read from the rendered page), table '32/34mm Stanchion(RC/RL)', column Air Pressure PSI/BAR (psi values as printed)"
+        },
+        "pressureTableRoughcut": {
+          "value": {
+            "unit": "psi",
+            "rows": [
+              {
+                "rider": "100lbs/45 Kg",
+                "value": 47.5
+              },
+              {
+                "rider": "110lbs/50 Kg",
+                "value": 50
+              },
+              {
+                "rider": "120lbs/54 Kg",
+                "value": 55
+              },
+              {
+                "rider": "130lbs/59 Kg",
+                "value": 60
+              },
+              {
+                "rider": "140lbs/63 Kg",
+                "value": 65
+              },
+              {
+                "rider": "150lbs/68 Kg",
+                "value": 70
+              },
+              {
+                "rider": "160lbs/73 Kg",
+                "value": 75
+              },
+              {
+                "rider": "170lbs/77 Kg",
+                "value": 80
+              },
+              {
+                "rider": "180lbs/82 Kg",
+                "value": 85
+              },
+              {
+                "rider": "190lbs/86 Kg",
+                "value": 90
+              },
+              {
+                "rider": "200 lbs/90 Kg",
+                "value": 95
+              },
+              {
+                "rider": "220+lbs/100+ Kg",
+                "value": 110
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://www.xfusionshox.com/upload/files/Air%20%26%20Coil%20Spring%20Rate-v2.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "34mm Stanchion(RoughCut): 100lbs/45 Kg 47.5 PSI … 220+lbs/100+ Kg 110 PSI",
+          "where": "Air & Coil Spring Rate PDF (image-only, no text layer; read from the rendered page), table '34mm Stanchion(RoughCut)', column Air Pressure PSI/BAR (psi values as printed)"
+        },
+        "axleToCrownMm": {
+          "value": 551,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/products_detail/62.htm",
+          "retrieved": "2026-10-01",
+          "quote": "Axle to Crown: 551mm @ 160mm of travel",
+          "where": "product page products_detail/62, HLR product page SPECIFICATIONS",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/63.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Axle to Crown: 551mm @ 160mm of travel",
+            "where": "Product page SPECIFICATIONS; catalog p.19 551mm/160mm"
+          }
+        },
+        "offsetMm": {
+          "value": 46,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "46mm",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.7 spec tables, Offset",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/63.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Offset: 46mm",
+            "where": "Product page SPECIFICATIONS; catalog p.6"
+          }
+        }
+      }
+    },
+    {
+      "id": "x-fusion-slide-boost-2027",
+      "name": "X-Fusion Slide Boost (RC / Roughcut HLR / Roughcut RCP)",
+      "type": "fork",
+      "modelYears": [
+        2027
+      ],
+      "catalogId": null,
+      "fields": {
+        "catalogEdition": {
+          "value": "2027 AM CATALOG",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/help_detail/18.htm",
+          "retrieved": "2026-10-01",
+          "quote": "2027 AM CATALOG",
+          "where": "Help > AM Catalog page (link text of the catalog PDF); catalog PDF itself carries no year",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/help_detail/18.htm",
+            "retrieved": "2026-10-01",
+            "quote": "2027 AM CATALOG",
+            "where": "Help > New Catalog > AM; page titled \"2026 AM Catalog\" in <title>, heading \"2027 AM CATALOG\" (PDF AM27 CATALOGUE.pdf, created 2026-03-30)"
+          }
+        },
+        "travelMm": {
+          "value": [
+            100,
+            120,
+            140
+          ],
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "100mm, 120mm, 140mm",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.6 SLIDE Series spec tables, Travel",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/81.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Travel: 140mm (ITA 100/120/140mm)",
+            "where": "Product page SLIDE Boost HLR; catalog p.6 \"Travel 100mm, 120mm, 140mm\""
+          }
+        },
+        "wheelSize": {
+          "value": "29",
+          "status": "single",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "29 inch",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.6 spec tables, Wheel Size"
+        },
+        "stanchionMm": {
+          "value": 34,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "34mm Ano aluminum",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.6 spec tables, Stanchion",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/81.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Stanchion: 34mm Aluminum",
+            "where": "Product page SPECIFICATIONS"
+          }
+        },
+        "damper": {
+          "value": [
+            "RC",
+            "Roughcut HLR",
+            "Roughcut RCP"
+          ],
+          "status": "single",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Roughcut HLR",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.6: Slide RC, Slide Roughcut HLR, Slide Roughcut RCP"
+        },
+        "springType": {
+          "value": "air",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Air",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.6 spec tables, Spring",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/81.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Spring: Air Spring",
+            "where": "Product page SPECIFICATIONS"
+          }
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/products_detail/81.htm",
+          "retrieved": "2026-10-01",
+          "quote": "Adjustments: High and Low Speed Comp., Rebound, Air Spring",
+          "where": "product page products_detail/81, HLR product page SPECIFICATIONS",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/34mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "Turning the red adjustment knob clockwise will slow down the rebound (return speed)",
+            "where": "34mm Fork Set Up Guide p.2: one red rebound knob (generic 34mm guide; no Slide-specific guide found)"
+          }
+        },
+        "lscMax": {
+          "value": 13,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/34mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "There are about 13 clicks of LSC adjustment.",
+          "where": "34mm Fork Set Up Guide 2025, p.4 (guide covers 34mm HLR/RC models); 'about' 13 clicks",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/34mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "13 clicks of LSC adjustment.",
+            "where": "34mm Fork Set Up Guide p.4 (text \"There are about 13 clicks of LSC adjustment\", approximate) (generic 34mm guide; no Slide-specific guide found)"
+          }
+        },
+        "hscMax": {
+          "value": 15,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/34mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "There are about 15 clicks of HSC adjust- ment.",
+          "where": "34mm Fork Set Up Guide 2025, p.5 (HLR Model Only); 'about' 15 clicks",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/34mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "are about 15 clicks of HSC adjust-",
+            "where": "34mm Fork Set Up Guide p.5 (HLR model only, approximate) (generic 34mm guide; no Slide-specific guide found)"
+          }
+        },
+        "reboundMax": {
+          "value": 16,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/34mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "There are approximately 16 clicks of adjustment).",
+          "where": "34mm Fork Set Up Guide 2025, p.2 Step 3 Rebound Damping; 'approximately' 16 clicks",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/34mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "(There are approximately 16 clicks of adjustment).",
+            "where": "34mm Fork Set Up Guide p.2 Step 3 (approximate) (generic 34mm guide; no Slide-specific guide found)"
+          }
+        },
+        "hsrMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No separate high-speed rebound adjuster listed on the product page."
+        },
+        "reboundStartNote": {
+          "value": "start fully closed (clockwise), then 8 clicks counter-clockwise",
+          "status": "single",
+          "url": "https://www.xfusionshox.com/upload/files/34mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Turn the adjustment knob 8 clicks counter clockwise.",
+          "where": "34mm Fork Set Up Guide 2025, p.2 Step 3"
+        },
+        "maxPressurePsi": {
+          "value": 140,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/Owner's%20Manual-English(1).pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Max. Gas Spring Pressure for Air Fork: 【140PSI】",
+          "where": "Owner's Manual English (PDF created 2024-08-07), 'Installing a XFUSION Fork', Max. Gas Spring Pressure for Air Fork, 140 PSI group; model name listed in that group: Slide Boost",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/Owner's%20Manual-English(1).pdf",
+            "retrieved": "2026-10-01",
+            "quote": "Max. Gas Spring Pressure for Air Fork: 【140PSI】 Velvet, Migo 9mm 27.5, ... Slant ,Sweep Boost, Slide Boost, E-Slide Boost, Mcqueen Boost, ... Vengeance 38, Rezza 29 Boost",
+            "where": "Owner's Manual English, p.4 'Installing a XFUSION Fork' (general list by model, not per model year)"
+          }
+        },
+        "minPressurePsi": {
+          "value": 50,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/Owner's%20Manual-English(1).pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Min. Gas Spring Pressure for Air Fork: 【50PSI】",
+          "where": "Owner's Manual English (PDF created 2024-08-07), 'Installing a XFUSION Fork', Min. Gas Spring Pressure for Air Fork, 50 PSI group; model name listed in that group: Slide Boost",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/Owner's%20Manual-English(1).pdf",
+            "retrieved": "2026-10-01",
+            "quote": "Min. Gas Spring Pressure for Air Fork: 【50PSI】 Velvet, Slant, ... Slide Boost, ... Rezza 29 Boost, Vengeance 38, Trace36, Metric, RV1 38",
+            "where": "Owner's Manual English, p.4 'Installing a XFUSION Fork' (general list by model, not per model year)"
+          }
+        },
+        "sagPercent": {
+          "value": [
+            25,
+            30
+          ],
+          "status": "single",
+          "url": "https://www.xfusionshox.com/upload/files/34mm%20Fork%20Set%20Up%20Guide%202025.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "We recommend that you set your fork sag at 25-30%",
+          "where": "34mm Fork Set Up Guide 2025, p.1 Step 2 Setting Sag"
+        },
+        "pressureTableRc": {
+          "value": {
+            "unit": "psi",
+            "rows": [
+              {
+                "rider": "100lbs/45 Kg",
+                "value": 55
+              },
+              {
+                "rider": "110lbs/50 Kg",
+                "value": 57.5
+              },
+              {
+                "rider": "120lbs/54 Kg",
+                "value": 60
+              },
+              {
+                "rider": "130lbs/59 Kg",
+                "value": 65
+              },
+              {
+                "rider": "140lbs/63 Kg",
+                "value": 70
+              },
+              {
+                "rider": "150lbs/68 Kg",
+                "value": 75
+              },
+              {
+                "rider": "160lbs/73 Kg",
+                "value": 80
+              },
+              {
+                "rider": "170lbs/77 Kg",
+                "value": 85
+              },
+              {
+                "rider": "180lbs/82 Kg",
+                "value": 90
+              },
+              {
+                "rider": "190lbs/86 Kg",
+                "value": 95
+              },
+              {
+                "rider": "200 lbs/90 Kg",
+                "value": 100
+              },
+              {
+                "rider": "220+lbs/100+ Kg",
+                "value": 110
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://www.xfusionshox.com/upload/files/Air%20%26%20Coil%20Spring%20Rate-v2.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "32/34mm Stanchion(RC/RL): 100lbs/45 Kg 55 PSI … 220+lbs/100+ Kg 110 PSI",
+          "where": "Air & Coil Spring Rate PDF (image-only, no text layer; read from the rendered page), table '32/34mm Stanchion(RC/RL)', column Air Pressure PSI/BAR (psi values as printed)"
+        },
+        "pressureTableRoughcut": {
+          "value": {
+            "unit": "psi",
+            "rows": [
+              {
+                "rider": "100lbs/45 Kg",
+                "value": 47.5
+              },
+              {
+                "rider": "110lbs/50 Kg",
+                "value": 50
+              },
+              {
+                "rider": "120lbs/54 Kg",
+                "value": 55
+              },
+              {
+                "rider": "130lbs/59 Kg",
+                "value": 60
+              },
+              {
+                "rider": "140lbs/63 Kg",
+                "value": 65
+              },
+              {
+                "rider": "150lbs/68 Kg",
+                "value": 70
+              },
+              {
+                "rider": "160lbs/73 Kg",
+                "value": 75
+              },
+              {
+                "rider": "170lbs/77 Kg",
+                "value": 80
+              },
+              {
+                "rider": "180lbs/82 Kg",
+                "value": 85
+              },
+              {
+                "rider": "190lbs/86 Kg",
+                "value": 90
+              },
+              {
+                "rider": "200 lbs/90 Kg",
+                "value": 95
+              },
+              {
+                "rider": "220+lbs/100+ Kg",
+                "value": 110
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://www.xfusionshox.com/upload/files/Air%20%26%20Coil%20Spring%20Rate-v2.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "34mm Stanchion(RoughCut): 100lbs/45 Kg 47.5 PSI … 220+lbs/100+ Kg 110 PSI",
+          "where": "Air & Coil Spring Rate PDF (image-only, no text layer; read from the rendered page), table '34mm Stanchion(RoughCut)', column Air Pressure PSI/BAR (psi values as printed)"
+        },
+        "axleToCrownMm": {
+          "value": 551,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/products_detail/81.htm",
+          "retrieved": "2026-10-01",
+          "quote": "Axle to Crown: 551mm @ 140mm",
+          "where": "product page products_detail/81, HLR product page SPECIFICATIONS",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/81.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Axle to Crown: 551mm @ 140mm",
+            "where": "Product page SPECIFICATIONS; catalog p.19 551mm/140mm"
+          }
+        },
+        "offsetMm": {
+          "value": [
+            44,
+            51
+          ],
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "51mm & 44mm",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.6 spec tables, Offset",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/81.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Offset: 44/51mm",
+            "where": "Product page SPECIFICATIONS"
+          }
+        }
+      }
+    },
+    {
+      "id": "x-fusion-rezza-fork-2027",
+      "name": "X-Fusion Rezza 29 Finecut (RL2 / RCP / RLR / RCPR)",
+      "type": "fork",
+      "modelYears": [
+        2027
+      ],
+      "catalogId": null,
+      "fields": {
+        "catalogEdition": {
+          "value": "2027 AM CATALOG",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/help_detail/18.htm",
+          "retrieved": "2026-10-01",
+          "quote": "2027 AM CATALOG",
+          "where": "Help > AM Catalog page (link text of the catalog PDF); catalog PDF itself carries no year",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/help_detail/18.htm",
+            "retrieved": "2026-10-01",
+            "quote": "2027 AM CATALOG",
+            "where": "Help > New Catalog > AM; page titled \"2026 AM Catalog\" in <title>, heading \"2027 AM CATALOG\" (PDF AM27 CATALOGUE.pdf, created 2026-03-30)"
+          }
+        },
+        "travelMm": {
+          "value": [
+            100,
+            110,
+            120
+          ],
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/products_detail/114.htm",
+          "retrieved": "2026-10-01",
+          "quote": "Designed for 29 inch wheels and available in 100, 110, and 120mm travel options",
+          "where": "product page products_detail/114, DETAIL text (catalog p.4 says '100mm~130mm', spec chart '100~120': documents disagree on the upper end, see report)",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/115.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Travel Options: 100mm-120mm ... available in 100, 110, and 120mm travel options",
+            "where": "Product page REZZA Finecut RCP; NOTE catalog p.5 says \"Travel 100mm~130mm\" / \"Up To 130mm\" (conflict on 130)"
+          }
+        },
+        "wheelSize": {
+          "value": "29",
+          "status": "single",
+          "url": "https://www.xfusionshox.com/products_detail/114.htm",
+          "retrieved": "2026-10-01",
+          "quote": "Wheel Size: 29 inch",
+          "where": "product page products_detail/114, SPECIFICATIONS"
+        },
+        "stanchionMm": {
+          "value": 34,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/products_detail/114.htm",
+          "retrieved": "2026-10-01",
+          "quote": "Stanchion : 34mm",
+          "where": "product page products_detail/114, SPECIFICATIONS",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/115.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Stanchion : 34mm",
+            "where": "Product page SPECIFICATIONS"
+          }
+        },
+        "damper": {
+          "value": "Finecut",
+          "status": "single",
+          "url": "https://www.xfusionshox.com/products_detail/114.htm",
+          "retrieved": "2026-10-01",
+          "quote": "Damper: Finecut Damper",
+          "where": "product page products_detail/114, SPECIFICATIONS (RL2); RCP/RCPR/RLR pages: 'Finecut RCP Damper'"
+        },
+        "springType": {
+          "value": "air",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/products_detail/114.htm",
+          "retrieved": "2026-10-01",
+          "quote": "spring : Air",
+          "where": "product page products_detail/114, SPECIFICATIONS",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/115.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Spring: Air Spring",
+            "where": "Product page SPECIFICATIONS"
+          }
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/products_detail/114.htm",
+          "retrieved": "2026-10-01",
+          "quote": "Lockout, Rebound, Air Spring",
+          "where": "product page products_detail/114, SPECIFICATIONS Adjustments (RL2)",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/115.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Adjustments: 3 Position Platform , Rebound , Air Spring",
+            "where": "Product page SPECIFICATIONS (one rebound adjuster)"
+          }
+        },
+        "lscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Product pages say 'High and low-speed compression adjusters' in the feature text but list only 'Lockout, Rebound, Air Spring' / '3 Position Platform, Rebound, Air Spring' as adjustments; no click count anywhere (2025 set-up guides do not cover the Rezza fork)."
+        },
+        "hscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "See lscMax: contradictory feature text vs. adjustment list, no click count."
+        },
+        "reboundMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No click count for the Rezza fork in any document found (32/34mm Set Up Guides 2025 do not name it)."
+        },
+        "maxPressurePsi": {
+          "value": 140,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/Owner's%20Manual-English(1).pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Max. Gas Spring Pressure for Air Fork: 【140PSI】",
+          "where": "Owner's Manual English (PDF created 2024-08-07), 'Installing a XFUSION Fork', 140 PSI group; model name listed in that group: Rezza 29 Boost",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/Owner's%20Manual-English(1).pdf",
+            "retrieved": "2026-10-01",
+            "quote": "Max. Gas Spring Pressure for Air Fork: 【140PSI】 Velvet, Migo 9mm 27.5, ... Slant ,Sweep Boost, Slide Boost, E-Slide Boost, Mcqueen Boost, ... Vengeance 38, Rezza 29 Boost",
+            "where": "Owner's Manual English, p.4 'Installing a XFUSION Fork' (general list by model, not per model year)"
+          }
+        },
+        "minPressurePsi": {
+          "value": 50,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/Owner's%20Manual-English(1).pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Min. Gas Spring Pressure for Air Fork: 【50PSI】",
+          "where": "Owner's Manual English (PDF created 2024-08-07), 'Installing a XFUSION Fork', Min. Gas Spring Pressure for Air Fork, 50 PSI group; model name listed in that group: Rezza 29 Boost",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/Owner's%20Manual-English(1).pdf",
+            "retrieved": "2026-10-01",
+            "quote": "Min. Gas Spring Pressure for Air Fork: 【50PSI】 Velvet, Slant, ... Slide Boost, ... Rezza 29 Boost, Vengeance 38, Trace36, Metric, RV1 38",
+            "where": "Owner's Manual English, p.4 'Installing a XFUSION Fork' (general list by model, not per model year)"
+          }
+        },
+        "pressureTable": {
+          "value": null,
+          "status": "missing",
+          "note": "Air & Coil Spring Rate PDF (https://www.xfusionshox.com/upload/files/Air%20%26%20Coil%20Spring%20Rate-v2.pdf) has tables for 32/34mm RC/RL, 34mm RoughCut, 36mm and RV-1 coil only; no table names this model/damper."
+        },
+        "sagPercent": {
+          "value": null,
+          "status": "missing",
+          "note": "34mm guide gives 25-30% for 34mm forks but does not name the Rezza fork; not transferred."
+        },
+        "offsetMm": {
+          "value": 44,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/products_detail/114.htm",
+          "retrieved": "2026-10-01",
+          "quote": "Offset: 44mm",
+          "where": "product page products_detail/114, SPECIFICATIONS",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/115.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Offset: 44mm",
+            "where": "Product page SPECIFICATIONS"
+          }
+        }
+      }
+    },
+    {
+      "id": "x-fusion-o2-pro-2027",
+      "name": "X-Fusion O2 PRO (R / RL / RLX / RLR)",
+      "type": "shock",
+      "modelYears": [
+        2027
+      ],
+      "catalogId": null,
+      "fields": {
+        "catalogEdition": {
+          "value": "2027 AM CATALOG",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/help_detail/18.htm",
+          "retrieved": "2026-10-01",
+          "quote": "2027 AM CATALOG",
+          "where": "Help > AM Catalog page (link text of the catalog PDF); catalog PDF itself carries no year",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "O2 PRO Series ... High-Performance All CNC-Machined Aluminum Air Shock",
+            "where": "Catalog PDF p.12 (edition: help page heading \"2027 AM CATALOG\")"
+          }
+        },
+        "sizesAvailable": {
+          "value": {
+            "standard": [
+              "165/38",
+              "184/44",
+              "190/51",
+              "200/51",
+              "200/56",
+              "215/63"
+            ],
+            "metric": [
+              "190/40",
+              "190/45",
+              "210/50",
+              "210/55",
+              "230/60",
+              "230/65"
+            ],
+            "trunnion": [
+              "165/40",
+              "165/45",
+              "185/50",
+              "185/55",
+              "205/60",
+              "205/65"
+            ],
+            "format": "eye-to-eye/stroke in mm as printed"
+          },
+          "status": "single",
+          "url": "https://www.xfusionshox.com/products_detail/84.htm",
+          "retrieved": "2026-10-01",
+          "quote": "Standard Sizes: 165/38, 184/44, 190/51, 200/51, 200/56, 215/63 … Metric Sizes: 190/40, 190/45, 210/50, 210/55, 230/60, 230/65 … Trunnion Mount: 165/40, 165/45, 185/50, 185/55, 205/60, 205/65",
+          "where": "product page products_detail/84, SPECIFICATIONS"
+        },
+        "mount": {
+          "value": [
+            "Standard",
+            "Metric",
+            "Trunnion"
+          ],
+          "status": "single",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "All Standard, Metric and Trunnion",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.18 O2 Pro Series spec table, Sizes"
+        },
+        "springType": {
+          "value": "air",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Air",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.18 O2 Pro spec tables, Spring",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/84.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Spring: Air",
+            "where": "Product page SPECIFICATIONS"
+          }
+        },
+        "lscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "RL/RLR have a 2-position compression adjuster (open, lock), RLX a 3-position one (open, pedal, lock) per product pages 84-86; no stepless LSC with a click count. O2 set-up guide (2012 O2 series) mentions a 'Low-Speed Compression Lever (Blue)' without a click count."
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/products_detail/87.htm",
+          "retrieved": "2026-10-01",
+          "quote": "Adjustments: Rebound",
+          "where": "product page products_detail/87, SPECIFICATIONS (O2 PRO R)",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/84.htm",
+            "retrieved": "2026-10-01",
+            "quote": "RL Adjustments: 2 position Compression Adjustment (open, lock), Rebound",
+            "where": "Product page SPECIFICATIONS (one rebound adjuster on all variants; catalog p.12)"
+          }
+        },
+        "reboundMax": {
+          "value": null,
+          "status": "missing",
+          "note": "O2 set-up guide https://www.xfusionshox.com/upload/files/2012O2Setupguide1.pdf (PDF created 2026-01-21) gives no rebound click count (text searched for 'click')."
+        },
+        "hasClimbLever": {
+          "value": true,
+          "status": "single",
+          "url": "https://www.xfusionshox.com/products_detail/84.htm",
+          "retrieved": "2026-10-01",
+          "quote": "RL Adjustments: 2 position Compression Adjustment (open, lock), Rebound",
+          "where": "product page products_detail/84, SPECIFICATIONS (RL; RLX: '3 position Compression Adjustment (open, pedal, lock)'; R has rebound only). Applies to RL/RLX/RLR, not to R"
+        },
+        "maxPressurePsi": {
+          "value": 300,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/products_detail/84.htm",
+          "retrieved": "2026-10-01",
+          "quote": "Air rear shock maximum air pressure: 300 psi (20.68 bar)",
+          "where": "product page products_detail/84, SPECIFICATIONS; also Owner's Manual English 'Installing XFUSION Rear Suspension': 'Max. Gas Spring Pressure: 300 psi (20.68 bar)'",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/84.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Air rear shock maximum air pressure: 300 psi (20.68 bar)",
+            "where": "Product page SPECIFICATIONS"
+          }
+        },
+        "minPressurePsi": {
+          "value": 60,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/products_detail/84.htm",
+          "retrieved": "2026-10-01",
+          "quote": "Air rear shock minimum air pressure: 60 psi (4.14 bar)",
+          "where": "product page products_detail/84, SPECIFICATIONS",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/84.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Air rear shock minimum air pressure: 60 psi (4.14 bar)",
+            "where": "Product page SPECIFICATIONS"
+          }
+        },
+        "sagPercent": {
+          "value": {
+            "xcTrail": [
+              20,
+              25
+            ],
+            "enduroAllMountain": [
+              25,
+              35
+            ],
+            "dhFreeride": [
+              30,
+              40
+            ]
+          },
+          "status": "single",
+          "url": "https://www.xfusionshox.com/upload/files/2012O2Setupguide1.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "its travel about 20-25%, for Enduro and and All- Mountain use about 25-35% and for the longer travel shocks for DH and Freeride use about … 30-40%",
+          "where": "O2 Series Set-Up Guide (PDF created 2026-01-21), Step 2 Air Pressure and Sag"
+        },
+        "airPressureStartNote": {
+          "value": "start with 80% of body weight, then adjust to sag",
+          "status": "single",
+          "url": "https://www.xfusionshox.com/upload/files/2012O2Setupguide1.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "We recommend that you start with 80% of your body weight and adjust the pressures up or down until you find your proper sag.",
+          "where": "O2 Series Set-Up Guide, Step 2"
+        }
+      }
+    },
+    {
+      "id": "x-fusion-rezza-shock-2027",
+      "name": "X-Fusion Rezza (RL / RLX / RLR / RLXR)",
+      "type": "shock",
+      "modelYears": [
+        2027
+      ],
+      "catalogId": null,
+      "fields": {
+        "catalogEdition": {
+          "value": "2027 AM CATALOG",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/help_detail/18.htm",
+          "retrieved": "2026-10-01",
+          "quote": "2027 AM CATALOG",
+          "where": "Help > AM Catalog page (link text of the catalog PDF); catalog PDF itself carries no year",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "REZZA Series High-Performance XC Air Shock",
+            "where": "Catalog PDF p.11 (edition: help page heading \"2027 AM CATALOG\")"
+          }
+        },
+        "sizesAvailable": {
+          "value": {
+            "metric": [
+              "170x30",
+              "170x35",
+              "190x40",
+              "190x45",
+              "210x50",
+              "210x55"
+            ],
+            "trunnion": [
+              "145x30",
+              "145x35",
+              "165x40",
+              "165x45",
+              "185x50",
+              "185x55"
+            ],
+            "format": "eye-to-eye x stroke in mm as printed"
+          },
+          "status": "single",
+          "url": "https://www.xfusionshox.com/products_detail/119.htm",
+          "retrieved": "2026-10-01",
+          "quote": "Metric: 170x30, 170x35, 190x40, 190x45, 210x50, 210x55 … Trunnion: 145x30, 145x35, 165x40, 165x45, 185x50, 185x55",
+          "where": "product page products_detail/119, SPECIFICATIONS, Mounting Options"
+        },
+        "mount": {
+          "value": [
+            "Metric",
+            "Trunnion"
+          ],
+          "status": "single",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Metric and Trunnion",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.16-17 REZZA Series spec tables, Sizes"
+        },
+        "springType": {
+          "value": "air",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Air",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.16 REZZA spec tables, Spring",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/119.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Spring: Air",
+            "where": "Product page SPECIFICATIONS"
+          }
+        },
+        "lscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Rezza has lockout (RL/RLR) or 3-position compression (RLX/RLXR: Open, Pedal, Lock); no stepless LSC with a click count."
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/products_detail/119.htm",
+          "retrieved": "2026-10-01",
+          "quote": "RL: Rebound and Lockout",
+          "where": "product page products_detail/119, SPECIFICATIONS Adjustments (one rebound adjuster in all four configurations)",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/119.htm",
+            "retrieved": "2026-10-01",
+            "quote": "RL: Rebound and Lockout",
+            "where": "Product page SPECIFICATIONS (one \"Rebound\" adjuster in every variant)"
+          }
+        },
+        "reboundMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No rebound click count for the Rezza shock in any document found (Rezza page 119, AM27 catalog p.16-17)."
+        },
+        "hasClimbLever": {
+          "value": true,
+          "status": "single",
+          "url": "https://www.xfusionshox.com/products_detail/119.htm",
+          "retrieved": "2026-10-01",
+          "quote": "RL: Rebound and Lockout",
+          "where": "product page products_detail/119, SPECIFICATIONS; all four configurations have lockout or 3-position compression (RLR/RLXR via remote)"
+        },
+        "maxPressurePsi": {
+          "value": 300,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/Owner's%20Manual-English(1).pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Max. Gas Spring Pressure: 300 psi (20.68 bar)",
+          "where": "Owner's Manual English (PDF created 2024-08-07), 'Installing XFUSION Rear Suspension' (general rear-suspension value; the Rezza page itself lists no pressure)",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/Owner's%20Manual-English(1).pdf",
+            "retrieved": "2026-10-01",
+            "quote": "Max. Gas Spring Pressure: 300 psi (20.68 bar)",
+            "where": "Owner's Manual English p.7 'Installing XFUSION Rear Suspension' - general for rear shocks, Rezza not named; Rezza product page gives no pressure"
+          }
+        },
+        "minPressurePsi": {
+          "value": 60,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/Owner's%20Manual-English(1).pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Min. Gas Spring Pressure: 60 psi (4.14 bar)",
+          "where": "Owner's Manual English (PDF created 2024-08-07), 'Installing XFUSION Rear Suspension' (general rear-suspension value)",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/Owner's%20Manual-English(1).pdf",
+            "retrieved": "2026-10-01",
+            "quote": "Min. Gas Spring Pressure: 60 psi (4.14 bar)",
+            "where": "Owner's Manual English p.7 'Installing XFUSION Rear Suspension' - general for rear shocks, Rezza not named"
+          }
+        },
+        "sagPercent": {
+          "value": null,
+          "status": "missing",
+          "note": "No Rezza-specific set-up guide found on the Help page."
+        }
+      }
+    },
+    {
+      "id": "x-fusion-h3a-2027",
+      "name": "X-Fusion H3A (RCP / HLR)",
+      "type": "shock",
+      "modelYears": [
+        2027
+      ],
+      "catalogId": null,
+      "fields": {
+        "catalogEdition": {
+          "value": "2027 AM CATALOG",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/help_detail/18.htm",
+          "retrieved": "2026-10-01",
+          "quote": "2027 AM CATALOG",
+          "where": "Help > AM Catalog page (link text of the catalog PDF); catalog PDF itself carries no year",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "H3A Series New piggyback Air shock",
+            "where": "Catalog PDF p.13 (edition: help page heading \"2027 AM CATALOG\")"
+          }
+        },
+        "sizesAvailable": {
+          "value": {
+            "metric": [
+              "210/50",
+              "210/55",
+              "230/60",
+              "230/65",
+              "250/75"
+            ],
+            "trunnion": [
+              "185/50",
+              "185/55",
+              "205/60",
+              "205/65",
+              "225/75"
+            ],
+            "format": "eye-to-eye/stroke in mm as printed"
+          },
+          "status": "single",
+          "url": "https://www.xfusionshox.com/products_detail/102.htm",
+          "retrieved": "2026-10-01",
+          "quote": "Metric Sizes: 210/50, 210/55, 230/60, 230/65, 250/75 … Trunnion Mount: 185/50, 185/55, 205/60, 205/65, 225/75",
+          "where": "product page products_detail/102, SPECIFICATIONS"
+        },
+        "mount": {
+          "value": [
+            "Metric",
+            "Trunnion"
+          ],
+          "status": "single",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Metric, Trunnion",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.20-21 H3A Series spec tables, Sizes"
+        },
+        "springType": {
+          "value": "air",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Air",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.20 H3A spec tables, Spring",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/102.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Spring: Air",
+            "where": "Product page SPECIFICATIONS"
+          }
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/products_detail/103.htm",
+          "retrieved": "2026-10-01",
+          "quote": "Adjustments: Rebound, High/Low Speed Compression",
+          "where": "product page products_detail/103, HLR page SPECIFICATIONS; RCP page 102: 'Adjustments: Rebound, Three Position Platform, Low Speed Compression'",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/102.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Adjustments: Rebound, Three Position Platform, Low Speed Compression",
+            "where": "Product page SPECIFICATIONS (RCP; HLR page 103: Rebound, High/Low Speed Compression)"
+          }
+        },
+        "lscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No click count: the only X-Fusion set-up guide with click counts for this damper family is the H3C (coil) guide; it does not name H3A. Not transferred."
+        },
+        "hscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Same as lscMax (HLR variant only has an HSC adjuster)."
+        },
+        "reboundMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Same as lscMax."
+        },
+        "hsrMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No separate high-speed rebound adjuster listed on pages 102/103."
+        },
+        "hasClimbLever": {
+          "value": true,
+          "status": "single",
+          "url": "https://www.xfusionshox.com/products_detail/102.htm",
+          "retrieved": "2026-10-01",
+          "quote": "Adjustments: Rebound, Three Position Platform, Low Speed Compression",
+          "where": "product page products_detail/102, RCP variant SPECIFICATIONS (three-position platform); HLR variant has no platform"
+        },
+        "maxPressurePsi": {
+          "value": 300,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/products_detail/102.htm",
+          "retrieved": "2026-10-01",
+          "quote": "Air rear shock maximum air pressure: 300 psi (20.68 bar)",
+          "where": "product page products_detail/102, SPECIFICATIONS",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/102.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Air rear shock maximum air pressure: 300 psi (20.68 bar)",
+            "where": "Product page SPECIFICATIONS"
+          }
+        },
+        "minPressurePsi": {
+          "value": 60,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/products_detail/102.htm",
+          "retrieved": "2026-10-01",
+          "quote": "Air rear shock minimum air pressure: 60 psi (4.14 bar)",
+          "where": "product page products_detail/102, SPECIFICATIONS",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/102.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Air rear shock minimum air pressure: 60 psi (4.14 bar)",
+            "where": "Product page SPECIFICATIONS"
+          }
+        },
+        "sagPercent": {
+          "value": null,
+          "status": "missing",
+          "note": "No H3A-specific set-up guide text found on the Help page."
+        }
+      }
+    },
+    {
+      "id": "x-fusion-h3c-2027",
+      "name": "X-Fusion H3C coil (RCP / HLR)",
+      "type": "shock",
+      "modelYears": [
+        2027
+      ],
+      "catalogId": null,
+      "fields": {
+        "catalogEdition": {
+          "value": "2027 AM CATALOG",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/help_detail/18.htm",
+          "retrieved": "2026-10-01",
+          "quote": "2027 AM CATALOG",
+          "where": "Help > AM Catalog page (link text of the catalog PDF); catalog PDF itself carries no year",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "H3C Series New piggyback Coil shock",
+            "where": "Catalog PDF p.14 (edition: help page heading \"2027 AM CATALOG\")"
+          }
+        },
+        "sizesAvailable": {
+          "value": {
+            "metric": [
+              "210/50",
+              "210/55",
+              "230/60",
+              "230/65",
+              "250/75"
+            ],
+            "trunnion": [
+              "185/50",
+              "185/55",
+              "205/60",
+              "205/65",
+              "225/75"
+            ],
+            "format": "eye-to-eye/stroke in mm as printed"
+          },
+          "status": "single",
+          "url": "https://www.xfusionshox.com/products_detail/57.htm",
+          "retrieved": "2026-10-01",
+          "quote": "Metric Sizes: 210/50, 210/55, 230/60, 230/65, 250/75 … Trunnion Mount: 185/50, 185/55, 205/60, 205/65, 225/75",
+          "where": "product page products_detail/57, SPECIFICATIONS"
+        },
+        "mount": {
+          "value": [
+            "Metric",
+            "Trunnion"
+          ],
+          "status": "single",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Metric & Trunnion",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.22-23 H3C Series spec tables, Sizes"
+        },
+        "springType": {
+          "value": "coil",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/AM27%20CATALOGUE.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "Coil",
+          "where": "AM27 catalog (2027 AM CATALOG, PDF created 2026-03-30), p.22 H3C spec tables, Spring",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/products_detail/57.htm",
+            "retrieved": "2026-10-01",
+            "quote": "Spring: Coil",
+            "where": "Product page SPECIFICATIONS"
+          }
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/products_detail/98.htm",
+          "retrieved": "2026-10-01",
+          "quote": "Adjustments: Rebound, High/Low Speed Compression",
+          "where": "product page products_detail/98, HLR page SPECIFICATIONS; RCP page 57: 'Adjustments: Rebound, Three Position Platform, Low Speed Compression'",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/H3C%20Setup%20guide1.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "The rebound adjustment controls the speed your shock returns to full extension ... turn the red rebound adjustment knob clockwise [slower]",
+            "where": "H3C Set-Up Guide Step 3 (one red knob)"
+          }
+        },
+        "lscMax": {
+          "value": 14,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/H3C%20Setup%20guide1.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "There are about 14 clicks of LSC adjustment.",
+          "where": "H3C Setup guide (PDF created 2026-01-21), p.7 Step 4 Low-Speed Compression Adjustment; 'about' 14 clicks",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/H3C%20Setup%20guide1.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "There are about 14 clicks of LSC adjustment.",
+            "where": "H3C Set-Up Guide, Step 4 (approximate)"
+          }
+        },
+        "hscMax": {
+          "value": 10,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/H3C%20Setup%20guide1.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "There are about 10 clicks of HSC adjustment.",
+          "where": "H3C Setup guide, p.9 Step 5 High-Speed Compression Adjustment (HLR Version); 'about' 10 clicks",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/H3C%20Setup%20guide1.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "There are about 10 clicks of HSC adjustment.",
+            "where": "H3C Set-Up Guide, Step 5 High-Speed Compression (HLR version only, approximate)"
+          }
+        },
+        "platformClicks": {
+          "value": 3,
+          "status": "verified",
+          "url": "https://www.xfusionshox.com/upload/files/H3C%20Setup%20guide1.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "There are 3 clicks of Platform adjustment. 1.soft 2.mid and 3.firm.",
+          "where": "H3C Setup guide, Step 5 Platform Adjustment (RCP Version)",
+          "verifiedBy": {
+            "url": "https://www.xfusionshox.com/upload/files/H3C%20Setup%20guide1.pdf",
+            "retrieved": "2026-10-01",
+            "quote": "There are 3 clicks of Platform adjustment. 1.soft 2.mid and 3.firm.",
+            "where": "H3C Set-Up Guide, Step 5 Platform Adjustment (RCP version)"
+          }
+        },
+        "hasClimbLever": {
+          "value": true,
+          "status": "single",
+          "url": "https://www.xfusionshox.com/products_detail/57.htm",
+          "retrieved": "2026-10-01",
+          "quote": "Adjustments: Rebound, Three Position Platform, Low Speed Compression",
+          "where": "product page products_detail/57, RCP variant SPECIFICATIONS (three-position platform); HLR variant has no platform"
+        },
+        "reboundMax": {
+          "value": null,
+          "status": "missing",
+          "note": "H3C Setup guide p.6 Step 3 Rebound Adjustment: sentence is cut off after 'There are about 14 clicks' (no noun, rendered page checked); not taken as a rebound count."
+        },
+        "hsrMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No separate high-speed rebound adjuster listed on pages 57/98."
+        },
+        "preloadGuide": {
+          "value": "Seat coil flush, spin preload ring clockwise until flush, then 1 full turn = minimum preload; up to 5 more turns",
+          "status": "single",
+          "url": "https://www.xfusionshox.com/upload/files/H3C%20Setup%20guide1.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "From this point you will need to give the preload ring 1 full turn. This is now your minimum preload setting.",
+          "where": "H3C Setup guide, Step 2 Preload and Sag (max 5 more revolutions: 'you can continue to adjust you preload 5 more revolutions')"
+        },
+        "sagPercent": {
+          "value": {
+            "trail": [
+              20,
+              25
+            ],
+            "enduroAllMountain": [
+              25,
+              35
+            ],
+            "dhFreeride": [
+              30,
+              40
+            ]
+          },
+          "status": "single",
+          "url": "https://www.xfusionshox.com/upload/files/H3C%20Setup%20guide1.pdf",
+          "retrieved": "2026-10-01",
+          "quote": "For Trail use you want the shock to be sagged into its travel about 20-25%, for Enduro and All-Mountain use about 25-35% and for the longer travel shocks for DH and Freeride use about 30-40%.",
+          "where": "H3C Setup guide, Step 2 Preload and Sag"
+        },
+        "springRate": {
+          "value": null,
+          "status": "missing",
+          "note": "Product pages 57/98 offer a 'Shock Rate Calculator' (interactive, no static table); no spring-rate chart found."
+        }
+      }
+    }
+  ]
+}
