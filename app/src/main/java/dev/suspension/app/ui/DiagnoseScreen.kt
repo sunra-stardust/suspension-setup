@@ -33,6 +33,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import dev.suspension.app.R
+import dev.suspension.app.data.BikeTraits
 import dev.suspension.app.data.DiagnoseData
 import dev.suspension.app.data.DiagnoseEntry
 import dev.suspension.app.data.RotationDirection
@@ -40,7 +41,7 @@ import dev.suspension.app.ui.components.RotationLabel
 import dev.suspension.app.ui.theme.AppTheme
 
 @Composable
-fun DiagnoseScreen(listState: LazyListState) {
+fun DiagnoseScreen(listState: LazyListState, bike: BikeTraits) {
     val colors = AppTheme.colors
     val type = AppTheme.type
     var query by rememberSaveable { mutableStateOf("") }
@@ -76,9 +77,8 @@ fun DiagnoseScreen(listState: LazyListState) {
             )
         }
 
-        // stringResource must be called unconditionally over the fixed, statically-ordered
-        // entry list — safe here since every recomposition iterates the same 19 entries.
-        val resolved = DiagnoseData.entries.map { entry ->
+        // Only the entries that fit the selected bike (no motor advice without a motor, no Fox quotes for other makers).
+        val resolved = DiagnoseData.forBike(bike).map { entry ->
             ResolvedEntry(entry, stringResource(entry.symptomResId), stringResource(entry.actionResId), stringResource(entry.explanationResId))
         }
         val q = query.trim().lowercase()

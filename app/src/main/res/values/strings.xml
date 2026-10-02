@@ -32,7 +32,7 @@
 
     <!-- %1$s = model display name (proper noun, not translated), %2$d = travel/stroke in mm. -->
     <string name="group_fork_template">Fork — %1$s, %2$d mm</string>
-    <string name="group_shock_template">Shock — %1$s, %2$d×%3$d mm</string>
+    <string name="group_shock_template">Shock — %1$s, %2$d×%3$s mm</string>
     <string name="group_tires">Tires</string>
     <string name="group_frame">Frame &amp; dropper</string>
     <string name="change_component_hint">Change model</string>
@@ -373,7 +373,7 @@
     <string name="picker_title_shock">Choose shock</string>
     <string name="picker_close">Close</string>
     <string name="picker_travel">%1$d mm travel</string>
-    <string name="picker_stroke" translatable="false">%1$d×%2$d mm</string>
+    <string name="picker_stroke" translatable="false">%1$d×%2$s mm</string>
     <string name="picker_clicks_summary">LSC %1$d · HSC %2$s · rebound %3$s</string>
     <string name="picker_none" translatable="false">–</string>
     <string name="picker_split_rebound" translatable="false">LSR %1$d / HSR %2$d</string>
@@ -402,6 +402,7 @@
     <string name="picker_custom_rebound_max">Rebound clicks (max, LSR if separate)</string>
     <string name="picker_custom_hsr_max">HSR clicks (max)</string>
     <string name="picker_custom_lever">Has climb lever</string>
+    <string name="picker_custom_air">Air shock</string>
     <string name="picker_custom_psi_baseline">Starting pressure (from sticker)</string>
     <string name="picker_custom_rate_baseline">Installed spring</string>
     <string name="picker_custom_apply">Apply</string>
@@ -411,6 +412,8 @@
 
     <!-- Pflege tab: UI. %1$s = formatted kilometers (always German style, 1.240). -->
     <string name="unit_km_value" translatable="false">%1$s km</string>
+    <!-- Notification line when several bikes are due: %1$s = bike name, %2$s = task name. -->
+    <string name="care_notif_bike_task" translatable="false">%1$s: %2$s</string>
     <string name="tab_care">Care</string>
     <string name="care_tag_hersteller">Manufacturer</string>
     <string name="care_tag_faustregel">Rule of thumb</string>
@@ -721,5 +724,50 @@
     <string name="care_task_battery_check_name">Stored battery: check charge</string>
     <string name="care_task_battery_check_interval">Every 2 months, only for a stored battery</string>
     <string name="care_task_battery_check_note" formatted="false">Charge if below 30 %, to 30 to 60 %.</string>
+
+    <!-- Neutral variants for bikes the app does not know to have a Bosch drive, Fox suspension, SRAM brakes/AXS or the ONOFF post. -->
+    <string name="care_after_ride_c1_r1_text_generic">Garden hose with a gentle spray, or a bucket and brush. Never a pressure washer: it forces water past bearing seals and into the shock bushings.</string>
+    <string name="care_after_ride_c1_r2_text_generic">Don\'t spray bottom bracket or shock from below.</string>
+    <string name="care_after_ride_c1_r7_text_generic">Clean it and lube it with chain oil.</string>
+    <string name="care_products_closing_generic">Preservative sprays are comfort, not protection. They delay flash rust and make cleaning easier. Against water in the bearings, what helps is a fender, proper washing technique, assembly paste and dry storage.</string>
+    <string name="care_protection_c1_r2_text_generic">In addition to the film.</string>
+    <string name="care_protection_c1_r7_text_generic">Apply to the dropper post, headset seat, axles and rotor bolts at delivery. This prevents aluminum and steel from seizing.</string>
+    <string name="care_part_rotors">Rotors (flash rust)</string>
+    <string name="care_part_chain">chain</string>
+    <string name="care_part_coil">steel spring</string>
+    <string name="care_part_contacts">contacts</string>
+    <string name="care_part_bearings">bearings</string>
+    <string name="care_list_last">%1$s and %2$s</string>
+    <string name="care_task_annual_inspection_note_generic">The dealer may set a different interval.</string>
+    <string name="care_task_play_check_name_generic">Play check: rear triangle, headset</string>
+    <string name="care_task_play_check_note_generic">Grab rear triangle and headset by hand and wiggle them.</string>
+    <string name="care_missing_fork">No service intervals are stored for your fork (%1$s). Follow the manufacturer\'s manual.</string>
+    <string name="care_missing_shock">No service intervals are stored for your shock (%1$s). Follow the manufacturer\'s manual.</string>
+    <string name="care_missing_brakes">No manufacturer figures are stored for your brakes. Follow the manufacturer\'s manual.</string>
+    <string name="care_missing_post">No manufacturer intervals are stored for your dropper post. Follow the manufacturer\'s manual.</string>
+    <string name="care_odo_hint_generic">e.g. from your bike computer or tracking app</string>
+    <string name="hint_s_lsc_generic">Bobbing when pedaling</string>
+    <string name="diag_symptom_7_generic">Bobs when pedaling</string>
+    <string name="diag_explanation_7_generic">Every pedal stroke sets the rear end in motion.</string>
+    <string name="diag_explanation_11_generic">Once sag is right, the air spring\'s progression sets bottom-out resistance. Only add air pressure as far as sag stays in the target range.</string>
+    <string name="diag_explanation_12_generic">Preload is only for fine-tuning sag and doesn\'t replace spring rate.</string>
+    <string name="diag_explanation_13_generic">If preload can\'t reach the sag, you need a different spring.</string>
+    <string name="setup_footer_note_generic">Where a manufacturer chart exists, air pressure and fork rebound come from it — matched to your weight. Temperature and weight only change values you haven\'t adjusted yourself: your own changes stay put. All other click values are starting points; the factory recommendation for your unit comes from the manufacturer.</string>
+    <string name="basics_targets_footer_generic">The fork deliberately runs less sag than the shock. That\'s normal.</string>
+
+    <!-- Air shocks (no spring rate, no preload) and e-bikes with a drive other than Bosch. %1$d = start pressure in psi, %2$d = riding temperature. -->
+    <string name="hint_s_psi_air">No manufacturer value · start ≈ rider weight in lbs (%1$d psi) · set by sag</string>
+    <string name="hint_s_psi_air_temp">No manufacturer value · start ≈ rider weight in lbs (%1$d psi) at %2$d °C — fill at 20 °C · set by sag</string>
+    <string name="care_task_play_check_note_ebike">Grab motor, rear triangle and headset by hand and wiggle them.</string>
+    <string name="care_odo_hint_ebike">e.g. from the display or your drive system\'s app</string>
+    <string name="basics_sag_shock_air">Shock (air): push the O-ring to the seal, measure the distance after getting off.</string>
+    <string name="basics_targets_row_6_label_air">Pressure too low from</string>
+    <string name="basics_compression_body_air">Prevent bottom-outs. That\'s what volume spacers front and rear are for (with correct sag). Closing HSC makes the suspension harsher on edges but doesn\'t replace progression.</string>
+    <string name="basics_order_step_2_air">Air pressure front and rear</string>
+    <string name="basics_order_footer_air">Changing the air pressure a lot later means re-tuning everything. One change per ride.</string>
+    <string name="diag_explanation_12_air">Once sag is right, volume spacers in the shock set bottom-out resistance. Only add air pressure as far as sag stays in the target range.</string>
+    <string name="diag_symptom_13_air" formatted="false">Shock sag above 32 %</string>
+    <string name="diag_action_13_air">More air pressure in the shock</string>
+    <string name="diag_explanation_13_air">More pressure, less sag. Go in 5 psi steps and measure again.</string>
 
 </resources>

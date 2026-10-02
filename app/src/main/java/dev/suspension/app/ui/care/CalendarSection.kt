@@ -51,6 +51,8 @@ import dev.suspension.app.care.LogEntry
 import dev.suspension.app.care.MaintCatalog
 import dev.suspension.app.care.MaintGroup
 import dev.suspension.app.care.TaskDue
+import dev.suspension.app.data.BikeTraits
+import dev.suspension.app.data.Trait
 import dev.suspension.app.ui.components.ConfirmDialog
 import dev.suspension.app.ui.components.GroupCard
 import dev.suspension.app.ui.components.NumberDialog
@@ -62,9 +64,10 @@ import java.time.temporal.ChronoUnit
 
 /** The interactive section: what is due, the bike's data, interval cards per component group, the service log. */
 @Composable
-fun CalendarSection(data: CareData, today: LocalDate, actions: CareActions) {
+fun CalendarSection(data: CareData, today: LocalDate, bike: BikeTraits, actions: CareActions) {
     val listState = rememberSaveable(saver = LazyListState.Saver) { LazyListState() }
-    val evaluated = remember(data, today) { DueCalculator.evaluateAll(data.dueInput(today)) }
+    // Only the tasks that exist for this bike (maker intervals need that maker's part).
+    val evaluated = remember(data, today, bike) { DueCalculator.evaluateAll(data.dueInput(today), MaintCatalog.forBike(bike)) }
     val dueNow = remember(evaluated) { DueCalculator.dueList(evaluated) }
     val byGroup = remember(evaluated) { evaluated.groupBy { it.task.group } }
     val historyOrder = remember(data.log) { data.log.sortedWith(compareByDescending<LogEntry> { it.date }.thenByDescending { it.createdAt }) }
@@ -88,28 +91,38 @@ fun CalendarSection(data: CareData, today: LocalDate, actions: CareActions) {
                     } else {
                         dueNow.forEachIndexed { index, due ->
                             if (index > 0) RowDivider()
-                            DueSummaryRow(due)
+                            DueSummaryRow(due, bike)
                         }
                     }
                 }
             }
         }
-        item(key = "bike") { MyBikeCard(data, today, actions) }
+        item(key = "bike") { MyBikeCard(data, today, bike, actions) }
         MaintGroup.entries.forEach { group ->
             val rows = byGroup[group].orEmpty()
-            if (rows.isNotEmpty()) {
+            val missing = MaintCatalog.missingHints(group, bike)
+            if (rows.isNotEmpty() || missing.isNotEmpty()) {
                 item(key = "group-${group.name}") {
                     CareCardFrame(stringResource(group.titleRes), null) {
-                        group.noteRes?.let { note ->
+                        group.noteRes?.takeIf { bike.allows(group.noteCond) }?.let { note ->
                             Column {
                                 Text(text = stringResource(note), style = AppTheme.type.rowHint, color = AppTheme.colors.dim)
                                 group.noteTag?.let { TagLine(it) }
                             }
                         }
-                        GroupCard {
-                            rows.forEachIndexed { index, due ->
-                                if (index > 0) RowDivider()
-                                TaskRow(due, data, actions)
+                        missing.forEach { (res, arg) ->
+                            Text(
+                                text = if (arg != null) stringResource(res, arg) else stringResource(res),
+                                style = AppTheme.type.rowHint,
+                                color = AppTheme.colors.dim,
+                            )
+                        }
+                        if (rows.isNotEmpty()) {
+                            GroupCard {
+                                rows.forEachIndexed { index, due ->
+                                    if (index > 0) RowDivider()
+                                    TaskRow(due, data, bike, actions)
+                                }
                             }
                         }
                     }
@@ -129,7 +142,7 @@ fun CalendarSection(data: CareData, today: LocalDate, actions: CareActions) {
                     } else {
                         historyOrder.forEachIndexed { index, entry ->
                             if (index > 0) RowDivider()
-                            HistoryRow(entry) { actions.onEditEntry(entry.id) }
+                            HistoryRow(entry, bike) { actions.onEditEntry(entry.id) }
                         }
                     }
                 }
@@ -141,13 +154,13 @@ fun CalendarSection(data: CareData, today: LocalDate, actions: CareActions) {
 
 /** Compact row of the `Fällig` card: name, status and what is left. */
 @Composable
-private fun DueSummaryRow(due: TaskDue) {
+private fun DueSummaryRow(due: TaskDue, bike: BikeTraits) {
     val colors = AppTheme.colors
     val type = AppTheme.type
     val remaining = remainingText(DueCalculator.remainingParts(due))
     val status = statusLabel(due.state)
     val tag = stringResource(due.task.tag.labelResId)
-    val name = stringResource(due.task.nameRes)
+    val name = stringResource(due.task.nameRes(bike))
     val description = if (remaining.isEmpty()) stringResource(R.string.care_a11y_task_plain, name, status, tag)
     else stringResource(R.string.care_a11y_task, name, status, remaining, tag)
     Column(
@@ -167,13 +180,13 @@ private fun DueSummaryRow(due: TaskDue) {
 
 /** Collapsible task row (interval cards). */
 @Composable
-private fun TaskRow(due: TaskDue, data: CareData, actions: CareActions) {
+private fun TaskRow(due: TaskDue, data: CareData, bike: BikeTraits, actions: CareActions) {
     val colors = AppTheme.colors
     val type = AppTheme.type
     val task = due.task
     var expanded by rememberSaveable(task.id) { mutableStateOf(false) }
 
-    val name = stringResource(task.nameRes)
+    val name = stringResource(task.nameRes(bike))
     val status = statusLabel(due.state)
     val remaining = remainingText(DueCalculator.remainingParts(due))
     val tag = stringResource(task.tag.labelResId)
@@ -210,7 +223,7 @@ private fun TaskRow(due: TaskDue, data: CareData, actions: CareActions) {
                     Text(text = stringResource(task.intervalRes), style = type.body, color = colors.ink)
                     TagLine(task.tag, Modifier.padding(top = 2.dp))
                 }
-                Text(text = stringResource(task.noteRes), style = type.body, color = colors.ink)
+                task.noteRes(bike)?.let { Text(text = stringResource(it), style = type.body, color = colors.ink) }
                 CareSwitchRow(
                     label = stringResource(R.string.care_task_reminder),
                     checked = data.remindFor(task),
@@ -249,11 +262,11 @@ private fun lastLine(due: TaskDue): String {
 }
 
 @Composable
-private fun HistoryRow(entry: LogEntry, onClick: () -> Unit) {
+private fun HistoryRow(entry: LogEntry, bike: BikeTraits, onClick: () -> Unit) {
     val colors = AppTheme.colors
     val type = AppTheme.type
     val unknown = stringResource(R.string.care_unknown_task)
-    val names = entry.taskIds.map { id -> MaintCatalog.byId[id]?.let { stringResource(it.nameRes) } ?: unknown }.joinToString(" · ")
+    val names = entry.taskIds.map { id -> MaintCatalog.byId[id]?.let { stringResource(it.nameRes(bike)) } ?: unknown }.joinToString(" · ")
     val head = stringResource(R.string.care_history_head, CareFormat.date(entry.date), CareFormat.km(entry.km))
     Column(
         verticalArrangement = Arrangement.spacedBy(2.dp),
@@ -270,7 +283,7 @@ private fun HistoryRow(entry: LogEntry, onClick: () -> Unit) {
 
 /** `Mein Rad`: purchase date, odometer, reminders, riding speed, and the entry button. */
 @Composable
-private fun MyBikeCard(data: CareData, today: LocalDate, actions: CareActions) {
+private fun MyBikeCard(data: CareData, today: LocalDate, bike: BikeTraits, actions: CareActions) {
     val colors = AppTheme.colors
     val type = AppTheme.type
     val context = LocalContext.current
@@ -365,7 +378,14 @@ private fun MyBikeCard(data: CareData, today: LocalDate, actions: CareActions) {
         NumberDialog(
             title = stringResource(R.string.care_odo_dialog_title),
             label = stringResource(R.string.care_odo_field),
-            hint = stringResource(R.string.care_odo_hint),
+            // Flow app: Bosch only; display: any e-bike.
+            hint = stringResource(
+                when {
+                    bike.has(Trait.EBIKE_BOSCH) -> R.string.care_odo_hint
+                    bike.has(Trait.EBIKE) -> R.string.care_odo_hint_ebike
+                    else -> R.string.care_odo_hint_generic
+                },
+            ),
             initial = data.odometerKm.toString(),
             onConfirm = { km ->
                 showOdometer = false

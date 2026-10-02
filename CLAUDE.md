@@ -50,6 +50,8 @@ Cloud sessions install the Android SDK via the SessionStart hook (`scripts/cloud
 ## Code map (`app/src/main/java/dev/suspension/app/`)
 
 - `data/` — catalog (`ComponentCatalog`, data in `src/main/resources/catalog/catalog.json`), bike profile, scenario rows and defaults, temperature model, storage (`GarageRepository` → `files/garage.json`; `LegacyStorage`/`LegacyStores` import from and mirror to the pre-phase-3 DataStores).
+- `data/BikeTraits` — what the app knows for sure about the selected bike (motor from the catalog bike's `motor` or the profile, Bosch drive, SRAM brakes/AXS, ONOFF post, Level RR frame, Fox fork/shock, air/coil shock). Every text that names a motor, maker or part carries a condition on these traits and has a neutral variant or disappears; `BikeConsistencyTest` checks every catalog bike. New bike-specific text ⇒ add a condition.
+- `care/` — Pflege tab: static content (`CareContent`, `MaintCatalog`, verbatim from the owner's spec, tags are an enum), `DueCalculator`, `ReminderPlanner` (pure), `CareRepository` → `files/care.json` per bike (the garage's first bike keeps the top-level data so older releases read it; other bikes under `bikes`), `CareReminders` + worker (WorkManager, daily 09:00, all bikes). UI in `ui/care/`.
 - `ui/` — Compose screens (Setup with Vorlage tabs, Diagnose, Basics, component pickers, `BikesOverlay`), dialogs in `components/Dialogs.kt`, `UpdateUi` (banner, app card, safe mode), `components/`, `theme/`.
 - `update/` — OTA logic shared by both flavors (`Release`, `UpdateViewModel`); `src/github/…/update/GitHubUpdater` does the network + install.
 - `safety/CrashGuard` — crash-loop detection → safe-mode screen with update check.

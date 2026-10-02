@@ -146,7 +146,7 @@ class GarageActionsTest {
         val model = BikeModel(
             id = "test_bike", maker = "Test", model = "Enduro", trim = "Pro", modelYears = listOf(2026), profileId = null,
             stockFork = StockPart(catalogId = null, name = "SR Suntour Durolux", travelMm = 170),
-            stockShock = StockPart(catalogId = null, name = "SR Suntour TriAir", eyeToEyeMm = 230, strokeMm = 60),
+            stockShock = StockPart(catalogId = null, name = "SR Suntour TriAir", eyeToEyeMm = 230, strokeMm = 60.0),
             springLbsBySize = emptyMap(),
         )
         GarageDoc.addCatalogBike(d, "b-2", model, null)
@@ -160,7 +160,7 @@ class GarageActionsTest {
         assertTrue(fork.needsCheck)
         val shock = bike.customShock!!
         assertEquals(230, shock.eyeToEyeMm)
-        assertEquals(60, shock.strokeMm)
+        assertEquals(60.0, shock.strokeMm)
         assertTrue(shock.needsCheck)
         assertNull(bike.size)
         assertEquals("Test Enduro Pro 2026", bike.name)

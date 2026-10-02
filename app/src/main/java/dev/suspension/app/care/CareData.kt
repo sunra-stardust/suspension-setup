@@ -15,7 +15,21 @@ data class LogEntry(
 /** Last notification sent for a task: its state then and the day. */
 data class Notified(val state: DueState, val date: LocalDate)
 
-/** Everything the calendar stores, as the screen sees it. */
+/**
+ * The calendar of every bike. [unassigned]: top-level data of a document no bike has claimed yet
+ * (only between first start and the claim; [CareRepository] claims at once).
+ */
+data class CareStore(
+    val remindersEnabled: Boolean = false,
+    val legacyBikeId: String? = null,
+    val bikes: Map<String, CareData> = emptyMap(),
+    val unassigned: CareData? = null,
+) {
+    /** A bike without entries yet starts empty (reminder switch is global). */
+    fun forBike(bikeId: String): CareData = bikes[bikeId] ?: CareData(remindersEnabled = remindersEnabled)
+}
+
+/** Everything the calendar stores for one bike, as the screen sees it. */
 data class CareData(
     val purchaseDate: LocalDate? = null,
     val odometerKm: Int = 0,

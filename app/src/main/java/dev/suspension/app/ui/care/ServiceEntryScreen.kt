@@ -43,6 +43,7 @@ import dev.suspension.app.care.EntryValidation
 import dev.suspension.app.care.LogEntry
 import dev.suspension.app.care.MaintCatalog
 import dev.suspension.app.care.MaintGroup
+import dev.suspension.app.data.BikeTraits
 import dev.suspension.app.ui.components.AppTextField
 import dev.suspension.app.ui.components.ConfirmDialog
 import dev.suspension.app.ui.theme.AppTheme
@@ -58,6 +59,7 @@ fun ServiceEntryScreen(
     preselected: List<String>,
     odometerKm: Int,
     today: LocalDate,
+    bike: BikeTraits,
     onSave: (LogEntry) -> Unit,
     onDelete: (() -> Unit)?,
     onCancel: () -> Unit,
@@ -151,8 +153,9 @@ fun ServiceEntryScreen(
             fun toggle(id: String, on: Boolean) {
                 selectedCsv = (if (on) selected + id else selected - id).joinToString(",")
             }
+            val bikeTasks = MaintCatalog.forBike(bike)
             MaintGroup.entries.forEach { group ->
-                val tasks = MaintCatalog.tasks.filter { it.group == group }
+                val tasks = bikeTasks.filter { it.group == group }
                 if (tasks.isNotEmpty()) {
                     Text(
                         text = stringResource(group.titleRes),
@@ -161,13 +164,15 @@ fun ServiceEntryScreen(
                         modifier = Modifier.padding(top = 8.dp),
                     )
                     tasks.forEach { task ->
-                        CheckRow(stringResource(task.nameRes), task.id in selected) { toggle(task.id, it) }
+                        CheckRow(stringResource(task.nameRes(bike)), task.id in selected) { toggle(task.id, it) }
                     }
                 }
             }
-            // Ids an older entry carried that the catalog no longer knows stay in the entry.
-            selected.filter { it !in MaintCatalog.byId }.forEach { id ->
-                CheckRow(stringResource(R.string.care_unknown_task), true) { toggle(id, it) }
+            // Ids the entry carries that this bike's list doesn't show (another bike's task, or one the
+            // catalog no longer knows) stay in the entry.
+            selected.filter { id -> bikeTasks.none { it.id == id } }.forEach { id ->
+                val label = MaintCatalog.byId[id]?.let { stringResource(it.nameRes(bike)) } ?: stringResource(R.string.care_unknown_task)
+                CheckRow(label, true) { toggle(id, it) }
             }
         }
 

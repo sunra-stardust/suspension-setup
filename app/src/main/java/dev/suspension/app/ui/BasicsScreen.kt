@@ -30,6 +30,8 @@ import androidx.compose.ui.unit.dp
 import dev.suspension.app.R
 import dev.suspension.app.data.AppLanguage
 import dev.suspension.app.data.BikeProfile
+import dev.suspension.app.data.BikeTraits
+import dev.suspension.app.data.Trait
 import dev.suspension.app.data.ForkModel
 import dev.suspension.app.data.ReboundMode
 import dev.suspension.app.data.RotationDirection
@@ -61,12 +63,16 @@ fun BasicsScreen(
     fork: ForkModel,
     shock: ShockModel,
     updates: UpdateViewModel?,
+    /** What the app knows about this bike's parts (Fox, air shock). */
+    traits: BikeTraits,
     language: AppLanguage,
     onLanguageChange: (AppLanguage) -> Unit,
     onReset: () -> Unit,
 ) {
     val colors = AppTheme.colors
     val type = AppTheme.type
+    // Air shocks have no spring rate and no preload: texts about them use the air wording.
+    val air = traits.has(Trait.SHOCK_AIR)
 
     LazyColumn(
         state = listState,
@@ -100,19 +106,19 @@ fun BasicsScreen(
         item {
             BasicsCard(stringResource(R.string.basics_order_title)) {
                 val steps = listOf(
-                    R.string.basics_order_step_1, R.string.basics_order_step_2, R.string.basics_order_step_3,
+                    R.string.basics_order_step_1, if (air) R.string.basics_order_step_2_air else R.string.basics_order_step_2, R.string.basics_order_step_3,
                     R.string.basics_order_step_4, R.string.basics_order_step_5, R.string.basics_order_step_6,
                 )
                 steps.forEachIndexed { i, resId ->
                     Text("${i + 1}. ${stringResource(resId)}", style = type.body, color = colors.ink)
                 }
-                Text(stringResource(R.string.basics_order_footer), style = type.rowHint, color = colors.dim)
+                Text(stringResource(if (air) R.string.basics_order_footer_air else R.string.basics_order_footer), style = type.rowHint, color = colors.dim)
             }
         }
         item {
             BasicsCard(stringResource(R.string.basics_sag_title)) {
                 Text(stringResource(R.string.basics_sag_fork), style = type.body, color = colors.ink)
-                Text(stringResource(R.string.basics_sag_shock), style = type.body, color = colors.ink)
+                Text(stringResource(if (air) R.string.basics_sag_shock_air else R.string.basics_sag_shock), style = type.body, color = colors.ink)
                 Text(stringResource(R.string.basics_sag_footer), style = type.rowHint, color = colors.dim)
             }
         }
@@ -121,24 +127,32 @@ fun BasicsScreen(
                 GroupCard {
                     SAG_TARGETS.forEachIndexed { index, (labelRes, percent, isFork) ->
                         if (index > 0) RowDivider()
-                        val travel = if (isFork) fork.travelMm else shock.strokeMm
+                        val travel = if (isFork) fork.travelMm.toDouble() else shock.strokeMm
                         val step = if (isFork) 1.0 else 0.5
                         val mm = roundToStep(percent / 100.0 * travel, step)
+                        val label = if (air && labelRes == R.string.basics_targets_row_6_label) R.string.basics_targets_row_6_label_air else labelRes
                         TwoColumnRow(
-                            stringResource(labelRes),
+                            stringResource(label),
                             stringResource(R.string.basics_targets_value, formatStepValue(mm, step, currentLocale()), percent),
                         )
                     }
                 }
-                Text(stringResource(R.string.basics_targets_footer), style = type.rowHint, color = colors.dim)
+                // Fox's sag recommendation ("…am Coil-Dämpfer") is only quoted with a Fox part and a coil shock.
+                val foxOnBike = traits.foxOnBike && !air
+                Text(
+                    stringResource(if (foxOnBike) R.string.basics_targets_footer else R.string.basics_targets_footer_generic),
+                    style = type.rowHint,
+                    color = colors.dim,
+                )
             }
         }
         item {
             BasicsCard(stringResource(R.string.basics_temp_title)) {
                 Text(stringResource(R.string.basics_temp_setup), style = type.body, color = colors.ink)
-                val bullets = listOf(
+                // "Stahlfeder hinten bleibt konstant" only where the shock has a steel spring.
+                val bullets = listOfNotNull(
                     R.string.basics_temp_bullet_1, R.string.basics_temp_bullet_2,
-                    R.string.basics_temp_bullet_3, R.string.basics_temp_bullet_4,
+                    R.string.basics_temp_bullet_3.takeUnless { air }, R.string.basics_temp_bullet_4,
                 )
                 bullets.forEach { resId -> Text("• ${stringResource(resId)}", style = type.body, color = colors.ink) }
                 Text(stringResource(R.string.basics_temp_footer), style = type.rowHint, color = colors.dim)
@@ -146,7 +160,7 @@ fun BasicsScreen(
         }
         item {
             BasicsCard(stringResource(R.string.basics_compression_title)) {
-                Text(stringResource(R.string.basics_compression_body), style = type.body, color = colors.ink)
+                Text(stringResource(if (air) R.string.basics_compression_body_air else R.string.basics_compression_body), style = type.body, color = colors.ink)
             }
         }
         if (bike.factorySpec.isNotEmpty()) {
@@ -193,7 +207,7 @@ fun BasicsScreen(
                     } else {
                         add("$daempfer $rebound" to shock.reboundMax.toString())
                     }
-                    add(preloadLabel to preloadRange)
+                    if (!air) add(preloadLabel to preloadRange)
                     postRange?.let { add(postLabel to it) }
                 }
                 GroupCard {

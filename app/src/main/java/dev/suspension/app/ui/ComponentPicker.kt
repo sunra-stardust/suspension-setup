@@ -37,6 +37,9 @@ import dev.suspension.app.data.ComponentCatalog
 import dev.suspension.app.data.ForkModel
 import dev.suspension.app.data.ReboundMode
 import dev.suspension.app.data.ShockModel
+import dev.suspension.app.data.SpringType
+import dev.suspension.app.ui.format.currentLocale
+import dev.suspension.app.ui.format.formatStepValue
 import dev.suspension.app.ui.components.GroupCard
 import dev.suspension.app.ui.components.RowDivider
 import dev.suspension.app.ui.components.StepperRow
@@ -330,7 +333,7 @@ fun ShockPickerOverlay(
                 modelYearsText(shock.modelYears)?.let(::add)
             }
             CatalogRow(
-                name = "${shock.displayName} — ${stringResource(R.string.picker_stroke, shock.eyeToEyeMm, shock.strokeMm)}",
+                name = "${shock.displayName} — ${stringResource(R.string.picker_stroke, shock.eyeToEyeMm, formatStepValue(shock.strokeMm, 0.5, currentLocale()))}",
                 details = details,
                 selected = shock.id == currentShockId,
                 onClick = { onSelectCatalog(shock); onDismiss() },
@@ -342,7 +345,7 @@ fun ShockPickerOverlay(
             if (initialCustomShock.needsCheck) Text(text = stringResource(R.string.picker_custom_needs_check), style = type.rowHint, color = colors.ink)
 
             var name by remember { mutableStateOf(initialCustomShock.displayName) }
-            var stroke by remember { mutableStateOf(initialCustomShock.strokeMm.toDouble()) }
+            var stroke by remember { mutableStateOf(initialCustomShock.strokeMm) }
             var eyeToEye by remember { mutableStateOf(initialCustomShock.eyeToEyeMm.toDouble()) }
             var lscMax by remember { mutableStateOf(initialCustomShock.lscMax.toDouble()) }
             var hscAvailable by remember { mutableStateOf(initialCustomShock.hscMax != null) }
@@ -352,6 +355,7 @@ fun ShockPickerOverlay(
             var hsrMax by remember { mutableStateOf((initialCustomShock.hsrMax ?: 8).toDouble()) }
             var lever by remember { mutableStateOf(initialCustomShock.hasClimbLever) }
             var rate by remember { mutableStateOf(initialCustomShock.customSpringLbs ?: 500.0) }
+            var air by remember { mutableStateOf(initialCustomShock.isAir) }
 
             GroupCard {
                 CustomTextField(
@@ -361,7 +365,7 @@ fun ShockPickerOverlay(
                     onValueChange = { name = it },
                 )
                 RowDivider()
-                StepperRow(colors.spring, stringResource(R.string.picker_custom_stroke_shock), stringResource(R.string.unit_mm), null, stroke.toInt().toString(), { stroke = (stroke - 5).coerceAtLeast(30.0) }, { stroke = (stroke + 5).coerceAtMost(90.0) })
+                StepperRow(colors.spring, stringResource(R.string.picker_custom_stroke_shock), stringResource(R.string.unit_mm), null, formatStepValue(stroke, 2.5, currentLocale()), { stroke = (stroke - 2.5).coerceAtLeast(30.0) }, { stroke = (stroke + 2.5).coerceAtMost(90.0) })
                 RowDivider()
                 StepperRow(colors.spring, stringResource(R.string.picker_custom_eye_to_eye_shock), stringResource(R.string.unit_mm), null, eyeToEye.toInt().toString(), { eyeToEye = (eyeToEye - 5).coerceAtLeast(150.0) }, { eyeToEye = (eyeToEye + 5).coerceAtMost(270.0) })
                 RowDivider()
@@ -383,7 +387,11 @@ fun ShockPickerOverlay(
                 RowDivider()
                 BoolToggleRow(stringResource(R.string.picker_custom_lever), lever) { lever = !lever }
                 RowDivider()
-                StepperRow(colors.spring, stringResource(R.string.picker_custom_rate_baseline), stringResource(R.string.unit_lbs), null, rate.toInt().toString(), { rate = (rate - 25).coerceAtLeast(150.0) }, { rate = (rate + 25).coerceAtMost(900.0) })
+                BoolToggleRow(stringResource(R.string.picker_custom_air), air) { air = !air }
+                if (!air) {
+                    RowDivider()
+                    StepperRow(colors.spring, stringResource(R.string.picker_custom_rate_baseline), stringResource(R.string.unit_lbs), null, rate.toInt().toString(), { rate = (rate - 25).coerceAtLeast(150.0) }, { rate = (rate + 25).coerceAtMost(900.0) })
+                }
             }
 
             ApplyButton {
@@ -391,7 +399,7 @@ fun ShockPickerOverlay(
                     ShockModel(
                         id = CUSTOM_ID,
                         displayName = name.trim(),
-                        strokeMm = stroke.toInt(),
+                        strokeMm = stroke,
                         eyeToEyeMm = eyeToEye.toInt(),
                         lscMax = lscMax.toInt(),
                         hscMax = if (hscAvailable) hscMax.toInt() else null,
@@ -399,7 +407,8 @@ fun ShockPickerOverlay(
                         reboundMax = reboundMax.toInt(),
                         hsrMax = if (split) hsrMax.toInt() else null,
                         hasClimbLever = lever,
-                        customSpringLbs = rate,
+                        customSpringLbs = if (air) null else rate,
+                        spring = if (air) SpringType.AIR else SpringType.COIL,
                         preloadHintResId = R.string.hint_s_pre_generic,
                         preloadRangeResId = R.string.range_preload_generic,
                     ),

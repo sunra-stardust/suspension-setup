@@ -17,6 +17,10 @@ import androidx.work.Worker
 import androidx.work.WorkerParameters
 import dev.suspension.app.MainActivity
 import dev.suspension.app.R
+import dev.suspension.app.data.BikeParts
+import dev.suspension.app.data.BikeTraits
+import dev.suspension.app.data.ComponentCatalog
+import dev.suspension.app.data.GarageRepository
 import dev.suspension.app.data.LanguageStore
 import kotlinx.coroutines.runBlocking
 import java.time.Duration
@@ -83,22 +87,40 @@ object CareReminders {
     }
 
     /** One run of the check: plans, posts at most one grouped notification, remembers what was announced. */
-    fun check(context: Context, repository: CareRepository, today: LocalDate) {
-        val data = repository.state.value
-        val plan = ReminderPlanner.plan(
-            data = data,
-            permissionGranted = hasPermission(context),
-            evaluated = DueCalculator.evaluateAll(data.dueInput(today)),
-            today = today,
-        )
-        if (plan.notified != data.notified) {
-            repository.setNotified(plan.notified)
-            runBlocking { repository.awaitSaved() }
+    /** A garage bike as the check sees it: id, name for the notification, traits. */
+    data class CheckedBike(val id: String, val name: String, val traits: BikeTraits)
+
+    /** Every bike's calendar is checked; tasks of all bikes go into one notification. */
+    fun check(context: Context, repository: CareRepository, bikes: List<CheckedBike>, today: LocalDate) {
+        val store = repository.state.value
+        val permission = hasPermission(context)
+        val announced = mutableListOf<Pair<CheckedBike, ReminderPlan>>()
+        for (bike in bikes) {
+            val data = store.forBike(bike.id)
+            val plan = ReminderPlanner.plan(
+                data = data,
+                permissionGranted = permission,
+                evaluated = DueCalculator.evaluateAll(data.dueInput(today), MaintCatalog.forBike(bike.traits)),
+                today = today,
+            )
+            if (plan.notified != data.notified) repository.setNotified(bike.id, plan.notified)
+            if (plan.notify.isNotEmpty()) announced += bike to plan
         }
-        if (plan.notify.isNotEmpty()) post(context, plan)
+        runBlocking { repository.awaitSaved() }
+        if (announced.isNotEmpty()) post(context, announced)
     }
 
-    private fun post(context: Context, plan: ReminderPlan) {
+    /** The garage's bikes with their traits; names fall back to the profile name like the UI. */
+    fun garageBikes(context: Context): List<CheckedBike> {
+        val localized = LanguageStore.wrap(context)
+        return GarageRepository.get(context).state.value.bikes.map { bike ->
+            val profile = BikeParts.profile(bike)
+            val traits = BikeTraits.of(profile, BikeParts.fork(bike, profile), BikeParts.shock(bike, profile), bike.catalogBikeId?.let(ComponentCatalog::bikeById))
+            CheckedBike(bike.id, bike.name ?: localized.getString(profile.nameResId), traits)
+        }
+    }
+
+    private fun post(context: Context, announced: List<Pair<CheckedBike, ReminderPlan>>) {
         val localized = LanguageStore.wrap(context)
         val manager = context.getSystemService(NotificationManager::class.java) ?: return
         if (!manager.areNotificationsEnabled()) return
@@ -108,12 +130,20 @@ object CareReminders {
         )
         val title = localized.getString(
             when {
-                plan.hasOverdue && plan.hasSoon -> R.string.care_notif_both
-                plan.hasOverdue -> R.string.care_notif_overdue
+                announced.any { it.second.hasOverdue } && announced.any { it.second.hasSoon } -> R.string.care_notif_both
+                announced.any { it.second.hasOverdue } -> R.string.care_notif_overdue
                 else -> R.string.care_notif_soon
             },
         )
-        val body = ReminderPlanner.bodyNames(plan.notify.map { localized.getString(it.task.nameRes) }) {
+        // With several bikes in the notification, each task says which bike it belongs to.
+        val severalBikes = announced.size > 1
+        val names = announced.flatMap { (bike, plan) ->
+            plan.notify.map { due ->
+                val task = localized.getString(due.task.nameRes(bike.traits))
+                if (severalBikes) localized.getString(R.string.care_notif_bike_task, bike.name, task) else task
+            }
+        }
+        val body = ReminderPlanner.bodyNames(names) {
             localized.getString(R.string.care_notif_more, it)
         }
         val open = PendingIntent.getActivity(
@@ -138,7 +168,7 @@ object CareReminders {
 /** The daily job. Works on the application context; the UI's [CareRepository] instance is shared. */
 class CareReminderWorker(context: Context, params: WorkerParameters) : Worker(context, params) {
     override fun doWork(): Result {
-        CareReminders.check(applicationContext, CareRepository.get(applicationContext), LocalDate.now())
+        CareReminders.check(applicationContext, CareRepository.get(applicationContext), CareReminders.garageBikes(applicationContext), LocalDate.now())
         return Result.success()
     }
 }

@@ -19,6 +19,7 @@ import androidx.compose.ui.test.performTextInput
 import androidx.compose.ui.test.assertCountEquals
 import androidx.compose.ui.test.onFirst
 import dev.suspension.app.care.CareRepository
+import dev.suspension.app.data.GarageRepository
 import dev.suspension.app.update.UpdatePolicy
 import org.junit.After
 import org.junit.Assert.assertEquals
@@ -43,6 +44,11 @@ class CareSmokeTest {
     fun tearDown() = CareRepository.forgetInstance()
 
     private fun str(id: Int, vararg args: Any) = compose.activity.getString(id, *args)
+
+    private fun bikeId() = GarageRepository.get(compose.activity).state.value.selectedBike.id
+
+    /** The selected bike's calendar. */
+    private fun care() = CareRepository.get(compose.activity).state.value.forBike(bikeId())
 
     private val verticalList = hasScrollAction() and SemanticsMatcher.keyIsDefined(SemanticsProperties.VerticalScrollAxisRange)
 
@@ -101,7 +107,7 @@ class CareSmokeTest {
         compose.onNodeWithContentDescription(str(R.string.care_odo_field)).performTextReplacement("320")
         compose.onAllNodesWithText(str(R.string.action_save)).onLast().performClick()
         compose.waitForIdle()
-        assertEquals(320, CareRepository.get(compose.activity).state.value.odometerKm)
+        assertEquals(320, care().odometerKm)
         scrollTo("320 km")
         compose.onNodeWithText("320 km").assertExists()
 
@@ -110,9 +116,9 @@ class CareSmokeTest {
         compose.onNodeWithContentDescription(str(R.string.care_odo_field)).performTextReplacement("300")
         compose.onAllNodesWithText(str(R.string.action_save)).onLast().performClick()
         compose.onNodeWithText(str(R.string.care_odo_confirm_lower, "300", "320")).assertExists()
-        assertEquals(320, CareRepository.get(compose.activity).state.value.odometerKm)
+        assertEquals(320, care().odometerKm)
         compose.onNodeWithText(str(R.string.action_cancel)).performClick()
-        assertEquals(320, CareRepository.get(compose.activity).state.value.odometerKm)
+        assertEquals(320, care().odometerKm)
     }
 
     @Test
@@ -130,21 +136,42 @@ class CareSmokeTest {
 
         scrollTo("Gabel beim Händler")
         compose.onNodeWithText("Gabel beim Händler").assertIsDisplayed()
-        assertEquals(1, CareRepository.get(compose.activity).state.value.log.size)
+        assertEquals(1, care().log.size)
 
         compose.onNodeWithText("Gabel beim Händler").performClick()
         compose.onNodeWithText(str(R.string.care_entry_edit_title)).assertIsDisplayed()
         compose.onNodeWithText(str(R.string.action_delete)).performScrollTo().performClick()
         compose.onNodeWithText(str(R.string.care_entry_delete_confirm)).assertExists()
         compose.onAllNodesWithText(str(R.string.action_delete)).onLast().performClick()
-        assertTrue(CareRepository.get(compose.activity).state.value.log.isEmpty())
+        assertTrue(care().log.isEmpty())
+    }
+
+    @Test
+    fun `each bike has its own calendar`() {
+        val repo = CareRepository.get(compose.activity)
+        val garage = GarageRepository.get(compose.activity)
+        val first = bikeId()
+        repo.setOdometer(first, 1240, LocalDate.now())
+
+        garage.copyBike(first, "Zweitrad")
+        garage.selectBike(garage.state.value.bikes.first { it.name == "Zweitrad" }.id)
+        compose.waitForIdle()
+        openCare()
+        scrollTo(str(R.string.care_odometer))
+        compose.onNodeWithText("0 km").assertExists()
+        compose.onAllNodesWithText("1.240 km").assertCountEquals(0)
+
+        garage.selectBike(first)
+        compose.waitForIdle()
+        scrollTo("1.240 km")
+        compose.onNodeWithText("1.240 km").assertExists()
     }
 
     @Test
     fun `an overdue task is listed with status in words, and logging it makes it done`() {
         val repo = CareRepository.get(compose.activity)
-        repo.setPurchaseDate(LocalDate.now().minusDays(45))
-        repo.setOdometer(320, LocalDate.now())
+        repo.setPurchaseDate(bikeId(), LocalDate.now().minusDays(45))
+        repo.setOdometer(bikeId(), 320, LocalDate.now())
         openCare()
 
         compose.onAllNodesWithText(str(R.string.care_status_overdue)).onFirst().assertIsDisplayed()
@@ -157,6 +184,6 @@ class CareSmokeTest {
         clickSave()
         compose.waitForIdle()
 
-        assertEquals(listOf("first_inspection"), repo.state.value.log.single().taskIds)
+        assertEquals(listOf("first_inspection"), care().log.single().taskIds)
     }
 }

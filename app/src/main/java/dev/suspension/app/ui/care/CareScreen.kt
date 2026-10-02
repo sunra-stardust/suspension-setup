@@ -4,10 +4,12 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.key
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import dev.suspension.app.care.CareContent
 import dev.suspension.app.care.CareData
+import dev.suspension.app.data.BikeTraits
 import dev.suspension.app.ui.components.SectionChips
 import java.time.LocalDate
 
@@ -30,21 +32,24 @@ fun CareScreen(
     onSectionChange: (String) -> Unit,
     data: CareData,
     today: LocalDate,
+    bike: BikeTraits,
     actions: CareActions,
 ) {
-    val sections = CareContent.sections
+    // Only what fits the selected bike; a section that does not apply loses its chip.
+    val sections = remember(bike) { CareContent.forBike(bike) }
+    val shownId = sectionId.takeIf { id -> sections.any { it.id == id } } ?: CareContent.CALENDAR_ID
     Column(modifier = Modifier.fillMaxSize()) {
         SectionChips(
             sectionIds = sections.map { it.id },
-            selectedId = sectionId,
+            selectedId = shownId,
             labelFor = { id -> stringResource(sections.first { it.id == id }.chipLabelRes) },
             onSelect = onSectionChange,
         )
-        key(sectionId) {
-            if (sectionId == CareContent.CALENDAR_ID) {
-                CalendarSection(data = data, today = today, actions = actions)
+        key(shownId) {
+            if (shownId == CareContent.CALENDAR_ID) {
+                CalendarSection(data = data, today = today, bike = bike, actions = actions)
             } else {
-                StaticSection(sections.firstOrNull { it.id == sectionId } ?: sections.first { it.id == CareContent.CALENDAR_ID })
+                StaticSection(sections.first { it.id == shownId })
             }
         }
     }

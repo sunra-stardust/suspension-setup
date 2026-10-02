@@ -68,6 +68,12 @@
       "modelYears": [2027],
       "retrieved": "2026-09-30"
     },
+    "husqvarna-mc2-2023": {
+      "title": "Husqvarna E-Bicycles Mountain Cross MC2 2023 product page, specifications (Austria, de-at)",
+      "url": "https://www.husqvarna-bicycles.com/de-at/models/offroad/mountain-cross/mountain-cross-mc22023.html",
+      "modelYears": [2023],
+      "retrieved": "2026-10-02"
+    },
     "canyon-torque-al-8-2027": {
       "title": "Canyon Torque AL 8 product page (spec list) and geometry sheet (fitting length 250X70); canyon.com product data: Year 2027",
       "url": "https://www.canyon.com/en-gb/mountain-bikes/enduro-bikes/torque/al/torque-al-8/4323.html",
@@ -236,7 +242,7 @@
         "note": "spec: 'FOX 36 Performance Elite ... Travel 150 mm'"
       },
       "stockShock": {
-        "value": { "catalogId": null, "name": "Fox Float X Performance Elite", "eyeToEyeMm": 210, "strokeMm": 55 },
+        "value": { "catalogId": null, "name": "Fox Float X Performance Elite", "eyeToEyeMm": 210, "strokeMm": 55, "spring": "air" },
         "source": "canyon-spectral-cf-8-2027",
         "note": "spec: 'FOX Float X Performance Elite'; size from the geometry sheet row 'Fitting Length in mm 210X55'. Air shock"
       }
@@ -253,7 +259,7 @@
         "note": "spec: 'RockShox ZEB Select + ... Travel 180 mm'"
       },
       "stockShock": {
-        "value": { "catalogId": null, "name": "RockShox Vivid Select+", "eyeToEyeMm": 250, "strokeMm": 70 },
+        "value": { "catalogId": null, "name": "RockShox Vivid Select+", "eyeToEyeMm": 250, "strokeMm": 70, "spring": "air" },
         "source": "canyon-torque-al-8-2027",
         "note": "spec: 'RockShox Vivid Select+' (highlights: 'Vivid Air Select+'); size from the geometry sheet row 'Fitting Length in mm 250X70'. Air shock"
       }
@@ -270,7 +276,7 @@
         "note": "kit spec: 'FOX 38 Float Performance, Grip, 170mm'"
       },
       "stockShock": {
-        "value": { "catalogId": null, "name": "Fox Float X Performance", "eyeToEyeMm": 230, "strokeMm": 65 },
+        "value": { "catalogId": null, "name": "Fox Float X Performance", "eyeToEyeMm": 230, "strokeMm": 65, "spring": "air" },
         "source": "santacruz-megatower-90-2026",
         "note": "kit spec: 'FOX Float X Performance, 230x65'. The page FAQ still says 230x62.5 (older model?), issue #11. Air shock"
       }
@@ -287,7 +293,7 @@
         "note": "spec: 'RockShox ZEB Select+, DebonAir spring, Charger 3.1 RC2 damper, ... 170mm travel'"
       },
       "stockShock": {
-        "value": { "catalogId": null, "name": "RockShox Vivid Select+", "eyeToEyeMm": 230, "strokeMm": 65 },
+        "value": { "catalogId": null, "name": "RockShox Vivid Select+", "eyeToEyeMm": 230, "strokeMm": 65, "spring": "air" },
         "source": "trek-slash-98-xt-gen6",
         "note": "spec: 'RockShox Vivid Select+, 230mm x 65mm'. Air shock"
       }
@@ -304,7 +310,7 @@
         "note": "spec: 'Fox 36 Float Factory GRIPX2, Tapered, 15x110mm, 150mm, Kashima Coated'. Not linked to fox36_gripx2 (2025 entry, 160 mm; 2026 LSC count disputed, issue #9)"
       },
       "stockShock": {
-        "value": { "catalogId": null, "name": "Fox Float X Factory", "eyeToEyeMm": 210, "strokeMm": 55 },
+        "value": { "catalogId": null, "name": "Fox Float X Factory", "eyeToEyeMm": 210, "strokeMm": 55, "spring": "air" },
         "source": "cube-stereo-c62-slt-2027",
         "note": "spec: 'Fox Float X Factory, 210x55mm, Adjustable LSC/LSR w/ 2-Pos. Lever'. Air shock"
       }
@@ -329,6 +335,28 @@
         "value": { "S": 343, "M": 365, "L": 388, "XL": 411, "XXL": 434 },
         "source": "yt-capra-mx-core3-cf",
         "note": "'ÖHLINS STEEL SPRING: 343 lbs (S) I 365 (M) I 388 (L) I 411 (XL) I 434 (XXL)'"
+      }
+    },
+    {
+      "id": "husqvarna_mountain_cross_mc2_2023",
+      "maker": "Husqvarna",
+      "model": "Mountain Cross",
+      "trim": "MC2",
+      "modelYears": [2023],
+      "stockFork": {
+        "value": { "catalogId": null, "name": "RockShox 35 Gold RL", "travelMm": 150 },
+        "source": "husqvarna-mc2-2023",
+        "note": "Gabel: 'RockShox 35 Gold RL, DebonAir, Luft, 150 mm, tapered'"
+      },
+      "stockShock": {
+        "value": { "catalogId": null, "name": "RockShox Deluxe Select+", "eyeToEyeMm": 230, "strokeMm": 62.5, "spring": "air" },
+        "source": "husqvarna-mc2-2023",
+        "note": "Dämpfer: 'RockShox Deluxe Select+, Luft, 230x62.5 mm'"
+      },
+      "motor": {
+        "value": "Shimano EP6, DU-EP600",
+        "source": "husqvarna-mc2-2023",
+        "note": "Motor: 'Shimano EP6, DU-EP600, 250 W, 85 Nm'; Akku 'Core S1+, 630 Wh'. Brakes SRAM DB8, SRAM SX Eagle (mechanical), dropper 'Husqvarna Pro' — not modelled"
       }
     }
   ],

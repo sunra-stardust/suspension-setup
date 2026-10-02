@@ -42,7 +42,8 @@ object DueCalculator {
     private const val MONTHS_FROM_DAYS = 120
     private const val DAYS_PER_MONTH = 30
 
-    fun evaluateAll(input: DueInput): List<TaskDue> = MaintCatalog.tasks.map { evaluate(it, input) }
+    /** [tasks]: the tasks that exist for the selected bike ([MaintCatalog.forBike]). */
+    fun evaluateAll(input: DueInput, tasks: List<MaintTask> = MaintCatalog.tasks): List<TaskDue> = tasks.map { evaluate(it, input) }
 
     /** Overdue or soon, most urgent first (overdue before soon; then the smaller remaining share). */
     fun dueList(all: List<TaskDue>): List<TaskDue> =

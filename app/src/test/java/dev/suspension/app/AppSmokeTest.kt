@@ -102,7 +102,8 @@ class AppSmokeTest {
         compose.onNodeWithText(str(R.string.app_header_title, str(R.string.bike_level_rr_name)), substring = true).performClick()
         compose.onNodeWithText(str(R.string.bike_new)).performClick()
         compose.onNodeWithText(str(R.string.bike_catalog_title)).assertIsDisplayed()
-        compose.onNodeWithText("Mondraker").performClick()
+        // The search narrows the list (more makers than fit on the small test screen).
+        compose.onNodeWithContentDescription(str(R.string.bike_catalog_search_label)).performTextInput("Mondraker Level")
         compose.onNodeWithText("Mondraker Level RR 2026").performClick()
         compose.onNodeWithText("L").performClick()
 

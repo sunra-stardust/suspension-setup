@@ -19,7 +19,7 @@
     <string name="scenario_uphill">Uphill</string>
 
     <string name="group_fork_template">Gabel — %1$s, %2$d mm</string>
-    <string name="group_shock_template">Dämpfer — %1$s, %2$d×%3$d mm</string>
+    <string name="group_shock_template">Dämpfer — %1$s, %2$d×%3$s mm</string>
     <string name="group_tires">Reifen</string>
     <string name="group_frame">Rahmen &amp; Stütze</string>
     <string name="change_component_hint">Modell ändern</string>
@@ -338,6 +338,7 @@
     <string name="picker_custom_rebound_max">Zugstufe-Klicks (max., LSR wenn getrennt)</string>
     <string name="picker_custom_hsr_max">HSR-Klicks (max.)</string>
     <string name="picker_custom_lever">Kletterhebel vorhanden</string>
+    <string name="picker_custom_air">Luftdämpfer</string>
     <string name="picker_custom_psi_baseline">Startdruck (vom Aufkleber)</string>
     <string name="picker_custom_rate_baseline">Verbaute Feder</string>
     <string name="picker_custom_apply">Übernehmen</string>
@@ -656,5 +657,50 @@
     <string name="care_task_battery_check_name">Eingelagerter Akku: Ladezustand prüfen</string>
     <string name="care_task_battery_check_interval">Alle 2 Monate, nur bei eingelagertem Akku</string>
     <string name="care_task_battery_check_note" formatted="false">Unter 30 % nachladen, auf 30 bis 60 %.</string>
+
+    <!-- Neutral variants for bikes the app does not know to have a Bosch drive, Fox suspension, SRAM brakes/AXS or the ONOFF post. -->
+    <string name="care_after_ride_c1_r1_text_generic">Gartenschlauch mit sanftem Strahl oder Eimer und Bürste. Nie ein Hochdruckreiniger: er drückt Wasser durch Lagerdichtungen und in die Dämpferbuchsen.</string>
+    <string name="care_after_ride_c1_r2_text_generic">Nicht von unten auf Tretlager oder Dämpfer spritzen.</string>
+    <string name="care_after_ride_c1_r7_text_generic">Reinigen und mit Kettenöl ölen.</string>
+    <string name="care_products_closing_generic">Konservierungssprays sind Komfort, kein Schutz. Sie verzögern Flugrost und erleichtern das Putzen. Gegen Wasser in den Lagern helfen Schutzblech, richtige Waschtechnik, Montagepaste und trockene Lagerung.</string>
+    <string name="care_protection_c1_r2_text_generic">Zusätzlich zur Folie.</string>
+    <string name="care_protection_c1_r7_text_generic">Bei Auslieferung an Sattelstütze, Steuersatzsitz, Achsen und Bremsscheibenschrauben auftragen. Das verhindert Festgammeln von Alu und Stahl.</string>
+    <string name="care_part_rotors">Bremsscheiben (Flugrost)</string>
+    <string name="care_part_chain">Kette</string>
+    <string name="care_part_coil">Stahlfeder</string>
+    <string name="care_part_contacts">Kontakte</string>
+    <string name="care_part_bearings">Lager</string>
+    <string name="care_list_last">%1$s und %2$s</string>
+    <string name="care_task_annual_inspection_note_generic">Der Händler kann ein anderes Intervall festlegen.</string>
+    <string name="care_task_play_check_name_generic">Spielcheck: Hinterbau, Steuersatz</string>
+    <string name="care_task_play_check_note_generic">Hinterbau und Steuersatz von Hand fassen und wackeln.</string>
+    <string name="care_missing_fork">Für deine Gabel (%1$s) sind keine Service-Intervalle hinterlegt. Maßgeblich ist die Anleitung des Herstellers.</string>
+    <string name="care_missing_shock">Für deinen Dämpfer (%1$s) sind keine Service-Intervalle hinterlegt. Maßgeblich ist die Anleitung des Herstellers.</string>
+    <string name="care_missing_brakes">Für deine Bremsen sind keine Herstellerangaben hinterlegt. Maßgeblich ist die Anleitung des Herstellers.</string>
+    <string name="care_missing_post">Für deine Sattelstütze sind keine Herstellerintervalle hinterlegt. Maßgeblich ist die Anleitung des Herstellers.</string>
+    <string name="care_odo_hint_generic">z. B. vom Tacho oder aus deiner Tracking-App</string>
+    <string name="hint_s_lsc_generic">Wippen beim Pedalieren</string>
+    <string name="diag_symptom_7_generic">Wippt beim Pedalieren</string>
+    <string name="diag_explanation_7_generic">Jeder Pedaltritt bringt den Hinterbau in Bewegung.</string>
+    <string name="diag_explanation_11_generic">Stimmt der Sag, regelt die Progression der Luftfeder den Durchschlagschutz. Luftdruck nur so weit anheben, dass der Sag im Zielbereich bleibt.</string>
+    <string name="diag_explanation_12_generic">Vorspannung ist nur zur Sag-Feinjustage da und ersetzt keine Federrate.</string>
+    <string name="diag_explanation_13_generic">Lässt sich der Sag mit der Vorspannung nicht erreichen, braucht es eine andere Feder.</string>
+    <string name="setup_footer_note_generic">Wo eine Herstellertabelle existiert, kommen Luftdruck und Gabel-Zugstufe daraus — passend zu deinem Gewicht. Temperatur und Gewicht ändern nur Werte, die du nicht selbst verstellt hast: eigene Änderungen bleiben fest. Alle übrigen Klickwerte sind Startwerte; die Werksempfehlung für deine Einheit liefert der Hersteller.</string>
+    <string name="basics_targets_footer_generic">Die Gabel läuft bewusst mit weniger Sag als der Dämpfer. Das ist normal.</string>
+
+    <!-- Air shocks (no spring rate, no preload) and e-bikes with a drive other than Bosch. %1$d = start pressure in psi, %2$d = riding temperature. -->
+    <string name="hint_s_psi_air">Kein Herstellerwert · Startwert ≈ Fahrergewicht in lbs (%1$d psi) · per Sag einstellen</string>
+    <string name="hint_s_psi_air_temp">Kein Herstellerwert · Startwert ≈ Fahrergewicht in lbs (%1$d psi) bei %2$d °C — bei 20 °C füllen · per Sag einstellen</string>
+    <string name="care_task_play_check_note_ebike">Motor, Hinterbau und Steuersatz von Hand fassen und wackeln.</string>
+    <string name="care_odo_hint_ebike">z. B. vom Display oder aus der App deines Antriebs</string>
+    <string name="basics_sag_shock_air">Dämpfer (Luft): Gummiring an die Dichtung, nach dem Absteigen Abstand messen.</string>
+    <string name="basics_targets_row_6_label_air">Druck zu niedrig ab</string>
+    <string name="basics_compression_body_air">Durchschläge verhindern. Dafür sind vorne und hinten Volumenspacer zuständig (bei korrektem Sag). HSC zudrehen macht das Fahrwerk an Kanten härter, ersetzt aber keine Progression.</string>
+    <string name="basics_order_step_2_air">Luftdruck vorne und hinten</string>
+    <string name="basics_order_footer_air">Den Luftdruck später stark ändern heißt alles neu abstimmen. Eine Änderung pro Ausfahrt.</string>
+    <string name="diag_explanation_12_air">Stimmt der Sag, regeln Volumenspacer im Dämpfer den Durchschlagschutz. Luftdruck nur so weit anheben, dass der Sag im Zielbereich bleibt.</string>
+    <string name="diag_symptom_13_air" formatted="false">Sag am Dämpfer über 32 %</string>
+    <string name="diag_action_13_air">Mehr Luftdruck im Dämpfer</string>
+    <string name="diag_explanation_13_air">Mehr Druck, weniger Sag. In 5-psi-Schritten, danach neu messen.</string>
 
 </resources>

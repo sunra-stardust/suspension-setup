@@ -148,7 +148,7 @@ object CatalogJson {
         return ShockModel(
             id = e.id,
             displayName = e.name,
-            strokeMm = e.int("strokeMm"),
+            strokeMm = e.double("strokeMm"),
             eyeToEyeMm = e.int("eyeToEyeMm"),
             lscMax = e.int("lscMax"),
             hscMax = e.intOrNull("hscMax"),
@@ -166,7 +166,7 @@ object CatalogJson {
 
     /**
      * A bike as sold. `stockFork`/`stockShock` are `{ "catalogId": "<fork/shock id>" | null, "name": …,
-     * "travelMm"/"eyeToEyeMm"/"strokeMm": … }`; `springLbsBySize` is `{ "<size>": lbs }` and optional.
+     * "travelMm"/"eyeToEyeMm"/"strokeMm", "spring": "air"|"coil" … }`; optional `motor`; `springLbsBySize` is `{ "<size>": lbs }` and optional.
      */
     private fun parseBike(e: Entry): BikeModel {
         fun part(name: String): StockPart {
@@ -176,7 +176,13 @@ object CatalogJson {
                 name = o.getString("name"),
                 travelMm = o.optIntOrNull("travelMm"),
                 eyeToEyeMm = o.optIntOrNull("eyeToEyeMm"),
-                strokeMm = o.optIntOrNull("strokeMm"),
+                strokeMm = o.optDoubleOrNull("strokeMm"),
+                spring = when (val s = o.optStringOrNull("spring")) {
+                    null -> null
+                    "air" -> SpringType.AIR
+                    "coil" -> SpringType.COIL
+                    else -> error("${e.id}.$name.spring: expected air|coil, was $s")
+                },
             )
         }
         val springs = if (e.json.has("springLbsBySize")) e.obj("springLbsBySize") else JSONObject()
@@ -190,10 +196,12 @@ object CatalogJson {
             stockFork = part("stockFork"),
             stockShock = part("stockShock"),
             springLbsBySize = springs.keys().asSequence().associateWith { springs.getDouble(it) },
+            motor = if (e.json.has("motor")) e.string("motor") else null,
             provenance = e.provenance.toMap(),
         )
     }
 
+    private fun JSONObject.optDoubleOrNull(name: String): Double? = if (!has(name) || isNull(name)) null else getDouble(name)
     private fun JSONObject.optStringOrNull(name: String): String? = if (!has(name) || isNull(name)) null else getString(name)
     private fun JSONObject.optIntOrNull(name: String): Int? = if (!has(name) || isNull(name)) null else getInt(name)
     private fun JSONArray.ints(): List<Int> = (0 until length()).map { getInt(it) }
