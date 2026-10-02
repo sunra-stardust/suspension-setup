@@ -43,6 +43,8 @@ data class BikeProfile(
     val dropper: Dropper?,
     /** Label/value string pairs for Basics → "Serie ab Werk". */
     val factorySpec: List<Pair<Int, Int>>,
+    /** Equipment beyond fork and shock that texts may refer to (drive, brakes, shifting, post, frame). */
+    val equipment: Set<Trait> = emptySet(),
 )
 
 object BikeProfiles {
@@ -77,6 +79,16 @@ object BikeProfiles {
             R.string.basics_factory_row_4_label to R.string.basics_factory_row_4_value,
             R.string.basics_factory_row_5_label to R.string.basics_factory_row_5_value,
             R.string.basics_factory_row_6_label to R.string.basics_factory_row_6_value,
+        ),
+        // The owner's bike as described in his Pflege specification: Bosch drive, SRAM Maven
+        // (mineral oil), SRAM AXS, ONOFF Pija.
+        equipment = setOf(
+            Trait.EBIKE,
+            Trait.EBIKE_BOSCH,
+            Trait.BRAKES_SRAM_MINERAL,
+            Trait.SHIFTING_SRAM_AXS,
+            Trait.DROPPER_ONOFF_PIJA,
+            Trait.FRAME_MONDRAKER_LEVEL,
         ),
     )
 

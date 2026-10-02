@@ -26,6 +26,7 @@ import dev.suspension.app.care.CareParagraph
 import dev.suspension.app.care.CareSection
 import dev.suspension.app.care.CareTable
 import dev.suspension.app.care.CareTag
+import dev.suspension.app.care.CareText
 import dev.suspension.app.ui.components.GroupCard
 import dev.suspension.app.ui.components.RowDivider
 import dev.suspension.app.ui.theme.AppTheme
@@ -49,7 +50,7 @@ fun StaticSection(section: CareSection) {
             item { Text(text = stringResource(res), style = AppTheme.type.rowHint, color = AppTheme.colors.dim) }
         }
         items(section.cards.size) { index -> StaticCard(section.cards[index]) }
-        section.closing?.let { item { Closing(it) } }
+        section.closing.forEach { paragraph -> item { Closing(paragraph) } }
         item { SectionFooter() }
     }
 }
@@ -64,9 +65,9 @@ private fun StaticCard(card: CareCard) {
                 TableRows(table)
                 first = false
             }
-            card.numbered.forEachIndexed { index, res ->
+            card.numbered.forEachIndexed { index, item ->
                 if (divider()) RowDivider()
-                NumberedRow(index + 1, stringResource(res))
+                NumberedRow(index + 1, stringResource(item.res))
             }
             card.rows.forEach { row ->
                 if (divider()) RowDivider()
@@ -74,7 +75,7 @@ private fun StaticCard(card: CareCard) {
                 if (tag != null) {
                     CareStaticRow(
                         label = stringResource(row.labelRes),
-                        text = stringResource(row.textRes),
+                        text = if (row.parts.isNotEmpty()) listSentence(row.parts.map { stringResource(it.res) }) else stringResource(row.textRes),
                         tag = tag,
                         showTag = row.tag != null,
                     )
@@ -140,9 +141,9 @@ private fun TableRows(table: CareTable) {
             Text(text = stringResource(res), style = type.rowHint, color = colors.dim, modifier = Modifier.weight(WEIGHTS[index]))
         }
     }
-    table.rows.forEach { cells ->
+    table.rows.forEach { row ->
         RowDivider()
-        val texts = cells.map { stringResource(it) }
+        val texts = row.cells.map { stringResource(it) }
         val description = stringResource(R.string.care_a11y_table_row, texts[0], texts[1], texts[2])
         Row(
             horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -171,6 +172,13 @@ private fun Closing(paragraph: CareParagraph) {
         Text(text = stringResource(paragraph.textRes), style = AppTheme.type.body, color = AppTheme.colors.ink)
         TagLine(paragraph.tag, Modifier.padding(top = 2.dp))
     }
+}
+
+/** "A, B, C und D." — the list pieces that apply to the bike, as one sentence. */
+@Composable
+private fun listSentence(items: List<String>): String {
+    val joinTemplate = stringResource(R.string.care_list_last)
+    return CareText.listSentence(items) { a, b -> String.format(joinTemplate, a, b) }
 }
 
 /** Every section ends with the legend for the source tags (not a card). */

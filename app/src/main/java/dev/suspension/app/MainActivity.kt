@@ -41,6 +41,8 @@ import dev.suspension.app.care.CareRepository
 import dev.suspension.app.data.AppLanguage
 import dev.suspension.app.data.BikeParts
 import dev.suspension.app.data.BikeProfiles
+import dev.suspension.app.data.BikeTraits
+import dev.suspension.app.data.ComponentCatalog
 import dev.suspension.app.data.GarageRepository
 import dev.suspension.app.data.CUSTOM_ID
 import dev.suspension.app.data.LanguageStore
@@ -149,9 +151,14 @@ private fun AppRoot(updates: UpdateViewModel?, careRequest: Int, onLanguageChang
 
     var overlay by remember { mutableStateOf(PickerOverlay.NONE) }
 
+    // What the app knows about this bike's parts: texts that name a motor, maker or part follow it.
+    val traits = BikeTraits.of(profile, fork, shock, bike.catalogBikeId?.let(ComponentCatalog::bikeById))
+
     // Pflege: repository, selected section, the entry screen ("new", "new:<ids>" or "edit:<id>") and a transient message.
     val careRepo = remember { CareRepository.get(context) }
-    val care by careRepo.state.collectAsState()
+    val careStore by careRepo.state.collectAsState()
+    // The calendar belongs to the selected bike.
+    val care = careStore.forBike(bike.id)
     var careSection by rememberSaveable { mutableStateOf(CareContent.CALENDAR_ID) }
     var careEntry by rememberSaveable { mutableStateOf<String?>(null) }
     var careMessage by rememberSaveable { mutableStateOf<String?>(null) }
@@ -187,6 +194,7 @@ private fun AppRoot(updates: UpdateViewModel?, careRequest: Int, onLanguageChang
                         onOpenForkPicker = { overlay = PickerOverlay.FORK },
                         onOpenShockPicker = { overlay = PickerOverlay.SHOCK },
                         bikeName = bike.displayName(),
+                        traits = traits,
                         onOpenBikes = { overlay = PickerOverlay.BIKES },
                         onAddVorlage = { name -> garageRepo.addVorlage(name, copyFromId = vorlage.id) },
                         onRenameVorlage = { v, name -> garageRepo.renameVorlage(v.id, name) },
@@ -195,7 +203,7 @@ private fun AppRoot(updates: UpdateViewModel?, careRequest: Int, onLanguageChang
                 }
                 AppTab.DIAGNOSE -> {
                     val listState = rememberSaveable(saver = LazyListState.Saver) { LazyListState() }
-                    DiagnoseScreen(listState = listState)
+                    DiagnoseScreen(listState = listState, bike = traits)
                 }
                 AppTab.BASICS -> {
                     val listState = rememberSaveable(saver = LazyListState.Saver) { LazyListState() }
@@ -205,6 +213,7 @@ private fun AppRoot(updates: UpdateViewModel?, careRequest: Int, onLanguageChang
                         fork = fork,
                         shock = shock,
                         updates = updates,
+                        traits = traits,
                         language = remember { LanguageStore.get(context) },
                         onLanguageChange = onLanguageChange,
                         onReset = {
@@ -220,15 +229,16 @@ private fun AppRoot(updates: UpdateViewModel?, careRequest: Int, onLanguageChang
                         onSectionChange = { careSection = it },
                         data = care,
                         today = today,
+                        bike = traits,
                         actions = CareActions(
-                            onPurchaseDate = careRepo::setPurchaseDate,
-                            onOdometer = { km -> careRepo.setOdometer(km, today) },
+                            onPurchaseDate = { careRepo.setPurchaseDate(bike.id, it) },
+                            onOdometer = { km -> careRepo.setOdometer(bike.id, km, today) },
                             onReminders = { on ->
                                 careRepo.setReminders(on)
                                 if (on) CareReminders.schedule(context.applicationContext) else CareReminders.cancel(context.applicationContext)
                             },
-                            onKmPerHour = careRepo::setKmPerHour,
-                            onTaskReminder = careRepo::setTaskReminder,
+                            onKmPerHour = { careRepo.setKmPerHour(bike.id, it) },
+                            onTaskReminder = { id, on -> careRepo.setTaskReminder(bike.id, id, on) },
                             onLogService = { ids -> careEntry = if (ids.isEmpty()) "new" else "new:" + ids.joinToString(",") },
                             onEditEntry = { id -> careEntry = "edit:$id" },
                         ),
@@ -247,13 +257,14 @@ private fun AppRoot(updates: UpdateViewModel?, careRequest: Int, onLanguageChang
                         preselected = if (key.startsWith("new:")) key.removePrefix("new:").split(",") else emptyList(),
                         odometerKm = care.odometerKm,
                         today = today,
+                        bike = traits,
                         onSave = { entry ->
-                            if (careRepo.saveEntry(entry, today)) {
+                            if (careRepo.saveEntry(bike.id, entry, today)) {
                                 careMessage = context.getString(R.string.care_snack_odometer, CareFormat.km(entry.km))
                             }
                             careEntry = null
                         },
-                        onDelete = editing?.let { e -> { careRepo.deleteEntry(e.id); careEntry = null } },
+                        onDelete = editing?.let { e -> { careRepo.deleteEntry(bike.id, e.id); careEntry = null } },
                         onCancel = { careEntry = null },
                     )
                 }

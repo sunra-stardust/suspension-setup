@@ -121,6 +121,52 @@ class CareStorageTest {
     }
 
     @Test
+    fun `the calendar is kept per bike, the first bike's data stays where older releases read it`() {
+        val doc = CareJson.newDocument()
+        CareJson.setOdometer(doc, 320, today) // written by the release before the calendar was per bike
+        CareJson.saveEntry(doc, entry("a", 320, "screws"), today)
+        CareJson.claimLegacyBike(doc, "b-level")
+
+        CareJson.setOdometer(doc, 80, today, bikeId = "b-husky")
+        CareJson.saveEntry(doc, entry("h", 90, "chain_check"), today, bikeId = "b-husky")
+        CareJson.setPurchaseDate(doc, LocalDate.of(2023, 5, 1), bikeId = "b-husky")
+        CareJson.setReminders(doc, true)
+
+        val store = CareJson.parseStore(JSONObject(doc.toString()))
+        assertEquals(320, store.forBike("b-level").odometerKm)
+        assertEquals(listOf("a"), store.forBike("b-level").log.map { it.id })
+        assertEquals(90, store.forBike("b-husky").odometerKm, "the entry raised this bike's odometer only")
+        assertEquals(listOf("h"), store.forBike("b-husky").log.map { it.id })
+        assertNull(store.forBike("b-level").purchaseDate)
+        assertTrue(store.forBike("b-husky").remindersEnabled, "the reminder switch is global")
+        assertEquals(CareData(remindersEnabled = true), store.forBike("b-new"), "a bike without data starts empty")
+
+        // What an older release reads: the top-level data, untouched by the other bike.
+        assertEquals(320, doc.getJSONObject("settings").getInt("odometerKm"))
+        assertEquals(1, doc.getJSONArray("log").length())
+    }
+
+    @Test
+    fun `the legacy bike is claimed once and never moved`() {
+        val doc = CareJson.newDocument()
+        CareJson.claimLegacyBike(doc, "first")
+        CareJson.claimLegacyBike(doc, "second")
+        assertEquals("first", CareJson.legacyBikeId(doc))
+    }
+
+    @Test
+    fun `deleting an entry of one bike leaves the other bike alone`() {
+        val doc = CareJson.newDocument()
+        CareJson.claimLegacyBike(doc, "b1")
+        CareJson.saveEntry(doc, entry("x", 10, "screws"), today, bikeId = "b1")
+        CareJson.saveEntry(doc, entry("x", 10, "screws"), today, bikeId = "b2")
+        CareJson.deleteEntry(doc, "x", bikeId = "b2")
+        val store = CareJson.parseStore(doc)
+        assertEquals(1, store.forBike("b1").log.size)
+        assertTrue(store.forBike("b2").log.isEmpty())
+    }
+
+    @Test
     fun `entry validation`() {
         fun v(date: LocalDate = today, km: String = "320", tasks: List<String> = listOf("screws"), note: String = "") =
             EntryValidation.validate(date, km, tasks, note, today)

@@ -68,6 +68,10 @@ Santa Cruz Megatower 90, Trek Slash 9.8 XT Di2 Gen 6, Cube Stereo C:62 SLT und Y
 [`research/`](research/README.md). Die Dämpfer dieser Bikes sind nicht im Katalog (Luftdämpfer oder
 keine veröffentlichten Gesamtklicks) und werden als eigenes Teil vorbefüllt.
 
+**Husqvarna Mountain Cross MC2 2023** ([Herstellerseite, Spezifikationen](https://www.husqvarna-bicycles.com/de-at/models/offroad/mountain-cross/mountain-cross-mc22023.html), abgerufen 2026-10-02): RockShox 35 Gold RL (150 mm), RockShox Deluxe Select+ **Luft** 230×62,5 mm, Motor Shimano EP6. Bei den Bikes oben, deren Recherche-Notiz „Air shock" sagt, ist der Dämpfer jetzt als Luftdämpfer markiert.
+
+**Luftdämpfer:** RockShox veröffentlicht keine Drucktabelle für Dämpfer — der Druck wird über den Sag eingestellt, Startpunkt ist der Rahmenhersteller ([RockShox Support](https://support.rockshox.com/hc/en-us/articles/4412440335643-How-much-air-should-I-have-in-my-RockShox-rear-shock-for-my-rider-weight)). Die App startet deshalb mit einer Faustregel (Fahrergewicht mit Ausrüstung in lbs, auf 5 psi gerundet, temperaturkorrigiert wie die Gabel) und zeigt das als „Startwert", nie als Herstellerwert.
+
 ## Drehrichtung (Change 01 — safety fix)
 
 Der Klick-Zähler zählt vom geschlossenen Anschlag aus offen. `+` auf dem Bildschirm hieß früher

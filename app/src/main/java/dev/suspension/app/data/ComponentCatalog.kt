@@ -47,15 +47,20 @@ data class ForkModel(
     val isCustom: Boolean get() = id == CUSTOM_ID
 }
 
+/** How a rear shock is sprung: coil (spring rate in lbs) or air (pressure in psi). */
+enum class SpringType { COIL, AIR }
+
 /**
- * A coil shock's tuning envelope. There's deliberately no spring-rate-by-weight table here:
+ * A rear shock's tuning envelope. There's deliberately no spring-rate-by-weight table here:
  * the right rate depends on the frame's leverage ratio (RockShox says so explicitly), so the
- * recommendation lives in [BikeProfile.springRule], calibrated per frame.
+ * recommendation lives in [BikeProfile.springRule], calibrated per frame. Air shocks have no
+ * pressure chart either (RockShox: set by sag, frame maker first).
  */
 data class ShockModel(
     val id: String,
     val displayName: String,
-    val strokeMm: Int,
+    /** Stroke in mm; can be fractional (e.g. 62.5). */
+    val strokeMm: Double,
     val eyeToEyeMm: Int,
     val lscMax: Int,
     val hscMax: Int?,
@@ -76,8 +81,10 @@ data class ShockModel(
     val provenance: Map<String, Provenance> = emptyMap(),
     /** Custom part prefilled from a catalog bike's stock part: the click ranges are placeholders the rider should check. */
     val needsCheck: Boolean = false,
+    val spring: SpringType = SpringType.COIL,
 ) {
     val isCustom: Boolean get() = id == CUSTOM_ID
+    val isAir: Boolean get() = spring == SpringType.AIR
 }
 
 const val CUSTOM_ID = "custom"

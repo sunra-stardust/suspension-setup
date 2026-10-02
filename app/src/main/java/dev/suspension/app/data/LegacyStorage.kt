@@ -98,7 +98,7 @@ object LegacyStorage {
         }
         bike.customShock?.let { s ->
             put(CUSTOM_SHOCK_NAME, s.displayName)
-            put(CUSTOM_SHOCK_STROKE, s.strokeMm)
+            put(CUSTOM_SHOCK_STROKE, kotlin.math.round(s.strokeMm).toInt())
             put(CUSTOM_SHOCK_E2E, s.eyeToEyeMm)
             put(CUSTOM_SHOCK_LSC, s.lscMax)
             put(CUSTOM_SHOCK_HSC, s.hscMax ?: -1)
@@ -174,7 +174,7 @@ object LegacyStorage {
     private fun customShock(s: Map<String, Any>, profile: BikeProfile) = ShockModel(
         id = CUSTOM_ID,
         displayName = (s[CUSTOM_SHOCK_NAME] as? String)?.takeIf { it.isNotBlank() } ?: "",
-        strokeMm = s[CUSTOM_SHOCK_STROKE] as? Int ?: 65,
+        strokeMm = (s[CUSTOM_SHOCK_STROKE] as? Int ?: 65).toDouble(),
         eyeToEyeMm = s[CUSTOM_SHOCK_E2E] as? Int ?: 205,
         lscMax = s[CUSTOM_SHOCK_LSC] as? Int ?: 16,
         hscMax = (s[CUSTOM_SHOCK_HSC] as? Int ?: 8).takeIf { it >= 0 },
@@ -190,11 +190,14 @@ object LegacyStorage {
 
 /** Resolves a bike's fork and shock: catalog entry, the rider's own model, or the profile's stock part. */
 object BikeParts {
-    /** The spring rate the bike shows in Basis — what a new bike created from it starts with. */
+    /**
+     * The spring rate the bike shows in Basis — what a new bike created from it starts with. An air
+     * shock has no spring row; the profile's stock spring is the neutral fallback then.
+     */
     fun installedSpringLbs(bike: Bike, weightKg: Double, tempC: Int): Double {
         val profile = profile(bike)
         val row = ScenarioData.buildShockGroup(shock(bike, profile), weightKg, tempC, profile).rows
-            .filterIsInstance<RowSpec.Stepper>().first { it.id == "s_rate" }
+            .filterIsInstance<RowSpec.Stepper>().firstOrNull { it.id == "s_rate" } ?: return profile.stockSpringLbs
         return RowValues.stepper(row, bike.editsFor(Scenario.BASIS.tag)[row.id])
     }
 
@@ -211,8 +214,18 @@ object BikeParts {
     fun customFork(bike: Bike, profile: BikeProfile): ForkModel =
         bike.customFork ?: stockFork(profile).copy(id = CUSTOM_ID, displayName = "", modelYears = emptyList(), provenance = emptyMap())
 
-    fun customShock(bike: Bike, profile: BikeProfile): ShockModel =
-        bike.customShock ?: stockShock(profile).copy(id = CUSTOM_ID, displayName = "", maker = null, modelYears = emptyList(), provenance = emptyMap())
+    fun customShock(bike: Bike, profile: BikeProfile): ShockModel {
+        val stored = bike.customShock
+            ?: return stockShock(profile).copy(id = CUSTOM_ID, displayName = "", maker = null, modelYears = emptyList(), provenance = emptyMap())
+        // Bikes created before the catalog knew air shocks stored the stock shock as coil. While the
+        // rider hasn't confirmed the prefilled part (needsCheck), the catalog's spring type wins.
+        val stockSpring = bike.catalogBikeId?.let(ComponentCatalog::bikeById)?.stockShock?.spring
+        return if (stored.needsCheck && stockSpring == SpringType.AIR && !stored.isAir) {
+            stored.copy(spring = SpringType.AIR, customSpringLbs = null)
+        } else {
+            stored
+        }
+    }
 
     /** A stored id that's no longer in the catalog (e.g. a removed model) falls back to the stock part. */
     fun fork(bike: Bike, profile: BikeProfile): ForkModel =

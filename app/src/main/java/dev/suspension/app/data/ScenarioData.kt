@@ -102,6 +102,8 @@ private val REBOUND_DELTAS = listOf(0.0, 0.0, -1.0, 1.0, 0.0)
 private val FORK_SAG_FRACTION = listOf(32.0, 30.0, 27.0, 34.0, 32.0).map { it / 180.0 }
 private val SHOCK_SAG_FRACTION = listOf(19.5, 18.0, 17.0, 21.0, 18.0).map { it / 65.0 }
 
+private const val LBS_PER_KG = 2.20462
+
 /** Coil springs are sold in 25 lbs steps (Fox, RockShox). */
 private const val SPRING_STEP_LBS = 25.0
 
@@ -132,7 +134,7 @@ private fun chartRebound(chartValue: Double, max: Int, refMax: Int, tempC: Int):
     return REBOUND_DELTAS.map { (chartValue + it + shift).coerceIn(0.0, max.toDouble()) }
 }
 
-private fun sagDefaults(fractions: List<Double>, travelMm: Int, step: Double): List<Double> =
+private fun sagDefaults(fractions: List<Double>, travelMm: Double, step: Double): List<Double> =
     fractions.map { roundToStep(it * travelMm, step) }
 
 /**
@@ -141,6 +143,26 @@ private fun sagDefaults(fractions: List<Double>, travelMm: Int, step: Double): L
  * offsets are the owner's. Values are starting points, not manufacturer guarantees.
  */
 object ScenarioData {
+
+    /**
+     * Air shock: no maker publishes a pressure chart (RockShox: set by sag, frame maker first), so the
+     * start is the app's rule of thumb — rider weight with gear in lbs, rounded to 5 psi — shown as
+     * "Startwert" and corrected for the riding temperature like the fork.
+     */
+    private fun airPressureRow(weightKg: Double, tempC: Int): RowSpec.Stepper {
+        val basePsi = roundToStep(weightKg * LBS_PER_KG, 5.0)
+        val fill = roundToStep(TemperatureModel.fillPressure(basePsi, tempC, TemperatureModel.ATMOSPHERE_PSI), 1.0)
+        val hint = if (tempC == REFERENCE_TEMP_C) {
+            TextSpec.Format(R.string.hint_s_psi_air, listOf(basePsi.roundToInt()))
+        } else {
+            TextSpec.Format(R.string.hint_s_psi_air_temp, listOf(basePsi.roundToInt(), tempC))
+        }
+        return RowSpec.Stepper(
+            id = "s_psi", labelResId = R.string.label_f_psi, unitResId = R.string.unit_psi,
+            stripe = Stripe.SPRING, step = 5.0, max = null,
+            defaults = List(Scenario.count) { fill }, hint = hint,
+        )
+    }
 
     fun buildForkGroup(fork: ForkModel, weightKg: Double, tempC: Int): Group {
         val bracket = WeightBrackets.indexFor(weightKg)
@@ -189,7 +211,7 @@ object ScenarioData {
                 RowSpec.Stepper(
                     id = "f_sag", labelResId = R.string.label_sag, unitResId = R.string.unit_mm,
                     stripe = Stripe.SPRING, step = 1.0, max = fork.travelMm.toDouble(),
-                    defaults = sagDefaults(FORK_SAG_FRACTION, fork.travelMm, 1.0),
+                    defaults = sagDefaults(FORK_SAG_FRACTION, fork.travelMm.toDouble(), 1.0),
                     hint = null, derivedPercentDivisor = fork.travelMm.toDouble(),
                 ),
             )
@@ -268,7 +290,17 @@ object ScenarioData {
         )
     }
 
-    fun buildShockGroup(shock: ShockModel, weightKg: Double, tempC: Int, bike: BikeProfile): Group {
+    /**
+     * [ebike]: whether the bike has a motor (hint wording); defaults to what the frame profile knows.
+     * Air shocks get a pressure row instead of spring rate and preload.
+     */
+    fun buildShockGroup(
+        shock: ShockModel,
+        weightKg: Double,
+        tempC: Int,
+        bike: BikeProfile,
+        ebike: Boolean = Trait.EBIKE_BOSCH in bike.equipment || Trait.EBIKE in bike.equipment,
+    ): Group {
         val installedLbs = shock.customSpringLbs ?: bike.stockSpringLbs
         val recommendedLbs = bike.springRule?.recommendedLbs(weightKg)
         val rateHint = when {
@@ -278,6 +310,9 @@ object ScenarioData {
         }
 
         val rows = buildList<RowSpec> {
+            if (shock.isAir) {
+                add(airPressureRow(weightKg, tempC))
+            } else {
             add(
                 RowSpec.Stepper(
                     id = "s_rate", labelResId = R.string.label_s_rate, unitResId = R.string.unit_lbs,
@@ -296,19 +331,22 @@ object ScenarioData {
                     referenceMaker = shock.maker.takeIf { shock.preloadHintResId == R.string.hint_s_pre_fox },
                 ),
             )
+            }
             add(
                 RowSpec.Stepper(
                     id = "s_sag", labelResId = R.string.label_sag, unitResId = R.string.unit_mm,
-                    stripe = Stripe.SPRING, step = 0.5, max = shock.strokeMm.toDouble(),
+                    stripe = Stripe.SPRING, step = 0.5, max = shock.strokeMm,
                     defaults = sagDefaults(SHOCK_SAG_FRACTION, shock.strokeMm, 0.5),
-                    hint = null, derivedPercentDivisor = shock.strokeMm.toDouble(),
+                    hint = null, derivedPercentDivisor = shock.strokeMm,
                 ),
             )
             add(
                 RowSpec.Stepper(
                     id = "s_lsc", labelResId = R.string.label_lsc, unitResId = null,
                     stripe = Stripe.COMP, step = 1.0, max = shock.lscMax.toDouble(),
-                    defaults = clicks(SHOCK_LSC, shock.lscMax, tempC), hint = TextSpec.Res(R.string.hint_s_lsc),
+                    defaults = clicks(SHOCK_LSC, shock.lscMax, tempC),
+                    // "Einsacken unter Motorlast" only where the app knows there is a motor.
+                    hint = TextSpec.Res(if (ebike) R.string.hint_s_lsc else R.string.hint_s_lsc_generic),
                 ),
             )
             shock.hscMax?.let { hscMax ->
@@ -363,7 +401,7 @@ object ScenarioData {
         }
 
         return Group(
-            heading = TextSpec.Format(R.string.group_shock_template, listOf(shock.displayName, shock.eyeToEyeMm, shock.strokeMm)),
+            heading = TextSpec.Format(R.string.group_shock_template, listOf(shock.displayName, shock.eyeToEyeMm, TextSpec.Decimal(shock.strokeMm, 0.5))),
             rows = rows,
             component = ComponentKind.SHOCK,
         )

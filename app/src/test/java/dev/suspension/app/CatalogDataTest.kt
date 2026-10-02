@@ -6,6 +6,7 @@ import dev.suspension.app.data.ComponentCatalog
 import dev.suspension.app.data.ForkModel
 import dev.suspension.app.data.ReboundMode
 import dev.suspension.app.data.ShockModel
+import dev.suspension.app.data.SpringType
 import dev.suspension.app.data.StockPart
 import dev.suspension.app.data.WeightChart
 import org.junit.jupiter.api.Assertions.assertEquals
@@ -53,7 +54,7 @@ class CatalogDataTest {
 
     private fun shock(id: String, name: String, lsc: Int, hsc: Int?, mode: ReboundMode, reb: Int, hsr: Int?, lever: Boolean, fox: Boolean) =
         ShockModel(
-            id = id, displayName = name, strokeMm = 65, eyeToEyeMm = 205,
+            id = id, displayName = name, strokeMm = 65.0, eyeToEyeMm = 205,
             lscMax = lsc, hscMax = hsc, reboundMode = mode, reboundMax = reb, hsrMax = hsr, hasClimbLever = lever,
             preloadHintResId = if (fox) R.string.hint_s_pre_fox else R.string.hint_s_pre_generic,
             preloadRangeResId = if (fox) R.string.range_preload_fox else R.string.range_preload_generic,
@@ -145,23 +146,35 @@ class CatalogDataTest {
     fun `bikes from the 2026-09 research sample keep their verified stock parts`() {
         fun part(id: String, fork: Boolean) = ComponentCatalog.bikeById(id)!!.let { if (fork) it.stockFork else it.stockShock }
         assertEquals(StockPart(null, "Fox 36 Performance Elite", travelMm = 150), part("canyon_spectral_cf_8_2027", fork = true))
-        assertEquals(StockPart(null, "Fox Float X Performance Elite", eyeToEyeMm = 210, strokeMm = 55), part("canyon_spectral_cf_8_2027", fork = false))
+        assertEquals(StockPart(null, "Fox Float X Performance Elite", eyeToEyeMm = 210, strokeMm = 55.0, spring = SpringType.AIR), part("canyon_spectral_cf_8_2027", fork = false))
         assertEquals(StockPart(null, "RockShox ZEB Select+", travelMm = 180), part("canyon_torque_al_8_2027", fork = true))
-        assertEquals(StockPart(null, "RockShox Vivid Select+", eyeToEyeMm = 250, strokeMm = 70), part("canyon_torque_al_8_2027", fork = false))
+        assertEquals(StockPart(null, "RockShox Vivid Select+", eyeToEyeMm = 250, strokeMm = 70.0, spring = SpringType.AIR), part("canyon_torque_al_8_2027", fork = false))
         assertEquals(StockPart(null, "Fox 38 Float Performance Grip", travelMm = 170), part("santacruz_megatower_90_2026", fork = true))
-        assertEquals(StockPart(null, "Fox Float X Performance", eyeToEyeMm = 230, strokeMm = 65), part("santacruz_megatower_90_2026", fork = false))
+        assertEquals(StockPart(null, "Fox Float X Performance", eyeToEyeMm = 230, strokeMm = 65.0, spring = SpringType.AIR), part("santacruz_megatower_90_2026", fork = false))
         assertEquals(StockPart(null, "RockShox ZEB Select+", travelMm = 170), part("trek_slash_98_xt_di2_gen6", fork = true))
-        assertEquals(StockPart(null, "RockShox Vivid Select+", eyeToEyeMm = 230, strokeMm = 65), part("trek_slash_98_xt_di2_gen6", fork = false))
+        assertEquals(StockPart(null, "RockShox Vivid Select+", eyeToEyeMm = 230, strokeMm = 65.0, spring = SpringType.AIR), part("trek_slash_98_xt_di2_gen6", fork = false))
         assertEquals(StockPart(null, "Fox 36 Float Factory GRIP X2", travelMm = 150), part("cube_stereo_c62_slt_2027", fork = true))
-        assertEquals(StockPart(null, "Fox Float X Factory", eyeToEyeMm = 210, strokeMm = 55), part("cube_stereo_c62_slt_2027", fork = false))
+        assertEquals(StockPart(null, "Fox Float X Factory", eyeToEyeMm = 210, strokeMm = 55.0, spring = SpringType.AIR), part("cube_stereo_c62_slt_2027", fork = false))
         assertEquals(StockPart("ohlins_rxf38_m2_170", "Öhlins RXF38 m.2", travelMm = 170), part("yt_capra_mx_core3_cf", fork = true))
-        assertEquals(StockPart(null, "Öhlins TTX22 m.2", eyeToEyeMm = 230, strokeMm = 65), part("yt_capra_mx_core3_cf", fork = false))
+        assertEquals(StockPart(null, "Öhlins TTX22 m.2", eyeToEyeMm = 230, strokeMm = 65.0), part("yt_capra_mx_core3_cf", fork = false))
 
         val capra = ComponentCatalog.bikeById("yt_capra_mx_core3_cf")!!
         assertEquals(mapOf("S" to 343.0, "M" to 365.0, "L" to 388.0, "XL" to 411.0, "XXL" to 434.0), capra.springLbsBySize)
         assertEquals("YT Industries Capra MX Core 3 CF", capra.displayName)
         assertEquals("Trek Slash 9.8 XT Di2 Gen 6", ComponentCatalog.bikeById("trek_slash_98_xt_di2_gen6")!!.displayName)
-        assertEquals(listOf("Canyon", "Cube", "Mondraker", "Santa Cruz", "Trek", "YT Industries"), ComponentCatalog.bikeMakers)
+        assertEquals(listOf("Canyon", "Cube", "Husqvarna", "Mondraker", "Santa Cruz", "Trek", "YT Industries"), ComponentCatalog.bikeMakers)
+    }
+
+    @Test
+    fun `the Husqvarna Mountain Cross MC2 2023 has its stock parts, air shock and motor`() {
+        val mc2 = ComponentCatalog.bikeById("husqvarna_mountain_cross_mc2_2023")!!
+        assertEquals("Husqvarna Mountain Cross MC2 2023", mc2.displayName)
+        assertEquals(StockPart(null, "RockShox 35 Gold RL", travelMm = 150), mc2.stockFork)
+        assertEquals(StockPart(null, "RockShox Deluxe Select+", eyeToEyeMm = 230, strokeMm = 62.5, spring = SpringType.AIR), mc2.stockShock)
+        assertEquals("Shimano EP6, DU-EP600", mc2.motor)
+        assertEquals("husqvarna-mc2-2023", mc2.provenance.getValue("motor").source.id)
+        assertEquals(listOf(2023), mc2.provenance.getValue("stockShock").source.modelYears)
+        assertTrue(mc2.springLbsBySize.isEmpty(), "air shock: no spring per size")
     }
 
     @Test

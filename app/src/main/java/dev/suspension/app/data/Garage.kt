@@ -176,11 +176,14 @@ object GarageJson {
         .put("climbLever", s.hasClimbLever)
         .put("springLbs", s.customSpringLbs ?: JSONObject.NULL)
         .apply { if (s.needsCheck) put("needsCheck", true) }
+        // Additive key: older releases ignore it and treat the shock as coil.
+        .apply { if (s.isAir) put("spring", "air") }
 
     private fun parseCustomShock(o: JSONObject) = ShockModel(
         id = CUSTOM_ID,
         displayName = o.optString("name", ""),
-        strokeMm = o.getInt("strokeMm"),
+        // Written as a decimal since strokes like 62.5 exist; older releases read it with getInt (62).
+        strokeMm = o.getDouble("strokeMm"),
         eyeToEyeMm = o.getInt("eyeToEyeMm"),
         lscMax = o.getInt("lscMax"),
         hscMax = o.optIntOrNull("hscMax"),
@@ -192,6 +195,7 @@ object GarageJson {
         preloadHintResId = dev.suspension.app.R.string.hint_s_pre_generic,
         preloadRangeResId = dev.suspension.app.R.string.range_preload_generic,
         needsCheck = o.optBoolean("needsCheck", false),
+        spring = if (o.optString("spring") == "air") SpringType.AIR else SpringType.COIL,
     )
 
     /** A fresh document: one bike on its stock parts, the built-in Vorlagen, no edits. */

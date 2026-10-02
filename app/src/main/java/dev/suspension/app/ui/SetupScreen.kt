@@ -26,6 +26,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import dev.suspension.app.R
+import dev.suspension.app.data.BikeTraits
+import dev.suspension.app.data.Trait
 import dev.suspension.app.data.BikeProfile
 import dev.suspension.app.data.ComponentKind
 import dev.suspension.app.data.Deviation
@@ -74,6 +76,8 @@ fun SetupScreen(
     onOpenForkPicker: () -> Unit,
     onOpenShockPicker: () -> Unit,
     bikeName: String,
+    /** What the app knows about this bike's parts (motor, Fox, air shock). */
+    traits: BikeTraits,
     onOpenBikes: () -> Unit,
     onAddVorlage: (name: String) -> Unit,
     onRenameVorlage: (Vorlage, name: String) -> Unit,
@@ -87,7 +91,7 @@ fun SetupScreen(
     val groups = remember(fork, shock, weightKg, tempC, bike) {
         listOfNotNull(
             ScenarioData.buildForkGroup(fork, weightKg, tempC),
-            ScenarioData.buildShockGroup(shock, weightKg, tempC, bike),
+            ScenarioData.buildShockGroup(shock, weightKg, tempC, bike, ebike = traits.has(Trait.EBIKE)),
             ScenarioData.buildTiresGroup(bike, tempC),
             ScenarioData.buildFrameGroup(bike),
         )
@@ -182,7 +186,11 @@ fun SetupScreen(
             }
             item {
                 Text(
-                    text = stringResource(R.string.setup_footer_note),
+                    text = stringResource(
+                        // The ridefox.com tip only helps when there is a Fox part on the bike.
+                        if (traits.foxOnBike) R.string.setup_footer_note
+                        else R.string.setup_footer_note_generic,
+                    ),
                     style = type.rowHint,
                     color = colors.dim,
                 )
