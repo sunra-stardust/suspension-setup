@@ -1,0 +1,770 @@
+{
+  "maker": "specialized",
+  "models": [
+    {
+      "id": "specialized-stumpjumper-15",
+      "name": "Specialized Stumpjumper 15",
+      "modelYears": [],
+      "fields": {
+        "modelYearEvidence": {
+          "value": null,
+          "status": "missing",
+          "note": "Model year not printed on the product page or in the 2025 user manual (manual title only says 2025, file name year is not a model-year statement for this build). Stumpjumper 15 page carries no MY key."
+        },
+        "rearTravelMm": {
+          "value": 145,
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STUMPJUMPER_CARBON_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "Rear wheel travel 145 mm",
+          "where": "PDF p. 11, section 4.2 Component compatibility"
+        },
+        "forkTravelMm": {
+          "value": {
+            "S1": 140,
+            "S2-S6": 150
+          },
+          "status": "single",
+          "url": "https://www.specialized.com/us/en/stumpjumper-15-pro-sram-x0-axs-fox-factory/p/4221403",
+          "retrieved": "2026-11-01",
+          "quote": "S1:140mm of travel, S2-S6:150mm of travel",
+          "where": "product page, Specs > Suspension > Fork"
+        },
+        "forkTravelRangeMm": {
+          "value": {
+            "S1": [
+              140,
+              150
+            ],
+            "S2-S6": [
+              150,
+              160
+            ]
+          },
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STUMPJUMPER_CARBON_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "Min / max fork travel S1: 140 mm / 150 mm S2-6: 150 mm / 160 mm",
+          "where": "PDF p. 11, section 4.2"
+        },
+        "wheelSize": {
+          "value": {
+            "S1-S2": "mixed (rear 27.5\")",
+            "S3-S6": "29\" or mixed"
+          },
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STUMPJUMPER_CARBON_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "S1 and S2 bicycles are only compatible with a mixed wheel setup, S3-S6 are compatible with a 29 inch or mixed wheel setup.",
+          "where": "PDF p. 7, section 3 Geometry footnote"
+        },
+        "sizes": {
+          "value": [
+            "S1",
+            "S2",
+            "S3",
+            "S4",
+            "S5",
+            "S6"
+          ],
+          "status": "single",
+          "url": "https://www.specialized.com/us/en/stumpjumper-15-pro-sram-x0-axs-fox-factory/p/4221403",
+          "retrieved": "2026-11-01",
+          "quote": "S1 S2 S3 S4 S5 S6",
+          "where": "product page, Size selector"
+        },
+        "shockEyeToEyeMm": {
+          "value": {
+            "S1": 210,
+            "S2-S6": 210
+          },
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STUMPJUMPER_CARBON_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "Shock length / stroke S1: 210 mm / 52.5 mm S2-6: 210 mm / 55 mm",
+          "where": "PDF p. 11, section 4.2"
+        },
+        "shockStrokeMm": {
+          "value": {
+            "S1": 52.5,
+            "S2-S6": 55
+          },
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STUMPJUMPER_CARBON_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "Shock length / stroke S1: 210 mm / 52.5 mm S2-6: 210 mm / 55 mm",
+          "where": "PDF p. 11, section 4.2"
+        },
+        "shockMount": {
+          "value": null,
+          "status": "missing",
+          "note": "Mount type (standard eye / trunnion) not named on product page or in the Stumpjumper Carbon user manual (spec lists only length x stroke)."
+        },
+        "stockForkBySpec": {
+          "value": {
+            "Pro (SRAM X0 AXS)": "FOX FLOAT 36 Factory, GRIP X2"
+          },
+          "status": "single",
+          "url": "https://www.specialized.com/us/en/stumpjumper-15-pro-sram-x0-axs-fox-factory/p/4221403",
+          "retrieved": "2026-11-01",
+          "quote": "FOX FLOAT 36 Factory, GRIP X2 damper, HS and LS rebound and compression adjustment, 15x110mm QR axle, 44mm offset, S1:140mm of travel, S2-S6:150mm of travel",
+          "where": "product page, Specs > Suspension > Fork"
+        },
+        "stockShockBySpec": {
+          "value": {
+            "Pro (SRAM X0 AXS)": "FOX FLOAT Factory with Specialized GENIE Shock Tech, 210x52.5 (S1) / 210x55 (S2-S6)"
+          },
+          "status": "single",
+          "url": "https://www.specialized.com/us/en/stumpjumper-15-pro-sram-x0-axs-fox-factory/p/4221403",
+          "retrieved": "2026-11-01",
+          "quote": "FOX FLOAT Factory with Specialized GENIE Shock Tech, Ride Dynamics Trail Tune, 2-position lever w/3 setting Open mode tuning range, LSR adjustment, S1:210x52.5mm, S2-S6:210x55mm",
+          "where": "product page, Specs > Suspension > Rear Shock"
+        },
+        "springRateBySize": {
+          "value": null,
+          "status": "missing",
+          "note": "Stock shock is an air shock (GENIE); the manual's coil spring-rate chart (11.7) is generic for coil builds, not tied to this build."
+        },
+        "sagPercent": {
+          "value": 30,
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STUMPJUMPER_CARBON_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "The recommended shock sag is 16 mm (30%).",
+          "where": "PDF p. 36-37, sections 11.2/11.3"
+        },
+        "sagMm": {
+          "value": 16,
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STUMPJUMPER_CARBON_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "The recommended shock sag is 16 mm (30%).",
+          "where": "PDF p. 36-37, sections 11.2/11.3"
+        },
+        "airPressureSetup": {
+          "value": null,
+          "status": "missing",
+          "note": "Manual defers to the Specialized suspension calculator (www.specialized.com) for pressures; no pressure table printed."
+        },
+        "setupGuideUrl": {
+          "value": "https://media.specialized.com/support/collateral/2025_STUMPJUMPER_CARBON_USER_MANUAL_ENGLISH.pdf",
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STUMPJUMPER_CARBON_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "Please visit the suspension calculator tool at www.specialized. com. The suspension calculator provides a personalized baseline suspension setup recommendation based upon your specific height and weight.",
+          "where": "PDF p. 35, section 11.1 Shock setup"
+        },
+        "flipChip": {
+          "value": "Horst pivot flip chips high/low (chainstay length, BB height) + headset cups; ships high, 0° cup",
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STUMPJUMPER_CARBON_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "Your bicycle ships factory standard with the Horst pivot flip chips in high position, and a 0° headset cup installed.",
+          "where": "PDF p. 7, section 3 Geometry; adjustment in section 10"
+        }
+      }
+    },
+    {
+      "id": "specialized-stumpjumper-15-evo",
+      "name": "Specialized Stumpjumper 15 EVO",
+      "modelYears": [],
+      "fields": {
+        "modelYearEvidence": {
+          "value": "MY27",
+          "status": "single",
+          "url": "https://www.specialized.com/us/en/stumpjumper-15-evo-pro/p/4263534",
+          "retrieved": "2026-11-01",
+          "quote": "PDP-MY27-SJ-EVO-ONWHT",
+          "where": "page source: content slot key (amplienceDeliveryKeys); only a weak hint, not a stated model year"
+        },
+        "rearTravelMm": {
+          "value": 145,
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STUMPJUMPER_CARBON_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "Rear wheel travel 145 mm",
+          "where": "PDF p. 11, section 4.2 Component compatibility"
+        },
+        "forkTravelMm": {
+          "value": {
+            "S1": 140,
+            "S2-S6": 160
+          },
+          "status": "single",
+          "url": "https://www.specialized.com/us/en/stumpjumper-15-evo-pro/p/4263534",
+          "retrieved": "2026-11-01",
+          "quote": "All New SRAM Rockshox Lyrik Ultimate, 29\" 160mm (S2-S6)",
+          "where": "product page, Specs > Suspension > Fork (S1 fork travel from manual: 'Size S1 bicycles ship factory standard with a 140 mm travel fork')"
+        },
+        "forkTravelRangeMm": {
+          "value": {
+            "S1": [
+              140,
+              150
+            ],
+            "S2-S6": [
+              150,
+              160
+            ]
+          },
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STUMPJUMPER_CARBON_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "Min / max fork travel S1: 140 mm / 150 mm S2-6: 150 mm / 160 mm",
+          "where": "PDF p. 11, section 4.2"
+        },
+        "wheelSize": {
+          "value": {
+            "S1-S2": "mixed (rear 27.5\")",
+            "S3-S6": "29\" or mixed"
+          },
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STUMPJUMPER_CARBON_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "S1 and S2 bicycles are only compatible with a mixed wheel setup, S3-S6 are compatible with a 29 inch or mixed wheel setup.",
+          "where": "PDF p. 7, section 3 Geometry footnote"
+        },
+        "sizes": {
+          "value": [
+            "S1",
+            "S2",
+            "S3",
+            "S4",
+            "S5",
+            "S6"
+          ],
+          "status": "single",
+          "url": "https://www.specialized.com/us/en/stumpjumper-15-evo-pro/p/4263534",
+          "retrieved": "2026-11-01",
+          "quote": "S1 S2 S3 S4 S5 S6",
+          "where": "product page, Size selector"
+        },
+        "shockEyeToEyeMm": {
+          "value": {
+            "S1": 210,
+            "S2-S6": 210
+          },
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STUMPJUMPER_CARBON_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "Shock length / stroke S1: 210 mm / 52.5 mm S2-6: 210 mm / 55 mm",
+          "where": "PDF p. 11, section 4.2"
+        },
+        "shockStrokeMm": {
+          "value": {
+            "S1": 52.5,
+            "S2-S6": 55
+          },
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STUMPJUMPER_CARBON_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "Shock length / stroke S1: 210 mm / 52.5 mm S2-6: 210 mm / 55 mm",
+          "where": "PDF p. 11, section 4.2"
+        },
+        "shockMount": {
+          "value": null,
+          "status": "missing",
+          "note": "Mount type (standard eye / trunnion) not named on product page or in the Stumpjumper Carbon user manual (spec lists only length x stroke)."
+        },
+        "stockForkBySpec": {
+          "value": {
+            "EVO Pro": "RockShox Lyrik Ultimate"
+          },
+          "status": "single",
+          "url": "https://www.specialized.com/us/en/stumpjumper-15-evo-pro/p/4263534",
+          "retrieved": "2026-11-01",
+          "quote": "All New SRAM Rockshox Lyrik Ultimate, 29\" 160mm (S2-S6)",
+          "where": "product page, Specs > Suspension > Fork"
+        },
+        "stockShockBySpec": {
+          "value": {
+            "EVO Pro": "RockShox Super Deluxe Ultimate GENIE (RC2T, LSC + HSC, rebound adjust), 210x55mm"
+          },
+          "status": "single",
+          "url": "https://www.specialized.com/us/en/stumpjumper-15-evo-pro/p/4263534",
+          "retrieved": "2026-11-01",
+          "quote": "All New Rockshox Super Deluxe Ultimate GENIE, RC2T damper with (LSC) Low Speed Compression and (HSC) High Speed Compression, GENIE adjustable airspring, rebound adjust, 210x55mm",
+          "where": "product page, Specs > Suspension > Rear Shock"
+        },
+        "springRateBySize": {
+          "value": null,
+          "status": "missing",
+          "note": "Stock shock is an air shock (GENIE); the manual's coil spring-rate chart (11.7) is generic for coil builds, not tied to this build."
+        },
+        "sagPercent": {
+          "value": 30,
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STUMPJUMPER_CARBON_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "The recommended shock sag is 16 mm (30%).",
+          "where": "PDF p. 36-37, sections 11.2/11.3"
+        },
+        "sagMm": {
+          "value": 16,
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STUMPJUMPER_CARBON_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "The recommended shock sag is 16 mm (30%).",
+          "where": "PDF p. 36-37, sections 11.2/11.3"
+        },
+        "airPressureSetup": {
+          "value": null,
+          "status": "missing",
+          "note": "Manual defers to the Specialized suspension calculator (www.specialized.com) for pressures; no pressure table printed."
+        },
+        "setupGuideUrl": {
+          "value": "https://media.specialized.com/support/collateral/2025_STUMPJUMPER_CARBON_USER_MANUAL_ENGLISH.pdf",
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STUMPJUMPER_CARBON_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "Please visit the suspension calculator tool at www.specialized. com. The suspension calculator provides a personalized baseline suspension setup recommendation based upon your specific height and weight.",
+          "where": "PDF p. 35, section 11.1 Shock setup"
+        },
+        "flipChip": {
+          "value": "Horst pivot flip chips high/low (chainstay length, BB height) + headset cups; ships high, 0° cup",
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STUMPJUMPER_CARBON_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "Your bicycle ships factory standard with the Horst pivot flip chips in high position, and a 0° headset cup installed.",
+          "where": "PDF p. 7, section 3 Geometry; adjustment in section 10"
+        }
+      }
+    },
+    {
+      "id": "specialized-enduro",
+      "name": "Specialized Enduro",
+      "modelYears": [],
+      "fields": {
+        "modelYearEvidence": {
+          "value": null,
+          "status": "missing",
+          "note": "Model year not printed on the product page or in the 2025 user manual (manual title only says 2025, file name year is not a model-year statement for this build)."
+        },
+        "rearTravelMm": {
+          "value": 170,
+          "status": "single",
+          "url": "https://www.specialized.com/us/en/enduro-pro/p/4276010",
+          "retrieved": "2026-11-01",
+          "quote": "170mm of travel",
+          "where": "product page, Specs > Frameset > Frame"
+        },
+        "forkTravelMm": {
+          "value": 170,
+          "status": "single",
+          "url": "https://www.specialized.com/us/en/enduro-pro/p/4276010",
+          "retrieved": "2026-11-01",
+          "quote": "RockShox Zeb Ultimate, Charger 3.1 damper, 15x110mm, 44mm offset, 170mm of travel",
+          "where": "product page, Specs > Suspension > Fork"
+        },
+        "forkTravelMaxMm": {
+          "value": 170,
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_ENDURO_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "Max fork travel – 170 mm",
+          "where": "PDF p. 7, section 3.4 General specifications"
+        },
+        "wheelSize": {
+          "value": "29",
+          "status": "single",
+          "url": "https://www.specialized.com/us/en/enduro-pro/p/4276010",
+          "retrieved": "2026-11-01",
+          "quote": "29 S-Sizing Enduro Race Geometry",
+          "where": "product page, Specs > Frame (rear tire 29x2.3\")"
+        },
+        "shockEyeToEyeMm": {
+          "value": 205,
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_ENDURO_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "Shock travel / stroke – 170 mm / 205 mm x 60 mm",
+          "where": "PDF p. 7, section 3.4"
+        },
+        "shockStrokeMm": {
+          "value": 60,
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_ENDURO_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "Shock travel / stroke – 170 mm / 205 mm x 60 mm",
+          "where": "PDF p. 7, section 3.4"
+        },
+        "shockMount": {
+          "value": "Trunnion",
+          "status": "single",
+          "url": "https://www.specialized.com/us/en/enduro-pro/p/4276010",
+          "retrieved": "2026-11-01",
+          "quote": "RockShox Vivid Ultimate, Ride Dynamics Trail Tune, adjustable hydraulic bottom out, adjustable rebound and high/low speed compression, 205x60, Trunnion",
+          "where": "product page, Specs > Suspension > Rear Shock"
+        },
+        "stockForkBySpec": {
+          "value": {
+            "Pro": "RockShox Zeb Ultimate",
+            "Comp": "RockShox Zeb Select"
+          },
+          "status": "single",
+          "url": "https://www.specialized.com/us/en/enduro-pro/p/4276010",
+          "retrieved": "2026-11-01",
+          "quote": "RockShox Zeb Ultimate, Charger 3.1 damper, 15x110mm, 44mm offset, 170mm of travel",
+          "where": "product pages Pro (4276010) and Comp (4276011; 'RockShox Zeb Select, Charger RC damper')"
+        },
+        "stockShockBySpec": {
+          "value": {
+            "Pro": "RockShox Vivid Ultimate",
+            "Comp": "RockShox Vivid Select Plus"
+          },
+          "status": "single",
+          "url": "https://www.specialized.com/us/en/enduro-pro/p/4276010",
+          "retrieved": "2026-11-01",
+          "quote": "RockShox Vivid Ultimate, Ride Dynamics Trail Tune, adjustable hydraulic bottom out, adjustable rebound and high/low speed compression, 205x60, Trunnion",
+          "where": "product pages Pro and Comp (Comp: 'RockShox Vivid Select Plus ... 205x60, Trunnion')"
+        },
+        "springRateBySize": {
+          "value": null,
+          "status": "missing",
+          "note": "Stock shocks are Vivid air; manual gives no coil spring table."
+        },
+        "sagPercent": {
+          "value": "25-30",
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_ENDURO_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "When the pressure is correctly set, sag should measure approximately 25-30% of stroke, depending on rider experience/preference and terrain conditions.",
+          "where": "PDF p. 27 (printed 24), section 8.1 Setting air pressure"
+        },
+        "airPressureSetup": {
+          "value": null,
+          "status": "missing",
+          "note": "Manual defers to the Specialized suspension calculator for pressures; no pressure table printed."
+        },
+        "setupGuideUrl": {
+          "value": "https://media.specialized.com/support/collateral/2025_ENDURO_USER_MANUAL_ENGLISH.pdf",
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_ENDURO_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "Please visit the suspension calculator tool at www.specialized. com. The suspension calculator provides a personalized baseline suspension setup recommendation based upon your specific height and weight.",
+          "where": "PDF p. 27 (printed 24), section 8 Shock setup"
+        },
+        "flipChip": {
+          "value": "Flip chip in rear shock eyelet; ships low; high = BB +~7 mm, head angle ~0.4° steeper",
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_ENDURO_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "All models are assembled with the flip chip in the low position. Switching to the high position raises the bottom bracket height by approximately 7 mm and steepens the head tube angle by approximately 0.4 degrees.",
+          "where": "PDF p. 12 (printed 9), section 4.7"
+        }
+      }
+    },
+    {
+      "id": "specialized-status-2-140",
+      "name": "Status 2 140",
+      "modelYears": [],
+      "fields": {
+        "modelYearEvidence": {
+          "value": null,
+          "status": "missing",
+          "note": "Model year not printed on the product page or in the 2025 user manual (manual title only says 2025, file name year is not a model-year statement for this build)."
+        },
+        "rearTravelMm": {
+          "value": 140,
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STATUS_140_170_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "Rear wheel travel (mm) 140 170",
+          "where": "PDF p. 13 (printed 11), table 140/170 specifications"
+        },
+        "forkTravelMm": {
+          "value": 140,
+          "status": "single",
+          "url": "https://www.specialized.com/us/en/status-2-140/p/4221412",
+          "retrieved": "2026-11-01",
+          "quote": "Marzocchi Z1, GRIP damper, two position Sweep adjustment, 15x110mm Kabolt axle, 44mm offset, 140mm of travel",
+          "where": "product page, Specs > Suspension > Fork"
+        },
+        "forkTravelMaxMm": {
+          "value": 140,
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STATUS_140_170_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "Max fork travel (mm) 140 170",
+          "where": "PDF p. 13 (printed 11)"
+        },
+        "wheelSize": {
+          "value": null,
+          "status": "missing",
+          "note": "Frame wheel size not stated as such; product page lists only rear tire (e.g. 27.5x2.3\" / 27.5X2.4) per build. Not inferred."
+        },
+        "shockEyeToEyeMm": {
+          "value": {
+            "S0-S1": 210,
+            "S2-S5": 210
+          },
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STATUS_140_170_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "Shock length / stroke (mm) S0-S1: 210x50; S0-S1: 230x60; S2-S5: 210x52.5 S2-S5: 230x62.5",
+          "where": "PDF p. 13 (printed 11), table 140 column"
+        },
+        "shockStrokeMm": {
+          "value": {
+            "S0-S1": 50,
+            "S2-S5": 52.5
+          },
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STATUS_140_170_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "Shock length / stroke (mm) S0-S1: 210x50; S0-S1: 230x60; S2-S5: 210x52.5 S2-S5: 230x62.5",
+          "where": "PDF p. 13 (printed 11), table 140 column"
+        },
+        "shockMount": {
+          "value": null,
+          "status": "missing",
+          "note": "Mount type not named on the product page or in the manual spec table."
+        },
+        "stockForkBySpec": {
+          "value": {
+            "Status 2 140": "Marzocchi Z1 GRIP"
+          },
+          "status": "single",
+          "url": "https://www.specialized.com/us/en/status-2-140/p/4221412",
+          "retrieved": "2026-11-01",
+          "quote": "Marzocchi Z1, GRIP damper, two position Sweep adjustment, 15x110mm Kabolt axle, 44mm offset, 140mm of travel",
+          "where": "product page, Specs > Suspension > Fork"
+        },
+        "stockShockBySpec": {
+          "value": {
+            "Status 2 140": "Marzocchi Bomber Air"
+          },
+          "status": "single",
+          "url": "https://www.specialized.com/us/en/status-2-140/p/4221412",
+          "retrieved": "2026-11-01",
+          "quote": "Marzocchi Bomber Air, Ride Dynamics Trail Tune, 2-position non-indexed compression sweep, w/ LSR adjustment, S1:210x50mm, S2-S5:210x52.5mm",
+          "where": "product page, Specs > Suspension > Rear Shock"
+        },
+        "springRateBySize": {
+          "value": null,
+          "status": "missing",
+          "note": "Air shock (Marzocchi Bomber Air); no coil table."
+        },
+        "sagMm": {
+          "value": null,
+          "status": "missing",
+          "note": "Manual contradicts itself: spec table says 'Shock sag (mm) S0-S1: 16; S2-S5: 19' (PDF p. 13) while section 11.2 says 'Recommended sag 16 mm | 18 mm' (PDF p. 36). Not resolved; see sagMmSpecTable / sagMmSetupTable."
+        },
+        "sagMmSpecTable": {
+          "value": {
+            "S0-S1": 16,
+            "S2-S5": 19
+          },
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STATUS_140_170_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "Shock sag (mm) S0-S1: 16; S2-S5: 19",
+          "where": "PDF p. 13 (printed 11), 140 column"
+        },
+        "sagMmSetupTable": {
+          "value": {
+            "S0-S1": 16,
+            "S2-S5": 18
+          },
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STATUS_140_170_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "Recommended sag 16 mm 18 mm",
+          "where": "PDF p. 36 (printed 34), section 11.2 STATUS 140 REAR SHOCK SETUP INFORMATION"
+        },
+        "volumeSpacer": {
+          "value": "0.6 in3",
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STATUS_140_170_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "Volume spacer 0.6 in3 0.6 in3",
+          "where": "PDF p. 36, section 11.2"
+        },
+        "setupGuideUrl": {
+          "value": "https://media.specialized.com/support/collateral/2025_STATUS_140_170_USER_MANUAL_ENGLISH.pdf",
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STATUS_140_170_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "Setting sag",
+          "where": "PDF p. 36-37, sections 11.2/11.3"
+        },
+        "flipChip": {
+          "value": "Horst pivot flip chips high/low; ships high",
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STATUS_140_170_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "All models are assembled with the flip chip in the high position.",
+          "where": "PDF p. 28, section 8 Adjusting the Horst pivot flip chip"
+        }
+      }
+    },
+    {
+      "id": "specialized-status-2-170",
+      "name": "Status 2 170",
+      "modelYears": [],
+      "fields": {
+        "modelYearEvidence": {
+          "value": null,
+          "status": "missing",
+          "note": "Model year not printed on the product page or in the 2025 user manual (manual title only says 2025, file name year is not a model-year statement for this build)."
+        },
+        "rearTravelMm": {
+          "value": 170,
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STATUS_140_170_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "Rear wheel travel (mm) 140 170",
+          "where": "PDF p. 13 (printed 11), table 140/170 specifications"
+        },
+        "forkTravelMm": {
+          "value": null,
+          "status": "missing",
+          "note": "Product page of the 170 DH build lists a 180 mm BoXXer while the manual's 'Max fork travel (mm)' for the 170 is 170; not reconciled, see forkTravelMaxMm."
+        },
+        "forkTravelMaxMm": {
+          "value": 170,
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STATUS_140_170_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "Max fork travel (mm) 140 170",
+          "where": "PDF p. 13 (printed 11)"
+        },
+        "wheelSize": {
+          "value": null,
+          "status": "missing",
+          "note": "Frame wheel size not stated as such; product page lists only rear tire (e.g. 27.5x2.3\" / 27.5X2.4) per build. Not inferred."
+        },
+        "shockEyeToEyeMm": {
+          "value": {
+            "S0-S1": 230,
+            "S2-S5": 230
+          },
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STATUS_140_170_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "Shock length / stroke (mm) S0-S1: 210x50; S0-S1: 230x60; S2-S5: 210x52.5 S2-S5: 230x62.5",
+          "where": "PDF p. 13 (printed 11), table 170 column"
+        },
+        "shockStrokeMm": {
+          "value": {
+            "S0-S1": 60,
+            "S2-S5": 62.5
+          },
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STATUS_140_170_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "Shock length / stroke (mm) S0-S1: 210x50; S0-S1: 230x60; S2-S5: 210x52.5 S2-S5: 230x62.5",
+          "where": "PDF p. 13 (printed 11), table 170 column"
+        },
+        "shockMount": {
+          "value": null,
+          "status": "missing",
+          "note": "Mount type not named on the product page or in the manual spec table."
+        },
+        "stockForkBySpec": {
+          "value": {
+            "Status 2 170 DH": "RockShox BoXXer 29 Charger 3 RC"
+          },
+          "status": "single",
+          "url": "https://www.specialized.com/us/en/status-2-170-dh/p/4291349",
+          "retrieved": "2026-11-01",
+          "quote": "RockShox BoXXer 29, Charger 3 RC damper, adjustable low-speed compression, adjustable rebound, 20x110mm thru-axle, 44mm offset, 180mm of travel",
+          "where": "product page, Specs > Suspension > Fork"
+        },
+        "stockShockBySpec": {
+          "value": {
+            "Status 2 170 DH": "RockShox Vivid Coil, 230x62.5mm",
+            "manual (other builds)": "Fox Float X Performance (S0) / Fox DHX Performance Coil (S1-S5)"
+          },
+          "status": "single",
+          "url": "https://www.specialized.com/us/en/status-2-170-dh/p/4291349",
+          "retrieved": "2026-11-01",
+          "quote": "RockShox Vivid Coil, external rebound adjust, hydraulic bottom out, 230x62.5mm",
+          "where": "product page Specs > Rear Shock; manual PDF p. 37 section 11.3 table 'Shock type'"
+        },
+        "springRateBySize": {
+          "value": null,
+          "status": "missing",
+          "note": "Manual 11.3 lists stock rates only for Fox DHX Performance Coil builds (S1 350, S2 400, S3 450, S4 500, S5 550 lb/in); the product page's Vivid Coil spring rate is not stated, so not applied."
+        },
+        "springRateFoxDhxManual": {
+          "value": {
+            "S1": 350,
+            "S2": 400,
+            "S3": 450,
+            "S4": 500,
+            "S5": 550
+          },
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STATUS_140_170_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "Fox DHX Performance Coil 230 x 62.5 mm 21 mm S2: 400 lb/in S3: 450 lb/in S4: 500 lb/in S5: 550 lb/in",
+          "where": "PDF p. 37 (printed 35), section 11.3 (S1: 350 lb/in)"
+        },
+        "sagMm": {
+          "value": {
+            "S0-S1": 19,
+            "S2-S5": 21
+          },
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STATUS_140_170_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "Shock sag (mm) S0-S1: 16; S2-S5: 19 S0-S1: 19; S2-S5: 21",
+          "where": "PDF p. 13 (printed 11), 170 column; consistent with section 11.3 (19 mm / 21 mm)"
+        },
+        "riderWeightSpringTable": {
+          "value": {
+            "unit": "lb/in",
+            "rows": [
+              {
+                "rider": "54-64 kg (120-140 lb)",
+                "value": 350
+              },
+              {
+                "rider": "64-73 kg (140-160 lb)",
+                "value": 400
+              },
+              {
+                "rider": "73-82 kg (160-180 lb)",
+                "value": 450
+              },
+              {
+                "rider": "82-91 kg (180-200 lb)",
+                "value": 500
+              },
+              {
+                "rider": "91-100 kg (200-220 lb)",
+                "value": 550
+              },
+              {
+                "rider": "100-109 kg (220-240 lb)",
+                "value": 600
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STATUS_140_170_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "54-64 120-140 350 lb/in ... 100-109 220-240 600 lb/in",
+          "where": "PDF p. 37 (printed 35), section 11.3 rider weight table"
+        },
+        "setupGuideUrl": {
+          "value": "https://media.specialized.com/support/collateral/2025_STATUS_140_170_USER_MANUAL_ENGLISH.pdf",
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STATUS_140_170_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "Setting sag",
+          "where": "PDF p. 36-37, sections 11.2/11.3"
+        },
+        "flipChip": {
+          "value": "Horst pivot flip chips high/low; ships high",
+          "status": "single",
+          "url": "https://media.specialized.com/support/collateral/2025_STATUS_140_170_USER_MANUAL_ENGLISH.pdf",
+          "retrieved": "2026-11-01",
+          "quote": "All models are assembled with the flip chip in the high position.",
+          "where": "PDF p. 28, section 8 Adjusting the Horst pivot flip chip"
+        }
+      }
+    }
+  ]
+}
