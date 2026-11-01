@@ -1,0 +1,3117 @@
+{
+  "maker": "manitou",
+  "products": [
+    {
+      "id": "manitou-mezzer-pro-g2",
+      "name": "Manitou Mezzer Pro G2",
+      "type": "fork",
+      "modelYears": [],
+      "catalogId": null,
+      "fields": {
+        "travelMm": {
+          "value": {
+            "min": 140,
+            "max": 170
+          },
+          "status": "single",
+          "url": "https://hayesbicycle.com/products/mezzer-pro-g2",
+          "retrieved": "2026-11-01",
+          "quote": "TRAVEL 140-170mm",
+          "where": "product page, Specifications"
+        },
+        "wheelSize": {
+          "value": "29",
+          "status": "single",
+          "url": "https://hayesbicycle.com/products/mezzer-pro-g2",
+          "retrieved": "2026-11-01",
+          "quote": "WHEEL SIZE 29\"",
+          "where": "product page, Specifications"
+        },
+        "stanchionMm": {
+          "value": 37,
+          "status": "verified",
+          "url": "https://hayesbicycle.com/products/mezzer-pro-g2",
+          "retrieved": "2026-11-01",
+          "quote": "LEG DIAMETER 37mm",
+          "where": "product page, Specifications",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.com/products/mezzer-pro-g2",
+            "retrieved": "2026-11-01",
+            "quote": "LEG DIAMETER 37mm"
+          }
+        },
+        "damper": {
+          "value": "MC² PRO-X with HBO Sealed Cartridge, TPC² rebound",
+          "status": "single",
+          "url": "https://hayesbicycle.com/products/mezzer-pro-g2",
+          "retrieved": "2026-11-01",
+          "quote": "COMPRESSION DAMPING MC² PRO-X with HBO Sealed Cartridge",
+          "where": "product page, Specifications"
+        },
+        "springType": {
+          "value": "air (Dorado Air Active Spring Piston w/ IRT)",
+          "status": "single",
+          "url": "https://hayesbicycle.com/products/mezzer-pro-g2",
+          "retrieved": "2026-11-01",
+          "quote": "SPRING Dorado Air Active Spring Piston w/ IRT",
+          "where": "product page, Specifications"
+        },
+        "adjusters": {
+          "value": "Air, IRT Pressure, Rebound, HSC, LSC, HSR, LSR, Air Backed Bladder",
+          "status": "verified",
+          "url": "https://hayesbicycle.com/products/mezzer-pro-g2",
+          "retrieved": "2026-11-01",
+          "quote": "ADJUSTMENTS Air, IRT Pressure, Rebound, HSC, LSC, HSR, LSR, Air Backed Bladder",
+          "where": "product page, Specifications",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.com/products/mezzer-pro-g2",
+            "retrieved": "2026-11-01",
+            "quote": "ADJUSTMENTS Air, IRT Pressure, Rebound, HSC, LSC, HSR, LSR, Air Backed Bladder"
+          }
+        },
+        "reboundMode": {
+          "value": "split (LSR + HSR)",
+          "status": "verified",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742231652503",
+          "retrieved": "2026-11-01",
+          "quote": "LO-SPEED REBOUND",
+          "where": "guide p.1, TPC² rebound section (separate LSR and HSR knobs)",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742231652503",
+            "retrieved": "2026-11-01",
+            "quote": "LO-SPEED REBOUND ... 10 – 0 ... HI-SPEED REBOUND ... 8–0"
+          }
+        },
+        "lscRange": {
+          "value": "10 – 0 (counted ccw from max)",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742231652503",
+          "retrieved": "2026-11-01",
+          "quote": "10 – 0",
+          "where": "guide p.1, Lo-speed compression; range graphic 10 – 0, counted ccw from max per Set-up notes"
+        },
+        "hscRange": {
+          "value": "8 – 0 (counted ccw from max)",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742231652503",
+          "retrieved": "2026-11-01",
+          "quote": "8–0",
+          "where": "guide p.1, Hi-speed compression; range graphic 8 – 0"
+        },
+        "lsrRange": {
+          "value": "10 – 0 (counted ccw from max)",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742231652503",
+          "retrieved": "2026-11-01",
+          "quote": "10 – 0",
+          "where": "guide p.1, Lo-speed rebound; range graphic 10 – 0"
+        },
+        "hsrRange": {
+          "value": "8 – 0 (counted ccw from max)",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742231652503",
+          "retrieved": "2026-11-01",
+          "quote": "8 – 0",
+          "where": "guide p.1, Hi-speed rebound; range graphic 8 – 0"
+        },
+        "maxPressurePsi": {
+          "value": {
+            "main": 120,
+            "irt": 150
+          },
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742231652503",
+          "retrieved": "2026-11-01",
+          "quote": "Max pressure not to exceed: main 120 psi, IRT 150 psi.",
+          "where": "guide p.1, Set-up notes"
+        },
+        "sagPercent": {
+          "value": "20-25",
+          "status": "verified",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742231652503",
+          "retrieved": "2026-11-01",
+          "quote": "Recommended pressures are based on 20-25% sag",
+          "where": "guide p.1, Set-up notes",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742231652503",
+            "retrieved": "2026-11-01",
+            "quote": "Recommended pressures are based on 20-25% sag measurement for the given rider weight."
+          }
+        },
+        "pressureTable": {
+          "value": {
+            "unit": "psi",
+            "riderUnit": "lbs (kg)",
+            "note": "Table transcribed from the guide: per rider-weight row, MAIN (and second chamber) psi for each travel setting plus the rebound start setting counted ccw from max. 180/190 mm columns are marked LT ONLY in the guide.",
+            "rows": [
+              {
+                "rider": "120-140 lbs (54-64 kg)",
+                "byTravelMm": {
+                  "140": {
+                    "main": 40,
+                    "irt": 61
+                  },
+                  "150": {
+                    "main": 39,
+                    "irt": 59
+                  },
+                  "160": {
+                    "main": 38,
+                    "irt": 57
+                  },
+                  "170": {
+                    "main": 37,
+                    "irt": 55
+                  },
+                  "180": {
+                    "main": 35,
+                    "irt": 53
+                  },
+                  "190": {
+                    "main": 34,
+                    "irt": 51
+                  }
+                },
+                "rebound": {
+                  "loSpeedRebound": "9-10",
+                  "hiSpeedRebound": "7-8"
+                }
+              },
+              {
+                "rider": "140-160 lbs (64-73 kg)",
+                "byTravelMm": {
+                  "140": {
+                    "main": 49,
+                    "irt": 74
+                  },
+                  "150": {
+                    "main": 48,
+                    "irt": 72
+                  },
+                  "160": {
+                    "main": 47,
+                    "irt": 70
+                  },
+                  "170": {
+                    "main": 45,
+                    "irt": 68
+                  },
+                  "180": {
+                    "main": 44,
+                    "irt": 66
+                  },
+                  "190": {
+                    "main": 42,
+                    "irt": 64
+                  }
+                },
+                "rebound": {
+                  "loSpeedRebound": "8-9",
+                  "hiSpeedRebound": "6-8"
+                }
+              },
+              {
+                "rider": "160-180 lbs (73-82 kg)",
+                "byTravelMm": {
+                  "140": {
+                    "main": 59,
+                    "irt": 87
+                  },
+                  "150": {
+                    "main": 57,
+                    "irt": 85
+                  },
+                  "160": {
+                    "main": 55,
+                    "irt": 83
+                  },
+                  "170": {
+                    "main": 54,
+                    "irt": 81
+                  },
+                  "180": {
+                    "main": 52,
+                    "irt": 79
+                  },
+                  "190": {
+                    "main": 51,
+                    "irt": 77
+                  }
+                },
+                "rebound": {
+                  "loSpeedRebound": "7-8",
+                  "hiSpeedRebound": "5-7"
+                }
+              },
+              {
+                "rider": "180-200 lbs (82-91 kg)",
+                "byTravelMm": {
+                  "140": {
+                    "main": 68,
+                    "irt": 100
+                  },
+                  "150": {
+                    "main": 66,
+                    "irt": 98
+                  },
+                  "160": {
+                    "main": 64,
+                    "irt": 96
+                  },
+                  "170": {
+                    "main": 62,
+                    "irt": 94
+                  },
+                  "180": {
+                    "main": 61,
+                    "irt": 92
+                  },
+                  "190": {
+                    "main": 59,
+                    "irt": 90
+                  }
+                },
+                "rebound": {
+                  "loSpeedRebound": "6-7",
+                  "hiSpeedRebound": "4-6"
+                }
+              },
+              {
+                "rider": "200-220 lbs (91-100 kg)",
+                "byTravelMm": {
+                  "140": {
+                    "main": 77,
+                    "irt": 113
+                  },
+                  "150": {
+                    "main": 75,
+                    "irt": 111
+                  },
+                  "160": {
+                    "main": 73,
+                    "irt": 109
+                  },
+                  "170": {
+                    "main": 71,
+                    "irt": 107
+                  },
+                  "180": {
+                    "main": 69,
+                    "irt": 105
+                  },
+                  "190": {
+                    "main": 67,
+                    "irt": 103
+                  }
+                },
+                "rebound": {
+                  "loSpeedRebound": "4-5",
+                  "hiSpeedRebound": "3-6"
+                }
+              },
+              {
+                "rider": "220-240 lbs (100-110 kg)",
+                "byTravelMm": {
+                  "140": {
+                    "main": 86,
+                    "irt": 126
+                  },
+                  "150": {
+                    "main": 84,
+                    "irt": 124
+                  },
+                  "160": {
+                    "main": 82,
+                    "irt": 122
+                  },
+                  "170": {
+                    "main": 80,
+                    "irt": 120
+                  },
+                  "180": {
+                    "main": 77,
+                    "irt": 118
+                  },
+                  "190": {
+                    "main": 75,
+                    "irt": 116
+                  }
+                },
+                "rebound": {
+                  "loSpeedRebound": "3-4",
+                  "hiSpeedRebound": "2-5"
+                }
+              },
+              {
+                "rider": "240-260 lbs (110-118 kg)",
+                "byTravelMm": {
+                  "140": {
+                    "main": 95,
+                    "irt": 139
+                  },
+                  "150": {
+                    "main": 93,
+                    "irt": 137
+                  },
+                  "160": {
+                    "main": 91,
+                    "irt": 135
+                  },
+                  "170": {
+                    "main": 88,
+                    "irt": 133
+                  },
+                  "180": {
+                    "main": 86,
+                    "irt": 131
+                  },
+                  "190": {
+                    "main": 83,
+                    "irt": 129
+                  }
+                },
+                "rebound": {
+                  "loSpeedRebound": "2-3",
+                  "hiSpeedRebound": "1-4"
+                }
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742231652503",
+          "retrieved": "2026-11-01",
+          "quote": "SPRING PRESSURE, PSI RECOMMENDED",
+          "where": "guide p.1, spring pressure table"
+        },
+        "manualUrl": {
+          "value": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742231652503",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742231652503",
+          "retrieved": "2026-11-01",
+          "quote": "MEZZER G2 PRO & LT PRO SET-UP GUIDE",
+          "where": "Set-up guide PDF (article 41067658298903, Mezzer Gen 2 Set-Up Guide), attachment updated 2026-09-24"
+        },
+        "modelYear": {
+          "value": null,
+          "status": "missing",
+          "note": "Neither the product page nor the guide names a model year; guide footer reads '© HAYES PERFORMANCE SYSTEMS 2025'."
+        }
+      }
+    },
+    {
+      "id": "manitou-mezzer-lt-pro-g2",
+      "name": "Manitou Mezzer LT Pro G2",
+      "type": "fork",
+      "modelYears": [],
+      "catalogId": null,
+      "fields": {
+        "travelMm": {
+          "value": {
+            "min": 150,
+            "max": 190
+          },
+          "status": "single",
+          "url": "https://hayesbicycle.com/products/mezzer-lt-pro-g2",
+          "retrieved": "2026-11-01",
+          "quote": "TRAVEL 150-190mm",
+          "where": "product page, Specifications"
+        },
+        "wheelSize": {
+          "value": "29",
+          "status": "single",
+          "url": "https://hayesbicycle.com/products/mezzer-lt-pro-g2",
+          "retrieved": "2026-11-01",
+          "quote": "WHEEL SIZE 29\"",
+          "where": "product page, Specifications"
+        },
+        "stanchionMm": {
+          "value": 37,
+          "status": "verified",
+          "url": "https://hayesbicycle.com/products/mezzer-lt-pro-g2",
+          "retrieved": "2026-11-01",
+          "quote": "LEG DIAMETER 37mm",
+          "where": "product page, Specifications",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.com/products/mezzer-lt-pro-g2",
+            "retrieved": "2026-11-01",
+            "quote": "LEG DIAMETER 37mm"
+          }
+        },
+        "damper": {
+          "value": "MC² PRO-X with HBO Sealed Cartridge Air Backed Bladder, TPC² rebound",
+          "status": "single",
+          "url": "https://hayesbicycle.com/products/mezzer-lt-pro-g2",
+          "retrieved": "2026-11-01",
+          "quote": "COMPRESSION DAMPING MC² PRO-X with HBO Sealed Cartridge Air Backed Bladder",
+          "where": "product page, Specifications"
+        },
+        "springType": {
+          "value": "air (Dorado Air Active Spring Piston w/ IRT)",
+          "status": "single",
+          "url": "https://hayesbicycle.com/products/mezzer-lt-pro-g2",
+          "retrieved": "2026-11-01",
+          "quote": "SPRING Dorado Air Active Spring Piston w/ IRT",
+          "where": "product page, Specifications"
+        },
+        "adjusters": {
+          "value": "Air, IRT Pressure, Rebound, HSC, LSC, HSR, LSR, Air Backed Bladder",
+          "status": "verified",
+          "url": "https://hayesbicycle.com/products/mezzer-lt-pro-g2",
+          "retrieved": "2026-11-01",
+          "quote": "ADJUSTMENTS Air, IRT Pressure, Rebound, HSC, LSC, HSR, LSR, Air Backed Bladder",
+          "where": "product page, Specifications",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.com/products/mezzer-lt-pro-g2",
+            "retrieved": "2026-11-01",
+            "quote": "ADJUSTMENTS Air, IRT Pressure, Rebound, HSC, LSC, HSR, LSR, Air Backed Bladder"
+          }
+        },
+        "reboundMode": {
+          "value": "split (LSR + HSR)",
+          "status": "verified",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742231652503",
+          "retrieved": "2026-11-01",
+          "quote": "HI-SPEED REBOUND",
+          "where": "guide p.1, TPC² rebound section (shared Pro / LT Pro guide)",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742231652503",
+            "retrieved": "2026-11-01",
+            "quote": "LO-SPEED REBOUND ... 10 – 0 ... HI-SPEED REBOUND ... 8–0"
+          }
+        },
+        "lscRange": {
+          "value": "10 – 0 (counted ccw from max)",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742231652503",
+          "retrieved": "2026-11-01",
+          "quote": "10 – 0",
+          "where": "guide p.1 (shared Pro / LT Pro guide), range graphic 10 – 0"
+        },
+        "hscRange": {
+          "value": "8 – 0 (counted ccw from max)",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742231652503",
+          "retrieved": "2026-11-01",
+          "quote": "8–0",
+          "where": "guide p.1 (shared guide), range graphic 8 – 0"
+        },
+        "lsrRange": {
+          "value": "10 – 0 (counted ccw from max)",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742231652503",
+          "retrieved": "2026-11-01",
+          "quote": "10 – 0",
+          "where": "guide p.1 (shared guide), range graphic 10 – 0"
+        },
+        "hsrRange": {
+          "value": "8 – 0 (counted ccw from max)",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742231652503",
+          "retrieved": "2026-11-01",
+          "quote": "8 – 0",
+          "where": "guide p.1 (shared guide), range graphic 8 – 0"
+        },
+        "maxPressurePsi": {
+          "value": {
+            "main": 120,
+            "irt": 150
+          },
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742231652503",
+          "retrieved": "2026-11-01",
+          "quote": "Max pressure not to exceed: main 120 psi, IRT 150 psi.",
+          "where": "guide p.1, Set-up notes (shared guide)"
+        },
+        "sagPercent": {
+          "value": "20-25",
+          "status": "verified",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742231652503",
+          "retrieved": "2026-11-01",
+          "quote": "Recommended pressures are based on 20-25% sag",
+          "where": "guide p.1, Set-up notes (shared guide)",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742231652503",
+            "retrieved": "2026-11-01",
+            "quote": "Recommended pressures are based on 20-25% sag measurement for the given rider weight."
+          }
+        },
+        "pressureTable": {
+          "value": {
+            "unit": "psi",
+            "riderUnit": "lbs (kg)",
+            "note": "Table transcribed from the guide: per rider-weight row, MAIN (and second chamber) psi for each travel setting plus the rebound start setting counted ccw from max. Shared guide for Mezzer G2 Pro and LT Pro; 180/190 mm columns are marked LT ONLY. The LT Pro page lists travel 150-190 mm while the guide table also has a 140 mm column - kept as printed.",
+            "rows": [
+              {
+                "rider": "120-140 lbs (54-64 kg)",
+                "byTravelMm": {
+                  "140": {
+                    "main": 40,
+                    "irt": 61
+                  },
+                  "150": {
+                    "main": 39,
+                    "irt": 59
+                  },
+                  "160": {
+                    "main": 38,
+                    "irt": 57
+                  },
+                  "170": {
+                    "main": 37,
+                    "irt": 55
+                  },
+                  "180": {
+                    "main": 35,
+                    "irt": 53
+                  },
+                  "190": {
+                    "main": 34,
+                    "irt": 51
+                  }
+                },
+                "rebound": {
+                  "loSpeedRebound": "9-10",
+                  "hiSpeedRebound": "7-8"
+                }
+              },
+              {
+                "rider": "140-160 lbs (64-73 kg)",
+                "byTravelMm": {
+                  "140": {
+                    "main": 49,
+                    "irt": 74
+                  },
+                  "150": {
+                    "main": 48,
+                    "irt": 72
+                  },
+                  "160": {
+                    "main": 47,
+                    "irt": 70
+                  },
+                  "170": {
+                    "main": 45,
+                    "irt": 68
+                  },
+                  "180": {
+                    "main": 44,
+                    "irt": 66
+                  },
+                  "190": {
+                    "main": 42,
+                    "irt": 64
+                  }
+                },
+                "rebound": {
+                  "loSpeedRebound": "8-9",
+                  "hiSpeedRebound": "6-8"
+                }
+              },
+              {
+                "rider": "160-180 lbs (73-82 kg)",
+                "byTravelMm": {
+                  "140": {
+                    "main": 59,
+                    "irt": 87
+                  },
+                  "150": {
+                    "main": 57,
+                    "irt": 85
+                  },
+                  "160": {
+                    "main": 55,
+                    "irt": 83
+                  },
+                  "170": {
+                    "main": 54,
+                    "irt": 81
+                  },
+                  "180": {
+                    "main": 52,
+                    "irt": 79
+                  },
+                  "190": {
+                    "main": 51,
+                    "irt": 77
+                  }
+                },
+                "rebound": {
+                  "loSpeedRebound": "7-8",
+                  "hiSpeedRebound": "5-7"
+                }
+              },
+              {
+                "rider": "180-200 lbs (82-91 kg)",
+                "byTravelMm": {
+                  "140": {
+                    "main": 68,
+                    "irt": 100
+                  },
+                  "150": {
+                    "main": 66,
+                    "irt": 98
+                  },
+                  "160": {
+                    "main": 64,
+                    "irt": 96
+                  },
+                  "170": {
+                    "main": 62,
+                    "irt": 94
+                  },
+                  "180": {
+                    "main": 61,
+                    "irt": 92
+                  },
+                  "190": {
+                    "main": 59,
+                    "irt": 90
+                  }
+                },
+                "rebound": {
+                  "loSpeedRebound": "6-7",
+                  "hiSpeedRebound": "4-6"
+                }
+              },
+              {
+                "rider": "200-220 lbs (91-100 kg)",
+                "byTravelMm": {
+                  "140": {
+                    "main": 77,
+                    "irt": 113
+                  },
+                  "150": {
+                    "main": 75,
+                    "irt": 111
+                  },
+                  "160": {
+                    "main": 73,
+                    "irt": 109
+                  },
+                  "170": {
+                    "main": 71,
+                    "irt": 107
+                  },
+                  "180": {
+                    "main": 69,
+                    "irt": 105
+                  },
+                  "190": {
+                    "main": 67,
+                    "irt": 103
+                  }
+                },
+                "rebound": {
+                  "loSpeedRebound": "4-5",
+                  "hiSpeedRebound": "3-6"
+                }
+              },
+              {
+                "rider": "220-240 lbs (100-110 kg)",
+                "byTravelMm": {
+                  "140": {
+                    "main": 86,
+                    "irt": 126
+                  },
+                  "150": {
+                    "main": 84,
+                    "irt": 124
+                  },
+                  "160": {
+                    "main": 82,
+                    "irt": 122
+                  },
+                  "170": {
+                    "main": 80,
+                    "irt": 120
+                  },
+                  "180": {
+                    "main": 77,
+                    "irt": 118
+                  },
+                  "190": {
+                    "main": 75,
+                    "irt": 116
+                  }
+                },
+                "rebound": {
+                  "loSpeedRebound": "3-4",
+                  "hiSpeedRebound": "2-5"
+                }
+              },
+              {
+                "rider": "240-260 lbs (110-118 kg)",
+                "byTravelMm": {
+                  "140": {
+                    "main": 95,
+                    "irt": 139
+                  },
+                  "150": {
+                    "main": 93,
+                    "irt": 137
+                  },
+                  "160": {
+                    "main": 91,
+                    "irt": 135
+                  },
+                  "170": {
+                    "main": 88,
+                    "irt": 133
+                  },
+                  "180": {
+                    "main": 86,
+                    "irt": 131
+                  },
+                  "190": {
+                    "main": 83,
+                    "irt": 129
+                  }
+                },
+                "rebound": {
+                  "loSpeedRebound": "2-3",
+                  "hiSpeedRebound": "1-4"
+                }
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742231652503",
+          "retrieved": "2026-11-01",
+          "quote": "SPRING PRESSURE, PSI RECOMMENDED",
+          "where": "guide p.1, spring pressure table (shared guide)"
+        },
+        "manualUrl": {
+          "value": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742231652503",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742231652503",
+          "retrieved": "2026-11-01",
+          "quote": "MEZZER G2 PRO & LT PRO SET-UP GUIDE",
+          "where": "Set-up guide PDF, attachment updated 2026-09-24"
+        },
+        "modelYear": {
+          "value": null,
+          "status": "missing",
+          "note": "Not named on product page or guide."
+        }
+      }
+    },
+    {
+      "id": "manitou-mezzer-expert-g2",
+      "name": "Manitou Mezzer Expert G2",
+      "type": "fork",
+      "modelYears": [],
+      "catalogId": null,
+      "fields": {
+        "travelMm": {
+          "value": {
+            "min": 140,
+            "max": 170
+          },
+          "status": "single",
+          "url": "https://hayesbicycle.com/products/mezzer-expert-1",
+          "retrieved": "2026-11-01",
+          "quote": "TRAVEL 140-170mm",
+          "where": "product page, Specifications"
+        },
+        "wheelSize": {
+          "value": "29",
+          "status": "single",
+          "url": "https://hayesbicycle.com/products/mezzer-expert-1",
+          "retrieved": "2026-11-01",
+          "quote": "WHEEL SIZE 29\"",
+          "where": "product page, Specifications"
+        },
+        "stanchionMm": {
+          "value": 37,
+          "status": "verified",
+          "url": "https://hayesbicycle.com/products/mezzer-expert-1",
+          "retrieved": "2026-11-01",
+          "quote": "LEG DIAMETER 37mm",
+          "where": "product page, Specifications",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.com/products/mezzer-expert-1",
+            "retrieved": "2026-11-01",
+            "quote": "LEG DIAMETER 37mm"
+          }
+        },
+        "damper": {
+          "value": "VTT-6 Position compression, half-cartridge TPC rebound",
+          "status": "single",
+          "url": "https://hayesbicycle.com/products/mezzer-expert-1",
+          "retrieved": "2026-11-01",
+          "quote": "COMPRESSION DAMPING VTT-6 Position",
+          "where": "product page, Specifications"
+        },
+        "springType": {
+          "value": "air (Expert Air w/ IVA)",
+          "status": "single",
+          "url": "https://hayesbicycle.com/products/mezzer-expert-1",
+          "retrieved": "2026-11-01",
+          "quote": "SPRING Expert Air w/ IVA",
+          "where": "product page, Specifications"
+        },
+        "adjusters": {
+          "value": "Air, Air Volume, Rebound, 6-position Compression",
+          "status": "verified",
+          "url": "https://hayesbicycle.com/products/mezzer-expert-1",
+          "retrieved": "2026-11-01",
+          "quote": "ADJUSTMENTS Air, Air Volume, Rebound, 6-position Compression",
+          "where": "product page, Specifications",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.com/products/mezzer-expert-1",
+            "retrieved": "2026-11-01",
+            "quote": "ADJUSTMENTS Air, Air Volume, Rebound, 6-position Compression"
+          }
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://hayesbicycle.com/products/mezzer-expert-1",
+          "retrieved": "2026-11-01",
+          "quote": "REBOUND DAMPING Half Cartridge adjustable TPC",
+          "where": "product page, Specifications; guide shows one rebound knob",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/41067689282071",
+            "retrieved": "2026-11-01",
+            "quote": "REBOUND CONTROLS WHEEL RETURN SPEED AFTER COMPRESSION EVENTS ... ADJUSTMENT RANGE MIN FAST 12 – 0 MAX SLOW (one rebound knob)"
+          }
+        },
+        "compressionPositions": {
+          "value": "VTT-6: 1 (min, full ccw) to 6 (max, cw); counted cw from minimum",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/41067689282071",
+          "retrieved": "2026-11-01",
+          "quote": "VTT-6 damper setting is counted clockwise (cw) from minimum.",
+          "where": "guide p.1, Set-up notes; range graphic 1–6"
+        },
+        "reboundRange": {
+          "value": "12 – 0 (counted ccw from max)",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/41067689282071",
+          "retrieved": "2026-11-01",
+          "quote": "12 – 0",
+          "where": "guide p.1, TPC rebound adjustment range"
+        },
+        "maxPressurePsi": {
+          "value": {
+            "main": 120
+          },
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/41067689282071",
+          "retrieved": "2026-11-01",
+          "quote": "Max pressure not to exceed: main 120 psi",
+          "where": "guide p.1, Set-up notes"
+        },
+        "sagPercent": {
+          "value": "20-25",
+          "status": "verified",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/41067689282071",
+          "retrieved": "2026-11-01",
+          "quote": "Recommended pressures are based on 20-25% sag",
+          "where": "guide p.1, Set-up notes",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/41067689282071",
+            "retrieved": "2026-11-01",
+            "quote": "Recommended pressures are based on 20-25% sag measurement for the given rider weight."
+          }
+        },
+        "pressureTable": {
+          "value": {
+            "unit": "psi",
+            "riderUnit": "lbs (kg)",
+            "note": "Table transcribed from the guide: per rider-weight row, MAIN (and IVA setting) psi for each travel setting plus the rebound start setting counted ccw from max.",
+            "rows": [
+              {
+                "rider": "120-140 lbs (54-64 kg)",
+                "byTravelMm": {
+                  "140": {
+                    "main": 46,
+                    "iva": 4
+                  },
+                  "150": {
+                    "main": 44,
+                    "iva": 4
+                  },
+                  "160": {
+                    "main": 44,
+                    "iva": 3
+                  },
+                  "170": {
+                    "main": 40,
+                    "iva": 3
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "9-10"
+                }
+              },
+              {
+                "rider": "140-160 lbs (64-73 kg)",
+                "byTravelMm": {
+                  "140": {
+                    "main": 57,
+                    "iva": 4
+                  },
+                  "150": {
+                    "main": 54,
+                    "iva": 4
+                  },
+                  "160": {
+                    "main": 55,
+                    "iva": 3
+                  },
+                  "170": {
+                    "main": 50,
+                    "iva": 3
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "8-9"
+                }
+              },
+              {
+                "rider": "160-180 lbs (73-82 kg)",
+                "byTravelMm": {
+                  "140": {
+                    "main": 68,
+                    "iva": 4
+                  },
+                  "150": {
+                    "main": 64,
+                    "iva": 4
+                  },
+                  "160": {
+                    "main": 65,
+                    "iva": 3
+                  },
+                  "170": {
+                    "main": 59,
+                    "iva": 3
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "7-8"
+                }
+              },
+              {
+                "rider": "180-200 lbs (82-91 kg)",
+                "byTravelMm": {
+                  "140": {
+                    "main": 79,
+                    "iva": 4
+                  },
+                  "150": {
+                    "main": 74,
+                    "iva": 4
+                  },
+                  "160": {
+                    "main": 75,
+                    "iva": 3
+                  },
+                  "170": {
+                    "main": 69,
+                    "iva": 3
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "6-7"
+                }
+              },
+              {
+                "rider": "200-220 lbs (91-100 kg)",
+                "byTravelMm": {
+                  "140": {
+                    "main": 90,
+                    "iva": 4
+                  },
+                  "150": {
+                    "main": 84,
+                    "iva": 4
+                  },
+                  "160": {
+                    "main": 85,
+                    "iva": 3
+                  },
+                  "170": {
+                    "main": 78,
+                    "iva": 3
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "4-5"
+                }
+              },
+              {
+                "rider": "220-240 lbs (100-110 kg)",
+                "byTravelMm": {
+                  "140": {
+                    "main": 101,
+                    "iva": 4
+                  },
+                  "150": {
+                    "main": 94,
+                    "iva": 4
+                  },
+                  "160": {
+                    "main": 96,
+                    "iva": 3
+                  },
+                  "170": {
+                    "main": 88,
+                    "iva": 3
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "3-4"
+                }
+              },
+              {
+                "rider": "240-260 lbs (110-118 kg)",
+                "byTravelMm": {
+                  "140": {
+                    "main": 112,
+                    "iva": 4
+                  },
+                  "150": {
+                    "main": 104,
+                    "iva": 4
+                  },
+                  "160": {
+                    "main": 106,
+                    "iva": 3
+                  },
+                  "170": {
+                    "main": 97,
+                    "iva": 3
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "2-3"
+                }
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/41067689282071",
+          "retrieved": "2026-11-01",
+          "quote": "SPRING PRESSURE, PSI RECOMMENDED",
+          "where": "guide p.1, spring pressure table"
+        },
+        "manualUrl": {
+          "value": "https://hayesbicycle.zendesk.com/hc/article_attachments/41067689282071",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/41067689282071",
+          "retrieved": "2026-11-01",
+          "quote": "MEZZER G2 EXPERT SET-UP GUIDE",
+          "where": "Set-up guide PDF, attachment updated 2026-06-08"
+        },
+        "modelYear": {
+          "value": null,
+          "status": "missing",
+          "note": "Not named on product page or guide."
+        }
+      }
+    },
+    {
+      "id": "manitou-mezzer-lt-comp-g2",
+      "name": "Manitou Mezzer LT Comp G2",
+      "type": "fork",
+      "modelYears": [],
+      "catalogId": null,
+      "fields": {
+        "travelMm": {
+          "value": {
+            "min": 140,
+            "max": 190
+          },
+          "status": "single",
+          "url": "https://hayesbicycle.com/products/mezzer-lt-comp-g2",
+          "retrieved": "2026-11-01",
+          "quote": "TRAVEL 140-190mm",
+          "where": "product page, Specifications"
+        },
+        "wheelSize": {
+          "value": "29",
+          "status": "single",
+          "url": "https://hayesbicycle.com/products/mezzer-lt-comp-g2",
+          "retrieved": "2026-11-01",
+          "quote": "WHEEL SIZE 29\"",
+          "where": "product page, Specifications"
+        },
+        "stanchionMm": {
+          "value": 37,
+          "status": "verified",
+          "url": "https://hayesbicycle.com/products/mezzer-lt-comp-g2",
+          "retrieved": "2026-11-01",
+          "quote": "LEG DIAMETER 37mm",
+          "where": "product page, Specifications",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.com/products/mezzer-lt-comp-g2",
+            "retrieved": "2026-11-01",
+            "quote": "LEG DIAMETER 37mm"
+          }
+        },
+        "damper": {
+          "value": "ABS+ compression, cartridge TPC rebound",
+          "status": "single",
+          "url": "https://hayesbicycle.com/products/mezzer-lt-comp-g2",
+          "retrieved": "2026-11-01",
+          "quote": "COMPRESSION DAMPING ABS+",
+          "where": "product page, Specifications"
+        },
+        "springType": {
+          "value": "air (Expert Air w/ IVA)",
+          "status": "single",
+          "url": "https://hayesbicycle.com/products/mezzer-lt-comp-g2",
+          "retrieved": "2026-11-01",
+          "quote": "SPRING Expert Air w/ IVA",
+          "where": "product page, Specifications"
+        },
+        "adjusters": {
+          "value": "Air, Air Volume, Rebound, Compression",
+          "status": "verified",
+          "url": "https://hayesbicycle.com/products/mezzer-lt-comp-g2",
+          "retrieved": "2026-11-01",
+          "quote": "ADJUSTMENTS Air, Air Volume, Rebound, Compression",
+          "where": "product page, Specifications",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.com/products/mezzer-lt-comp-g2",
+            "retrieved": "2026-11-01",
+            "quote": "ADJUSTMENTS Air, Air Volume, Rebound, Compression"
+          }
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://hayesbicycle.com/products/mezzer-lt-comp-g2",
+          "retrieved": "2026-11-01",
+          "quote": "ABS+ cartridge is a simple single knob low speed compression and rebound adjustment",
+          "where": "product page, Key Features; guide shows one rebound knob",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742211211927",
+            "retrieved": "2026-11-01",
+            "quote": "TPC REBOUND ... ADJUSTMENT RANGE MIN FAST 10 – 0 MAX SLOW (one rebound knob)"
+          }
+        },
+        "compressionRange": {
+          "value": "ABS+ 10 – 0 (counted ccw from max)",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742211211927",
+          "retrieved": "2026-11-01",
+          "quote": "counted counterclockwise (ccw) from maximum",
+          "where": "guide p.1, Set-up notes; ABS+ adjustment range graphic 10 – 0"
+        },
+        "reboundRange": {
+          "value": "10 – 0 (counted ccw from max)",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742211211927",
+          "retrieved": "2026-11-01",
+          "quote": "10 – 0",
+          "where": "guide p.1, TPC rebound adjustment range"
+        },
+        "maxPressurePsi": {
+          "value": {
+            "main": 120
+          },
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742211211927",
+          "retrieved": "2026-11-01",
+          "quote": "Max pressure not to exceed: main 120 psi.",
+          "where": "guide p.1, Set-up notes"
+        },
+        "sagPercent": {
+          "value": "20-25",
+          "status": "verified",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742211211927",
+          "retrieved": "2026-11-01",
+          "quote": "Recommended pressures are based on 20-25% sag",
+          "where": "guide p.1, Set-up notes",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742211211927",
+            "retrieved": "2026-11-01",
+            "quote": "Recommended pressures are based on 20-25% sag measurement for the given rider weight."
+          }
+        },
+        "pressureTable": {
+          "value": {
+            "unit": "psi",
+            "riderUnit": "lbs (kg)",
+            "note": "Table transcribed from the guide: per rider-weight row, MAIN (and IVA setting) psi for each travel setting plus the rebound start setting counted ccw from max.",
+            "rows": [
+              {
+                "rider": "120-140 lbs (54-64 kg)",
+                "byTravelMm": {
+                  "140": {
+                    "main": 56,
+                    "iva": 3
+                  },
+                  "150": {
+                    "main": 55,
+                    "iva": 3
+                  },
+                  "160": {
+                    "main": 54,
+                    "iva": 2
+                  },
+                  "170": {
+                    "main": 51,
+                    "iva": 2
+                  },
+                  "180": {
+                    "main": 49,
+                    "iva": 1
+                  },
+                  "190": {
+                    "main": 46,
+                    "iva": 1
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "8-10"
+                }
+              },
+              {
+                "rider": "140-160 lbs (64-73 kg)",
+                "byTravelMm": {
+                  "140": {
+                    "main": 67,
+                    "iva": 3
+                  },
+                  "150": {
+                    "main": 65,
+                    "iva": 3
+                  },
+                  "160": {
+                    "main": 64,
+                    "iva": 2
+                  },
+                  "170": {
+                    "main": 61,
+                    "iva": 2
+                  },
+                  "180": {
+                    "main": 59,
+                    "iva": 1
+                  },
+                  "190": {
+                    "main": 56,
+                    "iva": 1
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "7-10"
+                }
+              },
+              {
+                "rider": "160-180 lbs (73-82 kg)",
+                "byTravelMm": {
+                  "140": {
+                    "main": 77,
+                    "iva": 3
+                  },
+                  "150": {
+                    "main": 76,
+                    "iva": 3
+                  },
+                  "160": {
+                    "main": 74,
+                    "iva": 2
+                  },
+                  "170": {
+                    "main": 71,
+                    "iva": 2
+                  },
+                  "180": {
+                    "main": 68,
+                    "iva": 1
+                  },
+                  "190": {
+                    "main": 65,
+                    "iva": 1
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "6-9"
+                }
+              },
+              {
+                "rider": "180-200 lbs (82-91 kg)",
+                "byTravelMm": {
+                  "140": {
+                    "main": 88,
+                    "iva": 3
+                  },
+                  "150": {
+                    "main": 86,
+                    "iva": 3
+                  },
+                  "160": {
+                    "main": 84,
+                    "iva": 2
+                  },
+                  "170": {
+                    "main": 81,
+                    "iva": 2
+                  },
+                  "180": {
+                    "main": 78,
+                    "iva": 1
+                  },
+                  "190": {
+                    "main": 74,
+                    "iva": 1
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "5-8"
+                }
+              },
+              {
+                "rider": "200-220 lbs (91-100 kg)",
+                "byTravelMm": {
+                  "140": {
+                    "main": 98,
+                    "iva": 3
+                  },
+                  "150": {
+                    "main": 96,
+                    "iva": 3
+                  },
+                  "160": {
+                    "main": 94,
+                    "iva": 2
+                  },
+                  "170": {
+                    "main": 91,
+                    "iva": 2
+                  },
+                  "180": {
+                    "main": 88,
+                    "iva": 1
+                  },
+                  "190": {
+                    "main": 83,
+                    "iva": 1
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "4-7"
+                }
+              },
+              {
+                "rider": "220-240 lbs (100-110 kg)",
+                "byTravelMm": {
+                  "140": {
+                    "main": 108,
+                    "iva": 3
+                  },
+                  "150": {
+                    "main": 106,
+                    "iva": 3
+                  },
+                  "160": {
+                    "main": 104,
+                    "iva": 2
+                  },
+                  "170": {
+                    "main": 100,
+                    "iva": 2
+                  },
+                  "180": {
+                    "main": 97,
+                    "iva": 1
+                  },
+                  "190": {
+                    "main": 92,
+                    "iva": 1
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "3-6"
+                }
+              },
+              {
+                "rider": "240-260 lbs (110-118 kg)",
+                "byTravelMm": {
+                  "140": {
+                    "main": 119,
+                    "iva": 3
+                  },
+                  "150": {
+                    "main": 116,
+                    "iva": 3
+                  },
+                  "160": {
+                    "main": 114,
+                    "iva": 2
+                  },
+                  "170": {
+                    "main": 110,
+                    "iva": 2
+                  },
+                  "180": {
+                    "main": 107,
+                    "iva": 1
+                  },
+                  "190": {
+                    "main": 102,
+                    "iva": 1
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "2-5"
+                }
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742211211927",
+          "retrieved": "2026-11-01",
+          "quote": "SPRING PRESSURE, PSI RECOMMENDED",
+          "where": "guide p.1, spring pressure table"
+        },
+        "manualUrl": {
+          "value": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742211211927",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43742211211927",
+          "retrieved": "2026-11-01",
+          "quote": "MEZZER G2 LT COMP SET-UP GUIDE",
+          "where": "Set-up guide PDF, attachment updated 2026-09-24"
+        },
+        "modelYear": {
+          "value": null,
+          "status": "missing",
+          "note": "Not named on product page or guide."
+        }
+      }
+    },
+    {
+      "id": "manitou-mastodon-pro-gen3",
+      "name": "Manitou Mastodon Pro (Gen 3)",
+      "type": "fork",
+      "modelYears": [],
+      "catalogId": null,
+      "fields": {
+        "travelMm": {
+          "value": {
+            "min": 80,
+            "max": 160
+          },
+          "status": "single",
+          "url": "https://hayesbicycle.com/collections/forks/products/mastodon-pro",
+          "retrieved": "2026-11-01",
+          "quote": "Travel: 80-160mm internally adjustable in 10mm increments",
+          "where": "product page (Mastodon Pro, listed as Gen 3), Specifications"
+        },
+        "wheelSize": {
+          "value": "26/27.5\" fat",
+          "status": "verified",
+          "url": "https://hayesbicycle.com/collections/forks/products/mastodon-pro",
+          "retrieved": "2026-11-01",
+          "quote": "Wheel Size: 26/27.5\" Fat",
+          "where": "product page, Specifications",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.com/products/mastodon-pro",
+            "retrieved": "2026-11-01",
+            "quote": "•Wheel Size: 26/27.5\" Fat"
+          }
+        },
+        "stanchionMm": {
+          "value": 34,
+          "status": "verified",
+          "url": "https://hayesbicycle.com/collections/forks/products/mastodon-pro",
+          "retrieved": "2026-11-01",
+          "quote": "Leg Diameter: 34mm",
+          "where": "product page, Specifications",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.com/products/mastodon-pro",
+            "retrieved": "2026-11-01",
+            "quote": "•Leg Diameter: 34mm"
+          }
+        },
+        "damper": {
+          "value": "VTT-6p compression, half-cartridge TPC rebound",
+          "status": "single",
+          "url": "https://hayesbicycle.com/collections/forks/products/mastodon-pro",
+          "retrieved": "2026-11-01",
+          "quote": "Compression: VTT-6p",
+          "where": "product page, Specifications"
+        },
+        "springType": {
+          "value": "air (Dorado Air w/ IVA)",
+          "status": "single",
+          "url": "https://hayesbicycle.com/collections/forks/products/mastodon-pro",
+          "retrieved": "2026-11-01",
+          "quote": "Spring: Dorado Air w/ IVA",
+          "where": "product page, Specifications"
+        },
+        "adjusters": {
+          "value": "Air, Air Volume, Rebound, Compression",
+          "status": "verified",
+          "url": "https://hayesbicycle.com/collections/forks/products/mastodon-pro",
+          "retrieved": "2026-11-01",
+          "quote": "Adjustments: Air, Air Volume, Rebound, Compression",
+          "where": "product page, Specifications",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.com/products/mastodon-pro",
+            "retrieved": "2026-11-01",
+            "quote": "•Adjustments: Air, Air Volume, Rebound, Compression"
+          }
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://hayesbicycle.com/collections/forks/products/mastodon-pro",
+          "retrieved": "2026-11-01",
+          "quote": "Rebound Damping: Half Cartridge Adjustable TPC",
+          "where": "product page, Specifications",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/17493411154967",
+            "retrieved": "2026-11-01",
+            "quote": "TPC REBOUND ... Controls speed at which wheel returns to sagged position ... 20 - 0 (one rebound knob)"
+          }
+        },
+        "compressionPositions": {
+          "value": "VTT-6: 1 (min) to 6 (max), counted cw from minimum",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/17493411154967",
+          "retrieved": "2026-11-01",
+          "quote": "MAXIMUM (CW) IS POSITION “6”.",
+          "where": "guide, Spring adjustment set-up notes; damping table 1-6"
+        },
+        "reboundRange": {
+          "value": "20 – 0 (counted ccw from max)",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/17493411154967",
+          "retrieved": "2026-11-01",
+          "quote": "20 - 0",
+          "where": "guide, TPC rebound adjustment range"
+        },
+        "maxPressurePsi": {
+          "value": {
+            "main": 150
+          },
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/17493411154967",
+          "retrieved": "2026-11-01",
+          "quote": "MAX PRESSURE NOT TO EXCEED: MAIN 150 PSI.",
+          "where": "guide, Spring adjustment set-up notes"
+        },
+        "sagPercent": {
+          "value": "20-25",
+          "status": "verified",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/17493411154967",
+          "retrieved": "2026-11-01",
+          "quote": "SHOULD YIELD 20-25% SAG",
+          "where": "guide, Spring adjustment set-up notes",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/17493411154967",
+            "retrieved": "2026-11-01",
+            "quote": "RECOMMENDED PRESSURES SHOULD BE ADJUSTED UP OR DOWN TO MATCH RIDER WEIGHT AND SHOULD YIELD 20-25% SAG MEASUREMENT WITH RIDER IN STANDING POSITION (WEIGHT DISTRIBUTED 70% ON PEDALS 30% ON HANDLEBARS)"
+          }
+        },
+        "pressureTable": {
+          "value": {
+            "unit": "psi",
+            "riderUnit": "lbs (kg)",
+            "note": "Table transcribed from the guide: per rider-weight row, MAIN (and IVA position) psi for each travel setting plus the rebound start setting counted ccw from max.",
+            "rows": [
+              {
+                "rider": "120 lbs (54 kg)",
+                "byTravelMm": {
+                  "80": {
+                    "main": 70,
+                    "iva": 5
+                  },
+                  "100": {
+                    "main": 63,
+                    "iva": 4
+                  },
+                  "120": {
+                    "main": 54,
+                    "iva": 3
+                  },
+                  "130": {
+                    "main": 54,
+                    "iva": 2
+                  },
+                  "140": {
+                    "main": 50,
+                    "iva": 2
+                  },
+                  "150": {
+                    "main": 51,
+                    "iva": 1
+                  },
+                  "160": {
+                    "main": 49,
+                    "iva": 1
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "14"
+                }
+              },
+              {
+                "rider": "140 lbs (64 kg)",
+                "byTravelMm": {
+                  "80": {
+                    "main": 83,
+                    "iva": 5
+                  },
+                  "100": {
+                    "main": 75,
+                    "iva": 4
+                  },
+                  "120": {
+                    "main": 65,
+                    "iva": 3
+                  },
+                  "130": {
+                    "main": 65,
+                    "iva": 2
+                  },
+                  "140": {
+                    "main": 60,
+                    "iva": 2
+                  },
+                  "150": {
+                    "main": 62,
+                    "iva": 1
+                  },
+                  "160": {
+                    "main": 59,
+                    "iva": 1
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "12"
+                }
+              },
+              {
+                "rider": "160 lbs (73 kg)",
+                "byTravelMm": {
+                  "80": {
+                    "main": 97,
+                    "iva": 5
+                  },
+                  "100": {
+                    "main": 88,
+                    "iva": 4
+                  },
+                  "120": {
+                    "main": 76,
+                    "iva": 3
+                  },
+                  "130": {
+                    "main": 76,
+                    "iva": 2
+                  },
+                  "140": {
+                    "main": 71,
+                    "iva": 2
+                  },
+                  "150": {
+                    "main": 73,
+                    "iva": 1
+                  },
+                  "160": {
+                    "main": 69,
+                    "iva": 1
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "10"
+                }
+              },
+              {
+                "rider": "180 lbs (82 kg)",
+                "byTravelMm": {
+                  "80": {
+                    "main": 111,
+                    "iva": 5
+                  },
+                  "100": {
+                    "main": 100,
+                    "iva": 4
+                  },
+                  "120": {
+                    "main": 87,
+                    "iva": 3
+                  },
+                  "130": {
+                    "main": 87,
+                    "iva": 2
+                  },
+                  "140": {
+                    "main": 81,
+                    "iva": 2
+                  },
+                  "150": {
+                    "main": 83,
+                    "iva": 1
+                  },
+                  "160": {
+                    "main": 79,
+                    "iva": 1
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "8"
+                }
+              },
+              {
+                "rider": "200 lbs (91 kg)",
+                "byTravelMm": {
+                  "80": {
+                    "main": 124,
+                    "iva": 5
+                  },
+                  "100": {
+                    "main": 113,
+                    "iva": 4
+                  },
+                  "120": {
+                    "main": 98,
+                    "iva": 3
+                  },
+                  "130": {
+                    "main": 98,
+                    "iva": 2
+                  },
+                  "140": {
+                    "main": 91,
+                    "iva": 2
+                  },
+                  "150": {
+                    "main": 93,
+                    "iva": 1
+                  },
+                  "160": {
+                    "main": 89,
+                    "iva": 1
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "6"
+                }
+              },
+              {
+                "rider": "220 lbs (100 kg)",
+                "byTravelMm": {
+                  "80": {
+                    "main": 138,
+                    "iva": 5
+                  },
+                  "100": {
+                    "main": 125,
+                    "iva": 4
+                  },
+                  "120": {
+                    "main": 110,
+                    "iva": 3
+                  },
+                  "130": {
+                    "main": 110,
+                    "iva": 2
+                  },
+                  "140": {
+                    "main": 102,
+                    "iva": 2
+                  },
+                  "150": {
+                    "main": 104,
+                    "iva": 1
+                  },
+                  "160": {
+                    "main": 98,
+                    "iva": 1
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "4"
+                }
+              },
+              {
+                "rider": "240 lbs (109 kg)",
+                "byTravelMm": {
+                  "80": {
+                    "main": 150,
+                    "iva": 5
+                  },
+                  "100": {
+                    "main": 138,
+                    "iva": 4
+                  },
+                  "120": {
+                    "main": 121,
+                    "iva": 3
+                  },
+                  "130": {
+                    "main": 121,
+                    "iva": 2
+                  },
+                  "140": {
+                    "main": 112,
+                    "iva": 2
+                  },
+                  "150": {
+                    "main": 114,
+                    "iva": 1
+                  },
+                  "160": {
+                    "main": 109,
+                    "iva": 1
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "2"
+                }
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/17493411154967",
+          "retrieved": "2026-11-01",
+          "quote": "SPRING PRESSURE, psi RECOMMENDED",
+          "where": "guide, spring pressure table"
+        },
+        "manualUrl": {
+          "value": "https://hayesbicycle.zendesk.com/hc/article_attachments/17493411154967",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/17493411154967",
+          "retrieved": "2026-11-01",
+          "quote": "MASTODON PRO SET-UP GUIDE",
+          "where": "Mastodon Pro Setup Guide.pdf (article 'Mastodon Gen 3 Setup Guides'), footer HBG PART NO. 46-41494 REV 1 [6/14/2023]"
+        },
+        "modelYear": {
+          "value": null,
+          "status": "missing",
+          "note": "Product page title lists 'Mastodon Pro - Gen 3'; no model year printed."
+        }
+      }
+    },
+    {
+      "id": "manitou-circus-pro",
+      "name": "Manitou Circus Pro",
+      "type": "fork",
+      "modelYears": [],
+      "catalogId": null,
+      "fields": {
+        "travelMm": {
+          "value": {
+            "min": 80,
+            "max": 140
+          },
+          "status": "single",
+          "url": "https://hayesbicycle.com/collections/forks/products/circus-pro-gen-2",
+          "retrieved": "2026-11-01",
+          "quote": "Travel: 80-140mm internally adjustable in 10mm increments",
+          "where": "product page (URL slug circus-pro-gen-2), Specifications"
+        },
+        "wheelSize": {
+          "value": "26",
+          "status": "single",
+          "url": "https://hayesbicycle.com/collections/forks/products/circus-pro-gen-2",
+          "retrieved": "2026-11-01",
+          "quote": "Wheel Size: 26\"",
+          "where": "product page, Specifications"
+        },
+        "stanchionMm": {
+          "value": 34,
+          "status": "verified",
+          "url": "https://hayesbicycle.com/collections/forks/products/circus-pro-gen-2",
+          "retrieved": "2026-11-01",
+          "quote": "Leg Diameter: 34mm",
+          "where": "product page, Specifications",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.com/products/circus-pro-gen-2",
+            "retrieved": "2026-11-01",
+            "quote": "Leg Diameter: 34mm"
+          }
+        },
+        "damper": {
+          "value": "ABS+ Jump Stack w/ HBO, half-cartridge TPC rebound",
+          "status": "single",
+          "url": "https://hayesbicycle.com/collections/forks/products/circus-pro-gen-2",
+          "retrieved": "2026-11-01",
+          "quote": "Compression Damping: ABS+ Jump Stack w/ HBO",
+          "where": "product page, Specifications"
+        },
+        "springType": {
+          "value": "air (Dorado Air w/ IVA)",
+          "status": "verified",
+          "url": "https://hayesbicycle.com/collections/forks/products/circus-pro-gen-2",
+          "retrieved": "2026-11-01",
+          "quote": "Spring: Dorado Air w/ IVA",
+          "where": "product page, Specifications",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.com/products/circus-pro-gen-2",
+            "retrieved": "2026-11-01",
+            "quote": "Spring: Dorado Air w/ IVA"
+          }
+        },
+        "adjusters": {
+          "value": "Air, Air Volume, Rebound, Compression",
+          "status": "single",
+          "url": "https://hayesbicycle.com/collections/forks/products/circus-pro-gen-2",
+          "retrieved": "2026-11-01",
+          "quote": "Adjustments: Air, Air Volume, Rebound, Compression",
+          "where": "product page, Specifications"
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "single",
+          "url": "https://hayesbicycle.com/collections/forks/products/circus-pro-gen-2",
+          "retrieved": "2026-11-01",
+          "quote": "Rebound Damping: Half cartridge adjustable TPC",
+          "where": "product page, Specifications"
+        },
+        "compressionRange": {
+          "value": "ABSOLUTE+ 9 – 0 (counted ccw from max)",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43756734314135",
+          "retrieved": "2026-11-01",
+          "quote": "ABSOLUTE+ DAMPER SETTING IS",
+          "where": "guide, damping adjustment table; range graphic 9-0"
+        },
+        "reboundRange": {
+          "value": "20 – 0 (counted ccw from max)",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43756734314135",
+          "retrieved": "2026-11-01",
+          "quote": "20 - 0",
+          "where": "guide, TPC rebound adjustment range"
+        },
+        "maxPressurePsi": {
+          "value": {
+            "main": 150
+          },
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43756734314135",
+          "retrieved": "2026-11-01",
+          "quote": "MAX PRESSURE NOT TO EXCEED: MAIN 150 PSI.",
+          "where": "guide, Spring adjustment set-up notes"
+        },
+        "sagPercent": {
+          "value": "10-15",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43756734314135",
+          "retrieved": "2026-11-01",
+          "quote": "SHOULD YIELD 10-15% SAG",
+          "where": "guide, Spring adjustment set-up notes (standing, 70% pedals / 30% handlebars)"
+        },
+        "pressureTable": {
+          "value": {
+            "unit": "psi",
+            "riderUnit": "lbs (kg)",
+            "note": "Table transcribed from the guide: per rider-weight row, MAIN (and IVA position) psi for each travel setting plus the rebound start setting counted ccw from max.",
+            "rows": [
+              {
+                "rider": "120 lbs (54 kg)",
+                "byTravelMm": {
+                  "80": {
+                    "main": 70,
+                    "iva": 4
+                  },
+                  "100": {
+                    "main": 63,
+                    "iva": 3
+                  },
+                  "120": {
+                    "main": 56,
+                    "iva": 2
+                  },
+                  "130": {
+                    "main": 55,
+                    "iva": 1
+                  },
+                  "140": {
+                    "main": 50,
+                    "iva": 1
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "12"
+                }
+              },
+              {
+                "rider": "140 lbs (64 kg)",
+                "byTravelMm": {
+                  "80": {
+                    "main": 83,
+                    "iva": 4
+                  },
+                  "100": {
+                    "main": 76,
+                    "iva": 3
+                  },
+                  "120": {
+                    "main": 68,
+                    "iva": 2
+                  },
+                  "130": {
+                    "main": 66,
+                    "iva": 1
+                  },
+                  "140": {
+                    "main": 61,
+                    "iva": 1
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "10"
+                }
+              },
+              {
+                "rider": "160 lbs (73 kg)",
+                "byTravelMm": {
+                  "80": {
+                    "main": 97,
+                    "iva": 4
+                  },
+                  "100": {
+                    "main": 88,
+                    "iva": 3
+                  },
+                  "120": {
+                    "main": 79,
+                    "iva": 2
+                  },
+                  "130": {
+                    "main": 77,
+                    "iva": 1
+                  },
+                  "140": {
+                    "main": 72,
+                    "iva": 1
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "8"
+                }
+              },
+              {
+                "rider": "180 lbs (82 kg)",
+                "byTravelMm": {
+                  "80": {
+                    "main": 111,
+                    "iva": 4
+                  },
+                  "100": {
+                    "main": 101,
+                    "iva": 3
+                  },
+                  "120": {
+                    "main": 91,
+                    "iva": 2
+                  },
+                  "130": {
+                    "main": 89,
+                    "iva": 1
+                  },
+                  "140": {
+                    "main": 82,
+                    "iva": 1
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "6"
+                }
+              },
+              {
+                "rider": "200 lbs (91 kg)",
+                "byTravelMm": {
+                  "80": {
+                    "main": 124,
+                    "iva": 4
+                  },
+                  "100": {
+                    "main": 114,
+                    "iva": 3
+                  },
+                  "120": {
+                    "main": 102,
+                    "iva": 2
+                  },
+                  "130": {
+                    "main": 100,
+                    "iva": 1
+                  },
+                  "140": {
+                    "main": 93,
+                    "iva": 1
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "4"
+                }
+              },
+              {
+                "rider": "220 lbs (100 kg)",
+                "byTravelMm": {
+                  "80": {
+                    "main": 138,
+                    "iva": 4
+                  },
+                  "100": {
+                    "main": 127,
+                    "iva": 3
+                  },
+                  "120": {
+                    "main": 114,
+                    "iva": 2
+                  },
+                  "130": {
+                    "main": 112,
+                    "iva": 1
+                  },
+                  "140": {
+                    "main": 104,
+                    "iva": 1
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "2"
+                }
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43756734314135",
+          "retrieved": "2026-11-01",
+          "quote": "SPRING PRESSURE, psi RECOMMENDED",
+          "where": "guide, spring pressure table"
+        },
+        "manualUrl": {
+          "value": "https://hayesbicycle.zendesk.com/hc/article_attachments/43756734314135",
+          "status": "verified",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43756734314135",
+          "retrieved": "2026-11-01",
+          "quote": "CIRCUS PRO SET-UP GUIDE",
+          "where": "Circus Pro Gen 3 Set-Up Guide.pdf, footer HBG PART NO. 46-41399 REV 1 [4/18/2023]",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/43756734314135",
+            "retrieved": "2026-11-01",
+            "quote": "CIRCUS PRO SET-UP GUIDE ... HBG PART NO. 46-41399 REV 1 [4/18/2023]"
+          }
+        },
+        "modelYear": {
+          "value": null,
+          "status": "missing",
+          "note": "Set-up guide article is titled 'Circus Pro Gen 3' but the product page URL slug says gen-2; neither prints a model year."
+        }
+      }
+    },
+    {
+      "id": "manitou-mattoc-pro",
+      "name": "Manitou Mattoc Pro",
+      "type": "fork",
+      "modelYears": [],
+      "catalogId": null,
+      "fields": {
+        "travelMm": {
+          "value": {
+            "min": 110,
+            "max": 150
+          },
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/14639548710935",
+          "retrieved": "2026-11-01",
+          "quote": "110mm 120mm 130mm 140mm 150mm",
+          "where": "guide, spring pressure table column headings (product page lists no travel spec line)"
+        },
+        "wheelSize": {
+          "value": "27.5\", 29\"",
+          "status": "single",
+          "url": "https://hayesbicycle.com/collections/forks/products/mattoc-pro",
+          "retrieved": "2026-11-01",
+          "quote": "Wheel Size: 27.5\", 29\"",
+          "where": "product page, Specifications"
+        },
+        "stanchionMm": {
+          "value": 34,
+          "status": "verified",
+          "url": "https://hayesbicycle.com/collections/forks/products/mattoc-pro",
+          "retrieved": "2026-11-01",
+          "quote": "Leg Diameter: 34mm",
+          "where": "product page, Specifications",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.com/products/mattoc-pro",
+            "retrieved": "2026-11-01",
+            "quote": "Leg Diameter: 34mm"
+          }
+        },
+        "damper": {
+          "value": "Sealed Cartridge TPC+ with HBO (MC²), sealed TPC rebound",
+          "status": "single",
+          "url": "https://hayesbicycle.com/collections/forks/products/mattoc-pro",
+          "retrieved": "2026-11-01",
+          "quote": "Compression Damping: Sealed Cartridge TPC+ with Hydraulic Bottom Out (HBO)",
+          "where": "product page, Specifications"
+        },
+        "springType": {
+          "value": "air (Dorado Air with Infinite Rate Tune (IRT))",
+          "status": "single",
+          "url": "https://hayesbicycle.com/collections/forks/products/mattoc-pro",
+          "retrieved": "2026-11-01",
+          "quote": "Spring: Dorado Air with Infinite Rate Tune (IRT)",
+          "where": "product page, Specifications"
+        },
+        "adjusters": {
+          "value": "Air, IRT, Rebound, HS and LS Compression",
+          "status": "verified",
+          "url": "https://hayesbicycle.com/collections/forks/products/mattoc-pro",
+          "retrieved": "2026-11-01",
+          "quote": "Adjustments: Air, IRT, Rebound, HS, and LS Compression",
+          "where": "product page, Specifications",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.com/products/mattoc-pro",
+            "retrieved": "2026-11-01",
+            "quote": "Adjustments: Air, IRT, Rebound, HS, and LS Compression"
+          }
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "single",
+          "url": "https://hayesbicycle.com/collections/forks/products/mattoc-pro",
+          "retrieved": "2026-11-01",
+          "quote": "Rebound Damping: Sealed Damper TPC",
+          "where": "product page, Specifications"
+        },
+        "hscRange": {
+          "value": "4 – 0 (outer knob, counted ccw from max)",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/14639548710935",
+          "retrieved": "2026-11-01",
+          "quote": "4-0",
+          "where": "guide, Hi-speed (outer knob) adjustment range"
+        },
+        "lscRange": {
+          "value": "10 – 0 (inner knob, counted ccw from max)",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/14639548710935",
+          "retrieved": "2026-11-01",
+          "quote": "10 - 0",
+          "where": "guide, Lo-speed (inner knob) adjustment range"
+        },
+        "reboundRange": {
+          "value": "20 – 0 (counted ccw from max)",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/14639548710935",
+          "retrieved": "2026-11-01",
+          "quote": "20 - 0",
+          "where": "guide, TPC rebound adjustment range"
+        },
+        "maxPressurePsi": {
+          "value": {
+            "main": 120,
+            "irt": 150
+          },
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/14639548710935",
+          "retrieved": "2026-11-01",
+          "quote": "MAX PRESSURE NOT TO EXCEED: MAIN 120 PSI, IRT 150 PSI.",
+          "where": "guide, Spring adjustment set-up notes"
+        },
+        "sagPercent": {
+          "value": "20-25",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/14639548710935",
+          "retrieved": "2026-11-01",
+          "quote": "SHOULD YIELD 20-25% SAG",
+          "where": "guide, Spring adjustment set-up notes"
+        },
+        "pressureTable": {
+          "value": {
+            "unit": "psi",
+            "riderUnit": "lbs (kg)",
+            "note": "Table transcribed from the guide: per rider-weight row, MAIN (and second chamber) psi for each travel setting plus the rebound start setting counted ccw from max.",
+            "rows": [
+              {
+                "rider": "120 lbs (54 kg)",
+                "byTravelMm": {
+                  "110": {
+                    "main": 44,
+                    "irt": 59
+                  },
+                  "120": {
+                    "main": 42,
+                    "irt": 56
+                  },
+                  "130": {
+                    "main": 42,
+                    "irt": 56
+                  },
+                  "140": {
+                    "main": 38,
+                    "irt": 51
+                  },
+                  "150": {
+                    "main": 38,
+                    "irt": 51
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "14"
+                }
+              },
+              {
+                "rider": "140 lbs (64 kg)",
+                "byTravelMm": {
+                  "110": {
+                    "main": 54,
+                    "irt": 74
+                  },
+                  "120": {
+                    "main": 51,
+                    "irt": 70
+                  },
+                  "130": {
+                    "main": 52,
+                    "irt": 72
+                  },
+                  "140": {
+                    "main": 48,
+                    "irt": 65
+                  },
+                  "150": {
+                    "main": 48,
+                    "irt": 65
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "12"
+                }
+              },
+              {
+                "rider": "160 lbs (73 kg)",
+                "byTravelMm": {
+                  "110": {
+                    "main": 65,
+                    "irt": 90
+                  },
+                  "120": {
+                    "main": 61,
+                    "irt": 85
+                  },
+                  "130": {
+                    "main": 62,
+                    "irt": 86
+                  },
+                  "140": {
+                    "main": 56,
+                    "irt": 78
+                  },
+                  "150": {
+                    "main": 56,
+                    "irt": 78
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "10"
+                }
+              },
+              {
+                "rider": "180 lbs (82 kg)",
+                "byTravelMm": {
+                  "110": {
+                    "main": 75,
+                    "irt": 101
+                  },
+                  "120": {
+                    "main": 70,
+                    "irt": 95
+                  },
+                  "130": {
+                    "main": 71,
+                    "irt": 96
+                  },
+                  "140": {
+                    "main": 66,
+                    "irt": 88
+                  },
+                  "150": {
+                    "main": 66,
+                    "irt": 88
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "8"
+                }
+              },
+              {
+                "rider": "200 lbs (91 kg)",
+                "byTravelMm": {
+                  "110": {
+                    "main": 86,
+                    "irt": 124
+                  },
+                  "120": {
+                    "main": 80,
+                    "irt": 116
+                  },
+                  "130": {
+                    "main": 81,
+                    "irt": 117
+                  },
+                  "140": {
+                    "main": 74,
+                    "irt": 107
+                  },
+                  "150": {
+                    "main": 74,
+                    "irt": 107
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "6"
+                }
+              },
+              {
+                "rider": "220 lbs (100 kg)",
+                "byTravelMm": {
+                  "110": {
+                    "main": 96,
+                    "irt": 141
+                  },
+                  "120": {
+                    "main": 89,
+                    "irt": 132
+                  },
+                  "130": {
+                    "main": 91,
+                    "irt": 134
+                  },
+                  "140": {
+                    "main": 84,
+                    "irt": 123
+                  },
+                  "150": {
+                    "main": 84,
+                    "irt": 123
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "4"
+                }
+              },
+              {
+                "rider": "240 lbs (109 kg)",
+                "byTravelMm": {
+                  "110": {
+                    "main": 112,
+                    "irt": 150
+                  },
+                  "120": {
+                    "main": 104,
+                    "irt": 148
+                  },
+                  "130": {
+                    "main": 106,
+                    "irt": 150
+                  },
+                  "140": {
+                    "main": 97,
+                    "irt": 138
+                  },
+                  "150": {
+                    "main": 97,
+                    "irt": 138
+                  }
+                },
+                "rebound": {
+                  "reboundCcwFromMax": "2"
+                }
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/14639548710935",
+          "retrieved": "2026-11-01",
+          "quote": "SPRING PRESSURE, psi RECOMMENDED",
+          "where": "guide, spring pressure table"
+        },
+        "manualUrl": {
+          "value": "https://hayesbicycle.zendesk.com/hc/article_attachments/14639548710935",
+          "status": "verified",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/14639548710935",
+          "retrieved": "2026-11-01",
+          "quote": "MATTOC PRO SET-UP GUIDE",
+          "where": "Mattoc_Pro_Setup_Guide.pdf, footer HBG PART NO. 46-41234 REV 1 [2/10/2023]",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/14639548710935",
+            "retrieved": "2026-11-01",
+            "quote": "MATTOC PRO SET-UP GUIDE ... HBG PART NO. 46-41234 REV 1 [2/10/2023]"
+          }
+        },
+        "modelYear": {
+          "value": null,
+          "status": "missing",
+          "note": "No model year printed on product page or guide."
+        }
+      }
+    },
+    {
+      "id": "manitou-r8-pro",
+      "name": "Manitou R8 Pro",
+      "type": "fork",
+      "modelYears": [],
+      "catalogId": null,
+      "fields": {
+        "travelMm": {
+          "value": {
+            "nominal": 120,
+            "min": 80,
+            "max": 120
+          },
+          "status": "single",
+          "url": "https://hayesbicycle.com/collections/forks/products/r8-pro",
+          "retrieved": "2026-11-01",
+          "quote": "Travel: 120mm - adjustable from 80-120mm in 10mm increments",
+          "where": "product page, Specifications"
+        },
+        "wheelSize": {
+          "value": "29",
+          "status": "single",
+          "url": "https://hayesbicycle.com/collections/forks/products/r8-pro",
+          "retrieved": "2026-11-01",
+          "quote": "Wheel Size: 29\"",
+          "where": "product page, Specifications"
+        },
+        "stanchionMm": {
+          "value": 34,
+          "status": "verified",
+          "url": "https://hayesbicycle.com/collections/forks/products/r8-pro",
+          "retrieved": "2026-11-01",
+          "quote": "Leg Diameter: 34mm",
+          "where": "product page, Specifications",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.com/products/r8-pro",
+            "retrieved": "2026-11-01",
+            "quote": "Leg Diameter: 34mm"
+          }
+        },
+        "damper": {
+          "value": "VTT-Pro X Sealed Cartridge, 3-position compression with open-mode adjust, remote lockout; sealed TPC rebound",
+          "status": "single",
+          "url": "https://hayesbicycle.com/collections/forks/products/r8-pro",
+          "retrieved": "2026-11-01",
+          "quote": "Compression Damping: VTT-Pro X Sealed Cartridge",
+          "where": "product page, Specifications"
+        },
+        "springType": {
+          "value": "air (Dorado Air with IVA XC)",
+          "status": "verified",
+          "url": "https://hayesbicycle.com/collections/forks/products/r8-pro",
+          "retrieved": "2026-11-01",
+          "quote": "Spring: Dorado Air with IIVA XC",
+          "where": "product page, Specifications (page text reads 'IIVA XC')",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.com/products/r8-pro",
+            "retrieved": "2026-11-01",
+            "quote": "Spring: Dorado Air with IIVA XC"
+          }
+        },
+        "adjusters": {
+          "value": "Air, air volume, Rebound, 3 position compression, Open mode Compression",
+          "status": "verified",
+          "url": "https://hayesbicycle.com/collections/forks/products/r8-pro",
+          "retrieved": "2026-11-01",
+          "quote": "Adjustments: Air, air volume, Rebound, 3 position compression, Open mode Compression",
+          "where": "product page, Specifications",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.com/products/r8-pro",
+            "retrieved": "2026-11-01",
+            "quote": "Adjustments: Air, air volume, Rebound, 3 position compression, Open mode Compression"
+          }
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "single",
+          "url": "https://hayesbicycle.com/collections/forks/products/r8-pro",
+          "retrieved": "2026-11-01",
+          "quote": "Rebound Damping: Sealed Damper TPC",
+          "where": "product page, Specifications"
+        },
+        "reboundRange": {
+          "value": "18 – 0 (counted ccw from max)",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/24504253740951",
+          "retrieved": "2026-11-01",
+          "quote": "18 – 0",
+          "where": "guide, TPC rebound adjustment range"
+        },
+        "openModeAdjustRange": {
+          "value": "20 – 0",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/24504253740951",
+          "retrieved": "2026-11-01",
+          "quote": "20 – 0",
+          "where": "guide, OPEN MODE ADJUST adjustment range"
+        },
+        "maxPressurePsi": {
+          "value": {
+            "main": 150
+          },
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/24504253740951",
+          "retrieved": "2026-11-01",
+          "quote": "Max pressure not to exceed 150 psi [10.3 bar].",
+          "where": "guide, Set-up notes"
+        },
+        "sagPercent": {
+          "value": "15-20",
+          "status": "verified",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/24504253740951",
+          "retrieved": "2026-11-01",
+          "quote": "Recommended pressures are based on 15-20%",
+          "where": "guide, Set-up notes ('...15-20% sag measurement')",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/24504253740951",
+            "retrieved": "2026-11-01",
+            "quote": "Recommended pressures are based on 15-20% sag measurement for the given rider weight."
+          }
+        },
+        "pressureTable": {
+          "value": {
+            "unit": "psi",
+            "riderUnit": "lbs (kg)",
+            "note": "Columns as printed: 100 mm (IVA 2), 120 mm (IVA 1), 120 mm with no IVA (main only; 'NOT RECCOMENDED' printed for 180 lb and heavier); rebound counted ccw from max.",
+            "rows": [
+              {
+                "rider": "100 lbs (45 kg)",
+                "100mm": {
+                  "main": 50,
+                  "iva": 2
+                },
+                "120mm": {
+                  "main": 46,
+                  "iva": 1
+                },
+                "120mmNoIva": 50,
+                "reboundCcwFromMax": 18
+              },
+              {
+                "rider": "120 lbs (54 kg)",
+                "100mm": {
+                  "main": 63,
+                  "iva": 2
+                },
+                "120mm": {
+                  "main": 56,
+                  "iva": 1
+                },
+                "120mmNoIva": 62,
+                "reboundCcwFromMax": 16
+              },
+              {
+                "rider": "140 lbs (64 kg)",
+                "100mm": {
+                  "main": 74,
+                  "iva": 2
+                },
+                "120mm": {
+                  "main": 66,
+                  "iva": 1
+                },
+                "120mmNoIva": 73,
+                "reboundCcwFromMax": 14
+              },
+              {
+                "rider": "160 lbs (73 kg)",
+                "100mm": {
+                  "main": 85,
+                  "iva": 2
+                },
+                "120mm": {
+                  "main": 76,
+                  "iva": 1
+                },
+                "120mmNoIva": 85,
+                "reboundCcwFromMax": 12
+              },
+              {
+                "rider": "180 lbs (82 kg)",
+                "100mm": {
+                  "main": 97,
+                  "iva": 2
+                },
+                "120mm": {
+                  "main": 87,
+                  "iva": 1
+                },
+                "120mmNoIva": "NOT RECCOMENDED",
+                "reboundCcwFromMax": 10
+              },
+              {
+                "rider": "200 lbs (91 kg)",
+                "100mm": {
+                  "main": 109,
+                  "iva": 2
+                },
+                "120mm": {
+                  "main": 97,
+                  "iva": 1
+                },
+                "120mmNoIva": "NOT RECCOMENDED",
+                "reboundCcwFromMax": 8
+              },
+              {
+                "rider": "220 lbs (100 kg)",
+                "100mm": {
+                  "main": 122,
+                  "iva": 2
+                },
+                "120mm": {
+                  "main": 108,
+                  "iva": 1
+                },
+                "120mmNoIva": "NOT RECCOMENDED",
+                "reboundCcwFromMax": 6
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/24504253740951",
+          "retrieved": "2026-11-01",
+          "quote": "SPRING PRESSURE, PSI RECOMMENDED",
+          "where": "guide, spring pressure table"
+        },
+        "manualUrl": {
+          "value": "https://hayesbicycle.zendesk.com/hc/article_attachments/24504253740951",
+          "status": "verified",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/24504253740951",
+          "retrieved": "2026-11-01",
+          "quote": "R8 PRO SET-UP GUIDE",
+          "where": "Manitou_R8_Set-Up-Guide.pdf, attachment updated 2024-06-28; footer © HAYES PERFORMANCE SYSTEMS 2024",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/24504253740951",
+            "retrieved": "2026-11-01",
+            "quote": "R8 PRO SET-UP GUIDE ... © HAYES PERFORMANCE SYSTEMS 2024"
+          }
+        },
+        "modelYear": {
+          "value": null,
+          "status": "missing",
+          "note": "No model year printed on product page or guide."
+        }
+      }
+    },
+    {
+      "id": "manitou-mara-pro-il",
+      "name": "Manitou Mara Pro IL",
+      "type": "shock",
+      "modelYears": [],
+      "catalogId": null,
+      "fields": {
+        "strokeMm": {
+          "value": {
+            "min": 30,
+            "max": 65
+          },
+          "status": "single",
+          "url": "https://hayesbicycle.com/collections/shocks/products/mara-pro-inline",
+          "retrieved": "2026-11-01",
+          "quote": "30-65mm stroke sizes",
+          "where": "product page, Key Features"
+        },
+        "eyeToEyeMm": {
+          "value": null,
+          "status": "missing",
+          "note": "Product page gives stroke range and a Size selector only; eye-to-eye lengths not stated in the text read."
+        },
+        "mount": {
+          "value": "Eyelet and Trunnion",
+          "status": "verified",
+          "url": "https://hayesbicycle.com/collections/shocks/products/mara-pro-inline",
+          "retrieved": "2026-11-01",
+          "quote": "Mounting Style: Eyelet and Trunnion",
+          "where": "product page, Specifications",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.com/products/mara-pro-inline",
+            "retrieved": "2026-11-01",
+            "quote": "Mounting Style: Eyelet and Trunnion"
+          }
+        },
+        "springType": {
+          "value": "air (Balance Groove King Can, Balance Groove negative spring)",
+          "status": "single",
+          "url": "https://hayesbicycle.com/collections/shocks/products/mara-pro-inline",
+          "retrieved": "2026-11-01",
+          "quote": "Air Can: Balance Groove King Can",
+          "where": "product page, Specifications"
+        },
+        "compression": {
+          "value": "IPA - 4 Position",
+          "status": "single",
+          "url": "https://hayesbicycle.com/collections/shocks/products/mara-pro-inline",
+          "retrieved": "2026-11-01",
+          "quote": "Compression: IPA - 4 Position",
+          "where": "product page, Specifications"
+        },
+        "adjusters": {
+          "value": "Air Pressure, 4 position IPA, Rebound with detents",
+          "status": "single",
+          "url": "https://hayesbicycle.com/collections/shocks/products/mara-pro-inline",
+          "retrieved": "2026-11-01",
+          "quote": "External Adjustments: Air Pressure, 4 positon IPA, Rebound with detents",
+          "where": "product page, Specifications (page text spells 'positon')"
+        },
+        "lscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Compression is a single 4-position IPA knob; no separate LSC/HSC counts."
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://hayesbicycle.com/collections/shocks/products/mara-pro-inline",
+          "retrieved": "2026-11-01",
+          "quote": "Rebound with detents",
+          "where": "product page, Specifications",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/25871616439319",
+            "retrieved": "2026-11-01",
+            "quote": "REBOUND ADJUSTMENT ... 17 clicks available."
+          }
+        },
+        "reboundClicks": {
+          "value": 17,
+          "status": "verified",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/25871616439319",
+          "retrieved": "2026-11-01",
+          "quote": "17 clicks available.",
+          "where": "guide, Rebound adjustment",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/25871616439319",
+            "retrieved": "2026-11-01",
+            "quote": "Rebound setting will vary for different rider weights and /or spring pressures, 17 clicks available. (Recommended setting for 170lbs rider is -7)."
+          }
+        },
+        "hasClimbLever": {
+          "value": null,
+          "status": "missing",
+          "note": "Product page lists 'Options: ... Remote Lockout' only; no built-in lever."
+        },
+        "maxPressurePsi": {
+          "value": 350,
+          "status": "verified",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/25871616439319",
+          "retrieved": "2026-11-01",
+          "quote": "Max pressure not to exceed 350 psi.",
+          "where": "guide, Set-up notes",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/25871616439319",
+            "retrieved": "2026-11-01",
+            "quote": "Max pressure not to exceed 350 psi."
+          }
+        },
+        "sagPercent": {
+          "value": "20-30",
+          "status": "verified",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/25871616439319",
+          "retrieved": "2026-11-01",
+          "quote": "based off of 20-30% sag for",
+          "where": "guide, Set-up notes",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/25871616439319",
+            "retrieved": "2026-11-01",
+            "quote": "Recomended setup is based off of 20-30% sag for the given rider weight. Consult frame manufacture for further specific sag measurement."
+          }
+        },
+        "preloadGuide": {
+          "value": "Pressure should be increased in increments of 75psi.",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/25871616439319",
+          "retrieved": "2026-11-01",
+          "quote": "Pressure should be increased in increments of 75psi.",
+          "where": "guide, Set-up notes"
+        },
+        "manualUrl": {
+          "value": "https://hayesbicycle.zendesk.com/hc/article_attachments/25871616439319",
+          "status": "verified",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/25871616439319",
+          "retrieved": "2026-11-01",
+          "quote": "MARA INLINE PRO SET-UP",
+          "where": "Mara Pro IL Setup Guide.pdf (article 'Mara IL Gen 2 Set-Up Guide'), updated 2024-08-23; © HAYES PERFORMANCE SYSTEMS 2024",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/25871616439319",
+            "retrieved": "2026-11-01",
+            "quote": "MARA INLINE PRO SET-UP ... © HAYES PERFORMANCE SYSTEMS 2024"
+          }
+        },
+        "modelYear": {
+          "value": null,
+          "status": "missing",
+          "note": "Guide article is 'Mara IL Gen 2'; no model year printed."
+        }
+      }
+    },
+    {
+      "id": "manitou-mara-pro-pb-gen2",
+      "name": "Manitou Mara Pro PB (Gen 2)",
+      "type": "shock",
+      "modelYears": [],
+      "catalogId": null,
+      "fields": {
+        "strokeMm": {
+          "value": {
+            "min": 45,
+            "max": 75
+          },
+          "status": "single",
+          "url": "https://hayesbicycle.com/collections/shocks/products/mara-pro-piggyback",
+          "retrieved": "2026-11-01",
+          "quote": "available in 45-75mm stroke lengths",
+          "where": "product page, description (page Key Features: 45-65mm stroke sizes; DH spec 70-75)"
+        },
+        "eyeToEyeMm": {
+          "value": null,
+          "status": "missing",
+          "note": "Product page gives stroke range and a Size selector only; eye-to-eye lengths not stated in the text read."
+        },
+        "mount": {
+          "value": "Eyelet and Trunnion",
+          "status": "verified",
+          "url": "https://hayesbicycle.com/collections/shocks/products/mara-pro-piggyback",
+          "retrieved": "2026-11-01",
+          "quote": "Mounting Style: Eyelet and Trunnion",
+          "where": "product page, Specifications",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.com/products/mara-pro-piggyback",
+            "retrieved": "2026-11-01",
+            "quote": "Mounting Style: Eyelet and Trunnion"
+          }
+        },
+        "springType": {
+          "value": "air (Balance Groove King Can, Balance Groove negative spring)",
+          "status": "single",
+          "url": "https://hayesbicycle.com/collections/shocks/products/mara-pro-piggyback",
+          "retrieved": "2026-11-01",
+          "quote": "Air Can: Balance Groove King Can",
+          "where": "product page, Specifications"
+        },
+        "adjusters": {
+          "value": "Air Pressure, Rebound, HS and LS Compression, Work / Party Mode",
+          "status": "single",
+          "url": "https://hayesbicycle.com/collections/shocks/products/mara-pro-piggyback",
+          "retrieved": "2026-11-01",
+          "quote": "External Adjustments: Air Pressure, Rebound, HS and LS Compression. Work / Party Mode",
+          "where": "product page, Specifications"
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://hayesbicycle.com/collections/shocks/products/mara-pro-piggyback",
+          "retrieved": "2026-11-01",
+          "quote": "External Adjustments: Air Pressure, Rebound, HS and LS Compression.",
+          "where": "product page, Specifications (one Rebound adjuster)",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/28476110600727",
+            "retrieved": "2026-11-01",
+            "quote": "REBOUND CONTROLS SPEED AT WHICH WHEEL RETURNS TO SAGGED POSITION ... 12 – 0"
+          }
+        },
+        "reboundRange": {
+          "value": "12 – 0 (counted ccw from closed)",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/28476110600727",
+          "retrieved": "2026-11-01",
+          "quote": "12 – 0",
+          "where": "guide, Rebound adjustment range; settings counted from closed per Set-up notes"
+        },
+        "hscRange": {
+          "value": "0 – 6 (counted cw from open)",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/28476110600727",
+          "retrieved": "2026-11-01",
+          "quote": "0–6",
+          "where": "guide, High-speed (outer) range; 'High Speed Compression clicks are counted from Open (Clockwise)'"
+        },
+        "lscRange": {
+          "value": "30 – 0 (counted ccw from closed)",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/28476110600727",
+          "retrieved": "2026-11-01",
+          "quote": "30 – 0",
+          "where": "guide, Lo-speed (inner) range"
+        },
+        "hasClimbLever": {
+          "value": true,
+          "status": "verified",
+          "url": "https://hayesbicycle.com/collections/shocks/products/mara-pro-piggyback",
+          "retrieved": "2026-11-01",
+          "quote": "Work / Party mode lever",
+          "where": "product page, description (lever switches Work/Party; guide notes platform lever 'NOT INCLUDED ON MARA PRO PB DH')",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/28476110600727",
+            "retrieved": "2026-11-01",
+            "quote": "PLATFORM ACTIVATES PLATFORM MODE FOR MORE EFFICIENT CLIMBING. • NOT INCLUDED ON MARA PRO PB DH ... PARTY / WORK"
+          }
+        },
+        "baselineSettings170lb": {
+          "value": {
+            "rebound": "MAX -6",
+            "hscAggressive": "+3",
+            "hscCompliant": "+1",
+            "lscAggressive": "-10",
+            "lscCompliant": "-15"
+          },
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/28476110600727",
+          "retrieved": "2026-11-01",
+          "quote": "RECOMMENDED SETTINGS BASED ON",
+          "where": "guide, damping adjustment baselines for a 170 lb rider (BASELINE REBOUND: MAX -6; HIGH-SPEED: AGGRESSIVE TUNE +3, COMPLIANT TUNE +1; LOW-SPEED: AGGRESSIVE TUNE -10, COMPLIANT TUNE -15)"
+        },
+        "maxPressurePsi": {
+          "value": 350,
+          "status": "verified",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/28476110600727",
+          "retrieved": "2026-11-01",
+          "quote": "Max pressure not to exceed 350 psi.",
+          "where": "guide, Set-up notes",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/28476110600727",
+            "retrieved": "2026-11-01",
+            "quote": "Max pressure not to exceed 350 psi."
+          }
+        },
+        "sagPercent": {
+          "value": "25-30 (starting point if the frame maker gives none)",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/28476110600727",
+          "retrieved": "2026-11-01",
+          "quote": "If not available 25-30% is a good starting point.",
+          "where": "guide, Set-up notes"
+        },
+        "preloadGuide": {
+          "value": "Pressure should be increased in increments of 75psi.",
+          "status": "single",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/28476110600727",
+          "retrieved": "2026-11-01",
+          "quote": "Pressure should be increased in increments of 75psi.",
+          "where": "guide, Set-up notes"
+        },
+        "manualUrl": {
+          "value": "https://hayesbicycle.zendesk.com/hc/article_attachments/28476110600727",
+          "status": "verified",
+          "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/28476110600727",
+          "retrieved": "2026-11-01",
+          "quote": "MARA PRO SET-UP GUIDE",
+          "where": "Mara Pro PB Gen 2 Setup Guide.pdf (article 'Mara Pro PB Gen 2 Set-Up Guide'), updated 2024-12-12; © HAYES PERFORMANCE SYSTEMS 2024",
+          "verifiedBy": {
+            "url": "https://hayesbicycle.zendesk.com/hc/article_attachments/28476110600727",
+            "retrieved": "2026-11-01",
+            "quote": "MARA PRO SET-UP GUIDE ... © HAYES PERFORMANCE SYSTEMS 2024"
+          }
+        },
+        "modelYear": {
+          "value": null,
+          "status": "missing",
+          "note": "Guide article is 'Mara Pro PB Gen 2'; no model year printed."
+        }
+      }
+    }
+  ]
+}

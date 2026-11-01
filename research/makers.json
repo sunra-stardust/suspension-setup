@@ -10,8 +10,8 @@
       "website": "https://ridefox.com",
       "docHub": "https://tech.ridefox.com/bike/list/owners-manuals",
       "status": "listed",
-      "lastChecked": "2026-10-01",
-      "notes": "Per-model-year owner's manuals as HTML pages on tech.ridefox.com (some tables are images); user-spec drawings under /bike/list/spec-sheets; product pages on ridefox.com (Shopify, current model year, MY tags) link owner's-guide PDFs hosted on Fox's asset CDN serenity-foxfactory.asset.akeneo.cloud. The URL https://tech.ridefox.com/bike/owners-manuals returns 404; the list lives at /bike/list/owners-manuals. Fox generally publishes starting settings, rarely total click counts. Sample run 2026-09-30: only selected models researched, product list incomplete. Monthly update 2026-10-01: MY2027 manuals exist for every family (hub ids 3162-3174, 3183; MY27 owner's-guide PDFs for 38/40/FLOAT X/DHX linked from product pages); added MY2027 items for 34, 36, 38, 40, FLOAT X, FLOAT X2, DHX2. Not yet covered: 32 (TC/Step-Cast/Rhythm), 34SL, 36SL, AWL, Podium, FLOAT SL/DPS, DHX, Live Valve NEO, 2026 38/40 and 2026 FLOAT/DHX/DHX2 items."
+      "lastChecked": "2026-11-01",
+      "notes": "Per-model-year owner's manuals as HTML pages on tech.ridefox.com (some tables are images); user-spec drawings under /bike/list/spec-sheets; product pages on ridefox.com (Shopify, current model year, MY tags) link owner's-guide PDFs hosted on Fox's asset CDN serenity-foxfactory.asset.akeneo.cloud. The URL https://tech.ridefox.com/bike/owners-manuals returns 404; the list lives at /bike/list/owners-manuals. Fox generally publishes starting settings, rarely total click counts. Sample run 2026-09-30: only selected models researched, product list incomplete. Monthly update 2026-10-01: MY2027 manuals exist for every family (hub ids 3162-3174, 3183; MY27 owner's-guide PDFs for 38/40/FLOAT X/DHX linked from product pages); added MY2027 items for 34, 36, 38, 40, FLOAT X, FLOAT X2, DHX2. Monthly update 2026-11-01 (pass 1, single values only): added MY2027 items for FLOAT SL (manual 3173, shared with FLOAT X), FLOAT (3172), DHX (3170), 32 Step-Cast (3162), 34 SL (3163), 36 SL (3165); tables read from the HTML manuals, rebound/volume graphics that are images stay missing; no total click counts published for these. Not yet covered: 32 TC and 32 Rhythm / 34 Rhythm items (data is in manual 3162), AWL, Podium, Live Valve NEO, 2026 items for 32/34SL/36SL/FLOAT SL/FLOAT/DHX/38/40 and 2026 FLOAT X2/DHX2 where missing."
     },
     {
       "id": "rockshox",
@@ -79,11 +79,11 @@
       "kinds": [
         "suspension"
       ],
-      "website": null,
-      "docHub": null,
-      "status": "seed",
-      "lastChecked": null,
-      "notes": ""
+      "website": "https://manitou.hayesbicycle.com/en-us/",
+      "docHub": "https://hayesbicycle.zendesk.com/hc/en-us",
+      "status": "listed",
+      "lastChecked": "2026-11-01",
+      "notes": "Manitou is a Hayes Bicycle Group brand. manitou-mtb.com was not reachable from the research environment (egress proxy refused it), so the Hayes-group domains were used: product pages at manitou.hayesbicycle.com and hayesbicycle.com (spec tables), set-up guide PDFs on the Hayes Zendesk help center (public API lists the article attachments). 2026-11-01 first pass (single only): Mezzer G2 Pro, LT Pro, Expert, LT Comp; Mastodon Pro (Gen 3); Circus Pro; Mattoc Pro; R8 Pro; Mara Pro IL; Mara Pro PB (Gen 2). No model years are printed in these documents (modelYears left empty). Not yet covered: Mezzer Gen 1, Mattoc Expert/Comp/Youth, Mastodon Comp, JUNIT 34 Pro/Expert, Dorado (MY22 Pro/Expert/Comp), Machete/R7, Markhor, Mara Pro IL XC, Mara IL Comp, Mara Pro PB DH, older Mara/IVA guides. The Hayes Zendesk site answers browser-style requests with 403 for the HTML pages; the JSON API and attachment downloads worked without special headers."
     },
     {
       "id": "x-fusion",
@@ -199,11 +199,11 @@
       "kinds": [
         "suspension"
       ],
-      "website": null,
+      "website": "https://www.magura.com",
       "docHub": null,
-      "status": "seed",
-      "lastChecked": null,
-      "notes": ""
+      "status": "inactive",
+      "lastChecked": "2026-11-01",
+      "notes": "No MTB suspension in current range. magura.com/en/ (retrieved 2026-11-01) main menu: Brakes, Seatposts, Spare Parts, Service, Company, News, Shop; product pages list only brakes (MT/Gustav/Clara/HS etc.), seatpost VYRON MDS-V3 and spare/tuning parts; no fork or shock entry. Own-domain history/milestones pages not reachable (404 on guessed URLs), so no discontinuation date."
     },
     {
       "id": "trust-performance",
@@ -262,8 +262,8 @@
       "website": "https://www.cube.eu/",
       "docHub": "https://www.cube.eu/support/downloads",
       "status": "listed",
-      "lastChecked": "2026-09-30",
-      "notes": "Product pages (Shopware) carry full spec incl. shock size and a geometry table; model year is not printed on the product page, but the 'Systemgewicht Classic 2027' PDF on the downloads page lists the current bikes. General operating manual defers suspension setup to the component maker's manual. Sample run 2026-09-30: only selected models researched, product list incomplete."
+      "lastChecked": "2026-11-01",
+      "notes": "Product pages (Shopware) carry full spec incl. shock size and a geometry table; model year is not printed on the product page, but the 'Systemgewicht Classic 2027' PDF on the downloads page lists the current bikes. General operating manual defers suspension setup to the component maker's manual. Sample run 2026-09-30: only selected models researched, product list incomplete. Monthly pass 1 (2026-11-01): Stereo C:62 SLT product page re-read, wheelSize/shockMount/sag still not printed (stay missing); rearTravel conflict kept. No further Cube models researched this run (product list still incomplete)."
     },
     {
       "id": "mondraker",
@@ -286,8 +286,8 @@
       "website": "https://www.canyon.com",
       "docHub": "https://www.canyon.com/en-us/customer-service/",
       "status": "listed",
-      "lastChecked": "2026-09-30",
-      "notes": "Canyon product pages embed schema.org data with a 'Year' property (current range = 2027). Component geometry table carries 'Fitting Length' (shock size) and per-size rear travel. Quick start guides (platform code e.g. M179, M185) carry sag and sometimes shock pressure tables. Docs: (per-model support pages list quick start guide PDFs; product pages have geometry pages at /productpdf/geometry/?pid=<id>) Sample run 2026-09-30: only selected models researched, product list incomplete."
+      "lastChecked": "2026-11-01",
+      "notes": "Canyon product pages embed schema.org data with a 'Year' property (current range = 2027). Component geometry table carries 'Fitting Length' (shock size) and per-size rear travel. Quick start guides (platform code e.g. M179, M185) carry sag and sometimes shock pressure tables. Docs: (per-model support pages list quick start guide PDFs; product pages have geometry pages at /productpdf/geometry/?pid=<id>) Sample run 2026-09-30: only selected models researched, product list incomplete. Monthly pass 1 (2026-11-01): the two researched models unchanged; shockMount and springRateBySize still not stated in the product pages/QSGs already checked (stay missing). Canyon US range still lists unresearched current models: Spectral CF 7/9, Spectral 5/6, Neuron 5/6, Lux Trail CF 6-9, Sender CFR; Torque/Strive/Neuron CF pages not listed under the en-us category pages this run."
     },
     {
       "id": "yt-industries",
@@ -307,11 +307,11 @@
       "kinds": [
         "bike"
       ],
-      "website": null,
-      "docHub": null,
-      "status": "seed",
-      "lastChecked": null,
-      "notes": ""
+      "website": "https://www.specialized.com",
+      "docHub": "https://www.specialized.com/us/en/shop/bikes",
+      "status": "listed",
+      "lastChecked": "2026-11-01",
+      "notes": "Product pages (specialized.com/us/en/<slug>/p/<id>) carry Specs text incl. shock length x stroke; the product page links the user manual PDF (media.specialized.com/support/collateral/2025_<MODEL>_USER_MANUAL_ENGLISH.pdf) with spec table, recommended sag, flip chip; pressures only via the online suspension calculator (not researched). Model year is not printed on pages/manuals. Pass 1 2026-11-01: Stumpjumper 15, Stumpjumper 15 EVO, Enduro (one trim each), Status 2 140 and 170; other trims, S-Works, Stumpjumper alloy/coil, older Enduro generations not covered. The Stumpjumper manual is titled 'Stumpjumper Carbon'; applied to the EVO because its geometry table has the EVO column (not stated explicitly)."
     },
     {
       "id": "trek",

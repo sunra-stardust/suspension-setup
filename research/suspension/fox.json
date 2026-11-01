@@ -3472,6 +3472,1282 @@
           }
         }
       }
+    },
+    {
+      "id": "fox-float-sl-2027",
+      "name": "Fox FLOAT SL",
+      "type": "shock",
+      "modelYears": [
+        2027
+      ],
+      "catalogId": null,
+      "fields": {
+        "sizesAvailable": {
+          "value": null,
+          "status": "missing",
+          "note": "Not listed in the 2027 FLOAT SL/FLOAT X web manual (3173); sag table lists travels 25-76 mm (1.0-3.0 in) generically for FLOAT shocks. No MY27 FLOAT SL product page checked."
+        },
+        "springType": {
+          "value": "air (EVOL)",
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3173/shock--2027-float-sl-and-float-x",
+          "retrieved": "2026-11-01",
+          "quote": "The EVOL air sleeve comes standard on FLOAT SL and FLOAT X models.",
+          "where": "Using the EVOL Air Sleeve",
+          "note": "FLOAT SL non-EVOL variants are also mentioned in the pressure section."
+        },
+        "maxPressurePsi": {
+          "value": {
+            "EVOL": 350,
+            "non-EVOL": 300
+          },
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3173/shock--2027-float-sl-and-float-x",
+          "retrieved": "2026-11-01",
+          "quote": "FLOAT SL EVOL and FLOAT X shocks have a maximum pressure of 350psi (24.1 bar) ... FLOAT SL Non-EVOL shocks have a maximum pressure of 300psi (20.7 bar)",
+          "where": "Setting Shock Air Pressure",
+          "note": "Value depends on air sleeve: EVOL 350 psi, non-EVOL 300 psi."
+        },
+        "lscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "2027 manual (3173) describes the FLOAT SL 3-position lever with Open mode adjust (3 positions); no click count. LSC knob described is FLOAT X only."
+        },
+        "hscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No high-speed compression adjuster described for FLOAT SL in manual 3173; absence not independently confirmed."
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3173/shock--2027-float-sl-and-float-x",
+          "retrieved": "2026-11-01",
+          "quote": "Turn your rebound knob to the closed position (full clockwise) until it stops. Then back it out (counter-clockwise) to the number of clicks shown in the table below.",
+          "where": "Adjusting Rebound (one rebound knob; the FLOAT SL table is an image)"
+        },
+        "reboundMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Rebound start table is an image (DPS-rebound-setup.jpg); total clicks not stated in text."
+        },
+        "hasClimbLever": {
+          "value": true,
+          "status": "verified",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3173/shock--2027-float-sl-and-float-x",
+          "retrieved": "2026-11-01",
+          "quote": "3-Position Lever: The 3-position lever is useful to make on-the-fly adjustments to control shock performance under significant changes in terrain",
+          "where": "Adjusting Compression Damping",
+          "note": "Also a 2-position remote is described.",
+          "verifiedBy": {
+            "url": "https://tech.ridefox.com/bike/owners-manuals/3173/shock--2027-float-sl-and-float-x",
+            "retrieved": "2026-11-01",
+            "quote": "3-position lever with OPEN, MEDIUM, FIRM; use the FIRM mode for smooth climbing"
+          }
+        },
+        "openModeAdjustPositions": {
+          "value": 3,
+          "status": "verified",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3173/shock--2027-float-sl-and-float-x",
+          "retrieved": "2026-11-01",
+          "quote": "Open mode adjust provides 3 additional fine tuning adjustments for the OPEN mode.",
+          "where": "Adjusting Compression Damping",
+          "note": "Marked * \"Factory and Performance Elite Series non-remote shocks only\".",
+          "verifiedBy": {
+            "url": "https://tech.ridefox.com/bike/owners-manuals/3173/shock--2027-float-sl-and-float-x",
+            "retrieved": "2026-11-01",
+            "quote": "Setting 1 will have a more plush feel and setting 3 will have a firmer feel"
+          }
+        },
+        "sagPercent": {
+          "value": "25-30",
+          "status": "verified",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3173/shock--2027-float-sl-and-float-x",
+          "retrieved": "2026-11-01",
+          "quote": "Sag should be set to 25 - 30% of total shock travel",
+          "where": "Setting Shock Air Pressure",
+          "verifiedBy": {
+            "url": "https://tech.ridefox.com/bike/owners-manuals/3173/shock--2027-float-sl-and-float-x",
+            "retrieved": "2026-11-01",
+            "quote": "Sag range should be set to 25–30% of total shock travel."
+          }
+        },
+        "manualUrl": {
+          "value": "https://tech.ridefox.com/bike/owners-manuals/3173/shock--2027-float-sl-and-float-x",
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3173/shock--2027-float-sl-and-float-x",
+          "retrieved": "2026-11-01",
+          "quote": "SHOCK- 2027 FLOAT SL and FLOAT X",
+          "where": "owner's manual page title (shared with FLOAT X)"
+        }
+      }
+    },
+    {
+      "id": "fox-float-2027",
+      "name": "Fox FLOAT",
+      "type": "shock",
+      "modelYears": [
+        2027
+      ],
+      "catalogId": null,
+      "fields": {
+        "sizesAvailable": {
+          "value": null,
+          "status": "missing",
+          "note": "Not listed in the 2027 FLOAT web manual (3172); sag table lists travels 25-76 mm (1.0-3.0 in) generically."
+        },
+        "springType": {
+          "value": "air (EVOL)",
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3172/shock--2027-float",
+          "retrieved": "2026-11-01",
+          "quote": "The EVOL air sleeve comes standard on FLOAT models.",
+          "where": "Using the EVOL Air Sleeve"
+        },
+        "maxPressurePsi": {
+          "value": 350,
+          "status": "verified",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3172/shock--2027-float",
+          "retrieved": "2026-11-01",
+          "quote": "FLOAT shocks have a maximum pressure of 350psi (24.1 bar)",
+          "where": "Setting Shock Air Pressure",
+          "verifiedBy": {
+            "url": "https://tech.ridefox.com/bike/owners-manuals/3172/shock--2027-float",
+            "retrieved": "2026-11-01",
+            "quote": "FLOAT shocks have a maximum pressure of 350psi (24.1 bar)."
+          }
+        },
+        "lscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "2027 manual (3172) describes only a 2-position lever (+ Open mode adjust); no LSC click adjuster or click count stated."
+        },
+        "hscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No high-speed compression adjuster described in manual 3172; absence not independently confirmed."
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3172/shock--2027-float",
+          "retrieved": "2026-11-01",
+          "quote": "Turn your rebound knob to the closed position (full clockwise) until it stops. Then back it out (counter-clockwise) to the number of clicks shown in the table below.",
+          "where": "Adjusting Rebound (one rebound knob; table is an image rebound1.jpg)"
+        },
+        "reboundMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Rebound start table is an image; total clicks not stated in text."
+        },
+        "hasClimbLever": {
+          "value": true,
+          "status": "verified",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3172/shock--2027-float",
+          "retrieved": "2026-11-01",
+          "quote": "2-Position Lever: The 2-position lever is useful to make on-the-fly adjustments to control shock performance under significant changes in terrain",
+          "where": "Adjusting Compression Damping",
+          "note": "Also a 2-position remote is described.",
+          "verifiedBy": {
+            "url": "https://tech.ridefox.com/bike/owners-manuals/3172/shock--2027-float",
+            "retrieved": "2026-11-01",
+            "quote": "2-position lever with OPEN and FIRM modes; use the FIRM mode for smooth climbing"
+          }
+        },
+        "openModeAdjustPositions": {
+          "value": 3,
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3172/shock--2027-float",
+          "retrieved": "2026-11-01",
+          "quote": "Open mode adjust provides 3 additional fine tuning adjustments for the OPEN mode.",
+          "where": "Adjusting Compression Damping",
+          "note": "Marked * \"Factory and Performance Elite Series non-remote shocks only\"."
+        },
+        "sagPercent": {
+          "value": "25-30",
+          "status": "verified",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3172/shock--2027-float",
+          "retrieved": "2026-11-01",
+          "quote": "Sag should be set to 25 - 30% of total shock travel",
+          "where": "Setting Shock Air Pressure",
+          "verifiedBy": {
+            "url": "https://tech.ridefox.com/bike/owners-manuals/3172/shock--2027-float",
+            "retrieved": "2026-11-01",
+            "quote": "Sag should be set to 25 - 30% of total shock travel."
+          }
+        },
+        "manualUrl": {
+          "value": "https://tech.ridefox.com/bike/owners-manuals/3172/shock--2027-float",
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3172/shock--2027-float",
+          "retrieved": "2026-11-01",
+          "quote": "SHOCK- 2027 FLOAT",
+          "where": "owner's manual page title"
+        }
+      }
+    },
+    {
+      "id": "fox-dhx-2027",
+      "name": "Fox DHX",
+      "type": "shock",
+      "modelYears": [
+        2027
+      ],
+      "catalogId": null,
+      "fields": {
+        "sizesAvailable": {
+          "value": null,
+          "status": "missing",
+          "note": "Not listed in the 2027 DHX web manual (3170); sag table lists travels 51-89 mm (2.00-3.50 in) generically."
+        },
+        "springType": {
+          "value": "coil",
+          "status": "verified",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3170/shock--2027-dhx-",
+          "retrieved": "2026-11-01",
+          "quote": "Setting Coil Spring Preload",
+          "where": "Section heading; \"Changing Coil Springs\" section",
+          "verifiedBy": {
+            "url": "https://tech.ridefox.com/bike/owners-manuals/3170/shock--2027-dhx-",
+            "retrieved": "2026-11-01",
+            "quote": "The coil spring can be removed to check for shock clearance within the frame."
+          }
+        },
+        "lscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Manual 3170: \"Turn the blue LSC adjuster clockwise by hand, to increase low-speed compression damping.\" No click count stated."
+        },
+        "hscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No high-speed compression adjuster described in manual 3170; absence not independently confirmed."
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3170/shock--2027-dhx-",
+          "retrieved": "2026-11-01",
+          "quote": "Low-speed Rebound (LSR) adjustment is useful to control shock performance during brake bumps",
+          "where": "Adjusting Rebound (only LSR with 3 mm hex described)",
+          "verifiedBy": {
+            "url": "https://tech.ridefox.com/bike/owners-manuals/3170/shock--2027-dhx-",
+            "retrieved": "2026-11-01",
+            "quote": "Low-speed Rebound (LSR) adjustment ... 3mm hex"
+          }
+        },
+        "reboundMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No total rebound clicks stated in manual 3170; rebound graphic is an image (DHX-rebound.jpg)."
+        },
+        "hasClimbLever": {
+          "value": null,
+          "status": "missing",
+          "note": "No compression lever described in manual 3170."
+        },
+        "sagPercent": {
+          "value": "30",
+          "status": "verified",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3170/shock--2027-dhx-",
+          "retrieved": "2026-11-01",
+          "quote": "Sag should be set to ~30% of total shock travel",
+          "where": "Setting Coil Spring Preload",
+          "verifiedBy": {
+            "url": "https://tech.ridefox.com/bike/owners-manuals/3170/shock--2027-dhx-",
+            "retrieved": "2026-11-01",
+            "quote": "Sag should be set to ~30% of total shock travel."
+          }
+        },
+        "sagTable": {
+          "value": {
+            "unit": "mm",
+            "sagPercent": 30,
+            "rows": [
+              {
+                "travel": 51,
+                "sag": 15
+              },
+              {
+                "travel": 57,
+                "sag": 17
+              },
+              {
+                "travel": 63,
+                "sag": 19
+              },
+              {
+                "travel": 70,
+                "sag": 21
+              },
+              {
+                "travel": 76,
+                "sag": 23
+              },
+              {
+                "travel": 89,
+                "sag": 25
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3170/shock--2027-dhx-",
+          "retrieved": "2026-11-01",
+          "quote": "Suggested Sag Measurements | Travel | 30% Sag | 51mm/ 2.00in | 15mm/ 0.60in ... 89mm/ 3.50in | 25mm/ 1.00in",
+          "where": "Setting Coil Spring Preload, Suggested Sag Measurements table"
+        },
+        "manualUrl": {
+          "value": "https://tech.ridefox.com/bike/owners-manuals/3170/shock--2027-dhx-",
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3170/shock--2027-dhx-",
+          "retrieved": "2026-11-01",
+          "quote": "SHOCK- 2027 DHX",
+          "where": "owner's manual page title"
+        }
+      }
+    },
+    {
+      "id": "fox-32-step-cast-2027",
+      "name": "Fox 32 Step-Cast",
+      "type": "fork",
+      "modelYears": [
+        2027
+      ],
+      "catalogId": null,
+      "fields": {
+        "travelMm": {
+          "value": [
+            60,
+            100
+          ],
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3162/fork--2027-32mm--or-34mm-(including-32-step-cast-and-32-taper-cast)",
+          "retrieved": "2026-11-01",
+          "quote": "32 Step Cast FLOAT Volume Spacer Configuration | Travel | Volume Spacers Factory Installed | *Max Volume Spacers | 100 mm | 1 | 4 | 60 mm | 7 | 7",
+          "where": "Tuning with Air Volume Spacers",
+          "note": "Only the travels with a spacer row; the generic sag table lists 40-150 mm for all 32/34 forks."
+        },
+        "wheelSize": {
+          "value": null,
+          "status": "missing",
+          "note": "Not stated in the 2027 32/34 manual (3162); no 32 Step-Cast spec sheet checked."
+        },
+        "stanchionMm": {
+          "value": 32,
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3162/fork--2027-32mm--or-34mm-(including-32-step-cast-and-32-taper-cast)",
+          "retrieved": "2026-11-01",
+          "quote": "32 Step-Cast and Rhythm maximum air pressure is 140psi/ 9.6 bar",
+          "where": "Setting Fork Air Pressure (32 = 32 mm chassis, from the name)"
+        },
+        "damper": {
+          "value": [
+            "GRIP",
+            "GRIP SL"
+          ],
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3162/fork--2027-32mm--or-34mm-(including-32-step-cast-and-32-taper-cast)",
+          "retrieved": "2026-11-01",
+          "quote": "Suggested Rebound Settings- 32mm Step-Cast | Rider Weight (lbs) | Rider Weight (kgs) | GRIP/Grip SL",
+          "where": "Adjusting Rebound table header"
+        },
+        "springType": {
+          "value": "air (FLOAT)",
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3162/fork--2027-32mm--or-34mm-(including-32-step-cast-and-32-taper-cast)",
+          "retrieved": "2026-11-01",
+          "quote": "32 Step Cast FLOAT Volume Spacer Configuration",
+          "where": "Tuning with Air Volume Spacers"
+        },
+        "lscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "GRIP / GRIP SL are lever-adjusted in manual 3162 (3-position lever); no click count stated."
+        },
+        "hscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "No high-speed compression adjuster described for GRIP/GRIP SL in manual 3162."
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3162/fork--2027-32mm--or-34mm-(including-32-step-cast-and-32-taper-cast)",
+          "retrieved": "2026-11-01",
+          "quote": "Suggested Rebound Settings- 32mm Step-Cast | Rider Weight (lbs) | Rider Weight (kgs) | GRIP/Grip SL",
+          "where": "Adjusting Rebound: one column"
+        },
+        "reboundMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Total rebound clicks not stated in manual 3162; table gives starting clicks (13 ... 1)."
+        },
+        "maxPressurePsi": {
+          "value": 140,
+          "status": "verified",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3162/fork--2027-32mm--or-34mm-(including-32-step-cast-and-32-taper-cast)",
+          "retrieved": "2026-11-01",
+          "quote": "32 Step-Cast and Rhythm maximum air pressure is 140psi/ 9.6 bar",
+          "where": "Setting Fork Air Pressure",
+          "note": "Statement covers 32 Step-Cast and 32 Rhythm.",
+          "verifiedBy": {
+            "url": "https://tech.ridefox.com/bike/owners-manuals/3162/fork--2027-32mm--or-34mm-(including-32-step-cast-and-32-taper-cast)",
+            "retrieved": "2026-11-01",
+            "quote": "32 Step-Cast and Rhythm maximum air pressure is 140psi/ 9.6 bar"
+          }
+        },
+        "minPressurePsi": {
+          "value": null,
+          "status": "missing",
+          "note": "Not stated in manual 3162."
+        },
+        "spacersStock": {
+          "value": {
+            "60": 7,
+            "100": 1
+          },
+          "status": "verified",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3162/fork--2027-32mm--or-34mm-(including-32-step-cast-and-32-taper-cast)",
+          "retrieved": "2026-11-01",
+          "quote": "32 Step Cast FLOAT Volume Spacer Configuration | Travel | Volume Spacers Factory Installed | *Max Volume Spacers | 100 mm | 1 | 4 | 60 mm | 7 | 7",
+          "where": "Tuning with Air Volume Spacers (keys = travel mm)",
+          "verifiedBy": {
+            "url": "https://tech.ridefox.com/bike/owners-manuals/3162/fork--2027-32mm--or-34mm-(including-32-step-cast-and-32-taper-cast)",
+            "retrieved": "2026-11-01",
+            "quote": "100 mm: 1 factory / 4 max; 60 mm: 7/7"
+          }
+        },
+        "spacersMax": {
+          "value": {
+            "60": 7,
+            "100": 4
+          },
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3162/fork--2027-32mm--or-34mm-(including-32-step-cast-and-32-taper-cast)",
+          "retrieved": "2026-11-01",
+          "quote": "32 Step Cast FLOAT Volume Spacer Configuration | Travel | Volume Spacers Factory Installed | *Max Volume Spacers | 100 mm | 1 | 4 | 60 mm | 7 | 7",
+          "where": "Tuning with Air Volume Spacers (keys = travel mm)"
+        },
+        "sagPercent": {
+          "value": "15-20",
+          "status": "verified",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3162/fork--2027-32mm--or-34mm-(including-32-step-cast-and-32-taper-cast)",
+          "retrieved": "2026-11-01",
+          "quote": "Sag should be set to 15 - 20% of total fork travel",
+          "where": "Setting Fork Air Pressure",
+          "verifiedBy": {
+            "url": "https://tech.ridefox.com/bike/owners-manuals/3162/fork--2027-32mm--or-34mm-(including-32-step-cast-and-32-taper-cast)",
+            "retrieved": "2026-11-01",
+            "quote": "Sag range should be set to 15–20% of total fork travel."
+          }
+        },
+        "pressureTable": {
+          "value": {
+            "unit": "psi",
+            "riderUnit": "lbs",
+            "rows": [
+              {
+                "rider": "120-130",
+                "value": 65
+              },
+              {
+                "rider": "130-140",
+                "value": 70
+              },
+              {
+                "rider": "140-150",
+                "value": 74
+              },
+              {
+                "rider": "150-160",
+                "value": 80
+              },
+              {
+                "rider": "160-170",
+                "value": 85
+              },
+              {
+                "rider": "170-180",
+                "value": 90
+              },
+              {
+                "rider": "180-190",
+                "value": 96
+              },
+              {
+                "rider": "190-200",
+                "value": 101
+              },
+              {
+                "rider": "200-210",
+                "value": 106
+              },
+              {
+                "rider": "210-220",
+                "value": 111
+              },
+              {
+                "rider": "220-230",
+                "value": 116
+              },
+              {
+                "rider": "230-240",
+                "value": 121
+              },
+              {
+                "rider": "240-250",
+                "value": 126
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3162/fork--2027-32mm--or-34mm-(including-32-step-cast-and-32-taper-cast)",
+          "retrieved": "2026-11-01",
+          "quote": "Suggested Starting Points for Setting Sag- 32mm Step-Cast Forks | Rider Weight | Air Pressure | (lbs) | (kg) | (psi) | (bar) | 120-130 | 54-59 | 65 | 4.5 ... 240-250 | 109-113 | 126 | 8.7",
+          "where": "Setting Fork Air Pressure, 32mm Step-Cast table (lbs brackets, psi column)"
+        },
+        "reboundTable": {
+          "value": {
+            "unit": "clicks out from closed",
+            "riderUnit": "lbs",
+            "rows": [
+              {
+                "rider": "120-130",
+                "value": 13
+              },
+              {
+                "rider": "130-140",
+                "value": 12
+              },
+              {
+                "rider": "140-150",
+                "value": 11
+              },
+              {
+                "rider": "150-160",
+                "value": 10
+              },
+              {
+                "rider": "160-170",
+                "value": 9
+              },
+              {
+                "rider": "170-180",
+                "value": 8
+              },
+              {
+                "rider": "180-190",
+                "value": 7
+              },
+              {
+                "rider": "190-200",
+                "value": 6
+              },
+              {
+                "rider": "200-210",
+                "value": 5
+              },
+              {
+                "rider": "210-220",
+                "value": 4
+              },
+              {
+                "rider": "220-230",
+                "value": 3
+              },
+              {
+                "rider": "230-240",
+                "value": 2
+              },
+              {
+                "rider": "240-250",
+                "value": 1
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3162/fork--2027-32mm--or-34mm-(including-32-step-cast-and-32-taper-cast)",
+          "retrieved": "2026-11-01",
+          "quote": "Suggested Rebound Settings- 32mm Step-Cast | Rider Weight (lbs) | Rider Weight (kgs) | GRIP/Grip SL | 120-130 | 54-59 | 13 ... 240-250 | 109-113 | 1",
+          "where": "Adjusting Rebound, 32mm Step-Cast table"
+        },
+        "manualUrl": {
+          "value": "https://tech.ridefox.com/bike/owners-manuals/3162/fork--2027-32mm--or-34mm-(including-32-step-cast-and-32-taper-cast)",
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3162/fork--2027-32mm--or-34mm-(including-32-step-cast-and-32-taper-cast)",
+          "retrieved": "2026-11-01",
+          "quote": "FORK- 2027 32mm /34mm (Including 32 Step-Cast and 32 Taper-Cast)",
+          "where": "owner's manual page title"
+        }
+      }
+    },
+    {
+      "id": "fox-34sl-2027",
+      "name": "Fox 34 SL",
+      "type": "fork",
+      "modelYears": [
+        2027
+      ],
+      "catalogId": null,
+      "fields": {
+        "travelMm": {
+          "value": [
+            110,
+            120,
+            130
+          ],
+          "status": "verified",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3163/fork--2027-34sl",
+          "retrieved": "2026-11-01",
+          "quote": "34SL Volume Spacer Configuration | Travel | Volume Spacers Factory Installed | *Max Volume Spacers | 110 mm | 3 | 5 | 120 mm | 2 | 5 | 130 mm | 1 | 4",
+          "where": "Tuning with Air Volume Spacers; same three travels in Suggested Sag Measurements",
+          "verifiedBy": {
+            "url": "https://tech.ridefox.com/bike/owners-manuals/3163/fork--2027-34sl",
+            "retrieved": "2026-11-01",
+            "quote": "Travel 110/120/130 mm"
+          }
+        },
+        "wheelSize": {
+          "value": null,
+          "status": "missing",
+          "note": "Not stated in the 2027 34SL manual (3163); no 34SL spec sheet checked."
+        },
+        "stanchionMm": {
+          "value": 34,
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3163/fork--2027-34sl",
+          "retrieved": "2026-11-01",
+          "quote": "34SL maximum pressure is 120psi/ 8.3 bar",
+          "where": "Setting Fork Air Pressure (34 from the model name)"
+        },
+        "damper": {
+          "value": [
+            "GRIP",
+            "GRIP SL",
+            "GRIP X"
+          ],
+          "status": "verified",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3163/fork--2027-34sl",
+          "retrieved": "2026-11-01",
+          "quote": "Suggested Rebound Settings- 34SL | Rider Weight (lbs) | Rider Weight (kgs) | GRIP/Grip SL/ GRIP X",
+          "where": "Adjusting Rebound table header",
+          "note": "Manual has damper sections for GRIP, GRIP SL, GRIP X; which one a given 34 SL has depends on trim.",
+          "verifiedBy": {
+            "url": "https://tech.ridefox.com/bike/owners-manuals/3163/fork--2027-34sl",
+            "retrieved": "2026-11-01",
+            "quote": "compression damping sections for GRIP, GRIP SL, GRIP X"
+          }
+        },
+        "springType": {
+          "value": "air (FLOAT)",
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3163/fork--2027-34sl",
+          "retrieved": "2026-11-01",
+          "quote": "Suggested Starting Points for Setting Sag- 34SL Forks | Rider Weight | Air Pressure",
+          "where": "Setting Fork Air Pressure",
+          "note": "Air spring (Schrader valve, air pressure table); \"FLOAT\" not printed in the 34SL table title."
+        },
+        "lscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "GRIP/GRIP SL are lever-adjusted; GRIP X has LSC adjuster but only the starting position (5 clicks) is stated, not the total."
+        },
+        "hscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "GRIP X has an HSC adjuster; only the starting position (5 clicks) is stated, no total."
+        },
+        "reboundMode": {
+          "value": "single",
+          "status": "verified",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3163/fork--2027-34sl",
+          "retrieved": "2026-11-01",
+          "quote": "Suggested Rebound Settings- 34SL | Rider Weight (lbs) | Rider Weight (kgs) | GRIP/Grip SL/ GRIP X",
+          "where": "Adjusting Rebound: one column for all three dampers",
+          "verifiedBy": {
+            "url": "https://tech.ridefox.com/bike/owners-manuals/3163/fork--2027-34sl",
+            "retrieved": "2026-11-01",
+            "quote": "rebound knob, fully clockwise to close then back out"
+          }
+        },
+        "reboundMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Total rebound clicks not stated in manual 3163; table gives starting clicks (13 ... 1)."
+        },
+        "maxPressurePsi": {
+          "value": 120,
+          "status": "verified",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3163/fork--2027-34sl",
+          "retrieved": "2026-11-01",
+          "quote": "34SL maximum pressure is 120psi/ 8.3 bar",
+          "where": "Setting Fork Air Pressure",
+          "verifiedBy": {
+            "url": "https://tech.ridefox.com/bike/owners-manuals/3163/fork--2027-34sl",
+            "retrieved": "2026-11-01",
+            "quote": "120 psi / 8.3 bar"
+          }
+        },
+        "minPressurePsi": {
+          "value": null,
+          "status": "missing",
+          "note": "Not stated in manual 3163."
+        },
+        "spacersStock": {
+          "value": {
+            "110": 3,
+            "120": 2,
+            "130": 1
+          },
+          "status": "verified",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3163/fork--2027-34sl",
+          "retrieved": "2026-11-01",
+          "quote": "34SL Volume Spacer Configuration | Travel | Volume Spacers Factory Installed | *Max Volume Spacers | 110 mm | 3 | 5 | 120 mm | 2 | 5 | 130 mm | 1 | 4",
+          "where": "Tuning with Air Volume Spacers (keys = travel mm)",
+          "verifiedBy": {
+            "url": "https://tech.ridefox.com/bike/owners-manuals/3163/fork--2027-34sl",
+            "retrieved": "2026-11-01",
+            "quote": "factory"
+          }
+        },
+        "spacersMax": {
+          "value": {
+            "110": 5,
+            "120": 5,
+            "130": 4
+          },
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3163/fork--2027-34sl",
+          "retrieved": "2026-11-01",
+          "quote": "34SL Volume Spacer Configuration | Travel | Volume Spacers Factory Installed | *Max Volume Spacers | 110 mm | 3 | 5 | 120 mm | 2 | 5 | 130 mm | 1 | 4",
+          "where": "Tuning with Air Volume Spacers (keys = travel mm)"
+        },
+        "sagPercent": {
+          "value": "15-20",
+          "status": "verified",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3163/fork--2027-34sl",
+          "retrieved": "2026-11-01",
+          "quote": "Sag should be set to 15 - 20% of total fork travel",
+          "where": "Setting Fork Air Pressure",
+          "verifiedBy": {
+            "url": "https://tech.ridefox.com/bike/owners-manuals/3163/fork--2027-34sl",
+            "retrieved": "2026-11-01",
+            "quote": "15–20% of total fork travel"
+          }
+        },
+        "pressureTable": {
+          "value": {
+            "unit": "psi",
+            "riderUnit": "lbs",
+            "rows": [
+              {
+                "rider": "120-130",
+                "value": 64
+              },
+              {
+                "rider": "130-140",
+                "value": 69
+              },
+              {
+                "rider": "140-150",
+                "value": 74
+              },
+              {
+                "rider": "150-160",
+                "value": 78
+              },
+              {
+                "rider": "160-170",
+                "value": 83
+              },
+              {
+                "rider": "170-180",
+                "value": 88
+              },
+              {
+                "rider": "180-190",
+                "value": 92
+              },
+              {
+                "rider": "190-200",
+                "value": 97
+              },
+              {
+                "rider": "200-210",
+                "value": 102
+              },
+              {
+                "rider": "210-220",
+                "value": 106
+              },
+              {
+                "rider": "220-230",
+                "value": 111
+              },
+              {
+                "rider": "230-240",
+                "value": 116
+              },
+              {
+                "rider": "240-250",
+                "value": 120
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3163/fork--2027-34sl",
+          "retrieved": "2026-11-01",
+          "quote": "Suggested Starting Points for Setting Sag- 34SL Forks | Rider Weight | Air Pressure | (lbs) | (kg) | (psi) | (bar) | 120-130 | 54-59 | 64 | 4.4 ... 240-250 | 109-113 | 120 | 8.3",
+          "where": "Setting Fork Air Pressure, 34SL table (lbs brackets, psi column)"
+        },
+        "reboundTable": {
+          "value": {
+            "unit": "clicks out from closed",
+            "riderUnit": "lbs",
+            "rows": [
+              {
+                "rider": "120-130",
+                "value": 13
+              },
+              {
+                "rider": "130-140",
+                "value": 12
+              },
+              {
+                "rider": "140-150",
+                "value": 11
+              },
+              {
+                "rider": "150-160",
+                "value": 10
+              },
+              {
+                "rider": "160-170",
+                "value": 9
+              },
+              {
+                "rider": "170-180",
+                "value": 8
+              },
+              {
+                "rider": "180-190",
+                "value": 7
+              },
+              {
+                "rider": "190-200",
+                "value": 6
+              },
+              {
+                "rider": "200-210",
+                "value": 5
+              },
+              {
+                "rider": "210-220",
+                "value": 4
+              },
+              {
+                "rider": "220-230",
+                "value": 3
+              },
+              {
+                "rider": "230-240",
+                "value": 2
+              },
+              {
+                "rider": "240-250",
+                "value": 1
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3163/fork--2027-34sl",
+          "retrieved": "2026-11-01",
+          "quote": "Suggested Rebound Settings- 34SL | Rider Weight (lbs) | Rider Weight (kgs) | GRIP/Grip SL/ GRIP X | 120-130 | 54-59 | 13 ... 240-250 | 109-113 | 1",
+          "where": "Adjusting Rebound, 34SL table"
+        },
+        "gripXStartClicks": {
+          "value": {
+            "hsc": 5,
+            "lsc": 5
+          },
+          "status": "verified",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3163/fork--2027-34sl",
+          "retrieved": "2026-11-01",
+          "quote": "Then back them out (counterclockwise) 5 clicks each for High-speed and Low-speed compression.",
+          "where": "Adjusting Grip X Compression Damping",
+          "verifiedBy": {
+            "url": "https://tech.ridefox.com/bike/owners-manuals/3163/fork--2027-34sl",
+            "retrieved": "2026-11-01",
+            "quote": "back each out 5 clicks for high-speed and 5 clicks for low-speed compression"
+          }
+        },
+        "manualUrl": {
+          "value": "https://tech.ridefox.com/bike/owners-manuals/3163/fork--2027-34sl",
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3163/fork--2027-34sl",
+          "retrieved": "2026-11-01",
+          "quote": "FORK- 2027 34SL",
+          "where": "owner's manual page title"
+        }
+      }
+    },
+    {
+      "id": "fox-36sl-2027",
+      "name": "Fox 36 SL",
+      "type": "fork",
+      "modelYears": [
+        2027
+      ],
+      "catalogId": null,
+      "fields": {
+        "travelMm": {
+          "value": [
+            120,
+            130,
+            140
+          ],
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3165/fork--2027-36sl",
+          "retrieved": "2026-11-01",
+          "quote": "36SL Volume Spacer Configurations | Travel | Volume Spacers Factory Installed | *Max Volume Spacers | 140 | 1 | 6 | 130 | 2 | 7 | 120 | 4 | 8",
+          "where": "Tuning with Air Volume Spacers; same three travels in Suggested Sag Measurements"
+        },
+        "wheelSize": {
+          "value": null,
+          "status": "missing",
+          "note": "Not stated in the 2027 36SL manual (3165); no 36SL spec sheet checked."
+        },
+        "stanchionMm": {
+          "value": 36,
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3165/fork--2027-36sl",
+          "retrieved": "2026-11-01",
+          "quote": "36SL maximum air pressure is 120psi (8.3 bar)",
+          "where": "Setting Fork Air Pressure (36 from the model name)"
+        },
+        "damper": {
+          "value": [
+            "GRIP",
+            "GRIP SL",
+            "GRIP X",
+            "GRIP X2"
+          ],
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3165/fork--2027-36sl",
+          "retrieved": "2026-11-01",
+          "quote": "Rider Weight (lbs) | Rider Weight (kgs) | 36SL GRIP | 36SL GRIP SL | 36SL GRIP X | 36SL GRIP X2 | LSR | HSR",
+          "where": "Adjusting Rebound table header",
+          "note": "Which damper a given 36 SL has depends on trim."
+        },
+        "springType": {
+          "value": "air (FLOAT)",
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3165/fork--2027-36sl",
+          "retrieved": "2026-11-01",
+          "quote": "Suggested Starting Points For Setting Sag 36SL | Rider Weight (lbs) | Rider Weight (kgs) | FLOAT Pressure (psi)",
+          "where": "Setting Fork Air Pressure"
+        },
+        "lscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "GRIP/GRIP SL are lever-adjusted; GRIP X / GRIP X2 have LSC but only starting positions (X: 5, X2: 10 clicks) are stated, not totals."
+        },
+        "hscMax": {
+          "value": null,
+          "status": "missing",
+          "note": "GRIP X / GRIP X2 have HSC; only starting positions (X: 5, X2: 5 clicks) are stated, not totals."
+        },
+        "reboundMode": {
+          "value": null,
+          "status": "missing",
+          "note": "Depends on damper: GRIP, GRIP SL, GRIP X have one rebound column; GRIP X2 has separate LSR and HSR columns (see reboundTable)."
+        },
+        "reboundMax": {
+          "value": null,
+          "status": "missing",
+          "note": "Total rebound clicks not stated in manual 3165; table gives starting clicks."
+        },
+        "maxPressurePsi": {
+          "value": 120,
+          "status": "verified",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3165/fork--2027-36sl",
+          "retrieved": "2026-11-01",
+          "quote": "36SL maximum air pressure is 120psi (8.3 bar)",
+          "where": "Setting Fork Air Pressure",
+          "verifiedBy": {
+            "url": "https://tech.ridefox.com/bike/owners-manuals/3165/fork--2027-36sl",
+            "retrieved": "2026-11-01",
+            "quote": "120 psi (8.3 bar)"
+          }
+        },
+        "minPressurePsi": {
+          "value": null,
+          "status": "missing",
+          "note": "Not stated in manual 3165."
+        },
+        "spacersStock": {
+          "value": {
+            "140": 1,
+            "130": 2,
+            "120": 4
+          },
+          "status": "verified",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3165/fork--2027-36sl",
+          "retrieved": "2026-11-01",
+          "quote": "36SL Volume Spacer Configurations | Travel | Volume Spacers Factory Installed | *Max Volume Spacers | 140 | 1 | 6 | 130 | 2 | 7 | 120 | 4 | 8",
+          "where": "Tuning with Air Volume Spacers (keys = travel mm)",
+          "verifiedBy": {
+            "url": "https://tech.ridefox.com/bike/owners-manuals/3165/fork--2027-36sl",
+            "retrieved": "2026-11-01",
+            "quote": "factory"
+          }
+        },
+        "spacersMax": {
+          "value": {
+            "140": 6,
+            "130": 7,
+            "120": 8
+          },
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3165/fork--2027-36sl",
+          "retrieved": "2026-11-01",
+          "quote": "36SL Volume Spacer Configurations | Travel | Volume Spacers Factory Installed | *Max Volume Spacers | 140 | 1 | 6 | 130 | 2 | 7 | 120 | 4 | 8",
+          "where": "Tuning with Air Volume Spacers (keys = travel mm)"
+        },
+        "sagPercent": {
+          "value": "15-20",
+          "status": "verified",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3165/fork--2027-36sl",
+          "retrieved": "2026-11-01",
+          "quote": "Sag should be set to 15 - 20% of total fork travel",
+          "where": "Setting Fork Air Pressure",
+          "verifiedBy": {
+            "url": "https://tech.ridefox.com/bike/owners-manuals/3165/fork--2027-36sl",
+            "retrieved": "2026-11-01",
+            "quote": "15–20% of total fork travel"
+          }
+        },
+        "pressureTable": {
+          "value": {
+            "unit": "psi",
+            "riderUnit": "lbs",
+            "rows": [
+              {
+                "rider": "120-130",
+                "value": 65
+              },
+              {
+                "rider": "130-140",
+                "value": 68
+              },
+              {
+                "rider": "140-150",
+                "value": 72
+              },
+              {
+                "rider": "150-160",
+                "value": 76
+              },
+              {
+                "rider": "160-170",
+                "value": 79
+              },
+              {
+                "rider": "170-180",
+                "value": 83
+              },
+              {
+                "rider": "180-190",
+                "value": 87
+              },
+              {
+                "rider": "190-200",
+                "value": 90
+              },
+              {
+                "rider": "200-210",
+                "value": 94
+              },
+              {
+                "rider": "210-220",
+                "value": 97
+              },
+              {
+                "rider": "220-230",
+                "value": 101
+              },
+              {
+                "rider": "230-240",
+                "value": 105
+              },
+              {
+                "rider": "240-250",
+                "value": 108
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3165/fork--2027-36sl",
+          "retrieved": "2026-11-01",
+          "quote": "Suggested Starting Points For Setting Sag 36SL | Rider Weight (lbs) | Rider Weight (kgs) | FLOAT Pressure (psi) | 120-130 | 54-59 | 65 ... 240-250 | 109-113 | 108",
+          "where": "Setting Fork Air Pressure, 36SL table"
+        },
+        "reboundTable": {
+          "value": {
+            "unit": "clicks out from closed",
+            "riderUnit": "lbs",
+            "rows": [
+              {
+                "rider": "120-130",
+                "grip": 13,
+                "gripSl": 13,
+                "gripX": 16,
+                "gripX2Lsr": 9,
+                "gripX2Hsr": 8
+              },
+              {
+                "rider": "130-140",
+                "grip": 12,
+                "gripSl": 12,
+                "gripX": 14,
+                "gripX2Lsr": 8,
+                "gripX2Hsr": 7
+              },
+              {
+                "rider": "140-150",
+                "grip": 11,
+                "gripSl": 11,
+                "gripX": 12,
+                "gripX2Lsr": 7,
+                "gripX2Hsr": 7
+              },
+              {
+                "rider": "150-160",
+                "grip": 10,
+                "gripSl": 10,
+                "gripX": 10,
+                "gripX2Lsr": 7,
+                "gripX2Hsr": 6
+              },
+              {
+                "rider": "160-170",
+                "grip": 9,
+                "gripSl": 9,
+                "gripX": 9,
+                "gripX2Lsr": 7,
+                "gripX2Hsr": 6
+              },
+              {
+                "rider": "170-180",
+                "grip": 8,
+                "gripSl": 8,
+                "gripX": 8,
+                "gripX2Lsr": 7,
+                "gripX2Hsr": 5
+              },
+              {
+                "rider": "180-190",
+                "grip": 7,
+                "gripSl": 7,
+                "gripX": 7,
+                "gripX2Lsr": 6,
+                "gripX2Hsr": 4
+              },
+              {
+                "rider": "190-200",
+                "grip": 6,
+                "gripSl": 6,
+                "gripX": 6,
+                "gripX2Lsr": 5,
+                "gripX2Hsr": 4
+              },
+              {
+                "rider": "200-210",
+                "grip": 5,
+                "gripSl": 5,
+                "gripX": 5,
+                "gripX2Lsr": 4,
+                "gripX2Hsr": 3
+              },
+              {
+                "rider": "210-220",
+                "grip": 4,
+                "gripSl": 4,
+                "gripX": 4,
+                "gripX2Lsr": 3,
+                "gripX2Hsr": 2
+              },
+              {
+                "rider": "220-230",
+                "grip": 3,
+                "gripSl": 3,
+                "gripX": 3,
+                "gripX2Lsr": 3,
+                "gripX2Hsr": 1
+              },
+              {
+                "rider": "230-240",
+                "grip": 2,
+                "gripSl": 2,
+                "gripX": 2,
+                "gripX2Lsr": 2,
+                "gripX2Hsr": 0
+              },
+              {
+                "rider": "240-250",
+                "grip": 1,
+                "gripSl": 1,
+                "gripX": 1,
+                "gripX2Lsr": 1,
+                "gripX2Hsr": 0
+              }
+            ]
+          },
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3165/fork--2027-36sl",
+          "retrieved": "2026-11-01",
+          "quote": "Rider Weight (lbs) | Rider Weight (kgs) | 36SL GRIP | 36SL GRIP SL | 36SL GRIP X | 36SL GRIP X2 | LSR | HSR | 120-130 | 54-59 | 13 | 13 | 16 | 9 | 8",
+          "where": "Adjusting Rebound table",
+          "note": "Five value columns per row: GRIP, GRIP SL, GRIP X, GRIP X2 LSR, GRIP X2 HSR (the \"36SL GRIP X2\" header spans LSR/HSR; mapping by position, consistent with the 2027 36mm manual)."
+        },
+        "gripXStartClicks": {
+          "value": {
+            "hsc": 5,
+            "lsc": 5
+          },
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3165/fork--2027-36sl",
+          "retrieved": "2026-11-01",
+          "quote": "Then back them out (counterclockwise) 5 clicks each for High-speed and Low-speed compression.",
+          "where": "Adjusting Grip X Compression Damping"
+        },
+        "hscStart": {
+          "value": 5,
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3165/fork--2027-36sl",
+          "retrieved": "2026-11-01",
+          "quote": "Then back them out (counterclockwise) 5 clicks for High-speed and 10 clicks for Low-speed compression.",
+          "where": "Adjusting Grip X2 Compression Damping",
+          "note": "GRIP X2 only."
+        },
+        "lscStart": {
+          "value": 10,
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3165/fork--2027-36sl",
+          "retrieved": "2026-11-01",
+          "quote": "Then back them out (counterclockwise) 5 clicks for High-speed and 10 clicks for Low-speed compression.",
+          "where": "Adjusting Grip X2 Compression Damping",
+          "note": "GRIP X2 only."
+        },
+        "manualUrl": {
+          "value": "https://tech.ridefox.com/bike/owners-manuals/3165/fork--2027-36sl",
+          "status": "single",
+          "url": "https://tech.ridefox.com/bike/owners-manuals/3165/fork--2027-36sl",
+          "retrieved": "2026-11-01",
+          "quote": "FORK- 2027 36SL",
+          "where": "owner's manual page title"
+        }
+      }
     }
   ]
 }
